@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include "config.h"
 
 #define C 0
 #define F90 1
@@ -40,6 +41,7 @@ static const char c_footer[1] = "\0";
 static const char f90_footer[18] = "end module codata\0";
 static const char py3_footer[1] = "\0";
 
+static const char codata_path[] = "./codata.txt";
 
 void format_names(char *line, char *name, char *dname, int language){
     
@@ -252,6 +254,7 @@ void write_output(FILE *codata, FILE *output, int language){
     
     int i=0;
     int empty = 0;
+    int n;
 
     const char *end;
     const char *equal;
@@ -267,6 +270,7 @@ void write_output(FILE *codata, FILE *output, int language){
     char *value = (char *)malloc(sizeof(char)*(VALUES_SIZE+1));
     char *uncertainty = (char *)malloc(sizeof(char)*(UNCERTAINTIES_SIZE+1));
     char *unit = (char *)malloc(sizeof(char)*(UNITS_SIZE+1));
+
 
     switch(language){
         case C:
@@ -366,24 +370,39 @@ int main(int argc, char **argv){
 
     FILE *codata;
     FILE *code;
+    char *code_path;
 
-    codata =  fopen("./codata.txt", "r");
-    code = fopen("./electrox_codata.h", "w");
+    int n;
+    
+    n = strlen(PROJECT_NAME);
+    code_path = (char *)malloc(sizeof(char)*(n+1+10));
+    strcpy(code_path, PROJECT_NAME);
+
+    /* C Header */
+    strcpy(&code_path[n], ".h");
+    codata =  fopen(codata_path, "r");
+    code = fopen(code_path, "w");
     write_output(codata, code, C);
     fclose(code);
     fclose(codata);
     
-    codata =  fopen("./codata.txt", "r");
-    code = fopen("electrox_codata.f90", "w");
+    /* F90 Header */
+    strcpy(&code_path[n], ".f90");
+    codata =  fopen(codata_path, "r");
+    code = fopen(code_path, "w");
     write_output(codata, code, F90);
     fclose(code);
     fclose(codata);
     
-    codata =  fopen("./codata.txt", "r");
-    code = fopen("electrox_codata.py", "w");
+    /* PY3 Header */
+    strcpy(&code_path[n], ".py");
+    codata =  fopen(codata_path, "r");
+    code = fopen(code_path, "w");
     write_output(codata, code, PY3);
     fclose(code);
     fclose(codata);
+
+    free(code_path);
 
     return EXIT_SUCCESS;
 }
