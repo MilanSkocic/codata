@@ -1,15 +1,13 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "config.h"
 
 #define C 0
 #define F90 1
 #define PY3 2
 
-static const size_t BUFFER_SIZE = 200;
+static const size_t BUFFER_SIZE = 256;
 static const size_t NAMES_SIZE = 60;
 static const size_t VALUES_SIZE = 25;
 static const size_t UNCERTAINTIES_SIZE = 25;
@@ -43,11 +41,9 @@ static const char f90_footer[18] = "end module codata\0";
 static const char py3_footer[1] = "\0";
 
 
-void format_names(char *buffer, char *name, char *dname, int language){
+void format_names(char *line, char *name, char *dname, int language){
     
     size_t i;
-
-    char *line = &buffer[0];
 
     for(i=0; i<NAMES_SIZE; i++){
         if(!isalnum(line[i])){
@@ -228,22 +224,19 @@ int read_line(FILE *f, char *buf){
 
     char c;
     size_t i = 0;
-    int eof=0;
+    int empty=0;
 
-    while((c=fgetc(f)) != '\n'){
-        if(c==EOF){
-            eof=1;
-            break;
-        }
-        else{
-            if(i<BUFFER_SIZE){
-                buf[i] = c;
-                i++;
-                eof=0;
-            }
+    while(((c=fgetc(f)) != '\n') & (!feof(f))){
+        if(i<BUFFER_SIZE){
+            buf[i] = c;
+            i++;
         }
     }
-    return eof;
+    if ( i <= 0){
+        empty = 1;
+    }
+
+    return empty;
 }
 
 void clean_line(char *buf, size_t buffer_size){
@@ -258,7 +251,7 @@ void clean_line(char *buf, size_t buffer_size){
 void write_output(FILE *codata, FILE *output, int language){
     
     int i=0;
-    int eof=0;
+    int empty = 0;
 
     const char *end;
     const char *equal;
@@ -303,65 +296,79 @@ void write_output(FILE *codata, FILE *output, int language){
             header = py3_header;
             footer = py3_footer;
             break;
+        default:
+            printf("Generating C code\n");
+            end = c_end;
+            equal = c_equal;
+            comment = c_comment;
+            type = c_type;
+            header = c_header;
+            footer = c_footer;
     }
-    while(eof==0){
+    
+    /* Copy header from codata */
+    for(i=0; i<=10; i++){
+        clean_line(line, BUFFER_SIZE);
+        read_line(codata, line);
+        fputs(comment, output);
+        fputs(line, output);
+        fputs(newline, output);
+    }
+
+    /* Write header for each language */
+    fputs(header, output);
+    fputs(newline, output);
+    
+    while(!feof(codata)){
         clean_line(line, BUFFER_SIZE);
         clean_line(name, NAMES_SIZE);
         clean_line(dname, NAMES_SIZE);
         clean_line(value, VALUES_SIZE);
-        clean_line(value, UNCERTAINTIES_SIZE);
+        clean_line(uncertainty, UNCERTAINTIES_SIZE);
         clean_line(unit, UNITS_SIZE);
-        eof = read_line(codata, line);
-        if(i>10){
+        empty = read_line(codata, line);
+        if(empty == 0){
             format_names(line, name, dname, language);
             format_values(line, value, language);
             format_uncertainties(line, uncertainty, language);
             format_units(line, unit, language);
-            if(eof==0){
-                fputs(type, output);
-                fputs(name, output);
-                fputs(equal, output);
-                fputs(value, output);
-                fputs(end, output);
-                fputs(comment, output);
-                fputs(unit, output);
-                fputs(newline, output);
-
-                fputs(type, output);
-                fputs(dname, output);
-                fputs(equal, output);
-                fputs(uncertainty, output);
-                fputs(end, output);
-                fputs(comment, output);
-                fputs(unit, output);
-                fputs(newline, output);
-                
-                fputs(newline, output);
-            }
-        }else{
+            fputs(type, output);
+            fputs(name, output);
+            fputs(equal, output);
+            fputs(value, output);
+            fputs(end, output);
             fputs(comment, output);
-            fputs(line, output);
+            fputs(unit, output);
             fputs(newline, output);
-            if (i==10){
-                fputs(header, output);
-                fputs(newline, output);
-            }
+
+            fputs(type, output);
+            fputs(dname, output);
+            fputs(equal, output);
+            fputs(uncertainty, output);
+            fputs(end, output);
+            fputs(comment, output);
+            fputs(unit, output);
+            fputs(newline, output);
+            
+            fputs(newline, output);
         }
-        i++;
     }
     fputs(footer, output);
     free(line);
+    free(name);
+    free(dname);
+    free(value);
+    free(uncertainty);
+    free(unit);
 }
 
 int main(int argc, char **argv){
-
-    printf("%s v.%s.\n%s\n", PROJECT_NAME, PROJECT_VERSION, PROJECT_DESCRIPTION);
 
     FILE *codata;
     FILE *code;
 
     codata =  fopen("./codata.txt", "r");
-    code = fopen("electrox_codata.h", "w");
+    code = fopen("./electrox_codata.h", "w");
     write_output(codata, code, C);
     fclose(code);
     fclose(codata);
