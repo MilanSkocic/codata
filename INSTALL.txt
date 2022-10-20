@@ -1,0 +1,21 @@
+1. Create a build directory
+
+    mkdir build
+
+    cd build
+
+2. Generate a makefile
+
+    cmake -G "Unix Makefiles" -S ..
+
+3. Build either with cmake or with make directly
+
+    cmake --build . 
+
+4. Run tests
+
+    ctest
+
+5. Install directly
+    
+    cmake --install . --prefix /path/to/folder
