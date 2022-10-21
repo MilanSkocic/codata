@@ -6,7 +6,6 @@
 
 #define C 0
 #define F90 1
-#define PY3 2
 
 static const size_t BUFFER_SIZE = 256;
 static const size_t NAMES_SIZE = 60;
@@ -18,28 +17,22 @@ static const char newline[2] = "\n\0";
 
 static const char c_end[2] = ";\0";
 static const char f90_end[1] = "\0";
-static const char py3_end[1] = "\0";
 
 static const char c_equal[4] = " = \0";
 static const char f90_equal[4] = " = \0";
-static const char py3_equal[4] = " = \0";
 
 
 static const char c_comment[3] = "//\0";
 static const char f90_comment[3] = "!!\0";
-static const char py3_comment[3] = "# \0";
 
 static const char c_type[14] = "const double \0";
 static const char f90_type[30] = "real(c_double), parameter :: \0";
-static const char py3_type[30] = "\0";
 
 static const char c_header[1] = "\0";
 static const char f90_header[49] = "module codata\nuse iso_c_binding\nimplicit none\0";
-static const char py3_header[20] = "r\"\"\"Codata\"\"\"\0";
 
 static const char c_footer[1] = "\0";
 static const char f90_footer[18] = "end module codata\0";
-static const char py3_footer[1] = "\0";
 
 static const char codata_path[] = "./codata.txt";
 
@@ -69,9 +62,6 @@ void format_names(char *line, char *name, char *dname, int language){
             case F90:
                 name[i] = toupper(name[i]);
                 break;
-            case PY3:
-                name[i] = toupper(name[i]);
-                break;
             default:
                 name[i] = toupper(name[i]);
         }
@@ -81,9 +71,6 @@ void format_names(char *line, char *name, char *dname, int language){
             dname[0] = 'D';
             break;
         case F90:
-            dname[0] = 'D';
-            break;
-        case PY3:
             dname[0] = 'D';
             break;
     }
@@ -250,9 +237,44 @@ void clean_line(char *buf, size_t buffer_size){
     buf[buffer_size] = '\0';
 }
 
-void write_output(FILE *codata, FILE *output, int language){
+char **get_table(size_t rows, size_t line_buffer_size){
     
-    int i=0;
+    size_t i;
+    char **table = (char **)malloc(sizeof(char *)*rows);
+    for(i=0; i<rows; i++){
+        table[i] = (char *)malloc(sizeof(char)*(line_buffer_size+1));
+    }
+    return table;
+}
+
+void free_table(char **table, size_t rows, size_t line_buffer_size){
+    
+    size_t i;
+    for(i=0; i<rows; i++){
+        free(table[i]);
+    }
+    free(table);
+}
+
+void print_table(char **table, size_t rows, size_t line_buffer_size){
+    
+    size_t i;
+    for(i=0; i<rows; i++){
+        printf("%3ld - %s\n", i, table[i]);
+    }
+}
+
+void init_table(char **table, size_t rows, size_t line_buffer_size){
+    
+    size_t i;
+    for(i=0; i<rows; i++){
+        strcpy(table[i], "struct codata_constant END\0");
+    }
+}
+
+void write_output(FILE *codata, FILE *output, int language, char **table){
+   
+    size_t i=0;
     int empty = 0;
     int n;
 
@@ -291,15 +313,6 @@ void write_output(FILE *codata, FILE *output, int language){
             header = f90_header;
             footer = f90_footer;
             break;
-        case PY3:
-            printf("Generating PY3 code\n");
-            end = py3_end;
-            equal = py3_equal;
-            comment = py3_comment;
-            type = py3_type;
-            header = py3_header;
-            footer = py3_footer;
-            break;
         default:
             printf("Generating C code\n");
             end = c_end;
@@ -317,12 +330,13 @@ void write_output(FILE *codata, FILE *output, int language){
         fputs(comment, output);
         fputs(line, output);
         fputs(newline, output);
+        strcpy(table[i], line);
     }
 
     /* Write header for each language */
     fputs(header, output);
     fputs(newline, output);
-    
+    i = 11;
     while(!feof(codata)){
         clean_line(line, BUFFER_SIZE);
         clean_line(name, NAMES_SIZE);
@@ -336,6 +350,19 @@ void write_output(FILE *codata, FILE *output, int language){
             format_values(line, value, language);
             format_uncertainties(line, uncertainty, language);
             format_units(line, unit, language);
+            strcpy(&table[i][23], name);
+
+            strcpy(&table[i][NAMES_SIZE-1+23], "=");
+            strcpy(&table[i][NAMES_SIZE+23], "{");
+            strcpy(&table[i][NAMES_SIZE+1+23], value);
+            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+23], ",");
+            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+1+23], uncertainty);
+
+            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+23], ",");
+            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+1+23], "\"");
+            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+2+23], unit);
+            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+strlen(unit)-1+23], "\"");
+            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+strlen(unit)+23], "}");
             fputs(type, output);
             fputs(name, output);
             fputs(equal, output);
@@ -356,6 +383,7 @@ void write_output(FILE *codata, FILE *output, int language){
             
             fputs(newline, output);
         }
+        i++;
     }
     fputs(footer, output);
     free(line);
@@ -373,6 +401,8 @@ int main(int argc, char **argv){
     char *code_path;
 
     int n;
+    char **table = get_table(500, BUFFER_SIZE);
+    init_table(table, 500, BUFFER_SIZE);
     
     n = strlen(PROJECT_NAME);
     code_path = (char *)malloc(sizeof(char)*(n+1+10));
@@ -382,7 +412,7 @@ int main(int argc, char **argv){
     strcpy(&code_path[n], ".h");
     codata =  fopen(codata_path, "r");
     code = fopen(code_path, "w");
-    write_output(codata, code, C);
+    write_output(codata, code, C, table);
     fclose(code);
     fclose(codata);
     
@@ -390,19 +420,15 @@ int main(int argc, char **argv){
     strcpy(&code_path[n], ".f90");
     codata =  fopen(codata_path, "r");
     code = fopen(code_path, "w");
-    write_output(codata, code, F90);
+    //write_output(codata, code, F90, table);
     fclose(code);
     fclose(codata);
     
-    /* PY3 Header */
-    strcpy(&code_path[n], ".py");
-    codata =  fopen(codata_path, "r");
-    code = fopen(code_path, "w");
-    write_output(codata, code, PY3);
-    fclose(code);
-    fclose(codata);
 
     free(code_path);
+
+    print_table(table, 500, BUFFER_SIZE);
+    free_table(table, 500, BUFFER_SIZE);
 
     return EXIT_SUCCESS;
 }
