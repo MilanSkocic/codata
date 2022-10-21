@@ -21,7 +21,7 @@ add_subdirectory(src)
 # add_test(NAME bv COMMAND test_bv)
 
 
-install(FILES ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.h DESTINATION include)
-install(FILES ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.mod DESTINATION include)
-install(FILES ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.f90 DESTINATION include)
-install(FILES ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.py DESTINATION include)
+ install(TARGETS static_fcodata ARCHIVE DESTINATION lib)
+ install(TARGETS static_ccodata ARCHIVE DESTINATION lib)
+ install(TARGETS shared_ccodata PUBLIC_HEADER DESTINATION include LIBRARY DESTINATION lib)
+ install(TARGETS shared_fcodata PUBLIC_HEADER DESTINATION include LIBRARY DESTINATION lib)
