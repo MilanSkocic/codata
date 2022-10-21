@@ -272,7 +272,7 @@ void init_table(char **table, size_t rows, size_t line_buffer_size){
     }
 }
 
-void write_output(FILE *codata, FILE *output, int language, char **table){
+void write_output(FILE *codata, FILE *output, int language){
    
     size_t i=0;
     int empty = 0;
@@ -330,7 +330,6 @@ void write_output(FILE *codata, FILE *output, int language, char **table){
         fputs(comment, output);
         fputs(line, output);
         fputs(newline, output);
-        strcpy(table[i], line);
     }
 
     /* Write header for each language */
@@ -350,19 +349,7 @@ void write_output(FILE *codata, FILE *output, int language, char **table){
             format_values(line, value, language);
             format_uncertainties(line, uncertainty, language);
             format_units(line, unit, language);
-            strcpy(&table[i][23], name);
 
-            strcpy(&table[i][NAMES_SIZE-1+23], "=");
-            strcpy(&table[i][NAMES_SIZE+23], "{");
-            strcpy(&table[i][NAMES_SIZE+1+23], value);
-            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+23], ",");
-            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+1+23], uncertainty);
-
-            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+23], ",");
-            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+1+23], "\"");
-            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+2+23], unit);
-            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+strlen(unit)-1+23], "\"");
-            strcpy(&table[i][NAMES_SIZE+VALUES_SIZE+UNCERTAINTIES_SIZE+strlen(unit)+23], "}");
             fputs(type, output);
             fputs(name, output);
             fputs(equal, output);
@@ -401,8 +388,6 @@ int main(int argc, char **argv){
     char *code_path;
 
     int n;
-    char **table = get_table(500, BUFFER_SIZE);
-    init_table(table, 500, BUFFER_SIZE);
     
     n = strlen(PROJECT_NAME);
     code_path = (char *)malloc(sizeof(char)*(n+1+10));
@@ -412,7 +397,7 @@ int main(int argc, char **argv){
     strcpy(&code_path[n], ".h");
     codata =  fopen(codata_path, "r");
     code = fopen(code_path, "w");
-    write_output(codata, code, C, table);
+    write_output(codata, code, C);
     fclose(code);
     fclose(codata);
     
@@ -420,15 +405,12 @@ int main(int argc, char **argv){
     strcpy(&code_path[n], ".f90");
     codata =  fopen(codata_path, "r");
     code = fopen(code_path, "w");
-    //write_output(codata, code, F90, table);
+    write_output(codata, code, F90);
     fclose(code);
     fclose(codata);
     
 
     free(code_path);
-
-    print_table(table, 500, BUFFER_SIZE);
-    free_table(table, 500, BUFFER_SIZE);
 
     return EXIT_SUCCESS;
 }
