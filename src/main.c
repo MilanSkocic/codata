@@ -26,11 +26,11 @@ static const char c_comment[3] = "//\0";
 static const char f90_comment[3] = "!!\0";
 
 static const char c_type[14] = "const double \0";
-static const char f90_type[30] = "real(kind=8), parameter :: \0";
+static const char f90_type[30] = "real(c_double), parameter :: \0";
 static const char py3_type[30] = "\0";
 
 static const char c_header[1] = "\0";
-static const char f90_header[49] = "module codata\nimplicit none\0";
+static const char f90_header[49] = "module codata\nuse iso_c_binding\nimplicit none\0";
 static const char py3_header[20] = "r\"\"\"Codata\"\"\"\0";
 
 static const char c_footer[1] = "\0";
