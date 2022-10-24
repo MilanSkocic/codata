@@ -6,12 +6,12 @@ project(${PROJECT_NAME} VERSION 1.0.0 LANGUAGES "C" "Fortran" DESCRIPTION "Gener
 configure_file("./src/config.h.in" "./src/config.h")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
-set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -std=f95")
+set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -std=f2003")
 
 set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -std=c99 -Wall")
-set(CMAKE_Fortran_FLAGS_DEBUG "${CMAKE_Fortran_FLAGS_DEBUG} -std=f95 -Wall")
+set(CMAKE_Fortran_FLAGS_DEBUG "${CMAKE_Fortran_FLAGS_DEBUG} -std=f2003 -Wall")
 set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} -std=c99")
-set(CMAKE_Fortran_FLAGS_RELEASE "${CMAKE_Fortran_FLAGS_RELEASE} -std=f95")
+set(CMAKE_Fortran_FLAGS_RELEASE "${CMAKE_Fortran_FLAGS_RELEASE} -std=f2003")
 
 message("Cflags release = " ${CMAKE_C_FLAGS_RELEASE})
 message("Cflagsdebug = " ${CMAKE_C_FLAGS_DEBUG})
