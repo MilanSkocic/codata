@@ -1,11 +1,14 @@
 add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.txt
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/codata.txt ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.txt)
-
+                   
 add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}.f90 ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}.h
                    DEPENDS generator 
-                   COMMAND generator)
+                   COMMAND generator
+                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.f90 ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}.f90
+                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.h ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}.h
+                   )
 
-add_custom_target(copy_codata ALL
+add_custom_target(generate_sources ALL
                    DEPENDS ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.txt ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}.f90 ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}.h generator
                    )
 
