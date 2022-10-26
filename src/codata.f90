@@ -1,13 +1,7 @@
 !> 
-!!                                                                                                                                                                                                                                                                 
 !! Fundamental Physical Constants --- Complete Listing                                                                                                                                                                                                             
 !! 2018 CODATA adjustment                                                                                                                                                                                                                                          
-!!                                                                                                                                                                                                                                                                 
-!!                                                                                                                                                                                                                                                                 
 !! From:  http://physics.nist.gov/constants                                                                                                                                                                                                                        
-!!                                                                                                                                                                                                                                                                 
-!!                                                                                                                                                                                                                                                                 
-!!                                                                                                                                                                                                                                                                 
 !! 
 module codata
 use iso_c_binding

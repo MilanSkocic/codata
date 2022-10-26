@@ -268,7 +268,26 @@ void ltrim(char *buf, size_t buffer_size){
     for(i=0; i<buffer_size; i++){
         buf[i] = temp[i];
     }
+    free(temp);
 
+}
+
+int is_blank_line(char *buf, size_t buffer_size){
+    size_t i;
+    size_t j;
+    i = 0;
+    j = 0;
+    for(i=0; i<buffer_size; i++){
+        if(isalnum(buf[i])>0){
+            j++;
+        }
+    }
+    if(j>0){
+        return 0;
+    }
+    else{
+        return 1;
+    }
 }
 
 char **get_table(size_t rows, size_t line_buffer_size){
@@ -377,7 +396,7 @@ void write_output(FILE *codata, FILE *output, int language){
     for(i=0; i<=10; i++){
         clean_line(line, BUFFER_SIZE);
         read_line(codata, line);
-        if(i<9){
+        if((i<9) & (is_blank_line(line, BUFFER_SIZE)>0)){
             fputs(doxy_middle, output);
             ltrim(line, BUFFER_SIZE);
             fputs(line, output);
