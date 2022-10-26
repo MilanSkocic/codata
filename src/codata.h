@@ -1,10 +1,6 @@
 /** 
  * @file
- * Fundamental Physical Constants --- Complete Listing                                                                                                                                                                                                             
- * 2018 CODATA adjustment                                                                                                                                                                                                                                          
- * From:  http://physics.nist.gov/constants                                                                                                                                                                                                                        
  */
-
 const double ALPHA_PARTICLE_ELECTRON_MASS_RATIO                           = 7294.29954142            ;/**<                           */
 const double D_ALPHA_PARTICLE_ELECTRON_MASS_RATIO                         = 0.00000024               ;/**<                           */
 
