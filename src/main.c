@@ -21,9 +21,21 @@ static const char f90_end[1] = "\0";
 static const char c_equal[4] = " = \0";
 static const char f90_equal[4] = " = \0";
 
-
 static const char c_comment[3] = "//\0";
 static const char f90_comment[3] = "!!\0";
+
+static const char c_doxy_inline_start[] = "/**< ";
+static const char c_doxy_inline_end[] = " */";
+static const char f_doxy_inline_start[] = "!< ";
+static const char f_doxy_inline_end[] = " ";
+
+static const char c_doxy_start[] = "/** \n * @file\n";
+static const char c_doxy_middle[] = " * ";
+static const char c_doxy_end[] = " */\n";
+static const char f_doxy_start[] = "!> \n";
+static const char f_doxy_middle[] = "!! ";
+static const char f_doxy_end[] = "!! \n";
+
 
 static const char c_type[14] = "const double \0";
 static const char f90_type[30] = "real(c_double), parameter :: \0";
@@ -237,6 +249,28 @@ void clean_line(char *buf, size_t buffer_size){
     buf[buffer_size] = '\0';
 }
 
+void ltrim(char *buf, size_t buffer_size){
+    size_t i, j;
+    i = 0;
+    j = 0;
+    char *temp = (char *)malloc(sizeof(char)*(buffer_size+1));
+    for(i=0; i<buffer_size; i++){
+        if(isalnum(buf[i])>0){
+            break;
+        }
+    }
+    clean_line(temp, buffer_size);
+    for(i; i<buffer_size; i++){
+        temp[j] = buf[i];
+        j++;
+    }
+    clean_line(buf, buffer_size);
+    for(i=0; i<buffer_size; i++){
+        buf[i] = temp[i];
+    }
+
+}
+
 char **get_table(size_t rows, size_t line_buffer_size){
     
     size_t i;
@@ -284,6 +318,11 @@ void write_output(FILE *codata, FILE *output, int language){
     const char *type;
     const char *header;
     const char *footer;
+    const char *doxy_inline_start;
+    const char *doxy_inline_end;
+    const char *doxy_start;
+    const char *doxy_middle;
+    const char *doxy_end;
 
     
     char *line = (char *)malloc(sizeof(char)*(BUFFER_SIZE+1));
@@ -303,6 +342,11 @@ void write_output(FILE *codata, FILE *output, int language){
             type = c_type;
             header = c_header;
             footer = c_footer;
+            doxy_start = c_doxy_start;
+            doxy_middle = c_doxy_middle;
+            doxy_end = c_doxy_end;
+            doxy_inline_start = c_doxy_inline_start;
+            doxy_inline_end = c_doxy_inline_end;
             break;
         case F90:
             printf("Generating F90 code\n");
@@ -312,6 +356,11 @@ void write_output(FILE *codata, FILE *output, int language){
             type = f90_type;
             header = f90_header;
             footer = f90_footer;
+            doxy_start = f_doxy_start;
+            doxy_middle = f_doxy_middle;
+            doxy_end = f_doxy_end;
+            doxy_inline_start = f_doxy_inline_start;
+            doxy_inline_end = f_doxy_inline_end;
             break;
         default:
             printf("Generating C code\n");
@@ -324,13 +373,18 @@ void write_output(FILE *codata, FILE *output, int language){
     }
     
     /* Copy header from codata */
+    fputs(doxy_start, output);
     for(i=0; i<=10; i++){
         clean_line(line, BUFFER_SIZE);
         read_line(codata, line);
-        fputs(comment, output);
-        fputs(line, output);
-        fputs(newline, output);
+        if(i<9){
+            fputs(doxy_middle, output);
+            ltrim(line, BUFFER_SIZE);
+            fputs(line, output);
+            fputs(newline, output);
+        }
     }
+    fputs(doxy_end, output);
 
     /* Write header for each language */
     fputs(header, output);
@@ -355,8 +409,9 @@ void write_output(FILE *codata, FILE *output, int language){
             fputs(equal, output);
             fputs(value, output);
             fputs(end, output);
-            fputs(comment, output);
+            fputs(doxy_inline_start, output);
             fputs(unit, output);
+            fputs(doxy_inline_end, output);
             fputs(newline, output);
 
             fputs(type, output);
@@ -364,8 +419,9 @@ void write_output(FILE *codata, FILE *output, int language){
             fputs(equal, output);
             fputs(uncertainty, output);
             fputs(end, output);
-            fputs(comment, output);
+            fputs(doxy_inline_start, output);
             fputs(unit, output);
+            fputs(doxy_inline_end, output);
             fputs(newline, output);
             
             fputs(newline, output);
