@@ -1,9 +1,17 @@
 # Introduction
 
-Simple program for generating codata for C, Fortran and Python.
+Simple program for generating codata for C, Fortran.
 
-The generated code for C and Fortran can be installed in order to
-be included in programs.
+The raw codata from http://physics.nist.gov/constants are converted into
+C and Fortran code. The generator generates:
+ * an module for Fortran
+ * and header and source files for C
+
+The generated files are then compiled into shared and static libraries:
+ * libccodata for C
+ * libfcodata for Fortran
+
+The libraries for C and Fortran can be installed in order to be included in programs.
 
 The compilation was tested on Linux (Debian 10) and MacOS.
 

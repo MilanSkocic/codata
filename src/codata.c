@@ -3,6 +3,8 @@
  * Fundamental Physical Constants --- Complete Listing                                                                                                                                                                                                             
  * 2018 CODATA adjustment                                                                                                                                                                                                                                          
  * From:  http://physics.nist.gov/constants                                                                                                                                                                                                                        
+ * @example example_in_c.c
+ * @details How to us ccodata in c.
  */
 #include "codata.h"
 const double ALPHA_PARTICLE_ELECTRON_MASS_RATIO                           = 7294.29954142            ;/**<                           */

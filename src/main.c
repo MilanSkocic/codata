@@ -49,6 +49,12 @@ static const char f_doxy_start[] = "!> \n";
 static const char f_doxy_middle[] = "!! ";
 static const char f_doxy_end[] = "!! \n";
 
+static const char c_doxy_example[] = "@example example_in_c.c\n";
+static const char c_doxy_example_detail[] = "@details How to us ccodata in c.\n";
+
+static const char f_doxy_example[] = "@example example_in_fortran.f90\n";
+static const char f_doxy_example_detail[] = "@details How to us ccodata in Fortran.\n";
+
 static const char c_type[14] = "const double \0";
 static const char f90_type[30] = "real(c_double), parameter :: \0";
 
@@ -354,6 +360,8 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
     const char *doxy_start;
     const char *doxy_middle;
     const char *doxy_end;
+    const char *doxy_example;
+    const char *doxy_example_detail;
 
     
     char *line = (char *)malloc(sizeof(char)*(BUFFER_SIZE+1));
@@ -378,6 +386,8 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
             doxy_end = c_doxy_end;
             doxy_inline_start = c_doxy_inline_start;
             doxy_inline_end = c_doxy_inline_end;
+            doxy_example = c_doxy_example;
+            doxy_example_detail = c_doxy_example_detail;
             break;
         case F90:
             printf("Generating F90 code\n");
@@ -392,6 +402,8 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
             doxy_end = f_doxy_end;
             doxy_inline_start = f_doxy_inline_start;
             doxy_inline_end = f_doxy_inline_end;
+            doxy_example = f_doxy_example;
+            doxy_example_detail = f_doxy_example_detail;
             break;
         default:
             printf("Generating C code\n");
@@ -418,6 +430,10 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
             fputs(newline, fcode);
         }
     }
+    fputs(doxy_middle, fcode);
+    fputs(doxy_example, fcode);
+    fputs(doxy_middle, fcode);
+    fputs(doxy_example_detail, fcode);
     fputs(doxy_end, fcode);
     if(language == C){
         fputs(doxy_end, fheader);
