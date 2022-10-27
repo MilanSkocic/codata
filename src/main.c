@@ -442,27 +442,43 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
             format_units(line, unit, language);
 
             if(language == C){
+                fputs("extern ", fheader);
                 fputs(type, fheader);
                 fputs(name, fheader);
-                fputs(equal, fheader);
-                fputs(value, fheader);
                 fputs(end, fheader);
                 fputs(doxy_inline_start, fheader);
                 fputs(unit, fheader);
                 fputs(doxy_inline_end, fheader);
                 fputs(newline, fheader);
-            
+                fputs("extern ", fheader);
                 fputs(type, fheader);
                 fputs(dname, fheader);
-                fputs(equal, fheader);
-                fputs(uncertainty, fheader);
                 fputs(end, fheader);
                 fputs(doxy_inline_start, fheader);
                 fputs(unit, fheader);
                 fputs(doxy_inline_end, fheader);
                 fputs(newline, fheader);
-
                 fputs(newline, fheader);
+                
+                fputs(type, fcode);
+                fputs(name, fcode);
+                fputs(equal, fcode);
+                fputs(value, fcode);
+                fputs(end, fcode);
+                fputs(doxy_inline_start, fcode);
+                fputs(unit, fcode);
+                fputs(doxy_inline_end, fcode);
+                fputs(newline, fcode);
+                fputs(type, fcode);
+                fputs(dname, fcode);
+                fputs(equal, fcode);
+                fputs(uncertainty, fcode);
+                fputs(end, fcode);
+                fputs(doxy_inline_start, fcode);
+                fputs(unit, fcode);
+                fputs(doxy_inline_end, fcode);
+                fputs(newline, fcode);
+                fputs(newline, fcode);
             }else{
                 fputs(type, fcode);
                 fputs(name, fcode);
