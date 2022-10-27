@@ -23,6 +23,7 @@ message("C Compiler = " ${CMAKE_C_COMPILER})
 message("Fortran Compiler = " ${CMAKE_Fortran_COMPILER})
 
 add_subdirectory(src)
+add_subdirectory(examples)
 
 # enable_testing()
 # add_test(NAME bv COMMAND test_bv)
