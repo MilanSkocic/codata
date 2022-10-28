@@ -15,6 +15,10 @@ The libraries for C and Fortran can be installed in order to be included in prog
 
 The compilation was tested on Linux (Debian 10) and MacOS.
 
+The sources are available are available on [github](https://github.com/MilanSkocic/codata).
+
+The online documentation is available [here](https://milanskocic.github.io/codata/index.html).
+
 
 # Installation
 
