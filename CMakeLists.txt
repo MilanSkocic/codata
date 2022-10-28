@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_NAME "codata")
 
-project(${PROJECT_NAME} VERSION 1.0.0 LANGUAGES "C" "Fortran" DESCRIPTION "Generate codata from NIST.")
+project(${PROJECT_NAME} VERSION 0.1.0 LANGUAGES "C" "Fortran" DESCRIPTION "Generate codata from NIST.")
 configure_file("./src/config.h.in" "./src/config.h")
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
