@@ -23,7 +23,7 @@ set_target_properties(static_ccodata PROPERTIES OUTPUT_NAME ccodata)
 target_include_directories(static_ccodata PUBLIC ${CMAKE_BINARY_DIR}/src)
 
 add_library(shared_ccodata SHARED codata.c)
-set_target_properties(shared_ccodata PROPERTIES PUBLIC_HEADER ${CMAKE_SOURCE_DIR}/src/codata.h OUTPUT_NAME ccodata)
+set_target_properties(shared_ccodata PROPERTIES PUBLIC_HEADER ${CMAKE_BINARY_DIR}/src/codata.h OUTPUT_NAME ccodata)
 target_include_directories(shared_ccodata PUBLIC ${CMAKE_BINARY_DIR}/src)
 
 # Fortran library
@@ -32,5 +32,5 @@ set_target_properties(static_fcodata PROPERTIES OUTPUT_NAME fcodata)
 target_include_directories(static_fcodata PUBLIC ${CMAKE_BINARY_DIR}/src)
 
 add_library(shared_fcodata SHARED codata.f90)
-set_target_properties(shared_fcodata PROPERTIES PUBLIC_HEADER ${CMAKE_SOURCE_DIR}/src/codata.mod OUTPUT_NAME fcodata)
+set_target_properties(shared_fcodata PROPERTIES PUBLIC_HEADER ${CMAKE_BINARY_DIR}/src/codata.mod OUTPUT_NAME fcodata)
 target_include_directories(shared_fcodata PUBLIC ${CMAKE_BINARY_DIR}/src)

@@ -7,6 +7,7 @@
 *.a
 *.lib
 *.cmake
+*.mod
 
 .idea
 .vscode
