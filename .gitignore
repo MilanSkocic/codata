@@ -14,7 +14,7 @@
 
 build/
 
-docs/html
-docs/xml/
-docs/latex/
-docs/man
+doxygen/html
+doxygen/xml/
+doxygen/latex/
+doxygen/man
