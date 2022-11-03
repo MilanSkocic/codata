@@ -1,0 +1,7211 @@
+.TH "codata" 3 "Fri Oct 28 2022" "Version 1.0" "Codata" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+codata
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "real(c_double), parameter \fBalpha_particle_electron_mass_ratio\fP = 7294\&.29954142"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_alpha_particle_electron_mass_ratio\fP = 0\&.00000024"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBalpha_particle_mass\fP = 6\&.6446573357d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_alpha_particle_mass\fP = 0\&.0000000020d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBalpha_particle_mass_energy_equivalent\fP = 5\&.9719201914d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_alpha_particle_mass_energy_equivalent\fP = 0\&.0000000018d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBalpha_particle_mass_energy_equivalent_in_mev\fP = 3727\&.3794066"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_alpha_particle_mass_energy_equivalent_in_mev\fP = 0\&.0000011"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBalpha_particle_mass_in_u\fP = 4\&.001506179127"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_alpha_particle_mass_in_u\fP = 0\&.000000000063"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBalpha_particle_molar_mass\fP = 4\&.0015061777d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_alpha_particle_molar_mass\fP = 0\&.0000000012d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBalpha_particle_proton_mass_ratio\fP = 3\&.97259969009"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_alpha_particle_proton_mass_ratio\fP = 0\&.00000000022"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBalpha_particle_relative_atomic_mass\fP = 4\&.001506179127"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_alpha_particle_relative_atomic_mass\fP = 0\&.000000000063"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBangstrom_star\fP = 1\&.00001495d\-10"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_angstrom_star\fP = 0\&.00000090d\-10"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_constant\fP = 1\&.66053906660d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_constant\fP = 0\&.00000000050d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_constant_energy_equivalent\fP = 1\&.49241808560d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_constant_energy_equivalent\fP = 0\&.00000000045d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_constant_energy_equivalent_in_mev\fP = 931\&.49410242"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_constant_energy_equivalent_in_mev\fP = 0\&.00000028"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_unit_electron_volt_relationship\fP = 9\&.3149410242d8"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_unit_electron_volt_relationship\fP = 0\&.0000000028d8"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_unit_hartree_relationship\fP = 3\&.4231776874d7"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_unit_hartree_relationship\fP = 0\&.0000000010d7"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_unit_hertz_relationship\fP = 2\&.25234271871d23"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_unit_hertz_relationship\fP = 0\&.00000000068d23"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_unit_inverse_meter_relationship\fP = 7\&.5130066104d14"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_unit_inverse_meter_relationship\fP = 0\&.0000000023d14"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_unit_joule_relationship\fP = 1\&.49241808560d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_unit_joule_relationship\fP = 0\&.00000000045d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_unit_kelvin_relationship\fP = 1\&.08095401916d13"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_unit_kelvin_relationship\fP = 0\&.00000000033d13"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_mass_unit_kilogram_relationship\fP = 1\&.66053906660d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_mass_unit_kilogram_relationship\fP = 0\&.00000000050d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_1st_hyperpolarizability\fP = 3\&.2063613061d\-53"
+.br
+.RI "C^3 m^3 J^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_1st_hyperpolarizability\fP = 0\&.0000000015d\-53"
+.br
+.RI "C^3 m^3 J^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_2nd_hyperpolarizability\fP = 6\&.2353799905d\-65"
+.br
+.RI "C^4 m^4 J^-3 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_2nd_hyperpolarizability\fP = 0\&.0000000038d\-65"
+.br
+.RI "C^4 m^4 J^-3 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_action\fP = 1\&.054571817d\-34"
+.br
+.RI "J s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_action\fP = 0\&.0"
+.br
+.RI "J s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_charge\fP = 1\&.602176634d\-19"
+.br
+.RI "C 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_charge\fP = 0\&.0"
+.br
+.RI "C 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_charge_density\fP = 1\&.08120238457d12"
+.br
+.RI "C m^-3 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_charge_density\fP = 0\&.00000000049d12"
+.br
+.RI "C m^-3 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_current\fP = 6\&.623618237510d\-3"
+.br
+.RI "A 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_current\fP = 0\&.000000000013d\-3"
+.br
+.RI "A 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_electric_dipole_mom\fP = 8\&.4783536255d\-30"
+.br
+.RI "C m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_electric_dipole_mom\fP = 0\&.0000000013d\-30"
+.br
+.RI "C m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_electric_field\fP = 5\&.14220674763d11"
+.br
+.RI "V m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_electric_field\fP = 0\&.00000000078d11"
+.br
+.RI "V m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_electric_field_gradient\fP = 9\&.7173624292d21"
+.br
+.RI "V m^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_electric_field_gradient\fP = 0\&.0000000029d21"
+.br
+.RI "V m^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_electric_polarizability\fP = 1\&.64877727436d\-41"
+.br
+.RI "C^2 m^2 J^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_electric_polarizability\fP = 0\&.00000000050d\-41"
+.br
+.RI "C^2 m^2 J^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_electric_potential\fP = 27\&.211386245988"
+.br
+.RI "V 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_electric_potential\fP = 0\&.000000000053"
+.br
+.RI "V 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_electric_quadrupole_mom\fP = 4\&.4865515246d\-40"
+.br
+.RI "C m^2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_electric_quadrupole_mom\fP = 0\&.0000000014d\-40"
+.br
+.RI "C m^2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_energy\fP = 4\&.3597447222071d\-18"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_energy\fP = 0\&.0000000000085d\-18"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_force\fP = 8\&.2387234983d\-8"
+.br
+.RI "N 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_force\fP = 0\&.0000000012d\-8"
+.br
+.RI "N 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_length\fP = 5\&.29177210903d\-11"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_length\fP = 0\&.00000000080d\-11"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_mag__dipole_mom\fP = 1\&.85480201566d\-23"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_mag__dipole_mom\fP = 0\&.00000000056d\-23"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_mag__flux_density\fP = 2\&.35051756758d5"
+.br
+.RI "T 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_mag__flux_density\fP = 0\&.00000000071d5"
+.br
+.RI "T 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_magnetizability\fP = 7\&.8910366008d\-29"
+.br
+.RI "J T^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_magnetizability\fP = 0\&.0000000048d\-29"
+.br
+.RI "J T^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_mass\fP = 9\&.1093837015d\-31"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_mass\fP = 0\&.0000000028d\-31"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_momentum\fP = 1\&.99285191410d\-24"
+.br
+.RI "kg m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_momentum\fP = 0\&.00000000030d\-24"
+.br
+.RI "kg m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_permittivity\fP = 1\&.11265005545d\-10"
+.br
+.RI "F m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_permittivity\fP = 0\&.00000000017d\-10"
+.br
+.RI "F m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_time\fP = 2\&.4188843265857d\-17"
+.br
+.RI "s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_time\fP = 0\&.0000000000047d\-17"
+.br
+.RI "s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBatomic_unit_of_velocity\fP = 2\&.18769126364d6"
+.br
+.RI "m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_atomic_unit_of_velocity\fP = 0\&.00000000033d6"
+.br
+.RI "m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBavogadro_constant\fP = 6\&.02214076d23"
+.br
+.RI "mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_avogadro_constant\fP = 0\&.0"
+.br
+.RI "mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBbohr_magneton\fP = 9\&.2740100783d\-24"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_bohr_magneton\fP = 0\&.0000000028d\-24"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBbohr_magneton_in_ev_t\fP = 5\&.7883818060d\-5"
+.br
+.RI "eV T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_bohr_magneton_in_ev_t\fP = 0\&.0000000017d\-5"
+.br
+.RI "eV T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBbohr_magneton_in_hz_t\fP = 1\&.39962449361d10"
+.br
+.RI "Hz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_bohr_magneton_in_hz_t\fP = 0\&.00000000042d10"
+.br
+.RI "Hz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBbohr_magneton_in_inverse_meter_per_tesla\fP = 46\&.686447783"
+.br
+.RI "m^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_bohr_magneton_in_inverse_meter_per_tesla\fP = 0\&.000000014"
+.br
+.RI "m^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBbohr_magneton_in_k_t\fP = 0\&.67171381563"
+.br
+.RI "K T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_bohr_magneton_in_k_t\fP = 0\&.00000000020"
+.br
+.RI "K T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBbohr_radius\fP = 5\&.29177210903d\-11"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_bohr_radius\fP = 0\&.00000000080d\-11"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBboltzmann_constant\fP = 1\&.380649d\-23"
+.br
+.RI "J K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_boltzmann_constant\fP = 0\&.0"
+.br
+.RI "J K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBboltzmann_constant_in_ev_k\fP = 8\&.617333262d\-5"
+.br
+.RI "eV K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_boltzmann_constant_in_ev_k\fP = 0\&.0"
+.br
+.RI "eV K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBboltzmann_constant_in_hz_k\fP = 2\&.083661912d10"
+.br
+.RI "Hz K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_boltzmann_constant_in_hz_k\fP = 0\&.0"
+.br
+.RI "Hz K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBboltzmann_constant_in_inverse_meter_per_kelvin\fP = 69\&.50348004"
+.br
+.RI "m^-1 K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_boltzmann_constant_in_inverse_meter_per_kelvin\fP = 0\&.0"
+.br
+.RI "m^-1 K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBcharacteristic_impedance_of_vacuum\fP = 376\&.730313668"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_characteristic_impedance_of_vacuum\fP = 0\&.000000057"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBclassical_electron_radius\fP = 2\&.8179403262d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_classical_electron_radius\fP = 0\&.0000000013d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBcompton_wavelength\fP = 2\&.42631023867d\-12"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_compton_wavelength\fP = 0\&.00000000073d\-12"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconductance_quantum\fP = 7\&.748091729d\-5"
+.br
+.RI "S 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conductance_quantum\fP = 0\&.0"
+.br
+.RI "S 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconventional_value_of_ampere_90\fP = 1\&.00000008887"
+.br
+.RI "A 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conventional_value_of_ampere_90\fP = 0\&.0"
+.br
+.RI "A 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconventional_value_of_coulomb_90\fP = 1\&.00000008887"
+.br
+.RI "C 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conventional_value_of_coulomb_90\fP = 0\&.0"
+.br
+.RI "C 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconventional_value_of_farad_90\fP = 0\&.99999998220"
+.br
+.RI "F 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conventional_value_of_farad_90\fP = 0\&.0"
+.br
+.RI "F 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconventional_value_of_henry_90\fP = 1\&.00000001779"
+.br
+.RI "H 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conventional_value_of_henry_90\fP = 0\&.0"
+.br
+.RI "H 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconventional_value_of_josephson_constant\fP = 483597\&.9d9"
+.br
+.RI "Hz V^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conventional_value_of_josephson_constant\fP = 0\&.0"
+.br
+.RI "Hz V^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconventional_value_of_ohm_90\fP = 1\&.00000001779"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conventional_value_of_ohm_90\fP = 0\&.0"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconventional_value_of_volt_90\fP = 1\&.00000010666"
+.br
+.RI "V 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conventional_value_of_volt_90\fP = 0\&.0"
+.br
+.RI "V 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconventional_value_of_von_klitzing_constant\fP = 25812\&.807"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conventional_value_of_von_klitzing_constant\fP = 0\&.0"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBconventional_value_of_watt_90\fP = 1\&.00000019553"
+.br
+.RI "W 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_conventional_value_of_watt_90\fP = 0\&.0"
+.br
+.RI "W 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBcopper_x_unit\fP = 1\&.00207697d\-13"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_copper_x_unit\fP = 0\&.00000028d\-13"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_electron_mag__mom__ratio\fP = \-4\&.664345551d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_electron_mag__mom__ratio\fP = 0\&.000000012d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_electron_mass_ratio\fP = 3670\&.48296788"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_electron_mass_ratio\fP = 0\&.00000013"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_g_factor\fP = 0\&.8574382338"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_g_factor\fP = 0\&.0000000022"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_mag__mom\fP = 4\&.330735094d\-27"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_mag__mom\fP = 0\&.000000011d\-27"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_mag__mom__to_bohr_magneton_ratio\fP = 4\&.669754570d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_mag__mom__to_bohr_magneton_ratio\fP = 0\&.000000012d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.8574382338"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.0000000022"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_mass\fP = 3\&.3435837724d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_mass\fP = 0\&.0000000010d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_mass_energy_equivalent\fP = 3\&.00506323102d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_mass_energy_equivalent\fP = 0\&.00000000091d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_mass_energy_equivalent_in_mev\fP = 1875\&.61294257"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_mass_energy_equivalent_in_mev\fP = 0\&.00000057"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_mass_in_u\fP = 2\&.013553212745"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_mass_in_u\fP = 0\&.000000000040"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_molar_mass\fP = 2\&.01355321205d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_molar_mass\fP = 0\&.00000000061d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_neutron_mag__mom__ratio\fP = \-0\&.44820653"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_neutron_mag__mom__ratio\fP = 0\&.00000011"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_proton_mag__mom__ratio\fP = 0\&.30701220939"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_proton_mag__mom__ratio\fP = 0\&.00000000079"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_proton_mass_ratio\fP = 1\&.99900750139"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_proton_mass_ratio\fP = 0\&.00000000011"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_relative_atomic_mass\fP = 2\&.013553212745"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_relative_atomic_mass\fP = 0\&.000000000040"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBdeuteron_rms_charge_radius\fP = 2\&.12799d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_deuteron_rms_charge_radius\fP = 0\&.00074d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_charge_to_mass_quotient\fP = \-1\&.75882001076d11"
+.br
+.RI "C kg^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_charge_to_mass_quotient\fP = 0\&.00000000053d11"
+.br
+.RI "C kg^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_deuteron_mag__mom__ratio\fP = \-2143\&.9234915"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_deuteron_mag__mom__ratio\fP = 0\&.0000056"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_deuteron_mass_ratio\fP = 2\&.724437107462d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_deuteron_mass_ratio\fP = 0\&.000000000096d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_g_factor\fP = \-2\&.00231930436256"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_g_factor\fP = 0\&.00000000000035"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_gyromag__ratio\fP = 1\&.76085963023d11"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_gyromag__ratio\fP = 0\&.00000000053d11"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_gyromag__ratio_in_mhz_t\fP = 28024\&.9514242"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_gyromag__ratio_in_mhz_t\fP = 0\&.0000085"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_helion_mass_ratio\fP = 1\&.819543074573d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_helion_mass_ratio\fP = 0\&.000000000079d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_mag__mom\fP = \-9\&.2847647043d\-24"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_mag__mom\fP = 0\&.0000000028d\-24"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_mag__mom__anomaly\fP = 1\&.15965218128d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_mag__mom__anomaly\fP = 0\&.00000000018d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_mag__mom__to_bohr_magneton_ratio\fP = \-1\&.00115965218128"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_mag__mom__to_bohr_magneton_ratio\fP = 0\&.00000000000018"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_mag__mom__to_nuclear_magneton_ratio\fP = \-1838\&.28197188"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.00000011"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_mass\fP = 9\&.1093837015d\-31"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_mass\fP = 0\&.0000000028d\-31"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_mass_energy_equivalent\fP = 8\&.1871057769d\-14"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_mass_energy_equivalent\fP = 0\&.0000000025d\-14"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_mass_energy_equivalent_in_mev\fP = 0\&.51099895000"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_mass_energy_equivalent_in_mev\fP = 0\&.00000000015"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_mass_in_u\fP = 5\&.48579909065d\-4"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_mass_in_u\fP = 0\&.00000000016d\-4"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_molar_mass\fP = 5\&.4857990888d\-7"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_molar_mass\fP = 0\&.0000000017d\-7"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_muon_mag__mom__ratio\fP = 206\&.7669883"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_muon_mag__mom__ratio\fP = 0\&.0000046"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_muon_mass_ratio\fP = 4\&.83633169d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_muon_mass_ratio\fP = 0\&.00000011d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_neutron_mag__mom__ratio\fP = 960\&.92050"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_neutron_mag__mom__ratio\fP = 0\&.00023"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_neutron_mass_ratio\fP = 5\&.4386734424d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_neutron_mass_ratio\fP = 0\&.0000000026d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_proton_mag__mom__ratio\fP = \-658\&.21068789"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_proton_mag__mom__ratio\fP = 0\&.00000020"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_proton_mass_ratio\fP = 5\&.44617021487d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_proton_mass_ratio\fP = 0\&.00000000033d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_relative_atomic_mass\fP = 5\&.48579909065d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_relative_atomic_mass\fP = 0\&.00000000016d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_tau_mass_ratio\fP = 2\&.87585d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_tau_mass_ratio\fP = 0\&.00019d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_to_alpha_particle_mass_ratio\fP = 1\&.370933554787d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_to_alpha_particle_mass_ratio\fP = 0\&.000000000045d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_to_shielded_helion_mag__mom__ratio\fP = 864\&.058257"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_to_shielded_helion_mag__mom__ratio\fP = 0\&.000010"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_to_shielded_proton_mag__mom__ratio\fP = \-658\&.2275971"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_to_shielded_proton_mag__mom__ratio\fP = 0\&.0000072"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_triton_mass_ratio\fP = 1\&.819200062251d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_triton_mass_ratio\fP = 0\&.000000000090d\-4"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_volt\fP = 1\&.602176634d\-19"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_volt\fP = 0\&.0"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_volt_atomic_mass_unit_relationship\fP = 1\&.07354410233d\-9"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_volt_atomic_mass_unit_relationship\fP = 0\&.00000000032d\-9"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_volt_hartree_relationship\fP = 3\&.6749322175655d\-2"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_volt_hartree_relationship\fP = 0\&.0000000000071d\-2"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_volt_hertz_relationship\fP = 2\&.417989242d14"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_volt_hertz_relationship\fP = 0\&.0"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_volt_inverse_meter_relationship\fP = 8\&.065543937d5"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_volt_inverse_meter_relationship\fP = 0\&.0"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_volt_joule_relationship\fP = 1\&.602176634d\-19"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_volt_joule_relationship\fP = 0\&.0"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_volt_kelvin_relationship\fP = 1\&.160451812d4"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_volt_kelvin_relationship\fP = 0\&.0"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelectron_volt_kilogram_relationship\fP = 1\&.782661921d\-36"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_electron_volt_kilogram_relationship\fP = 0\&.0"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelementary_charge\fP = 1\&.602176634d\-19"
+.br
+.RI "C 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_elementary_charge\fP = 0\&.0"
+.br
+.RI "C 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBelementary_charge_over_h_bar\fP = 1\&.519267447d15"
+.br
+.RI "A J^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_elementary_charge_over_h_bar\fP = 0\&.0"
+.br
+.RI "A J^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBfaraday_constant\fP = 96485\&.33212"
+.br
+.RI "C mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_faraday_constant\fP = 0\&.0"
+.br
+.RI "C mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBfermi_coupling_constant\fP = 1\&.1663787d\-5"
+.br
+.RI "GeV^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_fermi_coupling_constant\fP = 0\&.0000006d\-5"
+.br
+.RI "GeV^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBfine_structure_constant\fP = 7\&.2973525693d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_fine_structure_constant\fP = 0\&.0000000011d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBfirst_radiation_constant\fP = 3\&.741771852d\-16"
+.br
+.RI "W m^2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_first_radiation_constant\fP = 0\&.0"
+.br
+.RI "W m^2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBfirst_radiation_constant_for_spectral_radiance\fP = 1\&.191042972d\-16"
+.br
+.RI "W m^2 sr^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_first_radiation_constant_for_spectral_radiance\fP = 0\&.0"
+.br
+.RI "W m^2 sr^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhartree_atomic_mass_unit_relationship\fP = 2\&.92126232205d\-8"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hartree_atomic_mass_unit_relationship\fP = 0\&.00000000088d\-8"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhartree_electron_volt_relationship\fP = 27\&.211386245988"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hartree_electron_volt_relationship\fP = 0\&.000000000053"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhartree_energy\fP = 4\&.3597447222071d\-18"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hartree_energy\fP = 0\&.0000000000085d\-18"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhartree_energy_in_ev\fP = 27\&.211386245988"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hartree_energy_in_ev\fP = 0\&.000000000053"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhartree_hertz_relationship\fP = 6\&.579683920502d15"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hartree_hertz_relationship\fP = 0\&.000000000013d15"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhartree_inverse_meter_relationship\fP = 2\&.1947463136320d7"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hartree_inverse_meter_relationship\fP = 0\&.0000000000043d7"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhartree_joule_relationship\fP = 4\&.3597447222071d\-18"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hartree_joule_relationship\fP = 0\&.0000000000085d\-18"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhartree_kelvin_relationship\fP = 3\&.1577502480407d5"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hartree_kelvin_relationship\fP = 0\&.0000000000061d5"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhartree_kilogram_relationship\fP = 4\&.8508702095432d\-35"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hartree_kilogram_relationship\fP = 0\&.0000000000094d\-35"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_electron_mass_ratio\fP = 5495\&.88528007"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_electron_mass_ratio\fP = 0\&.00000024"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_g_factor\fP = \-4\&.255250615"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_g_factor\fP = 0\&.000000050"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_mag__mom\fP = \-1\&.074617532d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_mag__mom\fP = 0\&.000000013d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_mag__mom__to_bohr_magneton_ratio\fP = \-1\&.158740958d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_mag__mom__to_bohr_magneton_ratio\fP = 0\&.000000014d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_mag__mom__to_nuclear_magneton_ratio\fP = \-2\&.127625307"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.000000025"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_mass\fP = 5\&.0064127796d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_mass\fP = 0\&.0000000015d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_mass_energy_equivalent\fP = 4\&.4995394125d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_mass_energy_equivalent\fP = 0\&.0000000014d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_mass_energy_equivalent_in_mev\fP = 2808\&.39160743"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_mass_energy_equivalent_in_mev\fP = 0\&.00000085"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_mass_in_u\fP = 3\&.014932247175"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_mass_in_u\fP = 0\&.000000000097"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_molar_mass\fP = 3\&.01493224613d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_molar_mass\fP = 0\&.00000000091d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_proton_mass_ratio\fP = 2\&.99315267167"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_proton_mass_ratio\fP = 0\&.00000000013"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_relative_atomic_mass\fP = 3\&.014932247175"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_relative_atomic_mass\fP = 0\&.000000000097"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBhelion_shielding_shift\fP = 5\&.996743d\-5"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_helion_shielding_shift\fP = 0\&.000010d\-5"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBhertz_atomic_mass_unit_relationship\fP = 4\&.4398216652d\-24"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hertz_atomic_mass_unit_relationship\fP = 0\&.0000000013d\-24"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhertz_electron_volt_relationship\fP = 4\&.135667696d\-15"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hertz_electron_volt_relationship\fP = 0\&.0"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhertz_hartree_relationship\fP = 1\&.5198298460570d\-16"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hertz_hartree_relationship\fP = 0\&.0000000000029d\-16"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhertz_inverse_meter_relationship\fP = 3\&.335640951d\-9"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hertz_inverse_meter_relationship\fP = 0\&.0"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhertz_joule_relationship\fP = 6\&.62607015d\-34"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hertz_joule_relationship\fP = 0\&.0"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhertz_kelvin_relationship\fP = 4\&.799243073d\-11"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hertz_kelvin_relationship\fP = 0\&.0"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhertz_kilogram_relationship\fP = 7\&.372497323d\-51"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hertz_kilogram_relationship\fP = 0\&.0"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBhyperfine_transition_frequency_of_cs_133\fP = 9192631770\&.0"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_hyperfine_transition_frequency_of_cs_133\fP = 0\&.0"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBinverse_fine_structure_constant\fP = 137\&.035999084"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_inverse_fine_structure_constant\fP = 0\&.000000021"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBinverse_meter_atomic_mass_unit_relationship\fP = 1\&.33102505010d\-15"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_inverse_meter_atomic_mass_unit_relationship\fP = 0\&.00000000040d\-15"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBinverse_meter_electron_volt_relationship\fP = 1\&.239841984d\-6"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_inverse_meter_electron_volt_relationship\fP = 0\&.0"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBinverse_meter_hartree_relationship\fP = 4\&.5563352529120d\-8"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_inverse_meter_hartree_relationship\fP = 0\&.0000000000088d\-8"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBinverse_meter_hertz_relationship\fP = 299792458\&.0"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_inverse_meter_hertz_relationship\fP = 0\&.0"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBinverse_meter_joule_relationship\fP = 1\&.986445857d\-25"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_inverse_meter_joule_relationship\fP = 0\&.0"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBinverse_meter_kelvin_relationship\fP = 1\&.438776877d\-2"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_inverse_meter_kelvin_relationship\fP = 0\&.0"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBinverse_meter_kilogram_relationship\fP = 2\&.210219094d\-42"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_inverse_meter_kilogram_relationship\fP = 0\&.0"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBinverse_of_conductance_quantum\fP = 12906\&.40372"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_inverse_of_conductance_quantum\fP = 0\&.0"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBjosephson_constant\fP = 483597\&.8484d9"
+.br
+.RI "Hz V^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_josephson_constant\fP = 0\&.0"
+.br
+.RI "Hz V^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBjoule_atomic_mass_unit_relationship\fP = 6\&.7005352565d9"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_joule_atomic_mass_unit_relationship\fP = 0\&.0000000020d9"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBjoule_electron_volt_relationship\fP = 6\&.241509074d18"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_joule_electron_volt_relationship\fP = 0\&.0"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBjoule_hartree_relationship\fP = 2\&.2937122783963d17"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_joule_hartree_relationship\fP = 0\&.0000000000045d17"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBjoule_hertz_relationship\fP = 1\&.509190179d33"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_joule_hertz_relationship\fP = 0\&.0"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBjoule_inverse_meter_relationship\fP = 5\&.034116567d24"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_joule_inverse_meter_relationship\fP = 0\&.0"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBjoule_kelvin_relationship\fP = 7\&.242970516d22"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_joule_kelvin_relationship\fP = 0\&.0"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBjoule_kilogram_relationship\fP = 1\&.112650056d\-17"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_joule_kilogram_relationship\fP = 0\&.0"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkelvin_atomic_mass_unit_relationship\fP = 9\&.2510873014d\-14"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kelvin_atomic_mass_unit_relationship\fP = 0\&.0000000028d\-14"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkelvin_electron_volt_relationship\fP = 8\&.617333262d\-5"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kelvin_electron_volt_relationship\fP = 0\&.0"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkelvin_hartree_relationship\fP = 3\&.1668115634556d\-6"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kelvin_hartree_relationship\fP = 0\&.0000000000061d\-6"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkelvin_hertz_relationship\fP = 2\&.083661912d10"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kelvin_hertz_relationship\fP = 0\&.0"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkelvin_inverse_meter_relationship\fP = 69\&.50348004"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kelvin_inverse_meter_relationship\fP = 0\&.0"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkelvin_joule_relationship\fP = 1\&.380649d\-23"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kelvin_joule_relationship\fP = 0\&.0"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkelvin_kilogram_relationship\fP = 1\&.536179187d\-40"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kelvin_kilogram_relationship\fP = 0\&.0"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkilogram_atomic_mass_unit_relationship\fP = 6\&.0221407621d26"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kilogram_atomic_mass_unit_relationship\fP = 0\&.0000000018d26"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkilogram_electron_volt_relationship\fP = 5\&.609588603d35"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kilogram_electron_volt_relationship\fP = 0\&.0"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkilogram_hartree_relationship\fP = 2\&.0614857887409d34"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kilogram_hartree_relationship\fP = 0\&.0000000000040d34"
+.br
+.RI "E_h 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkilogram_hertz_relationship\fP = 1\&.356392489d50"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kilogram_hertz_relationship\fP = 0\&.0"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkilogram_inverse_meter_relationship\fP = 4\&.524438335d41"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kilogram_inverse_meter_relationship\fP = 0\&.0"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkilogram_joule_relationship\fP = 8\&.987551787d16"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kilogram_joule_relationship\fP = 0\&.0"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBkilogram_kelvin_relationship\fP = 6\&.509657260d39"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_kilogram_kelvin_relationship\fP = 0\&.0"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBlattice_parameter_of_silicon\fP = 5\&.431020511d\-10"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_lattice_parameter_of_silicon\fP = 0\&.000000089d\-10"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBlattice_spacing_of_ideal_si__220\fP = 1\&.920155716d\-10"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_lattice_spacing_of_ideal_si__220\fP = 0\&.000000032d\-10"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBloschmidt_constant__273_15_k__100_kpa\fP = 2\&.651645804d25"
+.br
+.RI "m^-3 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_loschmidt_constant__273_15_k__100_kpa\fP = 0\&.0"
+.br
+.RI "m^-3 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBloschmidt_constant__273_15_k__101_325_kpa\fP = 2\&.686780111d25"
+.br
+.RI "m^-3 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_loschmidt_constant__273_15_k__101_325_kpa\fP = 0\&.0"
+.br
+.RI "m^-3 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBluminous_efficacy\fP = 683\&.0"
+.br
+.RI "lm W^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_luminous_efficacy\fP = 0\&.0"
+.br
+.RI "lm W^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmag__flux_quantum\fP = 2\&.067833848d\-15"
+.br
+.RI "Wb 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_mag__flux_quantum\fP = 0\&.0"
+.br
+.RI "Wb 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmolar_gas_constant\fP = 8\&.314462618"
+.br
+.RI "J mol^-1 K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_molar_gas_constant\fP = 0\&.0"
+.br
+.RI "J mol^-1 K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmolar_mass_constant\fP = 0\&.99999999965d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_molar_mass_constant\fP = 0\&.00000000030d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmolar_mass_of_carbon_12\fP = 11\&.9999999958d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_molar_mass_of_carbon_12\fP = 0\&.0000000036d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmolar_planck_constant\fP = 3\&.990312712d\-10"
+.br
+.RI "J Hz^-1 mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_molar_planck_constant\fP = 0\&.0"
+.br
+.RI "J Hz^-1 mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmolar_volume_of_ideal_gas__273_15_k__100_kpa\fP = 22\&.71095464d\-3"
+.br
+.RI "m^3 mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_molar_volume_of_ideal_gas__273_15_k__100_kpa\fP = 0\&.0"
+.br
+.RI "m^3 mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmolar_volume_of_ideal_gas__273_15_k__101_325_kpa\fP = 22\&.41396954d\-3"
+.br
+.RI "m^3 mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_molar_volume_of_ideal_gas__273_15_k__101_325_kpa\fP = 0\&.0"
+.br
+.RI "m^3 mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmolar_volume_of_silicon\fP = 1\&.205883199d\-5"
+.br
+.RI "m^3 mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_molar_volume_of_silicon\fP = 0\&.000000060d\-5"
+.br
+.RI "m^3 mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmolybdenum_x_unit\fP = 1\&.00209952d\-13"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_molybdenum_x_unit\fP = 0\&.00000053d\-13"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_compton_wavelength\fP = 1\&.173444110d\-14"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_compton_wavelength\fP = 0\&.000000026d\-14"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_electron_mass_ratio\fP = 206\&.7682830"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_electron_mass_ratio\fP = 0\&.0000046"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_g_factor\fP = \-2\&.0023318418"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_g_factor\fP = 0\&.0000000013"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_mag__mom\fP = \-4\&.49044830d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_mag__mom\fP = 0\&.00000010d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_mag__mom__anomaly\fP = 1\&.16592089d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_mag__mom__anomaly\fP = 0\&.00000063d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_mag__mom__to_bohr_magneton_ratio\fP = \-4\&.84197047d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_mag__mom__to_bohr_magneton_ratio\fP = 0\&.00000011d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_mag__mom__to_nuclear_magneton_ratio\fP = \-8\&.89059703"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.00000020"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_mass\fP = 1\&.883531627d\-28"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_mass\fP = 0\&.000000042d\-28"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_mass_energy_equivalent\fP = 1\&.692833804d\-11"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_mass_energy_equivalent\fP = 0\&.000000038d\-11"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_mass_energy_equivalent_in_mev\fP = 105\&.6583755"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_mass_energy_equivalent_in_mev\fP = 0\&.0000023"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_mass_in_u\fP = 0\&.1134289259"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_mass_in_u\fP = 0\&.0000000025"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_molar_mass\fP = 1\&.134289259d\-4"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_molar_mass\fP = 0\&.000000025d\-4"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_neutron_mass_ratio\fP = 0\&.1124545170"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_neutron_mass_ratio\fP = 0\&.0000000025"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_proton_mag__mom__ratio\fP = \-3\&.183345142"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_proton_mag__mom__ratio\fP = 0\&.000000071"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_proton_mass_ratio\fP = 0\&.1126095264"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_proton_mass_ratio\fP = 0\&.0000000025"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBmuon_tau_mass_ratio\fP = 5\&.94635d\-2"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_muon_tau_mass_ratio\fP = 0\&.00040d\-2"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_action\fP = 1\&.054571817d\-34"
+.br
+.RI "J s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_action\fP = 0\&.0"
+.br
+.RI "J s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_action_in_ev_s\fP = 6\&.582119569d\-16"
+.br
+.RI "eV s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_action_in_ev_s\fP = 0\&.0"
+.br
+.RI "eV s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_energy\fP = 8\&.1871057769d\-14"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_energy\fP = 0\&.0000000025d\-14"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_energy_in_mev\fP = 0\&.51099895000"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_energy_in_mev\fP = 0\&.00000000015"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_length\fP = 3\&.8615926796d\-13"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_length\fP = 0\&.0000000012d\-13"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_mass\fP = 9\&.1093837015d\-31"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_mass\fP = 0\&.0000000028d\-31"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_momentum\fP = 2\&.73092453075d\-22"
+.br
+.RI "kg m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_momentum\fP = 0\&.00000000082d\-22"
+.br
+.RI "kg m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_momentum_in_mev_c\fP = 0\&.51099895000"
+.br
+.RI "MeV/c 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_momentum_in_mev_c\fP = 0\&.00000000015"
+.br
+.RI "MeV/c 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_time\fP = 1\&.28808866819d\-21"
+.br
+.RI "s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_time\fP = 0\&.00000000039d\-21"
+.br
+.RI "s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnatural_unit_of_velocity\fP = 299792458\&.0"
+.br
+.RI "m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_natural_unit_of_velocity\fP = 0\&.0"
+.br
+.RI "m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_compton_wavelength\fP = 1\&.31959090581d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_compton_wavelength\fP = 0\&.00000000075d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_electron_mag__mom__ratio\fP = 1\&.04066882d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_electron_mag__mom__ratio\fP = 0\&.00000025d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_electron_mass_ratio\fP = 1838\&.68366173"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_electron_mass_ratio\fP = 0\&.00000089"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_g_factor\fP = \-3\&.82608545"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_g_factor\fP = 0\&.00000090"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_gyromag__ratio\fP = 1\&.83247171d8"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_gyromag__ratio\fP = 0\&.00000043d8"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_gyromag__ratio_in_mhz_t\fP = 29\&.1646931"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_gyromag__ratio_in_mhz_t\fP = 0\&.0000069"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_mag__mom\fP = \-9\&.6623651d\-27"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_mag__mom\fP = 0\&.0000023d\-27"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_mag__mom__to_bohr_magneton_ratio\fP = \-1\&.04187563d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_mag__mom__to_bohr_magneton_ratio\fP = 0\&.00000025d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_mag__mom__to_nuclear_magneton_ratio\fP = \-1\&.91304273"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.00000045"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_mass\fP = 1\&.67492749804d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_mass\fP = 0\&.00000000095d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_mass_energy_equivalent\fP = 1\&.50534976287d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_mass_energy_equivalent\fP = 0\&.00000000086d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_mass_energy_equivalent_in_mev\fP = 939\&.56542052"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_mass_energy_equivalent_in_mev\fP = 0\&.00000054"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_mass_in_u\fP = 1\&.00866491595"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_mass_in_u\fP = 0\&.00000000049"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_molar_mass\fP = 1\&.00866491560d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_molar_mass\fP = 0\&.00000000057d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_muon_mass_ratio\fP = 8\&.89248406"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_muon_mass_ratio\fP = 0\&.00000020"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_proton_mag__mom__ratio\fP = \-0\&.68497934"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_proton_mag__mom__ratio\fP = 0\&.00000016"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_proton_mass_difference\fP = 2\&.30557435d\-30"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_proton_mass_difference\fP = 0\&.00000082d\-30"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_proton_mass_difference_energy_equivalent\fP = 2\&.07214689d\-13"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_proton_mass_difference_energy_equivalent\fP = 0\&.00000074d\-13"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_proton_mass_difference_energy_equivalent_in_mev\fP = 1\&.29333236"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_proton_mass_difference_energy_equivalent_in_mev\fP = 0\&.00000046"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_proton_mass_difference_in_u\fP = 1\&.38844933d\-3"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_proton_mass_difference_in_u\fP = 0\&.00000049d\-3"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_proton_mass_ratio\fP = 1\&.00137841931"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_proton_mass_ratio\fP = 0\&.00000000049"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_relative_atomic_mass\fP = 1\&.00866491595"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_relative_atomic_mass\fP = 0\&.00000000049"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_tau_mass_ratio\fP = 0\&.528779"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_tau_mass_ratio\fP = 0\&.000036"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBneutron_to_shielded_proton_mag__mom__ratio\fP = \-0\&.68499694"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_neutron_to_shielded_proton_mag__mom__ratio\fP = 0\&.00000016"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBnewtonian_constant_of_gravitation\fP = 6\&.67430d\-11"
+.br
+.RI "m^3 kg^-1 s^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_newtonian_constant_of_gravitation\fP = 0\&.00015d\-11"
+.br
+.RI "m^3 kg^-1 s^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnewtonian_constant_of_gravitation_over_h_bar_c\fP = 6\&.70883d\-39"
+.br
+.RI "(GeV/c^2)^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_newtonian_constant_of_gravitation_over_h_bar_c\fP = 0\&.00015d\-39"
+.br
+.RI "(GeV/c^2)^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnuclear_magneton\fP = 5\&.0507837461d\-27"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_nuclear_magneton\fP = 0\&.0000000015d\-27"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnuclear_magneton_in_ev_t\fP = 3\&.15245125844d\-8"
+.br
+.RI "eV T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_nuclear_magneton_in_ev_t\fP = 0\&.00000000096d\-8"
+.br
+.RI "eV T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnuclear_magneton_in_inverse_meter_per_tesla\fP = 2\&.54262341353d\-2"
+.br
+.RI "m^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_nuclear_magneton_in_inverse_meter_per_tesla\fP = 0\&.00000000078d\-2"
+.br
+.RI "m^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnuclear_magneton_in_k_t\fP = 3\&.6582677756d\-4"
+.br
+.RI "K T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_nuclear_magneton_in_k_t\fP = 0\&.0000000011d\-4"
+.br
+.RI "K T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBnuclear_magneton_in_mhz_t\fP = 7\&.6225932291"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_nuclear_magneton_in_mhz_t\fP = 0\&.0000000023"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBplanck_constant\fP = 6\&.62607015d\-34"
+.br
+.RI "J Hz^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_planck_constant\fP = 0\&.0"
+.br
+.RI "J Hz^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBplanck_constant_in_ev_hz\fP = 4\&.135667696d\-15"
+.br
+.RI "eV Hz^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_planck_constant_in_ev_hz\fP = 0\&.0"
+.br
+.RI "eV Hz^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBplanck_length\fP = 1\&.616255d\-35"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_planck_length\fP = 0\&.000018d\-35"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBplanck_mass\fP = 2\&.176434d\-8"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_planck_mass\fP = 0\&.000024d\-8"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBplanck_mass_energy_equivalent_in_gev\fP = 1\&.220890d19"
+.br
+.RI "GeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_planck_mass_energy_equivalent_in_gev\fP = 0\&.000014d19"
+.br
+.RI "GeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBplanck_temperature\fP = 1\&.416784d32"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_planck_temperature\fP = 0\&.000016d32"
+.br
+.RI "K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBplanck_time\fP = 5\&.391247d\-44"
+.br
+.RI "s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_planck_time\fP = 0\&.000060d\-44"
+.br
+.RI "s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_charge_to_mass_quotient\fP = 9\&.5788331560d7"
+.br
+.RI "C kg^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_charge_to_mass_quotient\fP = 0\&.0000000029d7"
+.br
+.RI "C kg^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_compton_wavelength\fP = 1\&.32140985539d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_compton_wavelength\fP = 0\&.00000000040d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_electron_mass_ratio\fP = 1836\&.15267343"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_electron_mass_ratio\fP = 0\&.00000011"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBproton_g_factor\fP = 5\&.5856946893"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_g_factor\fP = 0\&.0000000016"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBproton_gyromag__ratio\fP = 2\&.6752218744d8"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_gyromag__ratio\fP = 0\&.0000000011d8"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_gyromag__ratio_in_mhz_t\fP = 42\&.577478518"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_gyromag__ratio_in_mhz_t\fP = 0\&.000000018"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_mag__mom\fP = 1\&.41060679736d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_mag__mom\fP = 0\&.00000000060d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_mag__mom__to_bohr_magneton_ratio\fP = 1\&.52103220230d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_mag__mom__to_bohr_magneton_ratio\fP = 0\&.00000000046d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBproton_mag__mom__to_nuclear_magneton_ratio\fP = 2\&.79284734463"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.00000000082"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBproton_mag__shielding_correction\fP = 2\&.5689d\-5"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_mag__shielding_correction\fP = 0\&.0011d\-5"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBproton_mass\fP = 1\&.67262192369d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_mass\fP = 0\&.00000000051d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_mass_energy_equivalent\fP = 1\&.50327761598d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_mass_energy_equivalent\fP = 0\&.00000000046d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_mass_energy_equivalent_in_mev\fP = 938\&.27208816"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_mass_energy_equivalent_in_mev\fP = 0\&.00000029"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_mass_in_u\fP = 1\&.007276466621"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_mass_in_u\fP = 0\&.000000000053"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_molar_mass\fP = 1\&.00727646627d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_molar_mass\fP = 0\&.00000000031d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_muon_mass_ratio\fP = 8\&.88024337"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_muon_mass_ratio\fP = 0\&.00000020"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBproton_neutron_mag__mom__ratio\fP = \-1\&.45989805"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_neutron_mag__mom__ratio\fP = 0\&.00000034"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBproton_neutron_mass_ratio\fP = 0\&.99862347812"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_neutron_mass_ratio\fP = 0\&.00000000049"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBproton_relative_atomic_mass\fP = 1\&.007276466621"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_relative_atomic_mass\fP = 0\&.000000000053"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBproton_rms_charge_radius\fP = 8\&.414d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_rms_charge_radius\fP = 0\&.019d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBproton_tau_mass_ratio\fP = 0\&.528051"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_proton_tau_mass_ratio\fP = 0\&.000036"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBquantum_of_circulation\fP = 3\&.6369475516d\-4"
+.br
+.RI "m^2 s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_quantum_of_circulation\fP = 0\&.0000000011d\-4"
+.br
+.RI "m^2 s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBquantum_of_circulation_times_2\fP = 7\&.2738951032d\-4"
+.br
+.RI "m^2 s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_quantum_of_circulation_times_2\fP = 0\&.0000000022d\-4"
+.br
+.RI "m^2 s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBreduced_compton_wavelength\fP = 3\&.8615926796d\-13"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_reduced_compton_wavelength\fP = 0\&.0000000012d\-13"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBreduced_muon_compton_wavelength\fP = 1\&.867594306d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_reduced_muon_compton_wavelength\fP = 0\&.000000042d\-15"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBreduced_neutron_compton_wavelength\fP = 2\&.1001941552d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_reduced_neutron_compton_wavelength\fP = 0\&.0000000012d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBreduced_planck_constant\fP = 1\&.054571817d\-34"
+.br
+.RI "J s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_reduced_planck_constant\fP = 0\&.0"
+.br
+.RI "J s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBreduced_planck_constant_in_ev_s\fP = 6\&.582119569d\-16"
+.br
+.RI "eV s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_reduced_planck_constant_in_ev_s\fP = 0\&.0"
+.br
+.RI "eV s 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBreduced_planck_constant_times_c_in_mev_fm\fP = 197\&.3269804"
+.br
+.RI "MeV fm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_reduced_planck_constant_times_c_in_mev_fm\fP = 0\&.0"
+.br
+.RI "MeV fm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBreduced_proton_compton_wavelength\fP = 2\&.10308910336d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_reduced_proton_compton_wavelength\fP = 0\&.00000000064d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBreduced_tau_compton_wavelength\fP = 1\&.110538d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_reduced_tau_compton_wavelength\fP = 0\&.000075d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBrydberg_constant\fP = 10973731\&.568160"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_rydberg_constant\fP = 0\&.000021"
+.br
+.RI "m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBrydberg_constant_times_c_in_hz\fP = 3\&.2898419602508d15"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_rydberg_constant_times_c_in_hz\fP = 0\&.0000000000064d15"
+.br
+.RI "Hz 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBrydberg_constant_times_hc_in_ev\fP = 13\&.605693122994"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_rydberg_constant_times_hc_in_ev\fP = 0\&.000000000026"
+.br
+.RI "eV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBrydberg_constant_times_hc_in_j\fP = 2\&.1798723611035d\-18"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_rydberg_constant_times_hc_in_j\fP = 0\&.0000000000042d\-18"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBsackur_tetrode_constant__1_k__100_kpa\fP = \-1\&.15170753706"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_sackur_tetrode_constant__1_k__100_kpa\fP = 0\&.00000000045"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBsackur_tetrode_constant__1_k__101_325_kpa\fP = \-1\&.16487052358"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_sackur_tetrode_constant__1_k__101_325_kpa\fP = 0\&.00000000045"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBsecond_radiation_constant\fP = 1\&.438776877d\-2"
+.br
+.RI "m K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_second_radiation_constant\fP = 0\&.0"
+.br
+.RI "m K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_helion_gyromag__ratio\fP = 2\&.037894569d8"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_helion_gyromag__ratio\fP = 0\&.000000024d8"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_helion_gyromag__ratio_in_mhz_t\fP = 32\&.43409942"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_helion_gyromag__ratio_in_mhz_t\fP = 0\&.00000038"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_helion_mag__mom\fP = \-1\&.074553090d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_helion_mag__mom\fP = 0\&.000000013d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_helion_mag__mom__to_bohr_magneton_ratio\fP = \-1\&.158671471d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_helion_mag__mom__to_bohr_magneton_ratio\fP = 0\&.000000014d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_helion_mag__mom__to_nuclear_magneton_ratio\fP = \-2\&.127497719"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_helion_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.000000025"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_helion_to_proton_mag__mom__ratio\fP = \-0\&.7617665618"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_helion_to_proton_mag__mom__ratio\fP = 0\&.0000000089"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_helion_to_shielded_proton_mag__mom__ratio\fP = \-0\&.7617861313"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_helion_to_shielded_proton_mag__mom__ratio\fP = 0\&.0000000033"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_proton_gyromag__ratio\fP = 2\&.675153151d8"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_proton_gyromag__ratio\fP = 0\&.000000029d8"
+.br
+.RI "s^-1 T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_proton_gyromag__ratio_in_mhz_t\fP = 42\&.57638474"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_proton_gyromag__ratio_in_mhz_t\fP = 0\&.00000046"
+.br
+.RI "MHz T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_proton_mag__mom\fP = 1\&.410570560d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_proton_mag__mom\fP = 0\&.000000015d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_proton_mag__mom__to_bohr_magneton_ratio\fP = 1\&.520993128d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_proton_mag__mom__to_bohr_magneton_ratio\fP = 0\&.000000017d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBshielded_proton_mag__mom__to_nuclear_magneton_ratio\fP = 2\&.792775599"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielded_proton_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.000000030"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBshielding_difference_of_d_and_p_in_hd\fP = 2\&.0200d\-8"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielding_difference_of_d_and_p_in_hd\fP = 0\&.0020d\-8"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBshielding_difference_of_t_and_p_in_ht\fP = 2\&.4140d\-8"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_shielding_difference_of_t_and_p_in_ht\fP = 0\&.0020d\-8"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBspeed_of_light_in_vacuum\fP = 299792458\&.0"
+.br
+.RI "m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_speed_of_light_in_vacuum\fP = 0\&.0"
+.br
+.RI "m s^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBstandard_acceleration_of_gravity\fP = 9\&.80665"
+.br
+.RI "m s^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_standard_acceleration_of_gravity\fP = 0\&.0"
+.br
+.RI "m s^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBstandard_atmosphere\fP = 101325\&.0"
+.br
+.RI "Pa 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_standard_atmosphere\fP = 0\&.0"
+.br
+.RI "Pa 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBstandard_state_pressure\fP = 100000\&.0"
+.br
+.RI "Pa 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_standard_state_pressure\fP = 0\&.0"
+.br
+.RI "Pa 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBstefan_boltzmann_constant\fP = 5\&.670374419d\-8"
+.br
+.RI "W m^-2 K^-4 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_stefan_boltzmann_constant\fP = 0\&.0"
+.br
+.RI "W m^-2 K^-4 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtau_compton_wavelength\fP = 6\&.97771d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_compton_wavelength\fP = 0\&.00047d\-16"
+.br
+.RI "m 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtau_electron_mass_ratio\fP = 3477\&.23"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_electron_mass_ratio\fP = 0\&.23"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBtau_energy_equivalent\fP = 1776\&.86"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_energy_equivalent\fP = 0\&.12"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtau_mass\fP = 3\&.16754d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_mass\fP = 0\&.00021d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtau_mass_energy_equivalent\fP = 2\&.84684d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_mass_energy_equivalent\fP = 0\&.00019d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtau_mass_in_u\fP = 1\&.90754"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_mass_in_u\fP = 0\&.00013"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtau_molar_mass\fP = 1\&.90754d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_molar_mass\fP = 0\&.00013d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtau_muon_mass_ratio\fP = 16\&.8170"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_muon_mass_ratio\fP = 0\&.0011"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBtau_neutron_mass_ratio\fP = 1\&.89115"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_neutron_mass_ratio\fP = 0\&.00013"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBtau_proton_mass_ratio\fP = 1\&.89376"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_tau_proton_mass_ratio\fP = 0\&.00013"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBthomson_cross_section\fP = 6\&.6524587321d\-29"
+.br
+.RI "m^2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_thomson_cross_section\fP = 0\&.0000000060d\-29"
+.br
+.RI "m^2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_electron_mass_ratio\fP = 5496\&.92153573"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_electron_mass_ratio\fP = 0\&.00000027"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_g_factor\fP = 5\&.957924931"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_g_factor\fP = 0\&.000000012"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_mag__mom\fP = 1\&.5046095202d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_mag__mom\fP = 0\&.0000000030d\-26"
+.br
+.RI "J T^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_mag__mom__to_bohr_magneton_ratio\fP = 1\&.6223936651d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_mag__mom__to_bohr_magneton_ratio\fP = 0\&.0000000032d\-3"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_mag__mom__to_nuclear_magneton_ratio\fP = 2\&.9789624656"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_mag__mom__to_nuclear_magneton_ratio\fP = 0\&.0000000059"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_mass\fP = 5\&.0073567446d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_mass\fP = 0\&.0000000015d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_mass_energy_equivalent\fP = 4\&.5003878060d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_mass_energy_equivalent\fP = 0\&.0000000014d\-10"
+.br
+.RI "J 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_mass_energy_equivalent_in_mev\fP = 2808\&.92113298"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_mass_energy_equivalent_in_mev\fP = 0\&.00000085"
+.br
+.RI "MeV 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_mass_in_u\fP = 3\&.01550071621"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_mass_in_u\fP = 0\&.00000000012"
+.br
+.RI "u 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_molar_mass\fP = 3\&.01550071517d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_molar_mass\fP = 0\&.00000000092d\-3"
+.br
+.RI "kg mol^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_proton_mass_ratio\fP = 2\&.99371703414"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_proton_mass_ratio\fP = 0\&.00000000015"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_relative_atomic_mass\fP = 3\&.01550071621"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_relative_atomic_mass\fP = 0\&.00000000012"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBtriton_to_proton_mag__mom__ratio\fP = 1\&.0666399191"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_triton_to_proton_mag__mom__ratio\fP = 0\&.0000000021"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBunified_atomic_mass_unit\fP = 1\&.66053906660d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_unified_atomic_mass_unit\fP = 0\&.00000000050d\-27"
+.br
+.RI "kg 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBvacuum_electric_permittivity\fP = 8\&.8541878128d\-12"
+.br
+.RI "F m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_vacuum_electric_permittivity\fP = 0\&.0000000013d\-12"
+.br
+.RI "F m^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBvacuum_mag__permeability\fP = 1\&.25663706212d\-6"
+.br
+.RI "N A^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_vacuum_mag__permeability\fP = 0\&.00000000019d\-6"
+.br
+.RI "N A^-2 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBvon_klitzing_constant\fP = 25812\&.80745"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_von_klitzing_constant\fP = 0\&.0"
+.br
+.RI "ohm 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBweak_mixing_angle\fP = 0\&.22290"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_weak_mixing_angle\fP = 0\&.00030"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBwien_frequency_displacement_law_constant\fP = 5\&.878925757d10"
+.br
+.RI "Hz K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_wien_frequency_displacement_law_constant\fP = 0\&.0"
+.br
+.RI "Hz K^-1 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBwien_wavelength_displacement_law_constant\fP = 2\&.897771955d\-3"
+.br
+.RI "m K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBd_wien_wavelength_displacement_law_constant\fP = 0\&.0"
+.br
+.RI "m K 
+.br
+ "
+.ti -1c
+.RI "real(c_double), parameter \fBw_to_z_mass_ratio\fP = 0\&.88153"
+.br
+.ti -1c
+.RI "real(c_double), parameter \fBd_w_to_z_mass_ratio\fP = 0\&.00017"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "real(c_double), parameter codata::alpha_particle_electron_mass_ratio = 7294\&.29954142"
+
+.SS "real(c_double), parameter codata::alpha_particle_mass = 6\&.6446573357d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::alpha_particle_mass_energy_equivalent = 5\&.9719201914d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::alpha_particle_mass_energy_equivalent_in_mev = 3727\&.3794066"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::alpha_particle_mass_in_u = 4\&.001506179127"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::alpha_particle_molar_mass = 4\&.0015061777d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::alpha_particle_proton_mass_ratio = 3\&.97259969009"
+
+.SS "real(c_double), parameter codata::alpha_particle_relative_atomic_mass = 4\&.001506179127"
+
+.SS "real(c_double), parameter codata::angstrom_star = 1\&.00001495d\-10"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_constant = 1\&.66053906660d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_constant_energy_equivalent = 1\&.49241808560d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_constant_energy_equivalent_in_mev = 931\&.49410242"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_unit_electron_volt_relationship = 9\&.3149410242d8"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_unit_hartree_relationship = 3\&.4231776874d7"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_unit_hertz_relationship = 2\&.25234271871d23"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_unit_inverse_meter_relationship = 7\&.5130066104d14"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_unit_joule_relationship = 1\&.49241808560d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_unit_kelvin_relationship = 1\&.08095401916d13"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_mass_unit_kilogram_relationship = 1\&.66053906660d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_1st_hyperpolarizability = 3\&.2063613061d\-53"
+
+.PP
+C^3 m^3 J^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_2nd_hyperpolarizability = 6\&.2353799905d\-65"
+
+.PP
+C^4 m^4 J^-3 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_action = 1\&.054571817d\-34"
+
+.PP
+J s 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_charge = 1\&.602176634d\-19"
+
+.PP
+C 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_charge_density = 1\&.08120238457d12"
+
+.PP
+C m^-3 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_current = 6\&.623618237510d\-3"
+
+.PP
+A 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_electric_dipole_mom = 8\&.4783536255d\-30"
+
+.PP
+C m 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_electric_field = 5\&.14220674763d11"
+
+.PP
+V m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_electric_field_gradient = 9\&.7173624292d21"
+
+.PP
+V m^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_electric_polarizability = 1\&.64877727436d\-41"
+
+.PP
+C^2 m^2 J^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_electric_potential = 27\&.211386245988"
+
+.PP
+V 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_electric_quadrupole_mom = 4\&.4865515246d\-40"
+
+.PP
+C m^2 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_energy = 4\&.3597447222071d\-18"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_force = 8\&.2387234983d\-8"
+
+.PP
+N 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_length = 5\&.29177210903d\-11"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_mag__dipole_mom = 1\&.85480201566d\-23"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_mag__flux_density = 2\&.35051756758d5"
+
+.PP
+T 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_magnetizability = 7\&.8910366008d\-29"
+
+.PP
+J T^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_mass = 9\&.1093837015d\-31"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_momentum = 1\&.99285191410d\-24"
+
+.PP
+kg m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_permittivity = 1\&.11265005545d\-10"
+
+.PP
+F m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_time = 2\&.4188843265857d\-17"
+
+.PP
+s 
+.br
+ 
+.SS "real(c_double), parameter codata::atomic_unit_of_velocity = 2\&.18769126364d6"
+
+.PP
+m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::avogadro_constant = 6\&.02214076d23"
+
+.PP
+mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::bohr_magneton = 9\&.2740100783d\-24"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::bohr_magneton_in_ev_t = 5\&.7883818060d\-5"
+
+.PP
+eV T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::bohr_magneton_in_hz_t = 1\&.39962449361d10"
+
+.PP
+Hz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::bohr_magneton_in_inverse_meter_per_tesla = 46\&.686447783"
+
+.PP
+m^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::bohr_magneton_in_k_t = 0\&.67171381563"
+
+.PP
+K T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::bohr_radius = 5\&.29177210903d\-11"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::boltzmann_constant = 1\&.380649d\-23"
+
+.PP
+J K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::boltzmann_constant_in_ev_k = 8\&.617333262d\-5"
+
+.PP
+eV K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::boltzmann_constant_in_hz_k = 2\&.083661912d10"
+
+.PP
+Hz K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::boltzmann_constant_in_inverse_meter_per_kelvin = 69\&.50348004"
+
+.PP
+m^-1 K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::characteristic_impedance_of_vacuum = 376\&.730313668"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::classical_electron_radius = 2\&.8179403262d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::compton_wavelength = 2\&.42631023867d\-12"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::conductance_quantum = 7\&.748091729d\-5"
+
+.PP
+S 
+.br
+ 
+.SS "real(c_double), parameter codata::conventional_value_of_ampere_90 = 1\&.00000008887"
+
+.PP
+A 
+.br
+ 
+.SS "real(c_double), parameter codata::conventional_value_of_coulomb_90 = 1\&.00000008887"
+
+.PP
+C 
+.br
+ 
+.SS "real(c_double), parameter codata::conventional_value_of_farad_90 = 0\&.99999998220"
+
+.PP
+F 
+.br
+ 
+.SS "real(c_double), parameter codata::conventional_value_of_henry_90 = 1\&.00000001779"
+
+.PP
+H 
+.br
+ 
+.SS "real(c_double), parameter codata::conventional_value_of_josephson_constant = 483597\&.9d9"
+
+.PP
+Hz V^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::conventional_value_of_ohm_90 = 1\&.00000001779"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::conventional_value_of_volt_90 = 1\&.00000010666"
+
+.PP
+V 
+.br
+ 
+.SS "real(c_double), parameter codata::conventional_value_of_von_klitzing_constant = 25812\&.807"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::conventional_value_of_watt_90 = 1\&.00000019553"
+
+.PP
+W 
+.br
+ 
+.SS "real(c_double), parameter codata::copper_x_unit = 1\&.00207697d\-13"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_alpha_particle_electron_mass_ratio = 0\&.00000024"
+
+.SS "real(c_double), parameter codata::d_alpha_particle_mass = 0\&.0000000020d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_alpha_particle_mass_energy_equivalent = 0\&.0000000018d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_alpha_particle_mass_energy_equivalent_in_mev = 0\&.0000011"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_alpha_particle_mass_in_u = 0\&.000000000063"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_alpha_particle_molar_mass = 0\&.0000000012d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_alpha_particle_proton_mass_ratio = 0\&.00000000022"
+
+.SS "real(c_double), parameter codata::d_alpha_particle_relative_atomic_mass = 0\&.000000000063"
+
+.SS "real(c_double), parameter codata::d_angstrom_star = 0\&.00000090d\-10"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_constant = 0\&.00000000050d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_constant_energy_equivalent = 0\&.00000000045d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_constant_energy_equivalent_in_mev = 0\&.00000028"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_unit_electron_volt_relationship = 0\&.0000000028d8"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_unit_hartree_relationship = 0\&.0000000010d7"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_unit_hertz_relationship = 0\&.00000000068d23"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_unit_inverse_meter_relationship = 0\&.0000000023d14"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_unit_joule_relationship = 0\&.00000000045d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_unit_kelvin_relationship = 0\&.00000000033d13"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_mass_unit_kilogram_relationship = 0\&.00000000050d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_1st_hyperpolarizability = 0\&.0000000015d\-53"
+
+.PP
+C^3 m^3 J^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_2nd_hyperpolarizability = 0\&.0000000038d\-65"
+
+.PP
+C^4 m^4 J^-3 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_action = 0\&.0"
+
+.PP
+J s 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_charge = 0\&.0"
+
+.PP
+C 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_charge_density = 0\&.00000000049d12"
+
+.PP
+C m^-3 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_current = 0\&.000000000013d\-3"
+
+.PP
+A 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_electric_dipole_mom = 0\&.0000000013d\-30"
+
+.PP
+C m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_electric_field = 0\&.00000000078d11"
+
+.PP
+V m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_electric_field_gradient = 0\&.0000000029d21"
+
+.PP
+V m^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_electric_polarizability = 0\&.00000000050d\-41"
+
+.PP
+C^2 m^2 J^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_electric_potential = 0\&.000000000053"
+
+.PP
+V 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_electric_quadrupole_mom = 0\&.0000000014d\-40"
+
+.PP
+C m^2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_energy = 0\&.0000000000085d\-18"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_force = 0\&.0000000012d\-8"
+
+.PP
+N 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_length = 0\&.00000000080d\-11"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_mag__dipole_mom = 0\&.00000000056d\-23"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_mag__flux_density = 0\&.00000000071d5"
+
+.PP
+T 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_magnetizability = 0\&.0000000048d\-29"
+
+.PP
+J T^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_mass = 0\&.0000000028d\-31"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_momentum = 0\&.00000000030d\-24"
+
+.PP
+kg m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_permittivity = 0\&.00000000017d\-10"
+
+.PP
+F m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_time = 0\&.0000000000047d\-17"
+
+.PP
+s 
+.br
+ 
+.SS "real(c_double), parameter codata::d_atomic_unit_of_velocity = 0\&.00000000033d6"
+
+.PP
+m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_avogadro_constant = 0\&.0"
+
+.PP
+mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_bohr_magneton = 0\&.0000000028d\-24"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_bohr_magneton_in_ev_t = 0\&.0000000017d\-5"
+
+.PP
+eV T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_bohr_magneton_in_hz_t = 0\&.00000000042d10"
+
+.PP
+Hz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_bohr_magneton_in_inverse_meter_per_tesla = 0\&.000000014"
+
+.PP
+m^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_bohr_magneton_in_k_t = 0\&.00000000020"
+
+.PP
+K T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_bohr_radius = 0\&.00000000080d\-11"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_boltzmann_constant = 0\&.0"
+
+.PP
+J K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_boltzmann_constant_in_ev_k = 0\&.0"
+
+.PP
+eV K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_boltzmann_constant_in_hz_k = 0\&.0"
+
+.PP
+Hz K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_boltzmann_constant_in_inverse_meter_per_kelvin = 0\&.0"
+
+.PP
+m^-1 K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_characteristic_impedance_of_vacuum = 0\&.000000057"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::d_classical_electron_radius = 0\&.0000000013d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_compton_wavelength = 0\&.00000000073d\-12"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conductance_quantum = 0\&.0"
+
+.PP
+S 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conventional_value_of_ampere_90 = 0\&.0"
+
+.PP
+A 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conventional_value_of_coulomb_90 = 0\&.0"
+
+.PP
+C 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conventional_value_of_farad_90 = 0\&.0"
+
+.PP
+F 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conventional_value_of_henry_90 = 0\&.0"
+
+.PP
+H 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conventional_value_of_josephson_constant = 0\&.0"
+
+.PP
+Hz V^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conventional_value_of_ohm_90 = 0\&.0"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conventional_value_of_volt_90 = 0\&.0"
+
+.PP
+V 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conventional_value_of_von_klitzing_constant = 0\&.0"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::d_conventional_value_of_watt_90 = 0\&.0"
+
+.PP
+W 
+.br
+ 
+.SS "real(c_double), parameter codata::d_copper_x_unit = 0\&.00000028d\-13"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_deuteron_electron_mag__mom__ratio = 0\&.000000012d\-4"
+
+.SS "real(c_double), parameter codata::d_deuteron_electron_mass_ratio = 0\&.00000013"
+
+.SS "real(c_double), parameter codata::d_deuteron_g_factor = 0\&.0000000022"
+
+.SS "real(c_double), parameter codata::d_deuteron_mag__mom = 0\&.000000011d\-27"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_deuteron_mag__mom__to_bohr_magneton_ratio = 0\&.000000012d\-4"
+
+.SS "real(c_double), parameter codata::d_deuteron_mag__mom__to_nuclear_magneton_ratio = 0\&.0000000022"
+
+.SS "real(c_double), parameter codata::d_deuteron_mass = 0\&.0000000010d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_deuteron_mass_energy_equivalent = 0\&.00000000091d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_deuteron_mass_energy_equivalent_in_mev = 0\&.00000057"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_deuteron_mass_in_u = 0\&.000000000040"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_deuteron_molar_mass = 0\&.00000000061d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_deuteron_neutron_mag__mom__ratio = 0\&.00000011"
+
+.SS "real(c_double), parameter codata::d_deuteron_proton_mag__mom__ratio = 0\&.00000000079"
+
+.SS "real(c_double), parameter codata::d_deuteron_proton_mass_ratio = 0\&.00000000011"
+
+.SS "real(c_double), parameter codata::d_deuteron_relative_atomic_mass = 0\&.000000000040"
+
+.SS "real(c_double), parameter codata::d_deuteron_rms_charge_radius = 0\&.00074d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_charge_to_mass_quotient = 0\&.00000000053d11"
+
+.PP
+C kg^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_deuteron_mag__mom__ratio = 0\&.0000056"
+
+.SS "real(c_double), parameter codata::d_electron_deuteron_mass_ratio = 0\&.000000000096d\-4"
+
+.SS "real(c_double), parameter codata::d_electron_g_factor = 0\&.00000000000035"
+
+.SS "real(c_double), parameter codata::d_electron_gyromag__ratio = 0\&.00000000053d11"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_gyromag__ratio_in_mhz_t = 0\&.0000085"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_helion_mass_ratio = 0\&.000000000079d\-4"
+
+.SS "real(c_double), parameter codata::d_electron_mag__mom = 0\&.0000000028d\-24"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_mag__mom__anomaly = 0\&.00000000018d\-3"
+
+.SS "real(c_double), parameter codata::d_electron_mag__mom__to_bohr_magneton_ratio = 0\&.00000000000018"
+
+.SS "real(c_double), parameter codata::d_electron_mag__mom__to_nuclear_magneton_ratio = 0\&.00000011"
+
+.SS "real(c_double), parameter codata::d_electron_mass = 0\&.0000000028d\-31"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_mass_energy_equivalent = 0\&.0000000025d\-14"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_mass_energy_equivalent_in_mev = 0\&.00000000015"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_mass_in_u = 0\&.00000000016d\-4"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_molar_mass = 0\&.0000000017d\-7"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_muon_mag__mom__ratio = 0\&.0000046"
+
+.SS "real(c_double), parameter codata::d_electron_muon_mass_ratio = 0\&.00000011d\-3"
+
+.SS "real(c_double), parameter codata::d_electron_neutron_mag__mom__ratio = 0\&.00023"
+
+.SS "real(c_double), parameter codata::d_electron_neutron_mass_ratio = 0\&.0000000026d\-4"
+
+.SS "real(c_double), parameter codata::d_electron_proton_mag__mom__ratio = 0\&.00000020"
+
+.SS "real(c_double), parameter codata::d_electron_proton_mass_ratio = 0\&.00000000033d\-4"
+
+.SS "real(c_double), parameter codata::d_electron_relative_atomic_mass = 0\&.00000000016d\-4"
+
+.SS "real(c_double), parameter codata::d_electron_tau_mass_ratio = 0\&.00019d\-4"
+
+.SS "real(c_double), parameter codata::d_electron_to_alpha_particle_mass_ratio = 0\&.000000000045d\-4"
+
+.SS "real(c_double), parameter codata::d_electron_to_shielded_helion_mag__mom__ratio = 0\&.000010"
+
+.SS "real(c_double), parameter codata::d_electron_to_shielded_proton_mag__mom__ratio = 0\&.0000072"
+
+.SS "real(c_double), parameter codata::d_electron_triton_mass_ratio = 0\&.000000000090d\-4"
+
+.SS "real(c_double), parameter codata::d_electron_volt = 0\&.0"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_volt_atomic_mass_unit_relationship = 0\&.00000000032d\-9"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_volt_hartree_relationship = 0\&.0000000000071d\-2"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_volt_hertz_relationship = 0\&.0"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_volt_inverse_meter_relationship = 0\&.0"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_volt_joule_relationship = 0\&.0"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_volt_kelvin_relationship = 0\&.0"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::d_electron_volt_kilogram_relationship = 0\&.0"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_elementary_charge = 0\&.0"
+
+.PP
+C 
+.br
+ 
+.SS "real(c_double), parameter codata::d_elementary_charge_over_h_bar = 0\&.0"
+
+.PP
+A J^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_faraday_constant = 0\&.0"
+
+.PP
+C mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_fermi_coupling_constant = 0\&.0000006d\-5"
+
+.PP
+GeV^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_fine_structure_constant = 0\&.0000000011d\-3"
+
+.SS "real(c_double), parameter codata::d_first_radiation_constant = 0\&.0"
+
+.PP
+W m^2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_first_radiation_constant_for_spectral_radiance = 0\&.0"
+
+.PP
+W m^2 sr^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hartree_atomic_mass_unit_relationship = 0\&.00000000088d\-8"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hartree_electron_volt_relationship = 0\&.000000000053"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hartree_energy = 0\&.0000000000085d\-18"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hartree_energy_in_ev = 0\&.000000000053"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hartree_hertz_relationship = 0\&.000000000013d15"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hartree_inverse_meter_relationship = 0\&.0000000000043d7"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hartree_joule_relationship = 0\&.0000000000085d\-18"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hartree_kelvin_relationship = 0\&.0000000000061d5"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hartree_kilogram_relationship = 0\&.0000000000094d\-35"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_helion_electron_mass_ratio = 0\&.00000024"
+
+.SS "real(c_double), parameter codata::d_helion_g_factor = 0\&.000000050"
+
+.SS "real(c_double), parameter codata::d_helion_mag__mom = 0\&.000000013d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_helion_mag__mom__to_bohr_magneton_ratio = 0\&.000000014d\-3"
+
+.SS "real(c_double), parameter codata::d_helion_mag__mom__to_nuclear_magneton_ratio = 0\&.000000025"
+
+.SS "real(c_double), parameter codata::d_helion_mass = 0\&.0000000015d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_helion_mass_energy_equivalent = 0\&.0000000014d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_helion_mass_energy_equivalent_in_mev = 0\&.00000085"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_helion_mass_in_u = 0\&.000000000097"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_helion_molar_mass = 0\&.00000000091d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_helion_proton_mass_ratio = 0\&.00000000013"
+
+.SS "real(c_double), parameter codata::d_helion_relative_atomic_mass = 0\&.000000000097"
+
+.SS "real(c_double), parameter codata::d_helion_shielding_shift = 0\&.000010d\-5"
+
+.SS "real(c_double), parameter codata::d_hertz_atomic_mass_unit_relationship = 0\&.0000000013d\-24"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hertz_electron_volt_relationship = 0\&.0"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hertz_hartree_relationship = 0\&.0000000000029d\-16"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hertz_inverse_meter_relationship = 0\&.0"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hertz_joule_relationship = 0\&.0"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hertz_kelvin_relationship = 0\&.0"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hertz_kilogram_relationship = 0\&.0"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_hyperfine_transition_frequency_of_cs_133 = 0\&.0"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::d_inverse_fine_structure_constant = 0\&.000000021"
+
+.SS "real(c_double), parameter codata::d_inverse_meter_atomic_mass_unit_relationship = 0\&.00000000040d\-15"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_inverse_meter_electron_volt_relationship = 0\&.0"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_inverse_meter_hartree_relationship = 0\&.0000000000088d\-8"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::d_inverse_meter_hertz_relationship = 0\&.0"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::d_inverse_meter_joule_relationship = 0\&.0"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_inverse_meter_kelvin_relationship = 0\&.0"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::d_inverse_meter_kilogram_relationship = 0\&.0"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_inverse_of_conductance_quantum = 0\&.0"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::d_josephson_constant = 0\&.0"
+
+.PP
+Hz V^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_joule_atomic_mass_unit_relationship = 0\&.0000000020d9"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_joule_electron_volt_relationship = 0\&.0"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_joule_hartree_relationship = 0\&.0000000000045d17"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::d_joule_hertz_relationship = 0\&.0"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::d_joule_inverse_meter_relationship = 0\&.0"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_joule_kelvin_relationship = 0\&.0"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::d_joule_kilogram_relationship = 0\&.0"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kelvin_atomic_mass_unit_relationship = 0\&.0000000028d\-14"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kelvin_electron_volt_relationship = 0\&.0"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kelvin_hartree_relationship = 0\&.0000000000061d\-6"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kelvin_hertz_relationship = 0\&.0"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kelvin_inverse_meter_relationship = 0\&.0"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kelvin_joule_relationship = 0\&.0"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kelvin_kilogram_relationship = 0\&.0"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kilogram_atomic_mass_unit_relationship = 0\&.0000000018d26"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kilogram_electron_volt_relationship = 0\&.0"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kilogram_hartree_relationship = 0\&.0000000000040d34"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kilogram_hertz_relationship = 0\&.0"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kilogram_inverse_meter_relationship = 0\&.0"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kilogram_joule_relationship = 0\&.0"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_kilogram_kelvin_relationship = 0\&.0"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::d_lattice_parameter_of_silicon = 0\&.000000089d\-10"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_lattice_spacing_of_ideal_si__220 = 0\&.000000032d\-10"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_loschmidt_constant__273_15_k__100_kpa = 0\&.0"
+
+.PP
+m^-3 
+.br
+ 
+.SS "real(c_double), parameter codata::d_loschmidt_constant__273_15_k__101_325_kpa = 0\&.0"
+
+.PP
+m^-3 
+.br
+ 
+.SS "real(c_double), parameter codata::d_luminous_efficacy = 0\&.0"
+
+.PP
+lm W^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_mag__flux_quantum = 0\&.0"
+
+.PP
+Wb 
+.br
+ 
+.SS "real(c_double), parameter codata::d_molar_gas_constant = 0\&.0"
+
+.PP
+J mol^-1 K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_molar_mass_constant = 0\&.00000000030d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_molar_mass_of_carbon_12 = 0\&.0000000036d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_molar_planck_constant = 0\&.0"
+
+.PP
+J Hz^-1 mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_molar_volume_of_ideal_gas__273_15_k__100_kpa = 0\&.0"
+
+.PP
+m^3 mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_molar_volume_of_ideal_gas__273_15_k__101_325_kpa = 0\&.0"
+
+.PP
+m^3 mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_molar_volume_of_silicon = 0\&.000000060d\-5"
+
+.PP
+m^3 mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_molybdenum_x_unit = 0\&.00000053d\-13"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_muon_compton_wavelength = 0\&.000000026d\-14"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_muon_electron_mass_ratio = 0\&.0000046"
+
+.SS "real(c_double), parameter codata::d_muon_g_factor = 0\&.0000000013"
+
+.SS "real(c_double), parameter codata::d_muon_mag__mom = 0\&.00000010d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_muon_mag__mom__anomaly = 0\&.00000063d\-3"
+
+.SS "real(c_double), parameter codata::d_muon_mag__mom__to_bohr_magneton_ratio = 0\&.00000011d\-3"
+
+.SS "real(c_double), parameter codata::d_muon_mag__mom__to_nuclear_magneton_ratio = 0\&.00000020"
+
+.SS "real(c_double), parameter codata::d_muon_mass = 0\&.000000042d\-28"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_muon_mass_energy_equivalent = 0\&.000000038d\-11"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_muon_mass_energy_equivalent_in_mev = 0\&.0000023"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_muon_mass_in_u = 0\&.0000000025"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_muon_molar_mass = 0\&.000000025d\-4"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_muon_neutron_mass_ratio = 0\&.0000000025"
+
+.SS "real(c_double), parameter codata::d_muon_proton_mag__mom__ratio = 0\&.000000071"
+
+.SS "real(c_double), parameter codata::d_muon_proton_mass_ratio = 0\&.0000000025"
+
+.SS "real(c_double), parameter codata::d_muon_tau_mass_ratio = 0\&.00040d\-2"
+
+.SS "real(c_double), parameter codata::d_natural_unit_of_action = 0\&.0"
+
+.PP
+J s 
+.br
+ 
+.SS "real(c_double), parameter codata::d_natural_unit_of_action_in_ev_s = 0\&.0"
+
+.PP
+eV s 
+.br
+ 
+.SS "real(c_double), parameter codata::d_natural_unit_of_energy = 0\&.0000000025d\-14"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_natural_unit_of_energy_in_mev = 0\&.00000000015"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_natural_unit_of_length = 0\&.0000000012d\-13"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_natural_unit_of_mass = 0\&.0000000028d\-31"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_natural_unit_of_momentum = 0\&.00000000082d\-22"
+
+.PP
+kg m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_natural_unit_of_momentum_in_mev_c = 0\&.00000000015"
+
+.PP
+MeV/c 
+.br
+ 
+.SS "real(c_double), parameter codata::d_natural_unit_of_time = 0\&.00000000039d\-21"
+
+.PP
+s 
+.br
+ 
+.SS "real(c_double), parameter codata::d_natural_unit_of_velocity = 0\&.0"
+
+.PP
+m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_compton_wavelength = 0\&.00000000075d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_electron_mag__mom__ratio = 0\&.00000025d\-3"
+
+.SS "real(c_double), parameter codata::d_neutron_electron_mass_ratio = 0\&.00000089"
+
+.SS "real(c_double), parameter codata::d_neutron_g_factor = 0\&.00000090"
+
+.SS "real(c_double), parameter codata::d_neutron_gyromag__ratio = 0\&.00000043d8"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_gyromag__ratio_in_mhz_t = 0\&.0000069"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_mag__mom = 0\&.0000023d\-27"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_mag__mom__to_bohr_magneton_ratio = 0\&.00000025d\-3"
+
+.SS "real(c_double), parameter codata::d_neutron_mag__mom__to_nuclear_magneton_ratio = 0\&.00000045"
+
+.SS "real(c_double), parameter codata::d_neutron_mass = 0\&.00000000095d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_mass_energy_equivalent = 0\&.00000000086d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_mass_energy_equivalent_in_mev = 0\&.00000054"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_mass_in_u = 0\&.00000000049"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_molar_mass = 0\&.00000000057d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_muon_mass_ratio = 0\&.00000020"
+
+.SS "real(c_double), parameter codata::d_neutron_proton_mag__mom__ratio = 0\&.00000016"
+
+.SS "real(c_double), parameter codata::d_neutron_proton_mass_difference = 0\&.00000082d\-30"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_proton_mass_difference_energy_equivalent = 0\&.00000074d\-13"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_proton_mass_difference_energy_equivalent_in_mev = 0\&.00000046"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_proton_mass_difference_in_u = 0\&.00000049d\-3"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_neutron_proton_mass_ratio = 0\&.00000000049"
+
+.SS "real(c_double), parameter codata::d_neutron_relative_atomic_mass = 0\&.00000000049"
+
+.SS "real(c_double), parameter codata::d_neutron_tau_mass_ratio = 0\&.000036"
+
+.SS "real(c_double), parameter codata::d_neutron_to_shielded_proton_mag__mom__ratio = 0\&.00000016"
+
+.SS "real(c_double), parameter codata::d_newtonian_constant_of_gravitation = 0\&.00015d\-11"
+
+.PP
+m^3 kg^-1 s^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_newtonian_constant_of_gravitation_over_h_bar_c = 0\&.00015d\-39"
+
+.PP
+(GeV/c^2)^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_nuclear_magneton = 0\&.0000000015d\-27"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_nuclear_magneton_in_ev_t = 0\&.00000000096d\-8"
+
+.PP
+eV T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_nuclear_magneton_in_inverse_meter_per_tesla = 0\&.00000000078d\-2"
+
+.PP
+m^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_nuclear_magneton_in_k_t = 0\&.0000000011d\-4"
+
+.PP
+K T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_nuclear_magneton_in_mhz_t = 0\&.0000000023"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_planck_constant = 0\&.0"
+
+.PP
+J Hz^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_planck_constant_in_ev_hz = 0\&.0"
+
+.PP
+eV Hz^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_planck_length = 0\&.000018d\-35"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_planck_mass = 0\&.000024d\-8"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_planck_mass_energy_equivalent_in_gev = 0\&.000014d19"
+
+.PP
+GeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_planck_temperature = 0\&.000016d32"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::d_planck_time = 0\&.000060d\-44"
+
+.PP
+s 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_charge_to_mass_quotient = 0\&.0000000029d7"
+
+.PP
+C kg^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_compton_wavelength = 0\&.00000000040d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_electron_mass_ratio = 0\&.00000011"
+
+.SS "real(c_double), parameter codata::d_proton_g_factor = 0\&.0000000016"
+
+.SS "real(c_double), parameter codata::d_proton_gyromag__ratio = 0\&.0000000011d8"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_gyromag__ratio_in_mhz_t = 0\&.000000018"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_mag__mom = 0\&.00000000060d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_mag__mom__to_bohr_magneton_ratio = 0\&.00000000046d\-3"
+
+.SS "real(c_double), parameter codata::d_proton_mag__mom__to_nuclear_magneton_ratio = 0\&.00000000082"
+
+.SS "real(c_double), parameter codata::d_proton_mag__shielding_correction = 0\&.0011d\-5"
+
+.SS "real(c_double), parameter codata::d_proton_mass = 0\&.00000000051d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_mass_energy_equivalent = 0\&.00000000046d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_mass_energy_equivalent_in_mev = 0\&.00000029"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_mass_in_u = 0\&.000000000053"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_molar_mass = 0\&.00000000031d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_muon_mass_ratio = 0\&.00000020"
+
+.SS "real(c_double), parameter codata::d_proton_neutron_mag__mom__ratio = 0\&.00000034"
+
+.SS "real(c_double), parameter codata::d_proton_neutron_mass_ratio = 0\&.00000000049"
+
+.SS "real(c_double), parameter codata::d_proton_relative_atomic_mass = 0\&.000000000053"
+
+.SS "real(c_double), parameter codata::d_proton_rms_charge_radius = 0\&.019d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_proton_tau_mass_ratio = 0\&.000036"
+
+.SS "real(c_double), parameter codata::d_quantum_of_circulation = 0\&.0000000011d\-4"
+
+.PP
+m^2 s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_quantum_of_circulation_times_2 = 0\&.0000000022d\-4"
+
+.PP
+m^2 s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_reduced_compton_wavelength = 0\&.0000000012d\-13"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_reduced_muon_compton_wavelength = 0\&.000000042d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_reduced_neutron_compton_wavelength = 0\&.0000000012d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_reduced_planck_constant = 0\&.0"
+
+.PP
+J s 
+.br
+ 
+.SS "real(c_double), parameter codata::d_reduced_planck_constant_in_ev_s = 0\&.0"
+
+.PP
+eV s 
+.br
+ 
+.SS "real(c_double), parameter codata::d_reduced_planck_constant_times_c_in_mev_fm = 0\&.0"
+
+.PP
+MeV fm 
+.br
+ 
+.SS "real(c_double), parameter codata::d_reduced_proton_compton_wavelength = 0\&.00000000064d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_reduced_tau_compton_wavelength = 0\&.000075d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_rydberg_constant = 0\&.000021"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_rydberg_constant_times_c_in_hz = 0\&.0000000000064d15"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::d_rydberg_constant_times_hc_in_ev = 0\&.000000000026"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_rydberg_constant_times_hc_in_j = 0\&.0000000000042d\-18"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_sackur_tetrode_constant__1_k__100_kpa = 0\&.00000000045"
+
+.SS "real(c_double), parameter codata::d_sackur_tetrode_constant__1_k__101_325_kpa = 0\&.00000000045"
+
+.SS "real(c_double), parameter codata::d_second_radiation_constant = 0\&.0"
+
+.PP
+m K 
+.br
+ 
+.SS "real(c_double), parameter codata::d_shielded_helion_gyromag__ratio = 0\&.000000024d8"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_shielded_helion_gyromag__ratio_in_mhz_t = 0\&.00000038"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_shielded_helion_mag__mom = 0\&.000000013d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_shielded_helion_mag__mom__to_bohr_magneton_ratio = 0\&.000000014d\-3"
+
+.SS "real(c_double), parameter codata::d_shielded_helion_mag__mom__to_nuclear_magneton_ratio = 0\&.000000025"
+
+.SS "real(c_double), parameter codata::d_shielded_helion_to_proton_mag__mom__ratio = 0\&.0000000089"
+
+.SS "real(c_double), parameter codata::d_shielded_helion_to_shielded_proton_mag__mom__ratio = 0\&.0000000033"
+
+.SS "real(c_double), parameter codata::d_shielded_proton_gyromag__ratio = 0\&.000000029d8"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_shielded_proton_gyromag__ratio_in_mhz_t = 0\&.00000046"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_shielded_proton_mag__mom = 0\&.000000015d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_shielded_proton_mag__mom__to_bohr_magneton_ratio = 0\&.000000017d\-3"
+
+.SS "real(c_double), parameter codata::d_shielded_proton_mag__mom__to_nuclear_magneton_ratio = 0\&.000000030"
+
+.SS "real(c_double), parameter codata::d_shielding_difference_of_d_and_p_in_hd = 0\&.0020d\-8"
+
+.SS "real(c_double), parameter codata::d_shielding_difference_of_t_and_p_in_ht = 0\&.0020d\-8"
+
+.SS "real(c_double), parameter codata::d_speed_of_light_in_vacuum = 0\&.0"
+
+.PP
+m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_standard_acceleration_of_gravity = 0\&.0"
+
+.PP
+m s^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_standard_atmosphere = 0\&.0"
+
+.PP
+Pa 
+.br
+ 
+.SS "real(c_double), parameter codata::d_standard_state_pressure = 0\&.0"
+
+.PP
+Pa 
+.br
+ 
+.SS "real(c_double), parameter codata::d_stefan_boltzmann_constant = 0\&.0"
+
+.PP
+W m^-2 K^-4 
+.br
+ 
+.SS "real(c_double), parameter codata::d_tau_compton_wavelength = 0\&.00047d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::d_tau_electron_mass_ratio = 0\&.23"
+
+.SS "real(c_double), parameter codata::d_tau_energy_equivalent = 0\&.12"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_tau_mass = 0\&.00021d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_tau_mass_energy_equivalent = 0\&.00019d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_tau_mass_in_u = 0\&.00013"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_tau_molar_mass = 0\&.00013d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_tau_muon_mass_ratio = 0\&.0011"
+
+.SS "real(c_double), parameter codata::d_tau_neutron_mass_ratio = 0\&.00013"
+
+.SS "real(c_double), parameter codata::d_tau_proton_mass_ratio = 0\&.00013"
+
+.SS "real(c_double), parameter codata::d_thomson_cross_section = 0\&.0000000060d\-29"
+
+.PP
+m^2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_triton_electron_mass_ratio = 0\&.00000027"
+
+.SS "real(c_double), parameter codata::d_triton_g_factor = 0\&.000000012"
+
+.SS "real(c_double), parameter codata::d_triton_mag__mom = 0\&.0000000030d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_triton_mag__mom__to_bohr_magneton_ratio = 0\&.0000000032d\-3"
+
+.SS "real(c_double), parameter codata::d_triton_mag__mom__to_nuclear_magneton_ratio = 0\&.0000000059"
+
+.SS "real(c_double), parameter codata::d_triton_mass = 0\&.0000000015d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_triton_mass_energy_equivalent = 0\&.0000000014d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::d_triton_mass_energy_equivalent_in_mev = 0\&.00000085"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::d_triton_mass_in_u = 0\&.00000000012"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::d_triton_molar_mass = 0\&.00000000092d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_triton_proton_mass_ratio = 0\&.00000000015"
+
+.SS "real(c_double), parameter codata::d_triton_relative_atomic_mass = 0\&.00000000012"
+
+.SS "real(c_double), parameter codata::d_triton_to_proton_mag__mom__ratio = 0\&.0000000021"
+
+.SS "real(c_double), parameter codata::d_unified_atomic_mass_unit = 0\&.00000000050d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::d_vacuum_electric_permittivity = 0\&.0000000013d\-12"
+
+.PP
+F m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_vacuum_mag__permeability = 0\&.00000000019d\-6"
+
+.PP
+N A^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::d_von_klitzing_constant = 0\&.0"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::d_w_to_z_mass_ratio = 0\&.00017"
+
+.SS "real(c_double), parameter codata::d_weak_mixing_angle = 0\&.00030"
+
+.SS "real(c_double), parameter codata::d_wien_frequency_displacement_law_constant = 0\&.0"
+
+.PP
+Hz K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::d_wien_wavelength_displacement_law_constant = 0\&.0"
+
+.PP
+m K 
+.br
+ 
+.SS "real(c_double), parameter codata::deuteron_electron_mag__mom__ratio = \-4\&.664345551d\-4"
+
+.SS "real(c_double), parameter codata::deuteron_electron_mass_ratio = 3670\&.48296788"
+
+.SS "real(c_double), parameter codata::deuteron_g_factor = 0\&.8574382338"
+
+.SS "real(c_double), parameter codata::deuteron_mag__mom = 4\&.330735094d\-27"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::deuteron_mag__mom__to_bohr_magneton_ratio = 4\&.669754570d\-4"
+
+.SS "real(c_double), parameter codata::deuteron_mag__mom__to_nuclear_magneton_ratio = 0\&.8574382338"
+
+.SS "real(c_double), parameter codata::deuteron_mass = 3\&.3435837724d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::deuteron_mass_energy_equivalent = 3\&.00506323102d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::deuteron_mass_energy_equivalent_in_mev = 1875\&.61294257"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::deuteron_mass_in_u = 2\&.013553212745"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::deuteron_molar_mass = 2\&.01355321205d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::deuteron_neutron_mag__mom__ratio = \-0\&.44820653"
+
+.SS "real(c_double), parameter codata::deuteron_proton_mag__mom__ratio = 0\&.30701220939"
+
+.SS "real(c_double), parameter codata::deuteron_proton_mass_ratio = 1\&.99900750139"
+
+.SS "real(c_double), parameter codata::deuteron_relative_atomic_mass = 2\&.013553212745"
+
+.SS "real(c_double), parameter codata::deuteron_rms_charge_radius = 2\&.12799d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_charge_to_mass_quotient = \-1\&.75882001076d11"
+
+.PP
+C kg^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_deuteron_mag__mom__ratio = \-2143\&.9234915"
+
+.SS "real(c_double), parameter codata::electron_deuteron_mass_ratio = 2\&.724437107462d\-4"
+
+.SS "real(c_double), parameter codata::electron_g_factor = \-2\&.00231930436256"
+
+.SS "real(c_double), parameter codata::electron_gyromag__ratio = 1\&.76085963023d11"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_gyromag__ratio_in_mhz_t = 28024\&.9514242"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_helion_mass_ratio = 1\&.819543074573d\-4"
+
+.SS "real(c_double), parameter codata::electron_mag__mom = \-9\&.2847647043d\-24"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_mag__mom__anomaly = 1\&.15965218128d\-3"
+
+.SS "real(c_double), parameter codata::electron_mag__mom__to_bohr_magneton_ratio = \-1\&.00115965218128"
+
+.SS "real(c_double), parameter codata::electron_mag__mom__to_nuclear_magneton_ratio = \-1838\&.28197188"
+
+.SS "real(c_double), parameter codata::electron_mass = 9\&.1093837015d\-31"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_mass_energy_equivalent = 8\&.1871057769d\-14"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_mass_energy_equivalent_in_mev = 0\&.51099895000"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_mass_in_u = 5\&.48579909065d\-4"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_molar_mass = 5\&.4857990888d\-7"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_muon_mag__mom__ratio = 206\&.7669883"
+
+.SS "real(c_double), parameter codata::electron_muon_mass_ratio = 4\&.83633169d\-3"
+
+.SS "real(c_double), parameter codata::electron_neutron_mag__mom__ratio = 960\&.92050"
+
+.SS "real(c_double), parameter codata::electron_neutron_mass_ratio = 5\&.4386734424d\-4"
+
+.SS "real(c_double), parameter codata::electron_proton_mag__mom__ratio = \-658\&.21068789"
+
+.SS "real(c_double), parameter codata::electron_proton_mass_ratio = 5\&.44617021487d\-4"
+
+.SS "real(c_double), parameter codata::electron_relative_atomic_mass = 5\&.48579909065d\-4"
+
+.SS "real(c_double), parameter codata::electron_tau_mass_ratio = 2\&.87585d\-4"
+
+.SS "real(c_double), parameter codata::electron_to_alpha_particle_mass_ratio = 1\&.370933554787d\-4"
+
+.SS "real(c_double), parameter codata::electron_to_shielded_helion_mag__mom__ratio = 864\&.058257"
+
+.SS "real(c_double), parameter codata::electron_to_shielded_proton_mag__mom__ratio = \-658\&.2275971"
+
+.SS "real(c_double), parameter codata::electron_triton_mass_ratio = 1\&.819200062251d\-4"
+
+.SS "real(c_double), parameter codata::electron_volt = 1\&.602176634d\-19"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_volt_atomic_mass_unit_relationship = 1\&.07354410233d\-9"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_volt_hartree_relationship = 3\&.6749322175655d\-2"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_volt_hertz_relationship = 2\&.417989242d14"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_volt_inverse_meter_relationship = 8\&.065543937d5"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_volt_joule_relationship = 1\&.602176634d\-19"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_volt_kelvin_relationship = 1\&.160451812d4"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::electron_volt_kilogram_relationship = 1\&.782661921d\-36"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::elementary_charge = 1\&.602176634d\-19"
+
+.PP
+C 
+.br
+ 
+.SS "real(c_double), parameter codata::elementary_charge_over_h_bar = 1\&.519267447d15"
+
+.PP
+A J^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::faraday_constant = 96485\&.33212"
+
+.PP
+C mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::fermi_coupling_constant = 1\&.1663787d\-5"
+
+.PP
+GeV^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::fine_structure_constant = 7\&.2973525693d\-3"
+
+.SS "real(c_double), parameter codata::first_radiation_constant = 3\&.741771852d\-16"
+
+.PP
+W m^2 
+.br
+ 
+.SS "real(c_double), parameter codata::first_radiation_constant_for_spectral_radiance = 1\&.191042972d\-16"
+
+.PP
+W m^2 sr^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::hartree_atomic_mass_unit_relationship = 2\&.92126232205d\-8"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::hartree_electron_volt_relationship = 27\&.211386245988"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::hartree_energy = 4\&.3597447222071d\-18"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::hartree_energy_in_ev = 27\&.211386245988"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::hartree_hertz_relationship = 6\&.579683920502d15"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::hartree_inverse_meter_relationship = 2\&.1947463136320d7"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::hartree_joule_relationship = 4\&.3597447222071d\-18"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::hartree_kelvin_relationship = 3\&.1577502480407d5"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::hartree_kilogram_relationship = 4\&.8508702095432d\-35"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::helion_electron_mass_ratio = 5495\&.88528007"
+
+.SS "real(c_double), parameter codata::helion_g_factor = \-4\&.255250615"
+
+.SS "real(c_double), parameter codata::helion_mag__mom = \-1\&.074617532d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::helion_mag__mom__to_bohr_magneton_ratio = \-1\&.158740958d\-3"
+
+.SS "real(c_double), parameter codata::helion_mag__mom__to_nuclear_magneton_ratio = \-2\&.127625307"
+
+.SS "real(c_double), parameter codata::helion_mass = 5\&.0064127796d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::helion_mass_energy_equivalent = 4\&.4995394125d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::helion_mass_energy_equivalent_in_mev = 2808\&.39160743"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::helion_mass_in_u = 3\&.014932247175"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::helion_molar_mass = 3\&.01493224613d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::helion_proton_mass_ratio = 2\&.99315267167"
+
+.SS "real(c_double), parameter codata::helion_relative_atomic_mass = 3\&.014932247175"
+
+.SS "real(c_double), parameter codata::helion_shielding_shift = 5\&.996743d\-5"
+
+.SS "real(c_double), parameter codata::hertz_atomic_mass_unit_relationship = 4\&.4398216652d\-24"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::hertz_electron_volt_relationship = 4\&.135667696d\-15"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::hertz_hartree_relationship = 1\&.5198298460570d\-16"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::hertz_inverse_meter_relationship = 3\&.335640951d\-9"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::hertz_joule_relationship = 6\&.62607015d\-34"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::hertz_kelvin_relationship = 4\&.799243073d\-11"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::hertz_kilogram_relationship = 7\&.372497323d\-51"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::hyperfine_transition_frequency_of_cs_133 = 9192631770\&.0"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::inverse_fine_structure_constant = 137\&.035999084"
+
+.SS "real(c_double), parameter codata::inverse_meter_atomic_mass_unit_relationship = 1\&.33102505010d\-15"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::inverse_meter_electron_volt_relationship = 1\&.239841984d\-6"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::inverse_meter_hartree_relationship = 4\&.5563352529120d\-8"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::inverse_meter_hertz_relationship = 299792458\&.0"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::inverse_meter_joule_relationship = 1\&.986445857d\-25"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::inverse_meter_kelvin_relationship = 1\&.438776877d\-2"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::inverse_meter_kilogram_relationship = 2\&.210219094d\-42"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::inverse_of_conductance_quantum = 12906\&.40372"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::josephson_constant = 483597\&.8484d9"
+
+.PP
+Hz V^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::joule_atomic_mass_unit_relationship = 6\&.7005352565d9"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::joule_electron_volt_relationship = 6\&.241509074d18"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::joule_hartree_relationship = 2\&.2937122783963d17"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::joule_hertz_relationship = 1\&.509190179d33"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::joule_inverse_meter_relationship = 5\&.034116567d24"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::joule_kelvin_relationship = 7\&.242970516d22"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::joule_kilogram_relationship = 1\&.112650056d\-17"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::kelvin_atomic_mass_unit_relationship = 9\&.2510873014d\-14"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::kelvin_electron_volt_relationship = 8\&.617333262d\-5"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::kelvin_hartree_relationship = 3\&.1668115634556d\-6"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::kelvin_hertz_relationship = 2\&.083661912d10"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::kelvin_inverse_meter_relationship = 69\&.50348004"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::kelvin_joule_relationship = 1\&.380649d\-23"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::kelvin_kilogram_relationship = 1\&.536179187d\-40"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::kilogram_atomic_mass_unit_relationship = 6\&.0221407621d26"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::kilogram_electron_volt_relationship = 5\&.609588603d35"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::kilogram_hartree_relationship = 2\&.0614857887409d34"
+
+.PP
+E_h 
+.br
+ 
+.SS "real(c_double), parameter codata::kilogram_hertz_relationship = 1\&.356392489d50"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::kilogram_inverse_meter_relationship = 4\&.524438335d41"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::kilogram_joule_relationship = 8\&.987551787d16"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::kilogram_kelvin_relationship = 6\&.509657260d39"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::lattice_parameter_of_silicon = 5\&.431020511d\-10"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::lattice_spacing_of_ideal_si__220 = 1\&.920155716d\-10"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::loschmidt_constant__273_15_k__100_kpa = 2\&.651645804d25"
+
+.PP
+m^-3 
+.br
+ 
+.SS "real(c_double), parameter codata::loschmidt_constant__273_15_k__101_325_kpa = 2\&.686780111d25"
+
+.PP
+m^-3 
+.br
+ 
+.SS "real(c_double), parameter codata::luminous_efficacy = 683\&.0"
+
+.PP
+lm W^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::mag__flux_quantum = 2\&.067833848d\-15"
+
+.PP
+Wb 
+.br
+ 
+.SS "real(c_double), parameter codata::molar_gas_constant = 8\&.314462618"
+
+.PP
+J mol^-1 K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::molar_mass_constant = 0\&.99999999965d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::molar_mass_of_carbon_12 = 11\&.9999999958d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::molar_planck_constant = 3\&.990312712d\-10"
+
+.PP
+J Hz^-1 mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::molar_volume_of_ideal_gas__273_15_k__100_kpa = 22\&.71095464d\-3"
+
+.PP
+m^3 mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::molar_volume_of_ideal_gas__273_15_k__101_325_kpa = 22\&.41396954d\-3"
+
+.PP
+m^3 mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::molar_volume_of_silicon = 1\&.205883199d\-5"
+
+.PP
+m^3 mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::molybdenum_x_unit = 1\&.00209952d\-13"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::muon_compton_wavelength = 1\&.173444110d\-14"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::muon_electron_mass_ratio = 206\&.7682830"
+
+.SS "real(c_double), parameter codata::muon_g_factor = \-2\&.0023318418"
+
+.SS "real(c_double), parameter codata::muon_mag__mom = \-4\&.49044830d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::muon_mag__mom__anomaly = 1\&.16592089d\-3"
+
+.SS "real(c_double), parameter codata::muon_mag__mom__to_bohr_magneton_ratio = \-4\&.84197047d\-3"
+
+.SS "real(c_double), parameter codata::muon_mag__mom__to_nuclear_magneton_ratio = \-8\&.89059703"
+
+.SS "real(c_double), parameter codata::muon_mass = 1\&.883531627d\-28"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::muon_mass_energy_equivalent = 1\&.692833804d\-11"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::muon_mass_energy_equivalent_in_mev = 105\&.6583755"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::muon_mass_in_u = 0\&.1134289259"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::muon_molar_mass = 1\&.134289259d\-4"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::muon_neutron_mass_ratio = 0\&.1124545170"
+
+.SS "real(c_double), parameter codata::muon_proton_mag__mom__ratio = \-3\&.183345142"
+
+.SS "real(c_double), parameter codata::muon_proton_mass_ratio = 0\&.1126095264"
+
+.SS "real(c_double), parameter codata::muon_tau_mass_ratio = 5\&.94635d\-2"
+
+.SS "real(c_double), parameter codata::natural_unit_of_action = 1\&.054571817d\-34"
+
+.PP
+J s 
+.br
+ 
+.SS "real(c_double), parameter codata::natural_unit_of_action_in_ev_s = 6\&.582119569d\-16"
+
+.PP
+eV s 
+.br
+ 
+.SS "real(c_double), parameter codata::natural_unit_of_energy = 8\&.1871057769d\-14"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::natural_unit_of_energy_in_mev = 0\&.51099895000"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::natural_unit_of_length = 3\&.8615926796d\-13"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::natural_unit_of_mass = 9\&.1093837015d\-31"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::natural_unit_of_momentum = 2\&.73092453075d\-22"
+
+.PP
+kg m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::natural_unit_of_momentum_in_mev_c = 0\&.51099895000"
+
+.PP
+MeV/c 
+.br
+ 
+.SS "real(c_double), parameter codata::natural_unit_of_time = 1\&.28808866819d\-21"
+
+.PP
+s 
+.br
+ 
+.SS "real(c_double), parameter codata::natural_unit_of_velocity = 299792458\&.0"
+
+.PP
+m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_compton_wavelength = 1\&.31959090581d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_electron_mag__mom__ratio = 1\&.04066882d\-3"
+
+.SS "real(c_double), parameter codata::neutron_electron_mass_ratio = 1838\&.68366173"
+
+.SS "real(c_double), parameter codata::neutron_g_factor = \-3\&.82608545"
+
+.SS "real(c_double), parameter codata::neutron_gyromag__ratio = 1\&.83247171d8"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_gyromag__ratio_in_mhz_t = 29\&.1646931"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_mag__mom = \-9\&.6623651d\-27"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_mag__mom__to_bohr_magneton_ratio = \-1\&.04187563d\-3"
+
+.SS "real(c_double), parameter codata::neutron_mag__mom__to_nuclear_magneton_ratio = \-1\&.91304273"
+
+.SS "real(c_double), parameter codata::neutron_mass = 1\&.67492749804d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_mass_energy_equivalent = 1\&.50534976287d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_mass_energy_equivalent_in_mev = 939\&.56542052"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_mass_in_u = 1\&.00866491595"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_molar_mass = 1\&.00866491560d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_muon_mass_ratio = 8\&.89248406"
+
+.SS "real(c_double), parameter codata::neutron_proton_mag__mom__ratio = \-0\&.68497934"
+
+.SS "real(c_double), parameter codata::neutron_proton_mass_difference = 2\&.30557435d\-30"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_proton_mass_difference_energy_equivalent = 2\&.07214689d\-13"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_proton_mass_difference_energy_equivalent_in_mev = 1\&.29333236"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_proton_mass_difference_in_u = 1\&.38844933d\-3"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::neutron_proton_mass_ratio = 1\&.00137841931"
+
+.SS "real(c_double), parameter codata::neutron_relative_atomic_mass = 1\&.00866491595"
+
+.SS "real(c_double), parameter codata::neutron_tau_mass_ratio = 0\&.528779"
+
+.SS "real(c_double), parameter codata::neutron_to_shielded_proton_mag__mom__ratio = \-0\&.68499694"
+
+.SS "real(c_double), parameter codata::newtonian_constant_of_gravitation = 6\&.67430d\-11"
+
+.PP
+m^3 kg^-1 s^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::newtonian_constant_of_gravitation_over_h_bar_c = 6\&.70883d\-39"
+
+.PP
+(GeV/c^2)^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::nuclear_magneton = 5\&.0507837461d\-27"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::nuclear_magneton_in_ev_t = 3\&.15245125844d\-8"
+
+.PP
+eV T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::nuclear_magneton_in_inverse_meter_per_tesla = 2\&.54262341353d\-2"
+
+.PP
+m^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::nuclear_magneton_in_k_t = 3\&.6582677756d\-4"
+
+.PP
+K T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::nuclear_magneton_in_mhz_t = 7\&.6225932291"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::planck_constant = 6\&.62607015d\-34"
+
+.PP
+J Hz^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::planck_constant_in_ev_hz = 4\&.135667696d\-15"
+
+.PP
+eV Hz^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::planck_length = 1\&.616255d\-35"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::planck_mass = 2\&.176434d\-8"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::planck_mass_energy_equivalent_in_gev = 1\&.220890d19"
+
+.PP
+GeV 
+.br
+ 
+.SS "real(c_double), parameter codata::planck_temperature = 1\&.416784d32"
+
+.PP
+K 
+.br
+ 
+.SS "real(c_double), parameter codata::planck_time = 5\&.391247d\-44"
+
+.PP
+s 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_charge_to_mass_quotient = 9\&.5788331560d7"
+
+.PP
+C kg^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_compton_wavelength = 1\&.32140985539d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_electron_mass_ratio = 1836\&.15267343"
+
+.SS "real(c_double), parameter codata::proton_g_factor = 5\&.5856946893"
+
+.SS "real(c_double), parameter codata::proton_gyromag__ratio = 2\&.6752218744d8"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_gyromag__ratio_in_mhz_t = 42\&.577478518"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_mag__mom = 1\&.41060679736d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_mag__mom__to_bohr_magneton_ratio = 1\&.52103220230d\-3"
+
+.SS "real(c_double), parameter codata::proton_mag__mom__to_nuclear_magneton_ratio = 2\&.79284734463"
+
+.SS "real(c_double), parameter codata::proton_mag__shielding_correction = 2\&.5689d\-5"
+
+.SS "real(c_double), parameter codata::proton_mass = 1\&.67262192369d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_mass_energy_equivalent = 1\&.50327761598d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_mass_energy_equivalent_in_mev = 938\&.27208816"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_mass_in_u = 1\&.007276466621"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_molar_mass = 1\&.00727646627d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_muon_mass_ratio = 8\&.88024337"
+
+.SS "real(c_double), parameter codata::proton_neutron_mag__mom__ratio = \-1\&.45989805"
+
+.SS "real(c_double), parameter codata::proton_neutron_mass_ratio = 0\&.99862347812"
+
+.SS "real(c_double), parameter codata::proton_relative_atomic_mass = 1\&.007276466621"
+
+.SS "real(c_double), parameter codata::proton_rms_charge_radius = 8\&.414d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::proton_tau_mass_ratio = 0\&.528051"
+
+.SS "real(c_double), parameter codata::quantum_of_circulation = 3\&.6369475516d\-4"
+
+.PP
+m^2 s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::quantum_of_circulation_times_2 = 7\&.2738951032d\-4"
+
+.PP
+m^2 s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::reduced_compton_wavelength = 3\&.8615926796d\-13"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::reduced_muon_compton_wavelength = 1\&.867594306d\-15"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::reduced_neutron_compton_wavelength = 2\&.1001941552d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::reduced_planck_constant = 1\&.054571817d\-34"
+
+.PP
+J s 
+.br
+ 
+.SS "real(c_double), parameter codata::reduced_planck_constant_in_ev_s = 6\&.582119569d\-16"
+
+.PP
+eV s 
+.br
+ 
+.SS "real(c_double), parameter codata::reduced_planck_constant_times_c_in_mev_fm = 197\&.3269804"
+
+.PP
+MeV fm 
+.br
+ 
+.SS "real(c_double), parameter codata::reduced_proton_compton_wavelength = 2\&.10308910336d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::reduced_tau_compton_wavelength = 1\&.110538d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::rydberg_constant = 10973731\&.568160"
+
+.PP
+m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::rydberg_constant_times_c_in_hz = 3\&.2898419602508d15"
+
+.PP
+Hz 
+.br
+ 
+.SS "real(c_double), parameter codata::rydberg_constant_times_hc_in_ev = 13\&.605693122994"
+
+.PP
+eV 
+.br
+ 
+.SS "real(c_double), parameter codata::rydberg_constant_times_hc_in_j = 2\&.1798723611035d\-18"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::sackur_tetrode_constant__1_k__100_kpa = \-1\&.15170753706"
+
+.SS "real(c_double), parameter codata::sackur_tetrode_constant__1_k__101_325_kpa = \-1\&.16487052358"
+
+.SS "real(c_double), parameter codata::second_radiation_constant = 1\&.438776877d\-2"
+
+.PP
+m K 
+.br
+ 
+.SS "real(c_double), parameter codata::shielded_helion_gyromag__ratio = 2\&.037894569d8"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::shielded_helion_gyromag__ratio_in_mhz_t = 32\&.43409942"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::shielded_helion_mag__mom = \-1\&.074553090d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::shielded_helion_mag__mom__to_bohr_magneton_ratio = \-1\&.158671471d\-3"
+
+.SS "real(c_double), parameter codata::shielded_helion_mag__mom__to_nuclear_magneton_ratio = \-2\&.127497719"
+
+.SS "real(c_double), parameter codata::shielded_helion_to_proton_mag__mom__ratio = \-0\&.7617665618"
+
+.SS "real(c_double), parameter codata::shielded_helion_to_shielded_proton_mag__mom__ratio = \-0\&.7617861313"
+
+.SS "real(c_double), parameter codata::shielded_proton_gyromag__ratio = 2\&.675153151d8"
+
+.PP
+s^-1 T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::shielded_proton_gyromag__ratio_in_mhz_t = 42\&.57638474"
+
+.PP
+MHz T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::shielded_proton_mag__mom = 1\&.410570560d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::shielded_proton_mag__mom__to_bohr_magneton_ratio = 1\&.520993128d\-3"
+
+.SS "real(c_double), parameter codata::shielded_proton_mag__mom__to_nuclear_magneton_ratio = 2\&.792775599"
+
+.SS "real(c_double), parameter codata::shielding_difference_of_d_and_p_in_hd = 2\&.0200d\-8"
+
+.SS "real(c_double), parameter codata::shielding_difference_of_t_and_p_in_ht = 2\&.4140d\-8"
+
+.SS "real(c_double), parameter codata::speed_of_light_in_vacuum = 299792458\&.0"
+
+.PP
+m s^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::standard_acceleration_of_gravity = 9\&.80665"
+
+.PP
+m s^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::standard_atmosphere = 101325\&.0"
+
+.PP
+Pa 
+.br
+ 
+.SS "real(c_double), parameter codata::standard_state_pressure = 100000\&.0"
+
+.PP
+Pa 
+.br
+ 
+.SS "real(c_double), parameter codata::stefan_boltzmann_constant = 5\&.670374419d\-8"
+
+.PP
+W m^-2 K^-4 
+.br
+ 
+.SS "real(c_double), parameter codata::tau_compton_wavelength = 6\&.97771d\-16"
+
+.PP
+m 
+.br
+ 
+.SS "real(c_double), parameter codata::tau_electron_mass_ratio = 3477\&.23"
+
+.SS "real(c_double), parameter codata::tau_energy_equivalent = 1776\&.86"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::tau_mass = 3\&.16754d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::tau_mass_energy_equivalent = 2\&.84684d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::tau_mass_in_u = 1\&.90754"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::tau_molar_mass = 1\&.90754d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::tau_muon_mass_ratio = 16\&.8170"
+
+.SS "real(c_double), parameter codata::tau_neutron_mass_ratio = 1\&.89115"
+
+.SS "real(c_double), parameter codata::tau_proton_mass_ratio = 1\&.89376"
+
+.SS "real(c_double), parameter codata::thomson_cross_section = 6\&.6524587321d\-29"
+
+.PP
+m^2 
+.br
+ 
+.SS "real(c_double), parameter codata::triton_electron_mass_ratio = 5496\&.92153573"
+
+.SS "real(c_double), parameter codata::triton_g_factor = 5\&.957924931"
+
+.SS "real(c_double), parameter codata::triton_mag__mom = 1\&.5046095202d\-26"
+
+.PP
+J T^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::triton_mag__mom__to_bohr_magneton_ratio = 1\&.6223936651d\-3"
+
+.SS "real(c_double), parameter codata::triton_mag__mom__to_nuclear_magneton_ratio = 2\&.9789624656"
+
+.SS "real(c_double), parameter codata::triton_mass = 5\&.0073567446d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::triton_mass_energy_equivalent = 4\&.5003878060d\-10"
+
+.PP
+J 
+.br
+ 
+.SS "real(c_double), parameter codata::triton_mass_energy_equivalent_in_mev = 2808\&.92113298"
+
+.PP
+MeV 
+.br
+ 
+.SS "real(c_double), parameter codata::triton_mass_in_u = 3\&.01550071621"
+
+.PP
+u 
+.br
+ 
+.SS "real(c_double), parameter codata::triton_molar_mass = 3\&.01550071517d\-3"
+
+.PP
+kg mol^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::triton_proton_mass_ratio = 2\&.99371703414"
+
+.SS "real(c_double), parameter codata::triton_relative_atomic_mass = 3\&.01550071621"
+
+.SS "real(c_double), parameter codata::triton_to_proton_mag__mom__ratio = 1\&.0666399191"
+
+.SS "real(c_double), parameter codata::unified_atomic_mass_unit = 1\&.66053906660d\-27"
+
+.PP
+kg 
+.br
+ 
+.SS "real(c_double), parameter codata::vacuum_electric_permittivity = 8\&.8541878128d\-12"
+
+.PP
+F m^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::vacuum_mag__permeability = 1\&.25663706212d\-6"
+
+.PP
+N A^-2 
+.br
+ 
+.SS "real(c_double), parameter codata::von_klitzing_constant = 25812\&.80745"
+
+.PP
+ohm 
+.br
+ 
+.SS "real(c_double), parameter codata::w_to_z_mass_ratio = 0\&.88153"
+
+.SS "real(c_double), parameter codata::weak_mixing_angle = 0\&.22290"
+
+.SS "real(c_double), parameter codata::wien_frequency_displacement_law_constant = 5\&.878925757d10"
+
+.PP
+Hz K^-1 
+.br
+ 
+.SS "real(c_double), parameter codata::wien_wavelength_displacement_law_constant = 2\&.897771955d\-3"
+
+.PP
+m K 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Codata from the source code\&.

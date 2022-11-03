@@ -1,0 +1,4601 @@
+.TH "codata.h" 3 "Fri Oct 28 2022" "Version 1.0" "Codata" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+codata.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBANGSTROM_STAR\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ANGSTROM_STAR\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ACTION\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ACTION\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_CHARGE\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_CHARGE\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_CHARGE_DENSITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_CHARGE_DENSITY\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_CURRENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_CURRENT\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_FIELD\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_FIELD\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_POTENTIAL\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ENERGY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ENERGY\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_FORCE\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_FORCE\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_LENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_LENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MAG__DIPOLE_MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MAG__FLUX_DENSITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MAGNETIZABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MAGNETIZABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MOMENTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MOMENTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_PERMITTIVITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_PERMITTIVITY\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_TIME\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_TIME\fP"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_VELOCITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_VELOCITY\fP"
+.br
+.ti -1c
+.RI "const double \fBAVOGADRO_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_AVOGADRO_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON\fP"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON_IN_EV_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON_IN_EV_T\fP"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON_IN_HZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON_IN_HZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fP"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON_IN_K_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON_IN_K_T\fP"
+.br
+.ti -1c
+.RI "const double \fBBOHR_RADIUS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_RADIUS\fP"
+.br
+.ti -1c
+.RI "const double \fBBOLTZMANN_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOLTZMANN_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBBOLTZMANN_CONSTANT_IN_EV_K\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOLTZMANN_CONSTANT_IN_EV_K\fP"
+.br
+.ti -1c
+.RI "const double \fBBOLTZMANN_CONSTANT_IN_HZ_K\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOLTZMANN_CONSTANT_IN_HZ_K\fP"
+.br
+.ti -1c
+.RI "const double \fBBOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN\fP"
+.br
+.ti -1c
+.RI "const double \fBD_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN\fP"
+.br
+.ti -1c
+.RI "const double \fBCHARACTERISTIC_IMPEDANCE_OF_VACUUM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CHARACTERISTIC_IMPEDANCE_OF_VACUUM\fP"
+.br
+.ti -1c
+.RI "const double \fBCLASSICAL_ELECTRON_RADIUS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CLASSICAL_ELECTRON_RADIUS\fP"
+.br
+.ti -1c
+.RI "const double \fBCOMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBCONDUCTANCE_QUANTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONDUCTANCE_QUANTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_AMPERE_90\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_AMPERE_90\fP"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_COULOMB_90\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_COULOMB_90\fP"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_FARAD_90\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_FARAD_90\fP"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_HENRY_90\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_HENRY_90\fP"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_OHM_90\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_OHM_90\fP"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_VOLT_90\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_VOLT_90\fP"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_WATT_90\fP"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_WATT_90\fP"
+.br
+.ti -1c
+.RI "const double \fBCOPPER_X_UNIT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_COPPER_X_UNIT\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_ELECTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_ELECTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_NEUTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_NEUTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_RMS_CHARGE_RADIUS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_RMS_CHARGE_RADIUS\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_CHARGE_TO_MASS_QUOTIENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_CHARGE_TO_MASS_QUOTIENT\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_DEUTERON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_DEUTERON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_DEUTERON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_DEUTERON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_HELION_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_HELION_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MAG__MOM__ANOMALY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MAG__MOM__ANOMALY\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MUON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MUON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MUON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MUON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_NEUTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_NEUTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_NEUTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_NEUTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TAU_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TAU_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TRITON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TRITON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBELEMENTARY_CHARGE\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELEMENTARY_CHARGE\fP"
+.br
+.ti -1c
+.RI "const double \fBELEMENTARY_CHARGE_OVER_H_BAR\fP"
+.br
+.ti -1c
+.RI "const double \fBD_ELEMENTARY_CHARGE_OVER_H_BAR\fP"
+.br
+.ti -1c
+.RI "const double \fBFARADAY_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_FARADAY_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBFERMI_COUPLING_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_FERMI_COUPLING_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBFINE_STRUCTURE_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_FINE_STRUCTURE_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBFIRST_RADIATION_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_FIRST_RADIATION_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBFIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE\fP"
+.br
+.ti -1c
+.RI "const double \fBD_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE\fP"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_ENERGY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_ENERGY\fP"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_ENERGY_IN_EV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_ENERGY_IN_EV\fP"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBHELION_SHIELDING_SHIFT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_SHIELDING_SHIFT\fP"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBHYPERFINE_TRANSITION_FREQUENCY_OF_CS_133\fP"
+.br
+.ti -1c
+.RI "const double \fBD_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133\fP"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_FINE_STRUCTURE_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_FINE_STRUCTURE_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_OF_CONDUCTANCE_QUANTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_OF_CONDUCTANCE_QUANTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBJOSEPHSON_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_JOSEPHSON_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBJOULE_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBJOULE_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBJOULE_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBJOULE_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBJOULE_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBJOULE_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBJOULE_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_KILOGRAM_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_HARTREE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_HERTZ_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_INVERSE_METER_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_JOULE_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_KELVIN_RELATIONSHIP\fP"
+.br
+.ti -1c
+.RI "const double \fBLATTICE_PARAMETER_OF_SILICON\fP"
+.br
+.ti -1c
+.RI "const double \fBD_LATTICE_PARAMETER_OF_SILICON\fP"
+.br
+.ti -1c
+.RI "const double \fBLATTICE_SPACING_OF_IDEAL_SI__220\fP"
+.br
+.ti -1c
+.RI "const double \fBD_LATTICE_SPACING_OF_IDEAL_SI__220\fP"
+.br
+.ti -1c
+.RI "const double \fBLOSCHMIDT_CONSTANT__273_15_K__100_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBD_LOSCHMIDT_CONSTANT__273_15_K__100_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBLOSCHMIDT_CONSTANT__273_15_K__101_325_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBD_LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBLUMINOUS_EFFICACY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_LUMINOUS_EFFICACY\fP"
+.br
+.ti -1c
+.RI "const double \fBMAG__FLUX_QUANTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MAG__FLUX_QUANTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_GAS_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_GAS_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_MASS_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_MASS_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_MASS_OF_CARBON_12\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_MASS_OF_CARBON_12\fP"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_PLANCK_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_PLANCK_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_VOLUME_OF_SILICON\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_VOLUME_OF_SILICON\fP"
+.br
+.ti -1c
+.RI "const double \fBMOLYBDENUM_X_UNIT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MOLYBDENUM_X_UNIT\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_MAG__MOM__ANOMALY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MAG__MOM__ANOMALY\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_NEUTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_NEUTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBMUON_TAU_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_TAU_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_ACTION\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_ACTION\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_ACTION_IN_EV_S\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_ACTION_IN_EV_S\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_ENERGY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_ENERGY\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_ENERGY_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_ENERGY_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_LENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_LENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_MOMENTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_MOMENTUM\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_MOMENTUM_IN_MEV_C\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_TIME\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_TIME\fP"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_VELOCITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_VELOCITY\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_ELECTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_ELECTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MUON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MUON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_DIFFERENCE\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_DIFFERENCE\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_DIFFERENCE_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_TAU_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_TAU_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBNEWTONIAN_CONSTANT_OF_GRAVITATION\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEWTONIAN_CONSTANT_OF_GRAVITATION\fP"
+.br
+.ti -1c
+.RI "const double \fBNEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C\fP"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON\fP"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON_IN_EV_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON_IN_EV_T\fP"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fP"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON_IN_K_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON_IN_K_T\fP"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_CONSTANT_IN_EV_HZ\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_CONSTANT_IN_EV_HZ\fP"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_LENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_LENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV\fP"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_TEMPERATURE\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_TEMPERATURE\fP"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_TIME\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_TIME\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_CHARGE_TO_MASS_QUOTIENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_CHARGE_TO_MASS_QUOTIENT\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MAG__SHIELDING_CORRECTION\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MAG__SHIELDING_CORRECTION\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MUON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MUON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_NEUTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_NEUTRON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_NEUTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_NEUTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_RMS_CHARGE_RADIUS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_RMS_CHARGE_RADIUS\fP"
+.br
+.ti -1c
+.RI "const double \fBPROTON_TAU_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_TAU_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBQUANTUM_OF_CIRCULATION\fP"
+.br
+.ti -1c
+.RI "const double \fBD_QUANTUM_OF_CIRCULATION\fP"
+.br
+.ti -1c
+.RI "const double \fBQUANTUM_OF_CIRCULATION_TIMES_2\fP"
+.br
+.ti -1c
+.RI "const double \fBD_QUANTUM_OF_CIRCULATION_TIMES_2\fP"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_MUON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_MUON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_NEUTRON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_NEUTRON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_PLANCK_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_PLANCK_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_PLANCK_CONSTANT_IN_EV_S\fP"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_PLANCK_CONSTANT_IN_EV_S\fP"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM\fP"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_PROTON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_PROTON_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_TAU_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_TAU_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBRYDBERG_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_RYDBERG_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBRYDBERG_CONSTANT_TIMES_C_IN_HZ\fP"
+.br
+.ti -1c
+.RI "const double \fBD_RYDBERG_CONSTANT_TIMES_C_IN_HZ\fP"
+.br
+.ti -1c
+.RI "const double \fBRYDBERG_CONSTANT_TIMES_HC_IN_EV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_RYDBERG_CONSTANT_TIMES_HC_IN_EV\fP"
+.br
+.ti -1c
+.RI "const double \fBRYDBERG_CONSTANT_TIMES_HC_IN_J\fP"
+.br
+.ti -1c
+.RI "const double \fBD_RYDBERG_CONSTANT_TIMES_HC_IN_J\fP"
+.br
+.ti -1c
+.RI "const double \fBSACKUR_TETRODE_CONSTANT__1_K__100_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SACKUR_TETRODE_CONSTANT__1_K__100_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBSACKUR_TETRODE_CONSTANT__1_K__101_325_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA\fP"
+.br
+.ti -1c
+.RI "const double \fBSECOND_RADIATION_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SECOND_RADIATION_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_GYROMAG__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD\fP"
+.br
+.ti -1c
+.RI "const double \fBSHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT\fP"
+.br
+.ti -1c
+.RI "const double \fBSPEED_OF_LIGHT_IN_VACUUM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_SPEED_OF_LIGHT_IN_VACUUM\fP"
+.br
+.ti -1c
+.RI "const double \fBSTANDARD_ACCELERATION_OF_GRAVITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_STANDARD_ACCELERATION_OF_GRAVITY\fP"
+.br
+.ti -1c
+.RI "const double \fBSTANDARD_ATMOSPHERE\fP"
+.br
+.ti -1c
+.RI "const double \fBD_STANDARD_ATMOSPHERE\fP"
+.br
+.ti -1c
+.RI "const double \fBSTANDARD_STATE_PRESSURE\fP"
+.br
+.ti -1c
+.RI "const double \fBD_STANDARD_STATE_PRESSURE\fP"
+.br
+.ti -1c
+.RI "const double \fBSTEFAN_BOLTZMANN_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_STEFAN_BOLTZMANN_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_COMPTON_WAVELENGTH\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_MUON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MUON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_NEUTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_NEUTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBTAU_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBTHOMSON_CROSS_SECTION\fP"
+.br
+.ti -1c
+.RI "const double \fBD_THOMSON_CROSS_SECTION\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_ELECTRON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_G_FACTOR\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MAG__MOM\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MASS_ENERGY_EQUIVALENT\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MASS_IN_U\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MOLAR_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_PROTON_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_RELATIVE_ATOMIC_MASS\fP"
+.br
+.ti -1c
+.RI "const double \fBTRITON_TO_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_TO_PROTON_MAG__MOM__RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBUNIFIED_ATOMIC_MASS_UNIT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_UNIFIED_ATOMIC_MASS_UNIT\fP"
+.br
+.ti -1c
+.RI "const double \fBVACUUM_ELECTRIC_PERMITTIVITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_VACUUM_ELECTRIC_PERMITTIVITY\fP"
+.br
+.ti -1c
+.RI "const double \fBVACUUM_MAG__PERMEABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBD_VACUUM_MAG__PERMEABILITY\fP"
+.br
+.ti -1c
+.RI "const double \fBVON_KLITZING_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_VON_KLITZING_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBWEAK_MIXING_ANGLE\fP"
+.br
+.ti -1c
+.RI "const double \fBD_WEAK_MIXING_ANGLE\fP"
+.br
+.ti -1c
+.RI "const double \fBWIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBWIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBD_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT\fP"
+.br
+.ti -1c
+.RI "const double \fBW_TO_Z_MASS_RATIO\fP"
+.br
+.ti -1c
+.RI "const double \fBD_W_TO_Z_MASS_RATIO\fP"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "const double ALPHA_PARTICLE_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ALPHA_PARTICLE_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double ALPHA_PARTICLE_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double ALPHA_PARTICLE_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double ALPHA_PARTICLE_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double ANGSTROM_STAR\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double ATOMIC_MASS_CONSTANT\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY\fC [extern]\fP"
+C^3 m^3 J^-2 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY\fC [extern]\fP"
+C^4 m^4 J^-3 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ACTION\fC [extern]\fP"
+J s 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_CHARGE\fC [extern]\fP"
+C 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_CHARGE_DENSITY\fC [extern]\fP"
+C m^-3 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_CURRENT\fC [extern]\fP"
+A 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM\fC [extern]\fP"
+C m 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_FIELD\fC [extern]\fP"
+V m^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT\fC [extern]\fP"
+V m^-2 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY\fC [extern]\fP"
+C^2 m^2 J^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL\fC [extern]\fP"
+V 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM\fC [extern]\fP"
+C m^2 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ENERGY\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_FORCE\fC [extern]\fP"
+N 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_LENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MAG__DIPOLE_MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MAG__FLUX_DENSITY\fC [extern]\fP"
+T 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MAGNETIZABILITY\fC [extern]\fP"
+J T^-2 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MOMENTUM\fC [extern]\fP"
+kg m s^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_PERMITTIVITY\fC [extern]\fP"
+F m^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_TIME\fC [extern]\fP"
+s 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_VELOCITY\fC [extern]\fP"
+m s^-1 
+.br
+ 
+.SS "const double AVOGADRO_CONSTANT\fC [extern]\fP"
+mol^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON_IN_EV_T\fC [extern]\fP"
+eV T^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON_IN_HZ_T\fC [extern]\fP"
+Hz T^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fC [extern]\fP"
+m^-1 T^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON_IN_K_T\fC [extern]\fP"
+K T^-1 
+.br
+ 
+.SS "const double BOHR_RADIUS\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double BOLTZMANN_CONSTANT\fC [extern]\fP"
+J K^-1 
+.br
+ 
+.SS "const double BOLTZMANN_CONSTANT_IN_EV_K\fC [extern]\fP"
+eV K^-1 
+.br
+ 
+.SS "const double BOLTZMANN_CONSTANT_IN_HZ_K\fC [extern]\fP"
+Hz K^-1 
+.br
+ 
+.SS "const double BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN\fC [extern]\fP"
+m^-1 K^-1 
+.br
+ 
+.SS "const double CHARACTERISTIC_IMPEDANCE_OF_VACUUM\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double CLASSICAL_ELECTRON_RADIUS\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double CONDUCTANCE_QUANTUM\fC [extern]\fP"
+S 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_AMPERE_90\fC [extern]\fP"
+A 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_COULOMB_90\fC [extern]\fP"
+C 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_FARAD_90\fC [extern]\fP"
+F 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_HENRY_90\fC [extern]\fP"
+H 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT\fC [extern]\fP"
+Hz V^-1 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_OHM_90\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_VOLT_90\fC [extern]\fP"
+V 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_WATT_90\fC [extern]\fP"
+W 
+.br
+ 
+.SS "const double COPPER_X_UNIT\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ALPHA_PARTICLE_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double D_ANGSTROM_STAR\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_CONSTANT\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY\fC [extern]\fP"
+C^3 m^3 J^-2 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY\fC [extern]\fP"
+C^4 m^4 J^-3 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ACTION\fC [extern]\fP"
+J s 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_CHARGE\fC [extern]\fP"
+C 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_CHARGE_DENSITY\fC [extern]\fP"
+C m^-3 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_CURRENT\fC [extern]\fP"
+A 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM\fC [extern]\fP"
+C m 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_FIELD\fC [extern]\fP"
+V m^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT\fC [extern]\fP"
+V m^-2 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY\fC [extern]\fP"
+C^2 m^2 J^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL\fC [extern]\fP"
+V 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM\fC [extern]\fP"
+C m^2 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ENERGY\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_FORCE\fC [extern]\fP"
+N 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_LENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY\fC [extern]\fP"
+T 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MAGNETIZABILITY\fC [extern]\fP"
+J T^-2 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MOMENTUM\fC [extern]\fP"
+kg m s^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_PERMITTIVITY\fC [extern]\fP"
+F m^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_TIME\fC [extern]\fP"
+s 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_VELOCITY\fC [extern]\fP"
+m s^-1 
+.br
+ 
+.SS "const double D_AVOGADRO_CONSTANT\fC [extern]\fP"
+mol^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON_IN_EV_T\fC [extern]\fP"
+eV T^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON_IN_HZ_T\fC [extern]\fP"
+Hz T^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fC [extern]\fP"
+m^-1 T^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON_IN_K_T\fC [extern]\fP"
+K T^-1 
+.br
+ 
+.SS "const double D_BOHR_RADIUS\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_BOLTZMANN_CONSTANT\fC [extern]\fP"
+J K^-1 
+.br
+ 
+.SS "const double D_BOLTZMANN_CONSTANT_IN_EV_K\fC [extern]\fP"
+eV K^-1 
+.br
+ 
+.SS "const double D_BOLTZMANN_CONSTANT_IN_HZ_K\fC [extern]\fP"
+Hz K^-1 
+.br
+ 
+.SS "const double D_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN\fC [extern]\fP"
+m^-1 K^-1 
+.br
+ 
+.SS "const double D_CHARACTERISTIC_IMPEDANCE_OF_VACUUM\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double D_CLASSICAL_ELECTRON_RADIUS\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_CONDUCTANCE_QUANTUM\fC [extern]\fP"
+S 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_AMPERE_90\fC [extern]\fP"
+A 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_COULOMB_90\fC [extern]\fP"
+C 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_FARAD_90\fC [extern]\fP"
+F 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_HENRY_90\fC [extern]\fP"
+H 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT\fC [extern]\fP"
+Hz V^-1 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_OHM_90\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_VOLT_90\fC [extern]\fP"
+V 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_WATT_90\fC [extern]\fP"
+W 
+.br
+ 
+.SS "const double D_COPPER_X_UNIT\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_DEUTERON_ELECTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_DEUTERON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_DEUTERON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double D_DEUTERON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_DEUTERON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_DEUTERON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_DEUTERON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_DEUTERON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_DEUTERON_NEUTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_DEUTERON_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_DEUTERON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_DEUTERON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double D_DEUTERON_RMS_CHARGE_RADIUS\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_ELECTRON_CHARGE_TO_MASS_QUOTIENT\fC [extern]\fP"
+C kg^-1 
+.br
+ 
+.SS "const double D_ELECTRON_DEUTERON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_DEUTERON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_ELECTRON_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double D_ELECTRON_HELION_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_ELECTRON_MAG__MOM__ANOMALY\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_ELECTRON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_ELECTRON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_ELECTRON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_ELECTRON_MUON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_MUON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_NEUTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_NEUTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_TAU_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_TRITON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_ELECTRON_VOLT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_ELEMENTARY_CHARGE\fC [extern]\fP"
+C 
+.br
+ 
+.SS "const double D_ELEMENTARY_CHARGE_OVER_H_BAR\fC [extern]\fP"
+A J^-1 
+.br
+ 
+.SS "const double D_FARADAY_CONSTANT\fC [extern]\fP"
+C mol^-1 
+.br
+ 
+.SS "const double D_FERMI_COUPLING_CONSTANT\fC [extern]\fP"
+GeV^-2 
+.br
+ 
+.SS "const double D_FINE_STRUCTURE_CONSTANT\fC [extern]\fP"
+
+.SS "const double D_FIRST_RADIATION_CONSTANT\fC [extern]\fP"
+W m^2 
+.br
+ 
+.SS "const double D_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE\fC [extern]\fP"
+W m^2 sr^-1 
+.br
+ 
+.SS "const double D_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_HARTREE_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double D_HARTREE_ENERGY\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_HARTREE_ENERGY_IN_EV\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double D_HARTREE_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double D_HARTREE_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double D_HARTREE_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_HARTREE_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double D_HARTREE_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_HELION_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_HELION_G_FACTOR\fC [extern]\fP"
+
+.SS "const double D_HELION_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_HELION_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_HELION_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_HELION_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_HELION_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_HELION_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_HELION_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double D_HELION_SHIELDING_SHIFT\fC [extern]\fP"
+
+.SS "const double D_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_HERTZ_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double D_HERTZ_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double D_HERTZ_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double D_HERTZ_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_HERTZ_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double D_HERTZ_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double D_INVERSE_FINE_STRUCTURE_CONSTANT\fC [extern]\fP"
+
+.SS "const double D_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double D_INVERSE_METER_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double D_INVERSE_METER_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double D_INVERSE_METER_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_INVERSE_METER_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double D_INVERSE_METER_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_INVERSE_OF_CONDUCTANCE_QUANTUM\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double D_JOSEPHSON_CONSTANT\fC [extern]\fP"
+Hz V^-1 
+.br
+ 
+.SS "const double D_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_JOULE_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double D_JOULE_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double D_JOULE_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double D_JOULE_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double D_JOULE_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double D_JOULE_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_KELVIN_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double D_KELVIN_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double D_KELVIN_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double D_KELVIN_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double D_KELVIN_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_KELVIN_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double D_KILOGRAM_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double D_KILOGRAM_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double D_KILOGRAM_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double D_KILOGRAM_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_KILOGRAM_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double D_LATTICE_PARAMETER_OF_SILICON\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_LATTICE_SPACING_OF_IDEAL_SI__220\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_LOSCHMIDT_CONSTANT__273_15_K__100_KPA\fC [extern]\fP"
+m^-3 
+.br
+ 
+.SS "const double D_LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA\fC [extern]\fP"
+m^-3 
+.br
+ 
+.SS "const double D_LUMINOUS_EFFICACY\fC [extern]\fP"
+lm W^-1 
+.br
+ 
+.SS "const double D_MAG__FLUX_QUANTUM\fC [extern]\fP"
+Wb 
+.br
+ 
+.SS "const double D_MOLAR_GAS_CONSTANT\fC [extern]\fP"
+J mol^-1 K^-1 
+.br
+ 
+.SS "const double D_MOLAR_MASS_CONSTANT\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_MASS_OF_CARBON_12\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_PLANCK_CONSTANT\fC [extern]\fP"
+J Hz^-1 mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA\fC [extern]\fP"
+m^3 mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA\fC [extern]\fP"
+m^3 mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_VOLUME_OF_SILICON\fC [extern]\fP"
+m^3 mol^-1 
+.br
+ 
+.SS "const double D_MOLYBDENUM_X_UNIT\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_MUON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_MUON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_MUON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double D_MUON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_MUON_MAG__MOM__ANOMALY\fC [extern]\fP"
+
+.SS "const double D_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_MUON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_MUON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_MUON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_MUON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_MUON_NEUTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_MUON_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_MUON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_MUON_TAU_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_NATURAL_UNIT_OF_ACTION\fC [extern]\fP"
+J s 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_ACTION_IN_EV_S\fC [extern]\fP"
+eV s 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_ENERGY\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_ENERGY_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_LENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_MOMENTUM\fC [extern]\fP"
+kg m s^-1 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C\fC [extern]\fP"
+MeV/c 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_TIME\fC [extern]\fP"
+s 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_VELOCITY\fC [extern]\fP"
+m s^-1 
+.br
+ 
+.SS "const double D_NEUTRON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_NEUTRON_ELECTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_NEUTRON_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double D_NEUTRON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_NEUTRON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_NEUTRON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_NEUTRON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_NEUTRON_MUON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_PROTON_MASS_DIFFERENCE\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_NEUTRON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_TAU_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_NEWTONIAN_CONSTANT_OF_GRAVITATION\fC [extern]\fP"
+m^3 kg^-1 s^-2 
+.br
+ 
+.SS "const double D_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C\fC [extern]\fP"
+(GeV/c^2)^-2 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON_IN_EV_T\fC [extern]\fP"
+eV T^-1 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fC [extern]\fP"
+m^-1 T^-1 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON_IN_K_T\fC [extern]\fP"
+K T^-1 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double D_PLANCK_CONSTANT\fC [extern]\fP"
+J Hz^-1 
+.br
+ 
+.SS "const double D_PLANCK_CONSTANT_IN_EV_HZ\fC [extern]\fP"
+eV Hz^-1 
+.br
+ 
+.SS "const double D_PLANCK_LENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_PLANCK_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV\fC [extern]\fP"
+GeV 
+.br
+ 
+.SS "const double D_PLANCK_TEMPERATURE\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double D_PLANCK_TIME\fC [extern]\fP"
+s 
+.br
+ 
+.SS "const double D_PROTON_CHARGE_TO_MASS_QUOTIENT\fC [extern]\fP"
+C kg^-1 
+.br
+ 
+.SS "const double D_PROTON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_PROTON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_PROTON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double D_PROTON_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_PROTON_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double D_PROTON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_PROTON_MAG__SHIELDING_CORRECTION\fC [extern]\fP"
+
+.SS "const double D_PROTON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_PROTON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_PROTON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_PROTON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_PROTON_MUON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_PROTON_NEUTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_PROTON_NEUTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_PROTON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double D_PROTON_RMS_CHARGE_RADIUS\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_PROTON_TAU_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_QUANTUM_OF_CIRCULATION\fC [extern]\fP"
+m^2 s^-1 
+.br
+ 
+.SS "const double D_QUANTUM_OF_CIRCULATION_TIMES_2\fC [extern]\fP"
+m^2 s^-1 
+.br
+ 
+.SS "const double D_REDUCED_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_REDUCED_MUON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_REDUCED_NEUTRON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_REDUCED_PLANCK_CONSTANT\fC [extern]\fP"
+J s 
+.br
+ 
+.SS "const double D_REDUCED_PLANCK_CONSTANT_IN_EV_S\fC [extern]\fP"
+eV s 
+.br
+ 
+.SS "const double D_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM\fC [extern]\fP"
+MeV fm 
+.br
+ 
+.SS "const double D_REDUCED_PROTON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_REDUCED_TAU_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_RYDBERG_CONSTANT\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double D_RYDBERG_CONSTANT_TIMES_C_IN_HZ\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double D_RYDBERG_CONSTANT_TIMES_HC_IN_EV\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double D_RYDBERG_CONSTANT_TIMES_HC_IN_J\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_SACKUR_TETRODE_CONSTANT__1_K__100_KPA\fC [extern]\fP"
+
+.SS "const double D_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA\fC [extern]\fP"
+
+.SS "const double D_SECOND_RADIATION_CONSTANT\fC [extern]\fP"
+m K 
+.br
+ 
+.SS "const double D_SHIELDED_HELION_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_HELION_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_SHIELDED_PROTON_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_PROTON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD\fC [extern]\fP"
+
+.SS "const double D_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT\fC [extern]\fP"
+
+.SS "const double D_SPEED_OF_LIGHT_IN_VACUUM\fC [extern]\fP"
+m s^-1 
+.br
+ 
+.SS "const double D_STANDARD_ACCELERATION_OF_GRAVITY\fC [extern]\fP"
+m s^-2 
+.br
+ 
+.SS "const double D_STANDARD_ATMOSPHERE\fC [extern]\fP"
+Pa 
+.br
+ 
+.SS "const double D_STANDARD_STATE_PRESSURE\fC [extern]\fP"
+Pa 
+.br
+ 
+.SS "const double D_STEFAN_BOLTZMANN_CONSTANT\fC [extern]\fP"
+W m^-2 K^-4 
+.br
+ 
+.SS "const double D_TAU_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double D_TAU_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_TAU_ENERGY_EQUIVALENT\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_TAU_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_TAU_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_TAU_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_TAU_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_TAU_MUON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_TAU_NEUTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_TAU_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_THOMSON_CROSS_SECTION\fC [extern]\fP"
+m^2 
+.br
+ 
+.SS "const double D_TRITON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_TRITON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double D_TRITON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double D_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double D_TRITON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_TRITON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double D_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double D_TRITON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double D_TRITON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double D_TRITON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_TRITON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double D_TRITON_TO_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double D_UNIFIED_ATOMIC_MASS_UNIT\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double D_VACUUM_ELECTRIC_PERMITTIVITY\fC [extern]\fP"
+F m^-1 
+.br
+ 
+.SS "const double D_VACUUM_MAG__PERMEABILITY\fC [extern]\fP"
+N A^-2 
+.br
+ 
+.SS "const double D_VON_KLITZING_CONSTANT\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double D_W_TO_Z_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double D_WEAK_MIXING_ANGLE\fC [extern]\fP"
+
+.SS "const double D_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT\fC [extern]\fP"
+Hz K^-1 
+.br
+ 
+.SS "const double D_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT\fC [extern]\fP"
+m K 
+.br
+ 
+.SS "const double DEUTERON_ELECTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double DEUTERON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double DEUTERON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double DEUTERON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double DEUTERON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double DEUTERON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double DEUTERON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double DEUTERON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double DEUTERON_NEUTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double DEUTERON_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double DEUTERON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double DEUTERON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double DEUTERON_RMS_CHARGE_RADIUS\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double ELECTRON_CHARGE_TO_MASS_QUOTIENT\fC [extern]\fP"
+C kg^-1 
+.br
+ 
+.SS "const double ELECTRON_DEUTERON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_DEUTERON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double ELECTRON_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double ELECTRON_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double ELECTRON_HELION_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double ELECTRON_MAG__MOM__ANOMALY\fC [extern]\fP"
+
+.SS "const double ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double ELECTRON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double ELECTRON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double ELECTRON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double ELECTRON_MUON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_MUON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_NEUTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_NEUTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double ELECTRON_TAU_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_TRITON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double ELECTRON_VOLT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double ELECTRON_VOLT_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double ELECTRON_VOLT_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double ELECTRON_VOLT_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double ELECTRON_VOLT_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double ELECTRON_VOLT_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double ELEMENTARY_CHARGE\fC [extern]\fP"
+C 
+.br
+ 
+.SS "const double ELEMENTARY_CHARGE_OVER_H_BAR\fC [extern]\fP"
+A J^-1 
+.br
+ 
+.SS "const double FARADAY_CONSTANT\fC [extern]\fP"
+C mol^-1 
+.br
+ 
+.SS "const double FERMI_COUPLING_CONSTANT\fC [extern]\fP"
+GeV^-2 
+.br
+ 
+.SS "const double FINE_STRUCTURE_CONSTANT\fC [extern]\fP"
+
+.SS "const double FIRST_RADIATION_CONSTANT\fC [extern]\fP"
+W m^2 
+.br
+ 
+.SS "const double FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE\fC [extern]\fP"
+W m^2 sr^-1 
+.br
+ 
+.SS "const double HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double HARTREE_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double HARTREE_ENERGY\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double HARTREE_ENERGY_IN_EV\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double HARTREE_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double HARTREE_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double HARTREE_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double HARTREE_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double HARTREE_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double HELION_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double HELION_G_FACTOR\fC [extern]\fP"
+
+.SS "const double HELION_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double HELION_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double HELION_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double HELION_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double HELION_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double HELION_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double HELION_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double HELION_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double HELION_SHIELDING_SHIFT\fC [extern]\fP"
+
+.SS "const double HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double HERTZ_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double HERTZ_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double HERTZ_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double HERTZ_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double HERTZ_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double HERTZ_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double INVERSE_FINE_STRUCTURE_CONSTANT\fC [extern]\fP"
+
+.SS "const double INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double INVERSE_METER_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double INVERSE_METER_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double INVERSE_METER_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double INVERSE_METER_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double INVERSE_METER_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double INVERSE_OF_CONDUCTANCE_QUANTUM\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double JOSEPHSON_CONSTANT\fC [extern]\fP"
+Hz V^-1 
+.br
+ 
+.SS "const double JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double JOULE_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double JOULE_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double JOULE_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double JOULE_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double JOULE_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double JOULE_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double KELVIN_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double KELVIN_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double KELVIN_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double KELVIN_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double KELVIN_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double KELVIN_KILOGRAM_RELATIONSHIP\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double KILOGRAM_ELECTRON_VOLT_RELATIONSHIP\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double KILOGRAM_HARTREE_RELATIONSHIP\fC [extern]\fP"
+E_h 
+.br
+ 
+.SS "const double KILOGRAM_HERTZ_RELATIONSHIP\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double KILOGRAM_INVERSE_METER_RELATIONSHIP\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double KILOGRAM_JOULE_RELATIONSHIP\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double KILOGRAM_KELVIN_RELATIONSHIP\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double LATTICE_PARAMETER_OF_SILICON\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double LATTICE_SPACING_OF_IDEAL_SI__220\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double LOSCHMIDT_CONSTANT__273_15_K__100_KPA\fC [extern]\fP"
+m^-3 
+.br
+ 
+.SS "const double LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA\fC [extern]\fP"
+m^-3 
+.br
+ 
+.SS "const double LUMINOUS_EFFICACY\fC [extern]\fP"
+lm W^-1 
+.br
+ 
+.SS "const double MAG__FLUX_QUANTUM\fC [extern]\fP"
+Wb 
+.br
+ 
+.SS "const double MOLAR_GAS_CONSTANT\fC [extern]\fP"
+J mol^-1 K^-1 
+.br
+ 
+.SS "const double MOLAR_MASS_CONSTANT\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double MOLAR_MASS_OF_CARBON_12\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double MOLAR_PLANCK_CONSTANT\fC [extern]\fP"
+J Hz^-1 mol^-1 
+.br
+ 
+.SS "const double MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA\fC [extern]\fP"
+m^3 mol^-1 
+.br
+ 
+.SS "const double MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA\fC [extern]\fP"
+m^3 mol^-1 
+.br
+ 
+.SS "const double MOLAR_VOLUME_OF_SILICON\fC [extern]\fP"
+m^3 mol^-1 
+.br
+ 
+.SS "const double MOLYBDENUM_X_UNIT\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double MUON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double MUON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double MUON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double MUON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double MUON_MAG__MOM__ANOMALY\fC [extern]\fP"
+
+.SS "const double MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double MUON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double MUON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double MUON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double MUON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double MUON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double MUON_NEUTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double MUON_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double MUON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double MUON_TAU_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double NATURAL_UNIT_OF_ACTION\fC [extern]\fP"
+J s 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_ACTION_IN_EV_S\fC [extern]\fP"
+eV s 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_ENERGY\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_ENERGY_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_LENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_MOMENTUM\fC [extern]\fP"
+kg m s^-1 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C\fC [extern]\fP"
+MeV/c 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_TIME\fC [extern]\fP"
+s 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_VELOCITY\fC [extern]\fP"
+m s^-1 
+.br
+ 
+.SS "const double NEUTRON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double NEUTRON_ELECTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double NEUTRON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double NEUTRON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double NEUTRON_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double NEUTRON_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double NEUTRON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double NEUTRON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double NEUTRON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double NEUTRON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double NEUTRON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double NEUTRON_MUON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double NEUTRON_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double NEUTRON_PROTON_MASS_DIFFERENCE\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double NEUTRON_PROTON_MASS_DIFFERENCE_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double NEUTRON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double NEUTRON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double NEUTRON_TAU_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double NEWTONIAN_CONSTANT_OF_GRAVITATION\fC [extern]\fP"
+m^3 kg^-1 s^-2 
+.br
+ 
+.SS "const double NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C\fC [extern]\fP"
+(GeV/c^2)^-2 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON_IN_EV_T\fC [extern]\fP"
+eV T^-1 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fC [extern]\fP"
+m^-1 T^-1 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON_IN_K_T\fC [extern]\fP"
+K T^-1 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double PLANCK_CONSTANT\fC [extern]\fP"
+J Hz^-1 
+.br
+ 
+.SS "const double PLANCK_CONSTANT_IN_EV_HZ\fC [extern]\fP"
+eV Hz^-1 
+.br
+ 
+.SS "const double PLANCK_LENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double PLANCK_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV\fC [extern]\fP"
+GeV 
+.br
+ 
+.SS "const double PLANCK_TEMPERATURE\fC [extern]\fP"
+K 
+.br
+ 
+.SS "const double PLANCK_TIME\fC [extern]\fP"
+s 
+.br
+ 
+.SS "const double PROTON_CHARGE_TO_MASS_QUOTIENT\fC [extern]\fP"
+C kg^-1 
+.br
+ 
+.SS "const double PROTON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double PROTON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double PROTON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double PROTON_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double PROTON_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double PROTON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double PROTON_MAG__SHIELDING_CORRECTION\fC [extern]\fP"
+
+.SS "const double PROTON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double PROTON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double PROTON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double PROTON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double PROTON_MUON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double PROTON_NEUTRON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double PROTON_NEUTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double PROTON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double PROTON_RMS_CHARGE_RADIUS\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double PROTON_TAU_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double QUANTUM_OF_CIRCULATION\fC [extern]\fP"
+m^2 s^-1 
+.br
+ 
+.SS "const double QUANTUM_OF_CIRCULATION_TIMES_2\fC [extern]\fP"
+m^2 s^-1 
+.br
+ 
+.SS "const double REDUCED_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double REDUCED_MUON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double REDUCED_NEUTRON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double REDUCED_PLANCK_CONSTANT\fC [extern]\fP"
+J s 
+.br
+ 
+.SS "const double REDUCED_PLANCK_CONSTANT_IN_EV_S\fC [extern]\fP"
+eV s 
+.br
+ 
+.SS "const double REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM\fC [extern]\fP"
+MeV fm 
+.br
+ 
+.SS "const double REDUCED_PROTON_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double REDUCED_TAU_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double RYDBERG_CONSTANT\fC [extern]\fP"
+m^-1 
+.br
+ 
+.SS "const double RYDBERG_CONSTANT_TIMES_C_IN_HZ\fC [extern]\fP"
+Hz 
+.br
+ 
+.SS "const double RYDBERG_CONSTANT_TIMES_HC_IN_EV\fC [extern]\fP"
+eV 
+.br
+ 
+.SS "const double RYDBERG_CONSTANT_TIMES_HC_IN_J\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double SACKUR_TETRODE_CONSTANT__1_K__100_KPA\fC [extern]\fP"
+
+.SS "const double SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA\fC [extern]\fP"
+
+.SS "const double SECOND_RADIATION_CONSTANT\fC [extern]\fP"
+m K 
+.br
+ 
+.SS "const double SHIELDED_HELION_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double SHIELDED_HELION_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double SHIELDED_PROTON_GYROMAG__RATIO\fC [extern]\fP"
+s^-1 T^-1 
+.br
+ 
+.SS "const double SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T\fC [extern]\fP"
+MHz T^-1 
+.br
+ 
+.SS "const double SHIELDED_PROTON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD\fC [extern]\fP"
+
+.SS "const double SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT\fC [extern]\fP"
+
+.SS "const double SPEED_OF_LIGHT_IN_VACUUM\fC [extern]\fP"
+m s^-1 
+.br
+ 
+.SS "const double STANDARD_ACCELERATION_OF_GRAVITY\fC [extern]\fP"
+m s^-2 
+.br
+ 
+.SS "const double STANDARD_ATMOSPHERE\fC [extern]\fP"
+Pa 
+.br
+ 
+.SS "const double STANDARD_STATE_PRESSURE\fC [extern]\fP"
+Pa 
+.br
+ 
+.SS "const double STEFAN_BOLTZMANN_CONSTANT\fC [extern]\fP"
+W m^-2 K^-4 
+.br
+ 
+.SS "const double TAU_COMPTON_WAVELENGTH\fC [extern]\fP"
+m 
+.br
+ 
+.SS "const double TAU_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double TAU_ENERGY_EQUIVALENT\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double TAU_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double TAU_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double TAU_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double TAU_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double TAU_MUON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double TAU_NEUTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double TAU_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double THOMSON_CROSS_SECTION\fC [extern]\fP"
+m^2 
+.br
+ 
+.SS "const double TRITON_ELECTRON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double TRITON_G_FACTOR\fC [extern]\fP"
+
+.SS "const double TRITON_MAG__MOM\fC [extern]\fP"
+J T^-1 
+.br
+ 
+.SS "const double TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fC [extern]\fP"
+
+.SS "const double TRITON_MASS\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double TRITON_MASS_ENERGY_EQUIVALENT\fC [extern]\fP"
+J 
+.br
+ 
+.SS "const double TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV\fC [extern]\fP"
+MeV 
+.br
+ 
+.SS "const double TRITON_MASS_IN_U\fC [extern]\fP"
+u 
+.br
+ 
+.SS "const double TRITON_MOLAR_MASS\fC [extern]\fP"
+kg mol^-1 
+.br
+ 
+.SS "const double TRITON_PROTON_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double TRITON_RELATIVE_ATOMIC_MASS\fC [extern]\fP"
+
+.SS "const double TRITON_TO_PROTON_MAG__MOM__RATIO\fC [extern]\fP"
+
+.SS "const double UNIFIED_ATOMIC_MASS_UNIT\fC [extern]\fP"
+kg 
+.br
+ 
+.SS "const double VACUUM_ELECTRIC_PERMITTIVITY\fC [extern]\fP"
+F m^-1 
+.br
+ 
+.SS "const double VACUUM_MAG__PERMEABILITY\fC [extern]\fP"
+N A^-2 
+.br
+ 
+.SS "const double VON_KLITZING_CONSTANT\fC [extern]\fP"
+ohm 
+.br
+ 
+.SS "const double W_TO_Z_MASS_RATIO\fC [extern]\fP"
+
+.SS "const double WEAK_MIXING_ANGLE\fC [extern]\fP"
+
+.SS "const double WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT\fC [extern]\fP"
+Hz K^-1 
+.br
+ 
+.SS "const double WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT\fC [extern]\fP"
+m K 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Codata from the source code\&.
