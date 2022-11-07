@@ -1,0 +1,4617 @@
+.TH "codata.c" 3 "Fri Oct 28 2022" "Version 1.0" "Codata" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+codata.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'codata\&.h'\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_ELECTRON_MASS_RATIO\fP = 7294\&.29954142"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_ELECTRON_MASS_RATIO\fP = 0\&.00000024"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MASS\fP = 6\&.6446573357e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MASS\fP = 0\&.0000000020e\-27"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT\fP = 5\&.9719201914e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT\fP = 0\&.0000000018e\-10"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 3727\&.3794066"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.0000011"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MASS_IN_U\fP = 4\&.001506179127"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MASS_IN_U\fP = 0\&.000000000063"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_MOLAR_MASS\fP = 4\&.0015061777e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_MOLAR_MASS\fP = 0\&.0000000012e\-3"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_PROTON_MASS_RATIO\fP = 3\&.97259969009"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_PROTON_MASS_RATIO\fP = 0\&.00000000022"
+.br
+.ti -1c
+.RI "const double \fBALPHA_PARTICLE_RELATIVE_ATOMIC_MASS\fP = 4\&.001506179127"
+.br
+.ti -1c
+.RI "const double \fBD_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS\fP = 0\&.000000000063"
+.br
+.ti -1c
+.RI "const double \fBANGSTROM_STAR\fP = 1\&.00001495e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_ANGSTROM_STAR\fP = 0\&.00000090e\-10"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_CONSTANT\fP = 1\&.66053906660e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_CONSTANT\fP = 0\&.00000000050e\-27"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT\fP = 1\&.49241808560e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT\fP = 0\&.00000000045e\-10"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV\fP = 931\&.49410242"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.00000028"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP\fP = 9\&.3149410242e8"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP\fP = 0\&.0000000028e8"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP\fP = 3\&.4231776874e7"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP\fP = 0\&.0000000010e7"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP\fP = 2\&.25234271871e23"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP\fP = 0\&.00000000068e23"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP\fP = 7\&.5130066104e14"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP\fP = 0\&.0000000023e14"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_JOULE_RELATIONSHIP\fP = 1\&.49241808560e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP\fP = 0\&.00000000045e\-10"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP\fP = 1\&.08095401916e13"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP\fP = 0\&.00000000033e13"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP\fP = 1\&.66053906660e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP\fP = 0\&.00000000050e\-27"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY\fP = 3\&.2063613061e\-53"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY\fP = 0\&.0000000015e\-53"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY\fP = 6\&.2353799905e\-65"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY\fP = 0\&.0000000038e\-65"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ACTION\fP = 1\&.054571817e\-34"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ACTION\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_CHARGE\fP = 1\&.602176634e\-19"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_CHARGE\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_CHARGE_DENSITY\fP = 1\&.08120238457e12"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_CHARGE_DENSITY\fP = 0\&.00000000049e12"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_CURRENT\fP = 6\&.623618237510e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_CURRENT\fP = 0\&.000000000013e\-3"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM\fP = 8\&.4783536255e\-30"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM\fP = 0\&.0000000013e\-30"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_FIELD\fP = 5\&.14220674763e11"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_FIELD\fP = 0\&.00000000078e11"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT\fP = 9\&.7173624292e21"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT\fP = 0\&.0000000029e21"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY\fP = 1\&.64877727436e\-41"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY\fP = 0\&.00000000050e\-41"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_POTENTIAL\fP = 27\&.211386245988"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL\fP = 0\&.000000000053"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM\fP = 4\&.4865515246e\-40"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM\fP = 0\&.0000000014e\-40"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_ENERGY\fP = 4\&.3597447222071e\-18"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_ENERGY\fP = 0\&.0000000000085e\-18"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_FORCE\fP = 8\&.2387234983e\-8"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_FORCE\fP = 0\&.0000000012e\-8"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_LENGTH\fP = 5\&.29177210903e\-11"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_LENGTH\fP = 0\&.00000000080e\-11"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MAG__DIPOLE_MOM\fP = 1\&.85480201566e\-23"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM\fP = 0\&.00000000056e\-23"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MAG__FLUX_DENSITY\fP = 2\&.35051756758e5"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY\fP = 0\&.00000000071e5"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MAGNETIZABILITY\fP = 7\&.8910366008e\-29"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MAGNETIZABILITY\fP = 0\&.0000000048e\-29"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MASS\fP = 9\&.1093837015e\-31"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MASS\fP = 0\&.0000000028e\-31"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_MOMENTUM\fP = 1\&.99285191410e\-24"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_MOMENTUM\fP = 0\&.00000000030e\-24"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_PERMITTIVITY\fP = 1\&.11265005545e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_PERMITTIVITY\fP = 0\&.00000000017e\-10"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_TIME\fP = 2\&.4188843265857e\-17"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_TIME\fP = 0\&.0000000000047e\-17"
+.br
+.ti -1c
+.RI "const double \fBATOMIC_UNIT_OF_VELOCITY\fP = 2\&.18769126364e6"
+.br
+.ti -1c
+.RI "const double \fBD_ATOMIC_UNIT_OF_VELOCITY\fP = 0\&.00000000033e6"
+.br
+.ti -1c
+.RI "const double \fBAVOGADRO_CONSTANT\fP = 6\&.02214076e23"
+.br
+.ti -1c
+.RI "const double \fBD_AVOGADRO_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON\fP = 9\&.2740100783e\-24"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON\fP = 0\&.0000000028e\-24"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON_IN_EV_T\fP = 5\&.7883818060e\-5"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON_IN_EV_T\fP = 0\&.0000000017e\-5"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON_IN_HZ_T\fP = 1\&.39962449361e10"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON_IN_HZ_T\fP = 0\&.00000000042e10"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fP = 46\&.686447783"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fP = 0\&.000000014"
+.br
+.ti -1c
+.RI "const double \fBBOHR_MAGNETON_IN_K_T\fP = 0\&.67171381563"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_MAGNETON_IN_K_T\fP = 0\&.00000000020"
+.br
+.ti -1c
+.RI "const double \fBBOHR_RADIUS\fP = 5\&.29177210903e\-11"
+.br
+.ti -1c
+.RI "const double \fBD_BOHR_RADIUS\fP = 0\&.00000000080e\-11"
+.br
+.ti -1c
+.RI "const double \fBBOLTZMANN_CONSTANT\fP = 1\&.380649e\-23"
+.br
+.ti -1c
+.RI "const double \fBD_BOLTZMANN_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBBOLTZMANN_CONSTANT_IN_EV_K\fP = 8\&.617333262e\-5"
+.br
+.ti -1c
+.RI "const double \fBD_BOLTZMANN_CONSTANT_IN_EV_K\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBBOLTZMANN_CONSTANT_IN_HZ_K\fP = 2\&.083661912e10"
+.br
+.ti -1c
+.RI "const double \fBD_BOLTZMANN_CONSTANT_IN_HZ_K\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBBOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN\fP = 69\&.50348004"
+.br
+.ti -1c
+.RI "const double \fBD_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCHARACTERISTIC_IMPEDANCE_OF_VACUUM\fP = 376\&.730313668"
+.br
+.ti -1c
+.RI "const double \fBD_CHARACTERISTIC_IMPEDANCE_OF_VACUUM\fP = 0\&.000000057"
+.br
+.ti -1c
+.RI "const double \fBCLASSICAL_ELECTRON_RADIUS\fP = 2\&.8179403262e\-15"
+.br
+.ti -1c
+.RI "const double \fBD_CLASSICAL_ELECTRON_RADIUS\fP = 0\&.0000000013e\-15"
+.br
+.ti -1c
+.RI "const double \fBCOMPTON_WAVELENGTH\fP = 2\&.42631023867e\-12"
+.br
+.ti -1c
+.RI "const double \fBD_COMPTON_WAVELENGTH\fP = 0\&.00000000073e\-12"
+.br
+.ti -1c
+.RI "const double \fBCONDUCTANCE_QUANTUM\fP = 7\&.748091729e\-5"
+.br
+.ti -1c
+.RI "const double \fBD_CONDUCTANCE_QUANTUM\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_AMPERE_90\fP = 1\&.00000008887"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_AMPERE_90\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_COULOMB_90\fP = 1\&.00000008887"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_COULOMB_90\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_FARAD_90\fP = 0\&.99999998220"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_FARAD_90\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_HENRY_90\fP = 1\&.00000001779"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_HENRY_90\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT\fP = 483597\&.9e9"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_OHM_90\fP = 1\&.00000001779"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_OHM_90\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_VOLT_90\fP = 1\&.00000010666"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_VOLT_90\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT\fP = 25812\&.807"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCONVENTIONAL_VALUE_OF_WATT_90\fP = 1\&.00000019553"
+.br
+.ti -1c
+.RI "const double \fBD_CONVENTIONAL_VALUE_OF_WATT_90\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBCOPPER_X_UNIT\fP = 1\&.00207697e\-13"
+.br
+.ti -1c
+.RI "const double \fBD_COPPER_X_UNIT\fP = 0\&.00000028e\-13"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_ELECTRON_MAG__MOM__RATIO\fP = \-4\&.664345551e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_ELECTRON_MAG__MOM__RATIO\fP = 0\&.000000012e\-4"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_ELECTRON_MASS_RATIO\fP = 3670\&.48296788"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_ELECTRON_MASS_RATIO\fP = 0\&.00000013"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_G_FACTOR\fP = 0\&.8574382338"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_G_FACTOR\fP = 0\&.0000000022"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MAG__MOM\fP = 4\&.330735094e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MAG__MOM\fP = 0\&.000000011e\-27"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 4\&.669754570e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 0\&.000000012e\-4"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.8574382338"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.0000000022"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MASS\fP = 3\&.3435837724e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MASS\fP = 0\&.0000000010e\-27"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MASS_ENERGY_EQUIVALENT\fP = 3\&.00506323102e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MASS_ENERGY_EQUIVALENT\fP = 0\&.00000000091e\-10"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 1875\&.61294257"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.00000057"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MASS_IN_U\fP = 2\&.013553212745"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MASS_IN_U\fP = 0\&.000000000040"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_MOLAR_MASS\fP = 2\&.01355321205e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_MOLAR_MASS\fP = 0\&.00000000061e\-3"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_NEUTRON_MAG__MOM__RATIO\fP = \-0\&.44820653"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_NEUTRON_MAG__MOM__RATIO\fP = 0\&.00000011"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_PROTON_MAG__MOM__RATIO\fP = 0\&.30701220939"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_PROTON_MAG__MOM__RATIO\fP = 0\&.00000000079"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_PROTON_MASS_RATIO\fP = 1\&.99900750139"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_PROTON_MASS_RATIO\fP = 0\&.00000000011"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_RELATIVE_ATOMIC_MASS\fP = 2\&.013553212745"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_RELATIVE_ATOMIC_MASS\fP = 0\&.000000000040"
+.br
+.ti -1c
+.RI "const double \fBDEUTERON_RMS_CHARGE_RADIUS\fP = 2\&.12799e\-15"
+.br
+.ti -1c
+.RI "const double \fBD_DEUTERON_RMS_CHARGE_RADIUS\fP = 0\&.00074e\-15"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_CHARGE_TO_MASS_QUOTIENT\fP = \-1\&.75882001076e11"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_CHARGE_TO_MASS_QUOTIENT\fP = 0\&.00000000053e11"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_DEUTERON_MAG__MOM__RATIO\fP = \-2143\&.9234915"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_DEUTERON_MAG__MOM__RATIO\fP = 0\&.0000056"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_DEUTERON_MASS_RATIO\fP = 2\&.724437107462e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_DEUTERON_MASS_RATIO\fP = 0\&.000000000096e\-4"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_G_FACTOR\fP = \-2\&.00231930436256"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_G_FACTOR\fP = 0\&.00000000000035"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_GYROMAG__RATIO\fP = 1\&.76085963023e11"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_GYROMAG__RATIO\fP = 0\&.00000000053e11"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_GYROMAG__RATIO_IN_MHZ_T\fP = 28024\&.9514242"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_GYROMAG__RATIO_IN_MHZ_T\fP = 0\&.0000085"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_HELION_MASS_RATIO\fP = 1\&.819543074573e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_HELION_MASS_RATIO\fP = 0\&.000000000079e\-4"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MAG__MOM\fP = \-9\&.2847647043e\-24"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MAG__MOM\fP = 0\&.0000000028e\-24"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MAG__MOM__ANOMALY\fP = 1\&.15965218128e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MAG__MOM__ANOMALY\fP = 0\&.00000000018e\-3"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = \-1\&.00115965218128"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 0\&.00000000000018"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = \-1838\&.28197188"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.00000011"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MASS\fP = 9\&.1093837015e\-31"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MASS\fP = 0\&.0000000028e\-31"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MASS_ENERGY_EQUIVALENT\fP = 8\&.1871057769e\-14"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MASS_ENERGY_EQUIVALENT\fP = 0\&.0000000025e\-14"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.51099895000"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.00000000015"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MASS_IN_U\fP = 5\&.48579909065e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MASS_IN_U\fP = 0\&.00000000016e\-4"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MOLAR_MASS\fP = 5\&.4857990888e\-7"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MOLAR_MASS\fP = 0\&.0000000017e\-7"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MUON_MAG__MOM__RATIO\fP = 206\&.7669883"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MUON_MAG__MOM__RATIO\fP = 0\&.0000046"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_MUON_MASS_RATIO\fP = 4\&.83633169e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_MUON_MASS_RATIO\fP = 0\&.00000011e\-3"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_NEUTRON_MAG__MOM__RATIO\fP = 960\&.92050"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_NEUTRON_MAG__MOM__RATIO\fP = 0\&.00023"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_NEUTRON_MASS_RATIO\fP = 5\&.4386734424e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_NEUTRON_MASS_RATIO\fP = 0\&.0000000026e\-4"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_PROTON_MAG__MOM__RATIO\fP = \-658\&.21068789"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_PROTON_MAG__MOM__RATIO\fP = 0\&.00000020"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_PROTON_MASS_RATIO\fP = 5\&.44617021487e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_PROTON_MASS_RATIO\fP = 0\&.00000000033e\-4"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_RELATIVE_ATOMIC_MASS\fP = 5\&.48579909065e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_RELATIVE_ATOMIC_MASS\fP = 0\&.00000000016e\-4"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TAU_MASS_RATIO\fP = 2\&.87585e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TAU_MASS_RATIO\fP = 0\&.00019e\-4"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO\fP = 1\&.370933554787e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO\fP = 0\&.000000000045e\-4"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO\fP = 864\&.058257"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO\fP = 0\&.000010"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP = \-658\&.2275971"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP = 0\&.0000072"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_TRITON_MASS_RATIO\fP = 1\&.819200062251e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_TRITON_MASS_RATIO\fP = 0\&.000000000090e\-4"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT\fP = 1\&.602176634e\-19"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 1\&.07354410233e\-9"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 0\&.00000000032e\-9"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_HARTREE_RELATIONSHIP\fP = 3\&.6749322175655e\-2"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_HARTREE_RELATIONSHIP\fP = 0\&.0000000000071e\-2"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_HERTZ_RELATIONSHIP\fP = 2\&.417989242e14"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_HERTZ_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_INVERSE_METER_RELATIONSHIP\fP = 8\&.065543937e5"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_JOULE_RELATIONSHIP\fP = 1\&.602176634e\-19"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_JOULE_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_KELVIN_RELATIONSHIP\fP = 1\&.160451812e4"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_KELVIN_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBELECTRON_VOLT_KILOGRAM_RELATIONSHIP\fP = 1\&.782661921e\-36"
+.br
+.ti -1c
+.RI "const double \fBD_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBELEMENTARY_CHARGE\fP = 1\&.602176634e\-19"
+.br
+.ti -1c
+.RI "const double \fBD_ELEMENTARY_CHARGE\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBELEMENTARY_CHARGE_OVER_H_BAR\fP = 1\&.519267447e15"
+.br
+.ti -1c
+.RI "const double \fBD_ELEMENTARY_CHARGE_OVER_H_BAR\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBFARADAY_CONSTANT\fP = 96485\&.33212"
+.br
+.ti -1c
+.RI "const double \fBD_FARADAY_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBFERMI_COUPLING_CONSTANT\fP = 1\&.1663787e\-5"
+.br
+.ti -1c
+.RI "const double \fBD_FERMI_COUPLING_CONSTANT\fP = 0\&.0000006e\-5"
+.br
+.ti -1c
+.RI "const double \fBFINE_STRUCTURE_CONSTANT\fP = 7\&.2973525693e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_FINE_STRUCTURE_CONSTANT\fP = 0\&.0000000011e\-3"
+.br
+.ti -1c
+.RI "const double \fBFIRST_RADIATION_CONSTANT\fP = 3\&.741771852e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_FIRST_RADIATION_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBFIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE\fP = 1\&.191042972e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 2\&.92126232205e\-8"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 0\&.00000000088e\-8"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_ELECTRON_VOLT_RELATIONSHIP\fP = 27\&.211386245988"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_ELECTRON_VOLT_RELATIONSHIP\fP = 0\&.000000000053"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_ENERGY\fP = 4\&.3597447222071e\-18"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_ENERGY\fP = 0\&.0000000000085e\-18"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_ENERGY_IN_EV\fP = 27\&.211386245988"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_ENERGY_IN_EV\fP = 0\&.000000000053"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_HERTZ_RELATIONSHIP\fP = 6\&.579683920502e15"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_HERTZ_RELATIONSHIP\fP = 0\&.000000000013e15"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_INVERSE_METER_RELATIONSHIP\fP = 2\&.1947463136320e7"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_INVERSE_METER_RELATIONSHIP\fP = 0\&.0000000000043e7"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_JOULE_RELATIONSHIP\fP = 4\&.3597447222071e\-18"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_JOULE_RELATIONSHIP\fP = 0\&.0000000000085e\-18"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_KELVIN_RELATIONSHIP\fP = 3\&.1577502480407e5"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_KELVIN_RELATIONSHIP\fP = 0\&.0000000000061e5"
+.br
+.ti -1c
+.RI "const double \fBHARTREE_KILOGRAM_RELATIONSHIP\fP = 4\&.8508702095432e\-35"
+.br
+.ti -1c
+.RI "const double \fBD_HARTREE_KILOGRAM_RELATIONSHIP\fP = 0\&.0000000000094e\-35"
+.br
+.ti -1c
+.RI "const double \fBHELION_ELECTRON_MASS_RATIO\fP = 5495\&.88528007"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_ELECTRON_MASS_RATIO\fP = 0\&.00000024"
+.br
+.ti -1c
+.RI "const double \fBHELION_G_FACTOR\fP = \-4\&.255250615"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_G_FACTOR\fP = 0\&.000000050"
+.br
+.ti -1c
+.RI "const double \fBHELION_MAG__MOM\fP = \-1\&.074617532e\-26"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MAG__MOM\fP = 0\&.000000013e\-26"
+.br
+.ti -1c
+.RI "const double \fBHELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = \-1\&.158740958e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 0\&.000000014e\-3"
+.br
+.ti -1c
+.RI "const double \fBHELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = \-2\&.127625307"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.000000025"
+.br
+.ti -1c
+.RI "const double \fBHELION_MASS\fP = 5\&.0064127796e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MASS\fP = 0\&.0000000015e\-27"
+.br
+.ti -1c
+.RI "const double \fBHELION_MASS_ENERGY_EQUIVALENT\fP = 4\&.4995394125e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MASS_ENERGY_EQUIVALENT\fP = 0\&.0000000014e\-10"
+.br
+.ti -1c
+.RI "const double \fBHELION_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 2808\&.39160743"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.00000085"
+.br
+.ti -1c
+.RI "const double \fBHELION_MASS_IN_U\fP = 3\&.014932247175"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MASS_IN_U\fP = 0\&.000000000097"
+.br
+.ti -1c
+.RI "const double \fBHELION_MOLAR_MASS\fP = 3\&.01493224613e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_MOLAR_MASS\fP = 0\&.00000000091e\-3"
+.br
+.ti -1c
+.RI "const double \fBHELION_PROTON_MASS_RATIO\fP = 2\&.99315267167"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_PROTON_MASS_RATIO\fP = 0\&.00000000013"
+.br
+.ti -1c
+.RI "const double \fBHELION_RELATIVE_ATOMIC_MASS\fP = 3\&.014932247175"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_RELATIVE_ATOMIC_MASS\fP = 0\&.000000000097"
+.br
+.ti -1c
+.RI "const double \fBHELION_SHIELDING_SHIFT\fP = 5\&.996743e\-5"
+.br
+.ti -1c
+.RI "const double \fBD_HELION_SHIELDING_SHIFT\fP = 0\&.000010e\-5"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 4\&.4398216652e\-24"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 0\&.0000000013e\-24"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_ELECTRON_VOLT_RELATIONSHIP\fP = 4\&.135667696e\-15"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_ELECTRON_VOLT_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_HARTREE_RELATIONSHIP\fP = 1\&.5198298460570e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_HARTREE_RELATIONSHIP\fP = 0\&.0000000000029e\-16"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_INVERSE_METER_RELATIONSHIP\fP = 3\&.335640951e\-9"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_INVERSE_METER_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_JOULE_RELATIONSHIP\fP = 6\&.62607015e\-34"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_JOULE_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_KELVIN_RELATIONSHIP\fP = 4\&.799243073e\-11"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_KELVIN_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBHERTZ_KILOGRAM_RELATIONSHIP\fP = 7\&.372497323e\-51"
+.br
+.ti -1c
+.RI "const double \fBD_HERTZ_KILOGRAM_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBHYPERFINE_TRANSITION_FREQUENCY_OF_CS_133\fP = 9192631770\&.0"
+.br
+.ti -1c
+.RI "const double \fBD_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_FINE_STRUCTURE_CONSTANT\fP = 137\&.035999084"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_FINE_STRUCTURE_CONSTANT\fP = 0\&.000000021"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 1\&.33102505010e\-15"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 0\&.00000000040e\-15"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_ELECTRON_VOLT_RELATIONSHIP\fP = 1\&.239841984e\-6"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_HARTREE_RELATIONSHIP\fP = 4\&.5563352529120e\-8"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_HARTREE_RELATIONSHIP\fP = 0\&.0000000000088e\-8"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_HERTZ_RELATIONSHIP\fP = 299792458\&.0"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_HERTZ_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_JOULE_RELATIONSHIP\fP = 1\&.986445857e\-25"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_JOULE_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_KELVIN_RELATIONSHIP\fP = 1\&.438776877e\-2"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_KELVIN_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_METER_KILOGRAM_RELATIONSHIP\fP = 2\&.210219094e\-42"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_METER_KILOGRAM_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBINVERSE_OF_CONDUCTANCE_QUANTUM\fP = 12906\&.40372"
+.br
+.ti -1c
+.RI "const double \fBD_INVERSE_OF_CONDUCTANCE_QUANTUM\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBJOSEPHSON_CONSTANT\fP = 483597\&.8484e9"
+.br
+.ti -1c
+.RI "const double \fBD_JOSEPHSON_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBJOULE_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 6\&.7005352565e9"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 0\&.0000000020e9"
+.br
+.ti -1c
+.RI "const double \fBJOULE_ELECTRON_VOLT_RELATIONSHIP\fP = 6\&.241509074e18"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_ELECTRON_VOLT_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBJOULE_HARTREE_RELATIONSHIP\fP = 2\&.2937122783963e17"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_HARTREE_RELATIONSHIP\fP = 0\&.0000000000045e17"
+.br
+.ti -1c
+.RI "const double \fBJOULE_HERTZ_RELATIONSHIP\fP = 1\&.509190179e33"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_HERTZ_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBJOULE_INVERSE_METER_RELATIONSHIP\fP = 5\&.034116567e24"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_INVERSE_METER_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBJOULE_KELVIN_RELATIONSHIP\fP = 7\&.242970516e22"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_KELVIN_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBJOULE_KILOGRAM_RELATIONSHIP\fP = 1\&.112650056e\-17"
+.br
+.ti -1c
+.RI "const double \fBD_JOULE_KILOGRAM_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 9\&.2510873014e\-14"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 0\&.0000000028e\-14"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_ELECTRON_VOLT_RELATIONSHIP\fP = 8\&.617333262e\-5"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_ELECTRON_VOLT_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_HARTREE_RELATIONSHIP\fP = 3\&.1668115634556e\-6"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_HARTREE_RELATIONSHIP\fP = 0\&.0000000000061e\-6"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_HERTZ_RELATIONSHIP\fP = 2\&.083661912e10"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_HERTZ_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_INVERSE_METER_RELATIONSHIP\fP = 69\&.50348004"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_INVERSE_METER_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_JOULE_RELATIONSHIP\fP = 1\&.380649e\-23"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_JOULE_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKELVIN_KILOGRAM_RELATIONSHIP\fP = 1\&.536179187e\-40"
+.br
+.ti -1c
+.RI "const double \fBD_KELVIN_KILOGRAM_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 6\&.0221407621e26"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP\fP = 0\&.0000000018e26"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_ELECTRON_VOLT_RELATIONSHIP\fP = 5\&.609588603e35"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_HARTREE_RELATIONSHIP\fP = 2\&.0614857887409e34"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_HARTREE_RELATIONSHIP\fP = 0\&.0000000000040e34"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_HERTZ_RELATIONSHIP\fP = 1\&.356392489e50"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_HERTZ_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_INVERSE_METER_RELATIONSHIP\fP = 4\&.524438335e41"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_INVERSE_METER_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_JOULE_RELATIONSHIP\fP = 8\&.987551787e16"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_JOULE_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBKILOGRAM_KELVIN_RELATIONSHIP\fP = 6\&.509657260e39"
+.br
+.ti -1c
+.RI "const double \fBD_KILOGRAM_KELVIN_RELATIONSHIP\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBLATTICE_PARAMETER_OF_SILICON\fP = 5\&.431020511e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_LATTICE_PARAMETER_OF_SILICON\fP = 0\&.000000089e\-10"
+.br
+.ti -1c
+.RI "const double \fBLATTICE_SPACING_OF_IDEAL_SI__220\fP = 1\&.920155716e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_LATTICE_SPACING_OF_IDEAL_SI__220\fP = 0\&.000000032e\-10"
+.br
+.ti -1c
+.RI "const double \fBLOSCHMIDT_CONSTANT__273_15_K__100_KPA\fP = 2\&.651645804e25"
+.br
+.ti -1c
+.RI "const double \fBD_LOSCHMIDT_CONSTANT__273_15_K__100_KPA\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBLOSCHMIDT_CONSTANT__273_15_K__101_325_KPA\fP = 2\&.686780111e25"
+.br
+.ti -1c
+.RI "const double \fBD_LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBLUMINOUS_EFFICACY\fP = 683\&.0"
+.br
+.ti -1c
+.RI "const double \fBD_LUMINOUS_EFFICACY\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBMAG__FLUX_QUANTUM\fP = 2\&.067833848e\-15"
+.br
+.ti -1c
+.RI "const double \fBD_MAG__FLUX_QUANTUM\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_GAS_CONSTANT\fP = 8\&.314462618"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_GAS_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_MASS_CONSTANT\fP = 0\&.99999999965e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_MASS_CONSTANT\fP = 0\&.00000000030e\-3"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_MASS_OF_CARBON_12\fP = 11\&.9999999958e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_MASS_OF_CARBON_12\fP = 0\&.0000000036e\-3"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_PLANCK_CONSTANT\fP = 3\&.990312712e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_PLANCK_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA\fP = 22\&.71095464e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA\fP = 22\&.41396954e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBMOLAR_VOLUME_OF_SILICON\fP = 1\&.205883199e\-5"
+.br
+.ti -1c
+.RI "const double \fBD_MOLAR_VOLUME_OF_SILICON\fP = 0\&.000000060e\-5"
+.br
+.ti -1c
+.RI "const double \fBMOLYBDENUM_X_UNIT\fP = 1\&.00209952e\-13"
+.br
+.ti -1c
+.RI "const double \fBD_MOLYBDENUM_X_UNIT\fP = 0\&.00000053e\-13"
+.br
+.ti -1c
+.RI "const double \fBMUON_COMPTON_WAVELENGTH\fP = 1\&.173444110e\-14"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_COMPTON_WAVELENGTH\fP = 0\&.000000026e\-14"
+.br
+.ti -1c
+.RI "const double \fBMUON_ELECTRON_MASS_RATIO\fP = 206\&.7682830"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_ELECTRON_MASS_RATIO\fP = 0\&.0000046"
+.br
+.ti -1c
+.RI "const double \fBMUON_G_FACTOR\fP = \-2\&.0023318418"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_G_FACTOR\fP = 0\&.0000000013"
+.br
+.ti -1c
+.RI "const double \fBMUON_MAG__MOM\fP = \-4\&.49044830e\-26"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MAG__MOM\fP = 0\&.00000010e\-26"
+.br
+.ti -1c
+.RI "const double \fBMUON_MAG__MOM__ANOMALY\fP = 1\&.16592089e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MAG__MOM__ANOMALY\fP = 0\&.00000063e\-3"
+.br
+.ti -1c
+.RI "const double \fBMUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = \-4\&.84197047e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 0\&.00000011e\-3"
+.br
+.ti -1c
+.RI "const double \fBMUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = \-8\&.89059703"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.00000020"
+.br
+.ti -1c
+.RI "const double \fBMUON_MASS\fP = 1\&.883531627e\-28"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MASS\fP = 0\&.000000042e\-28"
+.br
+.ti -1c
+.RI "const double \fBMUON_MASS_ENERGY_EQUIVALENT\fP = 1\&.692833804e\-11"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MASS_ENERGY_EQUIVALENT\fP = 0\&.000000038e\-11"
+.br
+.ti -1c
+.RI "const double \fBMUON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 105\&.6583755"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.0000023"
+.br
+.ti -1c
+.RI "const double \fBMUON_MASS_IN_U\fP = 0\&.1134289259"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MASS_IN_U\fP = 0\&.0000000025"
+.br
+.ti -1c
+.RI "const double \fBMUON_MOLAR_MASS\fP = 1\&.134289259e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_MOLAR_MASS\fP = 0\&.000000025e\-4"
+.br
+.ti -1c
+.RI "const double \fBMUON_NEUTRON_MASS_RATIO\fP = 0\&.1124545170"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_NEUTRON_MASS_RATIO\fP = 0\&.0000000025"
+.br
+.ti -1c
+.RI "const double \fBMUON_PROTON_MAG__MOM__RATIO\fP = \-3\&.183345142"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_PROTON_MAG__MOM__RATIO\fP = 0\&.000000071"
+.br
+.ti -1c
+.RI "const double \fBMUON_PROTON_MASS_RATIO\fP = 0\&.1126095264"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_PROTON_MASS_RATIO\fP = 0\&.0000000025"
+.br
+.ti -1c
+.RI "const double \fBMUON_TAU_MASS_RATIO\fP = 5\&.94635e\-2"
+.br
+.ti -1c
+.RI "const double \fBD_MUON_TAU_MASS_RATIO\fP = 0\&.00040e\-2"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_ACTION\fP = 1\&.054571817e\-34"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_ACTION\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_ACTION_IN_EV_S\fP = 6\&.582119569e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_ACTION_IN_EV_S\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_ENERGY\fP = 8\&.1871057769e\-14"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_ENERGY\fP = 0\&.0000000025e\-14"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_ENERGY_IN_MEV\fP = 0\&.51099895000"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_ENERGY_IN_MEV\fP = 0\&.00000000015"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_LENGTH\fP = 3\&.8615926796e\-13"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_LENGTH\fP = 0\&.0000000012e\-13"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_MASS\fP = 9\&.1093837015e\-31"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_MASS\fP = 0\&.0000000028e\-31"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_MOMENTUM\fP = 2\&.73092453075e\-22"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_MOMENTUM\fP = 0\&.00000000082e\-22"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_MOMENTUM_IN_MEV_C\fP = 0\&.51099895000"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C\fP = 0\&.00000000015"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_TIME\fP = 1\&.28808866819e\-21"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_TIME\fP = 0\&.00000000039e\-21"
+.br
+.ti -1c
+.RI "const double \fBNATURAL_UNIT_OF_VELOCITY\fP = 299792458\&.0"
+.br
+.ti -1c
+.RI "const double \fBD_NATURAL_UNIT_OF_VELOCITY\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_COMPTON_WAVELENGTH\fP = 1\&.31959090581e\-15"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_COMPTON_WAVELENGTH\fP = 0\&.00000000075e\-15"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_ELECTRON_MAG__MOM__RATIO\fP = 1\&.04066882e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_ELECTRON_MAG__MOM__RATIO\fP = 0\&.00000025e\-3"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_ELECTRON_MASS_RATIO\fP = 1838\&.68366173"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_ELECTRON_MASS_RATIO\fP = 0\&.00000089"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_G_FACTOR\fP = \-3\&.82608545"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_G_FACTOR\fP = 0\&.00000090"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_GYROMAG__RATIO\fP = 1\&.83247171e8"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_GYROMAG__RATIO\fP = 0\&.00000043e8"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_GYROMAG__RATIO_IN_MHZ_T\fP = 29\&.1646931"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_GYROMAG__RATIO_IN_MHZ_T\fP = 0\&.0000069"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MAG__MOM\fP = \-9\&.6623651e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MAG__MOM\fP = 0\&.0000023e\-27"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = \-1\&.04187563e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 0\&.00000025e\-3"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = \-1\&.91304273"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.00000045"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MASS\fP = 1\&.67492749804e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MASS\fP = 0\&.00000000095e\-27"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MASS_ENERGY_EQUIVALENT\fP = 1\&.50534976287e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MASS_ENERGY_EQUIVALENT\fP = 0\&.00000000086e\-10"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 939\&.56542052"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.00000054"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MASS_IN_U\fP = 1\&.00866491595"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MASS_IN_U\fP = 0\&.00000000049"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MOLAR_MASS\fP = 1\&.00866491560e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MOLAR_MASS\fP = 0\&.00000000057e\-3"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_MUON_MASS_RATIO\fP = 8\&.89248406"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_MUON_MASS_RATIO\fP = 0\&.00000020"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MAG__MOM__RATIO\fP = \-0\&.68497934"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MAG__MOM__RATIO\fP = 0\&.00000016"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_DIFFERENCE\fP = 2\&.30557435e\-30"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_DIFFERENCE\fP = 0\&.00000082e\-30"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT\fP = 2\&.07214689e\-13"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT\fP = 0\&.00000074e\-13"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV\fP = 1\&.29333236"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.00000046"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_DIFFERENCE_IN_U\fP = 1\&.38844933e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U\fP = 0\&.00000049e\-3"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_PROTON_MASS_RATIO\fP = 1\&.00137841931"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_PROTON_MASS_RATIO\fP = 0\&.00000000049"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_RELATIVE_ATOMIC_MASS\fP = 1\&.00866491595"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_RELATIVE_ATOMIC_MASS\fP = 0\&.00000000049"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_TAU_MASS_RATIO\fP = 0\&.528779"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_TAU_MASS_RATIO\fP = 0\&.000036"
+.br
+.ti -1c
+.RI "const double \fBNEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP = \-0\&.68499694"
+.br
+.ti -1c
+.RI "const double \fBD_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP = 0\&.00000016"
+.br
+.ti -1c
+.RI "const double \fBNEWTONIAN_CONSTANT_OF_GRAVITATION\fP = 6\&.67430e\-11"
+.br
+.ti -1c
+.RI "const double \fBD_NEWTONIAN_CONSTANT_OF_GRAVITATION\fP = 0\&.00015e\-11"
+.br
+.ti -1c
+.RI "const double \fBNEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C\fP = 6\&.70883e\-39"
+.br
+.ti -1c
+.RI "const double \fBD_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C\fP = 0\&.00015e\-39"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON\fP = 5\&.0507837461e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON\fP = 0\&.0000000015e\-27"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON_IN_EV_T\fP = 3\&.15245125844e\-8"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON_IN_EV_T\fP = 0\&.00000000096e\-8"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fP = 2\&.54262341353e\-2"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA\fP = 0\&.00000000078e\-2"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON_IN_K_T\fP = 3\&.6582677756e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON_IN_K_T\fP = 0\&.0000000011e\-4"
+.br
+.ti -1c
+.RI "const double \fBNUCLEAR_MAGNETON_IN_MHZ_T\fP = 7\&.6225932291"
+.br
+.ti -1c
+.RI "const double \fBD_NUCLEAR_MAGNETON_IN_MHZ_T\fP = 0\&.0000000023"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_CONSTANT\fP = 6\&.62607015e\-34"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_CONSTANT_IN_EV_HZ\fP = 4\&.135667696e\-15"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_CONSTANT_IN_EV_HZ\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_LENGTH\fP = 1\&.616255e\-35"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_LENGTH\fP = 0\&.000018e\-35"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_MASS\fP = 2\&.176434e\-8"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_MASS\fP = 0\&.000024e\-8"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV\fP = 1\&.220890e19"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV\fP = 0\&.000014e19"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_TEMPERATURE\fP = 1\&.416784e32"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_TEMPERATURE\fP = 0\&.000016e32"
+.br
+.ti -1c
+.RI "const double \fBPLANCK_TIME\fP = 5\&.391247e\-44"
+.br
+.ti -1c
+.RI "const double \fBD_PLANCK_TIME\fP = 0\&.000060e\-44"
+.br
+.ti -1c
+.RI "const double \fBPROTON_CHARGE_TO_MASS_QUOTIENT\fP = 9\&.5788331560e7"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_CHARGE_TO_MASS_QUOTIENT\fP = 0\&.0000000029e7"
+.br
+.ti -1c
+.RI "const double \fBPROTON_COMPTON_WAVELENGTH\fP = 1\&.32140985539e\-15"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_COMPTON_WAVELENGTH\fP = 0\&.00000000040e\-15"
+.br
+.ti -1c
+.RI "const double \fBPROTON_ELECTRON_MASS_RATIO\fP = 1836\&.15267343"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_ELECTRON_MASS_RATIO\fP = 0\&.00000011"
+.br
+.ti -1c
+.RI "const double \fBPROTON_G_FACTOR\fP = 5\&.5856946893"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_G_FACTOR\fP = 0\&.0000000016"
+.br
+.ti -1c
+.RI "const double \fBPROTON_GYROMAG__RATIO\fP = 2\&.6752218744e8"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_GYROMAG__RATIO\fP = 0\&.0000000011e8"
+.br
+.ti -1c
+.RI "const double \fBPROTON_GYROMAG__RATIO_IN_MHZ_T\fP = 42\&.577478518"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_GYROMAG__RATIO_IN_MHZ_T\fP = 0\&.000000018"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MAG__MOM\fP = 1\&.41060679736e\-26"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MAG__MOM\fP = 0\&.00000000060e\-26"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 1\&.52103220230e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 0\&.00000000046e\-3"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 2\&.79284734463"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.00000000082"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MAG__SHIELDING_CORRECTION\fP = 2\&.5689e\-5"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MAG__SHIELDING_CORRECTION\fP = 0\&.0011e\-5"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MASS\fP = 1\&.67262192369e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MASS\fP = 0\&.00000000051e\-27"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MASS_ENERGY_EQUIVALENT\fP = 1\&.50327761598e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MASS_ENERGY_EQUIVALENT\fP = 0\&.00000000046e\-10"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 938\&.27208816"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.00000029"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MASS_IN_U\fP = 1\&.007276466621"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MASS_IN_U\fP = 0\&.000000000053"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MOLAR_MASS\fP = 1\&.00727646627e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MOLAR_MASS\fP = 0\&.00000000031e\-3"
+.br
+.ti -1c
+.RI "const double \fBPROTON_MUON_MASS_RATIO\fP = 8\&.88024337"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_MUON_MASS_RATIO\fP = 0\&.00000020"
+.br
+.ti -1c
+.RI "const double \fBPROTON_NEUTRON_MAG__MOM__RATIO\fP = \-1\&.45989805"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_NEUTRON_MAG__MOM__RATIO\fP = 0\&.00000034"
+.br
+.ti -1c
+.RI "const double \fBPROTON_NEUTRON_MASS_RATIO\fP = 0\&.99862347812"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_NEUTRON_MASS_RATIO\fP = 0\&.00000000049"
+.br
+.ti -1c
+.RI "const double \fBPROTON_RELATIVE_ATOMIC_MASS\fP = 1\&.007276466621"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_RELATIVE_ATOMIC_MASS\fP = 0\&.000000000053"
+.br
+.ti -1c
+.RI "const double \fBPROTON_RMS_CHARGE_RADIUS\fP = 8\&.414e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_RMS_CHARGE_RADIUS\fP = 0\&.019e\-16"
+.br
+.ti -1c
+.RI "const double \fBPROTON_TAU_MASS_RATIO\fP = 0\&.528051"
+.br
+.ti -1c
+.RI "const double \fBD_PROTON_TAU_MASS_RATIO\fP = 0\&.000036"
+.br
+.ti -1c
+.RI "const double \fBQUANTUM_OF_CIRCULATION\fP = 3\&.6369475516e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_QUANTUM_OF_CIRCULATION\fP = 0\&.0000000011e\-4"
+.br
+.ti -1c
+.RI "const double \fBQUANTUM_OF_CIRCULATION_TIMES_2\fP = 7\&.2738951032e\-4"
+.br
+.ti -1c
+.RI "const double \fBD_QUANTUM_OF_CIRCULATION_TIMES_2\fP = 0\&.0000000022e\-4"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_COMPTON_WAVELENGTH\fP = 3\&.8615926796e\-13"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_COMPTON_WAVELENGTH\fP = 0\&.0000000012e\-13"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_MUON_COMPTON_WAVELENGTH\fP = 1\&.867594306e\-15"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_MUON_COMPTON_WAVELENGTH\fP = 0\&.000000042e\-15"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_NEUTRON_COMPTON_WAVELENGTH\fP = 2\&.1001941552e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_NEUTRON_COMPTON_WAVELENGTH\fP = 0\&.0000000012e\-16"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_PLANCK_CONSTANT\fP = 1\&.054571817e\-34"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_PLANCK_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_PLANCK_CONSTANT_IN_EV_S\fP = 6\&.582119569e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_PLANCK_CONSTANT_IN_EV_S\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM\fP = 197\&.3269804"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_PROTON_COMPTON_WAVELENGTH\fP = 2\&.10308910336e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_PROTON_COMPTON_WAVELENGTH\fP = 0\&.00000000064e\-16"
+.br
+.ti -1c
+.RI "const double \fBREDUCED_TAU_COMPTON_WAVELENGTH\fP = 1\&.110538e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_REDUCED_TAU_COMPTON_WAVELENGTH\fP = 0\&.000075e\-16"
+.br
+.ti -1c
+.RI "const double \fBRYDBERG_CONSTANT\fP = 10973731\&.568160"
+.br
+.ti -1c
+.RI "const double \fBD_RYDBERG_CONSTANT\fP = 0\&.000021"
+.br
+.ti -1c
+.RI "const double \fBRYDBERG_CONSTANT_TIMES_C_IN_HZ\fP = 3\&.2898419602508e15"
+.br
+.ti -1c
+.RI "const double \fBD_RYDBERG_CONSTANT_TIMES_C_IN_HZ\fP = 0\&.0000000000064e15"
+.br
+.ti -1c
+.RI "const double \fBRYDBERG_CONSTANT_TIMES_HC_IN_EV\fP = 13\&.605693122994"
+.br
+.ti -1c
+.RI "const double \fBD_RYDBERG_CONSTANT_TIMES_HC_IN_EV\fP = 0\&.000000000026"
+.br
+.ti -1c
+.RI "const double \fBRYDBERG_CONSTANT_TIMES_HC_IN_J\fP = 2\&.1798723611035e\-18"
+.br
+.ti -1c
+.RI "const double \fBD_RYDBERG_CONSTANT_TIMES_HC_IN_J\fP = 0\&.0000000000042e\-18"
+.br
+.ti -1c
+.RI "const double \fBSACKUR_TETRODE_CONSTANT__1_K__100_KPA\fP = \-1\&.15170753706"
+.br
+.ti -1c
+.RI "const double \fBD_SACKUR_TETRODE_CONSTANT__1_K__100_KPA\fP = 0\&.00000000045"
+.br
+.ti -1c
+.RI "const double \fBSACKUR_TETRODE_CONSTANT__1_K__101_325_KPA\fP = \-1\&.16487052358"
+.br
+.ti -1c
+.RI "const double \fBD_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA\fP = 0\&.00000000045"
+.br
+.ti -1c
+.RI "const double \fBSECOND_RADIATION_CONSTANT\fP = 1\&.438776877e\-2"
+.br
+.ti -1c
+.RI "const double \fBD_SECOND_RADIATION_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_GYROMAG__RATIO\fP = 2\&.037894569e8"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_GYROMAG__RATIO\fP = 0\&.000000024e8"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T\fP = 32\&.43409942"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T\fP = 0\&.00000038"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_MAG__MOM\fP = \-1\&.074553090e\-26"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_MAG__MOM\fP = 0\&.000000013e\-26"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = \-1\&.158671471e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 0\&.000000014e\-3"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = \-2\&.127497719"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.000000025"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO\fP = \-0\&.7617665618"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO\fP = 0\&.0000000089"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP = \-0\&.7617861313"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO\fP = 0\&.0000000033"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_GYROMAG__RATIO\fP = 2\&.675153151e8"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_GYROMAG__RATIO\fP = 0\&.000000029e8"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T\fP = 42\&.57638474"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T\fP = 0\&.00000046"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_MAG__MOM\fP = 1\&.410570560e\-26"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_MAG__MOM\fP = 0\&.000000015e\-26"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 1\&.520993128e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 0\&.000000017e\-3"
+.br
+.ti -1c
+.RI "const double \fBSHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 2\&.792775599"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.000000030"
+.br
+.ti -1c
+.RI "const double \fBSHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD\fP = 2\&.0200e\-8"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD\fP = 0\&.0020e\-8"
+.br
+.ti -1c
+.RI "const double \fBSHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT\fP = 2\&.4140e\-8"
+.br
+.ti -1c
+.RI "const double \fBD_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT\fP = 0\&.0020e\-8"
+.br
+.ti -1c
+.RI "const double \fBSPEED_OF_LIGHT_IN_VACUUM\fP = 299792458\&.0"
+.br
+.ti -1c
+.RI "const double \fBD_SPEED_OF_LIGHT_IN_VACUUM\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBSTANDARD_ACCELERATION_OF_GRAVITY\fP = 9\&.80665"
+.br
+.ti -1c
+.RI "const double \fBD_STANDARD_ACCELERATION_OF_GRAVITY\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBSTANDARD_ATMOSPHERE\fP = 101325\&.0"
+.br
+.ti -1c
+.RI "const double \fBD_STANDARD_ATMOSPHERE\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBSTANDARD_STATE_PRESSURE\fP = 100000\&.0"
+.br
+.ti -1c
+.RI "const double \fBD_STANDARD_STATE_PRESSURE\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBSTEFAN_BOLTZMANN_CONSTANT\fP = 5\&.670374419e\-8"
+.br
+.ti -1c
+.RI "const double \fBD_STEFAN_BOLTZMANN_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBTAU_COMPTON_WAVELENGTH\fP = 6\&.97771e\-16"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_COMPTON_WAVELENGTH\fP = 0\&.00047e\-16"
+.br
+.ti -1c
+.RI "const double \fBTAU_ELECTRON_MASS_RATIO\fP = 3477\&.23"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_ELECTRON_MASS_RATIO\fP = 0\&.23"
+.br
+.ti -1c
+.RI "const double \fBTAU_ENERGY_EQUIVALENT\fP = 1776\&.86"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_ENERGY_EQUIVALENT\fP = 0\&.12"
+.br
+.ti -1c
+.RI "const double \fBTAU_MASS\fP = 3\&.16754e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MASS\fP = 0\&.00021e\-27"
+.br
+.ti -1c
+.RI "const double \fBTAU_MASS_ENERGY_EQUIVALENT\fP = 2\&.84684e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MASS_ENERGY_EQUIVALENT\fP = 0\&.00019e\-10"
+.br
+.ti -1c
+.RI "const double \fBTAU_MASS_IN_U\fP = 1\&.90754"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MASS_IN_U\fP = 0\&.00013"
+.br
+.ti -1c
+.RI "const double \fBTAU_MOLAR_MASS\fP = 1\&.90754e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MOLAR_MASS\fP = 0\&.00013e\-3"
+.br
+.ti -1c
+.RI "const double \fBTAU_MUON_MASS_RATIO\fP = 16\&.8170"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_MUON_MASS_RATIO\fP = 0\&.0011"
+.br
+.ti -1c
+.RI "const double \fBTAU_NEUTRON_MASS_RATIO\fP = 1\&.89115"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_NEUTRON_MASS_RATIO\fP = 0\&.00013"
+.br
+.ti -1c
+.RI "const double \fBTAU_PROTON_MASS_RATIO\fP = 1\&.89376"
+.br
+.ti -1c
+.RI "const double \fBD_TAU_PROTON_MASS_RATIO\fP = 0\&.00013"
+.br
+.ti -1c
+.RI "const double \fBTHOMSON_CROSS_SECTION\fP = 6\&.6524587321e\-29"
+.br
+.ti -1c
+.RI "const double \fBD_THOMSON_CROSS_SECTION\fP = 0\&.0000000060e\-29"
+.br
+.ti -1c
+.RI "const double \fBTRITON_ELECTRON_MASS_RATIO\fP = 5496\&.92153573"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_ELECTRON_MASS_RATIO\fP = 0\&.00000027"
+.br
+.ti -1c
+.RI "const double \fBTRITON_G_FACTOR\fP = 5\&.957924931"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_G_FACTOR\fP = 0\&.000000012"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MAG__MOM\fP = 1\&.5046095202e\-26"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MAG__MOM\fP = 0\&.0000000030e\-26"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 1\&.6223936651e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO\fP = 0\&.0000000032e\-3"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 2\&.9789624656"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO\fP = 0\&.0000000059"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MASS\fP = 5\&.0073567446e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MASS\fP = 0\&.0000000015e\-27"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MASS_ENERGY_EQUIVALENT\fP = 4\&.5003878060e\-10"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MASS_ENERGY_EQUIVALENT\fP = 0\&.0000000014e\-10"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 2808\&.92113298"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV\fP = 0\&.00000085"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MASS_IN_U\fP = 3\&.01550071621"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MASS_IN_U\fP = 0\&.00000000012"
+.br
+.ti -1c
+.RI "const double \fBTRITON_MOLAR_MASS\fP = 3\&.01550071517e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_MOLAR_MASS\fP = 0\&.00000000092e\-3"
+.br
+.ti -1c
+.RI "const double \fBTRITON_PROTON_MASS_RATIO\fP = 2\&.99371703414"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_PROTON_MASS_RATIO\fP = 0\&.00000000015"
+.br
+.ti -1c
+.RI "const double \fBTRITON_RELATIVE_ATOMIC_MASS\fP = 3\&.01550071621"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_RELATIVE_ATOMIC_MASS\fP = 0\&.00000000012"
+.br
+.ti -1c
+.RI "const double \fBTRITON_TO_PROTON_MAG__MOM__RATIO\fP = 1\&.0666399191"
+.br
+.ti -1c
+.RI "const double \fBD_TRITON_TO_PROTON_MAG__MOM__RATIO\fP = 0\&.0000000021"
+.br
+.ti -1c
+.RI "const double \fBUNIFIED_ATOMIC_MASS_UNIT\fP = 1\&.66053906660e\-27"
+.br
+.ti -1c
+.RI "const double \fBD_UNIFIED_ATOMIC_MASS_UNIT\fP = 0\&.00000000050e\-27"
+.br
+.ti -1c
+.RI "const double \fBVACUUM_ELECTRIC_PERMITTIVITY\fP = 8\&.8541878128e\-12"
+.br
+.ti -1c
+.RI "const double \fBD_VACUUM_ELECTRIC_PERMITTIVITY\fP = 0\&.0000000013e\-12"
+.br
+.ti -1c
+.RI "const double \fBVACUUM_MAG__PERMEABILITY\fP = 1\&.25663706212e\-6"
+.br
+.ti -1c
+.RI "const double \fBD_VACUUM_MAG__PERMEABILITY\fP = 0\&.00000000019e\-6"
+.br
+.ti -1c
+.RI "const double \fBVON_KLITZING_CONSTANT\fP = 25812\&.80745"
+.br
+.ti -1c
+.RI "const double \fBD_VON_KLITZING_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBWEAK_MIXING_ANGLE\fP = 0\&.22290"
+.br
+.ti -1c
+.RI "const double \fBD_WEAK_MIXING_ANGLE\fP = 0\&.00030"
+.br
+.ti -1c
+.RI "const double \fBWIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT\fP = 5\&.878925757e10"
+.br
+.ti -1c
+.RI "const double \fBD_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBWIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT\fP = 2\&.897771955e\-3"
+.br
+.ti -1c
+.RI "const double \fBD_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT\fP = 0\&.0"
+.br
+.ti -1c
+.RI "const double \fBW_TO_Z_MASS_RATIO\fP = 0\&.88153"
+.br
+.ti -1c
+.RI "const double \fBD_W_TO_Z_MASS_RATIO\fP = 0\&.00017"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fundamental Physical Constants --- Complete Listing 
+.br
+ 2018 CODATA adjustment 
+.br
+ From: http://physics.nist.gov/constants 
+.br
+ 
+.SH "Variable Documentation"
+.PP 
+.SS "const double ALPHA_PARTICLE_ELECTRON_MASS_RATIO = 7294\&.29954142"
+
+.SS "const double ALPHA_PARTICLE_MASS = 6\&.6446573357e\-27"
+kg 
+.br
+ 
+.PP
+\fBExamples\fP
+.in +1c
+\fBexample_in_c\&.c\fP\&.
+.SS "const double ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT = 5\&.9719201914e\-10"
+J 
+.br
+ 
+.SS "const double ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV = 3727\&.3794066"
+MeV 
+.br
+ 
+.SS "const double ALPHA_PARTICLE_MASS_IN_U = 4\&.001506179127"
+u 
+.br
+ 
+.SS "const double ALPHA_PARTICLE_MOLAR_MASS = 4\&.0015061777e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double ALPHA_PARTICLE_PROTON_MASS_RATIO = 3\&.97259969009"
+
+.SS "const double ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS = 4\&.001506179127"
+
+.SS "const double ANGSTROM_STAR = 1\&.00001495e\-10"
+m 
+.br
+ 
+.SS "const double ATOMIC_MASS_CONSTANT = 1\&.66053906660e\-27"
+kg 
+.br
+ 
+.SS "const double ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT = 1\&.49241808560e\-10"
+J 
+.br
+ 
+.SS "const double ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV = 931\&.49410242"
+MeV 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP = 9\&.3149410242e8"
+eV 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP = 3\&.4231776874e7"
+E_h 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP = 2\&.25234271871e23"
+Hz 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP = 7\&.5130066104e14"
+m^-1 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP = 1\&.49241808560e\-10"
+J 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP = 1\&.08095401916e13"
+K 
+.br
+ 
+.SS "const double ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP = 1\&.66053906660e\-27"
+kg 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY = 3\&.2063613061e\-53"
+C^3 m^3 J^-2 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY = 6\&.2353799905e\-65"
+C^4 m^4 J^-3 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ACTION = 1\&.054571817e\-34"
+J s 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_CHARGE = 1\&.602176634e\-19"
+C 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_CHARGE_DENSITY = 1\&.08120238457e12"
+C m^-3 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_CURRENT = 6\&.623618237510e\-3"
+A 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM = 8\&.4783536255e\-30"
+C m 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_FIELD = 5\&.14220674763e11"
+V m^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT = 9\&.7173624292e21"
+V m^-2 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY = 1\&.64877727436e\-41"
+C^2 m^2 J^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL = 27\&.211386245988"
+V 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM = 4\&.4865515246e\-40"
+C m^2 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_ENERGY = 4\&.3597447222071e\-18"
+J 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_FORCE = 8\&.2387234983e\-8"
+N 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_LENGTH = 5\&.29177210903e\-11"
+m 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MAG__DIPOLE_MOM = 1\&.85480201566e\-23"
+J T^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MAG__FLUX_DENSITY = 2\&.35051756758e5"
+T 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MAGNETIZABILITY = 7\&.8910366008e\-29"
+J T^-2 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MASS = 9\&.1093837015e\-31"
+kg 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_MOMENTUM = 1\&.99285191410e\-24"
+kg m s^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_PERMITTIVITY = 1\&.11265005545e\-10"
+F m^-1 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_TIME = 2\&.4188843265857e\-17"
+s 
+.br
+ 
+.SS "const double ATOMIC_UNIT_OF_VELOCITY = 2\&.18769126364e6"
+m s^-1 
+.br
+ 
+.SS "const double AVOGADRO_CONSTANT = 6\&.02214076e23"
+mol^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON = 9\&.2740100783e\-24"
+J T^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON_IN_EV_T = 5\&.7883818060e\-5"
+eV T^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON_IN_HZ_T = 1\&.39962449361e10"
+Hz T^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA = 46\&.686447783"
+m^-1 T^-1 
+.br
+ 
+.SS "const double BOHR_MAGNETON_IN_K_T = 0\&.67171381563"
+K T^-1 
+.br
+ 
+.SS "const double BOHR_RADIUS = 5\&.29177210903e\-11"
+m 
+.br
+ 
+.SS "const double BOLTZMANN_CONSTANT = 1\&.380649e\-23"
+J K^-1 
+.br
+ 
+.SS "const double BOLTZMANN_CONSTANT_IN_EV_K = 8\&.617333262e\-5"
+eV K^-1 
+.br
+ 
+.SS "const double BOLTZMANN_CONSTANT_IN_HZ_K = 2\&.083661912e10"
+Hz K^-1 
+.br
+ 
+.SS "const double BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN = 69\&.50348004"
+m^-1 K^-1 
+.br
+ 
+.SS "const double CHARACTERISTIC_IMPEDANCE_OF_VACUUM = 376\&.730313668"
+ohm 
+.br
+ 
+.SS "const double CLASSICAL_ELECTRON_RADIUS = 2\&.8179403262e\-15"
+m 
+.br
+ 
+.SS "const double COMPTON_WAVELENGTH = 2\&.42631023867e\-12"
+m 
+.br
+ 
+.SS "const double CONDUCTANCE_QUANTUM = 7\&.748091729e\-5"
+S 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_AMPERE_90 = 1\&.00000008887"
+A 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_COULOMB_90 = 1\&.00000008887"
+C 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_FARAD_90 = 0\&.99999998220"
+F 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_HENRY_90 = 1\&.00000001779"
+H 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT = 483597\&.9e9"
+Hz V^-1 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_OHM_90 = 1\&.00000001779"
+ohm 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_VOLT_90 = 1\&.00000010666"
+V 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT = 25812\&.807"
+ohm 
+.br
+ 
+.SS "const double CONVENTIONAL_VALUE_OF_WATT_90 = 1\&.00000019553"
+W 
+.br
+ 
+.SS "const double COPPER_X_UNIT = 1\&.00207697e\-13"
+m 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_ELECTRON_MASS_RATIO = 0\&.00000024"
+
+.SS "const double D_ALPHA_PARTICLE_MASS = 0\&.0000000020e\-27"
+kg 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT = 0\&.0000000018e\-10"
+J 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV = 0\&.0000011"
+MeV 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_MASS_IN_U = 0\&.000000000063"
+u 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_MOLAR_MASS = 0\&.0000000012e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double D_ALPHA_PARTICLE_PROTON_MASS_RATIO = 0\&.00000000022"
+
+.SS "const double D_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS = 0\&.000000000063"
+
+.SS "const double D_ANGSTROM_STAR = 0\&.00000090e\-10"
+m 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_CONSTANT = 0\&.00000000050e\-27"
+kg 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT = 0\&.00000000045e\-10"
+J 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV = 0\&.00000028"
+MeV 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP = 0\&.0000000028e8"
+eV 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP = 0\&.0000000010e7"
+E_h 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP = 0\&.00000000068e23"
+Hz 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP = 0\&.0000000023e14"
+m^-1 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP = 0\&.00000000045e\-10"
+J 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP = 0\&.00000000033e13"
+K 
+.br
+ 
+.SS "const double D_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP = 0\&.00000000050e\-27"
+kg 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY = 0\&.0000000015e\-53"
+C^3 m^3 J^-2 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY = 0\&.0000000038e\-65"
+C^4 m^4 J^-3 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ACTION = 0\&.0"
+J s 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_CHARGE = 0\&.0"
+C 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_CHARGE_DENSITY = 0\&.00000000049e12"
+C m^-3 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_CURRENT = 0\&.000000000013e\-3"
+A 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM = 0\&.0000000013e\-30"
+C m 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_FIELD = 0\&.00000000078e11"
+V m^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT = 0\&.0000000029e21"
+V m^-2 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY = 0\&.00000000050e\-41"
+C^2 m^2 J^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL = 0\&.000000000053"
+V 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM = 0\&.0000000014e\-40"
+C m^2 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_ENERGY = 0\&.0000000000085e\-18"
+J 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_FORCE = 0\&.0000000012e\-8"
+N 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_LENGTH = 0\&.00000000080e\-11"
+m 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM = 0\&.00000000056e\-23"
+J T^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY = 0\&.00000000071e5"
+T 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MAGNETIZABILITY = 0\&.0000000048e\-29"
+J T^-2 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MASS = 0\&.0000000028e\-31"
+kg 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_MOMENTUM = 0\&.00000000030e\-24"
+kg m s^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_PERMITTIVITY = 0\&.00000000017e\-10"
+F m^-1 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_TIME = 0\&.0000000000047e\-17"
+s 
+.br
+ 
+.SS "const double D_ATOMIC_UNIT_OF_VELOCITY = 0\&.00000000033e6"
+m s^-1 
+.br
+ 
+.SS "const double D_AVOGADRO_CONSTANT = 0\&.0"
+mol^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON = 0\&.0000000028e\-24"
+J T^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON_IN_EV_T = 0\&.0000000017e\-5"
+eV T^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON_IN_HZ_T = 0\&.00000000042e10"
+Hz T^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA = 0\&.000000014"
+m^-1 T^-1 
+.br
+ 
+.SS "const double D_BOHR_MAGNETON_IN_K_T = 0\&.00000000020"
+K T^-1 
+.br
+ 
+.SS "const double D_BOHR_RADIUS = 0\&.00000000080e\-11"
+m 
+.br
+ 
+.SS "const double D_BOLTZMANN_CONSTANT = 0\&.0"
+J K^-1 
+.br
+ 
+.SS "const double D_BOLTZMANN_CONSTANT_IN_EV_K = 0\&.0"
+eV K^-1 
+.br
+ 
+.SS "const double D_BOLTZMANN_CONSTANT_IN_HZ_K = 0\&.0"
+Hz K^-1 
+.br
+ 
+.SS "const double D_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN = 0\&.0"
+m^-1 K^-1 
+.br
+ 
+.SS "const double D_CHARACTERISTIC_IMPEDANCE_OF_VACUUM = 0\&.000000057"
+ohm 
+.br
+ 
+.SS "const double D_CLASSICAL_ELECTRON_RADIUS = 0\&.0000000013e\-15"
+m 
+.br
+ 
+.SS "const double D_COMPTON_WAVELENGTH = 0\&.00000000073e\-12"
+m 
+.br
+ 
+.SS "const double D_CONDUCTANCE_QUANTUM = 0\&.0"
+S 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_AMPERE_90 = 0\&.0"
+A 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_COULOMB_90 = 0\&.0"
+C 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_FARAD_90 = 0\&.0"
+F 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_HENRY_90 = 0\&.0"
+H 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT = 0\&.0"
+Hz V^-1 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_OHM_90 = 0\&.0"
+ohm 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_VOLT_90 = 0\&.0"
+V 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT = 0\&.0"
+ohm 
+.br
+ 
+.SS "const double D_CONVENTIONAL_VALUE_OF_WATT_90 = 0\&.0"
+W 
+.br
+ 
+.SS "const double D_COPPER_X_UNIT = 0\&.00000028e\-13"
+m 
+.br
+ 
+.SS "const double D_DEUTERON_ELECTRON_MAG__MOM__RATIO = 0\&.000000012e\-4"
+
+.SS "const double D_DEUTERON_ELECTRON_MASS_RATIO = 0\&.00000013"
+
+.SS "const double D_DEUTERON_G_FACTOR = 0\&.0000000022"
+
+.SS "const double D_DEUTERON_MAG__MOM = 0\&.000000011e\-27"
+J T^-1 
+.br
+ 
+.SS "const double D_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 0\&.000000012e\-4"
+
+.SS "const double D_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.0000000022"
+
+.SS "const double D_DEUTERON_MASS = 0\&.0000000010e\-27"
+kg 
+.br
+ 
+.SS "const double D_DEUTERON_MASS_ENERGY_EQUIVALENT = 0\&.00000000091e\-10"
+J 
+.br
+ 
+.SS "const double D_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV = 0\&.00000057"
+MeV 
+.br
+ 
+.SS "const double D_DEUTERON_MASS_IN_U = 0\&.000000000040"
+u 
+.br
+ 
+.SS "const double D_DEUTERON_MOLAR_MASS = 0\&.00000000061e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double D_DEUTERON_NEUTRON_MAG__MOM__RATIO = 0\&.00000011"
+
+.SS "const double D_DEUTERON_PROTON_MAG__MOM__RATIO = 0\&.00000000079"
+
+.SS "const double D_DEUTERON_PROTON_MASS_RATIO = 0\&.00000000011"
+
+.SS "const double D_DEUTERON_RELATIVE_ATOMIC_MASS = 0\&.000000000040"
+
+.SS "const double D_DEUTERON_RMS_CHARGE_RADIUS = 0\&.00074e\-15"
+m 
+.br
+ 
+.SS "const double D_ELECTRON_CHARGE_TO_MASS_QUOTIENT = 0\&.00000000053e11"
+C kg^-1 
+.br
+ 
+.SS "const double D_ELECTRON_DEUTERON_MAG__MOM__RATIO = 0\&.0000056"
+
+.SS "const double D_ELECTRON_DEUTERON_MASS_RATIO = 0\&.000000000096e\-4"
+
+.SS "const double D_ELECTRON_G_FACTOR = 0\&.00000000000035"
+
+.SS "const double D_ELECTRON_GYROMAG__RATIO = 0\&.00000000053e11"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_ELECTRON_GYROMAG__RATIO_IN_MHZ_T = 0\&.0000085"
+MHz T^-1 
+.br
+ 
+.SS "const double D_ELECTRON_HELION_MASS_RATIO = 0\&.000000000079e\-4"
+
+.SS "const double D_ELECTRON_MAG__MOM = 0\&.0000000028e\-24"
+J T^-1 
+.br
+ 
+.SS "const double D_ELECTRON_MAG__MOM__ANOMALY = 0\&.00000000018e\-3"
+
+.SS "const double D_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 0\&.00000000000018"
+
+.SS "const double D_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.00000011"
+
+.SS "const double D_ELECTRON_MASS = 0\&.0000000028e\-31"
+kg 
+.br
+ 
+.SS "const double D_ELECTRON_MASS_ENERGY_EQUIVALENT = 0\&.0000000025e\-14"
+J 
+.br
+ 
+.SS "const double D_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV = 0\&.00000000015"
+MeV 
+.br
+ 
+.SS "const double D_ELECTRON_MASS_IN_U = 0\&.00000000016e\-4"
+u 
+.br
+ 
+.SS "const double D_ELECTRON_MOLAR_MASS = 0\&.0000000017e\-7"
+kg mol^-1 
+.br
+ 
+.SS "const double D_ELECTRON_MUON_MAG__MOM__RATIO = 0\&.0000046"
+
+.SS "const double D_ELECTRON_MUON_MASS_RATIO = 0\&.00000011e\-3"
+
+.SS "const double D_ELECTRON_NEUTRON_MAG__MOM__RATIO = 0\&.00023"
+
+.SS "const double D_ELECTRON_NEUTRON_MASS_RATIO = 0\&.0000000026e\-4"
+
+.SS "const double D_ELECTRON_PROTON_MAG__MOM__RATIO = 0\&.00000020"
+
+.SS "const double D_ELECTRON_PROTON_MASS_RATIO = 0\&.00000000033e\-4"
+
+.SS "const double D_ELECTRON_RELATIVE_ATOMIC_MASS = 0\&.00000000016e\-4"
+
+.SS "const double D_ELECTRON_TAU_MASS_RATIO = 0\&.00019e\-4"
+
+.SS "const double D_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO = 0\&.000000000045e\-4"
+
+.SS "const double D_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO = 0\&.000010"
+
+.SS "const double D_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO = 0\&.0000072"
+
+.SS "const double D_ELECTRON_TRITON_MASS_RATIO = 0\&.000000000090e\-4"
+
+.SS "const double D_ELECTRON_VOLT = 0\&.0"
+J 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP = 0\&.00000000032e\-9"
+u 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_HARTREE_RELATIONSHIP = 0\&.0000000000071e\-2"
+E_h 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_HERTZ_RELATIONSHIP = 0\&.0"
+Hz 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP = 0\&.0"
+m^-1 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_JOULE_RELATIONSHIP = 0\&.0"
+J 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_KELVIN_RELATIONSHIP = 0\&.0"
+K 
+.br
+ 
+.SS "const double D_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP = 0\&.0"
+kg 
+.br
+ 
+.SS "const double D_ELEMENTARY_CHARGE = 0\&.0"
+C 
+.br
+ 
+.SS "const double D_ELEMENTARY_CHARGE_OVER_H_BAR = 0\&.0"
+A J^-1 
+.br
+ 
+.SS "const double D_FARADAY_CONSTANT = 0\&.0"
+C mol^-1 
+.br
+ 
+.SS "const double D_FERMI_COUPLING_CONSTANT = 0\&.0000006e\-5"
+GeV^-2 
+.br
+ 
+.SS "const double D_FINE_STRUCTURE_CONSTANT = 0\&.0000000011e\-3"
+
+.SS "const double D_FIRST_RADIATION_CONSTANT = 0\&.0"
+W m^2 
+.br
+ 
+.SS "const double D_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE = 0\&.0"
+W m^2 sr^-1 
+.br
+ 
+.SS "const double D_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP = 0\&.00000000088e\-8"
+u 
+.br
+ 
+.SS "const double D_HARTREE_ELECTRON_VOLT_RELATIONSHIP = 0\&.000000000053"
+eV 
+.br
+ 
+.SS "const double D_HARTREE_ENERGY = 0\&.0000000000085e\-18"
+J 
+.br
+ 
+.SS "const double D_HARTREE_ENERGY_IN_EV = 0\&.000000000053"
+eV 
+.br
+ 
+.SS "const double D_HARTREE_HERTZ_RELATIONSHIP = 0\&.000000000013e15"
+Hz 
+.br
+ 
+.SS "const double D_HARTREE_INVERSE_METER_RELATIONSHIP = 0\&.0000000000043e7"
+m^-1 
+.br
+ 
+.SS "const double D_HARTREE_JOULE_RELATIONSHIP = 0\&.0000000000085e\-18"
+J 
+.br
+ 
+.SS "const double D_HARTREE_KELVIN_RELATIONSHIP = 0\&.0000000000061e5"
+K 
+.br
+ 
+.SS "const double D_HARTREE_KILOGRAM_RELATIONSHIP = 0\&.0000000000094e\-35"
+kg 
+.br
+ 
+.SS "const double D_HELION_ELECTRON_MASS_RATIO = 0\&.00000024"
+
+.SS "const double D_HELION_G_FACTOR = 0\&.000000050"
+
+.SS "const double D_HELION_MAG__MOM = 0\&.000000013e\-26"
+J T^-1 
+.br
+ 
+.SS "const double D_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 0\&.000000014e\-3"
+
+.SS "const double D_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.000000025"
+
+.SS "const double D_HELION_MASS = 0\&.0000000015e\-27"
+kg 
+.br
+ 
+.SS "const double D_HELION_MASS_ENERGY_EQUIVALENT = 0\&.0000000014e\-10"
+J 
+.br
+ 
+.SS "const double D_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV = 0\&.00000085"
+MeV 
+.br
+ 
+.SS "const double D_HELION_MASS_IN_U = 0\&.000000000097"
+u 
+.br
+ 
+.SS "const double D_HELION_MOLAR_MASS = 0\&.00000000091e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double D_HELION_PROTON_MASS_RATIO = 0\&.00000000013"
+
+.SS "const double D_HELION_RELATIVE_ATOMIC_MASS = 0\&.000000000097"
+
+.SS "const double D_HELION_SHIELDING_SHIFT = 0\&.000010e\-5"
+
+.SS "const double D_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP = 0\&.0000000013e\-24"
+u 
+.br
+ 
+.SS "const double D_HERTZ_ELECTRON_VOLT_RELATIONSHIP = 0\&.0"
+eV 
+.br
+ 
+.SS "const double D_HERTZ_HARTREE_RELATIONSHIP = 0\&.0000000000029e\-16"
+E_h 
+.br
+ 
+.SS "const double D_HERTZ_INVERSE_METER_RELATIONSHIP = 0\&.0"
+m^-1 
+.br
+ 
+.SS "const double D_HERTZ_JOULE_RELATIONSHIP = 0\&.0"
+J 
+.br
+ 
+.SS "const double D_HERTZ_KELVIN_RELATIONSHIP = 0\&.0"
+K 
+.br
+ 
+.SS "const double D_HERTZ_KILOGRAM_RELATIONSHIP = 0\&.0"
+kg 
+.br
+ 
+.SS "const double D_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133 = 0\&.0"
+Hz 
+.br
+ 
+.SS "const double D_INVERSE_FINE_STRUCTURE_CONSTANT = 0\&.000000021"
+
+.SS "const double D_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP = 0\&.00000000040e\-15"
+u 
+.br
+ 
+.SS "const double D_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP = 0\&.0"
+eV 
+.br
+ 
+.SS "const double D_INVERSE_METER_HARTREE_RELATIONSHIP = 0\&.0000000000088e\-8"
+E_h 
+.br
+ 
+.SS "const double D_INVERSE_METER_HERTZ_RELATIONSHIP = 0\&.0"
+Hz 
+.br
+ 
+.SS "const double D_INVERSE_METER_JOULE_RELATIONSHIP = 0\&.0"
+J 
+.br
+ 
+.SS "const double D_INVERSE_METER_KELVIN_RELATIONSHIP = 0\&.0"
+K 
+.br
+ 
+.SS "const double D_INVERSE_METER_KILOGRAM_RELATIONSHIP = 0\&.0"
+kg 
+.br
+ 
+.SS "const double D_INVERSE_OF_CONDUCTANCE_QUANTUM = 0\&.0"
+ohm 
+.br
+ 
+.SS "const double D_JOSEPHSON_CONSTANT = 0\&.0"
+Hz V^-1 
+.br
+ 
+.SS "const double D_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP = 0\&.0000000020e9"
+u 
+.br
+ 
+.SS "const double D_JOULE_ELECTRON_VOLT_RELATIONSHIP = 0\&.0"
+eV 
+.br
+ 
+.SS "const double D_JOULE_HARTREE_RELATIONSHIP = 0\&.0000000000045e17"
+E_h 
+.br
+ 
+.SS "const double D_JOULE_HERTZ_RELATIONSHIP = 0\&.0"
+Hz 
+.br
+ 
+.SS "const double D_JOULE_INVERSE_METER_RELATIONSHIP = 0\&.0"
+m^-1 
+.br
+ 
+.SS "const double D_JOULE_KELVIN_RELATIONSHIP = 0\&.0"
+K 
+.br
+ 
+.SS "const double D_JOULE_KILOGRAM_RELATIONSHIP = 0\&.0"
+kg 
+.br
+ 
+.SS "const double D_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP = 0\&.0000000028e\-14"
+u 
+.br
+ 
+.SS "const double D_KELVIN_ELECTRON_VOLT_RELATIONSHIP = 0\&.0"
+eV 
+.br
+ 
+.SS "const double D_KELVIN_HARTREE_RELATIONSHIP = 0\&.0000000000061e\-6"
+E_h 
+.br
+ 
+.SS "const double D_KELVIN_HERTZ_RELATIONSHIP = 0\&.0"
+Hz 
+.br
+ 
+.SS "const double D_KELVIN_INVERSE_METER_RELATIONSHIP = 0\&.0"
+m^-1 
+.br
+ 
+.SS "const double D_KELVIN_JOULE_RELATIONSHIP = 0\&.0"
+J 
+.br
+ 
+.SS "const double D_KELVIN_KILOGRAM_RELATIONSHIP = 0\&.0"
+kg 
+.br
+ 
+.SS "const double D_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP = 0\&.0000000018e26"
+u 
+.br
+ 
+.SS "const double D_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP = 0\&.0"
+eV 
+.br
+ 
+.SS "const double D_KILOGRAM_HARTREE_RELATIONSHIP = 0\&.0000000000040e34"
+E_h 
+.br
+ 
+.SS "const double D_KILOGRAM_HERTZ_RELATIONSHIP = 0\&.0"
+Hz 
+.br
+ 
+.SS "const double D_KILOGRAM_INVERSE_METER_RELATIONSHIP = 0\&.0"
+m^-1 
+.br
+ 
+.SS "const double D_KILOGRAM_JOULE_RELATIONSHIP = 0\&.0"
+J 
+.br
+ 
+.SS "const double D_KILOGRAM_KELVIN_RELATIONSHIP = 0\&.0"
+K 
+.br
+ 
+.SS "const double D_LATTICE_PARAMETER_OF_SILICON = 0\&.000000089e\-10"
+m 
+.br
+ 
+.SS "const double D_LATTICE_SPACING_OF_IDEAL_SI__220 = 0\&.000000032e\-10"
+m 
+.br
+ 
+.SS "const double D_LOSCHMIDT_CONSTANT__273_15_K__100_KPA = 0\&.0"
+m^-3 
+.br
+ 
+.SS "const double D_LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA = 0\&.0"
+m^-3 
+.br
+ 
+.SS "const double D_LUMINOUS_EFFICACY = 0\&.0"
+lm W^-1 
+.br
+ 
+.SS "const double D_MAG__FLUX_QUANTUM = 0\&.0"
+Wb 
+.br
+ 
+.SS "const double D_MOLAR_GAS_CONSTANT = 0\&.0"
+J mol^-1 K^-1 
+.br
+ 
+.SS "const double D_MOLAR_MASS_CONSTANT = 0\&.00000000030e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_MASS_OF_CARBON_12 = 0\&.0000000036e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_PLANCK_CONSTANT = 0\&.0"
+J Hz^-1 mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA = 0\&.0"
+m^3 mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA = 0\&.0"
+m^3 mol^-1 
+.br
+ 
+.SS "const double D_MOLAR_VOLUME_OF_SILICON = 0\&.000000060e\-5"
+m^3 mol^-1 
+.br
+ 
+.SS "const double D_MOLYBDENUM_X_UNIT = 0\&.00000053e\-13"
+m 
+.br
+ 
+.SS "const double D_MUON_COMPTON_WAVELENGTH = 0\&.000000026e\-14"
+m 
+.br
+ 
+.SS "const double D_MUON_ELECTRON_MASS_RATIO = 0\&.0000046"
+
+.SS "const double D_MUON_G_FACTOR = 0\&.0000000013"
+
+.SS "const double D_MUON_MAG__MOM = 0\&.00000010e\-26"
+J T^-1 
+.br
+ 
+.SS "const double D_MUON_MAG__MOM__ANOMALY = 0\&.00000063e\-3"
+
+.SS "const double D_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 0\&.00000011e\-3"
+
+.SS "const double D_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.00000020"
+
+.SS "const double D_MUON_MASS = 0\&.000000042e\-28"
+kg 
+.br
+ 
+.SS "const double D_MUON_MASS_ENERGY_EQUIVALENT = 0\&.000000038e\-11"
+J 
+.br
+ 
+.SS "const double D_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV = 0\&.0000023"
+MeV 
+.br
+ 
+.SS "const double D_MUON_MASS_IN_U = 0\&.0000000025"
+u 
+.br
+ 
+.SS "const double D_MUON_MOLAR_MASS = 0\&.000000025e\-4"
+kg mol^-1 
+.br
+ 
+.SS "const double D_MUON_NEUTRON_MASS_RATIO = 0\&.0000000025"
+
+.SS "const double D_MUON_PROTON_MAG__MOM__RATIO = 0\&.000000071"
+
+.SS "const double D_MUON_PROTON_MASS_RATIO = 0\&.0000000025"
+
+.SS "const double D_MUON_TAU_MASS_RATIO = 0\&.00040e\-2"
+
+.SS "const double D_NATURAL_UNIT_OF_ACTION = 0\&.0"
+J s 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_ACTION_IN_EV_S = 0\&.0"
+eV s 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_ENERGY = 0\&.0000000025e\-14"
+J 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_ENERGY_IN_MEV = 0\&.00000000015"
+MeV 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_LENGTH = 0\&.0000000012e\-13"
+m 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_MASS = 0\&.0000000028e\-31"
+kg 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_MOMENTUM = 0\&.00000000082e\-22"
+kg m s^-1 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C = 0\&.00000000015"
+MeV/c 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_TIME = 0\&.00000000039e\-21"
+s 
+.br
+ 
+.SS "const double D_NATURAL_UNIT_OF_VELOCITY = 0\&.0"
+m s^-1 
+.br
+ 
+.SS "const double D_NEUTRON_COMPTON_WAVELENGTH = 0\&.00000000075e\-15"
+m 
+.br
+ 
+.SS "const double D_NEUTRON_ELECTRON_MAG__MOM__RATIO = 0\&.00000025e\-3"
+
+.SS "const double D_NEUTRON_ELECTRON_MASS_RATIO = 0\&.00000089"
+
+.SS "const double D_NEUTRON_G_FACTOR = 0\&.00000090"
+
+.SS "const double D_NEUTRON_GYROMAG__RATIO = 0\&.00000043e8"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_NEUTRON_GYROMAG__RATIO_IN_MHZ_T = 0\&.0000069"
+MHz T^-1 
+.br
+ 
+.SS "const double D_NEUTRON_MAG__MOM = 0\&.0000023e\-27"
+J T^-1 
+.br
+ 
+.SS "const double D_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 0\&.00000025e\-3"
+
+.SS "const double D_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.00000045"
+
+.SS "const double D_NEUTRON_MASS = 0\&.00000000095e\-27"
+kg 
+.br
+ 
+.SS "const double D_NEUTRON_MASS_ENERGY_EQUIVALENT = 0\&.00000000086e\-10"
+J 
+.br
+ 
+.SS "const double D_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV = 0\&.00000054"
+MeV 
+.br
+ 
+.SS "const double D_NEUTRON_MASS_IN_U = 0\&.00000000049"
+u 
+.br
+ 
+.SS "const double D_NEUTRON_MOLAR_MASS = 0\&.00000000057e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double D_NEUTRON_MUON_MASS_RATIO = 0\&.00000020"
+
+.SS "const double D_NEUTRON_PROTON_MAG__MOM__RATIO = 0\&.00000016"
+
+.SS "const double D_NEUTRON_PROTON_MASS_DIFFERENCE = 0\&.00000082e\-30"
+kg 
+.br
+ 
+.SS "const double D_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT = 0\&.00000074e\-13"
+J 
+.br
+ 
+.SS "const double D_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV = 0\&.00000046"
+MeV 
+.br
+ 
+.SS "const double D_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U = 0\&.00000049e\-3"
+u 
+.br
+ 
+.SS "const double D_NEUTRON_PROTON_MASS_RATIO = 0\&.00000000049"
+
+.SS "const double D_NEUTRON_RELATIVE_ATOMIC_MASS = 0\&.00000000049"
+
+.SS "const double D_NEUTRON_TAU_MASS_RATIO = 0\&.000036"
+
+.SS "const double D_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO = 0\&.00000016"
+
+.SS "const double D_NEWTONIAN_CONSTANT_OF_GRAVITATION = 0\&.00015e\-11"
+m^3 kg^-1 s^-2 
+.br
+ 
+.SS "const double D_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C = 0\&.00015e\-39"
+(GeV/c^2)^-2 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON = 0\&.0000000015e\-27"
+J T^-1 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON_IN_EV_T = 0\&.00000000096e\-8"
+eV T^-1 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA = 0\&.00000000078e\-2"
+m^-1 T^-1 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON_IN_K_T = 0\&.0000000011e\-4"
+K T^-1 
+.br
+ 
+.SS "const double D_NUCLEAR_MAGNETON_IN_MHZ_T = 0\&.0000000023"
+MHz T^-1 
+.br
+ 
+.SS "const double D_PLANCK_CONSTANT = 0\&.0"
+J Hz^-1 
+.br
+ 
+.SS "const double D_PLANCK_CONSTANT_IN_EV_HZ = 0\&.0"
+eV Hz^-1 
+.br
+ 
+.SS "const double D_PLANCK_LENGTH = 0\&.000018e\-35"
+m 
+.br
+ 
+.SS "const double D_PLANCK_MASS = 0\&.000024e\-8"
+kg 
+.br
+ 
+.SS "const double D_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV = 0\&.000014e19"
+GeV 
+.br
+ 
+.SS "const double D_PLANCK_TEMPERATURE = 0\&.000016e32"
+K 
+.br
+ 
+.SS "const double D_PLANCK_TIME = 0\&.000060e\-44"
+s 
+.br
+ 
+.SS "const double D_PROTON_CHARGE_TO_MASS_QUOTIENT = 0\&.0000000029e7"
+C kg^-1 
+.br
+ 
+.SS "const double D_PROTON_COMPTON_WAVELENGTH = 0\&.00000000040e\-15"
+m 
+.br
+ 
+.SS "const double D_PROTON_ELECTRON_MASS_RATIO = 0\&.00000011"
+
+.SS "const double D_PROTON_G_FACTOR = 0\&.0000000016"
+
+.SS "const double D_PROTON_GYROMAG__RATIO = 0\&.0000000011e8"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_PROTON_GYROMAG__RATIO_IN_MHZ_T = 0\&.000000018"
+MHz T^-1 
+.br
+ 
+.SS "const double D_PROTON_MAG__MOM = 0\&.00000000060e\-26"
+J T^-1 
+.br
+ 
+.SS "const double D_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 0\&.00000000046e\-3"
+
+.SS "const double D_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.00000000082"
+
+.SS "const double D_PROTON_MAG__SHIELDING_CORRECTION = 0\&.0011e\-5"
+
+.SS "const double D_PROTON_MASS = 0\&.00000000051e\-27"
+kg 
+.br
+ 
+.SS "const double D_PROTON_MASS_ENERGY_EQUIVALENT = 0\&.00000000046e\-10"
+J 
+.br
+ 
+.SS "const double D_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV = 0\&.00000029"
+MeV 
+.br
+ 
+.SS "const double D_PROTON_MASS_IN_U = 0\&.000000000053"
+u 
+.br
+ 
+.SS "const double D_PROTON_MOLAR_MASS = 0\&.00000000031e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double D_PROTON_MUON_MASS_RATIO = 0\&.00000020"
+
+.SS "const double D_PROTON_NEUTRON_MAG__MOM__RATIO = 0\&.00000034"
+
+.SS "const double D_PROTON_NEUTRON_MASS_RATIO = 0\&.00000000049"
+
+.SS "const double D_PROTON_RELATIVE_ATOMIC_MASS = 0\&.000000000053"
+
+.SS "const double D_PROTON_RMS_CHARGE_RADIUS = 0\&.019e\-16"
+m 
+.br
+ 
+.SS "const double D_PROTON_TAU_MASS_RATIO = 0\&.000036"
+
+.SS "const double D_QUANTUM_OF_CIRCULATION = 0\&.0000000011e\-4"
+m^2 s^-1 
+.br
+ 
+.SS "const double D_QUANTUM_OF_CIRCULATION_TIMES_2 = 0\&.0000000022e\-4"
+m^2 s^-1 
+.br
+ 
+.SS "const double D_REDUCED_COMPTON_WAVELENGTH = 0\&.0000000012e\-13"
+m 
+.br
+ 
+.SS "const double D_REDUCED_MUON_COMPTON_WAVELENGTH = 0\&.000000042e\-15"
+m 
+.br
+ 
+.SS "const double D_REDUCED_NEUTRON_COMPTON_WAVELENGTH = 0\&.0000000012e\-16"
+m 
+.br
+ 
+.SS "const double D_REDUCED_PLANCK_CONSTANT = 0\&.0"
+J s 
+.br
+ 
+.SS "const double D_REDUCED_PLANCK_CONSTANT_IN_EV_S = 0\&.0"
+eV s 
+.br
+ 
+.SS "const double D_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM = 0\&.0"
+MeV fm 
+.br
+ 
+.SS "const double D_REDUCED_PROTON_COMPTON_WAVELENGTH = 0\&.00000000064e\-16"
+m 
+.br
+ 
+.SS "const double D_REDUCED_TAU_COMPTON_WAVELENGTH = 0\&.000075e\-16"
+m 
+.br
+ 
+.SS "const double D_RYDBERG_CONSTANT = 0\&.000021"
+m^-1 
+.br
+ 
+.SS "const double D_RYDBERG_CONSTANT_TIMES_C_IN_HZ = 0\&.0000000000064e15"
+Hz 
+.br
+ 
+.SS "const double D_RYDBERG_CONSTANT_TIMES_HC_IN_EV = 0\&.000000000026"
+eV 
+.br
+ 
+.SS "const double D_RYDBERG_CONSTANT_TIMES_HC_IN_J = 0\&.0000000000042e\-18"
+J 
+.br
+ 
+.SS "const double D_SACKUR_TETRODE_CONSTANT__1_K__100_KPA = 0\&.00000000045"
+
+.SS "const double D_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA = 0\&.00000000045"
+
+.SS "const double D_SECOND_RADIATION_CONSTANT = 0\&.0"
+m K 
+.br
+ 
+.SS "const double D_SHIELDED_HELION_GYROMAG__RATIO = 0\&.000000024e8"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T = 0\&.00000038"
+MHz T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_HELION_MAG__MOM = 0\&.000000013e\-26"
+J T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 0\&.000000014e\-3"
+
+.SS "const double D_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.000000025"
+
+.SS "const double D_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO = 0\&.0000000089"
+
+.SS "const double D_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO = 0\&.0000000033"
+
+.SS "const double D_SHIELDED_PROTON_GYROMAG__RATIO = 0\&.000000029e8"
+s^-1 T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T = 0\&.00000046"
+MHz T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_PROTON_MAG__MOM = 0\&.000000015e\-26"
+J T^-1 
+.br
+ 
+.SS "const double D_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 0\&.000000017e\-3"
+
+.SS "const double D_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.000000030"
+
+.SS "const double D_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD = 0\&.0020e\-8"
+
+.SS "const double D_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT = 0\&.0020e\-8"
+
+.SS "const double D_SPEED_OF_LIGHT_IN_VACUUM = 0\&.0"
+m s^-1 
+.br
+ 
+.SS "const double D_STANDARD_ACCELERATION_OF_GRAVITY = 0\&.0"
+m s^-2 
+.br
+ 
+.SS "const double D_STANDARD_ATMOSPHERE = 0\&.0"
+Pa 
+.br
+ 
+.SS "const double D_STANDARD_STATE_PRESSURE = 0\&.0"
+Pa 
+.br
+ 
+.SS "const double D_STEFAN_BOLTZMANN_CONSTANT = 0\&.0"
+W m^-2 K^-4 
+.br
+ 
+.SS "const double D_TAU_COMPTON_WAVELENGTH = 0\&.00047e\-16"
+m 
+.br
+ 
+.SS "const double D_TAU_ELECTRON_MASS_RATIO = 0\&.23"
+
+.SS "const double D_TAU_ENERGY_EQUIVALENT = 0\&.12"
+MeV 
+.br
+ 
+.SS "const double D_TAU_MASS = 0\&.00021e\-27"
+kg 
+.br
+ 
+.SS "const double D_TAU_MASS_ENERGY_EQUIVALENT = 0\&.00019e\-10"
+J 
+.br
+ 
+.SS "const double D_TAU_MASS_IN_U = 0\&.00013"
+u 
+.br
+ 
+.SS "const double D_TAU_MOLAR_MASS = 0\&.00013e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double D_TAU_MUON_MASS_RATIO = 0\&.0011"
+
+.SS "const double D_TAU_NEUTRON_MASS_RATIO = 0\&.00013"
+
+.SS "const double D_TAU_PROTON_MASS_RATIO = 0\&.00013"
+
+.SS "const double D_THOMSON_CROSS_SECTION = 0\&.0000000060e\-29"
+m^2 
+.br
+ 
+.SS "const double D_TRITON_ELECTRON_MASS_RATIO = 0\&.00000027"
+
+.SS "const double D_TRITON_G_FACTOR = 0\&.000000012"
+
+.SS "const double D_TRITON_MAG__MOM = 0\&.0000000030e\-26"
+J T^-1 
+.br
+ 
+.SS "const double D_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 0\&.0000000032e\-3"
+
+.SS "const double D_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.0000000059"
+
+.SS "const double D_TRITON_MASS = 0\&.0000000015e\-27"
+kg 
+.br
+ 
+.SS "const double D_TRITON_MASS_ENERGY_EQUIVALENT = 0\&.0000000014e\-10"
+J 
+.br
+ 
+.SS "const double D_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV = 0\&.00000085"
+MeV 
+.br
+ 
+.SS "const double D_TRITON_MASS_IN_U = 0\&.00000000012"
+u 
+.br
+ 
+.SS "const double D_TRITON_MOLAR_MASS = 0\&.00000000092e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double D_TRITON_PROTON_MASS_RATIO = 0\&.00000000015"
+
+.SS "const double D_TRITON_RELATIVE_ATOMIC_MASS = 0\&.00000000012"
+
+.SS "const double D_TRITON_TO_PROTON_MAG__MOM__RATIO = 0\&.0000000021"
+
+.SS "const double D_UNIFIED_ATOMIC_MASS_UNIT = 0\&.00000000050e\-27"
+kg 
+.br
+ 
+.SS "const double D_VACUUM_ELECTRIC_PERMITTIVITY = 0\&.0000000013e\-12"
+F m^-1 
+.br
+ 
+.SS "const double D_VACUUM_MAG__PERMEABILITY = 0\&.00000000019e\-6"
+N A^-2 
+.br
+ 
+.SS "const double D_VON_KLITZING_CONSTANT = 0\&.0"
+ohm 
+.br
+ 
+.SS "const double D_W_TO_Z_MASS_RATIO = 0\&.00017"
+
+.SS "const double D_WEAK_MIXING_ANGLE = 0\&.00030"
+
+.SS "const double D_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT = 0\&.0"
+Hz K^-1 
+.br
+ 
+.SS "const double D_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT = 0\&.0"
+m K 
+.br
+ 
+.SS "const double DEUTERON_ELECTRON_MAG__MOM__RATIO = \-4\&.664345551e\-4"
+
+.SS "const double DEUTERON_ELECTRON_MASS_RATIO = 3670\&.48296788"
+
+.SS "const double DEUTERON_G_FACTOR = 0\&.8574382338"
+
+.SS "const double DEUTERON_MAG__MOM = 4\&.330735094e\-27"
+J T^-1 
+.br
+ 
+.SS "const double DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 4\&.669754570e\-4"
+
+.SS "const double DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 0\&.8574382338"
+
+.SS "const double DEUTERON_MASS = 3\&.3435837724e\-27"
+kg 
+.br
+ 
+.SS "const double DEUTERON_MASS_ENERGY_EQUIVALENT = 3\&.00506323102e\-10"
+J 
+.br
+ 
+.SS "const double DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV = 1875\&.61294257"
+MeV 
+.br
+ 
+.SS "const double DEUTERON_MASS_IN_U = 2\&.013553212745"
+u 
+.br
+ 
+.SS "const double DEUTERON_MOLAR_MASS = 2\&.01355321205e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double DEUTERON_NEUTRON_MAG__MOM__RATIO = \-0\&.44820653"
+
+.SS "const double DEUTERON_PROTON_MAG__MOM__RATIO = 0\&.30701220939"
+
+.SS "const double DEUTERON_PROTON_MASS_RATIO = 1\&.99900750139"
+
+.SS "const double DEUTERON_RELATIVE_ATOMIC_MASS = 2\&.013553212745"
+
+.SS "const double DEUTERON_RMS_CHARGE_RADIUS = 2\&.12799e\-15"
+m 
+.br
+ 
+.SS "const double ELECTRON_CHARGE_TO_MASS_QUOTIENT = \-1\&.75882001076e11"
+C kg^-1 
+.br
+ 
+.SS "const double ELECTRON_DEUTERON_MAG__MOM__RATIO = \-2143\&.9234915"
+
+.SS "const double ELECTRON_DEUTERON_MASS_RATIO = 2\&.724437107462e\-4"
+
+.SS "const double ELECTRON_G_FACTOR = \-2\&.00231930436256"
+
+.SS "const double ELECTRON_GYROMAG__RATIO = 1\&.76085963023e11"
+s^-1 T^-1 
+.br
+ 
+.SS "const double ELECTRON_GYROMAG__RATIO_IN_MHZ_T = 28024\&.9514242"
+MHz T^-1 
+.br
+ 
+.SS "const double ELECTRON_HELION_MASS_RATIO = 1\&.819543074573e\-4"
+
+.SS "const double ELECTRON_MAG__MOM = \-9\&.2847647043e\-24"
+J T^-1 
+.br
+ 
+.SS "const double ELECTRON_MAG__MOM__ANOMALY = 1\&.15965218128e\-3"
+
+.SS "const double ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = \-1\&.00115965218128"
+
+.SS "const double ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = \-1838\&.28197188"
+
+.SS "const double ELECTRON_MASS = 9\&.1093837015e\-31"
+kg 
+.br
+ 
+.SS "const double ELECTRON_MASS_ENERGY_EQUIVALENT = 8\&.1871057769e\-14"
+J 
+.br
+ 
+.SS "const double ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV = 0\&.51099895000"
+MeV 
+.br
+ 
+.SS "const double ELECTRON_MASS_IN_U = 5\&.48579909065e\-4"
+u 
+.br
+ 
+.SS "const double ELECTRON_MOLAR_MASS = 5\&.4857990888e\-7"
+kg mol^-1 
+.br
+ 
+.SS "const double ELECTRON_MUON_MAG__MOM__RATIO = 206\&.7669883"
+
+.SS "const double ELECTRON_MUON_MASS_RATIO = 4\&.83633169e\-3"
+
+.SS "const double ELECTRON_NEUTRON_MAG__MOM__RATIO = 960\&.92050"
+
+.SS "const double ELECTRON_NEUTRON_MASS_RATIO = 5\&.4386734424e\-4"
+
+.SS "const double ELECTRON_PROTON_MAG__MOM__RATIO = \-658\&.21068789"
+
+.SS "const double ELECTRON_PROTON_MASS_RATIO = 5\&.44617021487e\-4"
+
+.SS "const double ELECTRON_RELATIVE_ATOMIC_MASS = 5\&.48579909065e\-4"
+
+.SS "const double ELECTRON_TAU_MASS_RATIO = 2\&.87585e\-4"
+
+.SS "const double ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO = 1\&.370933554787e\-4"
+
+.SS "const double ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO = 864\&.058257"
+
+.SS "const double ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO = \-658\&.2275971"
+
+.SS "const double ELECTRON_TRITON_MASS_RATIO = 1\&.819200062251e\-4"
+
+.SS "const double ELECTRON_VOLT = 1\&.602176634e\-19"
+J 
+.br
+ 
+.SS "const double ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP = 1\&.07354410233e\-9"
+u 
+.br
+ 
+.SS "const double ELECTRON_VOLT_HARTREE_RELATIONSHIP = 3\&.6749322175655e\-2"
+E_h 
+.br
+ 
+.SS "const double ELECTRON_VOLT_HERTZ_RELATIONSHIP = 2\&.417989242e14"
+Hz 
+.br
+ 
+.SS "const double ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP = 8\&.065543937e5"
+m^-1 
+.br
+ 
+.SS "const double ELECTRON_VOLT_JOULE_RELATIONSHIP = 1\&.602176634e\-19"
+J 
+.br
+ 
+.SS "const double ELECTRON_VOLT_KELVIN_RELATIONSHIP = 1\&.160451812e4"
+K 
+.br
+ 
+.SS "const double ELECTRON_VOLT_KILOGRAM_RELATIONSHIP = 1\&.782661921e\-36"
+kg 
+.br
+ 
+.SS "const double ELEMENTARY_CHARGE = 1\&.602176634e\-19"
+C 
+.br
+ 
+.SS "const double ELEMENTARY_CHARGE_OVER_H_BAR = 1\&.519267447e15"
+A J^-1 
+.br
+ 
+.SS "const double FARADAY_CONSTANT = 96485\&.33212"
+C mol^-1 
+.br
+ 
+.SS "const double FERMI_COUPLING_CONSTANT = 1\&.1663787e\-5"
+GeV^-2 
+.br
+ 
+.SS "const double FINE_STRUCTURE_CONSTANT = 7\&.2973525693e\-3"
+
+.SS "const double FIRST_RADIATION_CONSTANT = 3\&.741771852e\-16"
+W m^2 
+.br
+ 
+.SS "const double FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE = 1\&.191042972e\-16"
+W m^2 sr^-1 
+.br
+ 
+.SS "const double HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP = 2\&.92126232205e\-8"
+u 
+.br
+ 
+.SS "const double HARTREE_ELECTRON_VOLT_RELATIONSHIP = 27\&.211386245988"
+eV 
+.br
+ 
+.SS "const double HARTREE_ENERGY = 4\&.3597447222071e\-18"
+J 
+.br
+ 
+.SS "const double HARTREE_ENERGY_IN_EV = 27\&.211386245988"
+eV 
+.br
+ 
+.SS "const double HARTREE_HERTZ_RELATIONSHIP = 6\&.579683920502e15"
+Hz 
+.br
+ 
+.SS "const double HARTREE_INVERSE_METER_RELATIONSHIP = 2\&.1947463136320e7"
+m^-1 
+.br
+ 
+.SS "const double HARTREE_JOULE_RELATIONSHIP = 4\&.3597447222071e\-18"
+J 
+.br
+ 
+.SS "const double HARTREE_KELVIN_RELATIONSHIP = 3\&.1577502480407e5"
+K 
+.br
+ 
+.SS "const double HARTREE_KILOGRAM_RELATIONSHIP = 4\&.8508702095432e\-35"
+kg 
+.br
+ 
+.SS "const double HELION_ELECTRON_MASS_RATIO = 5495\&.88528007"
+
+.SS "const double HELION_G_FACTOR = \-4\&.255250615"
+
+.SS "const double HELION_MAG__MOM = \-1\&.074617532e\-26"
+J T^-1 
+.br
+ 
+.SS "const double HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO = \-1\&.158740958e\-3"
+
+.SS "const double HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = \-2\&.127625307"
+
+.SS "const double HELION_MASS = 5\&.0064127796e\-27"
+kg 
+.br
+ 
+.SS "const double HELION_MASS_ENERGY_EQUIVALENT = 4\&.4995394125e\-10"
+J 
+.br
+ 
+.SS "const double HELION_MASS_ENERGY_EQUIVALENT_IN_MEV = 2808\&.39160743"
+MeV 
+.br
+ 
+.SS "const double HELION_MASS_IN_U = 3\&.014932247175"
+u 
+.br
+ 
+.SS "const double HELION_MOLAR_MASS = 3\&.01493224613e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double HELION_PROTON_MASS_RATIO = 2\&.99315267167"
+
+.SS "const double HELION_RELATIVE_ATOMIC_MASS = 3\&.014932247175"
+
+.SS "const double HELION_SHIELDING_SHIFT = 5\&.996743e\-5"
+
+.SS "const double HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP = 4\&.4398216652e\-24"
+u 
+.br
+ 
+.SS "const double HERTZ_ELECTRON_VOLT_RELATIONSHIP = 4\&.135667696e\-15"
+eV 
+.br
+ 
+.SS "const double HERTZ_HARTREE_RELATIONSHIP = 1\&.5198298460570e\-16"
+E_h 
+.br
+ 
+.SS "const double HERTZ_INVERSE_METER_RELATIONSHIP = 3\&.335640951e\-9"
+m^-1 
+.br
+ 
+.SS "const double HERTZ_JOULE_RELATIONSHIP = 6\&.62607015e\-34"
+J 
+.br
+ 
+.SS "const double HERTZ_KELVIN_RELATIONSHIP = 4\&.799243073e\-11"
+K 
+.br
+ 
+.SS "const double HERTZ_KILOGRAM_RELATIONSHIP = 7\&.372497323e\-51"
+kg 
+.br
+ 
+.SS "const double HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133 = 9192631770\&.0"
+Hz 
+.br
+ 
+.SS "const double INVERSE_FINE_STRUCTURE_CONSTANT = 137\&.035999084"
+
+.SS "const double INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP = 1\&.33102505010e\-15"
+u 
+.br
+ 
+.SS "const double INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP = 1\&.239841984e\-6"
+eV 
+.br
+ 
+.SS "const double INVERSE_METER_HARTREE_RELATIONSHIP = 4\&.5563352529120e\-8"
+E_h 
+.br
+ 
+.SS "const double INVERSE_METER_HERTZ_RELATIONSHIP = 299792458\&.0"
+Hz 
+.br
+ 
+.SS "const double INVERSE_METER_JOULE_RELATIONSHIP = 1\&.986445857e\-25"
+J 
+.br
+ 
+.SS "const double INVERSE_METER_KELVIN_RELATIONSHIP = 1\&.438776877e\-2"
+K 
+.br
+ 
+.SS "const double INVERSE_METER_KILOGRAM_RELATIONSHIP = 2\&.210219094e\-42"
+kg 
+.br
+ 
+.SS "const double INVERSE_OF_CONDUCTANCE_QUANTUM = 12906\&.40372"
+ohm 
+.br
+ 
+.SS "const double JOSEPHSON_CONSTANT = 483597\&.8484e9"
+Hz V^-1 
+.br
+ 
+.SS "const double JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP = 6\&.7005352565e9"
+u 
+.br
+ 
+.SS "const double JOULE_ELECTRON_VOLT_RELATIONSHIP = 6\&.241509074e18"
+eV 
+.br
+ 
+.SS "const double JOULE_HARTREE_RELATIONSHIP = 2\&.2937122783963e17"
+E_h 
+.br
+ 
+.SS "const double JOULE_HERTZ_RELATIONSHIP = 1\&.509190179e33"
+Hz 
+.br
+ 
+.SS "const double JOULE_INVERSE_METER_RELATIONSHIP = 5\&.034116567e24"
+m^-1 
+.br
+ 
+.SS "const double JOULE_KELVIN_RELATIONSHIP = 7\&.242970516e22"
+K 
+.br
+ 
+.SS "const double JOULE_KILOGRAM_RELATIONSHIP = 1\&.112650056e\-17"
+kg 
+.br
+ 
+.SS "const double KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP = 9\&.2510873014e\-14"
+u 
+.br
+ 
+.SS "const double KELVIN_ELECTRON_VOLT_RELATIONSHIP = 8\&.617333262e\-5"
+eV 
+.br
+ 
+.SS "const double KELVIN_HARTREE_RELATIONSHIP = 3\&.1668115634556e\-6"
+E_h 
+.br
+ 
+.SS "const double KELVIN_HERTZ_RELATIONSHIP = 2\&.083661912e10"
+Hz 
+.br
+ 
+.SS "const double KELVIN_INVERSE_METER_RELATIONSHIP = 69\&.50348004"
+m^-1 
+.br
+ 
+.SS "const double KELVIN_JOULE_RELATIONSHIP = 1\&.380649e\-23"
+J 
+.br
+ 
+.SS "const double KELVIN_KILOGRAM_RELATIONSHIP = 1\&.536179187e\-40"
+kg 
+.br
+ 
+.SS "const double KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP = 6\&.0221407621e26"
+u 
+.br
+ 
+.SS "const double KILOGRAM_ELECTRON_VOLT_RELATIONSHIP = 5\&.609588603e35"
+eV 
+.br
+ 
+.SS "const double KILOGRAM_HARTREE_RELATIONSHIP = 2\&.0614857887409e34"
+E_h 
+.br
+ 
+.SS "const double KILOGRAM_HERTZ_RELATIONSHIP = 1\&.356392489e50"
+Hz 
+.br
+ 
+.SS "const double KILOGRAM_INVERSE_METER_RELATIONSHIP = 4\&.524438335e41"
+m^-1 
+.br
+ 
+.SS "const double KILOGRAM_JOULE_RELATIONSHIP = 8\&.987551787e16"
+J 
+.br
+ 
+.SS "const double KILOGRAM_KELVIN_RELATIONSHIP = 6\&.509657260e39"
+K 
+.br
+ 
+.SS "const double LATTICE_PARAMETER_OF_SILICON = 5\&.431020511e\-10"
+m 
+.br
+ 
+.SS "const double LATTICE_SPACING_OF_IDEAL_SI__220 = 1\&.920155716e\-10"
+m 
+.br
+ 
+.SS "const double LOSCHMIDT_CONSTANT__273_15_K__100_KPA = 2\&.651645804e25"
+m^-3 
+.br
+ 
+.SS "const double LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA = 2\&.686780111e25"
+m^-3 
+.br
+ 
+.SS "const double LUMINOUS_EFFICACY = 683\&.0"
+lm W^-1 
+.br
+ 
+.SS "const double MAG__FLUX_QUANTUM = 2\&.067833848e\-15"
+Wb 
+.br
+ 
+.SS "const double MOLAR_GAS_CONSTANT = 8\&.314462618"
+J mol^-1 K^-1 
+.br
+ 
+.SS "const double MOLAR_MASS_CONSTANT = 0\&.99999999965e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double MOLAR_MASS_OF_CARBON_12 = 11\&.9999999958e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double MOLAR_PLANCK_CONSTANT = 3\&.990312712e\-10"
+J Hz^-1 mol^-1 
+.br
+ 
+.SS "const double MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA = 22\&.71095464e\-3"
+m^3 mol^-1 
+.br
+ 
+.SS "const double MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA = 22\&.41396954e\-3"
+m^3 mol^-1 
+.br
+ 
+.SS "const double MOLAR_VOLUME_OF_SILICON = 1\&.205883199e\-5"
+m^3 mol^-1 
+.br
+ 
+.SS "const double MOLYBDENUM_X_UNIT = 1\&.00209952e\-13"
+m 
+.br
+ 
+.SS "const double MUON_COMPTON_WAVELENGTH = 1\&.173444110e\-14"
+m 
+.br
+ 
+.SS "const double MUON_ELECTRON_MASS_RATIO = 206\&.7682830"
+
+.SS "const double MUON_G_FACTOR = \-2\&.0023318418"
+
+.SS "const double MUON_MAG__MOM = \-4\&.49044830e\-26"
+J T^-1 
+.br
+ 
+.SS "const double MUON_MAG__MOM__ANOMALY = 1\&.16592089e\-3"
+
+.SS "const double MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = \-4\&.84197047e\-3"
+
+.SS "const double MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = \-8\&.89059703"
+
+.SS "const double MUON_MASS = 1\&.883531627e\-28"
+kg 
+.br
+ 
+.SS "const double MUON_MASS_ENERGY_EQUIVALENT = 1\&.692833804e\-11"
+J 
+.br
+ 
+.SS "const double MUON_MASS_ENERGY_EQUIVALENT_IN_MEV = 105\&.6583755"
+MeV 
+.br
+ 
+.SS "const double MUON_MASS_IN_U = 0\&.1134289259"
+u 
+.br
+ 
+.SS "const double MUON_MOLAR_MASS = 1\&.134289259e\-4"
+kg mol^-1 
+.br
+ 
+.SS "const double MUON_NEUTRON_MASS_RATIO = 0\&.1124545170"
+
+.SS "const double MUON_PROTON_MAG__MOM__RATIO = \-3\&.183345142"
+
+.SS "const double MUON_PROTON_MASS_RATIO = 0\&.1126095264"
+
+.SS "const double MUON_TAU_MASS_RATIO = 5\&.94635e\-2"
+
+.SS "const double NATURAL_UNIT_OF_ACTION = 1\&.054571817e\-34"
+J s 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_ACTION_IN_EV_S = 6\&.582119569e\-16"
+eV s 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_ENERGY = 8\&.1871057769e\-14"
+J 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_ENERGY_IN_MEV = 0\&.51099895000"
+MeV 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_LENGTH = 3\&.8615926796e\-13"
+m 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_MASS = 9\&.1093837015e\-31"
+kg 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_MOMENTUM = 2\&.73092453075e\-22"
+kg m s^-1 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C = 0\&.51099895000"
+MeV/c 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_TIME = 1\&.28808866819e\-21"
+s 
+.br
+ 
+.SS "const double NATURAL_UNIT_OF_VELOCITY = 299792458\&.0"
+m s^-1 
+.br
+ 
+.SS "const double NEUTRON_COMPTON_WAVELENGTH = 1\&.31959090581e\-15"
+m 
+.br
+ 
+.SS "const double NEUTRON_ELECTRON_MAG__MOM__RATIO = 1\&.04066882e\-3"
+
+.SS "const double NEUTRON_ELECTRON_MASS_RATIO = 1838\&.68366173"
+
+.SS "const double NEUTRON_G_FACTOR = \-3\&.82608545"
+
+.SS "const double NEUTRON_GYROMAG__RATIO = 1\&.83247171e8"
+s^-1 T^-1 
+.br
+ 
+.SS "const double NEUTRON_GYROMAG__RATIO_IN_MHZ_T = 29\&.1646931"
+MHz T^-1 
+.br
+ 
+.SS "const double NEUTRON_MAG__MOM = \-9\&.6623651e\-27"
+J T^-1 
+.br
+ 
+.SS "const double NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = \-1\&.04187563e\-3"
+
+.SS "const double NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = \-1\&.91304273"
+
+.SS "const double NEUTRON_MASS = 1\&.67492749804e\-27"
+kg 
+.br
+ 
+.SS "const double NEUTRON_MASS_ENERGY_EQUIVALENT = 1\&.50534976287e\-10"
+J 
+.br
+ 
+.SS "const double NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV = 939\&.56542052"
+MeV 
+.br
+ 
+.SS "const double NEUTRON_MASS_IN_U = 1\&.00866491595"
+u 
+.br
+ 
+.SS "const double NEUTRON_MOLAR_MASS = 1\&.00866491560e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double NEUTRON_MUON_MASS_RATIO = 8\&.89248406"
+
+.SS "const double NEUTRON_PROTON_MAG__MOM__RATIO = \-0\&.68497934"
+
+.SS "const double NEUTRON_PROTON_MASS_DIFFERENCE = 2\&.30557435e\-30"
+kg 
+.br
+ 
+.SS "const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT = 2\&.07214689e\-13"
+J 
+.br
+ 
+.SS "const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV = 1\&.29333236"
+MeV 
+.br
+ 
+.SS "const double NEUTRON_PROTON_MASS_DIFFERENCE_IN_U = 1\&.38844933e\-3"
+u 
+.br
+ 
+.SS "const double NEUTRON_PROTON_MASS_RATIO = 1\&.00137841931"
+
+.SS "const double NEUTRON_RELATIVE_ATOMIC_MASS = 1\&.00866491595"
+
+.SS "const double NEUTRON_TAU_MASS_RATIO = 0\&.528779"
+
+.SS "const double NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO = \-0\&.68499694"
+
+.SS "const double NEWTONIAN_CONSTANT_OF_GRAVITATION = 6\&.67430e\-11"
+m^3 kg^-1 s^-2 
+.br
+ 
+.SS "const double NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C = 6\&.70883e\-39"
+(GeV/c^2)^-2 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON = 5\&.0507837461e\-27"
+J T^-1 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON_IN_EV_T = 3\&.15245125844e\-8"
+eV T^-1 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA = 2\&.54262341353e\-2"
+m^-1 T^-1 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON_IN_K_T = 3\&.6582677756e\-4"
+K T^-1 
+.br
+ 
+.SS "const double NUCLEAR_MAGNETON_IN_MHZ_T = 7\&.6225932291"
+MHz T^-1 
+.br
+ 
+.SS "const double PLANCK_CONSTANT = 6\&.62607015e\-34"
+J Hz^-1 
+.br
+ 
+.SS "const double PLANCK_CONSTANT_IN_EV_HZ = 4\&.135667696e\-15"
+eV Hz^-1 
+.br
+ 
+.SS "const double PLANCK_LENGTH = 1\&.616255e\-35"
+m 
+.br
+ 
+.SS "const double PLANCK_MASS = 2\&.176434e\-8"
+kg 
+.br
+ 
+.SS "const double PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV = 1\&.220890e19"
+GeV 
+.br
+ 
+.SS "const double PLANCK_TEMPERATURE = 1\&.416784e32"
+K 
+.br
+ 
+.SS "const double PLANCK_TIME = 5\&.391247e\-44"
+s 
+.br
+ 
+.SS "const double PROTON_CHARGE_TO_MASS_QUOTIENT = 9\&.5788331560e7"
+C kg^-1 
+.br
+ 
+.SS "const double PROTON_COMPTON_WAVELENGTH = 1\&.32140985539e\-15"
+m 
+.br
+ 
+.SS "const double PROTON_ELECTRON_MASS_RATIO = 1836\&.15267343"
+
+.SS "const double PROTON_G_FACTOR = 5\&.5856946893"
+
+.SS "const double PROTON_GYROMAG__RATIO = 2\&.6752218744e8"
+s^-1 T^-1 
+.br
+ 
+.SS "const double PROTON_GYROMAG__RATIO_IN_MHZ_T = 42\&.577478518"
+MHz T^-1 
+.br
+ 
+.SS "const double PROTON_MAG__MOM = 1\&.41060679736e\-26"
+J T^-1 
+.br
+ 
+.SS "const double PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 1\&.52103220230e\-3"
+
+.SS "const double PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 2\&.79284734463"
+
+.SS "const double PROTON_MAG__SHIELDING_CORRECTION = 2\&.5689e\-5"
+
+.SS "const double PROTON_MASS = 1\&.67262192369e\-27"
+kg 
+.br
+ 
+.SS "const double PROTON_MASS_ENERGY_EQUIVALENT = 1\&.50327761598e\-10"
+J 
+.br
+ 
+.SS "const double PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV = 938\&.27208816"
+MeV 
+.br
+ 
+.SS "const double PROTON_MASS_IN_U = 1\&.007276466621"
+u 
+.br
+ 
+.SS "const double PROTON_MOLAR_MASS = 1\&.00727646627e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double PROTON_MUON_MASS_RATIO = 8\&.88024337"
+
+.SS "const double PROTON_NEUTRON_MAG__MOM__RATIO = \-1\&.45989805"
+
+.SS "const double PROTON_NEUTRON_MASS_RATIO = 0\&.99862347812"
+
+.SS "const double PROTON_RELATIVE_ATOMIC_MASS = 1\&.007276466621"
+
+.SS "const double PROTON_RMS_CHARGE_RADIUS = 8\&.414e\-16"
+m 
+.br
+ 
+.SS "const double PROTON_TAU_MASS_RATIO = 0\&.528051"
+
+.SS "const double QUANTUM_OF_CIRCULATION = 3\&.6369475516e\-4"
+m^2 s^-1 
+.br
+ 
+.SS "const double QUANTUM_OF_CIRCULATION_TIMES_2 = 7\&.2738951032e\-4"
+m^2 s^-1 
+.br
+ 
+.SS "const double REDUCED_COMPTON_WAVELENGTH = 3\&.8615926796e\-13"
+m 
+.br
+ 
+.SS "const double REDUCED_MUON_COMPTON_WAVELENGTH = 1\&.867594306e\-15"
+m 
+.br
+ 
+.SS "const double REDUCED_NEUTRON_COMPTON_WAVELENGTH = 2\&.1001941552e\-16"
+m 
+.br
+ 
+.SS "const double REDUCED_PLANCK_CONSTANT = 1\&.054571817e\-34"
+J s 
+.br
+ 
+.SS "const double REDUCED_PLANCK_CONSTANT_IN_EV_S = 6\&.582119569e\-16"
+eV s 
+.br
+ 
+.SS "const double REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM = 197\&.3269804"
+MeV fm 
+.br
+ 
+.SS "const double REDUCED_PROTON_COMPTON_WAVELENGTH = 2\&.10308910336e\-16"
+m 
+.br
+ 
+.SS "const double REDUCED_TAU_COMPTON_WAVELENGTH = 1\&.110538e\-16"
+m 
+.br
+ 
+.SS "const double RYDBERG_CONSTANT = 10973731\&.568160"
+m^-1 
+.br
+ 
+.SS "const double RYDBERG_CONSTANT_TIMES_C_IN_HZ = 3\&.2898419602508e15"
+Hz 
+.br
+ 
+.SS "const double RYDBERG_CONSTANT_TIMES_HC_IN_EV = 13\&.605693122994"
+eV 
+.br
+ 
+.SS "const double RYDBERG_CONSTANT_TIMES_HC_IN_J = 2\&.1798723611035e\-18"
+J 
+.br
+ 
+.SS "const double SACKUR_TETRODE_CONSTANT__1_K__100_KPA = \-1\&.15170753706"
+
+.SS "const double SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA = \-1\&.16487052358"
+
+.SS "const double SECOND_RADIATION_CONSTANT = 1\&.438776877e\-2"
+m K 
+.br
+ 
+.SS "const double SHIELDED_HELION_GYROMAG__RATIO = 2\&.037894569e8"
+s^-1 T^-1 
+.br
+ 
+.SS "const double SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T = 32\&.43409942"
+MHz T^-1 
+.br
+ 
+.SS "const double SHIELDED_HELION_MAG__MOM = \-1\&.074553090e\-26"
+J T^-1 
+.br
+ 
+.SS "const double SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO = \-1\&.158671471e\-3"
+
+.SS "const double SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = \-2\&.127497719"
+
+.SS "const double SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO = \-0\&.7617665618"
+
+.SS "const double SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO = \-0\&.7617861313"
+
+.SS "const double SHIELDED_PROTON_GYROMAG__RATIO = 2\&.675153151e8"
+s^-1 T^-1 
+.br
+ 
+.SS "const double SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T = 42\&.57638474"
+MHz T^-1 
+.br
+ 
+.SS "const double SHIELDED_PROTON_MAG__MOM = 1\&.410570560e\-26"
+J T^-1 
+.br
+ 
+.SS "const double SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 1\&.520993128e\-3"
+
+.SS "const double SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 2\&.792775599"
+
+.SS "const double SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD = 2\&.0200e\-8"
+
+.SS "const double SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT = 2\&.4140e\-8"
+
+.SS "const double SPEED_OF_LIGHT_IN_VACUUM = 299792458\&.0"
+m s^-1 
+.br
+ 
+.SS "const double STANDARD_ACCELERATION_OF_GRAVITY = 9\&.80665"
+m s^-2 
+.br
+ 
+.SS "const double STANDARD_ATMOSPHERE = 101325\&.0"
+Pa 
+.br
+ 
+.SS "const double STANDARD_STATE_PRESSURE = 100000\&.0"
+Pa 
+.br
+ 
+.SS "const double STEFAN_BOLTZMANN_CONSTANT = 5\&.670374419e\-8"
+W m^-2 K^-4 
+.br
+ 
+.SS "const double TAU_COMPTON_WAVELENGTH = 6\&.97771e\-16"
+m 
+.br
+ 
+.SS "const double TAU_ELECTRON_MASS_RATIO = 3477\&.23"
+
+.SS "const double TAU_ENERGY_EQUIVALENT = 1776\&.86"
+MeV 
+.br
+ 
+.SS "const double TAU_MASS = 3\&.16754e\-27"
+kg 
+.br
+ 
+.SS "const double TAU_MASS_ENERGY_EQUIVALENT = 2\&.84684e\-10"
+J 
+.br
+ 
+.SS "const double TAU_MASS_IN_U = 1\&.90754"
+u 
+.br
+ 
+.SS "const double TAU_MOLAR_MASS = 1\&.90754e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double TAU_MUON_MASS_RATIO = 16\&.8170"
+
+.SS "const double TAU_NEUTRON_MASS_RATIO = 1\&.89115"
+
+.SS "const double TAU_PROTON_MASS_RATIO = 1\&.89376"
+
+.SS "const double THOMSON_CROSS_SECTION = 6\&.6524587321e\-29"
+m^2 
+.br
+ 
+.SS "const double TRITON_ELECTRON_MASS_RATIO = 5496\&.92153573"
+
+.SS "const double TRITON_G_FACTOR = 5\&.957924931"
+
+.SS "const double TRITON_MAG__MOM = 1\&.5046095202e\-26"
+J T^-1 
+.br
+ 
+.SS "const double TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO = 1\&.6223936651e\-3"
+
+.SS "const double TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO = 2\&.9789624656"
+
+.SS "const double TRITON_MASS = 5\&.0073567446e\-27"
+kg 
+.br
+ 
+.SS "const double TRITON_MASS_ENERGY_EQUIVALENT = 4\&.5003878060e\-10"
+J 
+.br
+ 
+.SS "const double TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV = 2808\&.92113298"
+MeV 
+.br
+ 
+.SS "const double TRITON_MASS_IN_U = 3\&.01550071621"
+u 
+.br
+ 
+.SS "const double TRITON_MOLAR_MASS = 3\&.01550071517e\-3"
+kg mol^-1 
+.br
+ 
+.SS "const double TRITON_PROTON_MASS_RATIO = 2\&.99371703414"
+
+.SS "const double TRITON_RELATIVE_ATOMIC_MASS = 3\&.01550071621"
+
+.SS "const double TRITON_TO_PROTON_MAG__MOM__RATIO = 1\&.0666399191"
+
+.SS "const double UNIFIED_ATOMIC_MASS_UNIT = 1\&.66053906660e\-27"
+kg 
+.br
+ 
+.SS "const double VACUUM_ELECTRIC_PERMITTIVITY = 8\&.8541878128e\-12"
+F m^-1 
+.br
+ 
+.SS "const double VACUUM_MAG__PERMEABILITY = 1\&.25663706212e\-6"
+N A^-2 
+.br
+ 
+.SS "const double VON_KLITZING_CONSTANT = 25812\&.80745"
+ohm 
+.br
+ 
+.SS "const double W_TO_Z_MASS_RATIO = 0\&.88153"
+
+.SS "const double WEAK_MIXING_ANGLE = 0\&.22290"
+
+.SS "const double WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT = 5\&.878925757e10"
+Hz K^-1 
+.br
+ 
+.SS "const double WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT = 2\&.897771955e\-3"
+m K 
+.br
+ 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Codata from the source code\&.

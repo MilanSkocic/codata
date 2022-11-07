@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['inverse_5ffine_5fstructure_5fconstant_0',['inverse_fine_structure_constant',['../namespacecodata.html#ae4126fed7b2153ed444df6bf3f441c05',1,'codata']]],
+  ['inverse_5ffine_5fstructure_5fconstant_1',['INVERSE_FINE_STRUCTURE_CONSTANT',['../codata_8c.html#afafd4ad2ec8a026a25b11194edb1f254',1,'INVERSE_FINE_STRUCTURE_CONSTANT():&#160;codata.c'],['../codata_8h.html#afafd4ad2ec8a026a25b11194edb1f254',1,'INVERSE_FINE_STRUCTURE_CONSTANT():&#160;codata.c']]],
+  ['inverse_5fmeter_5fatomic_5fmass_5funit_5frelationship_2',['inverse_meter_atomic_mass_unit_relationship',['../namespacecodata.html#acc3b72b30dc5131dccfad18dc01e497d',1,'codata']]],
+  ['inverse_5fmeter_5fatomic_5fmass_5funit_5frelationship_3',['INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP',['../codata_8c.html#abbfaa5b3526f1e6cf8b2f29602a772d4',1,'INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP():&#160;codata.c'],['../codata_8h.html#abbfaa5b3526f1e6cf8b2f29602a772d4',1,'INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP():&#160;codata.c']]],
+  ['inverse_5fmeter_5felectron_5fvolt_5frelationship_4',['inverse_meter_electron_volt_relationship',['../namespacecodata.html#a4f997b3fde4629025c42289afe19fe1e',1,'codata']]],
+  ['inverse_5fmeter_5felectron_5fvolt_5frelationship_5',['INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP',['../codata_8c.html#a26b5ad913686a5450f9d49ac28ca2d92',1,'INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP():&#160;codata.c'],['../codata_8h.html#a26b5ad913686a5450f9d49ac28ca2d92',1,'INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP():&#160;codata.c']]],
+  ['inverse_5fmeter_5fhartree_5frelationship_6',['inverse_meter_hartree_relationship',['../namespacecodata.html#ab5640cb47691c5211f2e77e600c14bb7',1,'codata']]],
+  ['inverse_5fmeter_5fhartree_5frelationship_7',['INVERSE_METER_HARTREE_RELATIONSHIP',['../codata_8c.html#a925ed9babe0b02a4bf38609450d8e446',1,'INVERSE_METER_HARTREE_RELATIONSHIP():&#160;codata.c'],['../codata_8h.html#a925ed9babe0b02a4bf38609450d8e446',1,'INVERSE_METER_HARTREE_RELATIONSHIP():&#160;codata.c']]],
+  ['inverse_5fmeter_5fhertz_5frelationship_8',['inverse_meter_hertz_relationship',['../namespacecodata.html#aa30d5747c1190ac24b49d13bc0f8b186',1,'codata']]],
+  ['inverse_5fmeter_5fhertz_5frelationship_9',['INVERSE_METER_HERTZ_RELATIONSHIP',['../codata_8c.html#af7e8fa538f78d6dc8385f50792619865',1,'INVERSE_METER_HERTZ_RELATIONSHIP():&#160;codata.c'],['../codata_8h.html#af7e8fa538f78d6dc8385f50792619865',1,'INVERSE_METER_HERTZ_RELATIONSHIP():&#160;codata.c']]],
+  ['inverse_5fmeter_5fjoule_5frelationship_10',['inverse_meter_joule_relationship',['../namespacecodata.html#aaf37c782129fe5e2ce6aef5250b686a2',1,'codata']]],
+  ['inverse_5fmeter_5fjoule_5frelationship_11',['INVERSE_METER_JOULE_RELATIONSHIP',['../codata_8c.html#a6fa97d5e424d73d3d7b6f5ad94494949',1,'INVERSE_METER_JOULE_RELATIONSHIP():&#160;codata.c'],['../codata_8h.html#a6fa97d5e424d73d3d7b6f5ad94494949',1,'INVERSE_METER_JOULE_RELATIONSHIP():&#160;codata.c']]],
+  ['inverse_5fmeter_5fkelvin_5frelationship_12',['INVERSE_METER_KELVIN_RELATIONSHIP',['../codata_8c.html#a42e08d8eb9ce442aecff76f3e47d1ffe',1,'INVERSE_METER_KELVIN_RELATIONSHIP():&#160;codata.c'],['../codata_8h.html#a42e08d8eb9ce442aecff76f3e47d1ffe',1,'INVERSE_METER_KELVIN_RELATIONSHIP():&#160;codata.c']]],
+  ['inverse_5fmeter_5fkelvin_5frelationship_13',['inverse_meter_kelvin_relationship',['../namespacecodata.html#a3780199c3bbe5e6bf0db3634dc6f98b5',1,'codata']]],
+  ['inverse_5fmeter_5fkilogram_5frelationship_14',['inverse_meter_kilogram_relationship',['../namespacecodata.html#a8140f67a1cc62e5f3cf02c7aa497af1c',1,'codata']]],
+  ['inverse_5fmeter_5fkilogram_5frelationship_15',['INVERSE_METER_KILOGRAM_RELATIONSHIP',['../codata_8c.html#a5a13374ece215023eb6dd24f525ab292',1,'INVERSE_METER_KILOGRAM_RELATIONSHIP():&#160;codata.c'],['../codata_8h.html#a5a13374ece215023eb6dd24f525ab292',1,'INVERSE_METER_KILOGRAM_RELATIONSHIP():&#160;codata.c']]],
+  ['inverse_5fof_5fconductance_5fquantum_16',['INVERSE_OF_CONDUCTANCE_QUANTUM',['../codata_8c.html#a75a9ffb93023ab83e1c2db3fad1a047d',1,'INVERSE_OF_CONDUCTANCE_QUANTUM():&#160;codata.c'],['../codata_8h.html#a75a9ffb93023ab83e1c2db3fad1a047d',1,'INVERSE_OF_CONDUCTANCE_QUANTUM():&#160;codata.c']]],
+  ['inverse_5fof_5fconductance_5fquantum_17',['inverse_of_conductance_quantum',['../namespacecodata.html#ad1b8ce7259e81a907bb57a73c3761c1a',1,'codata']]]
+];
