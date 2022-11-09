@@ -54,10 +54,10 @@ static const char c_doxy_example_detail[] = "@details How to us ccodata in c.\n"
 static const char f_doxy_example[] = "@example example_in_fortran.f90\n";
 static const char f_doxy_example_detail[] = "@details How to us ccodata in Fortran.\n";
 
-static const char c_type[14] = "const double \0";
-static const char f90_type[30] = "real(c_double), parameter :: \0";
+static const char c_type[] = "extern const double ";
+static const char f90_type[] = "real(c_double), bind(C), protected :: ";
 
-static const char c_header[] = "#include \"codata.h\"\0";
+static const char c_header[] = "#include \"codata.h\"";
 static const char f90_header[49] = "module codata\nuse iso_c_binding\nimplicit none\0";
 
 static const char c_footer[1] = "\0";
@@ -86,10 +86,10 @@ void format_names(char *line, char *name, char *dname, int language){
     for(i=0; i<NAMES_SIZE; i++){
         switch(language){
             case C:
-                name[i] = toupper(name[i]);
+                name[i] = tolower(name[i]);
                 break;
             case F90:
-                name[i] = toupper(name[i]);
+                name[i] = tolower(name[i]);
                 break;
             default:
                 name[i] = toupper(name[i]);
@@ -237,7 +237,6 @@ void format_uncertainties(char *line, char *uncertainty, int language){
                     flag_exponent = 1;
                 }
             }
-            printf("%d %s\n", flag_exponent, uncertainty);
             if (flag_exponent == 0){
                 for(i=(UNCERTAINTIES_SIZE-1); i>=0; i--){
                     if(isdigit(uncertainty[i]) > 0){
@@ -480,7 +479,6 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
             format_units(line, unit, language);
 
             if(language == C){
-                fputs("extern ", fheader);
                 fputs(type, fheader);
                 fputs(name, fheader);
                 fputs(end, fheader);
@@ -488,7 +486,6 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
                 fputs(unit, fheader);
                 fputs(doxy_inline_end, fheader);
                 fputs(newline, fheader);
-                fputs("extern ", fheader);
                 fputs(type, fheader);
                 fputs(dname, fheader);
                 fputs(end, fheader);
