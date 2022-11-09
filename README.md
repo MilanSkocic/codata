@@ -1,17 +1,16 @@
 # Introduction
 
-Simple program for generating codata for C, Fortran.
+`codata` is a (Modern) Fortran library providing the codata constants. 
+It also provides a header for the C language.
 
-The raw codata from http://physics.nist.gov/constants are converted into
-C and Fortran code. The generator generates:
- * an module for Fortran
- * and header and source files for C
+The raw codata from http://physics.nist.gov/constants are converted into an Fortran module and a C header.
+The generator, written in C, generates:
+ * a Fortran module
+ * a C header
 
-The generated files are then compiled into shared and static libraries:
- * libccodata for C
- * libfcodata for Fortran
+The generated Fortran module is then compiled into a shared and static library `libcodata`.
 
-The libraries for C and Fortran can be installed in order to be included in programs.
+The static and shared libraries can be installed in order to be included in Fortran or C programs.
 
 The compilation was tested on Linux (Debian 10) and MacOS.
 

@@ -1,14 +1,13 @@
 /**
  * @file
  * 
- * @brief Source code generator for C and Fortran languages.
+ * @brief Source code generator for Fortran module and C header.
  * 
  * @details The raw codata from http://physics.nist.gov/constants are converted into
  * C and Fortran code. 
  * The generator generates:
- * - an module for Fortran
- * - and header and source files for C
- * The generated files are then compiled into shared and static libraries.
+ * - a Fortran module
+ * - a C header
  *   
 */
 #include <stdio.h>
