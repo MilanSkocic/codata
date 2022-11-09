@@ -114,6 +114,7 @@ void format_values(char *line, char *value, int language){
     size_t i;
     size_t j;
     int flag_decimal = 0;
+    int flag_exponent = 0;
 
     char *temp = (char *)malloc(sizeof(char)*VALUES_SIZE);
     
@@ -166,7 +167,21 @@ void format_values(char *line, char *value, int language){
                 if (value[i]=='e'){
                     value[i] = 'd';
                 }
+                if(value[i] == 'd'){
+                    flag_exponent = 1;
+                }
+            
             }
+            if (flag_exponent == 0){
+                for(i=(VALUES_SIZE-1); i>=0; i--){
+                    if(isdigit(value[i]) > 0){
+                        value[i+1] = 'd';
+                        value[i+2] = '0';
+                        break;
+                    }
+                }
+            }
+            break;
     }
     free(temp);
 }
@@ -174,6 +189,7 @@ void format_values(char *line, char *value, int language){
 void format_uncertainties(char *line, char *uncertainty, int language){
     size_t i;
     size_t j;
+    int flag_exponent = 0;
 
     char *temp = (char *)malloc(sizeof(char)*UNCERTAINTIES_SIZE);
     for(i=0; i<UNCERTAINTIES_SIZE; i++){
@@ -209,20 +225,27 @@ void format_uncertainties(char *line, char *uncertainty, int language){
             j++;
         }
     }
-    j = 0;
     for(i=0; i<UNCERTAINTIES_SIZE; i++){
         uncertainty[i] = temp[i];
-    }
-    if(j == UNCERTAINTIES_SIZE){
-        uncertainty[0] = '0';
-        uncertainty[1] = '.';
-        uncertainty[2] = '0';
     }
     switch(language){
         case F90:
             for(i=0; i<UNCERTAINTIES_SIZE; i++){
                 if (uncertainty[i]=='e'){
                     uncertainty[i] = 'd';
+                }
+                if(uncertainty[i] == 'd'){
+                    flag_exponent = 1;
+                }
+            }
+            printf("%d %s\n", flag_exponent, uncertainty);
+            if (flag_exponent == 0){
+                for(i=(UNCERTAINTIES_SIZE-1); i>=0; i--){
+                    if(isdigit(uncertainty[i]) > 0){
+                        uncertainty[i+1] = 'd';
+                        uncertainty[i+2] = '0';
+                        break;
+                    }
                 }
             }
     }
