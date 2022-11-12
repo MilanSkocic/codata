@@ -44,20 +44,20 @@ static const char f_doxy_inline_end[] = " ";
 static const char c_doxy_start[] = "/** \n * @file\n";
 static const char c_doxy_middle[] = " * ";
 static const char c_doxy_end[] = " */\n";
-static const char f_doxy_start[] = "!> \n";
+static const char f_doxy_start[] = "!> \n!! @file\n";
 static const char f_doxy_middle[] = "!! ";
 static const char f_doxy_end[] = "!! \n";
 
 static const char c_doxy_example[] = "@example example_in_c.c\n";
-static const char c_doxy_example_detail[] = "@details How to us ccodata in c.\n";
+static const char c_doxy_example_detail[] = "@details How to us codata in c.\n";
 
 static const char f_doxy_example[] = "@example example_in_fortran.f90\n";
-static const char f_doxy_example_detail[] = "@details How to us ccodata in Fortran.\n";
+static const char f_doxy_example_detail[] = "@details How to us codata in Fortran.\n";
 
 static const char c_type[] = "extern const double ";
 static const char f90_type[] = "real(c_double), bind(C), protected :: ";
 
-static const char c_header[] = "#include \"codata.h\"";
+static const char c_header[1] = "\0";
 static const char f90_header[49] = "module codata\nuse iso_c_binding\nimplicit none\0";
 
 static const char c_footer[1] = "\0";
@@ -299,7 +299,7 @@ void ltrim(char *buf, size_t buffer_size){
         }
     }
     clean_line(temp, buffer_size);
-    for(i; i<buffer_size; i++){
+    for(i=i; i<buffer_size; i++){
         temp[j] = buf[i];
         j++;
     }
@@ -426,43 +426,62 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
             doxy_example = f_doxy_example;
             doxy_example_detail = f_doxy_example_detail;
             break;
-        default:
-            printf("Generating C code\n");
-            end = c_end;
-            equal = c_equal;
-            comment = c_comment;
-            type = c_type;
-            header = c_header;
-            footer = c_footer;
     }
     
     /* Copy header from codata */
-    fputs(doxy_start, fcode);
     if(language == C){
         fputs(doxy_start, fheader);
+    }
+    if(language == F90){
+        fputs(doxy_start, fcode);
     }
     for(i=0; i<=10; i++){
         clean_line(line, BUFFER_SIZE);
         read_line(codata, line);
         if((i<9) & (is_blank_line(line, BUFFER_SIZE)<=0)){
-            fputs(doxy_middle, fcode);
             ltrim(line, BUFFER_SIZE);
-            fputs(line, fcode);
-            fputs(newline, fcode);
+            switch(language){
+                case C:
+                    fputs(doxy_middle, fheader);
+                    fputs(line, fheader);
+                    fputs(newline, fheader);
+                    break;
+                case F90:
+                    fputs(doxy_middle, fcode);
+                    fputs(line, fcode);
+                    fputs(newline, fcode);
+                    break;
+            }
         }
     }
-    fputs(doxy_middle, fcode);
-    fputs(doxy_example, fcode);
-    fputs(doxy_middle, fcode);
-    fputs(doxy_example_detail, fcode);
-    fputs(doxy_end, fcode);
-    if(language == C){
-        fputs(doxy_end, fheader);
+    switch(language){
+        case C:
+            fputs(doxy_middle, fheader);
+            fputs(doxy_example, fheader);
+            fputs(doxy_middle, fheader);
+            fputs(doxy_example_detail, fheader);
+            fputs(doxy_end, fheader);
+            break;
+        case F90:
+            fputs(doxy_middle, fcode);
+            fputs(doxy_example, fcode);
+            fputs(doxy_middle, fcode);
+            fputs(doxy_example_detail, fcode);
+            fputs(doxy_end, fcode);
+            break;
     }
 
     /* Write header for each language */
-    fputs(header, fcode);
-    fputs(newline, fcode);
+    switch(language){
+        case C:
+            fputs(header, fheader);
+            fputs(newline, fheader);
+            break;
+        case F90:
+            fputs(header, fcode);
+            fputs(newline, fcode);
+            break;
+    }
     i = 11;
     while(!feof(codata)){
         clean_line(line, BUFFER_SIZE);
@@ -495,25 +514,6 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
                 fputs(newline, fheader);
                 fputs(newline, fheader);
                 
-                fputs(type, fcode);
-                fputs(name, fcode);
-                fputs(equal, fcode);
-                fputs(value, fcode);
-                fputs(end, fcode);
-                fputs(doxy_inline_start, fcode);
-                fputs(unit, fcode);
-                fputs(doxy_inline_end, fcode);
-                fputs(newline, fcode);
-                fputs(type, fcode);
-                fputs(dname, fcode);
-                fputs(equal, fcode);
-                fputs(uncertainty, fcode);
-                fputs(end, fcode);
-                fputs(doxy_inline_start, fcode);
-                fputs(unit, fcode);
-                fputs(doxy_inline_end, fcode);
-                fputs(newline, fcode);
-                fputs(newline, fcode);
             }else{
                 fputs(type, fcode);
                 fputs(name, fcode);
@@ -524,7 +524,6 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
                 fputs(unit, fcode);
                 fputs(doxy_inline_end, fcode);
                 fputs(newline, fcode);
-            
                 fputs(type, fcode);
                 fputs(dname, fcode);
                 fputs(equal, fcode);
@@ -534,13 +533,19 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
                 fputs(unit, fcode);
                 fputs(doxy_inline_end, fcode);
                 fputs(newline, fcode);
-
                 fputs(newline, fcode);
             }
         }
         i++;
     }
-    fputs(footer, fcode);
+    switch(language){
+        case C:
+            fputs(footer, fheader);
+            break;
+        case F90:
+            fputs(footer, fcode);
+            break;
+    }
     free(line);
     free(name);
     free(dname);
@@ -564,12 +569,10 @@ int main(int argc, char **argv){
 
     /* C Header */
     codata =  fopen(codata_path, "r");
-    strcpy(&code_path[n], ".c");
-    code = fopen(code_path, "w");
+    code = NULL;
     strcpy(&code_path[n], ".h");
     header = fopen(code_path, "w");
     write_output(codata, code, header, C);
-    fclose(code);
     fclose(header);
     fclose(codata);
     

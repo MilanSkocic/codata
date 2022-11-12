@@ -1,6 +1,12 @@
 /** 
  * @file
+ * Fundamental Physical Constants --- Complete Listing                                                                                                                                                                                                             
+ * 2018 CODATA adjustment                                                                                                                                                                                                                                          
+ * From:  http://physics.nist.gov/constants                                                                                                                                                                                                                        
+ * @example example_in_c.c
+ * @details How to us codata in c.
  */
+
 extern const double alpha_particle_electron_mass_ratio                          ;/**<                           */
 extern const double D_alpha_particle_electron_mass_ratio                        ;/**<                           */
 
