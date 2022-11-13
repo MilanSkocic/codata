@@ -1,7 +1,9 @@
 /** 
  * @file
+ * @brief 
  * Fundamental Physical Constants --- Complete Listing                                                                                                                                                                                                             
  * 2018 CODATA adjustment                                                                                                                                                                                                                                          
+ * @details
  * From:  http://physics.nist.gov/constants                                                                                                                                                                                                                        
  * @example example_in_c.c
  * @details How to us codata in c.

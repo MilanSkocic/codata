@@ -1,11 +1,15 @@
 !> 
 !! @file
+!! @brief 
 !! Fundamental Physical Constants --- Complete Listing                                                                                                                                                                                                             
 !! 2018 CODATA adjustment                                                                                                                                                                                                                                          
+!! @details
 !! From:  http://physics.nist.gov/constants                                                                                                                                                                                                                        
 !! @example example_in_fortran.f90
 !! @details How to us codata in Fortran.
 !! 
+
+!>@brief Fundamental Physical Constants (CODATA).
 module codata
 use iso_c_binding
 implicit none
