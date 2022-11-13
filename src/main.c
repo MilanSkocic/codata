@@ -55,7 +55,12 @@ static const char f_doxy_example[] = "@example example_in_fortran.f90\n";
 static const char f_doxy_example_detail[] = "@details How to us codata in Fortran.\n";
 
 static const char c_type[] = "extern const double ";
-static const char f90_type[] = "real(c_double), bind(C), protected :: ";
+static const char f90_type[] = "real(c_double), protected, ";
+static const char f90_bindc_start[] = "bind(C, name=\"";
+static const char f90_bindc_end[] = "\")";
+static const char f90_type_column[] = " :: ";
+
+static const char f90_line_continuation[] = " & \n";
 
 static const char c_header[1] = "\0";
 static const char f90_header[49] = "module codata\nuse iso_c_binding\nimplicit none\0";
@@ -86,10 +91,10 @@ void format_names(char *line, char *name, char *dname, int language){
     for(i=0; i<NAMES_SIZE; i++){
         switch(language){
             case C:
-                name[i] = tolower(name[i]);
+                name[i] = toupper(name[i]);
                 break;
             case F90:
-                name[i] = tolower(name[i]);
+                name[i] = toupper(name[i]);
                 break;
             default:
                 name[i] = toupper(name[i]);
@@ -311,6 +316,19 @@ void ltrim(char *buf, size_t buffer_size){
 
 }
 
+void rtrim(char *buf, size_t buffer_size){
+    size_t i;
+    for(i=0; i<buffer_size; i++){
+        if(isalnum(buf[buffer_size-i])>0){
+            break;
+        }else{
+            buf[buffer_size-i] = ' ';
+        }
+    }
+    buf[buffer_size-i+1]= '\0';
+}
+
+
 int is_blank_line(char *buf, size_t buffer_size){
     size_t i;
     size_t j;
@@ -516,6 +534,12 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
                 
             }else{
                 fputs(type, fcode);
+                fputs(f90_bindc_start, fcode);
+                rtrim(name, NAMES_SIZE);
+                fputs(name, fcode);
+                fputs(f90_bindc_end, fcode);
+                fputs(f90_type_column, fcode);
+                fputs(f90_line_continuation, fcode);
                 fputs(name, fcode);
                 fputs(equal, fcode);
                 fputs(value, fcode);
@@ -525,6 +549,12 @@ void write_output(FILE *codata, FILE *fcode, FILE *fheader, int language){
                 fputs(doxy_inline_end, fcode);
                 fputs(newline, fcode);
                 fputs(type, fcode);
+                fputs(f90_bindc_start, fcode);
+                rtrim(dname, NAMES_SIZE);
+                fputs(dname, fcode);
+                fputs(f90_bindc_end, fcode);
+                fputs(f90_type_column, fcode);
+                fputs(f90_line_continuation, fcode);
                 fputs(dname, fcode);
                 fputs(equal, fcode);
                 fputs(uncertainty, fcode);
