@@ -7,1065 +7,1065 @@
  * @details How to us codata in c.
  */
 
-extern const double alpha_particle_electron_mass_ratio                          ;/**<                           */
-extern const double D_alpha_particle_electron_mass_ratio                        ;/**<                           */
+extern const double ALPHA_PARTICLE_ELECTRON_MASS_RATIO                          ;/**<                           */
+extern const double U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO                        ;/**<                           */
 
-extern const double alpha_particle_mass                                         ;/**< kg                        */
-extern const double D_alpha_particle_mass                                       ;/**< kg                        */
+extern const double ALPHA_PARTICLE_MASS                                         ;/**< kg                        */
+extern const double U_ALPHA_PARTICLE_MASS                                       ;/**< kg                        */
 
-extern const double alpha_particle_mass_energy_equivalent                       ;/**< J                         */
-extern const double D_alpha_particle_mass_energy_equivalent                     ;/**< J                         */
+extern const double ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT                       ;/**< J                         */
+extern const double U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT                     ;/**< J                         */
 
-extern const double alpha_particle_mass_energy_equivalent_in_mev                ;/**< MeV                       */
-extern const double D_alpha_particle_mass_energy_equivalent_in_mev              ;/**< MeV                       */
+extern const double ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV                ;/**< MeV                       */
+extern const double U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV              ;/**< MeV                       */
 
-extern const double alpha_particle_mass_in_u                                    ;/**< u                         */
-extern const double D_alpha_particle_mass_in_u                                  ;/**< u                         */
+extern const double ALPHA_PARTICLE_MASS_IN_U                                    ;/**< u                         */
+extern const double U_ALPHA_PARTICLE_MASS_IN_U                                  ;/**< u                         */
 
-extern const double alpha_particle_molar_mass                                   ;/**< kg mol^-1                 */
-extern const double D_alpha_particle_molar_mass                                 ;/**< kg mol^-1                 */
+extern const double ALPHA_PARTICLE_MOLAR_MASS                                   ;/**< kg mol^-1                 */
+extern const double U_ALPHA_PARTICLE_MOLAR_MASS                                 ;/**< kg mol^-1                 */
 
-extern const double alpha_particle_proton_mass_ratio                            ;/**<                           */
-extern const double D_alpha_particle_proton_mass_ratio                          ;/**<                           */
+extern const double ALPHA_PARTICLE_PROTON_MASS_RATIO                            ;/**<                           */
+extern const double U_ALPHA_PARTICLE_PROTON_MASS_RATIO                          ;/**<                           */
 
-extern const double alpha_particle_relative_atomic_mass                         ;/**<                           */
-extern const double D_alpha_particle_relative_atomic_mass                       ;/**<                           */
+extern const double ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS                         ;/**<                           */
+extern const double U_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS                       ;/**<                           */
 
-extern const double angstrom_star                                               ;/**< m                         */
-extern const double D_angstrom_star                                             ;/**< m                         */
+extern const double ANGSTROM_STAR                                               ;/**< m                         */
+extern const double U_ANGSTROM_STAR                                             ;/**< m                         */
 
-extern const double atomic_mass_constant                                        ;/**< kg                        */
-extern const double D_atomic_mass_constant                                      ;/**< kg                        */
+extern const double ATOMIC_MASS_CONSTANT                                        ;/**< kg                        */
+extern const double U_ATOMIC_MASS_CONSTANT                                      ;/**< kg                        */
 
-extern const double atomic_mass_constant_energy_equivalent                      ;/**< J                         */
-extern const double D_atomic_mass_constant_energy_equivalent                    ;/**< J                         */
+extern const double ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT                      ;/**< J                         */
+extern const double U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT                    ;/**< J                         */
 
-extern const double atomic_mass_constant_energy_equivalent_in_mev               ;/**< MeV                       */
-extern const double D_atomic_mass_constant_energy_equivalent_in_mev             ;/**< MeV                       */
+extern const double ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV               ;/**< MeV                       */
+extern const double U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV             ;/**< MeV                       */
 
-extern const double atomic_mass_unit_electron_volt_relationship                 ;/**< eV                        */
-extern const double D_atomic_mass_unit_electron_volt_relationship               ;/**< eV                        */
+extern const double ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP                 ;/**< eV                        */
+extern const double U_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP               ;/**< eV                        */
 
-extern const double atomic_mass_unit_hartree_relationship                       ;/**< E_h                       */
-extern const double D_atomic_mass_unit_hartree_relationship                     ;/**< E_h                       */
+extern const double ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP                       ;/**< E_h                       */
+extern const double U_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP                     ;/**< E_h                       */
 
-extern const double atomic_mass_unit_hertz_relationship                         ;/**< Hz                        */
-extern const double D_atomic_mass_unit_hertz_relationship                       ;/**< Hz                        */
+extern const double ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP                         ;/**< Hz                        */
+extern const double U_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP                       ;/**< Hz                        */
 
-extern const double atomic_mass_unit_inverse_meter_relationship                 ;/**< m^-1                      */
-extern const double D_atomic_mass_unit_inverse_meter_relationship               ;/**< m^-1                      */
+extern const double ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP                 ;/**< m^-1                      */
+extern const double U_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP               ;/**< m^-1                      */
 
-extern const double atomic_mass_unit_joule_relationship                         ;/**< J                         */
-extern const double D_atomic_mass_unit_joule_relationship                       ;/**< J                         */
+extern const double ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP                         ;/**< J                         */
+extern const double U_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP                       ;/**< J                         */
 
-extern const double atomic_mass_unit_kelvin_relationship                        ;/**< K                         */
-extern const double D_atomic_mass_unit_kelvin_relationship                      ;/**< K                         */
+extern const double ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP                        ;/**< K                         */
+extern const double U_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP                      ;/**< K                         */
 
-extern const double atomic_mass_unit_kilogram_relationship                      ;/**< kg                        */
-extern const double D_atomic_mass_unit_kilogram_relationship                    ;/**< kg                        */
+extern const double ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP                      ;/**< kg                        */
+extern const double U_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP                    ;/**< kg                        */
 
-extern const double atomic_unit_of_1st_hyperpolarizability                      ;/**< C^3 m^3 J^-2              */
-extern const double D_atomic_unit_of_1st_hyperpolarizability                    ;/**< C^3 m^3 J^-2              */
+extern const double ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY                      ;/**< C^3 m^3 J^-2              */
+extern const double U_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY                    ;/**< C^3 m^3 J^-2              */
 
-extern const double atomic_unit_of_2nd_hyperpolarizability                      ;/**< C^4 m^4 J^-3              */
-extern const double D_atomic_unit_of_2nd_hyperpolarizability                    ;/**< C^4 m^4 J^-3              */
+extern const double ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY                      ;/**< C^4 m^4 J^-3              */
+extern const double U_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY                    ;/**< C^4 m^4 J^-3              */
 
-extern const double atomic_unit_of_action                                       ;/**< J s                       */
-extern const double D_atomic_unit_of_action                                     ;/**< J s                       */
+extern const double ATOMIC_UNIT_OF_ACTION                                       ;/**< J s                       */
+extern const double U_ATOMIC_UNIT_OF_ACTION                                     ;/**< J s                       */
 
-extern const double atomic_unit_of_charge                                       ;/**< C                         */
-extern const double D_atomic_unit_of_charge                                     ;/**< C                         */
+extern const double ATOMIC_UNIT_OF_CHARGE                                       ;/**< C                         */
+extern const double U_ATOMIC_UNIT_OF_CHARGE                                     ;/**< C                         */
 
-extern const double atomic_unit_of_charge_density                               ;/**< C m^-3                    */
-extern const double D_atomic_unit_of_charge_density                             ;/**< C m^-3                    */
+extern const double ATOMIC_UNIT_OF_CHARGE_DENSITY                               ;/**< C m^-3                    */
+extern const double U_ATOMIC_UNIT_OF_CHARGE_DENSITY                             ;/**< C m^-3                    */
 
-extern const double atomic_unit_of_current                                      ;/**< A                         */
-extern const double D_atomic_unit_of_current                                    ;/**< A                         */
+extern const double ATOMIC_UNIT_OF_CURRENT                                      ;/**< A                         */
+extern const double U_ATOMIC_UNIT_OF_CURRENT                                    ;/**< A                         */
 
-extern const double atomic_unit_of_electric_dipole_mom                          ;/**< C m                       */
-extern const double D_atomic_unit_of_electric_dipole_mom                        ;/**< C m                       */
+extern const double ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM                          ;/**< C m                       */
+extern const double U_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM                        ;/**< C m                       */
 
-extern const double atomic_unit_of_electric_field                               ;/**< V m^-1                    */
-extern const double D_atomic_unit_of_electric_field                             ;/**< V m^-1                    */
+extern const double ATOMIC_UNIT_OF_ELECTRIC_FIELD                               ;/**< V m^-1                    */
+extern const double U_ATOMIC_UNIT_OF_ELECTRIC_FIELD                             ;/**< V m^-1                    */
 
-extern const double atomic_unit_of_electric_field_gradient                      ;/**< V m^-2                    */
-extern const double D_atomic_unit_of_electric_field_gradient                    ;/**< V m^-2                    */
+extern const double ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT                      ;/**< V m^-2                    */
+extern const double U_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT                    ;/**< V m^-2                    */
 
-extern const double atomic_unit_of_electric_polarizability                      ;/**< C^2 m^2 J^-1              */
-extern const double D_atomic_unit_of_electric_polarizability                    ;/**< C^2 m^2 J^-1              */
+extern const double ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY                      ;/**< C^2 m^2 J^-1              */
+extern const double U_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY                    ;/**< C^2 m^2 J^-1              */
 
-extern const double atomic_unit_of_electric_potential                           ;/**< V                         */
-extern const double D_atomic_unit_of_electric_potential                         ;/**< V                         */
+extern const double ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL                           ;/**< V                         */
+extern const double U_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL                         ;/**< V                         */
 
-extern const double atomic_unit_of_electric_quadrupole_mom                      ;/**< C m^2                     */
-extern const double D_atomic_unit_of_electric_quadrupole_mom                    ;/**< C m^2                     */
+extern const double ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM                      ;/**< C m^2                     */
+extern const double U_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM                    ;/**< C m^2                     */
 
-extern const double atomic_unit_of_energy                                       ;/**< J                         */
-extern const double D_atomic_unit_of_energy                                     ;/**< J                         */
+extern const double ATOMIC_UNIT_OF_ENERGY                                       ;/**< J                         */
+extern const double U_ATOMIC_UNIT_OF_ENERGY                                     ;/**< J                         */
 
-extern const double atomic_unit_of_force                                        ;/**< N                         */
-extern const double D_atomic_unit_of_force                                      ;/**< N                         */
+extern const double ATOMIC_UNIT_OF_FORCE                                        ;/**< N                         */
+extern const double U_ATOMIC_UNIT_OF_FORCE                                      ;/**< N                         */
 
-extern const double atomic_unit_of_length                                       ;/**< m                         */
-extern const double D_atomic_unit_of_length                                     ;/**< m                         */
+extern const double ATOMIC_UNIT_OF_LENGTH                                       ;/**< m                         */
+extern const double U_ATOMIC_UNIT_OF_LENGTH                                     ;/**< m                         */
 
-extern const double atomic_unit_of_mag__dipole_mom                              ;/**< J T^-1                    */
-extern const double D_atomic_unit_of_mag__dipole_mom                            ;/**< J T^-1                    */
+extern const double ATOMIC_UNIT_OF_MAG__DIPOLE_MOM                              ;/**< J T^-1                    */
+extern const double U_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM                            ;/**< J T^-1                    */
 
-extern const double atomic_unit_of_mag__flux_density                            ;/**< T                         */
-extern const double D_atomic_unit_of_mag__flux_density                          ;/**< T                         */
+extern const double ATOMIC_UNIT_OF_MAG__FLUX_DENSITY                            ;/**< T                         */
+extern const double U_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY                          ;/**< T                         */
 
-extern const double atomic_unit_of_magnetizability                              ;/**< J T^-2                    */
-extern const double D_atomic_unit_of_magnetizability                            ;/**< J T^-2                    */
+extern const double ATOMIC_UNIT_OF_MAGNETIZABILITY                              ;/**< J T^-2                    */
+extern const double U_ATOMIC_UNIT_OF_MAGNETIZABILITY                            ;/**< J T^-2                    */
 
-extern const double atomic_unit_of_mass                                         ;/**< kg                        */
-extern const double D_atomic_unit_of_mass                                       ;/**< kg                        */
+extern const double ATOMIC_UNIT_OF_MASS                                         ;/**< kg                        */
+extern const double U_ATOMIC_UNIT_OF_MASS                                       ;/**< kg                        */
 
-extern const double atomic_unit_of_momentum                                     ;/**< kg m s^-1                 */
-extern const double D_atomic_unit_of_momentum                                   ;/**< kg m s^-1                 */
+extern const double ATOMIC_UNIT_OF_MOMENTUM                                     ;/**< kg m s^-1                 */
+extern const double U_ATOMIC_UNIT_OF_MOMENTUM                                   ;/**< kg m s^-1                 */
 
-extern const double atomic_unit_of_permittivity                                 ;/**< F m^-1                    */
-extern const double D_atomic_unit_of_permittivity                               ;/**< F m^-1                    */
+extern const double ATOMIC_UNIT_OF_PERMITTIVITY                                 ;/**< F m^-1                    */
+extern const double U_ATOMIC_UNIT_OF_PERMITTIVITY                               ;/**< F m^-1                    */
 
-extern const double atomic_unit_of_time                                         ;/**< s                         */
-extern const double D_atomic_unit_of_time                                       ;/**< s                         */
+extern const double ATOMIC_UNIT_OF_TIME                                         ;/**< s                         */
+extern const double U_ATOMIC_UNIT_OF_TIME                                       ;/**< s                         */
 
-extern const double atomic_unit_of_velocity                                     ;/**< m s^-1                    */
-extern const double D_atomic_unit_of_velocity                                   ;/**< m s^-1                    */
+extern const double ATOMIC_UNIT_OF_VELOCITY                                     ;/**< m s^-1                    */
+extern const double U_ATOMIC_UNIT_OF_VELOCITY                                   ;/**< m s^-1                    */
 
-extern const double avogadro_constant                                           ;/**< mol^-1                    */
-extern const double D_avogadro_constant                                         ;/**< mol^-1                    */
+extern const double AVOGADRO_CONSTANT                                           ;/**< mol^-1                    */
+extern const double U_AVOGADRO_CONSTANT                                         ;/**< mol^-1                    */
 
-extern const double bohr_magneton                                               ;/**< J T^-1                    */
-extern const double D_bohr_magneton                                             ;/**< J T^-1                    */
+extern const double BOHR_MAGNETON                                               ;/**< J T^-1                    */
+extern const double U_BOHR_MAGNETON                                             ;/**< J T^-1                    */
 
-extern const double bohr_magneton_in_ev_t                                       ;/**< eV T^-1                   */
-extern const double D_bohr_magneton_in_ev_t                                     ;/**< eV T^-1                   */
+extern const double BOHR_MAGNETON_IN_EV_T                                       ;/**< eV T^-1                   */
+extern const double U_BOHR_MAGNETON_IN_EV_T                                     ;/**< eV T^-1                   */
 
-extern const double bohr_magneton_in_hz_t                                       ;/**< Hz T^-1                   */
-extern const double D_bohr_magneton_in_hz_t                                     ;/**< Hz T^-1                   */
+extern const double BOHR_MAGNETON_IN_HZ_T                                       ;/**< Hz T^-1                   */
+extern const double U_BOHR_MAGNETON_IN_HZ_T                                     ;/**< Hz T^-1                   */
 
-extern const double bohr_magneton_in_inverse_meter_per_tesla                    ;/**< m^-1 T^-1                 */
-extern const double D_bohr_magneton_in_inverse_meter_per_tesla                  ;/**< m^-1 T^-1                 */
+extern const double BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA                    ;/**< m^-1 T^-1                 */
+extern const double U_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA                  ;/**< m^-1 T^-1                 */
 
-extern const double bohr_magneton_in_k_t                                        ;/**< K T^-1                    */
-extern const double D_bohr_magneton_in_k_t                                      ;/**< K T^-1                    */
+extern const double BOHR_MAGNETON_IN_K_T                                        ;/**< K T^-1                    */
+extern const double U_BOHR_MAGNETON_IN_K_T                                      ;/**< K T^-1                    */
 
-extern const double bohr_radius                                                 ;/**< m                         */
-extern const double D_bohr_radius                                               ;/**< m                         */
+extern const double BOHR_RADIUS                                                 ;/**< m                         */
+extern const double U_BOHR_RADIUS                                               ;/**< m                         */
 
-extern const double boltzmann_constant                                          ;/**< J K^-1                    */
-extern const double D_boltzmann_constant                                        ;/**< J K^-1                    */
+extern const double BOLTZMANN_CONSTANT                                          ;/**< J K^-1                    */
+extern const double U_BOLTZMANN_CONSTANT                                        ;/**< J K^-1                    */
 
-extern const double boltzmann_constant_in_ev_k                                  ;/**< eV K^-1                   */
-extern const double D_boltzmann_constant_in_ev_k                                ;/**< eV K^-1                   */
+extern const double BOLTZMANN_CONSTANT_IN_EV_K                                  ;/**< eV K^-1                   */
+extern const double U_BOLTZMANN_CONSTANT_IN_EV_K                                ;/**< eV K^-1                   */
 
-extern const double boltzmann_constant_in_hz_k                                  ;/**< Hz K^-1                   */
-extern const double D_boltzmann_constant_in_hz_k                                ;/**< Hz K^-1                   */
+extern const double BOLTZMANN_CONSTANT_IN_HZ_K                                  ;/**< Hz K^-1                   */
+extern const double U_BOLTZMANN_CONSTANT_IN_HZ_K                                ;/**< Hz K^-1                   */
 
-extern const double boltzmann_constant_in_inverse_meter_per_kelvin              ;/**< m^-1 K^-1                 */
-extern const double D_boltzmann_constant_in_inverse_meter_per_kelvin            ;/**< m^-1 K^-1                 */
+extern const double BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN              ;/**< m^-1 K^-1                 */
+extern const double U_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN            ;/**< m^-1 K^-1                 */
 
-extern const double characteristic_impedance_of_vacuum                          ;/**< ohm                       */
-extern const double D_characteristic_impedance_of_vacuum                        ;/**< ohm                       */
+extern const double CHARACTERISTIC_IMPEDANCE_OF_VACUUM                          ;/**< ohm                       */
+extern const double U_CHARACTERISTIC_IMPEDANCE_OF_VACUUM                        ;/**< ohm                       */
 
-extern const double classical_electron_radius                                   ;/**< m                         */
-extern const double D_classical_electron_radius                                 ;/**< m                         */
+extern const double CLASSICAL_ELECTRON_RADIUS                                   ;/**< m                         */
+extern const double U_CLASSICAL_ELECTRON_RADIUS                                 ;/**< m                         */
 
-extern const double compton_wavelength                                          ;/**< m                         */
-extern const double D_compton_wavelength                                        ;/**< m                         */
+extern const double COMPTON_WAVELENGTH                                          ;/**< m                         */
+extern const double U_COMPTON_WAVELENGTH                                        ;/**< m                         */
 
-extern const double conductance_quantum                                         ;/**< S                         */
-extern const double D_conductance_quantum                                       ;/**< S                         */
+extern const double CONDUCTANCE_QUANTUM                                         ;/**< S                         */
+extern const double U_CONDUCTANCE_QUANTUM                                       ;/**< S                         */
 
-extern const double conventional_value_of_ampere_90                             ;/**< A                         */
-extern const double D_conventional_value_of_ampere_90                           ;/**< A                         */
+extern const double CONVENTIONAL_VALUE_OF_AMPERE_90                             ;/**< A                         */
+extern const double U_CONVENTIONAL_VALUE_OF_AMPERE_90                           ;/**< A                         */
 
-extern const double conventional_value_of_coulomb_90                            ;/**< C                         */
-extern const double D_conventional_value_of_coulomb_90                          ;/**< C                         */
+extern const double CONVENTIONAL_VALUE_OF_COULOMB_90                            ;/**< C                         */
+extern const double U_CONVENTIONAL_VALUE_OF_COULOMB_90                          ;/**< C                         */
 
-extern const double conventional_value_of_farad_90                              ;/**< F                         */
-extern const double D_conventional_value_of_farad_90                            ;/**< F                         */
+extern const double CONVENTIONAL_VALUE_OF_FARAD_90                              ;/**< F                         */
+extern const double U_CONVENTIONAL_VALUE_OF_FARAD_90                            ;/**< F                         */
 
-extern const double conventional_value_of_henry_90                              ;/**< H                         */
-extern const double D_conventional_value_of_henry_90                            ;/**< H                         */
+extern const double CONVENTIONAL_VALUE_OF_HENRY_90                              ;/**< H                         */
+extern const double U_CONVENTIONAL_VALUE_OF_HENRY_90                            ;/**< H                         */
 
-extern const double conventional_value_of_josephson_constant                    ;/**< Hz V^-1                   */
-extern const double D_conventional_value_of_josephson_constant                  ;/**< Hz V^-1                   */
+extern const double CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT                    ;/**< Hz V^-1                   */
+extern const double U_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT                  ;/**< Hz V^-1                   */
 
-extern const double conventional_value_of_ohm_90                                ;/**< ohm                       */
-extern const double D_conventional_value_of_ohm_90                              ;/**< ohm                       */
+extern const double CONVENTIONAL_VALUE_OF_OHM_90                                ;/**< ohm                       */
+extern const double U_CONVENTIONAL_VALUE_OF_OHM_90                              ;/**< ohm                       */
 
-extern const double conventional_value_of_volt_90                               ;/**< V                         */
-extern const double D_conventional_value_of_volt_90                             ;/**< V                         */
+extern const double CONVENTIONAL_VALUE_OF_VOLT_90                               ;/**< V                         */
+extern const double U_CONVENTIONAL_VALUE_OF_VOLT_90                             ;/**< V                         */
 
-extern const double conventional_value_of_von_klitzing_constant                 ;/**< ohm                       */
-extern const double D_conventional_value_of_von_klitzing_constant               ;/**< ohm                       */
+extern const double CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT                 ;/**< ohm                       */
+extern const double U_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT               ;/**< ohm                       */
 
-extern const double conventional_value_of_watt_90                               ;/**< W                         */
-extern const double D_conventional_value_of_watt_90                             ;/**< W                         */
+extern const double CONVENTIONAL_VALUE_OF_WATT_90                               ;/**< W                         */
+extern const double U_CONVENTIONAL_VALUE_OF_WATT_90                             ;/**< W                         */
 
-extern const double copper_x_unit                                               ;/**< m                         */
-extern const double D_copper_x_unit                                             ;/**< m                         */
+extern const double COPPER_X_UNIT                                               ;/**< m                         */
+extern const double U_COPPER_X_UNIT                                             ;/**< m                         */
 
-extern const double deuteron_electron_mag__mom__ratio                           ;/**<                           */
-extern const double D_deuteron_electron_mag__mom__ratio                         ;/**<                           */
+extern const double DEUTERON_ELECTRON_MAG__MOM__RATIO                           ;/**<                           */
+extern const double U_DEUTERON_ELECTRON_MAG__MOM__RATIO                         ;/**<                           */
 
-extern const double deuteron_electron_mass_ratio                                ;/**<                           */
-extern const double D_deuteron_electron_mass_ratio                              ;/**<                           */
+extern const double DEUTERON_ELECTRON_MASS_RATIO                                ;/**<                           */
+extern const double U_DEUTERON_ELECTRON_MASS_RATIO                              ;/**<                           */
 
-extern const double deuteron_g_factor                                           ;/**<                           */
-extern const double D_deuteron_g_factor                                         ;/**<                           */
+extern const double DEUTERON_G_FACTOR                                           ;/**<                           */
+extern const double U_DEUTERON_G_FACTOR                                         ;/**<                           */
 
-extern const double deuteron_mag__mom                                           ;/**< J T^-1                    */
-extern const double D_deuteron_mag__mom                                         ;/**< J T^-1                    */
+extern const double DEUTERON_MAG__MOM                                           ;/**< J T^-1                    */
+extern const double U_DEUTERON_MAG__MOM                                         ;/**< J T^-1                    */
 
-extern const double deuteron_mag__mom__to_bohr_magneton_ratio                   ;/**<                           */
-extern const double D_deuteron_mag__mom__to_bohr_magneton_ratio                 ;/**<                           */
+extern const double DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                   ;/**<                           */
+extern const double U_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                 ;/**<                           */
 
-extern const double deuteron_mag__mom__to_nuclear_magneton_ratio                ;/**<                           */
-extern const double D_deuteron_mag__mom__to_nuclear_magneton_ratio              ;/**<                           */
+extern const double DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                ;/**<                           */
+extern const double U_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO              ;/**<                           */
 
-extern const double deuteron_mass                                               ;/**< kg                        */
-extern const double D_deuteron_mass                                             ;/**< kg                        */
+extern const double DEUTERON_MASS                                               ;/**< kg                        */
+extern const double U_DEUTERON_MASS                                             ;/**< kg                        */
 
-extern const double deuteron_mass_energy_equivalent                             ;/**< J                         */
-extern const double D_deuteron_mass_energy_equivalent                           ;/**< J                         */
+extern const double DEUTERON_MASS_ENERGY_EQUIVALENT                             ;/**< J                         */
+extern const double U_DEUTERON_MASS_ENERGY_EQUIVALENT                           ;/**< J                         */
 
-extern const double deuteron_mass_energy_equivalent_in_mev                      ;/**< MeV                       */
-extern const double D_deuteron_mass_energy_equivalent_in_mev                    ;/**< MeV                       */
+extern const double DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV                      ;/**< MeV                       */
+extern const double U_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV                    ;/**< MeV                       */
 
-extern const double deuteron_mass_in_u                                          ;/**< u                         */
-extern const double D_deuteron_mass_in_u                                        ;/**< u                         */
+extern const double DEUTERON_MASS_IN_U                                          ;/**< u                         */
+extern const double U_DEUTERON_MASS_IN_U                                        ;/**< u                         */
 
-extern const double deuteron_molar_mass                                         ;/**< kg mol^-1                 */
-extern const double D_deuteron_molar_mass                                       ;/**< kg mol^-1                 */
+extern const double DEUTERON_MOLAR_MASS                                         ;/**< kg mol^-1                 */
+extern const double U_DEUTERON_MOLAR_MASS                                       ;/**< kg mol^-1                 */
 
-extern const double deuteron_neutron_mag__mom__ratio                            ;/**<                           */
-extern const double D_deuteron_neutron_mag__mom__ratio                          ;/**<                           */
+extern const double DEUTERON_NEUTRON_MAG__MOM__RATIO                            ;/**<                           */
+extern const double U_DEUTERON_NEUTRON_MAG__MOM__RATIO                          ;/**<                           */
 
-extern const double deuteron_proton_mag__mom__ratio                             ;/**<                           */
-extern const double D_deuteron_proton_mag__mom__ratio                           ;/**<                           */
+extern const double DEUTERON_PROTON_MAG__MOM__RATIO                             ;/**<                           */
+extern const double U_DEUTERON_PROTON_MAG__MOM__RATIO                           ;/**<                           */
 
-extern const double deuteron_proton_mass_ratio                                  ;/**<                           */
-extern const double D_deuteron_proton_mass_ratio                                ;/**<                           */
+extern const double DEUTERON_PROTON_MASS_RATIO                                  ;/**<                           */
+extern const double U_DEUTERON_PROTON_MASS_RATIO                                ;/**<                           */
 
-extern const double deuteron_relative_atomic_mass                               ;/**<                           */
-extern const double D_deuteron_relative_atomic_mass                             ;/**<                           */
+extern const double DEUTERON_RELATIVE_ATOMIC_MASS                               ;/**<                           */
+extern const double U_DEUTERON_RELATIVE_ATOMIC_MASS                             ;/**<                           */
 
-extern const double deuteron_rms_charge_radius                                  ;/**< m                         */
-extern const double D_deuteron_rms_charge_radius                                ;/**< m                         */
+extern const double DEUTERON_RMS_CHARGE_RADIUS                                  ;/**< m                         */
+extern const double U_DEUTERON_RMS_CHARGE_RADIUS                                ;/**< m                         */
 
-extern const double electron_charge_to_mass_quotient                            ;/**< C kg^-1                   */
-extern const double D_electron_charge_to_mass_quotient                          ;/**< C kg^-1                   */
+extern const double ELECTRON_CHARGE_TO_MASS_QUOTIENT                            ;/**< C kg^-1                   */
+extern const double U_ELECTRON_CHARGE_TO_MASS_QUOTIENT                          ;/**< C kg^-1                   */
 
-extern const double electron_deuteron_mag__mom__ratio                           ;/**<                           */
-extern const double D_electron_deuteron_mag__mom__ratio                         ;/**<                           */
+extern const double ELECTRON_DEUTERON_MAG__MOM__RATIO                           ;/**<                           */
+extern const double U_ELECTRON_DEUTERON_MAG__MOM__RATIO                         ;/**<                           */
 
-extern const double electron_deuteron_mass_ratio                                ;/**<                           */
-extern const double D_electron_deuteron_mass_ratio                              ;/**<                           */
+extern const double ELECTRON_DEUTERON_MASS_RATIO                                ;/**<                           */
+extern const double U_ELECTRON_DEUTERON_MASS_RATIO                              ;/**<                           */
 
-extern const double electron_g_factor                                           ;/**<                           */
-extern const double D_electron_g_factor                                         ;/**<                           */
+extern const double ELECTRON_G_FACTOR                                           ;/**<                           */
+extern const double U_ELECTRON_G_FACTOR                                         ;/**<                           */
 
-extern const double electron_gyromag__ratio                                     ;/**< s^-1 T^-1                 */
-extern const double D_electron_gyromag__ratio                                   ;/**< s^-1 T^-1                 */
+extern const double ELECTRON_GYROMAG__RATIO                                     ;/**< s^-1 T^-1                 */
+extern const double U_ELECTRON_GYROMAG__RATIO                                   ;/**< s^-1 T^-1                 */
 
-extern const double electron_gyromag__ratio_in_mhz_t                            ;/**< MHz T^-1                  */
-extern const double D_electron_gyromag__ratio_in_mhz_t                          ;/**< MHz T^-1                  */
+extern const double ELECTRON_GYROMAG__RATIO_IN_MHZ_T                            ;/**< MHz T^-1                  */
+extern const double U_ELECTRON_GYROMAG__RATIO_IN_MHZ_T                          ;/**< MHz T^-1                  */
 
-extern const double electron_helion_mass_ratio                                  ;/**<                           */
-extern const double D_electron_helion_mass_ratio                                ;/**<                           */
+extern const double ELECTRON_HELION_MASS_RATIO                                  ;/**<                           */
+extern const double U_ELECTRON_HELION_MASS_RATIO                                ;/**<                           */
 
-extern const double electron_mag__mom                                           ;/**< J T^-1                    */
-extern const double D_electron_mag__mom                                         ;/**< J T^-1                    */
+extern const double ELECTRON_MAG__MOM                                           ;/**< J T^-1                    */
+extern const double U_ELECTRON_MAG__MOM                                         ;/**< J T^-1                    */
 
-extern const double electron_mag__mom__anomaly                                  ;/**<                           */
-extern const double D_electron_mag__mom__anomaly                                ;/**<                           */
+extern const double ELECTRON_MAG__MOM__ANOMALY                                  ;/**<                           */
+extern const double U_ELECTRON_MAG__MOM__ANOMALY                                ;/**<                           */
 
-extern const double electron_mag__mom__to_bohr_magneton_ratio                   ;/**<                           */
-extern const double D_electron_mag__mom__to_bohr_magneton_ratio                 ;/**<                           */
+extern const double ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                   ;/**<                           */
+extern const double U_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                 ;/**<                           */
 
-extern const double electron_mag__mom__to_nuclear_magneton_ratio                ;/**<                           */
-extern const double D_electron_mag__mom__to_nuclear_magneton_ratio              ;/**<                           */
+extern const double ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                ;/**<                           */
+extern const double U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO              ;/**<                           */
 
-extern const double electron_mass                                               ;/**< kg                        */
-extern const double D_electron_mass                                             ;/**< kg                        */
+extern const double ELECTRON_MASS                                               ;/**< kg                        */
+extern const double U_ELECTRON_MASS                                             ;/**< kg                        */
 
-extern const double electron_mass_energy_equivalent                             ;/**< J                         */
-extern const double D_electron_mass_energy_equivalent                           ;/**< J                         */
+extern const double ELECTRON_MASS_ENERGY_EQUIVALENT                             ;/**< J                         */
+extern const double U_ELECTRON_MASS_ENERGY_EQUIVALENT                           ;/**< J                         */
 
-extern const double electron_mass_energy_equivalent_in_mev                      ;/**< MeV                       */
-extern const double D_electron_mass_energy_equivalent_in_mev                    ;/**< MeV                       */
+extern const double ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV                      ;/**< MeV                       */
+extern const double U_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV                    ;/**< MeV                       */
 
-extern const double electron_mass_in_u                                          ;/**< u                         */
-extern const double D_electron_mass_in_u                                        ;/**< u                         */
+extern const double ELECTRON_MASS_IN_U                                          ;/**< u                         */
+extern const double U_ELECTRON_MASS_IN_U                                        ;/**< u                         */
 
-extern const double electron_molar_mass                                         ;/**< kg mol^-1                 */
-extern const double D_electron_molar_mass                                       ;/**< kg mol^-1                 */
+extern const double ELECTRON_MOLAR_MASS                                         ;/**< kg mol^-1                 */
+extern const double U_ELECTRON_MOLAR_MASS                                       ;/**< kg mol^-1                 */
 
-extern const double electron_muon_mag__mom__ratio                               ;/**<                           */
-extern const double D_electron_muon_mag__mom__ratio                             ;/**<                           */
+extern const double ELECTRON_MUON_MAG__MOM__RATIO                               ;/**<                           */
+extern const double U_ELECTRON_MUON_MAG__MOM__RATIO                             ;/**<                           */
 
-extern const double electron_muon_mass_ratio                                    ;/**<                           */
-extern const double D_electron_muon_mass_ratio                                  ;/**<                           */
+extern const double ELECTRON_MUON_MASS_RATIO                                    ;/**<                           */
+extern const double U_ELECTRON_MUON_MASS_RATIO                                  ;/**<                           */
 
-extern const double electron_neutron_mag__mom__ratio                            ;/**<                           */
-extern const double D_electron_neutron_mag__mom__ratio                          ;/**<                           */
+extern const double ELECTRON_NEUTRON_MAG__MOM__RATIO                            ;/**<                           */
+extern const double U_ELECTRON_NEUTRON_MAG__MOM__RATIO                          ;/**<                           */
 
-extern const double electron_neutron_mass_ratio                                 ;/**<                           */
-extern const double D_electron_neutron_mass_ratio                               ;/**<                           */
+extern const double ELECTRON_NEUTRON_MASS_RATIO                                 ;/**<                           */
+extern const double U_ELECTRON_NEUTRON_MASS_RATIO                               ;/**<                           */
 
-extern const double electron_proton_mag__mom__ratio                             ;/**<                           */
-extern const double D_electron_proton_mag__mom__ratio                           ;/**<                           */
+extern const double ELECTRON_PROTON_MAG__MOM__RATIO                             ;/**<                           */
+extern const double U_ELECTRON_PROTON_MAG__MOM__RATIO                           ;/**<                           */
 
-extern const double electron_proton_mass_ratio                                  ;/**<                           */
-extern const double D_electron_proton_mass_ratio                                ;/**<                           */
+extern const double ELECTRON_PROTON_MASS_RATIO                                  ;/**<                           */
+extern const double U_ELECTRON_PROTON_MASS_RATIO                                ;/**<                           */
 
-extern const double electron_relative_atomic_mass                               ;/**<                           */
-extern const double D_electron_relative_atomic_mass                             ;/**<                           */
+extern const double ELECTRON_RELATIVE_ATOMIC_MASS                               ;/**<                           */
+extern const double U_ELECTRON_RELATIVE_ATOMIC_MASS                             ;/**<                           */
 
-extern const double electron_tau_mass_ratio                                     ;/**<                           */
-extern const double D_electron_tau_mass_ratio                                   ;/**<                           */
+extern const double ELECTRON_TAU_MASS_RATIO                                     ;/**<                           */
+extern const double U_ELECTRON_TAU_MASS_RATIO                                   ;/**<                           */
 
-extern const double electron_to_alpha_particle_mass_ratio                       ;/**<                           */
-extern const double D_electron_to_alpha_particle_mass_ratio                     ;/**<                           */
+extern const double ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO                       ;/**<                           */
+extern const double U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO                     ;/**<                           */
 
-extern const double electron_to_shielded_helion_mag__mom__ratio                 ;/**<                           */
-extern const double D_electron_to_shielded_helion_mag__mom__ratio               ;/**<                           */
+extern const double ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO                 ;/**<                           */
+extern const double U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO               ;/**<                           */
 
-extern const double electron_to_shielded_proton_mag__mom__ratio                 ;/**<                           */
-extern const double D_electron_to_shielded_proton_mag__mom__ratio               ;/**<                           */
+extern const double ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO                 ;/**<                           */
+extern const double U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO               ;/**<                           */
 
-extern const double electron_triton_mass_ratio                                  ;/**<                           */
-extern const double D_electron_triton_mass_ratio                                ;/**<                           */
+extern const double ELECTRON_TRITON_MASS_RATIO                                  ;/**<                           */
+extern const double U_ELECTRON_TRITON_MASS_RATIO                                ;/**<                           */
 
-extern const double electron_volt                                               ;/**< J                         */
-extern const double D_electron_volt                                             ;/**< J                         */
+extern const double ELECTRON_VOLT                                               ;/**< J                         */
+extern const double U_ELECTRON_VOLT                                             ;/**< J                         */
 
-extern const double electron_volt_atomic_mass_unit_relationship                 ;/**< u                         */
-extern const double D_electron_volt_atomic_mass_unit_relationship               ;/**< u                         */
+extern const double ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP                 ;/**< u                         */
+extern const double U_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP               ;/**< u                         */
 
-extern const double electron_volt_hartree_relationship                          ;/**< E_h                       */
-extern const double D_electron_volt_hartree_relationship                        ;/**< E_h                       */
+extern const double ELECTRON_VOLT_HARTREE_RELATIONSHIP                          ;/**< E_h                       */
+extern const double U_ELECTRON_VOLT_HARTREE_RELATIONSHIP                        ;/**< E_h                       */
 
-extern const double electron_volt_hertz_relationship                            ;/**< Hz                        */
-extern const double D_electron_volt_hertz_relationship                          ;/**< Hz                        */
+extern const double ELECTRON_VOLT_HERTZ_RELATIONSHIP                            ;/**< Hz                        */
+extern const double U_ELECTRON_VOLT_HERTZ_RELATIONSHIP                          ;/**< Hz                        */
 
-extern const double electron_volt_inverse_meter_relationship                    ;/**< m^-1                      */
-extern const double D_electron_volt_inverse_meter_relationship                  ;/**< m^-1                      */
+extern const double ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP                    ;/**< m^-1                      */
+extern const double U_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP                  ;/**< m^-1                      */
 
-extern const double electron_volt_joule_relationship                            ;/**< J                         */
-extern const double D_electron_volt_joule_relationship                          ;/**< J                         */
+extern const double ELECTRON_VOLT_JOULE_RELATIONSHIP                            ;/**< J                         */
+extern const double U_ELECTRON_VOLT_JOULE_RELATIONSHIP                          ;/**< J                         */
 
-extern const double electron_volt_kelvin_relationship                           ;/**< K                         */
-extern const double D_electron_volt_kelvin_relationship                         ;/**< K                         */
+extern const double ELECTRON_VOLT_KELVIN_RELATIONSHIP                           ;/**< K                         */
+extern const double U_ELECTRON_VOLT_KELVIN_RELATIONSHIP                         ;/**< K                         */
 
-extern const double electron_volt_kilogram_relationship                         ;/**< kg                        */
-extern const double D_electron_volt_kilogram_relationship                       ;/**< kg                        */
+extern const double ELECTRON_VOLT_KILOGRAM_RELATIONSHIP                         ;/**< kg                        */
+extern const double U_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP                       ;/**< kg                        */
 
-extern const double elementary_charge                                           ;/**< C                         */
-extern const double D_elementary_charge                                         ;/**< C                         */
+extern const double ELEMENTARY_CHARGE                                           ;/**< C                         */
+extern const double U_ELEMENTARY_CHARGE                                         ;/**< C                         */
 
-extern const double elementary_charge_over_h_bar                                ;/**< A J^-1                    */
-extern const double D_elementary_charge_over_h_bar                              ;/**< A J^-1                    */
+extern const double ELEMENTARY_CHARGE_OVER_H_BAR                                ;/**< A J^-1                    */
+extern const double U_ELEMENTARY_CHARGE_OVER_H_BAR                              ;/**< A J^-1                    */
 
-extern const double faraday_constant                                            ;/**< C mol^-1                  */
-extern const double D_faraday_constant                                          ;/**< C mol^-1                  */
+extern const double FARADAY_CONSTANT                                            ;/**< C mol^-1                  */
+extern const double U_FARADAY_CONSTANT                                          ;/**< C mol^-1                  */
 
-extern const double fermi_coupling_constant                                     ;/**< GeV^-2                    */
-extern const double D_fermi_coupling_constant                                   ;/**< GeV^-2                    */
+extern const double FERMI_COUPLING_CONSTANT                                     ;/**< GeV^-2                    */
+extern const double U_FERMI_COUPLING_CONSTANT                                   ;/**< GeV^-2                    */
 
-extern const double fine_structure_constant                                     ;/**<                           */
-extern const double D_fine_structure_constant                                   ;/**<                           */
+extern const double FINE_STRUCTURE_CONSTANT                                     ;/**<                           */
+extern const double U_FINE_STRUCTURE_CONSTANT                                   ;/**<                           */
 
-extern const double first_radiation_constant                                    ;/**< W m^2                     */
-extern const double D_first_radiation_constant                                  ;/**< W m^2                     */
+extern const double FIRST_RADIATION_CONSTANT                                    ;/**< W m^2                     */
+extern const double U_FIRST_RADIATION_CONSTANT                                  ;/**< W m^2                     */
 
-extern const double first_radiation_constant_for_spectral_radiance              ;/**< W m^2 sr^-1               */
-extern const double D_first_radiation_constant_for_spectral_radiance            ;/**< W m^2 sr^-1               */
+extern const double FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE              ;/**< W m^2 sr^-1               */
+extern const double U_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE            ;/**< W m^2 sr^-1               */
 
-extern const double hartree_atomic_mass_unit_relationship                       ;/**< u                         */
-extern const double D_hartree_atomic_mass_unit_relationship                     ;/**< u                         */
+extern const double HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP                       ;/**< u                         */
+extern const double U_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP                     ;/**< u                         */
 
-extern const double hartree_electron_volt_relationship                          ;/**< eV                        */
-extern const double D_hartree_electron_volt_relationship                        ;/**< eV                        */
+extern const double HARTREE_ELECTRON_VOLT_RELATIONSHIP                          ;/**< eV                        */
+extern const double U_HARTREE_ELECTRON_VOLT_RELATIONSHIP                        ;/**< eV                        */
 
-extern const double hartree_energy                                              ;/**< J                         */
-extern const double D_hartree_energy                                            ;/**< J                         */
+extern const double HARTREE_ENERGY                                              ;/**< J                         */
+extern const double U_HARTREE_ENERGY                                            ;/**< J                         */
 
-extern const double hartree_energy_in_ev                                        ;/**< eV                        */
-extern const double D_hartree_energy_in_ev                                      ;/**< eV                        */
+extern const double HARTREE_ENERGY_IN_EV                                        ;/**< eV                        */
+extern const double U_HARTREE_ENERGY_IN_EV                                      ;/**< eV                        */
 
-extern const double hartree_hertz_relationship                                  ;/**< Hz                        */
-extern const double D_hartree_hertz_relationship                                ;/**< Hz                        */
+extern const double HARTREE_HERTZ_RELATIONSHIP                                  ;/**< Hz                        */
+extern const double U_HARTREE_HERTZ_RELATIONSHIP                                ;/**< Hz                        */
 
-extern const double hartree_inverse_meter_relationship                          ;/**< m^-1                      */
-extern const double D_hartree_inverse_meter_relationship                        ;/**< m^-1                      */
+extern const double HARTREE_INVERSE_METER_RELATIONSHIP                          ;/**< m^-1                      */
+extern const double U_HARTREE_INVERSE_METER_RELATIONSHIP                        ;/**< m^-1                      */
 
-extern const double hartree_joule_relationship                                  ;/**< J                         */
-extern const double D_hartree_joule_relationship                                ;/**< J                         */
+extern const double HARTREE_JOULE_RELATIONSHIP                                  ;/**< J                         */
+extern const double U_HARTREE_JOULE_RELATIONSHIP                                ;/**< J                         */
 
-extern const double hartree_kelvin_relationship                                 ;/**< K                         */
-extern const double D_hartree_kelvin_relationship                               ;/**< K                         */
+extern const double HARTREE_KELVIN_RELATIONSHIP                                 ;/**< K                         */
+extern const double U_HARTREE_KELVIN_RELATIONSHIP                               ;/**< K                         */
 
-extern const double hartree_kilogram_relationship                               ;/**< kg                        */
-extern const double D_hartree_kilogram_relationship                             ;/**< kg                        */
+extern const double HARTREE_KILOGRAM_RELATIONSHIP                               ;/**< kg                        */
+extern const double U_HARTREE_KILOGRAM_RELATIONSHIP                             ;/**< kg                        */
 
-extern const double helion_electron_mass_ratio                                  ;/**<                           */
-extern const double D_helion_electron_mass_ratio                                ;/**<                           */
+extern const double HELION_ELECTRON_MASS_RATIO                                  ;/**<                           */
+extern const double U_HELION_ELECTRON_MASS_RATIO                                ;/**<                           */
 
-extern const double helion_g_factor                                             ;/**<                           */
-extern const double D_helion_g_factor                                           ;/**<                           */
+extern const double HELION_G_FACTOR                                             ;/**<                           */
+extern const double U_HELION_G_FACTOR                                           ;/**<                           */
 
-extern const double helion_mag__mom                                             ;/**< J T^-1                    */
-extern const double D_helion_mag__mom                                           ;/**< J T^-1                    */
+extern const double HELION_MAG__MOM                                             ;/**< J T^-1                    */
+extern const double U_HELION_MAG__MOM                                           ;/**< J T^-1                    */
 
-extern const double helion_mag__mom__to_bohr_magneton_ratio                     ;/**<                           */
-extern const double D_helion_mag__mom__to_bohr_magneton_ratio                   ;/**<                           */
+extern const double HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO                     ;/**<                           */
+extern const double U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO                   ;/**<                           */
 
-extern const double helion_mag__mom__to_nuclear_magneton_ratio                  ;/**<                           */
-extern const double D_helion_mag__mom__to_nuclear_magneton_ratio                ;/**<                           */
+extern const double HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                  ;/**<                           */
+extern const double U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                ;/**<                           */
 
-extern const double helion_mass                                                 ;/**< kg                        */
-extern const double D_helion_mass                                               ;/**< kg                        */
+extern const double HELION_MASS                                                 ;/**< kg                        */
+extern const double U_HELION_MASS                                               ;/**< kg                        */
 
-extern const double helion_mass_energy_equivalent                               ;/**< J                         */
-extern const double D_helion_mass_energy_equivalent                             ;/**< J                         */
+extern const double HELION_MASS_ENERGY_EQUIVALENT                               ;/**< J                         */
+extern const double U_HELION_MASS_ENERGY_EQUIVALENT                             ;/**< J                         */
 
-extern const double helion_mass_energy_equivalent_in_mev                        ;/**< MeV                       */
-extern const double D_helion_mass_energy_equivalent_in_mev                      ;/**< MeV                       */
+extern const double HELION_MASS_ENERGY_EQUIVALENT_IN_MEV                        ;/**< MeV                       */
+extern const double U_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV                      ;/**< MeV                       */
 
-extern const double helion_mass_in_u                                            ;/**< u                         */
-extern const double D_helion_mass_in_u                                          ;/**< u                         */
+extern const double HELION_MASS_IN_U                                            ;/**< u                         */
+extern const double U_HELION_MASS_IN_U                                          ;/**< u                         */
 
-extern const double helion_molar_mass                                           ;/**< kg mol^-1                 */
-extern const double D_helion_molar_mass                                         ;/**< kg mol^-1                 */
+extern const double HELION_MOLAR_MASS                                           ;/**< kg mol^-1                 */
+extern const double U_HELION_MOLAR_MASS                                         ;/**< kg mol^-1                 */
 
-extern const double helion_proton_mass_ratio                                    ;/**<                           */
-extern const double D_helion_proton_mass_ratio                                  ;/**<                           */
+extern const double HELION_PROTON_MASS_RATIO                                    ;/**<                           */
+extern const double U_HELION_PROTON_MASS_RATIO                                  ;/**<                           */
 
-extern const double helion_relative_atomic_mass                                 ;/**<                           */
-extern const double D_helion_relative_atomic_mass                               ;/**<                           */
+extern const double HELION_RELATIVE_ATOMIC_MASS                                 ;/**<                           */
+extern const double U_HELION_RELATIVE_ATOMIC_MASS                               ;/**<                           */
 
-extern const double helion_shielding_shift                                      ;/**<                           */
-extern const double D_helion_shielding_shift                                    ;/**<                           */
+extern const double HELION_SHIELDING_SHIFT                                      ;/**<                           */
+extern const double U_HELION_SHIELDING_SHIFT                                    ;/**<                           */
 
-extern const double hertz_atomic_mass_unit_relationship                         ;/**< u                         */
-extern const double D_hertz_atomic_mass_unit_relationship                       ;/**< u                         */
+extern const double HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP                         ;/**< u                         */
+extern const double U_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP                       ;/**< u                         */
 
-extern const double hertz_electron_volt_relationship                            ;/**< eV                        */
-extern const double D_hertz_electron_volt_relationship                          ;/**< eV                        */
+extern const double HERTZ_ELECTRON_VOLT_RELATIONSHIP                            ;/**< eV                        */
+extern const double U_HERTZ_ELECTRON_VOLT_RELATIONSHIP                          ;/**< eV                        */
 
-extern const double hertz_hartree_relationship                                  ;/**< E_h                       */
-extern const double D_hertz_hartree_relationship                                ;/**< E_h                       */
+extern const double HERTZ_HARTREE_RELATIONSHIP                                  ;/**< E_h                       */
+extern const double U_HERTZ_HARTREE_RELATIONSHIP                                ;/**< E_h                       */
 
-extern const double hertz_inverse_meter_relationship                            ;/**< m^-1                      */
-extern const double D_hertz_inverse_meter_relationship                          ;/**< m^-1                      */
+extern const double HERTZ_INVERSE_METER_RELATIONSHIP                            ;/**< m^-1                      */
+extern const double U_HERTZ_INVERSE_METER_RELATIONSHIP                          ;/**< m^-1                      */
 
-extern const double hertz_joule_relationship                                    ;/**< J                         */
-extern const double D_hertz_joule_relationship                                  ;/**< J                         */
+extern const double HERTZ_JOULE_RELATIONSHIP                                    ;/**< J                         */
+extern const double U_HERTZ_JOULE_RELATIONSHIP                                  ;/**< J                         */
 
-extern const double hertz_kelvin_relationship                                   ;/**< K                         */
-extern const double D_hertz_kelvin_relationship                                 ;/**< K                         */
+extern const double HERTZ_KELVIN_RELATIONSHIP                                   ;/**< K                         */
+extern const double U_HERTZ_KELVIN_RELATIONSHIP                                 ;/**< K                         */
 
-extern const double hertz_kilogram_relationship                                 ;/**< kg                        */
-extern const double D_hertz_kilogram_relationship                               ;/**< kg                        */
+extern const double HERTZ_KILOGRAM_RELATIONSHIP                                 ;/**< kg                        */
+extern const double U_HERTZ_KILOGRAM_RELATIONSHIP                               ;/**< kg                        */
 
-extern const double hyperfine_transition_frequency_of_cs_133                    ;/**< Hz                        */
-extern const double D_hyperfine_transition_frequency_of_cs_133                  ;/**< Hz                        */
+extern const double HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133                    ;/**< Hz                        */
+extern const double U_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133                  ;/**< Hz                        */
 
-extern const double inverse_fine_structure_constant                             ;/**<                           */
-extern const double D_inverse_fine_structure_constant                           ;/**<                           */
+extern const double INVERSE_FINE_STRUCTURE_CONSTANT                             ;/**<                           */
+extern const double U_INVERSE_FINE_STRUCTURE_CONSTANT                           ;/**<                           */
 
-extern const double inverse_meter_atomic_mass_unit_relationship                 ;/**< u                         */
-extern const double D_inverse_meter_atomic_mass_unit_relationship               ;/**< u                         */
+extern const double INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP                 ;/**< u                         */
+extern const double U_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP               ;/**< u                         */
 
-extern const double inverse_meter_electron_volt_relationship                    ;/**< eV                        */
-extern const double D_inverse_meter_electron_volt_relationship                  ;/**< eV                        */
+extern const double INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP                    ;/**< eV                        */
+extern const double U_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP                  ;/**< eV                        */
 
-extern const double inverse_meter_hartree_relationship                          ;/**< E_h                       */
-extern const double D_inverse_meter_hartree_relationship                        ;/**< E_h                       */
+extern const double INVERSE_METER_HARTREE_RELATIONSHIP                          ;/**< E_h                       */
+extern const double U_INVERSE_METER_HARTREE_RELATIONSHIP                        ;/**< E_h                       */
 
-extern const double inverse_meter_hertz_relationship                            ;/**< Hz                        */
-extern const double D_inverse_meter_hertz_relationship                          ;/**< Hz                        */
+extern const double INVERSE_METER_HERTZ_RELATIONSHIP                            ;/**< Hz                        */
+extern const double U_INVERSE_METER_HERTZ_RELATIONSHIP                          ;/**< Hz                        */
 
-extern const double inverse_meter_joule_relationship                            ;/**< J                         */
-extern const double D_inverse_meter_joule_relationship                          ;/**< J                         */
+extern const double INVERSE_METER_JOULE_RELATIONSHIP                            ;/**< J                         */
+extern const double U_INVERSE_METER_JOULE_RELATIONSHIP                          ;/**< J                         */
 
-extern const double inverse_meter_kelvin_relationship                           ;/**< K                         */
-extern const double D_inverse_meter_kelvin_relationship                         ;/**< K                         */
+extern const double INVERSE_METER_KELVIN_RELATIONSHIP                           ;/**< K                         */
+extern const double U_INVERSE_METER_KELVIN_RELATIONSHIP                         ;/**< K                         */
 
-extern const double inverse_meter_kilogram_relationship                         ;/**< kg                        */
-extern const double D_inverse_meter_kilogram_relationship                       ;/**< kg                        */
+extern const double INVERSE_METER_KILOGRAM_RELATIONSHIP                         ;/**< kg                        */
+extern const double U_INVERSE_METER_KILOGRAM_RELATIONSHIP                       ;/**< kg                        */
 
-extern const double inverse_of_conductance_quantum                              ;/**< ohm                       */
-extern const double D_inverse_of_conductance_quantum                            ;/**< ohm                       */
+extern const double INVERSE_OF_CONDUCTANCE_QUANTUM                              ;/**< ohm                       */
+extern const double U_INVERSE_OF_CONDUCTANCE_QUANTUM                            ;/**< ohm                       */
 
-extern const double josephson_constant                                          ;/**< Hz V^-1                   */
-extern const double D_josephson_constant                                        ;/**< Hz V^-1                   */
+extern const double JOSEPHSON_CONSTANT                                          ;/**< Hz V^-1                   */
+extern const double U_JOSEPHSON_CONSTANT                                        ;/**< Hz V^-1                   */
 
-extern const double joule_atomic_mass_unit_relationship                         ;/**< u                         */
-extern const double D_joule_atomic_mass_unit_relationship                       ;/**< u                         */
+extern const double JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP                         ;/**< u                         */
+extern const double U_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP                       ;/**< u                         */
 
-extern const double joule_electron_volt_relationship                            ;/**< eV                        */
-extern const double D_joule_electron_volt_relationship                          ;/**< eV                        */
+extern const double JOULE_ELECTRON_VOLT_RELATIONSHIP                            ;/**< eV                        */
+extern const double U_JOULE_ELECTRON_VOLT_RELATIONSHIP                          ;/**< eV                        */
 
-extern const double joule_hartree_relationship                                  ;/**< E_h                       */
-extern const double D_joule_hartree_relationship                                ;/**< E_h                       */
+extern const double JOULE_HARTREE_RELATIONSHIP                                  ;/**< E_h                       */
+extern const double U_JOULE_HARTREE_RELATIONSHIP                                ;/**< E_h                       */
 
-extern const double joule_hertz_relationship                                    ;/**< Hz                        */
-extern const double D_joule_hertz_relationship                                  ;/**< Hz                        */
+extern const double JOULE_HERTZ_RELATIONSHIP                                    ;/**< Hz                        */
+extern const double U_JOULE_HERTZ_RELATIONSHIP                                  ;/**< Hz                        */
 
-extern const double joule_inverse_meter_relationship                            ;/**< m^-1                      */
-extern const double D_joule_inverse_meter_relationship                          ;/**< m^-1                      */
+extern const double JOULE_INVERSE_METER_RELATIONSHIP                            ;/**< m^-1                      */
+extern const double U_JOULE_INVERSE_METER_RELATIONSHIP                          ;/**< m^-1                      */
 
-extern const double joule_kelvin_relationship                                   ;/**< K                         */
-extern const double D_joule_kelvin_relationship                                 ;/**< K                         */
+extern const double JOULE_KELVIN_RELATIONSHIP                                   ;/**< K                         */
+extern const double U_JOULE_KELVIN_RELATIONSHIP                                 ;/**< K                         */
 
-extern const double joule_kilogram_relationship                                 ;/**< kg                        */
-extern const double D_joule_kilogram_relationship                               ;/**< kg                        */
+extern const double JOULE_KILOGRAM_RELATIONSHIP                                 ;/**< kg                        */
+extern const double U_JOULE_KILOGRAM_RELATIONSHIP                               ;/**< kg                        */
 
-extern const double kelvin_atomic_mass_unit_relationship                        ;/**< u                         */
-extern const double D_kelvin_atomic_mass_unit_relationship                      ;/**< u                         */
+extern const double KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP                        ;/**< u                         */
+extern const double U_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP                      ;/**< u                         */
 
-extern const double kelvin_electron_volt_relationship                           ;/**< eV                        */
-extern const double D_kelvin_electron_volt_relationship                         ;/**< eV                        */
+extern const double KELVIN_ELECTRON_VOLT_RELATIONSHIP                           ;/**< eV                        */
+extern const double U_KELVIN_ELECTRON_VOLT_RELATIONSHIP                         ;/**< eV                        */
 
-extern const double kelvin_hartree_relationship                                 ;/**< E_h                       */
-extern const double D_kelvin_hartree_relationship                               ;/**< E_h                       */
+extern const double KELVIN_HARTREE_RELATIONSHIP                                 ;/**< E_h                       */
+extern const double U_KELVIN_HARTREE_RELATIONSHIP                               ;/**< E_h                       */
 
-extern const double kelvin_hertz_relationship                                   ;/**< Hz                        */
-extern const double D_kelvin_hertz_relationship                                 ;/**< Hz                        */
+extern const double KELVIN_HERTZ_RELATIONSHIP                                   ;/**< Hz                        */
+extern const double U_KELVIN_HERTZ_RELATIONSHIP                                 ;/**< Hz                        */
 
-extern const double kelvin_inverse_meter_relationship                           ;/**< m^-1                      */
-extern const double D_kelvin_inverse_meter_relationship                         ;/**< m^-1                      */
+extern const double KELVIN_INVERSE_METER_RELATIONSHIP                           ;/**< m^-1                      */
+extern const double U_KELVIN_INVERSE_METER_RELATIONSHIP                         ;/**< m^-1                      */
 
-extern const double kelvin_joule_relationship                                   ;/**< J                         */
-extern const double D_kelvin_joule_relationship                                 ;/**< J                         */
+extern const double KELVIN_JOULE_RELATIONSHIP                                   ;/**< J                         */
+extern const double U_KELVIN_JOULE_RELATIONSHIP                                 ;/**< J                         */
 
-extern const double kelvin_kilogram_relationship                                ;/**< kg                        */
-extern const double D_kelvin_kilogram_relationship                              ;/**< kg                        */
+extern const double KELVIN_KILOGRAM_RELATIONSHIP                                ;/**< kg                        */
+extern const double U_KELVIN_KILOGRAM_RELATIONSHIP                              ;/**< kg                        */
 
-extern const double kilogram_atomic_mass_unit_relationship                      ;/**< u                         */
-extern const double D_kilogram_atomic_mass_unit_relationship                    ;/**< u                         */
+extern const double KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP                      ;/**< u                         */
+extern const double U_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP                    ;/**< u                         */
 
-extern const double kilogram_electron_volt_relationship                         ;/**< eV                        */
-extern const double D_kilogram_electron_volt_relationship                       ;/**< eV                        */
+extern const double KILOGRAM_ELECTRON_VOLT_RELATIONSHIP                         ;/**< eV                        */
+extern const double U_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP                       ;/**< eV                        */
 
-extern const double kilogram_hartree_relationship                               ;/**< E_h                       */
-extern const double D_kilogram_hartree_relationship                             ;/**< E_h                       */
+extern const double KILOGRAM_HARTREE_RELATIONSHIP                               ;/**< E_h                       */
+extern const double U_KILOGRAM_HARTREE_RELATIONSHIP                             ;/**< E_h                       */
 
-extern const double kilogram_hertz_relationship                                 ;/**< Hz                        */
-extern const double D_kilogram_hertz_relationship                               ;/**< Hz                        */
+extern const double KILOGRAM_HERTZ_RELATIONSHIP                                 ;/**< Hz                        */
+extern const double U_KILOGRAM_HERTZ_RELATIONSHIP                               ;/**< Hz                        */
 
-extern const double kilogram_inverse_meter_relationship                         ;/**< m^-1                      */
-extern const double D_kilogram_inverse_meter_relationship                       ;/**< m^-1                      */
+extern const double KILOGRAM_INVERSE_METER_RELATIONSHIP                         ;/**< m^-1                      */
+extern const double U_KILOGRAM_INVERSE_METER_RELATIONSHIP                       ;/**< m^-1                      */
 
-extern const double kilogram_joule_relationship                                 ;/**< J                         */
-extern const double D_kilogram_joule_relationship                               ;/**< J                         */
+extern const double KILOGRAM_JOULE_RELATIONSHIP                                 ;/**< J                         */
+extern const double U_KILOGRAM_JOULE_RELATIONSHIP                               ;/**< J                         */
 
-extern const double kilogram_kelvin_relationship                                ;/**< K                         */
-extern const double D_kilogram_kelvin_relationship                              ;/**< K                         */
+extern const double KILOGRAM_KELVIN_RELATIONSHIP                                ;/**< K                         */
+extern const double U_KILOGRAM_KELVIN_RELATIONSHIP                              ;/**< K                         */
 
-extern const double lattice_parameter_of_silicon                                ;/**< m                         */
-extern const double D_lattice_parameter_of_silicon                              ;/**< m                         */
+extern const double LATTICE_PARAMETER_OF_SILICON                                ;/**< m                         */
+extern const double U_LATTICE_PARAMETER_OF_SILICON                              ;/**< m                         */
 
-extern const double lattice_spacing_of_ideal_si__220                            ;/**< m                         */
-extern const double D_lattice_spacing_of_ideal_si__220                          ;/**< m                         */
+extern const double LATTICE_SPACING_OF_IDEAL_SI__220                            ;/**< m                         */
+extern const double U_LATTICE_SPACING_OF_IDEAL_SI__220                          ;/**< m                         */
 
-extern const double loschmidt_constant__273_15_k__100_kpa                       ;/**< m^-3                      */
-extern const double D_loschmidt_constant__273_15_k__100_kpa                     ;/**< m^-3                      */
+extern const double LOSCHMIDT_CONSTANT__273_15_K__100_KPA                       ;/**< m^-3                      */
+extern const double U_LOSCHMIDT_CONSTANT__273_15_K__100_KPA                     ;/**< m^-3                      */
 
-extern const double loschmidt_constant__273_15_k__101_325_kpa                   ;/**< m^-3                      */
-extern const double D_loschmidt_constant__273_15_k__101_325_kpa                 ;/**< m^-3                      */
+extern const double LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA                   ;/**< m^-3                      */
+extern const double U_LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA                 ;/**< m^-3                      */
 
-extern const double luminous_efficacy                                           ;/**< lm W^-1                   */
-extern const double D_luminous_efficacy                                         ;/**< lm W^-1                   */
+extern const double LUMINOUS_EFFICACY                                           ;/**< lm W^-1                   */
+extern const double U_LUMINOUS_EFFICACY                                         ;/**< lm W^-1                   */
 
-extern const double mag__flux_quantum                                           ;/**< Wb                        */
-extern const double D_mag__flux_quantum                                         ;/**< Wb                        */
+extern const double MAG__FLUX_QUANTUM                                           ;/**< Wb                        */
+extern const double U_MAG__FLUX_QUANTUM                                         ;/**< Wb                        */
 
-extern const double molar_gas_constant                                          ;/**< J mol^-1 K^-1             */
-extern const double D_molar_gas_constant                                        ;/**< J mol^-1 K^-1             */
+extern const double MOLAR_GAS_CONSTANT                                          ;/**< J mol^-1 K^-1             */
+extern const double U_MOLAR_GAS_CONSTANT                                        ;/**< J mol^-1 K^-1             */
 
-extern const double molar_mass_constant                                         ;/**< kg mol^-1                 */
-extern const double D_molar_mass_constant                                       ;/**< kg mol^-1                 */
+extern const double MOLAR_MASS_CONSTANT                                         ;/**< kg mol^-1                 */
+extern const double U_MOLAR_MASS_CONSTANT                                       ;/**< kg mol^-1                 */
 
-extern const double molar_mass_of_carbon_12                                     ;/**< kg mol^-1                 */
-extern const double D_molar_mass_of_carbon_12                                   ;/**< kg mol^-1                 */
+extern const double MOLAR_MASS_OF_CARBON_12                                     ;/**< kg mol^-1                 */
+extern const double U_MOLAR_MASS_OF_CARBON_12                                   ;/**< kg mol^-1                 */
 
-extern const double molar_planck_constant                                       ;/**< J Hz^-1 mol^-1            */
-extern const double D_molar_planck_constant                                     ;/**< J Hz^-1 mol^-1            */
+extern const double MOLAR_PLANCK_CONSTANT                                       ;/**< J Hz^-1 mol^-1            */
+extern const double U_MOLAR_PLANCK_CONSTANT                                     ;/**< J Hz^-1 mol^-1            */
 
-extern const double molar_volume_of_ideal_gas__273_15_k__100_kpa                ;/**< m^3 mol^-1                */
-extern const double D_molar_volume_of_ideal_gas__273_15_k__100_kpa              ;/**< m^3 mol^-1                */
+extern const double MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA                ;/**< m^3 mol^-1                */
+extern const double U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA              ;/**< m^3 mol^-1                */
 
-extern const double molar_volume_of_ideal_gas__273_15_k__101_325_kpa            ;/**< m^3 mol^-1                */
-extern const double D_molar_volume_of_ideal_gas__273_15_k__101_325_kpa          ;/**< m^3 mol^-1                */
+extern const double MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA            ;/**< m^3 mol^-1                */
+extern const double U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA          ;/**< m^3 mol^-1                */
 
-extern const double molar_volume_of_silicon                                     ;/**< m^3 mol^-1                */
-extern const double D_molar_volume_of_silicon                                   ;/**< m^3 mol^-1                */
+extern const double MOLAR_VOLUME_OF_SILICON                                     ;/**< m^3 mol^-1                */
+extern const double U_MOLAR_VOLUME_OF_SILICON                                   ;/**< m^3 mol^-1                */
 
-extern const double molybdenum_x_unit                                           ;/**< m                         */
-extern const double D_molybdenum_x_unit                                         ;/**< m                         */
+extern const double MOLYBDENUM_X_UNIT                                           ;/**< m                         */
+extern const double U_MOLYBDENUM_X_UNIT                                         ;/**< m                         */
 
-extern const double muon_compton_wavelength                                     ;/**< m                         */
-extern const double D_muon_compton_wavelength                                   ;/**< m                         */
+extern const double MUON_COMPTON_WAVELENGTH                                     ;/**< m                         */
+extern const double U_MUON_COMPTON_WAVELENGTH                                   ;/**< m                         */
 
-extern const double muon_electron_mass_ratio                                    ;/**<                           */
-extern const double D_muon_electron_mass_ratio                                  ;/**<                           */
+extern const double MUON_ELECTRON_MASS_RATIO                                    ;/**<                           */
+extern const double U_MUON_ELECTRON_MASS_RATIO                                  ;/**<                           */
 
-extern const double muon_g_factor                                               ;/**<                           */
-extern const double D_muon_g_factor                                             ;/**<                           */
+extern const double MUON_G_FACTOR                                               ;/**<                           */
+extern const double U_MUON_G_FACTOR                                             ;/**<                           */
 
-extern const double muon_mag__mom                                               ;/**< J T^-1                    */
-extern const double D_muon_mag__mom                                             ;/**< J T^-1                    */
+extern const double MUON_MAG__MOM                                               ;/**< J T^-1                    */
+extern const double U_MUON_MAG__MOM                                             ;/**< J T^-1                    */
 
-extern const double muon_mag__mom__anomaly                                      ;/**<                           */
-extern const double D_muon_mag__mom__anomaly                                    ;/**<                           */
+extern const double MUON_MAG__MOM__ANOMALY                                      ;/**<                           */
+extern const double U_MUON_MAG__MOM__ANOMALY                                    ;/**<                           */
 
-extern const double muon_mag__mom__to_bohr_magneton_ratio                       ;/**<                           */
-extern const double D_muon_mag__mom__to_bohr_magneton_ratio                     ;/**<                           */
+extern const double MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                       ;/**<                           */
+extern const double U_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                     ;/**<                           */
 
-extern const double muon_mag__mom__to_nuclear_magneton_ratio                    ;/**<                           */
-extern const double D_muon_mag__mom__to_nuclear_magneton_ratio                  ;/**<                           */
+extern const double MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                    ;/**<                           */
+extern const double U_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                  ;/**<                           */
 
-extern const double muon_mass                                                   ;/**< kg                        */
-extern const double D_muon_mass                                                 ;/**< kg                        */
+extern const double MUON_MASS                                                   ;/**< kg                        */
+extern const double U_MUON_MASS                                                 ;/**< kg                        */
 
-extern const double muon_mass_energy_equivalent                                 ;/**< J                         */
-extern const double D_muon_mass_energy_equivalent                               ;/**< J                         */
+extern const double MUON_MASS_ENERGY_EQUIVALENT                                 ;/**< J                         */
+extern const double U_MUON_MASS_ENERGY_EQUIVALENT                               ;/**< J                         */
 
-extern const double muon_mass_energy_equivalent_in_mev                          ;/**< MeV                       */
-extern const double D_muon_mass_energy_equivalent_in_mev                        ;/**< MeV                       */
+extern const double MUON_MASS_ENERGY_EQUIVALENT_IN_MEV                          ;/**< MeV                       */
+extern const double U_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV                        ;/**< MeV                       */
 
-extern const double muon_mass_in_u                                              ;/**< u                         */
-extern const double D_muon_mass_in_u                                            ;/**< u                         */
+extern const double MUON_MASS_IN_U                                              ;/**< u                         */
+extern const double U_MUON_MASS_IN_U                                            ;/**< u                         */
 
-extern const double muon_molar_mass                                             ;/**< kg mol^-1                 */
-extern const double D_muon_molar_mass                                           ;/**< kg mol^-1                 */
+extern const double MUON_MOLAR_MASS                                             ;/**< kg mol^-1                 */
+extern const double U_MUON_MOLAR_MASS                                           ;/**< kg mol^-1                 */
 
-extern const double muon_neutron_mass_ratio                                     ;/**<                           */
-extern const double D_muon_neutron_mass_ratio                                   ;/**<                           */
+extern const double MUON_NEUTRON_MASS_RATIO                                     ;/**<                           */
+extern const double U_MUON_NEUTRON_MASS_RATIO                                   ;/**<                           */
 
-extern const double muon_proton_mag__mom__ratio                                 ;/**<                           */
-extern const double D_muon_proton_mag__mom__ratio                               ;/**<                           */
+extern const double MUON_PROTON_MAG__MOM__RATIO                                 ;/**<                           */
+extern const double U_MUON_PROTON_MAG__MOM__RATIO                               ;/**<                           */
 
-extern const double muon_proton_mass_ratio                                      ;/**<                           */
-extern const double D_muon_proton_mass_ratio                                    ;/**<                           */
+extern const double MUON_PROTON_MASS_RATIO                                      ;/**<                           */
+extern const double U_MUON_PROTON_MASS_RATIO                                    ;/**<                           */
 
-extern const double muon_tau_mass_ratio                                         ;/**<                           */
-extern const double D_muon_tau_mass_ratio                                       ;/**<                           */
+extern const double MUON_TAU_MASS_RATIO                                         ;/**<                           */
+extern const double U_MUON_TAU_MASS_RATIO                                       ;/**<                           */
 
-extern const double natural_unit_of_action                                      ;/**< J s                       */
-extern const double D_natural_unit_of_action                                    ;/**< J s                       */
+extern const double NATURAL_UNIT_OF_ACTION                                      ;/**< J s                       */
+extern const double U_NATURAL_UNIT_OF_ACTION                                    ;/**< J s                       */
 
-extern const double natural_unit_of_action_in_ev_s                              ;/**< eV s                      */
-extern const double D_natural_unit_of_action_in_ev_s                            ;/**< eV s                      */
+extern const double NATURAL_UNIT_OF_ACTION_IN_EV_S                              ;/**< eV s                      */
+extern const double U_NATURAL_UNIT_OF_ACTION_IN_EV_S                            ;/**< eV s                      */
 
-extern const double natural_unit_of_energy                                      ;/**< J                         */
-extern const double D_natural_unit_of_energy                                    ;/**< J                         */
+extern const double NATURAL_UNIT_OF_ENERGY                                      ;/**< J                         */
+extern const double U_NATURAL_UNIT_OF_ENERGY                                    ;/**< J                         */
 
-extern const double natural_unit_of_energy_in_mev                               ;/**< MeV                       */
-extern const double D_natural_unit_of_energy_in_mev                             ;/**< MeV                       */
+extern const double NATURAL_UNIT_OF_ENERGY_IN_MEV                               ;/**< MeV                       */
+extern const double U_NATURAL_UNIT_OF_ENERGY_IN_MEV                             ;/**< MeV                       */
 
-extern const double natural_unit_of_length                                      ;/**< m                         */
-extern const double D_natural_unit_of_length                                    ;/**< m                         */
+extern const double NATURAL_UNIT_OF_LENGTH                                      ;/**< m                         */
+extern const double U_NATURAL_UNIT_OF_LENGTH                                    ;/**< m                         */
 
-extern const double natural_unit_of_mass                                        ;/**< kg                        */
-extern const double D_natural_unit_of_mass                                      ;/**< kg                        */
+extern const double NATURAL_UNIT_OF_MASS                                        ;/**< kg                        */
+extern const double U_NATURAL_UNIT_OF_MASS                                      ;/**< kg                        */
 
-extern const double natural_unit_of_momentum                                    ;/**< kg m s^-1                 */
-extern const double D_natural_unit_of_momentum                                  ;/**< kg m s^-1                 */
+extern const double NATURAL_UNIT_OF_MOMENTUM                                    ;/**< kg m s^-1                 */
+extern const double U_NATURAL_UNIT_OF_MOMENTUM                                  ;/**< kg m s^-1                 */
 
-extern const double natural_unit_of_momentum_in_mev_c                           ;/**< MeV/c                     */
-extern const double D_natural_unit_of_momentum_in_mev_c                         ;/**< MeV/c                     */
+extern const double NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C                           ;/**< MeV/c                     */
+extern const double U_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C                         ;/**< MeV/c                     */
 
-extern const double natural_unit_of_time                                        ;/**< s                         */
-extern const double D_natural_unit_of_time                                      ;/**< s                         */
+extern const double NATURAL_UNIT_OF_TIME                                        ;/**< s                         */
+extern const double U_NATURAL_UNIT_OF_TIME                                      ;/**< s                         */
 
-extern const double natural_unit_of_velocity                                    ;/**< m s^-1                    */
-extern const double D_natural_unit_of_velocity                                  ;/**< m s^-1                    */
+extern const double NATURAL_UNIT_OF_VELOCITY                                    ;/**< m s^-1                    */
+extern const double U_NATURAL_UNIT_OF_VELOCITY                                  ;/**< m s^-1                    */
 
-extern const double neutron_compton_wavelength                                  ;/**< m                         */
-extern const double D_neutron_compton_wavelength                                ;/**< m                         */
+extern const double NEUTRON_COMPTON_WAVELENGTH                                  ;/**< m                         */
+extern const double U_NEUTRON_COMPTON_WAVELENGTH                                ;/**< m                         */
 
-extern const double neutron_electron_mag__mom__ratio                            ;/**<                           */
-extern const double D_neutron_electron_mag__mom__ratio                          ;/**<                           */
+extern const double NEUTRON_ELECTRON_MAG__MOM__RATIO                            ;/**<                           */
+extern const double U_NEUTRON_ELECTRON_MAG__MOM__RATIO                          ;/**<                           */
 
-extern const double neutron_electron_mass_ratio                                 ;/**<                           */
-extern const double D_neutron_electron_mass_ratio                               ;/**<                           */
+extern const double NEUTRON_ELECTRON_MASS_RATIO                                 ;/**<                           */
+extern const double U_NEUTRON_ELECTRON_MASS_RATIO                               ;/**<                           */
 
-extern const double neutron_g_factor                                            ;/**<                           */
-extern const double D_neutron_g_factor                                          ;/**<                           */
+extern const double NEUTRON_G_FACTOR                                            ;/**<                           */
+extern const double U_NEUTRON_G_FACTOR                                          ;/**<                           */
 
-extern const double neutron_gyromag__ratio                                      ;/**< s^-1 T^-1                 */
-extern const double D_neutron_gyromag__ratio                                    ;/**< s^-1 T^-1                 */
+extern const double NEUTRON_GYROMAG__RATIO                                      ;/**< s^-1 T^-1                 */
+extern const double U_NEUTRON_GYROMAG__RATIO                                    ;/**< s^-1 T^-1                 */
 
-extern const double neutron_gyromag__ratio_in_mhz_t                             ;/**< MHz T^-1                  */
-extern const double D_neutron_gyromag__ratio_in_mhz_t                           ;/**< MHz T^-1                  */
+extern const double NEUTRON_GYROMAG__RATIO_IN_MHZ_T                             ;/**< MHz T^-1                  */
+extern const double U_NEUTRON_GYROMAG__RATIO_IN_MHZ_T                           ;/**< MHz T^-1                  */
 
-extern const double neutron_mag__mom                                            ;/**< J T^-1                    */
-extern const double D_neutron_mag__mom                                          ;/**< J T^-1                    */
+extern const double NEUTRON_MAG__MOM                                            ;/**< J T^-1                    */
+extern const double U_NEUTRON_MAG__MOM                                          ;/**< J T^-1                    */
 
-extern const double neutron_mag__mom__to_bohr_magneton_ratio                    ;/**<                           */
-extern const double D_neutron_mag__mom__to_bohr_magneton_ratio                  ;/**<                           */
+extern const double NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                    ;/**<                           */
+extern const double U_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                  ;/**<                           */
 
-extern const double neutron_mag__mom__to_nuclear_magneton_ratio                 ;/**<                           */
-extern const double D_neutron_mag__mom__to_nuclear_magneton_ratio               ;/**<                           */
+extern const double NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                 ;/**<                           */
+extern const double U_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO               ;/**<                           */
 
-extern const double neutron_mass                                                ;/**< kg                        */
-extern const double D_neutron_mass                                              ;/**< kg                        */
+extern const double NEUTRON_MASS                                                ;/**< kg                        */
+extern const double U_NEUTRON_MASS                                              ;/**< kg                        */
 
-extern const double neutron_mass_energy_equivalent                              ;/**< J                         */
-extern const double D_neutron_mass_energy_equivalent                            ;/**< J                         */
+extern const double NEUTRON_MASS_ENERGY_EQUIVALENT                              ;/**< J                         */
+extern const double U_NEUTRON_MASS_ENERGY_EQUIVALENT                            ;/**< J                         */
 
-extern const double neutron_mass_energy_equivalent_in_mev                       ;/**< MeV                       */
-extern const double D_neutron_mass_energy_equivalent_in_mev                     ;/**< MeV                       */
+extern const double NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV                       ;/**< MeV                       */
+extern const double U_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV                     ;/**< MeV                       */
 
-extern const double neutron_mass_in_u                                           ;/**< u                         */
-extern const double D_neutron_mass_in_u                                         ;/**< u                         */
+extern const double NEUTRON_MASS_IN_U                                           ;/**< u                         */
+extern const double U_NEUTRON_MASS_IN_U                                         ;/**< u                         */
 
-extern const double neutron_molar_mass                                          ;/**< kg mol^-1                 */
-extern const double D_neutron_molar_mass                                        ;/**< kg mol^-1                 */
+extern const double NEUTRON_MOLAR_MASS                                          ;/**< kg mol^-1                 */
+extern const double U_NEUTRON_MOLAR_MASS                                        ;/**< kg mol^-1                 */
 
-extern const double neutron_muon_mass_ratio                                     ;/**<                           */
-extern const double D_neutron_muon_mass_ratio                                   ;/**<                           */
+extern const double NEUTRON_MUON_MASS_RATIO                                     ;/**<                           */
+extern const double U_NEUTRON_MUON_MASS_RATIO                                   ;/**<                           */
 
-extern const double neutron_proton_mag__mom__ratio                              ;/**<                           */
-extern const double D_neutron_proton_mag__mom__ratio                            ;/**<                           */
+extern const double NEUTRON_PROTON_MAG__MOM__RATIO                              ;/**<                           */
+extern const double U_NEUTRON_PROTON_MAG__MOM__RATIO                            ;/**<                           */
 
-extern const double neutron_proton_mass_difference                              ;/**< kg                        */
-extern const double D_neutron_proton_mass_difference                            ;/**< kg                        */
+extern const double NEUTRON_PROTON_MASS_DIFFERENCE                              ;/**< kg                        */
+extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE                            ;/**< kg                        */
 
-extern const double neutron_proton_mass_difference_energy_equivalent            ;/**< J                         */
-extern const double D_neutron_proton_mass_difference_energy_equivalent          ;/**< J                         */
+extern const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT            ;/**< J                         */
+extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT          ;/**< J                         */
 
-extern const double neutron_proton_mass_difference_energy_equivalent_in_mev     ;/**< MeV                       */
-extern const double D_neutron_proton_mass_difference_energy_equivalent_in_mev   ;/**< MeV                       */
+extern const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV     ;/**< MeV                       */
+extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV   ;/**< MeV                       */
 
-extern const double neutron_proton_mass_difference_in_u                         ;/**< u                         */
-extern const double D_neutron_proton_mass_difference_in_u                       ;/**< u                         */
+extern const double NEUTRON_PROTON_MASS_DIFFERENCE_IN_U                         ;/**< u                         */
+extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U                       ;/**< u                         */
 
-extern const double neutron_proton_mass_ratio                                   ;/**<                           */
-extern const double D_neutron_proton_mass_ratio                                 ;/**<                           */
+extern const double NEUTRON_PROTON_MASS_RATIO                                   ;/**<                           */
+extern const double U_NEUTRON_PROTON_MASS_RATIO                                 ;/**<                           */
 
-extern const double neutron_relative_atomic_mass                                ;/**<                           */
-extern const double D_neutron_relative_atomic_mass                              ;/**<                           */
+extern const double NEUTRON_RELATIVE_ATOMIC_MASS                                ;/**<                           */
+extern const double U_NEUTRON_RELATIVE_ATOMIC_MASS                              ;/**<                           */
 
-extern const double neutron_tau_mass_ratio                                      ;/**<                           */
-extern const double D_neutron_tau_mass_ratio                                    ;/**<                           */
+extern const double NEUTRON_TAU_MASS_RATIO                                      ;/**<                           */
+extern const double U_NEUTRON_TAU_MASS_RATIO                                    ;/**<                           */
 
-extern const double neutron_to_shielded_proton_mag__mom__ratio                  ;/**<                           */
-extern const double D_neutron_to_shielded_proton_mag__mom__ratio                ;/**<                           */
+extern const double NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO                  ;/**<                           */
+extern const double U_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO                ;/**<                           */
 
-extern const double newtonian_constant_of_gravitation                           ;/**< m^3 kg^-1 s^-2            */
-extern const double D_newtonian_constant_of_gravitation                         ;/**< m^3 kg^-1 s^-2            */
+extern const double NEWTONIAN_CONSTANT_OF_GRAVITATION                           ;/**< m^3 kg^-1 s^-2            */
+extern const double U_NEWTONIAN_CONSTANT_OF_GRAVITATION                         ;/**< m^3 kg^-1 s^-2            */
 
-extern const double newtonian_constant_of_gravitation_over_h_bar_c              ;/**< (GeV/c^2)^-2              */
-extern const double D_newtonian_constant_of_gravitation_over_h_bar_c            ;/**< (GeV/c^2)^-2              */
+extern const double NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C              ;/**< (GeV/c^2)^-2              */
+extern const double U_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C            ;/**< (GeV/c^2)^-2              */
 
-extern const double nuclear_magneton                                            ;/**< J T^-1                    */
-extern const double D_nuclear_magneton                                          ;/**< J T^-1                    */
+extern const double NUCLEAR_MAGNETON                                            ;/**< J T^-1                    */
+extern const double U_NUCLEAR_MAGNETON                                          ;/**< J T^-1                    */
 
-extern const double nuclear_magneton_in_ev_t                                    ;/**< eV T^-1                   */
-extern const double D_nuclear_magneton_in_ev_t                                  ;/**< eV T^-1                   */
+extern const double NUCLEAR_MAGNETON_IN_EV_T                                    ;/**< eV T^-1                   */
+extern const double U_NUCLEAR_MAGNETON_IN_EV_T                                  ;/**< eV T^-1                   */
 
-extern const double nuclear_magneton_in_inverse_meter_per_tesla                 ;/**< m^-1 T^-1                 */
-extern const double D_nuclear_magneton_in_inverse_meter_per_tesla               ;/**< m^-1 T^-1                 */
+extern const double NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA                 ;/**< m^-1 T^-1                 */
+extern const double U_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA               ;/**< m^-1 T^-1                 */
 
-extern const double nuclear_magneton_in_k_t                                     ;/**< K T^-1                    */
-extern const double D_nuclear_magneton_in_k_t                                   ;/**< K T^-1                    */
+extern const double NUCLEAR_MAGNETON_IN_K_T                                     ;/**< K T^-1                    */
+extern const double U_NUCLEAR_MAGNETON_IN_K_T                                   ;/**< K T^-1                    */
 
-extern const double nuclear_magneton_in_mhz_t                                   ;/**< MHz T^-1                  */
-extern const double D_nuclear_magneton_in_mhz_t                                 ;/**< MHz T^-1                  */
+extern const double NUCLEAR_MAGNETON_IN_MHZ_T                                   ;/**< MHz T^-1                  */
+extern const double U_NUCLEAR_MAGNETON_IN_MHZ_T                                 ;/**< MHz T^-1                  */
 
-extern const double planck_constant                                             ;/**< J Hz^-1                   */
-extern const double D_planck_constant                                           ;/**< J Hz^-1                   */
+extern const double PLANCK_CONSTANT                                             ;/**< J Hz^-1                   */
+extern const double U_PLANCK_CONSTANT                                           ;/**< J Hz^-1                   */
 
-extern const double planck_constant_in_ev_hz                                    ;/**< eV Hz^-1                  */
-extern const double D_planck_constant_in_ev_hz                                  ;/**< eV Hz^-1                  */
+extern const double PLANCK_CONSTANT_IN_EV_HZ                                    ;/**< eV Hz^-1                  */
+extern const double U_PLANCK_CONSTANT_IN_EV_HZ                                  ;/**< eV Hz^-1                  */
 
-extern const double planck_length                                               ;/**< m                         */
-extern const double D_planck_length                                             ;/**< m                         */
+extern const double PLANCK_LENGTH                                               ;/**< m                         */
+extern const double U_PLANCK_LENGTH                                             ;/**< m                         */
 
-extern const double planck_mass                                                 ;/**< kg                        */
-extern const double D_planck_mass                                               ;/**< kg                        */
+extern const double PLANCK_MASS                                                 ;/**< kg                        */
+extern const double U_PLANCK_MASS                                               ;/**< kg                        */
 
-extern const double planck_mass_energy_equivalent_in_gev                        ;/**< GeV                       */
-extern const double D_planck_mass_energy_equivalent_in_gev                      ;/**< GeV                       */
+extern const double PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV                        ;/**< GeV                       */
+extern const double U_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV                      ;/**< GeV                       */
 
-extern const double planck_temperature                                          ;/**< K                         */
-extern const double D_planck_temperature                                        ;/**< K                         */
+extern const double PLANCK_TEMPERATURE                                          ;/**< K                         */
+extern const double U_PLANCK_TEMPERATURE                                        ;/**< K                         */
 
-extern const double planck_time                                                 ;/**< s                         */
-extern const double D_planck_time                                               ;/**< s                         */
+extern const double PLANCK_TIME                                                 ;/**< s                         */
+extern const double U_PLANCK_TIME                                               ;/**< s                         */
 
-extern const double proton_charge_to_mass_quotient                              ;/**< C kg^-1                   */
-extern const double D_proton_charge_to_mass_quotient                            ;/**< C kg^-1                   */
+extern const double PROTON_CHARGE_TO_MASS_QUOTIENT                              ;/**< C kg^-1                   */
+extern const double U_PROTON_CHARGE_TO_MASS_QUOTIENT                            ;/**< C kg^-1                   */
 
-extern const double proton_compton_wavelength                                   ;/**< m                         */
-extern const double D_proton_compton_wavelength                                 ;/**< m                         */
+extern const double PROTON_COMPTON_WAVELENGTH                                   ;/**< m                         */
+extern const double U_PROTON_COMPTON_WAVELENGTH                                 ;/**< m                         */
 
-extern const double proton_electron_mass_ratio                                  ;/**<                           */
-extern const double D_proton_electron_mass_ratio                                ;/**<                           */
+extern const double PROTON_ELECTRON_MASS_RATIO                                  ;/**<                           */
+extern const double U_PROTON_ELECTRON_MASS_RATIO                                ;/**<                           */
 
-extern const double proton_g_factor                                             ;/**<                           */
-extern const double D_proton_g_factor                                           ;/**<                           */
+extern const double PROTON_G_FACTOR                                             ;/**<                           */
+extern const double U_PROTON_G_FACTOR                                           ;/**<                           */
 
-extern const double proton_gyromag__ratio                                       ;/**< s^-1 T^-1                 */
-extern const double D_proton_gyromag__ratio                                     ;/**< s^-1 T^-1                 */
+extern const double PROTON_GYROMAG__RATIO                                       ;/**< s^-1 T^-1                 */
+extern const double U_PROTON_GYROMAG__RATIO                                     ;/**< s^-1 T^-1                 */
 
-extern const double proton_gyromag__ratio_in_mhz_t                              ;/**< MHz T^-1                  */
-extern const double D_proton_gyromag__ratio_in_mhz_t                            ;/**< MHz T^-1                  */
+extern const double PROTON_GYROMAG__RATIO_IN_MHZ_T                              ;/**< MHz T^-1                  */
+extern const double U_PROTON_GYROMAG__RATIO_IN_MHZ_T                            ;/**< MHz T^-1                  */
 
-extern const double proton_mag__mom                                             ;/**< J T^-1                    */
-extern const double D_proton_mag__mom                                           ;/**< J T^-1                    */
+extern const double PROTON_MAG__MOM                                             ;/**< J T^-1                    */
+extern const double U_PROTON_MAG__MOM                                           ;/**< J T^-1                    */
 
-extern const double proton_mag__mom__to_bohr_magneton_ratio                     ;/**<                           */
-extern const double D_proton_mag__mom__to_bohr_magneton_ratio                   ;/**<                           */
+extern const double PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                     ;/**<                           */
+extern const double U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                   ;/**<                           */
 
-extern const double proton_mag__mom__to_nuclear_magneton_ratio                  ;/**<                           */
-extern const double D_proton_mag__mom__to_nuclear_magneton_ratio                ;/**<                           */
+extern const double PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                  ;/**<                           */
+extern const double U_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                ;/**<                           */
 
-extern const double proton_mag__shielding_correction                            ;/**<                           */
-extern const double D_proton_mag__shielding_correction                          ;/**<                           */
+extern const double PROTON_MAG__SHIELDING_CORRECTION                            ;/**<                           */
+extern const double U_PROTON_MAG__SHIELDING_CORRECTION                          ;/**<                           */
 
-extern const double proton_mass                                                 ;/**< kg                        */
-extern const double D_proton_mass                                               ;/**< kg                        */
+extern const double PROTON_MASS                                                 ;/**< kg                        */
+extern const double U_PROTON_MASS                                               ;/**< kg                        */
 
-extern const double proton_mass_energy_equivalent                               ;/**< J                         */
-extern const double D_proton_mass_energy_equivalent                             ;/**< J                         */
+extern const double PROTON_MASS_ENERGY_EQUIVALENT                               ;/**< J                         */
+extern const double U_PROTON_MASS_ENERGY_EQUIVALENT                             ;/**< J                         */
 
-extern const double proton_mass_energy_equivalent_in_mev                        ;/**< MeV                       */
-extern const double D_proton_mass_energy_equivalent_in_mev                      ;/**< MeV                       */
+extern const double PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV                        ;/**< MeV                       */
+extern const double U_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV                      ;/**< MeV                       */
 
-extern const double proton_mass_in_u                                            ;/**< u                         */
-extern const double D_proton_mass_in_u                                          ;/**< u                         */
+extern const double PROTON_MASS_IN_U                                            ;/**< u                         */
+extern const double U_PROTON_MASS_IN_U                                          ;/**< u                         */
 
-extern const double proton_molar_mass                                           ;/**< kg mol^-1                 */
-extern const double D_proton_molar_mass                                         ;/**< kg mol^-1                 */
+extern const double PROTON_MOLAR_MASS                                           ;/**< kg mol^-1                 */
+extern const double U_PROTON_MOLAR_MASS                                         ;/**< kg mol^-1                 */
 
-extern const double proton_muon_mass_ratio                                      ;/**<                           */
-extern const double D_proton_muon_mass_ratio                                    ;/**<                           */
+extern const double PROTON_MUON_MASS_RATIO                                      ;/**<                           */
+extern const double U_PROTON_MUON_MASS_RATIO                                    ;/**<                           */
 
-extern const double proton_neutron_mag__mom__ratio                              ;/**<                           */
-extern const double D_proton_neutron_mag__mom__ratio                            ;/**<                           */
+extern const double PROTON_NEUTRON_MAG__MOM__RATIO                              ;/**<                           */
+extern const double U_PROTON_NEUTRON_MAG__MOM__RATIO                            ;/**<                           */
 
-extern const double proton_neutron_mass_ratio                                   ;/**<                           */
-extern const double D_proton_neutron_mass_ratio                                 ;/**<                           */
+extern const double PROTON_NEUTRON_MASS_RATIO                                   ;/**<                           */
+extern const double U_PROTON_NEUTRON_MASS_RATIO                                 ;/**<                           */
 
-extern const double proton_relative_atomic_mass                                 ;/**<                           */
-extern const double D_proton_relative_atomic_mass                               ;/**<                           */
+extern const double PROTON_RELATIVE_ATOMIC_MASS                                 ;/**<                           */
+extern const double U_PROTON_RELATIVE_ATOMIC_MASS                               ;/**<                           */
 
-extern const double proton_rms_charge_radius                                    ;/**< m                         */
-extern const double D_proton_rms_charge_radius                                  ;/**< m                         */
+extern const double PROTON_RMS_CHARGE_RADIUS                                    ;/**< m                         */
+extern const double U_PROTON_RMS_CHARGE_RADIUS                                  ;/**< m                         */
 
-extern const double proton_tau_mass_ratio                                       ;/**<                           */
-extern const double D_proton_tau_mass_ratio                                     ;/**<                           */
+extern const double PROTON_TAU_MASS_RATIO                                       ;/**<                           */
+extern const double U_PROTON_TAU_MASS_RATIO                                     ;/**<                           */
 
-extern const double quantum_of_circulation                                      ;/**< m^2 s^-1                  */
-extern const double D_quantum_of_circulation                                    ;/**< m^2 s^-1                  */
+extern const double QUANTUM_OF_CIRCULATION                                      ;/**< m^2 s^-1                  */
+extern const double U_QUANTUM_OF_CIRCULATION                                    ;/**< m^2 s^-1                  */
 
-extern const double quantum_of_circulation_times_2                              ;/**< m^2 s^-1                  */
-extern const double D_quantum_of_circulation_times_2                            ;/**< m^2 s^-1                  */
+extern const double QUANTUM_OF_CIRCULATION_TIMES_2                              ;/**< m^2 s^-1                  */
+extern const double U_QUANTUM_OF_CIRCULATION_TIMES_2                            ;/**< m^2 s^-1                  */
 
-extern const double reduced_compton_wavelength                                  ;/**< m                         */
-extern const double D_reduced_compton_wavelength                                ;/**< m                         */
+extern const double REDUCED_COMPTON_WAVELENGTH                                  ;/**< m                         */
+extern const double U_REDUCED_COMPTON_WAVELENGTH                                ;/**< m                         */
 
-extern const double reduced_muon_compton_wavelength                             ;/**< m                         */
-extern const double D_reduced_muon_compton_wavelength                           ;/**< m                         */
+extern const double REDUCED_MUON_COMPTON_WAVELENGTH                             ;/**< m                         */
+extern const double U_REDUCED_MUON_COMPTON_WAVELENGTH                           ;/**< m                         */
 
-extern const double reduced_neutron_compton_wavelength                          ;/**< m                         */
-extern const double D_reduced_neutron_compton_wavelength                        ;/**< m                         */
+extern const double REDUCED_NEUTRON_COMPTON_WAVELENGTH                          ;/**< m                         */
+extern const double U_REDUCED_NEUTRON_COMPTON_WAVELENGTH                        ;/**< m                         */
 
-extern const double reduced_planck_constant                                     ;/**< J s                       */
-extern const double D_reduced_planck_constant                                   ;/**< J s                       */
+extern const double REDUCED_PLANCK_CONSTANT                                     ;/**< J s                       */
+extern const double U_REDUCED_PLANCK_CONSTANT                                   ;/**< J s                       */
 
-extern const double reduced_planck_constant_in_ev_s                             ;/**< eV s                      */
-extern const double D_reduced_planck_constant_in_ev_s                           ;/**< eV s                      */
+extern const double REDUCED_PLANCK_CONSTANT_IN_EV_S                             ;/**< eV s                      */
+extern const double U_REDUCED_PLANCK_CONSTANT_IN_EV_S                           ;/**< eV s                      */
 
-extern const double reduced_planck_constant_times_c_in_mev_fm                   ;/**< MeV fm                    */
-extern const double D_reduced_planck_constant_times_c_in_mev_fm                 ;/**< MeV fm                    */
+extern const double REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM                   ;/**< MeV fm                    */
+extern const double U_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM                 ;/**< MeV fm                    */
 
-extern const double reduced_proton_compton_wavelength                           ;/**< m                         */
-extern const double D_reduced_proton_compton_wavelength                         ;/**< m                         */
+extern const double REDUCED_PROTON_COMPTON_WAVELENGTH                           ;/**< m                         */
+extern const double U_REDUCED_PROTON_COMPTON_WAVELENGTH                         ;/**< m                         */
 
-extern const double reduced_tau_compton_wavelength                              ;/**< m                         */
-extern const double D_reduced_tau_compton_wavelength                            ;/**< m                         */
+extern const double REDUCED_TAU_COMPTON_WAVELENGTH                              ;/**< m                         */
+extern const double U_REDUCED_TAU_COMPTON_WAVELENGTH                            ;/**< m                         */
 
-extern const double rydberg_constant                                            ;/**< m^-1                      */
-extern const double D_rydberg_constant                                          ;/**< m^-1                      */
+extern const double RYDBERG_CONSTANT                                            ;/**< m^-1                      */
+extern const double U_RYDBERG_CONSTANT                                          ;/**< m^-1                      */
 
-extern const double rydberg_constant_times_c_in_hz                              ;/**< Hz                        */
-extern const double D_rydberg_constant_times_c_in_hz                            ;/**< Hz                        */
+extern const double RYDBERG_CONSTANT_TIMES_C_IN_HZ                              ;/**< Hz                        */
+extern const double U_RYDBERG_CONSTANT_TIMES_C_IN_HZ                            ;/**< Hz                        */
 
-extern const double rydberg_constant_times_hc_in_ev                             ;/**< eV                        */
-extern const double D_rydberg_constant_times_hc_in_ev                           ;/**< eV                        */
+extern const double RYDBERG_CONSTANT_TIMES_HC_IN_EV                             ;/**< eV                        */
+extern const double U_RYDBERG_CONSTANT_TIMES_HC_IN_EV                           ;/**< eV                        */
 
-extern const double rydberg_constant_times_hc_in_j                              ;/**< J                         */
-extern const double D_rydberg_constant_times_hc_in_j                            ;/**< J                         */
+extern const double RYDBERG_CONSTANT_TIMES_HC_IN_J                              ;/**< J                         */
+extern const double U_RYDBERG_CONSTANT_TIMES_HC_IN_J                            ;/**< J                         */
 
-extern const double sackur_tetrode_constant__1_k__100_kpa                       ;/**<                           */
-extern const double D_sackur_tetrode_constant__1_k__100_kpa                     ;/**<                           */
+extern const double SACKUR_TETRODE_CONSTANT__1_K__100_KPA                       ;/**<                           */
+extern const double U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA                     ;/**<                           */
 
-extern const double sackur_tetrode_constant__1_k__101_325_kpa                   ;/**<                           */
-extern const double D_sackur_tetrode_constant__1_k__101_325_kpa                 ;/**<                           */
+extern const double SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA                   ;/**<                           */
+extern const double U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA                 ;/**<                           */
 
-extern const double second_radiation_constant                                   ;/**< m K                       */
-extern const double D_second_radiation_constant                                 ;/**< m K                       */
+extern const double SECOND_RADIATION_CONSTANT                                   ;/**< m K                       */
+extern const double U_SECOND_RADIATION_CONSTANT                                 ;/**< m K                       */
 
-extern const double shielded_helion_gyromag__ratio                              ;/**< s^-1 T^-1                 */
-extern const double D_shielded_helion_gyromag__ratio                            ;/**< s^-1 T^-1                 */
+extern const double SHIELDED_HELION_GYROMAG__RATIO                              ;/**< s^-1 T^-1                 */
+extern const double U_SHIELDED_HELION_GYROMAG__RATIO                            ;/**< s^-1 T^-1                 */
 
-extern const double shielded_helion_gyromag__ratio_in_mhz_t                     ;/**< MHz T^-1                  */
-extern const double D_shielded_helion_gyromag__ratio_in_mhz_t                   ;/**< MHz T^-1                  */
+extern const double SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T                     ;/**< MHz T^-1                  */
+extern const double U_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T                   ;/**< MHz T^-1                  */
 
-extern const double shielded_helion_mag__mom                                    ;/**< J T^-1                    */
-extern const double D_shielded_helion_mag__mom                                  ;/**< J T^-1                    */
+extern const double SHIELDED_HELION_MAG__MOM                                    ;/**< J T^-1                    */
+extern const double U_SHIELDED_HELION_MAG__MOM                                  ;/**< J T^-1                    */
 
-extern const double shielded_helion_mag__mom__to_bohr_magneton_ratio            ;/**<                           */
-extern const double D_shielded_helion_mag__mom__to_bohr_magneton_ratio          ;/**<                           */
+extern const double SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO            ;/**<                           */
+extern const double U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO          ;/**<                           */
 
-extern const double shielded_helion_mag__mom__to_nuclear_magneton_ratio         ;/**<                           */
-extern const double D_shielded_helion_mag__mom__to_nuclear_magneton_ratio       ;/**<                           */
+extern const double SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO         ;/**<                           */
+extern const double U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO       ;/**<                           */
 
-extern const double shielded_helion_to_proton_mag__mom__ratio                   ;/**<                           */
-extern const double D_shielded_helion_to_proton_mag__mom__ratio                 ;/**<                           */
+extern const double SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO                   ;/**<                           */
+extern const double U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO                 ;/**<                           */
 
-extern const double shielded_helion_to_shielded_proton_mag__mom__ratio          ;/**<                           */
-extern const double D_shielded_helion_to_shielded_proton_mag__mom__ratio        ;/**<                           */
+extern const double SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO          ;/**<                           */
+extern const double U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO        ;/**<                           */
 
-extern const double shielded_proton_gyromag__ratio                              ;/**< s^-1 T^-1                 */
-extern const double D_shielded_proton_gyromag__ratio                            ;/**< s^-1 T^-1                 */
+extern const double SHIELDED_PROTON_GYROMAG__RATIO                              ;/**< s^-1 T^-1                 */
+extern const double U_SHIELDED_PROTON_GYROMAG__RATIO                            ;/**< s^-1 T^-1                 */
 
-extern const double shielded_proton_gyromag__ratio_in_mhz_t                     ;/**< MHz T^-1                  */
-extern const double D_shielded_proton_gyromag__ratio_in_mhz_t                   ;/**< MHz T^-1                  */
+extern const double SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T                     ;/**< MHz T^-1                  */
+extern const double U_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T                   ;/**< MHz T^-1                  */
 
-extern const double shielded_proton_mag__mom                                    ;/**< J T^-1                    */
-extern const double D_shielded_proton_mag__mom                                  ;/**< J T^-1                    */
+extern const double SHIELDED_PROTON_MAG__MOM                                    ;/**< J T^-1                    */
+extern const double U_SHIELDED_PROTON_MAG__MOM                                  ;/**< J T^-1                    */
 
-extern const double shielded_proton_mag__mom__to_bohr_magneton_ratio            ;/**<                           */
-extern const double D_shielded_proton_mag__mom__to_bohr_magneton_ratio          ;/**<                           */
+extern const double SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO            ;/**<                           */
+extern const double U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO          ;/**<                           */
 
-extern const double shielded_proton_mag__mom__to_nuclear_magneton_ratio         ;/**<                           */
-extern const double D_shielded_proton_mag__mom__to_nuclear_magneton_ratio       ;/**<                           */
+extern const double SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO         ;/**<                           */
+extern const double U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO       ;/**<                           */
 
-extern const double shielding_difference_of_d_and_p_in_hd                       ;/**<                           */
-extern const double D_shielding_difference_of_d_and_p_in_hd                     ;/**<                           */
+extern const double SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD                       ;/**<                           */
+extern const double U_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD                     ;/**<                           */
 
-extern const double shielding_difference_of_t_and_p_in_ht                       ;/**<                           */
-extern const double D_shielding_difference_of_t_and_p_in_ht                     ;/**<                           */
+extern const double SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT                       ;/**<                           */
+extern const double U_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT                     ;/**<                           */
 
-extern const double speed_of_light_in_vacuum                                    ;/**< m s^-1                    */
-extern const double D_speed_of_light_in_vacuum                                  ;/**< m s^-1                    */
+extern const double SPEED_OF_LIGHT_IN_VACUUM                                    ;/**< m s^-1                    */
+extern const double U_SPEED_OF_LIGHT_IN_VACUUM                                  ;/**< m s^-1                    */
 
-extern const double standard_acceleration_of_gravity                            ;/**< m s^-2                    */
-extern const double D_standard_acceleration_of_gravity                          ;/**< m s^-2                    */
+extern const double STANDARD_ACCELERATION_OF_GRAVITY                            ;/**< m s^-2                    */
+extern const double U_STANDARD_ACCELERATION_OF_GRAVITY                          ;/**< m s^-2                    */
 
-extern const double standard_atmosphere                                         ;/**< Pa                        */
-extern const double D_standard_atmosphere                                       ;/**< Pa                        */
+extern const double STANDARD_ATMOSPHERE                                         ;/**< Pa                        */
+extern const double U_STANDARD_ATMOSPHERE                                       ;/**< Pa                        */
 
-extern const double standard_state_pressure                                     ;/**< Pa                        */
-extern const double D_standard_state_pressure                                   ;/**< Pa                        */
+extern const double STANDARD_STATE_PRESSURE                                     ;/**< Pa                        */
+extern const double U_STANDARD_STATE_PRESSURE                                   ;/**< Pa                        */
 
-extern const double stefan_boltzmann_constant                                   ;/**< W m^-2 K^-4               */
-extern const double D_stefan_boltzmann_constant                                 ;/**< W m^-2 K^-4               */
+extern const double STEFAN_BOLTZMANN_CONSTANT                                   ;/**< W m^-2 K^-4               */
+extern const double U_STEFAN_BOLTZMANN_CONSTANT                                 ;/**< W m^-2 K^-4               */
 
-extern const double tau_compton_wavelength                                      ;/**< m                         */
-extern const double D_tau_compton_wavelength                                    ;/**< m                         */
+extern const double TAU_COMPTON_WAVELENGTH                                      ;/**< m                         */
+extern const double U_TAU_COMPTON_WAVELENGTH                                    ;/**< m                         */
 
-extern const double tau_electron_mass_ratio                                     ;/**<                           */
-extern const double D_tau_electron_mass_ratio                                   ;/**<                           */
+extern const double TAU_ELECTRON_MASS_RATIO                                     ;/**<                           */
+extern const double U_TAU_ELECTRON_MASS_RATIO                                   ;/**<                           */
 
-extern const double tau_energy_equivalent                                       ;/**< MeV                       */
-extern const double D_tau_energy_equivalent                                     ;/**< MeV                       */
+extern const double TAU_ENERGY_EQUIVALENT                                       ;/**< MeV                       */
+extern const double U_TAU_ENERGY_EQUIVALENT                                     ;/**< MeV                       */
 
-extern const double tau_mass                                                    ;/**< kg                        */
-extern const double D_tau_mass                                                  ;/**< kg                        */
+extern const double TAU_MASS                                                    ;/**< kg                        */
+extern const double U_TAU_MASS                                                  ;/**< kg                        */
 
-extern const double tau_mass_energy_equivalent                                  ;/**< J                         */
-extern const double D_tau_mass_energy_equivalent                                ;/**< J                         */
+extern const double TAU_MASS_ENERGY_EQUIVALENT                                  ;/**< J                         */
+extern const double U_TAU_MASS_ENERGY_EQUIVALENT                                ;/**< J                         */
 
-extern const double tau_mass_in_u                                               ;/**< u                         */
-extern const double D_tau_mass_in_u                                             ;/**< u                         */
+extern const double TAU_MASS_IN_U                                               ;/**< u                         */
+extern const double U_TAU_MASS_IN_U                                             ;/**< u                         */
 
-extern const double tau_molar_mass                                              ;/**< kg mol^-1                 */
-extern const double D_tau_molar_mass                                            ;/**< kg mol^-1                 */
+extern const double TAU_MOLAR_MASS                                              ;/**< kg mol^-1                 */
+extern const double U_TAU_MOLAR_MASS                                            ;/**< kg mol^-1                 */
 
-extern const double tau_muon_mass_ratio                                         ;/**<                           */
-extern const double D_tau_muon_mass_ratio                                       ;/**<                           */
+extern const double TAU_MUON_MASS_RATIO                                         ;/**<                           */
+extern const double U_TAU_MUON_MASS_RATIO                                       ;/**<                           */
 
-extern const double tau_neutron_mass_ratio                                      ;/**<                           */
-extern const double D_tau_neutron_mass_ratio                                    ;/**<                           */
+extern const double TAU_NEUTRON_MASS_RATIO                                      ;/**<                           */
+extern const double U_TAU_NEUTRON_MASS_RATIO                                    ;/**<                           */
 
-extern const double tau_proton_mass_ratio                                       ;/**<                           */
-extern const double D_tau_proton_mass_ratio                                     ;/**<                           */
+extern const double TAU_PROTON_MASS_RATIO                                       ;/**<                           */
+extern const double U_TAU_PROTON_MASS_RATIO                                     ;/**<                           */
 
-extern const double thomson_cross_section                                       ;/**< m^2                       */
-extern const double D_thomson_cross_section                                     ;/**< m^2                       */
+extern const double THOMSON_CROSS_SECTION                                       ;/**< m^2                       */
+extern const double U_THOMSON_CROSS_SECTION                                     ;/**< m^2                       */
 
-extern const double triton_electron_mass_ratio                                  ;/**<                           */
-extern const double D_triton_electron_mass_ratio                                ;/**<                           */
+extern const double TRITON_ELECTRON_MASS_RATIO                                  ;/**<                           */
+extern const double U_TRITON_ELECTRON_MASS_RATIO                                ;/**<                           */
 
-extern const double triton_g_factor                                             ;/**<                           */
-extern const double D_triton_g_factor                                           ;/**<                           */
+extern const double TRITON_G_FACTOR                                             ;/**<                           */
+extern const double U_TRITON_G_FACTOR                                           ;/**<                           */
 
-extern const double triton_mag__mom                                             ;/**< J T^-1                    */
-extern const double D_triton_mag__mom                                           ;/**< J T^-1                    */
+extern const double TRITON_MAG__MOM                                             ;/**< J T^-1                    */
+extern const double U_TRITON_MAG__MOM                                           ;/**< J T^-1                    */
 
-extern const double triton_mag__mom__to_bohr_magneton_ratio                     ;/**<                           */
-extern const double D_triton_mag__mom__to_bohr_magneton_ratio                   ;/**<                           */
+extern const double TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                     ;/**<                           */
+extern const double U_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO                   ;/**<                           */
 
-extern const double triton_mag__mom__to_nuclear_magneton_ratio                  ;/**<                           */
-extern const double D_triton_mag__mom__to_nuclear_magneton_ratio                ;/**<                           */
+extern const double TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                  ;/**<                           */
+extern const double U_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO                ;/**<                           */
 
-extern const double triton_mass                                                 ;/**< kg                        */
-extern const double D_triton_mass                                               ;/**< kg                        */
+extern const double TRITON_MASS                                                 ;/**< kg                        */
+extern const double U_TRITON_MASS                                               ;/**< kg                        */
 
-extern const double triton_mass_energy_equivalent                               ;/**< J                         */
-extern const double D_triton_mass_energy_equivalent                             ;/**< J                         */
+extern const double TRITON_MASS_ENERGY_EQUIVALENT                               ;/**< J                         */
+extern const double U_TRITON_MASS_ENERGY_EQUIVALENT                             ;/**< J                         */
 
-extern const double triton_mass_energy_equivalent_in_mev                        ;/**< MeV                       */
-extern const double D_triton_mass_energy_equivalent_in_mev                      ;/**< MeV                       */
+extern const double TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV                        ;/**< MeV                       */
+extern const double U_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV                      ;/**< MeV                       */
 
-extern const double triton_mass_in_u                                            ;/**< u                         */
-extern const double D_triton_mass_in_u                                          ;/**< u                         */
+extern const double TRITON_MASS_IN_U                                            ;/**< u                         */
+extern const double U_TRITON_MASS_IN_U                                          ;/**< u                         */
 
-extern const double triton_molar_mass                                           ;/**< kg mol^-1                 */
-extern const double D_triton_molar_mass                                         ;/**< kg mol^-1                 */
+extern const double TRITON_MOLAR_MASS                                           ;/**< kg mol^-1                 */
+extern const double U_TRITON_MOLAR_MASS                                         ;/**< kg mol^-1                 */
 
-extern const double triton_proton_mass_ratio                                    ;/**<                           */
-extern const double D_triton_proton_mass_ratio                                  ;/**<                           */
+extern const double TRITON_PROTON_MASS_RATIO                                    ;/**<                           */
+extern const double U_TRITON_PROTON_MASS_RATIO                                  ;/**<                           */
 
-extern const double triton_relative_atomic_mass                                 ;/**<                           */
-extern const double D_triton_relative_atomic_mass                               ;/**<                           */
+extern const double TRITON_RELATIVE_ATOMIC_MASS                                 ;/**<                           */
+extern const double U_TRITON_RELATIVE_ATOMIC_MASS                               ;/**<                           */
 
-extern const double triton_to_proton_mag__mom__ratio                            ;/**<                           */
-extern const double D_triton_to_proton_mag__mom__ratio                          ;/**<                           */
+extern const double TRITON_TO_PROTON_MAG__MOM__RATIO                            ;/**<                           */
+extern const double U_TRITON_TO_PROTON_MAG__MOM__RATIO                          ;/**<                           */
 
-extern const double unified_atomic_mass_unit                                    ;/**< kg                        */
-extern const double D_unified_atomic_mass_unit                                  ;/**< kg                        */
+extern const double UNIFIED_ATOMIC_MASS_UNIT                                    ;/**< kg                        */
+extern const double U_UNIFIED_ATOMIC_MASS_UNIT                                  ;/**< kg                        */
 
-extern const double vacuum_electric_permittivity                                ;/**< F m^-1                    */
-extern const double D_vacuum_electric_permittivity                              ;/**< F m^-1                    */
+extern const double VACUUM_ELECTRIC_PERMITTIVITY                                ;/**< F m^-1                    */
+extern const double U_VACUUM_ELECTRIC_PERMITTIVITY                              ;/**< F m^-1                    */
 
-extern const double vacuum_mag__permeability                                    ;/**< N A^-2                    */
-extern const double D_vacuum_mag__permeability                                  ;/**< N A^-2                    */
+extern const double VACUUM_MAG__PERMEABILITY                                    ;/**< N A^-2                    */
+extern const double U_VACUUM_MAG__PERMEABILITY                                  ;/**< N A^-2                    */
 
-extern const double von_klitzing_constant                                       ;/**< ohm                       */
-extern const double D_von_klitzing_constant                                     ;/**< ohm                       */
+extern const double VON_KLITZING_CONSTANT                                       ;/**< ohm                       */
+extern const double U_VON_KLITZING_CONSTANT                                     ;/**< ohm                       */
 
-extern const double weak_mixing_angle                                           ;/**<                           */
-extern const double D_weak_mixing_angle                                         ;/**<                           */
+extern const double WEAK_MIXING_ANGLE                                           ;/**<                           */
+extern const double U_WEAK_MIXING_ANGLE                                         ;/**<                           */
 
-extern const double wien_frequency_displacement_law_constant                    ;/**< Hz K^-1                   */
-extern const double D_wien_frequency_displacement_law_constant                  ;/**< Hz K^-1                   */
+extern const double WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT                    ;/**< Hz K^-1                   */
+extern const double U_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT                  ;/**< Hz K^-1                   */
 
-extern const double wien_wavelength_displacement_law_constant                   ;/**< m K                       */
-extern const double D_wien_wavelength_displacement_law_constant                 ;/**< m K                       */
+extern const double WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT                   ;/**< m K                       */
+extern const double U_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT                 ;/**< m K                       */
 
-extern const double w_to_z_mass_ratio                                           ;/**<                           */
-extern const double D_w_to_z_mass_ratio                                         ;/**<                           */
+extern const double W_TO_Z_MASS_RATIO                                           ;/**<                           */
+extern const double U_W_TO_Z_MASS_RATIO                                         ;/**<                           */
 
