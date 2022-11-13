@@ -97,10 +97,10 @@ void format_names(char *line, char *name, char *dname, int language){
     }
     switch(language){
         case C:
-            dname[0] = 'D';
+            dname[0] = 'U';
             break;
         case F90:
-            dname[0] = 'D';
+            dname[0] = 'U';
             break;
     }
     dname[1] = '_';
