@@ -29,5 +29,6 @@ add_subdirectory(examples)
 # add_test(NAME bv COMMAND test_bv)
 
 
- install(TARGETS static_codata PUBLIC_HEADER DESTINATION include ARCHIVE DESTINATION lib)
- install(TARGETS shared_codata PUBLIC_HEADER DESTINATION include LIBRARY DESTINATION lib)
+install(TARGETS static_codata PUBLIC_HEADER DESTINATION include ARCHIVE DESTINATION lib)
+install(TARGETS shared_codata PUBLIC_HEADER DESTINATION include LIBRARY DESTINATION lib)
+install(TARGETS codata-config RUNTIME DESTINATION bin)
