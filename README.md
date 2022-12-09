@@ -8,7 +8,7 @@ The generator, written in C, generates:
  * a Fortran module
  * a C header
 
-The generated Fortran module is then compiled into a shared and static library `libcodata`.
+The generated Fortran module is then compiled (f2008+) into a shared and static library `libcodata`.
 
 The static and shared libraries can be installed in order to be included in Fortran or C programs.
 
