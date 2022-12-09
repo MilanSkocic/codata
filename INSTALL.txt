@@ -6,7 +6,7 @@
 
 2. Generate a makefile
 
-    cmake -G "Unix Makefiles" -S ..
+    cmake -G "Unix Makefiles" -S .. -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/path/to/folder
 
 3. Build either with cmake or with make directly
 
@@ -18,4 +18,4 @@
 
 5. Install directly
     
-    cmake --install . --prefix /path/to/folder
+    cmake --install .
