@@ -19,11 +19,29 @@
 #define C 0
 #define F90 1
 
+struct codata_file_props{
+    int n;
+    int index_header_end;
+};
+
 static const size_t BUFFER_SIZE = 256;
 static const size_t NAMES_SIZE = 60;
 static const size_t VALUES_SIZE = 25;
 static const size_t UNCERTAINTIES_SIZE = 25;
 static const size_t UNITS_SIZE = 25;
+
+static const char type_declaration[] = "type :: t_constant\n"
+"character(len=60) :: name\n"
+"real(real64) :: value\n"
+"real(real64) :: uncertainty\n"
+"character(len=25) :: unit\n"
+"end type\n\n";
+
+static const char type_subarray_declaration[] = "type(t_constant), dimension(%d), parameter, private :: codata_%d = [&\n";
+static const char type_array_declaration[] = "type(t_constant), dimension(%d) :: codata_constants = [&\n";
+static const char type_array_declaration_end[] = "%s";
+static const char initialize_constant[] = "t_constant(\"%s\", %s, %s, \"%s\") %s\n";
+static const char add_subarray[] = "codata_%d %s\n";
 
 static const char newline[2] = "\n\0";
 
@@ -71,6 +89,13 @@ static const char c_footer[1] = "\0";
 static const char f90_footer[18] = "end module codata\0";
 
 static const char codata_path[] = "./codata.txt";
+
+static const char t_constant[] = 
+"type :: t_constant \n"
+"    character(len=n) :: name\n"
+"    real(real64) :: value\n"
+"    real(real64) :: uncertainty\n"
+"end type\n";
 
 void format_names(char *line, char *name, char *dname, int language){
     
@@ -330,7 +355,6 @@ void rtrim(char *buf, size_t buffer_size){
     buf[buffer_size-i+1]= '\0';
 }
 
-
 int is_blank_line(char *buf, size_t buffer_size){
     size_t i;
     size_t j;
@@ -346,41 +370,6 @@ int is_blank_line(char *buf, size_t buffer_size){
     }
     else{
         return 1;
-    }
-}
-
-char **get_table(size_t rows, size_t line_buffer_size){
-    
-    size_t i;
-    char **table = (char **)malloc(sizeof(char *)*rows);
-    for(i=0; i<rows; i++){
-        table[i] = (char *)malloc(sizeof(char)*(line_buffer_size+1));
-    }
-    return table;
-}
-
-void free_table(char **table, size_t rows, size_t line_buffer_size){
-    
-    size_t i;
-    for(i=0; i<rows; i++){
-        free(table[i]);
-    }
-    free(table);
-}
-
-void print_table(char **table, size_t rows, size_t line_buffer_size){
-    
-    size_t i;
-    for(i=0; i<rows; i++){
-        printf("%3ld - %s\n", i, table[i]);
-    }
-}
-
-void init_table(char **table, size_t rows, size_t line_buffer_size){
-    
-    size_t i;
-    for(i=0; i<rows; i++){
-        strcpy(table[i], "struct codata_constant END\0");
     }
 }
 
@@ -560,37 +549,169 @@ void write_output(FILE *codata, FILE *fcode, int language){
     free(unit);
 }
 
+
+void get_props(struct codata_file_props *props){
+
+    FILE *codata;
+    char *line = (char *)malloc(sizeof(char)*(BUFFER_SIZE+1));
+    int header_end, empty;
+
+    codata =  fopen(codata_path, "r");
+
+    props->n = 0;
+    props->index_header_end = 0;
+    
+    while (!feof(codata)){
+        clean_line(line, BUFFER_SIZE);
+        read_line(codata, line);
+        if (line[0] == '-'){
+            props->index_header_end = props->index_header_end + 1 ;
+            break;
+        }
+        props->index_header_end = props->index_header_end + 1 ;
+    }
+    
+    while (!feof(codata)){
+        clean_line(line, BUFFER_SIZE);
+        empty = read_line(codata, line);
+
+        if (empty == 0){
+            props->n = props->n + 1 ;
+        }
+    }
+
+    fclose(codata);
+    free(line);
+
+}
+
+void print_props(struct codata_file_props *props){
+    printf("Header ends at index: %d\n", props->index_header_end);
+    printf("Number of constants: %d\n", props->n);
+}
+
+void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *props){
+
+    int empty, i, k, imax, N;
+    int subdim = 10;
+
+    char *line = (char *)malloc(sizeof(char)*(BUFFER_SIZE+1));
+    char *name = (char *)malloc(sizeof(char)*(NAMES_SIZE+1));
+    char *dname = (char *)malloc(sizeof(char)*(NAMES_SIZE+1));
+    char *value = (char *)malloc(sizeof(char)*(VALUES_SIZE+1));
+    char *uncertainty = (char *)malloc(sizeof(char)*(UNCERTAINTIES_SIZE+1));
+    char *unit = (char *)malloc(sizeof(char)*(UNITS_SIZE+1));
+
+    for (i=0; i<props->index_header_end;i++){
+        clean_line(line, BUFFER_SIZE);
+        empty = read_line(fcodata, line);
+    }
+    k = 0;
+    N = props->n/subdim;
+    imax = N * subdim;
+    k = 0;
+    for(i=0; i<imax; i++){
+        if (i%subdim == 0){
+            k += 1;
+            fprintf(fcode, type_subarray_declaration, subdim, k*subdim);
+        }
+        clean_line(line, BUFFER_SIZE);
+        clean_line(name, NAMES_SIZE);
+        clean_line(dname, NAMES_SIZE);
+        clean_line(value, VALUES_SIZE);
+        clean_line(uncertainty, UNCERTAINTIES_SIZE);
+        clean_line(unit, UNITS_SIZE);
+        empty = read_line(fcodata, line);
+        if(empty == 0){
+            format_names(line, name, dname, F90);
+            format_values(line, value, F90);
+            format_uncertainties(line, uncertainty, F90);
+            format_units(line, unit, F90);
+            rtrim(name, NAMES_SIZE);
+            rtrim(value, VALUES_SIZE);
+            rtrim(uncertainty, UNCERTAINTIES_SIZE);
+            rtrim(unit, UNITS_SIZE);
+            if ((i%subdim)==(subdim-1)){
+                fprintf(fcode, initialize_constant, name, value, uncertainty, unit, "]");
+            }
+            else{
+                fprintf(fcode, initialize_constant, name, value, uncertainty, unit, ",&");
+            }
+        }
+    }
+    imax = props->n - N*subdim;
+    for(i=0; i<imax; i++){
+        if (i%imax == 0){
+            k += 1;
+            fprintf(fcode, type_subarray_declaration, imax, props->n);
+        }
+        clean_line(line, BUFFER_SIZE);
+        clean_line(name, NAMES_SIZE);
+        clean_line(dname, NAMES_SIZE);
+        clean_line(value, VALUES_SIZE);
+        clean_line(uncertainty, UNCERTAINTIES_SIZE);
+        clean_line(unit, UNITS_SIZE);
+        empty = read_line(fcodata, line);
+        if(empty == 0){
+            format_names(line, name, dname, F90);
+            format_values(line, value, F90);
+            format_uncertainties(line, uncertainty, F90);
+            format_units(line, unit, F90);
+            rtrim(name, NAMES_SIZE);
+            rtrim(value, VALUES_SIZE);
+            rtrim(uncertainty, UNCERTAINTIES_SIZE);
+            rtrim(unit, UNITS_SIZE);
+            if ((i%imax)==(imax-1)){
+                fprintf(fcode, initialize_constant, name, value, uncertainty, unit, "]");
+            }
+            else{
+                fprintf(fcode, initialize_constant, name, value, uncertainty, unit, ",&");
+            }
+        }
+    }
+    fprintf(fcode, type_array_declaration, props->n);
+    for(i=0; i<(k-1); i++){
+        fprintf(fcode, add_subarray, (i+1)*subdim, ",&");
+    }
+    fprintf(fcode, add_subarray, props->n, "]");
+
+}
+
 int main(int argc, char **argv){
 
     FILE *codata;
-    FILE *code;
-    FILE *header;
+    FILE *fcode;
     char *code_path;
-
-    int n;
+    int n, i;
+    struct codata_file_props props = {0, 0}; 
+    
     
     n = strlen(PROJECT_NAME);
     code_path = (char *)malloc(sizeof(char)*(n+1+10));
     strcpy(code_path, PROJECT_NAME);
-
-    /* C Header */
-    codata =  fopen(codata_path, "r");
-    strcpy(&code_path[n], ".h");
-    code = fopen(code_path, "w");
-    write_output(codata, code, C);
-    fclose(code);
-    fclose(codata);
-    
-    /* F90 Header */
-    codata =  fopen(codata_path, "r");
     strcpy(&code_path[n], ".f90");
-    code = fopen(code_path, "w");
-    write_output(codata, code, F90);
-    fclose(code);
+    
+    get_props(&props);
+    print_props(&props);
+    
+    codata =  fopen(codata_path, "r");
+    fcode = fopen(code_path, "w");
+
+    fprintf(fcode, "%s\n%s\n%s\n", 
+    "module codata", "use iso_fortran_env", "implicit none\n");
+    fprintf(fcode, "%s", type_declaration);
+    //fprintf(fcode, type_array_declaration, props.n);
+
+    write_all_constants(codata, fcode, &props);
+
+    fprintf(fcode, "\n%s", "end module");
+
+    fclose(fcode);
     fclose(codata);
     
 
     free(code_path);
+
 
     return EXIT_SUCCESS;
 }

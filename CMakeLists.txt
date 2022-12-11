@@ -24,25 +24,21 @@ message("Fortran Compiler = " ${CMAKE_Fortran_COMPILER})
 
 add_subdirectory(src)
 add_subdirectory(examples)
-add_subdirectory(tests)
+#add_subdirectory(tests)
 
 
-enable_testing()
-add_test(NAME test_constants COMMAND test_constants)
+#enable_testing()
+#add_test(NAME test_constants COMMAND test_constants)
 
 
-install(TARGETS static_codata PUBLIC_HEADER DESTINATION include ARCHIVE DESTINATION lib)
-install(TARGETS shared_codata PUBLIC_HEADER DESTINATION include LIBRARY DESTINATION lib)
-install(TARGETS codata-config RUNTIME DESTINATION bin)
+#install(TARGETS static_codata PUBLIC_HEADER DESTINATION include ARCHIVE DESTINATION lib)
+#install(TARGETS shared_codata PUBLIC_HEADER DESTINATION include LIBRARY DESTINATION lib)
+#install(TARGETS codata-config RUNTIME DESTINATION bin)
 
 # cpack for creating binary archive
 # make package_source for sources archive
 set(CPACK_SOURCE_GENERATOR "TGZ")
-set(CPACK_SOURCE_IGNORE_FILES
-  \\.git/
-  build/
-  \\.vscode/
-  ".*~$"
-)
+set(CPACK_GENERATOR "TGZ")
+set(CPACK_SOURCE_IGNORE_FILES \\.git/ build/ \\.vscode/ ".*~$")
 set(CPACK_VERBATIM_VARIABLES YES)
 include(CPack)
