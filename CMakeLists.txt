@@ -31,9 +31,9 @@ add_subdirectory(examples)
 #add_test(NAME test_constants COMMAND test_constants)
 
 
-#install(TARGETS static_codata PUBLIC_HEADER DESTINATION include ARCHIVE DESTINATION lib)
-#install(TARGETS shared_codata PUBLIC_HEADER DESTINATION include LIBRARY DESTINATION lib)
-#install(TARGETS codata-config RUNTIME DESTINATION bin)
+install(TARGETS static_codata PUBLIC_HEADER DESTINATION include ARCHIVE DESTINATION lib)
+install(TARGETS shared_codata PUBLIC_HEADER DESTINATION include LIBRARY DESTINATION lib)
+install(TARGETS codata-config RUNTIME DESTINATION bin)
 
 # cpack for creating binary archive
 # make package_source for sources archive

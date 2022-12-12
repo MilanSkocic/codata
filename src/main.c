@@ -30,18 +30,7 @@ static const size_t VALUES_SIZE = 25;
 static const size_t UNCERTAINTIES_SIZE = 25;
 static const size_t UNITS_SIZE = 25;
 
-static const char type_declaration[] = "type :: t_constant\n"
-"character(len=60) :: name\n"
-"real(real64) :: value\n"
-"real(real64) :: uncertainty\n"
-"character(len=25) :: unit\n"
-"end type\n\n";
 
-static const char type_subarray_declaration[] = "type(t_constant), dimension(%d), parameter, private :: codata_%d = [&\n";
-static const char type_array_declaration[] = "type(t_constant), dimension(%d) :: codata_constants = [&\n";
-static const char type_array_declaration_end[] = "%s";
-static const char initialize_constant[] = "t_constant(\"%s\", %s, %s, \"%s\") %s\n";
-static const char add_subarray[] = "codata_%d %s\n";
 
 static const char newline[2] = "\n\0";
 
@@ -80,24 +69,22 @@ static const char f90_bindc_start[] = "bind(C, name=\"";
 static const char f90_bindc_end[] = "\")";
 static const char f90_type_column[] = " :: ";
 
-static const char f90_line_continuation[] = " & \n";
-
-static const char c_header[1] = "\0";
-static const char f90_header[49] = "module codata\nuse iso_c_binding\nimplicit none\0";
-
-static const char c_footer[1] = "\0";
-static const char f90_footer[18] = "end module codata\0";
-
 static const char codata_path[] = "./codata.txt";
 
-static const char t_constant[] = 
-"type :: t_constant \n"
-"    character(len=n) :: name\n"
-"    real(real64) :: value\n"
-"    real(real64) :: uncertainty\n"
-"end type\n";
+static const char type_declaration[] = "type :: t_constant\n"
+"  character(len=60) :: name\n"
+"  real(real64) :: value\n"
+"  real(real64) :: uncertainty\n"
+"  character(len=25) :: unit\n"
+"end type\n\n";
 
-void format_names(char *line, char *name, char *dname, int language){
+static const char type_subarray_declaration[] = "\ntype(t_constant), dimension(%d), parameter, private :: codata_%d = [&\n";
+static const char type_array_declaration[] = "\ntype(t_constant), dimension(%d) :: codata_constants = [&\n";
+static const char type_array_declaration_end[] = "%s";
+static const char initialize_constant[] = "  t_constant(\"%s\", %s, %s, \"%s\") %s\n";
+static const char add_subarray[] = "codata_%d %s\n";
+
+void format_names(char *line, char *name, int language){
     
     size_t i;
 
@@ -126,18 +113,6 @@ void format_names(char *line, char *name, char *dname, int language){
             default:
                 name[i] = toupper(name[i]);
         }
-    }
-    switch(language){
-        case C:
-            dname[0] = 'U';
-            break;
-        case F90:
-            dname[0] = 'U';
-            break;
-    }
-    dname[1] = '_';
-    for(i=2; i<NAMES_SIZE; i++){
-        dname[i] = name[i-2];
     }
 }
 
@@ -292,14 +267,23 @@ void format_units(char *line, char *unit, int language){
     }
 }
 
-int read_line(FILE *f, char *buf){
+void clean_line(char *buf, size_t buffer_size){
+
+    size_t i;
+    for(i=0; i<=buffer_size; i++){
+        buf[i] = ' ';
+    }
+    buf[buffer_size] = '\0';
+}
+
+int read_line(FILE *f, char *buf, size_t buffer_size){
 
     char c;
     size_t i = 0;
     int empty=0;
-
+    clean_line(buf, buffer_size);
     while(((c=fgetc(f)) != '\n') & (!feof(f))){
-        if(i<BUFFER_SIZE){
+        if(i<buffer_size){
             buf[i] = c;
             i++;
         }
@@ -309,15 +293,6 @@ int read_line(FILE *f, char *buf){
     }
 
     return empty;
-}
-
-void clean_line(char *buf, size_t buffer_size){
-
-    size_t i;
-    for(i=0; i<=buffer_size; i++){
-        buf[i] = ' ';
-    }
-    buf[buffer_size] = '\0';
 }
 
 void ltrim(char *buf, size_t buffer_size){
@@ -373,183 +348,6 @@ int is_blank_line(char *buf, size_t buffer_size){
     }
 }
 
-void write_output(FILE *codata, FILE *fcode, int language){
-   
-    size_t i=0;
-    int empty = 0;
-    int n;
-
-    const char *end;
-    const char *equal;
-    const char *comment;
-    const char *type;
-    const char *header;
-    const char *footer;
-    const char *doxy_inline_start;
-    const char *doxy_inline_end;
-    const char *doxy_start;
-    const char *doxy_middle;
-    const char *doxy_end;
-    const char *doxy_example;
-    const char *doxy_example_detail;
-
-    
-    char *line = (char *)malloc(sizeof(char)*(BUFFER_SIZE+1));
-    char *name = (char *)malloc(sizeof(char)*(NAMES_SIZE+1));
-    char *dname = (char *)malloc(sizeof(char)*(NAMES_SIZE+1));
-    char *value = (char *)malloc(sizeof(char)*(VALUES_SIZE+1));
-    char *uncertainty = (char *)malloc(sizeof(char)*(UNCERTAINTIES_SIZE+1));
-    char *unit = (char *)malloc(sizeof(char)*(UNITS_SIZE+1));
-
-    /* Variables dispatcher */
-    switch(language){
-        case C:
-            printf("Generating C code\n");
-            end = c_end;
-            equal = c_equal;
-            comment = c_comment;
-            type = c_type;
-            header = c_header;
-            footer = c_footer;
-            doxy_start = c_doxy_start;
-            doxy_middle = c_doxy_middle;
-            doxy_end = c_doxy_end;
-            doxy_inline_start = c_doxy_inline_start;
-            doxy_inline_end = c_doxy_inline_end;
-            doxy_example = c_doxy_example;
-            doxy_example_detail = c_doxy_example_detail;
-            break;
-        case F90:
-            printf("Generating F90 code\n");
-            end = f90_end;
-            equal = f90_equal;
-            comment = f90_comment;
-            type = f90_type;
-            header = f90_header;
-            footer = f90_footer;
-            doxy_start = f_doxy_start;
-            doxy_middle = f_doxy_middle;
-            doxy_end = f_doxy_end;
-            doxy_inline_start = f_doxy_inline_start;
-            doxy_inline_end = f_doxy_inline_end;
-            doxy_example = f_doxy_example;
-            doxy_example_detail = f_doxy_example_detail;
-            break;
-    }
-    
-    /* Copy header from codata */
-    fputs(doxy_start, fcode);
-    for(i=0; i<=10; i++){
-        clean_line(line, BUFFER_SIZE);
-        read_line(codata, line);
-        if(i==4){
-            fputs(doxy_middle, fcode);
-            fputs("@details\n", fcode);
-        }
-        if((i<9) & (is_blank_line(line, BUFFER_SIZE)<=0)){
-            ltrim(line, BUFFER_SIZE);
-            fputs(doxy_middle, fcode);
-            fputs(line, fcode);
-            fputs(newline, fcode);
-            }
-    }
-    fputs(doxy_middle, fcode);
-    fputs(doxy_example, fcode);
-    fputs(doxy_middle, fcode);
-    fputs(doxy_example_detail, fcode);
-    fputs(doxy_end, fcode);
-    
-    /* Write documentation for Fortran module */
-    switch(language){
-        case F90:
-            fputs(newline, fcode);
-            fputs(f_module_doc, fcode);
-    }
-
-    /* Write header for each language */
-    fputs(header, fcode);
-    fputs(newline, fcode);
-    
-    /* Write constants */
-    i = 11;
-    while(!feof(codata)){
-        clean_line(line, BUFFER_SIZE);
-        clean_line(name, NAMES_SIZE);
-        clean_line(dname, NAMES_SIZE);
-        clean_line(value, VALUES_SIZE);
-        clean_line(uncertainty, UNCERTAINTIES_SIZE);
-        clean_line(unit, UNITS_SIZE);
-        empty = read_line(codata, line);
-        if(empty == 0){
-            format_names(line, name, dname, language);
-            format_values(line, value, language);
-            format_uncertainties(line, uncertainty, language);
-            format_units(line, unit, language);
-
-            if(language == C){
-                fputs(type, fcode);
-                fputs(name, fcode);
-                fputs(end, fcode);
-                fputs(doxy_inline_start, fcode);
-                fputs(unit, fcode);
-                fputs(doxy_inline_end, fcode);
-                fputs(newline, fcode);
-                fputs(type, fcode);
-                fputs(dname, fcode);
-                fputs(end, fcode);
-                fputs(doxy_inline_start, fcode);
-                fputs(unit, fcode);
-                fputs(doxy_inline_end, fcode);
-                fputs(newline, fcode);
-                fputs(newline, fcode);
-                
-            }else{
-                fputs(type, fcode);
-                fputs(f90_bindc_start, fcode);
-                rtrim(name, NAMES_SIZE);
-                fputs(name, fcode);
-                fputs(f90_bindc_end, fcode);
-                fputs(f90_type_column, fcode);
-                fputs(f90_line_continuation, fcode);
-                fputs(name, fcode);
-                fputs(equal, fcode);
-                fputs(value, fcode);
-                fputs(end, fcode);
-                fputs(doxy_inline_start, fcode);
-                fputs(unit, fcode);
-                fputs(doxy_inline_end, fcode);
-                fputs(newline, fcode);
-                fputs(type, fcode);
-                fputs(f90_bindc_start, fcode);
-                rtrim(dname, NAMES_SIZE);
-                fputs(dname, fcode);
-                fputs(f90_bindc_end, fcode);
-                fputs(f90_type_column, fcode);
-                fputs(f90_line_continuation, fcode);
-                fputs(dname, fcode);
-                fputs(equal, fcode);
-                fputs(uncertainty, fcode);
-                fputs(end, fcode);
-                fputs(doxy_inline_start, fcode);
-                fputs(unit, fcode);
-                fputs(doxy_inline_end, fcode);
-                fputs(newline, fcode);
-                fputs(newline, fcode);
-            }
-        }
-        i++;
-    }
-    fputs(footer, fcode);
-    
-    free(line);
-    free(name);
-    free(dname);
-    free(value);
-    free(uncertainty);
-    free(unit);
-}
-
-
 void get_props(struct codata_file_props *props){
 
     FILE *codata;
@@ -562,8 +360,7 @@ void get_props(struct codata_file_props *props){
     props->index_header_end = 0;
     
     while (!feof(codata)){
-        clean_line(line, BUFFER_SIZE);
-        read_line(codata, line);
+        read_line(codata, line, BUFFER_SIZE);
         if (line[0] == '-'){
             props->index_header_end = props->index_header_end + 1 ;
             break;
@@ -572,8 +369,7 @@ void get_props(struct codata_file_props *props){
     }
     
     while (!feof(codata)){
-        clean_line(line, BUFFER_SIZE);
-        empty = read_line(codata, line);
+        empty = read_line(codata, line, BUFFER_SIZE);
 
         if (empty == 0){
             props->n = props->n + 1 ;
@@ -603,9 +399,10 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
     char *unit = (char *)malloc(sizeof(char)*(UNITS_SIZE+1));
 
     for (i=0; i<props->index_header_end;i++){
-        clean_line(line, BUFFER_SIZE);
-        empty = read_line(fcodata, line);
+        empty = read_line(fcodata, line, BUFFER_SIZE);
+
     }
+
     k = 0;
     N = props->n/subdim;
     imax = N * subdim;
@@ -617,13 +414,12 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
         }
         clean_line(line, BUFFER_SIZE);
         clean_line(name, NAMES_SIZE);
-        clean_line(dname, NAMES_SIZE);
         clean_line(value, VALUES_SIZE);
         clean_line(uncertainty, UNCERTAINTIES_SIZE);
         clean_line(unit, UNITS_SIZE);
-        empty = read_line(fcodata, line);
+        empty = read_line(fcodata, line, BUFFER_SIZE);
         if(empty == 0){
-            format_names(line, name, dname, F90);
+            format_names(line, name, F90);
             format_values(line, value, F90);
             format_uncertainties(line, uncertainty, F90);
             format_units(line, unit, F90);
@@ -647,13 +443,12 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
         }
         clean_line(line, BUFFER_SIZE);
         clean_line(name, NAMES_SIZE);
-        clean_line(dname, NAMES_SIZE);
         clean_line(value, VALUES_SIZE);
         clean_line(uncertainty, UNCERTAINTIES_SIZE);
         clean_line(unit, UNITS_SIZE);
-        empty = read_line(fcodata, line);
+        empty = read_line(fcodata, line, BUFFER_SIZE);
         if(empty == 0){
-            format_names(line, name, dname, F90);
+            format_names(line, name, F90);
             format_values(line, value, F90);
             format_uncertainties(line, uncertainty, F90);
             format_units(line, unit, F90);
@@ -674,6 +469,13 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
         fprintf(fcode, add_subarray, (i+1)*subdim, ",&");
     }
     fprintf(fcode, add_subarray, props->n, "]");
+
+
+    free(line);
+    free(name);
+    free(value);
+    free(uncertainty);
+    free(unit);
 
 }
 
