@@ -337,10 +337,10 @@ void write_module_doc(FILE *fcode_data, FILE *fcode_array){
 }
 
 void write_module_declaration(FILE *fcode_data, FILE *fcode_array){
-    fprintf(fcode_array, "%s\n", "module codata_data");
-    fprintf(fcode_array, "%s\n", "use iso_fortran_env");
-    fprintf(fcode_array, "%s\n", "implicit none");
-    fprintf(fcode_array, "%s\n", "");
+    fprintf(fcode_data, "%s\n", "module codata_data");
+    fprintf(fcode_data, "%s\n", "use iso_fortran_env");
+    fprintf(fcode_data, "%s\n", "implicit none");
+    fprintf(fcode_data, "%s\n", "");
     
     fprintf(fcode_array, "%s\n", "module codata_array");
     fprintf(fcode_array, "%s\n", "use iso_fortran_env");
@@ -349,20 +349,21 @@ void write_module_declaration(FILE *fcode_data, FILE *fcode_array){
     fprintf(fcode_array, "%s\n", "");
 }
 
-void write_type_declaration(FILE *fcode_array){
-    fprintf(fcode_array, "%s\n", "type :: t_constant");
-    fprintf(fcode_array, "%s\n", "  character(len=60) :: name");
-    fprintf(fcode_array, "%s\n", "  real(real64) :: value");
-    fprintf(fcode_array, "%s\n", "  real(real64) :: uncertainty");
-    fprintf(fcode_array, "%s\n", "  character(len=25) :: unit");
-    fprintf(fcode_array, "%s\n", "end type t_constant");
-    fprintf(fcode_array, "%s\n", "");
+void write_type_declaration(FILE *fcode_data){
+    fprintf(fcode_data, "%s\n", "type :: t_constant");
+    fprintf(fcode_data, "%s\n", "  character(len=60) :: name");
+    fprintf(fcode_data, "%s\n", "  real(real64) :: value");
+    fprintf(fcode_data, "%s\n", "  real(real64) :: uncertainty");
+    fprintf(fcode_data, "%s\n", "  character(len=25) :: unit");
+    fprintf(fcode_data, "%s\n", "end type t_constant");
+    fprintf(fcode_data, "%s\n", "");
 }
 
-void write_all_constants(FILE *fcodata, FILE *fcode_array, struct codata_file_props *props){
+void write_all_constants(FILE *fcodata, FILE *fcode_data, FILE *fcode_array, struct codata_file_props *props){
 
     int empty, i, k, imax, N;
     int subdim = 10;
+    int constant_counter = 0;
 
     char *line = (char *)malloc(sizeof(char)*(LINE_LENGTH+1));
     char *name = (char *)malloc(sizeof(char)*(NAMES_LENGTH+1));
@@ -380,6 +381,7 @@ void write_all_constants(FILE *fcodata, FILE *fcode_array, struct codata_file_pr
     imax = N * subdim;
     k = 0;
     for(i=0; i<imax; i++){
+        constant_counter += 1;
         if (i%subdim == 0){
             k += 1;
             fprintf(fcode_array, 
@@ -401,20 +403,26 @@ void write_all_constants(FILE *fcodata, FILE *fcode_array, struct codata_file_pr
             rtrim(value, VALUES_LENGTH);
             rtrim(uncertainty, UNCERTAINTIES_LENGTH);
             rtrim(unit, UNITS_LENGTH);
+            fprintf(fcode_data, "type(t_constant), parameter :: codata_constant_%d=", constant_counter);
+            fprintf(fcode_data,"t_constant(&\n\"%s\", %s, %s, \"%s\") \n", name, value, uncertainty, unit);
+            fprintf(fcode_data, "%s\n", "");
             if ((i%subdim)==(subdim-1)){
-                fprintf(fcode_array, 
+                /*fprintf(fcode_array, 
                         "  t_constant(\"%s\", %s, %s, \"%s\") %s\n",
-                        name, value, uncertainty, unit, "]\n");
+                        name, value, uncertainty, unit, "]\n");*/
+                fprintf(fcode_array, "codata_constant_%d]\n", constant_counter);
             }
             else{
-                fprintf(fcode_array, 
+                /*fprintf(fcode_array, 
                         "  t_constant(\"%s\", %s, %s, \"%s\") %s\n",
-                        name, value, uncertainty, unit, ",&");
+                        name, value, uncertainty, unit, ",&");*/
+                fprintf(fcode_array, "codata_constant_%d,&\n", constant_counter);
             }
         }
     }
     imax = props->n - N*subdim;
     for(i=0; i<imax; i++){
+        constant_counter += 1;
         if (i%imax == 0){
             k += 1;
             fprintf(fcode_array, 
@@ -463,7 +471,7 @@ void write_all_constants(FILE *fcodata, FILE *fcode_array, struct codata_file_pr
 
 }
 
-void write_module_end(FILE fcode_data, FILE *fcode_array){
+void write_module_end(FILE *fcode_data, FILE *fcode_array){
     fprintf(fcode_data, "%s\n", "end module codata_data");
     fprintf(fcode_array, "%s\n", "end module codata_array");
 }
@@ -493,9 +501,9 @@ int main(int argc, char **argv){
 
     write_file_doc(fcodata, fcode_data, fcode_array, &props);
     write_module_doc(fcode_data, fcode_array);
-    //write_module_declaration(fcode_array);
-    //write_type_declaration(fcode_array);
-    //write_all_constants(fcodata, fcode_array, &props);
+    write_module_declaration(fcode_data, fcode_array);
+    write_type_declaration(fcode_data);
+    write_all_constants(fcodata, fcode_data, fcode_array, &props);
     write_module_end(fcode_data, fcode_array);
 
     fclose(fcode_array);

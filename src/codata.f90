@@ -6,10 +6,10 @@
 !! @details Codata constants wrapped in an array of derived type
 !! with members name, value, uncertainty and unit.
 !! Methods for getting the member values are available.
-module Codata
+module codata
     use ieee_arithmetic
     use iso_fortran_env
-    use codata_data
+    use codata_array
     
     character(len=60), dimension(4), parameter :: headers = [character(len=60):: "Names", "Values", "Uncertainties", "Units"]
 
@@ -28,4 +28,4 @@ contains
     end subroutine codata_print
 
 
-end module
+end module codata
