@@ -3,10 +3,7 @@
 `codata` is a (Modern) Fortran library providing the codata constants. 
 It also provides a header for the C language.
 
-The raw codata from http://physics.nist.gov/constants are converted into an Fortran module and a C header.
-The generator, written in C, generates:
- * a Fortran module
- * a C header
+The raw codata from http://physics.nist.gov/constants are converted into an Fortran module 
 
 The generated Fortran module is then compiled (f2008+) into a shared and static library `libcodata`.
 

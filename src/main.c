@@ -5,8 +5,6 @@
  * 
  * @details The raw codata from http://physics.nist.gov/constants are converted into
  * Fortran code. 
- * The generator generates:
- * - a Fortran module
  *   
 */
 #include <stdio.h>
