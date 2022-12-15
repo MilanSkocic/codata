@@ -19,6 +19,7 @@ contains
 
     !> @brief Display all constants.
     subroutine codata_print() bind(C)
+        implicit none
         integer :: i
         print "(A60, 4X, A23, 4X, A23, 4X, A25)", headers(:)
         do i=1, size(codata_constants)
@@ -27,7 +28,55 @@ contains
                                                                       codata_constants(i)%uncertainty, &
                                                                       codata_constants(i)%unit
         end do
-    end subroutine codata_print
+    end subroutine
 
+    !> @brief Display all constants.
+    subroutine codata_capi_print() bind(C)
+        implicit none
+        call codata_print()
+    end subroutine
+    
+    !> @brief Get the value of the constant by name
+    !! @param[in] name Name of the constant
+    !! @return value or NaN if not found
+    pure function codata_get_value(name) result(value)
+        implicit none    
+        character(len=*), intent(in) :: name
+        real(real64) :: value
+        integer :: i
+
+        value = ieee_value(1.0d0, ieee_quiet_nan)
+
+        do i=1, size(codata_constants)
+            if (codata_constants(i)%name == name)then
+                value = codata_constants(i)%value
+                exit
+            endif
+        enddo
+    end function
+
+    !> @brief Get the value of the constant by name
+    !! @param[in] name Name of the constant
+    !! @return value or NaN if not found
+    function codata_capi_get_value(char_p, length) bind(C) result(value)
+        use iso_c_binding, only : c_double, c_int, c_ptr, c_f_pointer
+        implicit none
+        integer(c_int), intent(in), value :: length
+        type(c_ptr), intent(in), value :: char_p
+        character, pointer, dimension(:) :: c2f_string
+        real(c_double) :: value
+        
+        integer :: i
+        character(len=length) :: name
+        
+        call c_f_pointer(char_p, c2f_string, shape=[length])
+
+        do i=1, length
+            name(i:i) = c2f_string(i)
+        enddo
+
+        value = codata_get_value(name)
+
+    end function
 
 end module codata
