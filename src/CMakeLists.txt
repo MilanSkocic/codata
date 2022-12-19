@@ -12,7 +12,7 @@ add_executable(generator main.c)
 target_include_directories(generator PUBLIC ${CMAKE_BINARY_DIR}/src)
 
 # Fortran library
-set(CODATA_PUBLIC_HEADERS "${CMAKE_BINARY_DIR}/src/codata.mod")
+set(CODATA_PUBLIC_HEADERS "${CMAKE_BINARY_DIR}/src/codata.mod" "${CMAKE_SOURCE_DIR}/src/codata.h")
 set(CODATA_SOURCES "codata_data.f90" "codata.f90")
 
 add_library(static_codata STATIC "${CODATA_SOURCES}")
