@@ -27,6 +27,7 @@
 .vscode
 
 build/
+/python/pycodata/__pycache__
 
 doxygen/html
 doxygen/xml/
