@@ -1,5 +1,6 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
+#include <string.h>
 #include "codata.h"
 
 PyDoc_STRVAR(module_docstring, "Codata constants.");
@@ -14,22 +15,23 @@ PyDoc_STRVAR(codata_get_value_doc,
 
 static PyObject *_codata_print(PyObject *self, PyObject *args)
 {
-    codata_print();
+    codata_capi_print();
     Py_RETURN_NONE;
 }
 
 static PyObject *_codata_get_value(PyObject *self, PyObject *args){
     
     char *name;
+    double value;
 
     if(!PyArg_ParseTuple(args, "s", &name)){
         PyErr_SetString(PyExc_TypeError, "name must be of type str.");
         return NULL;
     }
 
-    printf("%s\n", name);
+    value = codata_capi_get_value(name, strlen(name));
 
-    Py_RETURN_NONE;
+    return Py_BuildValue("d", value);
 }
 
 

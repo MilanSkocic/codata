@@ -1,5 +1,5 @@
 from pycodata import codata
 
 
-codata.print()
-codata.get_value(None)
+value = codata.get_value("ALPHA PARTICLE MASS")
+print(value)
