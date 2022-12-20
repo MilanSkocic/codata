@@ -5,4 +5,4 @@
  * @example example_in_c.c 
  */
 
-extern void _codata_print();
+extern void codata_print();

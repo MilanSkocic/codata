@@ -1,3 +1,4 @@
-import codata
+from pycodata import codata
 
-print(codata.print())
+
+codata.print()
