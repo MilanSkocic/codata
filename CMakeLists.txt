@@ -24,11 +24,11 @@ message("Fortran Compiler = " ${CMAKE_Fortran_COMPILER})
 
 add_subdirectory(src)
 add_subdirectory(examples)
-#add_subdirectory(tests)
+add_subdirectory(tests)
 
 
-#enable_testing()
-#add_test(NAME test_constants COMMAND test_constants)
+enable_testing()
+add_test(NAME test_constants COMMAND test_constants)
 
 
 install(TARGETS static_codata PUBLIC_HEADER DESTINATION include ARCHIVE DESTINATION lib)

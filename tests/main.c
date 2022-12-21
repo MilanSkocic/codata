@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 #include "codata.h"
  
  
@@ -25,23 +26,17 @@ int main(int argc, char **argv){
 
     int precision;
     double value, ref;
-    
-    value = ALPHA_PARTICLE_MASS;
+    char name[60] = "";
+
+
+    strcpy(name, "ALPHA PARTICLE MASS");
+    value = codata_capi_get_value(name, strlen(name)); 
     ref = 6.6446573357e-27;
     precision = 10;
     printf("value=%+23.16e / ref=%+23.16e / precision=%d\n", value, ref, precision);
     if (roundn(value, precision) != roundn(ref, precision)){
         return 1;
     }
-
-    value = U_ALPHA_PARTICLE_MASS;
-    ref = 0.0000000020e-27;
-    precision = 10;
-    printf("value=%+23.16e / ref=%+23.16e / precision=%d\n", value, ref, precision);
-    if (roundn(value, precision) != roundn(ref, precision)){
-        return 1;
-    }
-
 
     return 0;
 }
