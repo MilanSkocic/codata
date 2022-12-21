@@ -18,7 +18,7 @@ module codata
 contains
 
     !> @brief Display all constants.
-    subroutine codata_print() bind(C)
+    subroutine codata_print()
         implicit none
         integer :: i
         print "(A60, 4X, A23, 4X, A23, 4X, A25)", headers(:)
@@ -57,6 +57,7 @@ contains
 
     !> @brief Get the value of the constant by name
     !! @param[in] name Name of the constant
+    !! @param[in] length Length of the string
     !! @return value or NaN if not found
     function codata_capi_get_value(char_p, length) bind(C) result(value)
         use iso_c_binding, only : c_double, c_int, c_ptr, c_f_pointer

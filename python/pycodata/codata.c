@@ -13,6 +13,10 @@ PyDoc_STRVAR(codata_get_value_doc,
 "get_value(name) --> float \n\n"
 "Get the value of the constant defined by name. If not found returns NaN");
 
+PyDoc_STRVAR(codata_as_dict_doc, 
+"as_dict() --> dict \n\n"
+"Return all constants available in a dictionnary");
+
 static PyObject *_codata_print(PyObject *self, PyObject *args)
 {
     codata_capi_print();
@@ -34,10 +38,28 @@ static PyObject *_codata_get_value(PyObject *self, PyObject *args){
     return Py_BuildValue("d", value);
 }
 
+static PyObject *_codata_constants_as_dict(PyObject *self, PyObject *args){
+
+    PyObject *dict = PyDict_New();
+    PyObject *key_str;
+    int i;
+    char *key;
+    key = (char *)calloc(10, sizeof(char));
+
+    for(i=0; i<100; i++){
+        sprintf(key, "%d", i);
+        key_str = PyUnicode_FromString(key);
+        PyDict_SetItem(dict, key_str, PyLong_FromLong(i));
+    }
+    free(key);
+    return dict;
+
+}
 
 static PyMethodDef myMethods[] = {
     { "print", (PyCFunction) _codata_print, METH_NOARGS, codata_print_doc },
     {"get_value", (PyCFunction) _codata_get_value, METH_VARARGS, codata_get_value_doc},
+    {"as_dict", (PyCFunction) _codata_constants_as_dict, METH_NOARGS, codata_as_dict_doc},
     { NULL, NULL, 0, NULL }
 };
 
