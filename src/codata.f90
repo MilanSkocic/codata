@@ -79,5 +79,31 @@ contains
         value = codata_get_value(name)
 
     end function
+    
+    !> @brief Get the value of the constant by index 
+    !! @param[in] index Index of the position.
+    !! @return value or NaN if not found.
+    pure function codata_get_value_by_index(index) result(value)
+        implicit none    
+        integer, intent(in) :: index
+        real(real64) :: value
+        if (index > size(codata_constants))then
+            value = ieee_value(1.0d0, ieee_quiet_nan)
+        else
+            value = codata_constants(index)%value
+        endif
+    end function
+    
+    !> @brief Get the value of the constant by index 
+    !! @param[in] index Index of the position.
+    !! @return value or NaN if not found.
+    pure function codata_capi_get_value_by_index(index) bind(C) result(value)
+        use iso_c_binding, only : c_int, c_double
+        implicit none    
+        integer(c_int), intent(in), value :: index
+        real(c_double) :: value
+        value = codata_get_value_by_index(index+1)
+    end function
+
 
 end module codata

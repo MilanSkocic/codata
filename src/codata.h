@@ -19,3 +19,10 @@ extern void codata_capi_print();
  * @return value or NaN if not found
  */
 extern double codata_capi_get_value(char *name, int length);
+
+/**
+ * @brief Get the value of the constant by index 
+ * @param[in] index Index of the position.
+ * @return value or NaN if not found.
+ */
+extern double codata_capi_get_value_by_index(int index);

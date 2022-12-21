@@ -41,15 +41,20 @@ static PyObject *_codata_get_value(PyObject *self, PyObject *args){
 static PyObject *_codata_constants_as_dict(PyObject *self, PyObject *args){
 
     PyObject *dict = PyDict_New();
+    PyObject *subdict;
     PyObject *key_str;
+    double value;
     int i;
     char *key;
     key = (char *)calloc(10, sizeof(char));
 
-    for(i=0; i<100; i++){
+    for(i=0; i<354; i++){
+        subdict = PyDict_New();
         sprintf(key, "%d", i);
         key_str = PyUnicode_FromString(key);
-        PyDict_SetItem(dict, key_str, PyLong_FromLong(i));
+        value = codata_capi_get_value_by_index(i);
+        PyDict_SetItem(subdict, key_str, PyFloat_FromDouble(value));
+        PyDict_SetItem(dict, key_str, subdict);
     }
     free(key);
     return dict;
