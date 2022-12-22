@@ -17,6 +17,23 @@ module codata
 
 contains
 
+    !> @brief Get the number of constants
+    !! @return Number of constants
+    pure function codata_get_number_constants() result(n)
+        implicit none
+        integer :: n
+        n = size(codata_constants)
+    end function
+
+    !> @brief Get the number of constants
+    !! @return Number of constants
+    pure function codata_capi_get_number_constants() bind(C) result(n)
+        use iso_c_binding, only : c_int
+        integer(c_int) :: n
+        n = codata_get_number_constants()
+    end function
+
+
     !> @brief Display all constants.
     subroutine codata_print()
         implicit none
@@ -40,6 +57,7 @@ contains
     !! @param[in] name Name of the constant
     !! @return value or NaN if not found
     pure function codata_get_value(name) result(value)
+        use ieee_arithmetic, only : ieee_value, ieee_quiet_nan
         implicit none    
         character(len=*), intent(in) :: name
         real(real64) :: value
@@ -84,6 +102,7 @@ contains
     !! @param[in] index Index of the position.
     !! @return value or NaN if not found.
     pure function codata_get_value_by_index(index) result(value)
+        use ieee_arithmetic, only : ieee_value, ieee_quiet_nan
         implicit none    
         integer, intent(in) :: index
         real(real64) :: value
@@ -105,5 +124,35 @@ contains
         value = codata_get_value_by_index(index+1)
     end function
 
+    !> @brief Get the name of the constant by index 
+    !! @param[in] index Index of the position.
+    !! @return name or empty if not found.
+    pure function codata_get_name_by_index(index) result(name)
+        implicit none    
+        integer, intent(in) :: index
+        character(len=:), allocatable, target :: name
+        character(len)
+        if (index > size(codata_constants))then
+            name = ""
+        else
+            name = codata_constants(index)%name
+        endif
+    end function
+    
+    !> @brief Get the name of the constant by index 
+    !! @param[in] index Index of the position.
+    !! @return name or empty if not found.
+    function codata_capi_get_name_by_index(index) bind(C) result(name)
+        use iso_c_binding, only : c_null_char, c_ptr, c_loc
+        implicit none
+        integer, intent(in), value :: index
+        type(c_ptr) :: name
+        character(len=:), allocatable, target :: name_f
+        character(len=:), pointer  :: name_f_ptr
+        name_f_ptr => null()
+        name_f = codata_get_name_by_index(index+1) // c_null_char
+        name_f_ptr => name_f
+        name = c_loc(name_f_ptr)
+    end function
 
 end module codata

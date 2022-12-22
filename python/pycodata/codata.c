@@ -45,18 +45,19 @@ static PyObject *_codata_constants_as_dict(PyObject *self, PyObject *args){
     PyObject *key_str;
     double value;
     int i;
+    int n;
     char *key;
-    key = (char *)calloc(10, sizeof(char));
 
-    for(i=0; i<354; i++){
+    n = codata_capi_get_number_constants();
+
+    for(i=0; i<n; i++){
         subdict = PyDict_New();
-        sprintf(key, "%d", i);
+        key = codata_capi_get_name_by_index(i);
         key_str = PyUnicode_FromString(key);
         value = codata_capi_get_value_by_index(i);
         PyDict_SetItem(subdict, key_str, PyFloat_FromDouble(value));
-        PyDict_SetItem(dict, key_str, subdict);
+        PyDict_SetItemString(dict, "Name", subdict);
     }
-    free(key);
     return dict;
 
 }

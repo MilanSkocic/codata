@@ -5,6 +5,12 @@
  * @example example_in_c.c 
  */
 
+/**
+ * @brief Get the number of constants
+ * @return Number of the constants.
+ */
+extern int codata_capi_get_number_constants();
+
 
 /**
  * @brief Display all constants
@@ -26,3 +32,7 @@ extern double codata_capi_get_value(char *name, int length);
  * @return value or NaN if not found.
  */
 extern double codata_capi_get_value_by_index(int index);
+
+
+
+extern char* codata_capi_get_name_by_index(int index);

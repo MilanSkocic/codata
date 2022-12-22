@@ -329,7 +329,6 @@ void write_module_doc(FILE *fcode){
 void write_module_declaration(FILE *fcode){
     fprintf(fcode, "%s\n", "module codata_data");
     fprintf(fcode, "%s\n", "use iso_fortran_env");
-    fprintf(fcode, "%s\n", "use ieee_arithmetic");
     fprintf(fcode, "%s\n", "implicit none");
     fprintf(fcode, "%s\n", "");
 }
