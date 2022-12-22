@@ -197,7 +197,7 @@ contains
     end function
 
     !> @brief Get the value of the constant by name
-    !! @param[in] name Name of the constant
+    !! @param[in] char_p Name of the constant
     !! @param[in] length Length of the string
     !! @return value or NaN if not found
     function codata_capi_get_value(char_p, length) bind(C) result(value)
@@ -242,7 +242,7 @@ contains
     end function
 
     !> @brief Get the uncertainty of the constant by name
-    !! @param[in] name Name of the constant
+    !! @param[in] char_p Name of the constant
     !! @param[in] length Length of the string
     !! @return value or NaN if not found
     function codata_capi_get_uncertainty(char_p, length) bind(C) result(value)
@@ -287,7 +287,7 @@ contains
     end function
 
     !> @brief Get the unit of the constant by name
-    !! @param[in] name Name of the constant
+    !! @param[in] char_p Name of the constant
     !! @param[in] length Length of the string
     !! @return unit or None if not found
     function codata_capi_get_unit(char_p, length) bind(C) result(unit)

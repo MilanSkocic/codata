@@ -35,7 +35,7 @@ void format_names(char *line, char *name){
     }
     
     for(i=0; i<NAMES_LENGTH; i++){
-        name[i] = toupper(name[i]);
+        name[i] = name[i];
     }
 }
 
