@@ -7,7 +7,7 @@ cfg.read("site.cfg")
 codata_include = cfg["CODATA"]["include_dirs"]
 codata_link = "-l"+cfg["CODATA"]["libraries"]
 
-capi_buffer_protocol_example = Extension(name="pycodata.codata",
+pycodata_ext = Extension(name="pycodata.codata",
                                          sources=["./pycodata/codata.c"],
                                           include_dirs=[codata_include],
                                           extra_link_args=[codata_link])
@@ -17,7 +17,7 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     include_package_data=True,
-    ext_modules=[capi_buffer_protocol_example])
+    ext_modules=[pycodata_ext])
 
 
 # pypi

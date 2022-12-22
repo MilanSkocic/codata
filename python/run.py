@@ -1,8 +1,8 @@
 from pycodata import codata
 
 
-value = codata.get_value("ALPHA PARTICLE MASS")
+value = codata.get_value("alpha particle mass")
 print(value)
 
-value = codata.get_unit("TRITON RELATIVE ATOMIC MASS")
-print(len(value))
+value = codata.get_unit("triton relative atomic mass")
+print(value)

@@ -1,0 +1,5 @@
+# sdist
+recursive-include sphinx *
+
+# bdist
+recursive-include pycodata *.h *.c *.f90
