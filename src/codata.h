@@ -27,6 +27,22 @@ extern void codata_capi_print();
 extern double codata_capi_get_value(char *name, int length);
 
 /**
+ *  @brief Get the uncertainty of the constant by name
+ * @param[in] name Name of the constant
+ * @param[in] length Length of the string
+ * @return value or NaN if not found
+ */
+extern double codata_capi_get_uncertainty(char *name, int length);
+
+/**
+ *  @brief Get the unit of the constant by name
+ * @param[in] name Name of the constant
+ * @param[in] length Length of the string
+ * @return unit or None if not found
+ */
+extern char * codata_capi_get_unit(char *name, int length);
+
+/**
  * @brief Get the value of the constant by index 
  * @param[in] index Index of the position.
  * @return value or NaN if not found.
