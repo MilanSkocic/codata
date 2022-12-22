@@ -42,21 +42,31 @@ static PyObject *_codata_constants_as_dict(PyObject *self, PyObject *args){
 
     PyObject *dict = PyDict_New();
     PyObject *subdict;
-    PyObject *key_str;
+    PyObject *str;
     double value;
+    double uncertainty;
     int i;
     int n;
-    char *key;
+    char *name;
+    char *unit;
 
     n = codata_capi_get_number_constants();
 
     for(i=0; i<n; i++){
         subdict = PyDict_New();
-        key = codata_capi_get_name_by_index(i);
-        key_str = PyUnicode_FromString(key);
+        unit = codata_capi_get_unit_by_index(i);
+        str = PyUnicode_FromString(unit);
         value = codata_capi_get_value_by_index(i);
-        PyDict_SetItem(subdict, key_str, PyFloat_FromDouble(value));
-        PyDict_SetItemString(dict, "Name", subdict);
+        uncertainty = codata_capi_get_uncertainty_by_index(i);
+        
+
+        PyDict_SetItemString(subdict, "Value", PyFloat_FromDouble(value));
+        PyDict_SetItemString(subdict, "Uncertainty", PyFloat_FromDouble(uncertainty));
+        PyDict_SetItemString(subdict, "Unit", str);
+        
+        name = codata_capi_get_name_by_index(i);
+        str = PyUnicode_FromString(name);
+        PyDict_SetItemString(dict, name, subdict);
     }
     return dict;
 
