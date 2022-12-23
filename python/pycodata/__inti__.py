@@ -1,3 +1,3 @@
 """Main imports"""
 
-import .codata
+from . import codata
