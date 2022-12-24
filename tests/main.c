@@ -29,7 +29,7 @@ int main(int argc, char **argv){
     char name[60] = "";
 
 
-    strcpy(name, "ALPHA PARTICLE MASS");
+    strcpy(name, "alpha particle mass");
     value = codata_capi_get_value(name, strlen(name)); 
     ref = 6.6446573357e-27;
     precision = 10;
