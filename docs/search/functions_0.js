@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['clean_5fline_0',['clean_line',['../main_8c.html#a8df6d54780fe88be20361d3cf3f1ca19',1,'main.c']]]
+  ['codata_5fcapi_5fget_5fname_5fby_5findex_0',['codata_capi_get_name_by_index',['../namespacecodata.html#a9d81b7d2e3f3a0b0ce6519b10306469f',1,'codata::codata_capi_get_name_by_index()'],['../codata_8h.html#a545c9dfe146b83b6f6158b0b86d2ee3d',1,'codata_capi_get_name_by_index():&#160;codata.h']]],
+  ['codata_5fcapi_5fget_5fnumber_5fconstants_1',['codata_capi_get_number_constants',['../namespacecodata.html#a758dd062284b55fda1af86e8e54d69ec',1,'codata::codata_capi_get_number_constants()'],['../codata_8h.html#aff04bc54ea32c36860dbf1597e0e1e25',1,'codata_capi_get_number_constants():&#160;codata.h']]],
+  ['codata_5fcapi_5fget_5funcertainty_2',['codata_capi_get_uncertainty',['../namespacecodata.html#a744c528d0e8df1c9eaf6299bf4e07995',1,'codata::codata_capi_get_uncertainty()'],['../codata_8h.html#ab70263593aed8bfc4dd2b382d0c2e6f2',1,'codata_capi_get_uncertainty():&#160;codata.h']]],
+  ['codata_5fcapi_5fget_5funcertainty_5fby_5findex_3',['codata_capi_get_uncertainty_by_index',['../namespacecodata.html#a3cc860446e761fda11475f24e0592c74',1,'codata::codata_capi_get_uncertainty_by_index()'],['../codata_8h.html#adc2377c5ef1edd03bec6289440eb096f',1,'codata_capi_get_uncertainty_by_index():&#160;codata.h']]],
+  ['codata_5fcapi_5fget_5funit_4',['codata_capi_get_unit',['../namespacecodata.html#a02157720f0c2946ac936c85b5705404b',1,'codata::codata_capi_get_unit()'],['../codata_8h.html#a7f8449dd18b85967b9d5f1595a88e4ff',1,'codata_capi_get_unit():&#160;codata.h']]],
+  ['codata_5fcapi_5fget_5funit_5fby_5findex_5',['codata_capi_get_unit_by_index',['../namespacecodata.html#ae0f78ef29d4498fd3ff76157c94b80e2',1,'codata::codata_capi_get_unit_by_index()'],['../codata_8h.html#a685ba09d7580c9fe420e3bf15e28464b',1,'codata_capi_get_unit_by_index():&#160;codata.h']]],
+  ['codata_5fcapi_5fget_5fvalue_6',['codata_capi_get_value',['../namespacecodata.html#ab841bee921870fde9d6c13de58cdf520',1,'codata::codata_capi_get_value()'],['../codata_8h.html#aab0a09197a3c84d7051495c6ebb4a24d',1,'codata_capi_get_value():&#160;codata.h']]],
+  ['codata_5fcapi_5fget_5fvalue_5fby_5findex_7',['codata_capi_get_value_by_index',['../namespacecodata.html#a677ac9974cb31229c0a89a92f0b4ff5f',1,'codata::codata_capi_get_value_by_index()'],['../codata_8h.html#a08e9cbbf07e96c956e547cf5e48392db',1,'codata_capi_get_value_by_index():&#160;codata.h']]],
+  ['codata_5fcapi_5fprint_8',['codata_capi_print',['../namespacecodata.html#a7540b290186354fcdd7ed6a774a13ddb',1,'codata::codata_capi_print()'],['../codata_8h.html#a1a4474d4e1ce974e14b23f41d4632c36',1,'codata_capi_print():&#160;codata.h']]],
+  ['codata_5fget_5fname_5fby_5findex_9',['codata_get_name_by_index',['../namespacecodata.html#acb058cde4180303f8e0585640decd3d2',1,'codata']]],
+  ['codata_5fget_5fnumber_5fconstants_10',['codata_get_number_constants',['../namespacecodata.html#a45ee8fa0d8d0ce83f7664f5d4446e76e',1,'codata']]],
+  ['codata_5fget_5funcertainty_11',['codata_get_uncertainty',['../namespacecodata.html#ab48e8316769aee3712556bbc83c83da9',1,'codata']]],
+  ['codata_5fget_5funcertainty_5fby_5findex_12',['codata_get_uncertainty_by_index',['../namespacecodata.html#a04c593a53c3ccc373f781e1e8c26c5bf',1,'codata']]],
+  ['codata_5fget_5funit_13',['codata_get_unit',['../namespacecodata.html#ae69dfbbbec9e27c10d7732a2d8cc6ccc',1,'codata']]],
+  ['codata_5fget_5funit_5fby_5findex_14',['codata_get_unit_by_index',['../namespacecodata.html#ab072de2bd56fe4bf155fb4da569c64f9',1,'codata']]],
+  ['codata_5fget_5fvalue_15',['codata_get_value',['../namespacecodata.html#a8ebe26c731846193daf1677edfcdc9a1',1,'codata']]],
+  ['codata_5fget_5fvalue_5fby_5findex_16',['codata_get_value_by_index',['../namespacecodata.html#a613db0803a55f94d9d9c60b1cc857b5f',1,'codata']]],
+  ['codata_5fprint_17',['codata_print',['../namespacecodata.html#a12f038421b81e36a640c67a471024d68',1,'codata']]]
 ];

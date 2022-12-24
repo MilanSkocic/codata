@@ -1,10 +1,11 @@
 var searchData=
 [
-  ['vacuum_5felectric_5fpermittivity_0',['vacuum_electric_permittivity',['../namespacecodata.html#ad8c2d6006ac4ab46698864756daf1eaf',1,'codata']]],
-  ['vacuum_5felectric_5fpermittivity_1',['VACUUM_ELECTRIC_PERMITTIVITY',['../codata_8h.html#a46aefa16f3a85c7f2defebd0bec79c19',1,'codata.h']]],
-  ['vacuum_5fmag_5f_5fpermeability_2',['VACUUM_MAG__PERMEABILITY',['../codata_8h.html#a7f2fe0cfd82f55a5616526550fee7590',1,'codata.h']]],
-  ['vacuum_5fmag_5f_5fpermeability_3',['vacuum_mag__permeability',['../namespacecodata.html#a30e00447448f185502e5bc06c14b9527',1,'codata']]],
-  ['values_5fsize_4',['VALUES_SIZE',['../main_8c.html#a7b573713a8c3dcf020040a42e55dc18d',1,'main.c']]],
-  ['von_5fklitzing_5fconstant_5',['von_klitzing_constant',['../namespacecodata.html#ad44f0a2aa188a05636e64413a5248ad3',1,'codata']]],
-  ['von_5fklitzing_5fconstant_6',['VON_KLITZING_CONSTANT',['../codata_8h.html#a14c27660517649c76b030cdd72939cad',1,'codata.h']]]
+  ['w_5fto_5fz_5fmass_5fratio_0',['w_to_z_mass_ratio',['../namespacecodata.html#a5c03e2deb804207849ede70d0ffdf786',1,'codata']]],
+  ['w_5fto_5fz_5fmass_5fratio_1',['W_TO_Z_MASS_RATIO',['../codata_8h.html#adf329be99a0d536317eeae00135e816e',1,'codata.h']]],
+  ['weak_5fmixing_5fangle_2',['weak_mixing_angle',['../namespacecodata.html#a9cf0a5f518206985b083f71ad5f722b5',1,'codata']]],
+  ['weak_5fmixing_5fangle_3',['WEAK_MIXING_ANGLE',['../codata_8h.html#a298130b0db19145902d813661618fde6',1,'codata.h']]],
+  ['wien_5ffrequency_5fdisplacement_5flaw_5fconstant_4',['WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT',['../codata_8h.html#a3ca1a6020a00609daaeaeaae2a61cfe7',1,'codata.h']]],
+  ['wien_5ffrequency_5fdisplacement_5flaw_5fconstant_5',['wien_frequency_displacement_law_constant',['../namespacecodata.html#a5eb2b4244480378bbc7945d34f2a4ed9',1,'codata']]],
+  ['wien_5fwavelength_5fdisplacement_5flaw_5fconstant_6',['WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT',['../codata_8h.html#ae9bda7f9998e5ac6c9d8b3715a6e9da6',1,'codata.h']]],
+  ['wien_5fwavelength_5fdisplacement_5flaw_5fconstant_7',['wien_wavelength_displacement_law_constant',['../namespacecodata.html#aec0616abfbfd82c933c6dffe034e371c',1,'codata']]]
 ];
