@@ -160,9 +160,9 @@ contains
     !! @param[in] index Index of the position.
     !! @return name or empty if not found.
     function codata_capi_get_unit_by_index(index) bind(C) result(char_p)
-        use iso_c_binding, only : c_null_char, c_ptr, c_loc
+        use iso_c_binding, only : c_null_char, c_ptr, c_loc, c_int
         implicit none
-        integer, intent(in), value :: index
+        integer(c_int), intent(in), value :: index
         type(c_ptr) :: char_p
 
         if (associated(capi_name_ptr) .eqv. .true.)then
@@ -187,10 +187,9 @@ contains
         integer :: i
 
         value = ieee_value(1.0d0, ieee_quiet_nan)
-
         do i=1, size(codata_constants)
             if (codata_constants(i)%name == name)then
-                value =  codata_capi_get_value_by_index(i)
+                value =  codata_get_value_by_index(i)
                 exit
             endif
         enddo
