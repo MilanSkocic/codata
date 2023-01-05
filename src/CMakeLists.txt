@@ -1,5 +1,6 @@
-add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.txt ${CMAKE_SOURCE_DIR}/src/main.c
-                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/codata.txt ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.txt)
+add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.txt ${CMAKE_BINARY_DIR}/src/main.c
+                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/codata.txt ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.txt
+                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/main.c ${CMAKE_BINARY_DIR}/src/main.c)
                    
 add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}_data.f90 
                    DEPENDS generator 
