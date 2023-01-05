@@ -17,8 +17,19 @@ module codata
     
     character(len=:), allocatable, target, private :: capi_name
     character(len=:), pointer, private  :: capi_name_ptr
+    type(t_constant), dimension(:), pointer :: codata_constants
 
 contains
+
+    subroutine set_codata(year)
+        character(len=*), intent(in) :: year
+        nullify(codata_constants)
+        if (year == "2018")then
+            codata_constants => codata_constants_2018
+        else
+            codata_constants => codata_constants_2018
+        end if
+    end subroutine
 
     !> @brief Get the number of constants
     !! @return Number of constants

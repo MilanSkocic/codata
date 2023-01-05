@@ -16,6 +16,7 @@
 struct codata_file_props{
     int n;
     int index_header_end;
+    char year[5];
 };
 
 static const size_t LINE_LENGTH = 256;
@@ -24,7 +25,7 @@ static const size_t VALUES_LENGTH = 25;
 static const size_t UNCERTAINTIES_LENGTH = 25;
 static const size_t UNITS_LENGTH = 25;
 
-static const char CODATA_PATH[] = "./codata.txt";
+static const char CODATA_PATH_2018[] = "./codata_2018.txt";
 
 void format_names(char *line, char *name){
     
@@ -269,7 +270,7 @@ void get_props(struct codata_file_props *props){
     char *line = (char *)malloc(sizeof(char)*(LINE_LENGTH+1));
     int empty;
 
-    codata =  fopen(CODATA_PATH, "r");
+    codata =  fopen(CODATA_PATH_2018, "r");
 
     props->n = 0;
     props->index_header_end = 0;
@@ -360,8 +361,8 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
         if (i%subdim == 0){
             k += 1;
             fprintf(fcode, 
-                    "type(t_constant), dimension(%d), parameter, private :: codata_%d = [&\n", 
-                    subdim, k*subdim);
+                    "type(t_constant), dimension(%d), parameter, private :: codata_%s_%d = [&\n", 
+                    subdim, props->year, k*subdim);
         }
         clean_line(line, LINE_LENGTH);
         clean_line(name, NAMES_LENGTH);
@@ -396,8 +397,8 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
         if (i%imax == 0){
             k += 1;
             fprintf(fcode, 
-                    "type(t_constant), dimension(%d), parameter, private :: codata_%d = [&\n", 
-                    imax, props->n);
+                    "type(t_constant), dimension(%d), parameter, private :: codata_%s_%d = [&\n", 
+                    imax, props->year, props->n);
         }
         clean_line(line, LINE_LENGTH);
         clean_line(name, NAMES_LENGTH);
@@ -426,11 +427,11 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
             }
         }
     }
-    fprintf(fcode, "type(t_constant), dimension(%d), public :: codata_constants = [&\n", props->n);
+    fprintf(fcode, "type(t_constant), dimension(%d), public, target :: codata_constants_%s = [&\n", props->n, props->year);
     for(i=0; i<(k-1); i++){
-        fprintf(fcode, "codata_%d %s\n", (i+1)*subdim, ",&");
+        fprintf(fcode, "codata_%s_%d %s\n", props->year, (i+1)*subdim, ",&");
     }
-    fprintf(fcode, "codata_%d %s\n\n", props->n, "]");
+    fprintf(fcode, "codata_%s_%d %s\n\n", props->year, props->n, "]");
 
 
     free(line);
@@ -451,9 +452,9 @@ int main(int argc, char **argv){
     FILE *fcode;
     char *code_path;
     int n;
-    struct codata_file_props props = {0, 0}; 
+    struct codata_file_props props_2018 = {0, 0, "2018"}; 
     
-    fcodata =  fopen(CODATA_PATH, "r");
+    fcodata =  fopen(CODATA_PATH_2018, "r");
     
     n = strlen(PROJECT_NAME);
     code_path = (char *)malloc(sizeof(char)*(n+1+10));
@@ -462,14 +463,14 @@ int main(int argc, char **argv){
     strcpy(&code_path[n], "_data.f90");
     fcode = fopen(code_path, "w");
     
-    get_props(&props);
-    print_props(&props);
+    get_props(&props_2018);
+    print_props(&props_2018);
     
-    write_file_doc(fcodata, fcode, &props);
+    write_file_doc(fcodata, fcode, &props_2018);
     write_module_doc(fcode);
     write_module_declaration(fcode);
     write_type_declaration(fcode);
-    write_all_constants(fcodata, fcode, &props);
+    write_all_constants(fcodata, fcode, &props_2018);
     write_module_end(fcode);
 
     fclose(fcode);
