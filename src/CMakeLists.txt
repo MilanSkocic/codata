@@ -2,10 +2,10 @@ add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2018.txt ${CMA
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/codata_2018.txt ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2018.txt
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/main.c ${CMAKE_BINARY_DIR}/src/main.c)
                    
-add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}_data.f90 
+add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}_2018.f90 
                    DEPENDS generator 
                    COMMAND generator
-                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_data.f90 ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}_data.f90
+                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2018.f90 ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}_2018.f90
                    )
 
 
@@ -14,7 +14,7 @@ target_include_directories(generator PUBLIC ${CMAKE_BINARY_DIR}/src)
 
 # Fortran library
 set(CODATA_PUBLIC_HEADERS "${CMAKE_BINARY_DIR}/src/codata.mod" "${CMAKE_SOURCE_DIR}/src/codata.h")
-set(CODATA_SOURCES "codata_data.f90" "codata.f90")
+set(CODATA_SOURCES "codata_2018.f90" "codata.f90")
 
 add_library(static_codata STATIC "${CODATA_SOURCES}")
 set_target_properties(static_codata PROPERTIES PUBLIC_HEADER "${CODATA_PUBLIC_HEADERS}" OUTPUT_NAME codata)
