@@ -5,6 +5,8 @@
  * @example example_in_c.c 
  */
 
+extern void set_codata_capi(char *year, int length);
+
 /**
  * @brief Get the number of constants
  * @return Number of the constants.

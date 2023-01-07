@@ -222,7 +222,7 @@ void ltrim(char *buf, size_t buffer_size){
         }
     }
     clean_line(temp, buffer_size);
-    for(i=i; i<buffer_size; i++){
+    for(i; i<buffer_size; i++){
         temp[j] = buf[i];
         j++;
     }
@@ -303,8 +303,6 @@ void print_props(struct codata_file_props *props){
 }
 
 void write_file_doc(FILE *fcodata, FILE *fcode, struct codata_file_props *props){
-    size_t i;
-    int empty;
     char *line = (char *)malloc(sizeof(char)*(LINE_LENGTH+1));
     
     fprintf(fcode, "%s\n", "!> @file");
