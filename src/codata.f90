@@ -9,19 +9,19 @@
 !! with members name, value, uncertainty and unit.
 !! Methods for getting the member values are available.
 module codata
+    use codata_2014
     use codata_2018
     
-    character(len=60), dimension(4), parameter :: headers = [character(len=60):: "Names", "Values", "Uncertainties", "Units"]
-    
-    type(t_constant), dimension(:), pointer :: codata_constants
 
 contains
 
     subroutine set_codata(year)
         character(len=*), intent(in) :: year
         nullify(codata_constants)
-        if (year == "2018")then
+        if (year == "2018") then
             codata_constants => codata_constants_2018
+        else if (year == "2014") then
+            codata_constants => codata_constants_2014
         else
             codata_constants => codata_constants_2018
         end if
