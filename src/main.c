@@ -84,21 +84,21 @@ void format_values(char *line, char *value){
             break;
         }
     }
-    if (flag_decimal == 0){
-        for(i=(VALUES_LENGTH-1); i>=0; i--){
-            if(isdigit(value[i]) > 0){
-                value[i+1] = '.';
-                value[i+2] = '0';
-                break;
-            }
-        }
-    }
     for(i=0; i<VALUES_LENGTH; i++){
         if (value[i]=='e'){
             value[i] = 'd';
         }
         if(value[i] == 'd'){
             flag_exponent = 1;
+        }
+    }
+    if ((flag_decimal == 0)&(flag_exponent == 0)){
+        for(i=(VALUES_LENGTH-1); i>=0; i--){
+            if(isdigit(value[i]) > 0){
+                value[i+1] = '.';
+                value[i+2] = '0';
+                break;
+            }
         }
     }
     if (flag_exponent == 0){
