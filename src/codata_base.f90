@@ -11,5 +11,7 @@ end type t_constant
     
 character(len=60), dimension(4), parameter :: headers = [character(len=60):: "Names", "Values", "Uncertainties", "Units"]
 type(t_constant), dimension(:), pointer :: codata_constants
+logical :: codata_is_set = .false. 
+character(len=4) :: codata_set_year = "XXXX"
 
 end module

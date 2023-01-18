@@ -30,7 +30,7 @@ contains
 
     !> @brief Get the number of constants
     !! @return Number of constants
-    pure function codata_capi_get_number_constants() bind(C) result(n)
+    function codata_capi_get_number_constants() bind(C) result(n)
         use iso_c_binding, only : c_int
         integer(c_int) :: n
         n = codata_get_number_constants()
@@ -65,7 +65,7 @@ contains
     !> @brief Get the value of the constant by index 
     !! @param[in] index Index of the position.
     !! @return value or NaN if not found.
-    pure function codata_capi_get_value_by_index(index) bind(C) result(value)
+    function codata_capi_get_value_by_index(index) bind(C) result(value)
         use iso_c_binding, only : c_int, c_double
         implicit none    
         integer(c_int), intent(in), value :: index
@@ -76,7 +76,7 @@ contains
     !> @brief Get the uncertainty of the constant by index 
     !! @param[in] index Index of the position.
     !! @return value or NaN if not found.
-    pure function codata_capi_get_uncertainty_by_index(index) bind(C) result(value)
+    function codata_capi_get_uncertainty_by_index(index) bind(C) result(value)
         use iso_c_binding, only : c_int, c_double
         implicit none    
         integer(c_int), intent(in), value :: index
