@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value_0',['value',['../structcodata__data_1_1t__constant.html#ae27c5c595cbe7fe22105b6c1106ee3f2',1,'codata_data::t_constant']]]
+  ['uncertainty_0',['uncertainty',['../structcodata__base_1_1t__constant.html#a3686e5b10895871f3774536086d46293',1,'codata_base::t_constant']]],
+  ['unit_1',['unit',['../structcodata__base_1_1t__constant.html#a5db0a5d6c02c72b1fdab67d82c0bb7f2',1,'codata_base::t_constant']]]
 ];
