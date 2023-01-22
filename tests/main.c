@@ -27,8 +27,23 @@ int main(int argc, char **argv){
     int precision;
     double value, ref;
     char name[60] = "";
+    char year[5] = "";
 
-
+    printf("Test CODATA 2018\n");
+    strcpy(year, "2018");
+    set_codata_capi(year, 4);
+    strcpy(name, "alpha particle mass");
+    value = codata_capi_get_value(name, strlen(name)); 
+    ref = 6.6446573357e-27;
+    precision = 10;
+    printf("value=%+23.16e / ref=%+23.16e / precision=%d\n", value, ref, precision);
+    if (roundn(value, precision) != roundn(ref, precision)){
+        return 1;
+    }
+    
+    printf("Test CODATA 2014\n");
+    strcpy(year, "2014");
+    set_codata_capi(year, 4);
     strcpy(name, "alpha particle mass");
     value = codata_capi_get_value(name, strlen(name)); 
     ref = 6.6446573357e-27;
