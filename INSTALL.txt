@@ -12,10 +12,6 @@
 
     cmake --build . 
 
-4. Run tests
-
-    ctest
-
-5. Install directly
+4. Install directly
     
     cmake --install .

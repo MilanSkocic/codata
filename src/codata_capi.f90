@@ -9,6 +9,9 @@ module codata_capi
     
 contains
 
+    !> @brief Set the revision year for the codata constants.
+    !! @param[in] year Year of the revision.
+    !! @param[in] length Length of the string.
     subroutine set_codata_capi(char_p, length)bind(C)
         implicit none
         integer(c_int), intent(in), value :: length

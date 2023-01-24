@@ -15,6 +15,8 @@ module codata
 
 contains
 
+    !> @brief Set the revision year for the codata constants.
+    !! param[in] year Year of the revision.
     subroutine set_codata(year)
         character(len=*), intent(in) :: year
         nullify(codata_constants)
