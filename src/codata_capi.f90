@@ -1,3 +1,12 @@
+!> @file
+!! @brief Codata module - C API
+!! @example example_in_fortran.f90
+
+
+!> @brief Codata constants
+!! @details Codata constants wrapped in an array of derived type
+!! with members name, value, uncertainty and unit.
+!! Methods for getting the member values are available.
 module codata_capi
     use iso_c_binding
     use codata
