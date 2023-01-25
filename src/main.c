@@ -452,6 +452,7 @@ int main(int argc, char **argv){
 
     struct codata_file_props props_2018 = {0, 0, "./codata_2018.txt", "2018", "codata_2018.f90"}; 
     struct codata_file_props props_2014 = {0, 0, "./codata_2014.txt", "2014", "codata_2014.f90"}; 
+    struct codata_file_props props_2010 = {0, 0, "./codata_2010.txt", "2010", "codata_2010.f90"}; 
     
     /* Codata 2018 */
     props = &props_2018;
@@ -468,6 +469,19 @@ int main(int argc, char **argv){
     
     /* Codata 2014 */
     props = &props_2014;
+    fcodata =  fopen(props->codata_path, "r");
+    fcode = fopen(props->fmodule_path, "w");
+    get_props(props);
+    write_file_doc(fcodata, fcode, props);
+    write_module_doc(fcode);
+    write_module_declaration(fcode, props);
+    write_all_constants(fcodata, fcode, props);
+    write_module_end(fcode, props);
+    fclose(fcode);
+    fclose(fcodata);
+    
+    /* Codata 2010 */
+    props = &props_2010;
     fcodata =  fopen(props->codata_path, "r");
     fcode = fopen(props->fmodule_path, "w");
     get_props(props);
