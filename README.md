@@ -1,6 +1,6 @@
 # Introduction
 
-`codata` is a (Modern) Fortran library providing the codata constants.
+`codata` is a (Modern) Fortran library providing the codata constants 2010, 2014 and 2018.
 It also provides a API for the C language. 
 The raw codata from http://physics.nist.gov/constants are converted into an Fortran module. 
 The generated Fortran module is then compiled (f2008+) into a shared and a static library `libcodata` with the Fortran and C headers.
