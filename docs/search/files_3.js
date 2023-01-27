@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['raw_5fcodata_2emd_0',['raw_codata.md',['../raw__codata_8md.html',1,'']]],
-  ['readme_2emd_1',['README.md',['../README_8md.html',1,'']]]
+  ['license_2emd_74',['license.md',['../license_8md.html',1,'']]]
 ];
