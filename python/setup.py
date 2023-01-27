@@ -13,7 +13,7 @@ pycodata_ext = Extension(name="pycodata.codata",
                                           extra_link_args=[codata_link])
 
 setup(
-    name="C Extension Demo",
+    name="pycodata",
     version="0.1.0",
     packages=find_packages(),
     include_package_data=True,
