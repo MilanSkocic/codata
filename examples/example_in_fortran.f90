@@ -9,7 +9,7 @@ program example_in_fortran
     print *, "Codata 2018: ", codata_get_value("alpha particle mass")
 
     ! Or set the codata values that you want
-    call set_codata(year)
+    call codata_set_year(year)
     print *, "Codata 2014: ", codata_get_value("alpha particle mass")
 
 

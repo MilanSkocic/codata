@@ -31,7 +31,7 @@ int main(int argc, char **argv){
 
     printf("Test CODATA 2018\n");
     strcpy(year, "2018");
-    set_codata_capi(year, 4);
+    codata_set_year_capi(year, 4);
     strcpy(name, "alpha particle mass");
     value = codata_capi_get_value(name, strlen(name)); 
     ref = 6.6446573357e-27;
@@ -43,7 +43,7 @@ int main(int argc, char **argv){
     
     printf("Test CODATA 2014\n");
     strcpy(year, "2014");
-    set_codata_capi(year, 4);
+    codata_set_year_capi(year, 4);
     strcpy(name, "alpha particle mass");
     value = codata_capi_get_value(name, strlen(name)); 
     ref = 6.644657230e-27;

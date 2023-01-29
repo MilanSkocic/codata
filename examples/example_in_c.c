@@ -12,7 +12,7 @@ int main(int argc, char **argv){
     printf("Codata 2018: %+23.16e\n", codata_capi_get_value(name, strlen(name)));
 
     /* Or set the codata values that you want */
-    set_codata_capi(year, 4);
+    codata_set_year_capi(year, 4);
     printf("Codata 2014: %+23.16e\n", codata_capi_get_value(name, strlen(name)));
     return 0;
 

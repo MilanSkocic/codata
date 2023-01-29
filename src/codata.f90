@@ -16,18 +16,18 @@ contains
 
     !> @brief Set the revision year for the codata constants.
     !! param[in] year Year of the revision.
-    subroutine set_codata(year)
+    subroutine codata_set_year(year)
         character(len=*), intent(in) :: year
         nullify(codata_constants)
         if (year == "2018") then
             codata_constants => codata_constants_2018
-            codata_set_year = "2018"
+            codata_year = "2018"
         else if (year == "2014") then
             codata_constants => codata_constants_2014
-            codata_set_year = "2014"
+            codata_year = "2014"
         else
             codata_constants => codata_constants_2018
-            codata_set_year = "2018"
+            codata_year = "2018"
         end if
         codata_is_set = .true.
     end subroutine
@@ -38,7 +38,7 @@ contains
         implicit none
         integer :: n
         if (codata_is_set .eqv. .false.) then
-            call set_codata("XXXX")
+            call codata_set_year("XXXX")
         end if
         n = size(codata_constants)
     end function
@@ -48,7 +48,7 @@ contains
         implicit none
         integer :: i
         if (codata_is_set .eqv. .false.) then
-            call set_codata("XXXX")
+            call codata_set_year("XXXX")
         end if
         print "(A60, 4X, A23, 4X, A23, 4X, A25)", headers(:)
         do i=1, size(codata_constants)
@@ -67,7 +67,7 @@ contains
         integer, intent(in) :: index
         character(len=:), allocatable :: name
         if (codata_is_set .eqv. .false.) then
-            call set_codata("XXXX")
+            call codata_set_year("XXXX")
         end if
         if ((index > size(codata_constants)) .or. (index<1))then
             name = "None"
@@ -85,7 +85,7 @@ contains
         integer, intent(in) :: index
         real(real64) :: value
         if (codata_is_set .eqv. .false.) then
-            call set_codata("XXXX")
+            call codata_set_year("XXXX")
         end if
         if ((index > size(codata_constants)) .or. (index<1))then
             value = ieee_value(1.0d0, ieee_quiet_nan)
@@ -103,7 +103,7 @@ contains
         integer, intent(in) :: index
         real(real64) :: value
         if (codata_is_set .eqv. .false.) then
-            call set_codata("XXXX")
+            call codata_set_year("XXXX")
         end if
         if ((index > size(codata_constants)) .or. (index<1))then
             value = ieee_value(1.0d0, ieee_quiet_nan)
@@ -120,7 +120,7 @@ contains
         integer, intent(in) :: index
         character(len=:), allocatable :: unit
         if (codata_is_set .eqv. .false.) then
-            call set_codata("XXXX")
+            call codata_set_year("XXXX")
         end if
         if ((index > size(codata_constants)) .or. (index<1))then
             unit = "None"
@@ -140,7 +140,7 @@ contains
         integer :: i
 
         if (codata_is_set .eqv. .false.) then
-            call set_codata("XXXX")
+            call codata_set_year("XXXX")
         end if
         value = ieee_value(1.0d0, ieee_quiet_nan)
         do i=1, size(codata_constants)
@@ -162,7 +162,7 @@ contains
         integer :: i
 
         if (codata_is_set .eqv. .false.) then
-            call set_codata("XXXX")
+            call codata_set_year("XXXX")
         end if
         value = ieee_value(1.0d0, ieee_quiet_nan)
 
@@ -186,7 +186,7 @@ contains
         integer :: i
 
         if (codata_is_set .eqv. .false.) then
-            call set_codata("XXXX")
+            call codata_set_year("XXXX")
         end if
         unit = "None"
 
