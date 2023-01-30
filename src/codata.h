@@ -12,6 +12,13 @@
  */
 extern void codata_set_year_capi(char *year, int length);
 
+
+/**
+ * @brief Get the set year for the codata constants
+ * return Year of the codata constants
+ */
+extern char *codata_get_year_capi();
+
 /**
  * @brief Get the number of constants
  * @return Number of the constants.

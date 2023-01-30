@@ -39,6 +39,23 @@ contains
         call codata_set_year(name)
 
     end subroutine
+    
+    !> @brief Get the set year for the codata constants
+    !! return Year of the codata constants
+    function codata_get_year_capi() bind(C) result(year)
+        implicit none
+        type(c_ptr) :: year
+        character(len=5), target :: fyear
+        character(len=:), pointer :: fyear_ptr
+        
+        fyear = codata_get_year()
+        fyear(5:5) = c_null_char
+
+        fyear_ptr => fyear
+
+        year = c_loc(fyear)
+
+    end function
 
     !> @brief Get the number of constants
     !! @return Number of constants

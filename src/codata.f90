@@ -32,6 +32,14 @@ contains
         codata_is_set = .true.
     end subroutine
 
+    !> @brief Get the set year for the codata constants
+    !! return Year of the codata constants
+    pure function codata_get_year()result(year)
+        implicit none
+        character(len=4):: year
+        year = codata_year
+    end function
+
     !> @brief Get the number of constants
     !! @return Number of constants
     function codata_get_number_constants() result(n)
