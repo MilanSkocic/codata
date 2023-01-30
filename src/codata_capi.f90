@@ -48,8 +48,7 @@ contains
         character(len=5), target :: fyear
         character(len=:), pointer :: fyear_ptr
         
-        fyear = codata_get_year()
-        fyear(5:5) = c_null_char
+        fyear = codata_get_year()//c_null_char
 
         fyear_ptr => fyear
 
