@@ -50,7 +50,7 @@ static PyObject *_codata_set_year(PyObject *self, PyObject *args, PyObject *kwar
 static PyObject *_codata_get_year(PyObject *self, PyObject *args)
 {
     char *year; 
-    year = codata_get_year_capi();
+    year = codata_capi_get_year();
     return Py_BuildValue("s", year);
 }
 
