@@ -22,7 +22,7 @@ int main(int argc, char **argv){
     precision = 37;
     printf("value=%+23.16e / ref=%+23.16e / precision=%d\n", value, ref, precision);
     if (isnan(value)==0){
-        return -1;
+        return EXIT_FAILURE;
     }
     
     strcpy(year, "2018");
@@ -33,8 +33,8 @@ int main(int argc, char **argv){
     precision = 37;
     printf("value=%s / ref=%s / precision=%d\n", unit, "None", precision);
     if (strcmp(unit, "None")>0){
-        return -1;
+        return EXIT_FAILURE;
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }

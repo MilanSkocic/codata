@@ -22,7 +22,7 @@ int main(int argc, char **argv){
     precision = 37;
     printf("value=%+23.16e / ref=NaN / precision=%d\n", value, ref, precision);
     if (roundn(value, precision) != roundn(ref, precision)){
-        return 1;
+        return EXIT_FAILURE;
     }
     
     printf("Test CODATA 2014\n");
@@ -34,8 +34,8 @@ int main(int argc, char **argv){
     precision = 37;
     printf("value=%+23.16e / ref=%+23.16e / precision=%d\n", value, ref, precision);
     if (roundn(value, precision) != roundn(ref, precision)){
-        return 1;
+        return EXIT_FAILURE;
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }
