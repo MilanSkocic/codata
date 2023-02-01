@@ -15,7 +15,7 @@ int main(int argc, char **argv){
     char *unit;
 
     strcpy(year, "2018");
-    codata_set_year_capi(year, 4);
+    codata_capi_set_year(year, 4);
     strcpy(name, "alpha particle masss");
     value = codata_capi_get_value(name, strlen(name)); 
     ref = NAN;
@@ -26,7 +26,7 @@ int main(int argc, char **argv){
     }
     
     strcpy(year, "2018");
-    codata_set_year_capi(year, 4);
+    codata_capi_set_year(year, 4);
     strcpy(name, "alpha particle masss");
     unit = codata_capi_get_unit(name, strlen(name)); 
     ref = NAN;

@@ -41,7 +41,7 @@ static PyObject *_codata_set_year(PyObject *self, PyObject *args, PyObject *kwar
         return NULL;
     }
 
-    codata_set_year_capi(year, strlen(year));
+    codata_capi_set_year(year, strlen(year));
 
     Py_RETURN_NONE;
 

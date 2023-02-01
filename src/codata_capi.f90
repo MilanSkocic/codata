@@ -21,7 +21,7 @@ contains
     !> @brief Set the revision year for the codata constants.
     !! @param[in] year Year of the revision.
     !! @param[in] length Length of the string.
-    subroutine codata_set_year_capi(char_p, length)bind(C)
+    subroutine codata_capi_set_year(char_p, length)bind(C)
         implicit none
         integer(c_int), intent(in), value :: length
         type(c_ptr), intent(in), value :: char_p
@@ -42,7 +42,7 @@ contains
     
     !> @brief Get the set year for the codata constants
     !! return Year of the codata constants
-    function codata_get_year_capi() bind(C) result(year)
+    function codata_capi_get_year() bind(C) result(year)
         implicit none
         type(c_ptr) :: year
         character(len=5), target :: fyear

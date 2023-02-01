@@ -10,14 +10,14 @@
  * @param[in] year Year of the revision.
  * @param[in] length Length of the string.
  */
-extern void codata_set_year_capi(char *year, int length);
+extern void codata_capi_set_year(char *year, int length);
 
 
 /**
  * @brief Get the set year for the codata constants
  * return Year of the codata constants
  */
-extern char *codata_get_year_capi();
+extern char *codata_capi_get_year();
 
 /**
  * @brief Get the number of constants
