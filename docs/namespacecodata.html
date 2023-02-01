@@ -75,9 +75,12 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions/Subroutines</h2></td></tr>
-<tr class="memitem:afeb2632fb5c144471a66344a0df4be03"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata.html#afeb2632fb5c144471a66344a0df4be03">set_codata</a> (year)</td></tr>
-<tr class="memdesc:afeb2632fb5c144471a66344a0df4be03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the revision year for the codata constants. param[in] year Year of the revision.  <a href="namespacecodata.html#afeb2632fb5c144471a66344a0df4be03">More...</a><br /></td></tr>
-<tr class="separator:afeb2632fb5c144471a66344a0df4be03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e0d6ea809a855d8f5bbc3541277309b"><td class="memItemLeft" align="right" valign="top">subroutine&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata.html#a7e0d6ea809a855d8f5bbc3541277309b">codata_set_year</a> (year)</td></tr>
+<tr class="memdesc:a7e0d6ea809a855d8f5bbc3541277309b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the revision year for the codata constants. param[in] year Year of the revision.  <a href="namespacecodata.html#a7e0d6ea809a855d8f5bbc3541277309b">More...</a><br /></td></tr>
+<tr class="separator:a7e0d6ea809a855d8f5bbc3541277309b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29d70b753e35f9821a170d268aa403b"><td class="memItemLeft" align="right" valign="top">pure character(len=4) function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata.html#ae29d70b753e35f9821a170d268aa403b">codata_get_year</a> ()</td></tr>
+<tr class="memdesc:ae29d70b753e35f9821a170d268aa403b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set year for the codata constants return Year of the codata constants.  <a href="namespacecodata.html#ae29d70b753e35f9821a170d268aa403b">More...</a><br /></td></tr>
+<tr class="separator:ae29d70b753e35f9821a170d268aa403b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44f682dbd2c3b585c5ea78f3e0cfcb55"><td class="memItemLeft" align="right" valign="top">integer function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata.html#a44f682dbd2c3b585c5ea78f3e0cfcb55">codata_get_number_constants</a> ()</td></tr>
 <tr class="memdesc:a44f682dbd2c3b585c5ea78f3e0cfcb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of constants.  <a href="namespacecodata.html#a44f682dbd2c3b585c5ea78f3e0cfcb55">More...</a><br /></td></tr>
 <tr class="separator:a44f682dbd2c3b585c5ea78f3e0cfcb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -316,6 +319,22 @@ Functions/Subroutines</h2></td></tr>
 
 </div>
 </div>
+<a id="ae29d70b753e35f9821a170d268aa403b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29d70b753e35f9821a170d268aa403b">&#9670;&nbsp;</a></span>codata_get_year()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pure character(len=4) function codata::codata_get_year</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the set year for the codata constants return Year of the codata constants. </p>
+
+</div>
+</div>
 <a id="a12f038421b81e36a640c67a471024d68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12f038421b81e36a640c67a471024d68">&#9670;&nbsp;</a></span>codata_print()</h2>
 
@@ -332,14 +351,14 @@ Functions/Subroutines</h2></td></tr>
 
 </div>
 </div>
-<a id="afeb2632fb5c144471a66344a0df4be03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afeb2632fb5c144471a66344a0df4be03">&#9670;&nbsp;</a></span>set_codata()</h2>
+<a id="a7e0d6ea809a855d8f5bbc3541277309b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0d6ea809a855d8f5bbc3541277309b">&#9670;&nbsp;</a></span>codata_set_year()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">subroutine codata::set_codata </td>
+          <td class="memname">subroutine codata::codata_set_year </td>
           <td>(</td>
           <td class="paramtype">character(len=*), intent(in)&#160;</td>
           <td class="paramname"><em>year</em></td><td>)</td>

@@ -1,6 +1,5 @@
 !> @file
 !! @brief Codata module - C API
-!! @example example_in_fortran.f90
 
 
 !> @brief Codata constants
@@ -19,7 +18,7 @@ module codata_capi
 contains
 
     !> @brief Set the revision year for the codata constants.
-    !! @param[in] year Year of the revision.
+    !! @param[in] char_p Year of the revision.
     !! @param[in] length Length of the string.
     subroutine codata_capi_set_year(char_p, length)bind(C)
         implicit none

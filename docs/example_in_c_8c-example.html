@@ -79,16 +79,20 @@ $(function() {
 <div class="line">    <a name="a1"></a><a class="code" href="codata_8h.html#a1a4474d4e1ce974e14b23f41d4632c36">codata_capi_print</a>();</div>
 <div class="line">    <span class="keywordtype">char</span> name[] = <span class="stringliteral">&quot;alpha particle mass&quot;</span>;</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Codata 2018: %+23.16e\n&quot;</span>, <a name="a2"></a><a class="code" href="codata_8h.html#aab0a09197a3c84d7051495c6ebb4a24d">codata_capi_get_value</a>(name, strlen(name)));</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%s \n&quot;</span>, <a name="a3"></a><a class="code" href="codata_8h.html#a5700eac3c2a6c5c4f0415eb65c81fda9">codata_capi_get_year</a>());</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">/* Or set the codata values that you want */</span></div>
-<div class="line">    <a name="a3"></a><a class="code" href="codata_8h.html#a691570e3a1e229bbc8b5749e1eb5827d">set_codata_capi</a>(year, 4);</div>
+<div class="line">    <a name="a4"></a><a class="code" href="codata_8h.html#a3d2a8ee617bae7bef743af5b29cc5bb1">codata_capi_set_year</a>(year, 4);</div>
 <div class="line">    printf(<span class="stringliteral">&quot;Codata 2014: %+23.16e\n&quot;</span>, <a class="code" href="codata_8h.html#aab0a09197a3c84d7051495c6ebb4a24d">codata_capi_get_value</a>(name, strlen(name)));</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%s \n&quot;</span>, <a class="code" href="codata_8h.html#a5700eac3c2a6c5c4f0415eb65c81fda9">codata_capi_get_year</a>());</div>
+<div class="line">    </div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line"> </div>
 <div class="line">}</div>
 <div class="ttc" id="acodata_8h_html"><div class="ttname"><a href="codata_8h.html">codata.h</a></div><div class="ttdoc">C header for the codata library.</div></div>
 <div class="ttc" id="acodata_8h_html_a1a4474d4e1ce974e14b23f41d4632c36"><div class="ttname"><a href="codata_8h.html#a1a4474d4e1ce974e14b23f41d4632c36">codata_capi_print</a></div><div class="ttdeci">void codata_capi_print()</div><div class="ttdoc">Display all constants.</div></div>
-<div class="ttc" id="acodata_8h_html_a691570e3a1e229bbc8b5749e1eb5827d"><div class="ttname"><a href="codata_8h.html#a691570e3a1e229bbc8b5749e1eb5827d">set_codata_capi</a></div><div class="ttdeci">void set_codata_capi(char *year, int length)</div><div class="ttdoc">Set the revision year for the codata constants.</div></div>
+<div class="ttc" id="acodata_8h_html_a3d2a8ee617bae7bef743af5b29cc5bb1"><div class="ttname"><a href="codata_8h.html#a3d2a8ee617bae7bef743af5b29cc5bb1">codata_capi_set_year</a></div><div class="ttdeci">void codata_capi_set_year(char *year, int length)</div><div class="ttdoc">Set the revision year for the codata constants.</div></div>
+<div class="ttc" id="acodata_8h_html_a5700eac3c2a6c5c4f0415eb65c81fda9"><div class="ttname"><a href="codata_8h.html#a5700eac3c2a6c5c4f0415eb65c81fda9">codata_capi_get_year</a></div><div class="ttdeci">char * codata_capi_get_year()</div><div class="ttdoc">Get the set year for the codata constants return Year of the codata constants.</div></div>
 <div class="ttc" id="acodata_8h_html_aab0a09197a3c84d7051495c6ebb4a24d"><div class="ttname"><a href="codata_8h.html#aab0a09197a3c84d7051495c6ebb4a24d">codata_capi_get_value</a></div><div class="ttdeci">double codata_capi_get_value(char *name, int length)</div><div class="ttdoc">Get the value of the constant by name.</div></div>
 <div class="ttc" id="aexample__in__c_8c_html_a3c04138a5bfe5d72780bb7e82a18e627"><div class="ttname"><a href="example__in__c_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a></div><div class="ttdeci">int main(int argc, char **argv)</div><div class="ttdef"><b>Definition:</b> example_in_c.c:5</div></div>
 </div><!-- fragment --> </div><!-- contents -->

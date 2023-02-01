@@ -90,9 +90,12 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a691570e3a1e229bbc8b5749e1eb5827d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codata_8h.html#a691570e3a1e229bbc8b5749e1eb5827d">set_codata_capi</a> (char *year, int length)</td></tr>
-<tr class="memdesc:a691570e3a1e229bbc8b5749e1eb5827d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the revision year for the codata constants.  <a href="codata_8h.html#a691570e3a1e229bbc8b5749e1eb5827d">More...</a><br /></td></tr>
-<tr class="separator:a691570e3a1e229bbc8b5749e1eb5827d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d2a8ee617bae7bef743af5b29cc5bb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codata_8h.html#a3d2a8ee617bae7bef743af5b29cc5bb1">codata_capi_set_year</a> (char *year, int length)</td></tr>
+<tr class="memdesc:a3d2a8ee617bae7bef743af5b29cc5bb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the revision year for the codata constants.  <a href="codata_8h.html#a3d2a8ee617bae7bef743af5b29cc5bb1">More...</a><br /></td></tr>
+<tr class="separator:a3d2a8ee617bae7bef743af5b29cc5bb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5700eac3c2a6c5c4f0415eb65c81fda9"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codata_8h.html#a5700eac3c2a6c5c4f0415eb65c81fda9">codata_capi_get_year</a> ()</td></tr>
+<tr class="memdesc:a5700eac3c2a6c5c4f0415eb65c81fda9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set year for the codata constants return Year of the codata constants.  <a href="codata_8h.html#a5700eac3c2a6c5c4f0415eb65c81fda9">More...</a><br /></td></tr>
+<tr class="separator:a5700eac3c2a6c5c4f0415eb65c81fda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff04bc54ea32c36860dbf1597e0e1e25"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="codata_8h.html#aff04bc54ea32c36860dbf1597e0e1e25">codata_capi_get_number_constants</a> ()</td></tr>
 <tr class="memdesc:aff04bc54ea32c36860dbf1597e0e1e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of constants.  <a href="codata_8h.html#aff04bc54ea32c36860dbf1597e0e1e25">More...</a><br /></td></tr>
 <tr class="separator:aff04bc54ea32c36860dbf1597e0e1e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -368,6 +371,27 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5700eac3c2a6c5c4f0415eb65c81fda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5700eac3c2a6c5c4f0415eb65c81fda9">&#9670;&nbsp;</a></span>codata_capi_get_year()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* codata_capi_get_year </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the set year for the codata constants return Year of the codata constants. </p>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_in_c_8c-example.html#a3">example_in_c.c</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="a1a4474d4e1ce974e14b23f41d4632c36"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a4474d4e1ce974e14b23f41d4632c36">&#9670;&nbsp;</a></span>codata_capi_print()</h2>
 
@@ -389,14 +413,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a691570e3a1e229bbc8b5749e1eb5827d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a691570e3a1e229bbc8b5749e1eb5827d">&#9670;&nbsp;</a></span>set_codata_capi()</h2>
+<a id="a3d2a8ee617bae7bef743af5b29cc5bb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d2a8ee617bae7bef743af5b29cc5bb1">&#9670;&nbsp;</a></span>codata_capi_set_year()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void set_codata_capi </td>
+          <td class="memname">void codata_capi_set_year </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>year</em>, </td>
@@ -423,7 +447,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_in_c_8c-example.html#a3">example_in_c.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_in_c_8c-example.html#a4">example_in_c.c</a>.</dd>
 </dl>
 
 </div>
