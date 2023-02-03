@@ -20,7 +20,7 @@ int main(int argc, char **argv){
     value = codata_capi_get_value(name, strlen(name)); 
     ref = 6.6446573357e-27;
     precision = 37;
-    printf("value=%+23.16e / ref=NaN / precision=%d\n", value, ref, precision);
+    printf("value=%+23.16e / ref=%+23.16e / precision=%d\n", value, ref, precision);
     if (roundn(value, precision) != roundn(ref, precision)){
         return EXIT_FAILURE;
     }
