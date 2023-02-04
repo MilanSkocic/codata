@@ -11,9 +11,10 @@ module codata_capi
     use codata
     implicit none
 
-
     character(len=:), allocatable, target, private :: capi_name
     character(len=:), pointer, private  :: capi_name_ptr
+    character(len=:), allocatable, target, private :: capi_year
+    character(len=:), pointer, private :: capi_year_ptr
     
 contains
 
@@ -44,14 +45,17 @@ contains
     function codata_capi_get_year() bind(C) result(year)
         implicit none
         type(c_ptr) :: year
-        character(len=5), target :: fyear
-        character(len=:), pointer :: fyear_ptr
         
-        fyear = codata_get_year()//c_null_char
-
-        fyear_ptr => fyear
-
-        year = c_loc(fyear)
+        if (associated(capi_year_ptr) .eqv. .true.)then
+            capi_year_ptr => null()
+        end if
+        if (allocated(capi_year) .eqv. .true.)then
+            deallocate(capi_year)
+        endif
+        
+        capi_year = codata_get_year() // c_null_char
+        capi_year_ptr => capi_year
+        year = c_loc(capi_year_ptr)
 
     end function
 
