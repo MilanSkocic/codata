@@ -33,7 +33,7 @@ contains
     end subroutine
 
     !> @brief Get the set year for the codata constants
-    !! return Year of the codata constants
+    !! @return Year of the codata constants
     pure function codata_get_year()result(year)
         implicit none
         character(len=4):: year
