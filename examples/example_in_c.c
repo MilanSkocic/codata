@@ -10,12 +10,12 @@ int main(int argc, char **argv){
     codata_capi_print();
     char name[] = "alpha particle mass";
     printf("Codata 2018: %+23.16e\n", codata_capi_get_value(name, strlen(name)));
-    printf("%s \n", codata_capi_get_year());
+    printf("%s\n", codata_capi_get_year());
 
     /* Or set the codata values that you want */
     codata_capi_set_year(year, 4);
     printf("Codata 2014: %+23.16e\n", codata_capi_get_value(name, strlen(name)));
-    printf("%s \n", codata_capi_get_year());
+    printf("%s\n", codata_capi_get_year());
     
     return 0;
 
