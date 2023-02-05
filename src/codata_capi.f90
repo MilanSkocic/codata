@@ -2,10 +2,9 @@
 !! @brief Codata module - C API
 
 
-!> @brief Codata constants
-!! @details Codata constants wrapped in an array of derived type
-!! with members name, value, uncertainty and unit.
-!! Methods for getting the member values are available.
+!> @brief C API for the codata constants
+!! @details Provide C compatible getters and setters for 
+!! accessing the codata constants.
 module codata_capi
     use iso_c_binding
     use codata

@@ -2,6 +2,7 @@
 !! @brief Base for the codata module.
 
 !> @brief Base module
+!! @details Here are defined all common variables needed for the codata module.
 module codata_base
     use iso_fortran_env
     implicit none
@@ -14,9 +15,12 @@ type :: t_constant
   character(len=25) :: unit
 end type t_constant
     
+!> @brief Header for the print function.
 character(len=60), dimension(4), parameter :: headers = [character(len=60):: "Names", "Values", "Uncertainties", "Units"]
 
-!> @brief Pointer to the codata table 
+!> @brief Pointer to the codata table
+!! @details Pointer that will point to the adequat codata table according
+!! to the choosen year. By default, it points to the last update of codata values.
 type(t_constant), dimension(:), pointer :: codata_constants
 
 !> @brief flag for indicating if the codata year is set
