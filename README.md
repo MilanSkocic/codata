@@ -6,7 +6,7 @@ The raw codata from http://physics.nist.gov/constants are converted into an Fort
 The generated Fortran module is then compiled (f2008+) into a shared and a static library `libcodata` with the Fortran and C headers.
 The static and shared libraries can be installed in order to be included in Fortran or C programs.
 
-The compilation was tested on Linux (Debian 10), MacOS, Windows (MSYS2).
+The compilation was tested on Linux (Debian), MacOS, Windows (MSYS2).
 
 The sources are available are available on [github](https://github.com/MilanSkocic/codata).
 The online documentation is available [here](https://milanskocic.github.io/codata/index.html).
