@@ -13,7 +13,7 @@
 * On windows with MSYS2: `cmake -G "Unix Makefiles" -S .. -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/path/to/folder`
 
 
-## Build either with cmake or with make directly
+## Build either with cmake
 
     cmake --build . 
 
