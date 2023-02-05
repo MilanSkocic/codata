@@ -17,6 +17,10 @@
 
     cmake --build . 
 
+## Run tests
+
+    ctest
+
 ## Install
     
     cmake --install .
