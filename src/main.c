@@ -93,19 +93,19 @@ void format_values(char *line, char *value){
         }
     }
     if ((flag_decimal == 0)&(flag_exponent == 0)){
-        for(i=(VALUES_LENGTH-1); i>=0; i--){
-            if(isdigit(value[i]) > 0){
-                value[i+1] = '.';
-                value[i+2] = '0';
+        for(i=0; i<VALUES_LENGTH; i++){
+            if(isdigit(value[VALUES_LENGTH-1-i]) > 0){
+                value[VALUES_LENGTH-1-i+1] = '.';
+                value[VALUES_LENGTH-1-i+2] = '0';
                 break;
             }
         }
     }
     if (flag_exponent == 0){
-        for(i=(VALUES_LENGTH-1); i>=0; i--){
-            if(isdigit(value[i]) > 0){
-                value[i+1] = 'd';
-                value[i+2] = '0';
+        for(i=0; i<VALUES_LENGTH; i++){
+            if(isdigit(value[VALUES_LENGTH-1-i]) > 0){
+                value[VALUES_LENGTH-1-i+1] = 'd';
+                value[VALUES_LENGTH-1-i+2] = '0';
                 break;
             }
         }
@@ -164,10 +164,10 @@ void format_uncertainties(char *line, char *uncertainty){
         }
     }
     if (flag_exponent == 0){
-        for(i=(UNCERTAINTIES_LENGTH-1); i>=0; i--){
-            if(isdigit(uncertainty[i]) > 0){
-                uncertainty[i+1] = 'd';
-                uncertainty[i+2] = '0';
+        for(i=0; i<UNCERTAINTIES_LENGTH; i++){
+            if(isdigit(uncertainty[UNCERTAINTIES_LENGTH-1-i]) > 0){
+                uncertainty[UNCERTAINTIES_LENGTH-1-i+1] = 'd';
+                uncertainty[UNCERTAINTIES_LENGTH-1-i+2] = '0';
                 break;
             }
         }
@@ -214,17 +214,19 @@ int read_line(FILE *f, char *buf, size_t buffer_size){
 }
 
 void ltrim(char *buf, size_t buffer_size){
-    size_t i, j;
+    size_t i, j, k;
     i = 0;
     j = 0;
+    k = 0;
     char *temp = (char *)malloc(sizeof(char)*(buffer_size+1));
     for(i=0; i<buffer_size; i++){
         if(isalnum(buf[i])>0){
+            k = i;
             break;
         }
     }
     clean_line(temp, buffer_size);
-    for(i; i<buffer_size; i++){
+    for(i=k; i<buffer_size; i++){
         temp[j] = buf[i];
         j++;
     }
@@ -304,7 +306,7 @@ void print_props(struct codata_file_props *props){
     printf("Number of constants: %d\n", props->n);
 }
 
-void write_file_doc(FILE *fcodata, FILE *fcode, struct codata_file_props *props){
+void write_file_doc(FILE *fcode){
     char *line = (char *)malloc(sizeof(char)*(LINE_LENGTH+1));
     
     fprintf(fcode, "%s\n", "!> @file");
@@ -453,13 +455,19 @@ int main(int argc, char **argv){
     struct codata_file_props props_2018 = {0, 0, "./codata_2018.txt", "2018", "codata_2018.f90"}; 
     struct codata_file_props props_2014 = {0, 0, "./codata_2014.txt", "2014", "codata_2014.f90"}; 
     struct codata_file_props props_2010 = {0, 0, "./codata_2010.txt", "2010", "codata_2010.f90"}; 
-    
+
+    // avoid compiler complaining
+    if (argc>1){
+        printf("%d %s", argc, argv[1]);
+    }    
+
+
     /* Codata 2018 */
     props = &props_2018;
     fcodata =  fopen(props->codata_path, "r");
     fcode = fopen(props->fmodule_path, "w");
     get_props(props);
-    write_file_doc(fcodata, fcode, props);
+    write_file_doc(fcode);
     write_module_doc(fcode);
     write_module_declaration(fcode, props);
     write_all_constants(fcodata, fcode, props);
@@ -472,7 +480,7 @@ int main(int argc, char **argv){
     fcodata =  fopen(props->codata_path, "r");
     fcode = fopen(props->fmodule_path, "w");
     get_props(props);
-    write_file_doc(fcodata, fcode, props);
+    write_file_doc(fcode);
     write_module_doc(fcode);
     write_module_declaration(fcode, props);
     write_all_constants(fcodata, fcode, props);
@@ -485,7 +493,7 @@ int main(int argc, char **argv){
     fcodata =  fopen(props->codata_path, "r");
     fcode = fopen(props->fmodule_path, "w");
     get_props(props);
-    write_file_doc(fcodata, fcode, props);
+    write_file_doc(fcode);
     write_module_doc(fcode);
     write_module_declaration(fcode, props);
     write_all_constants(fcodata, fcode, props);

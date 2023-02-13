@@ -13,6 +13,11 @@ int main(int argc, char **argv){
     char name[60] = "";
     char year[5] = "";
     char *unit;
+    
+    // avoid compiler complaining
+    if (argc>1){
+        printf("%d %s", argc, argv[1]);
+    }
 
     strcpy(year, "2018");
     codata_capi_set_year(year, 4);

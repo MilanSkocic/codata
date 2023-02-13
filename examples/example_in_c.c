@@ -5,6 +5,11 @@
 int main(int argc, char **argv){
 
     char year[5] = "2014";
+    
+    // avoid compiler complaining
+    if (argc>1){
+        printf("%d %s", argc, argv[1]);
+    }
 
     /* call directly codata, the values used will be the last i.e. 2018 */
     codata_capi_print();

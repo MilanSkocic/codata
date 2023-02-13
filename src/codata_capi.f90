@@ -196,7 +196,7 @@ contains
         character, pointer, dimension(:) :: c2f_string
         
         type(c_ptr) :: unit
-        character(len=:), allocatable :: unit_f
+        character(len=25) :: unit_f
         
         integer :: i
         character(len=length) :: name
@@ -205,7 +205,7 @@ contains
         do i=1, length
             name(i:i) = c2f_string(i)
         enddo
-
+        
         unit_f = codata_get_unit(name)
         capi_name = trim(unit_f) // c_null_char
         capi_name_ptr => capi_name

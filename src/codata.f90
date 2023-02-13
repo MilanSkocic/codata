@@ -191,10 +191,9 @@ contains
     !! @param[in] name Name of the constant
     !! @return unit or None if not found
     function codata_get_unit(name) result(unit)
-        use ieee_arithmetic, only : ieee_value, ieee_quiet_nan
         implicit none    
         character(len=*), intent(in) :: name
-        character(len=:), allocatable :: unit
+        character(len=25) :: unit
         integer :: i
 
         if (codata_is_set .eqv. .false.) then
