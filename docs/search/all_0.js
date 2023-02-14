@@ -32,7 +32,7 @@ var searchData=
   ['codata_5fget_5fnumber_5fconstants_29',['codata_get_number_constants',['../namespacecodata.html#a44f682dbd2c3b585c5ea78f3e0cfcb55',1,'codata']]],
   ['codata_5fget_5funcertainty_30',['codata_get_uncertainty',['../namespacecodata.html#a3daf5b6df8179f340b60ebee4b16d830',1,'codata']]],
   ['codata_5fget_5funcertainty_5fby_5findex_31',['codata_get_uncertainty_by_index',['../namespacecodata.html#a1c3f4bcdc02b5b5f0cad7722b5da2335',1,'codata']]],
-  ['codata_5fget_5funit_32',['codata_get_unit',['../namespacecodata.html#ae3026cd40d22af05a190bdea7b4d5b7c',1,'codata']]],
+  ['codata_5fget_5funit_32',['codata_get_unit',['../namespacecodata.html#accf387d9f9566622f040109c6ca2e1ec',1,'codata']]],
   ['codata_5fget_5funit_5fby_5findex_33',['codata_get_unit_by_index',['../namespacecodata.html#aeaca8db53781b2443c3695e3709ae192',1,'codata']]],
   ['codata_5fget_5fvalue_34',['codata_get_value',['../namespacecodata.html#aa53ae241b3b7006cb69b7576ea18a480',1,'codata']]],
   ['codata_5fget_5fvalue_5fby_5findex_35',['codata_get_value_by_index',['../namespacecodata.html#adea9b442d3a31f0f5eff7e248ac698ca',1,'codata']]],
