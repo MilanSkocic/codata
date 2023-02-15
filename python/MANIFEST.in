@@ -1,5 +1,11 @@
 # sdist
 recursive-include sphinx *
 
+include INSTALL.TXT
+include LICENSE.TXT
+include MANIFEST.in
+include README.rst
+inlcude requirements.txt
+
 # bdist
-include pycodata/test.png
+recursive-include pycodata *.c *.h *.f90
