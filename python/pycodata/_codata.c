@@ -4,7 +4,7 @@
 #include <string.h>
 #include "codata.h"
 
-PyDoc_STRVAR(module_docstring, "Codata constants from NIST.");
+PyDoc_STRVAR(module_docstring, "C extension wrapping the (Modern Fortran) codata constants.");
 
 PyDoc_STRVAR(codata_set_year_doc, 
 "set_year(year=last) --> None \n\n"
@@ -135,18 +135,18 @@ static PyMethodDef myMethods[] = {
 };
 
 // Our Module Definition struct
-static struct PyModuleDef codata = {
+static struct PyModuleDef _codata = {
     PyModuleDef_HEAD_INIT,
-    "codata",
+    "_codata",
     module_docstring,
     -1,
     myMethods
 };
 
 // Initializes our module using our above struct
-PyMODINIT_FUNC PyInit_codata(void)
+PyMODINIT_FUNC PyInit__codata(void)
 {
-    return PyModule_Create(&codata);
+    return PyModule_Create(&_codata);
 }
 
 

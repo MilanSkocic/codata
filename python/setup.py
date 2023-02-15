@@ -12,8 +12,8 @@ cfg.read("site.cfg")
 codata_include = cfg["CODATA"]["include_dirs"]
 codata_link = "-l"+cfg["CODATA"]["libraries"]
 
-pycodata_ext = Extension(name="pycodata.codata",
-                                         sources=["./pycodata/codata.c"],
+pycodata_ext = Extension(name="pycodata._codata",
+                                         sources=["./pycodata/_codata.c"],
                                           include_dirs=[codata_include],
                                           extra_link_args=[codata_link])
 
