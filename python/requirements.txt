@@ -1,1 +1,1 @@
-libcodata >=0.1
+libcodata>=0.1
