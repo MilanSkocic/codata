@@ -18,4 +18,4 @@
      printf("cflags = %s\n", CFLAGS);
 
     return 0;
- }
+}
