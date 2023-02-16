@@ -1,7 +1,12 @@
 import os
 from setuptools import setup, find_packages, Extension
 import configparser
-import pycodata
+import importlib
+
+# Import only version.py file for extracting the version
+spec = importlib.util.spec_from_file_location('version', './pycodata/version.py')
+mod = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(mod)
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname), 'r', encoding='utf-8').read()
@@ -12,21 +17,21 @@ cfg.read("site.cfg")
 codata_include = cfg["CODATA"]["include_dirs"]
 codata_link = "-l"+cfg["CODATA"]["libraries"]
 
-pycodata_ext = Extension(name="pycodata._codata",
+mod_ext = Extension(name="pycodata._codata",
                                          sources=["./pycodata/_codata.c"],
                                           include_dirs=[codata_include],
                                           extra_link_args=[codata_link])
 
-setup(name=pycodata.__package_name__,
-      version=pycodata.__version__,
-      maintainer=pycodata.__maintainer__,
-      maintainer_email=pycodata.__maintainer_email__,
-      author=pycodata.__author__,
-      author_email=pycodata.__author_email__,
-      description=pycodata.__package_name__,
+setup(name=mod.__package_name__,
+      version=mod.__version__,
+      maintainer=mod.__maintainer__,
+      maintainer_email=mod.__maintainer_email__,
+      author=mod.__author__,
+      author_email=mod.__author_email__,
+      description=mod.__package_name__,
       long_description=read('README.rst'),
-      url='https://milanskocic.github.io/pycodata/index.html',
-      download_url='https://github.com/MilanSkocic/pycodata/',
+      url='https://milanskocic.github.io/mod/index.html',
+      download_url='https://github.com/MilanSkocic/mod/',
       packages=find_packages(),
       include_package_data=True,
       python_requires='>=3.7',
@@ -43,7 +48,7 @@ setup(name=pycodata.__package_name__,
                    "Programming Language :: Python :: 3.11",
                    "Topic :: Scientific/Engineering",
                    "Operating System :: OS Independent"],
-        ext_modules=[pycodata_ext]
+        ext_modules=[mod_ext]
       )
 
 
