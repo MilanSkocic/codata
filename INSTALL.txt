@@ -12,6 +12,8 @@ Cmake is necessary for compiling and instaling the library.
 
 * On windows with MSYS2: `cmake -G "Unix Makefiles" -S .. -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/path/to/folder`
 
+* On windows with ifort and msvc: `cmake -G "NMake Makefiles" -S .. -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/path/to/folder`
+
 
 # Build either with cmake
 
