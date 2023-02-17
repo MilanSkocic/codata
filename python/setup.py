@@ -14,14 +14,15 @@ def read(fname):
 cfg = configparser.ConfigParser()
 cfg.read("site.cfg")
 
-codata_include = cfg["CODATA"]["include_dirs"]
-codata_link = "-l"+cfg["CODATA"]["libraries"]
+codata_include_dirs = cfg["CODATA"]["include_dirs"]
+codata_library_dirs = cfg["CODATA"]["library_dirs"]
+codata_libraries = cfg["CODATA"]["libraries"]
 
 mod_ext = Extension(name="pycodata._codata",
                                          sources=["./pycodata/_codata.c"],
-                                          include_dirs=[codata_include],
-                                          extra_link_args=[codata_link])
-
+                                         libraries=[codata_libraries],
+                                         library_dirs=[codata_library_dirs],
+                                         include_dirs=[codata_include_dirs])
 setup(name=mod.__package_name__,
       version=mod.__version__,
       maintainer=mod.__maintainer__,
