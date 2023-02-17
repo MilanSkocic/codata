@@ -22,6 +22,10 @@ PyDoc_STRVAR(codata_get_value_doc,
 "get_value(name) --> float \n\n"
 "Get the value of the constant defined by name. If not found returns NaN");
 
+PyDoc_STRVAR(codata_get_uncertainty_doc, 
+"get_uncertainty(name) --> float \n\n"
+"Get the uncertainty of the constant defined by name. If not found returns NaN");
+
 PyDoc_STRVAR(codata_get_unit_doc, 
 "get_unit(name) --> float \n\n"
 "Get the unit of the constant defined by name. If not found returns \"None\"");
@@ -71,6 +75,21 @@ static PyObject *_codata_get_value(PyObject *self, PyObject *args){
     }
 
     value = codata_capi_get_value(name, strlen(name));
+
+    return Py_BuildValue("d", value);
+}
+
+static PyObject *_codata_get_uncertainty(PyObject *self, PyObject *args){
+    
+    char *name;
+    double value;
+
+    if(!PyArg_ParseTuple(args, "s", &name)){
+        PyErr_SetString(PyExc_TypeError, "name must be of type str.");
+        return NULL;
+    }
+
+    value = codata_capi_get_uncertainty(name, strlen(name));
 
     return Py_BuildValue("d", value);
 }
@@ -129,6 +148,7 @@ static PyMethodDef myMethods[] = {
     {"get_year", (PyCFunction) _codata_get_year, METH_NOARGS, codata_get_year_doc },
     {"print", (PyCFunction) _codata_print, METH_NOARGS, codata_print_doc },
     {"get_value", (PyCFunction) _codata_get_value, METH_VARARGS, codata_get_value_doc},
+    {"get_uncertainty", (PyCFunction) _codata_get_uncertainty, METH_VARARGS, codata_get_uncertainty_doc},
     {"get_unit", (PyCFunction) _codata_get_unit, METH_VARARGS, codata_get_unit_doc},
     {"as_dict", (PyCFunction) _codata_constants_as_dict, METH_NOARGS, codata_as_dict_doc},
     { NULL, NULL, 0, NULL }
