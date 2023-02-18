@@ -1,11 +1,11 @@
 add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2018.txt 
                           ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2014.txt 
                           ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2010.txt 
-                          ${CMAKE_BINARY_DIR}/src/main.c
+                          ${CMAKE_BINARY_DIR}/src/generator.c
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/codata_2018.txt ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2018.txt
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/codata_2014.txt ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2014.txt
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/codata_2010.txt ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2010.txt
-                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/main.c ${CMAKE_BINARY_DIR}/src/main.c)
+                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_SOURCE_DIR}/src/generator.c ${CMAKE_BINARY_DIR}/src/generator.c)
                    
 add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}_2018.f90
                           ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}_2014.f90
@@ -18,7 +18,7 @@ add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}_2018.f90
                    )
 
 
-add_executable(generator main.c) 
+add_executable(generator generator.c) 
 target_include_directories(generator PUBLIC ${CMAKE_BINARY_DIR}/src)
 
 # Fortran library
