@@ -1,30 +1,4 @@
 var searchData=
 [
-  ['raw_5fcodata_0',['raw_codata',['../md_raw_codata.html',1,'']]],
-  ['raw_5fcodata_2emd_1',['raw_codata.md',['../raw__codata_8md.html',1,'']]],
-  ['readme_2emd_2',['README.md',['../README_8md.html',1,'']]],
-  ['reduced_5fcompton_5fwavelength_3',['reduced_compton_wavelength',['../namespacecodata.html#a901846ba239ba2d0a437b3adae03df4e',1,'codata']]],
-  ['reduced_5fcompton_5fwavelength_4',['REDUCED_COMPTON_WAVELENGTH',['../codata_8h.html#a225e06cbb7d6b3feefa275f47b2fbf96',1,'codata.h']]],
-  ['reduced_5fmuon_5fcompton_5fwavelength_5',['reduced_muon_compton_wavelength',['../namespacecodata.html#adbe46c2fee57f050e99c10111c5f6a77',1,'codata']]],
-  ['reduced_5fmuon_5fcompton_5fwavelength_6',['REDUCED_MUON_COMPTON_WAVELENGTH',['../codata_8h.html#aa0d4256ee92dd87e08d3d1112e2ef9dc',1,'codata.h']]],
-  ['reduced_5fneutron_5fcompton_5fwavelength_7',['reduced_neutron_compton_wavelength',['../namespacecodata.html#afc1d9bc03ec8cd6f9ccb0ca9e0b11f47',1,'codata']]],
-  ['reduced_5fneutron_5fcompton_5fwavelength_8',['REDUCED_NEUTRON_COMPTON_WAVELENGTH',['../codata_8h.html#ae813befe396bb7948a3003e745dde111',1,'codata.h']]],
-  ['reduced_5fplanck_5fconstant_9',['REDUCED_PLANCK_CONSTANT',['../codata_8h.html#ad86c82005d4b61da297520743febcc33',1,'codata.h']]],
-  ['reduced_5fplanck_5fconstant_10',['reduced_planck_constant',['../namespacecodata.html#a1ef4883d86c3a101b2fceaac82baf111',1,'codata']]],
-  ['reduced_5fplanck_5fconstant_5fin_5fev_5fs_11',['reduced_planck_constant_in_ev_s',['../namespacecodata.html#aaac82cb2bd21159987624564121c2614',1,'codata']]],
-  ['reduced_5fplanck_5fconstant_5fin_5fev_5fs_12',['REDUCED_PLANCK_CONSTANT_IN_EV_S',['../codata_8h.html#af7caeadafe9f196c25be3d55cc47c7c9',1,'codata.h']]],
-  ['reduced_5fplanck_5fconstant_5ftimes_5fc_5fin_5fmev_5ffm_13',['REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM',['../codata_8h.html#af64fbd2d3f145b6fadf23bcf08d354b4',1,'codata.h']]],
-  ['reduced_5fplanck_5fconstant_5ftimes_5fc_5fin_5fmev_5ffm_14',['reduced_planck_constant_times_c_in_mev_fm',['../namespacecodata.html#a6d6cf92b622771d2c88b185a7ee8f379',1,'codata']]],
-  ['reduced_5fproton_5fcompton_5fwavelength_15',['REDUCED_PROTON_COMPTON_WAVELENGTH',['../codata_8h.html#adc7f144e8989b88d5982bbc5b7bb7223',1,'codata.h']]],
-  ['reduced_5fproton_5fcompton_5fwavelength_16',['reduced_proton_compton_wavelength',['../namespacecodata.html#a9086ed91728f12f814756cddf6300d06',1,'codata']]],
-  ['reduced_5ftau_5fcompton_5fwavelength_17',['reduced_tau_compton_wavelength',['../namespacecodata.html#a7249d2e819d186af783c84d6bf07d288',1,'codata']]],
-  ['reduced_5ftau_5fcompton_5fwavelength_18',['REDUCED_TAU_COMPTON_WAVELENGTH',['../codata_8h.html#a9435e4307b48ac52307a9d2c65904576',1,'codata.h']]],
-  ['rydberg_5fconstant_19',['RYDBERG_CONSTANT',['../codata_8h.html#af602f2ad49bcad45202e84d95a40de1d',1,'codata.h']]],
-  ['rydberg_5fconstant_20',['rydberg_constant',['../namespacecodata.html#a012be5dfad67f303128651f7cda521ac',1,'codata']]],
-  ['rydberg_5fconstant_5ftimes_5fc_5fin_5fhz_21',['rydberg_constant_times_c_in_hz',['../namespacecodata.html#a5106e7347b1f60ebc6d3f12fc75c6995',1,'codata']]],
-  ['rydberg_5fconstant_5ftimes_5fc_5fin_5fhz_22',['RYDBERG_CONSTANT_TIMES_C_IN_HZ',['../codata_8h.html#a633cb36b52211d2bc8ebed89b2faa21c',1,'codata.h']]],
-  ['rydberg_5fconstant_5ftimes_5fhc_5fin_5fev_23',['rydberg_constant_times_hc_in_ev',['../namespacecodata.html#ab38c7ffba24e5bff43d4732cb5cd449c',1,'codata']]],
-  ['rydberg_5fconstant_5ftimes_5fhc_5fin_5fev_24',['RYDBERG_CONSTANT_TIMES_HC_IN_EV',['../codata_8h.html#aabad5e9d9b2ef0aff958337ae04414ec',1,'codata.h']]],
-  ['rydberg_5fconstant_5ftimes_5fhc_5fin_5fj_25',['rydberg_constant_times_hc_in_j',['../namespacecodata.html#ac40eb7e3bf06825f4707da9553ed02a3',1,'codata']]],
-  ['rydberg_5fconstant_5ftimes_5fhc_5fin_5fj_26',['RYDBERG_CONSTANT_TIMES_HC_IN_J',['../codata_8h.html#a77bf56d4b69b8129eb29ceff6cb70318',1,'codata.h']]]
+  ['year_0',['year',['../structcodata__file__props.html#a50208421f977d08838d95f7ebbdca44a',1,'codata_file_props']]]
 ];

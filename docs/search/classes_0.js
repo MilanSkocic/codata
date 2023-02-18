@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['t_5fconstant_0',['t_constant',['../structcodata__base_1_1t__constant.html',1,'codata_base']]]
+  ['codata_5ffile_5fprops_0',['codata_file_props',['../structcodata__file__props.html',1,'']]]
 ];

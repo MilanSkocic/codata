@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['uncertainty_0',['uncertainty',['../structcodata__base_1_1t__constant.html#a3686e5b10895871f3774536086d46293',1,'codata_base::t_constant']]],
-  ['unit_1',['unit',['../structcodata__base_1_1t__constant.html#a5db0a5d6c02c72b1fdab67d82c0bb7f2',1,'codata_base::t_constant']]]
+  ['index_5fheader_5fend_0',['index_header_end',['../structcodata__file__props.html#a57e0d35dbe9b02ea5258898017e28816',1,'codata_file_props']]]
 ];

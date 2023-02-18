@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['install_0',['install',['../md_install.html',1,'']]],
-  ['install_2emd_1',['install.md',['../install_8md.html',1,'']]],
-  ['introduction_2',['Introduction',['../index.html',1,'']]]
+  ['generator_2ec_0',['generator.c',['../generator_8c.html',1,'']]],
+  ['get_5fprops_1',['get_props',['../generator_8c.html#a0345081a3c68e0645eaec56f5d49ee65',1,'generator.c']]]
 ];

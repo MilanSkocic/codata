@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['license_0',['license',['../md_license.html',1,'']]],
-  ['license_2emd_1',['license.md',['../license_8md.html',1,'']]]
+  ['headers_0',['headers',['../namespacecodata__base.html#a0021761013d529601dd064d68f1fe484',1,'codata_base']]]
 ];

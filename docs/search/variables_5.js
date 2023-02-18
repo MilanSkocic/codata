@@ -1,13 +1,6 @@
 var searchData=
 [
-  ['faraday_5fconstant_0',['FARADAY_CONSTANT',['../codata_8h.html#a60f5d51963d467fd63501635edef5a83',1,'codata.h']]],
-  ['faraday_5fconstant_1',['faraday_constant',['../namespacecodata.html#aebbfcfba58feb0ca2415d7fcd178785b',1,'codata']]],
-  ['fermi_5fcoupling_5fconstant_2',['FERMI_COUPLING_CONSTANT',['../codata_8h.html#a00fedfff6b86470db7c47219fb272ba9',1,'codata.h']]],
-  ['fermi_5fcoupling_5fconstant_3',['fermi_coupling_constant',['../namespacecodata.html#a8768bbd0a19fe269ad3a310802e1089c',1,'codata']]],
-  ['fine_5fstructure_5fconstant_4',['FINE_STRUCTURE_CONSTANT',['../codata_8h.html#ad54ba327cb50e3fe78e811b6eed244b7',1,'codata.h']]],
-  ['fine_5fstructure_5fconstant_5',['fine_structure_constant',['../namespacecodata.html#a83ae5e84f8c74b2e6fd8550c3bb30b86',1,'codata']]],
-  ['first_5fradiation_5fconstant_6',['first_radiation_constant',['../namespacecodata.html#a51c2c86a7ae320b92cd9fa023de90728',1,'codata']]],
-  ['first_5fradiation_5fconstant_7',['FIRST_RADIATION_CONSTANT',['../codata_8h.html#a41b7b529e3c43964761aef1ff680801e',1,'codata.h']]],
-  ['first_5fradiation_5fconstant_5ffor_5fspectral_5fradiance_8',['FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE',['../codata_8h.html#af5d01ad293de4e4f4d0549b80623ab2c',1,'codata.h']]],
-  ['first_5fradiation_5fconstant_5ffor_5fspectral_5fradiance_9',['first_radiation_constant_for_spectral_radiance',['../namespacecodata.html#a987b99fd3390599702ffdb61c4bbc41e',1,'codata']]]
+  ['n_0',['n',['../structcodata__file__props.html#aa996b3b95a6f0e65e88e60b2e5983689',1,'codata_file_props']]],
+  ['name_1',['name',['../structcodata__base_1_1t__constant.html#a54e4807379f97635d8dba3b72106ae49',1,'codata_base::t_constant']]],
+  ['names_5flength_2',['NAMES_LENGTH',['../generator_8c.html#aae123124d71d844822c3d5d60b207e71',1,'generator.c']]]
 ];
