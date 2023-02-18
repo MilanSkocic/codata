@@ -1,3 +1,9 @@
+/**
+ * @file config.c
+ * @brief Provides the configuration of the codata library.
+ * 
+ * 
+ */
 #include <stdio.h>
 #include "config.h"
 

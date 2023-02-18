@@ -1,9 +1,12 @@
 /**
  * @file
  * 
- * @brief Source code generator for Fortran module.
- * 
- * @details The raw codata from http://physics.nist.gov/constants are converted into
+ * @brief Generator for Fortran module.
+ * @details The raw data from NIST are parsed line by line
+ * where the columns name, value, uncertainty and unit are formatted to be conform to Fortran.
+ * The formatted (as strings) names, values, uncertainties and units are then inserted in a 
+ * derived type in the generated Fortran module.
+ * The raw codata from http://physics.nist.gov/constants are converted into
  * Fortran code. 
  *   
 */
@@ -11,24 +14,32 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
-#include "config.h"
 
+/**
+ * @brief  Properties of the file for the codata raw data.
+ * 
+ */
 struct codata_file_props{
-    int n;
-    int index_header_end;
-    char codata_path[18];
-    char year[5];
-    char fmodule_path[18];
+    int n; /**< Number of lines.*/
+    int index_header_end; /**< Number of lines for the header.*/
+    char codata_path[18]; /**< Filepath to the raw codata constants.*/
+    char year[5]; /**< Year of release of the codata constants.*/
+    char fmodule_path[18]; /**< Filepath of the generated Fortran module.*/
 
 };
 
-static const size_t LINE_LENGTH = 256;
-static const size_t NAMES_LENGTH = 60;
-static const size_t VALUES_LENGTH = 25;
-static const size_t UNCERTAINTIES_LENGTH = 25;
-static const size_t UNITS_LENGTH = 25;
+static const size_t LINE_LENGTH = 256; /**< Length of line.*/
+static const size_t NAMES_LENGTH = 60; /**< Length of column name*/
+static const size_t VALUES_LENGTH = 25; /**< Length of column value*/
+static const size_t UNCERTAINTIES_LENGTH = 25; /**< Length of column uncertainty*/
+static const size_t UNITS_LENGTH = 25; /**< Length of column unit*/
 
-
+/**
+ * @brief Format names simply by copying them.
+ * 
+ * @param line Line to be parsed.
+ * @param name String where the name will be copied.
+ */
 void format_names(char *line, char *name){
     
     size_t i;
@@ -42,6 +53,12 @@ void format_names(char *line, char *name){
     }
 }
 
+/**
+ * @brief Format values to be conform to Fortran double precision.
+ * 
+ * @param line Line to be parsed.
+ * @param value String where the value will be copied.
+ */
 void format_values(char *line, char *value){
     size_t i;
     size_t j;
@@ -113,6 +130,12 @@ void format_values(char *line, char *value){
     free(temp);
 }
 
+/**
+ * @brief Format the uncertainties to be conform to Fortran double precsion.
+ * 
+ * @param line Line to be parsed.
+ * @param uncertainty String where the uncertainty will be copied.
+ */
 void format_uncertainties(char *line, char *uncertainty){
     size_t i;
     size_t j;
@@ -176,6 +199,12 @@ void format_uncertainties(char *line, char *uncertainty){
     free(temp);
 }
 
+/**
+ * @brief Format the units to be conform to Fortran strings.
+ * 
+ * @param line Line to be parsed.
+ * @param unit String where the unit will be copied.
+ */
 void format_units(char *line, char *unit){
     size_t i;
 
@@ -185,6 +214,12 @@ void format_units(char *line, char *unit){
     }
 }
 
+/**
+ * @brief Fill the buffer with white space.
+ * 
+ * @param buf Line to be cleaned
+ * @param buffer_size Size of the line.
+ */
 void clean_line(char *buf, size_t buffer_size){
 
     size_t i;
@@ -194,6 +229,14 @@ void clean_line(char *buf, size_t buffer_size){
     buf[buffer_size] = '\0';
 }
 
+/**
+ * @brief Read the line from f and copy in  buf.
+ * 
+ * @param f File pointer where the line will be parsed.
+ * @param buf String where the line will be copied.
+ * @param buffer_size Size of the buffer.
+ * @return int Flag if the line is empty(=1) or not empty(=0).
+ */
 int read_line(FILE *f, char *buf, size_t buffer_size){
 
     char c;
@@ -213,6 +256,12 @@ int read_line(FILE *f, char *buf, size_t buffer_size){
     return empty;
 }
 
+/**
+ * @brief Remove all white space from the left.
+ * 
+ * @param buf Line to be left trimmed.
+ * @param buffer_size Size of the line.
+ */
 void ltrim(char *buf, size_t buffer_size){
     size_t i, j, k;
     i = 0;
@@ -238,6 +287,12 @@ void ltrim(char *buf, size_t buffer_size){
 
 }
 
+/**
+ * @brief Remove all white space from the right.
+ * 
+ * @param buf Line to be right trimmed.
+ * @param buffer_size Size of the line.
+ */
 void rtrim(char *buf, size_t buffer_size){
     size_t i;
     for(i=0; i<buffer_size; i++){
@@ -250,6 +305,13 @@ void rtrim(char *buf, size_t buffer_size){
     buf[buffer_size-i+1]= '\0';
 }
 
+/**
+ * @brief Test if the line is a blank line.
+ * 
+ * @param buf Line to be tested.
+ * @param buffer_size Size of the line.
+ * @return int Flag indicating if blank(=1) or not (=0).
+ */
 int is_blank_line(char *buf, size_t buffer_size){
     size_t i;
     size_t j;
@@ -268,6 +330,11 @@ int is_blank_line(char *buf, size_t buffer_size){
     }
 }
 
+/**
+ * @brief Get the properties of the codata file.
+ * 
+ * @param props Properties of the codata file.
+ */
 void get_props(struct codata_file_props *props){
 
     FILE *codata;
@@ -301,11 +368,21 @@ void get_props(struct codata_file_props *props){
 
 }
 
+/**
+ * @brief Print the codata file properties.
+ * 
+ * @param props Properties of the codata file.
+ */
 void print_props(struct codata_file_props *props){
     printf("Header ends at index: %d\n", props->index_header_end);
     printf("Number of constants: %d\n", props->n);
 }
 
+/**
+ * @brief Generate the Fortran file documentation
+ * 
+ * @param fcode File pointer of the Fortran module.
+ */
 void write_file_doc(FILE *fcode){
     char *line = (char *)malloc(sizeof(char)*(LINE_LENGTH+1));
     
@@ -315,11 +392,22 @@ void write_file_doc(FILE *fcode){
     free(line);
 }
 
+/**
+ * @brief Generate the Fortran module documentation. 
+ * 
+ * @param fcode File pointer of the Fortran module.
+ */
 void write_module_doc(FILE *fcode){
     fprintf(fcode, "!> %s\n", "@brief Codata constants");
     fprintf(fcode, "!! %s\n", "@details Autogenerated from NIST table.");
 }
 
+/**
+ * @brief Generate the Fortran module declaration.
+ * 
+ * @param fcode File pointer of the Fortran module.
+ * @param props Properties of the codata file. 
+ */
 void write_module_declaration(FILE *fcode, struct codata_file_props *props){
     fprintf(fcode, "module codata_%s\n", props->year);
     fprintf(fcode, "%s\n", "use iso_fortran_env");
@@ -328,16 +416,13 @@ void write_module_declaration(FILE *fcode, struct codata_file_props *props){
     fprintf(fcode, "%s\n", "");
 }
 
-void write_type_declaration(FILE *fcode){
-    fprintf(fcode, "%s\n", "type :: t_constant");
-    fprintf(fcode, "%s\n", "  character(len=60) :: name");
-    fprintf(fcode, "%s\n", "  real(real64) :: value");
-    fprintf(fcode, "%s\n", "  real(real64) :: uncertainty");
-    fprintf(fcode, "%s\n", "  character(len=25) :: unit");
-    fprintf(fcode, "%s\n", "end type t_constant");
-    fprintf(fcode, "%s\n", "");
-}
-
+/**
+ * @brief Generate all constants in the Fortran module.
+ * 
+ * @param fcodata File pointer to the codata file.
+ * @param fcode File pointer to the Fortran module.
+ * @param props Properties of the codata file.
+ */
 void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *props){
 
     int empty, i, k, imax, N;
@@ -442,10 +527,23 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
 
 }
 
+/**
+ * @brief Generate the end of the Fortran module.
+ * 
+ * @param fcode File pointer to the Fortran module.
+ * @param props Properties of the codata file.
+ */
 void write_module_end(FILE *fcode, struct codata_file_props *props){
     fprintf(fcode, "end module codata_%s\n", props->year);
 }
 
+/**
+ * @brief Generated Fortran module.
+ * 
+ * @param argc Number of arguments
+ * @param argv List of arguments
+ * @return int Exit flag.
+ */
 int main(int argc, char **argv){
 
     FILE *fcodata;
