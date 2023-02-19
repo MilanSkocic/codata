@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['fmodule_5fpath_0',['fmodule_path',['../structcodata__file__props.html#abc962a1743d744da097cd6bb308a053d',1,'codata_file_props']]],
-  ['format_5fnames_1',['format_names',['../generator_8c.html#af0e255c8fadfdb6cf23b1081a604b0ff',1,'generator.c']]],
-  ['format_5funcertainties_2',['format_uncertainties',['../generator_8c.html#ad57cd7bb7b53b50b271cce4d68f28c27',1,'generator.c']]],
-  ['format_5funits_3',['format_units',['../generator_8c.html#a0bb16edcd6cf3ba64647a62c78c5d2db',1,'generator.c']]],
-  ['format_5fvalues_4',['format_values',['../generator_8c.html#a397f1646105a86d785d96b786df15ba9',1,'generator.c']]]
+  ['example_5fin_5fc_2ec_0',['example_in_c.c',['../example__in__c_8c.html',1,'']]],
+  ['example_5fin_5ffortran_1',['example_in_fortran',['../example__in__fortran_8f90.html#a25b607e6d8477f9f5428a647e6bb1140',1,'example_in_fortran.f90']]],
+  ['example_5fin_5ffortran_2ef90_2',['example_in_fortran.f90',['../example__in__fortran_8f90.html',1,'']]]
 ];

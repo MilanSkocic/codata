@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['license_0',['license',['../md_license.html',1,'']]],
-  ['license_2emd_1',['license.md',['../license_8md.html',1,'']]],
-  ['line_5flength_2',['LINE_LENGTH',['../generator_8c.html#a22f9e1e065fa3a8cf7c4452074a89ae1',1,'generator.c']]],
-  ['ltrim_3',['ltrim',['../generator_8c.html#a96c289cfab941d75af9ef7e2ac2f27e7',1,'generator.c']]]
+  ['index_5fheader_5fend_0',['index_header_end',['../structcodata__file__props.html#a57e0d35dbe9b02ea5258898017e28816',1,'codata_file_props']]],
+  ['install_1',['install',['../md_introduction_install.html',1,'']]],
+  ['install_2emd_2',['install.md',['../install_8md.html',1,'']]],
+  ['introduction_3',['Introduction',['../index.html',1,'']]],
+  ['is_5fblank_5fline_4',['is_blank_line',['../generator_8c.html#afbf39d5c46666ec6525497ffc7c2c6ff',1,'generator.c']]]
 ];
