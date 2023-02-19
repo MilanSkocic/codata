@@ -28,7 +28,9 @@ var menudata={children:[
 {text:"Modules",url:"namespaces.html",children:[
 {text:"Modules List",url:"namespaces.html"},
 {text:"Module Members",url:"namespacemembers.html",children:[
-{text:"All",url:"namespacemembers.html"},
+{text:"All",url:"namespacemembers.html",children:[
+{text:"c",url:"namespacemembers.html#index_c"},
+{text:"h",url:"namespacemembers.html#index_h"}]},
 {text:"Functions/Subroutines",url:"namespacemembers_func.html"},
 {text:"Variables",url:"namespacemembers_vars.html"}]}]},
 {text:"Data Types",url:"annotated.html",children:[
