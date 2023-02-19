@@ -10,11 +10,30 @@ module codata_capi
     use codata
     implicit none
 
-    character(len=:), allocatable, target, private :: capi_name
-    character(len=:), pointer, private  :: capi_name_ptr
-    character(len=:), allocatable, target, private :: capi_year
-    character(len=:), pointer, private :: capi_year_ptr
+    !> @brief Allocatable for a Fortran string representing the name of the constant.
+    !! @details It is used for interoperability Fortran and C strings.
+    character(len=:), allocatable, target :: capi_name
+
+    !> @brief Fortran pointer to the string representing the name of the constant.
+    !! @details It is used for interoperability Fortran and C strings.
+    character(len=:), pointer  :: capi_name_ptr
     
+    !> @brief Allocatable for a Fortran string representing the unit of the constant.
+    !! @details It is used for interoperability Fortran and C strings.
+    character(len=:), allocatable, target :: capi_unit
+
+    !> @brief Fortran pointer to the string representing the unit of the constant.
+    !! @details It is used for interoperability Fortran and C strings.
+    character(len=:), pointer  :: capi_unit_ptr
+    
+    !> @brief Allocatable for a Fortran string representing the codata year.
+    !! @details It is used for interoperability Fortran and C strings.
+    character(len=:), allocatable, target :: capi_year
+
+    !> @brief Fortran pointer to the string representing the codata year.
+    !! @details It is used for interoperability Fortran and C strings.
+    character(len=:), pointer :: capi_year_ptr
+
 contains
 
     !> @brief Set the revision year for the codata constants.

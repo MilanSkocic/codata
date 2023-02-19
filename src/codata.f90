@@ -11,7 +11,6 @@ module codata
     use codata_2010
     use codata_2014
     use codata_2018
-    
 
 contains
 
