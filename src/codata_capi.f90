@@ -142,15 +142,15 @@ contains
         integer(c_int), intent(in), value :: index
         type(c_ptr) :: char_p
 
-        if (associated(capi_name_ptr) .eqv. .true.)then
-            capi_name_ptr => null()
+        if (associated(capi_unit_ptr) .eqv. .true.)then
+            capi_unit_ptr => null()
         end if
-        if (allocated(capi_name) .eqv. .true.)then
-            deallocate(capi_name)
+        if (allocated(capi_unit) .eqv. .true.)then
+            deallocate(capi_unit)
         endif
-        capi_name = trim(codata_get_unit_by_index(index+1)) // c_null_char
-        capi_name_ptr => capi_name
-        char_p = c_loc(capi_name_ptr)
+        capi_unit = trim(codata_get_unit_by_index(index+1)) // c_null_char
+        capi_unit_ptr => capi_unit
+        char_p = c_loc(capi_unit_ptr)
     end function
 
     !> @brief Get the value of the constant by name
