@@ -14,6 +14,10 @@ PyDoc_STRVAR(codata_get_year_doc,
 "get_year() --> str \n\n"
 "Get the revision year for the codata constants.");
 
+PyDoc_STRVAR(codata_get_number_constants_doc,
+"get_bumber_constants() --> int \n\n"
+"Get the number of constants.");
+
 PyDoc_STRVAR(codata_print_doc, 
 "print() --> None \n\n"
 "Print all codata constants.");
@@ -56,6 +60,12 @@ static PyObject *_codata_get_year(PyObject *self, PyObject *args)
     char *year; 
     year = codata_capi_get_year();
     return Py_BuildValue("s", year);
+}
+
+static PyObject *_codata_get_number_constants(PyObject *self, PyObject *args){
+    int n;
+    n = codata_capi_get_number_constants();
+    return Py_BuildValue("i", n);
 }
 
 static PyObject *_codata_print(PyObject *self, PyObject *args)
@@ -146,6 +156,7 @@ static PyObject *_codata_constants_as_dict(PyObject *self, PyObject *args){
 static PyMethodDef myMethods[] = {
     {"set_year", (PyCFunction) _codata_set_year, METH_VARARGS|METH_KEYWORDS, codata_set_year_doc },
     {"get_year", (PyCFunction) _codata_get_year, METH_NOARGS, codata_get_year_doc },
+    {"get_number_constants", (PyCFunction) _codata_get_number_constants, METH_NOARGS, codata_get_number_constants_doc},
     {"print", (PyCFunction) _codata_print, METH_NOARGS, codata_print_doc },
     {"get_value", (PyCFunction) _codata_get_value, METH_VARARGS, codata_get_value_doc},
     {"get_uncertainty", (PyCFunction) _codata_get_uncertainty, METH_VARARGS, codata_get_uncertainty_doc},
