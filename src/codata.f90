@@ -26,7 +26,7 @@ contains
             codata_constants => codata_constants_2014
             codata_year = "2014"
         else if (year == "2010") then
-            codata_constants => codata_constants_2014
+            codata_constants => codata_constants_2010
             codata_year = "2010"
         else
             codata_constants => codata_constants_2018
