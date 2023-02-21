@@ -1,10 +1,13 @@
 import pycodata
 
-value = pycodata.get_value("alpha particle mass")
-print(value)
-print(pycodata.get_year())
-pycodata.set_year("2014")
+name = "alpha particle mass"
 
-value = pycodata.get_value("alpha particle mass")
-print(value)
-print(pycodata.get_year())
+for _year in ("XXXX", "2014", "2010"):
+    pycodata.set_year(_year)
+    value = pycodata.get_value(name)
+    uncertainty = pycodata.get_uncertainty(name)
+    unit = pycodata.get_unit(name)
+    year = pycodata.get_year()
+
+    print(f"{year} - {name} - {value} +/- {uncertainty}, unit")
+
