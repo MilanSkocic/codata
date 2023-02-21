@@ -47,7 +47,7 @@ int main(int argc, char **argv){
     codata_capi_set_year(year, 4);
     strcpy(name, "alpha particle mass");
     value = codata_capi_get_value(name, strlen(name)); 
-    ref = 6.644657230e-27;
+    ref = 6.64465675e-27;
     precision = 37;
     printf("value=%+23.16e / ref=%+23.16e / precision=%d\n", value, ref, precision);
     if (roundn(value, precision) != roundn(ref, precision)){
