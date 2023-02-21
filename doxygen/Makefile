@@ -11,6 +11,5 @@ install.md: ../INSTALL.txt
 license.md: ../LICENSE.txt
 	cp $< introduction/$@
 
-requirements.md: ../REQUIREMENTS.TXT
+requirements.md: ../REQUIREMENTS.txt
 	cp $< introduction/$@
-
