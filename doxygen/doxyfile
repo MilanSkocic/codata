@@ -910,7 +910,6 @@ WARN_LOGFILE           =
 
 INPUT                  = ../ \
                          ../src/ \
-                         ../examples \
                          ./ \
                          ./releases/ \
                          ./introduction/
