@@ -26,3 +26,9 @@ Cmake is necessary for compiling and instaling the library.
 # Install
     
     cmake --install .
+
+
+# Dependencies
+
+On windows when compiled with Intel Fortran compiler, 
+the [Intel Fortran redistributable](https://www.intel.com/content/www/us/en/developer/articles/tool/compilers-redistributable-libraries-by-version.html) must be installed. 
