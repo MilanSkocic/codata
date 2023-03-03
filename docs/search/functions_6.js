@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_155',['main',['../generator_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;generator.c'],['../example__in__c_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;example_in_c.c']]]
+  ['print_5fprops_153',['print_props',['../generator_8c.html#a7b4cf7f96c0c4f4e51e7bcc33c1bce8a',1,'generator.c']]]
 ];

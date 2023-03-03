@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5fblank_5fline_153',['is_blank_line',['../generator_8c.html#afbf39d5c46666ec6525497ffc7c2c6ff',1,'generator.c']]]
+  ['ltrim_151',['ltrim',['../generator_8c.html#a96c289cfab941d75af9ef7e2ac2f27e7',1,'generator.c']]]
 ];
