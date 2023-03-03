@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_NAME "codata")
 
-project(${PROJECT_NAME} VERSION 0.1.0 LANGUAGES "C" "Fortran" DESCRIPTION "Codata from NIST.")
+project(${PROJECT_NAME} VERSION 0.2.1 LANGUAGES "C" "Fortran" DESCRIPTION "Codata from NIST.")
 configure_file("./src/config.h.in" "./src/config.h")
 
 # GNU / AppleClang
