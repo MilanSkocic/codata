@@ -8,411 +8,412 @@ module codata_2010
 use iso_fortran_env
 use codata_base
 implicit none
+private
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_10 = [&
-  t_constant("{220} lattice spacing of silicon", 192.0155714d-12, 0.0000032d-12, "m") ,&
-  t_constant("alpha particle-electron mass ratio", 7294.2995361d0, 0.0000029d0, "") ,&
-  t_constant("alpha particle mass", 6.64465675d-27, 0.00000029d-27, "kg") ,&
-  t_constant("alpha particle mass energy equivalent", 5.97191967d-10, 0.00000026d-10, "J") ,&
-  t_constant("alpha particle mass energy equivalent in MeV", 3727.379240d0, 0.000082d0, "MeV") ,&
-  t_constant("alpha particle mass in u", 4.001506179125d0, 0.000000000062d0, "u") ,&
-  t_constant("alpha particle molar mass", 4.001506179125d-3, 0.000000000062d-3, "kg mol^-1") ,&
-  t_constant("alpha particle-proton mass ratio", 3.97259968933d0, 0.00000000036d0, "") ,&
-  t_constant("Angstrom star", 1.00001495d-10, 0.00000090d-10, "m") ,&
-  t_constant("atomic mass constant", 1.660538921d-27, 0.000000073d-27, "kg") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_10 = [&
+  codata_t_constant("{220} lattice spacing of silicon", 192.0155714d-12, 0.0000032d-12, "m") ,&
+  codata_t_constant("alpha particle-electron mass ratio", 7294.2995361d0, 0.0000029d0, "") ,&
+  codata_t_constant("alpha particle mass", 6.64465675d-27, 0.00000029d-27, "kg") ,&
+  codata_t_constant("alpha particle mass energy equivalent", 5.97191967d-10, 0.00000026d-10, "J") ,&
+  codata_t_constant("alpha particle mass energy equivalent in MeV", 3727.379240d0, 0.000082d0, "MeV") ,&
+  codata_t_constant("alpha particle mass in u", 4.001506179125d0, 0.000000000062d0, "u") ,&
+  codata_t_constant("alpha particle molar mass", 4.001506179125d-3, 0.000000000062d-3, "kg mol^-1") ,&
+  codata_t_constant("alpha particle-proton mass ratio", 3.97259968933d0, 0.00000000036d0, "") ,&
+  codata_t_constant("Angstrom star", 1.00001495d-10, 0.00000090d-10, "m") ,&
+  codata_t_constant("atomic mass constant", 1.660538921d-27, 0.000000073d-27, "kg") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_20 = [&
-  t_constant("atomic mass constant energy equivalent", 1.492417954d-10, 0.000000066d-10, "J") ,&
-  t_constant("atomic mass constant energy equivalent in MeV", 931.494061d0, 0.000021d0, "MeV") ,&
-  t_constant("atomic mass unit-electron volt relationship", 931.494061d6, 0.000021d6, "eV") ,&
-  t_constant("atomic mass unit-hartree relationship", 3.4231776845d7, 0.0000000024d7, "E_h") ,&
-  t_constant("atomic mass unit-hertz relationship", 2.2523427168d23, 0.0000000016d23, "Hz") ,&
-  t_constant("atomic mass unit-inverse meter relationship", 7.5130066042d14, 0.0000000053d14, "m^-1") ,&
-  t_constant("atomic mass unit-joule relationship", 1.492417954d-10, 0.000000066d-10, "J") ,&
-  t_constant("atomic mass unit-kelvin relationship", 1.08095408d13, 0.00000098d13, "K") ,&
-  t_constant("atomic mass unit-kilogram relationship", 1.660538921d-27, 0.000000073d-27, "kg") ,&
-  t_constant("atomic unit of 1st hyperpolarizability", 3.206361449d-53, 0.000000071d-53, "C^3 m^3 J^-2") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_20 = [&
+  codata_t_constant("atomic mass constant energy equivalent", 1.492417954d-10, 0.000000066d-10, "J") ,&
+  codata_t_constant("atomic mass constant energy equivalent in MeV", 931.494061d0, 0.000021d0, "MeV") ,&
+  codata_t_constant("atomic mass unit-electron volt relationship", 931.494061d6, 0.000021d6, "eV") ,&
+  codata_t_constant("atomic mass unit-hartree relationship", 3.4231776845d7, 0.0000000024d7, "E_h") ,&
+  codata_t_constant("atomic mass unit-hertz relationship", 2.2523427168d23, 0.0000000016d23, "Hz") ,&
+  codata_t_constant("atomic mass unit-inverse meter relationship", 7.5130066042d14, 0.0000000053d14, "m^-1") ,&
+  codata_t_constant("atomic mass unit-joule relationship", 1.492417954d-10, 0.000000066d-10, "J") ,&
+  codata_t_constant("atomic mass unit-kelvin relationship", 1.08095408d13, 0.00000098d13, "K") ,&
+  codata_t_constant("atomic mass unit-kilogram relationship", 1.660538921d-27, 0.000000073d-27, "kg") ,&
+  codata_t_constant("atomic unit of 1st hyperpolarizability", 3.206361449d-53, 0.000000071d-53, "C^3 m^3 J^-2") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_30 = [&
-  t_constant("atomic unit of 2nd hyperpolarizability", 6.23538054d-65, 0.00000028d-65, "C^4 m^4 J^-3") ,&
-  t_constant("atomic unit of action", 1.054571726d-34, 0.000000047d-34, "J s") ,&
-  t_constant("atomic unit of charge", 1.602176565d-19, 0.000000035d-19, "C") ,&
-  t_constant("atomic unit of charge density", 1.081202338d12, 0.000000024d12, "C m^-3") ,&
-  t_constant("atomic unit of current", 6.62361795d-3, 0.00000015d-3, "A") ,&
-  t_constant("atomic unit of electric dipole mom", 8.47835326d-30, 0.00000019d-30, "C m") ,&
-  t_constant("atomic unit of electric field", 5.14220652d11, 0.00000011d11, "V m^-1") ,&
-  t_constant("atomic unit of electric field gradient", 9.71736200d21, 0.00000021d21, "V m^-2") ,&
-  t_constant("atomic unit of electric polarizability", 1.6487772754d-41, 0.0000000016d-41, "C^2 m^2 J^-1") ,&
-  t_constant("atomic unit of electric potential", 27.21138505d0, 0.00000060d0, "V") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_30 = [&
+  codata_t_constant("atomic unit of 2nd hyperpolarizability", 6.23538054d-65, 0.00000028d-65, "C^4 m^4 J^-3") ,&
+  codata_t_constant("atomic unit of action", 1.054571726d-34, 0.000000047d-34, "J s") ,&
+  codata_t_constant("atomic unit of charge", 1.602176565d-19, 0.000000035d-19, "C") ,&
+  codata_t_constant("atomic unit of charge density", 1.081202338d12, 0.000000024d12, "C m^-3") ,&
+  codata_t_constant("atomic unit of current", 6.62361795d-3, 0.00000015d-3, "A") ,&
+  codata_t_constant("atomic unit of electric dipole mom", 8.47835326d-30, 0.00000019d-30, "C m") ,&
+  codata_t_constant("atomic unit of electric field", 5.14220652d11, 0.00000011d11, "V m^-1") ,&
+  codata_t_constant("atomic unit of electric field gradient", 9.71736200d21, 0.00000021d21, "V m^-2") ,&
+  codata_t_constant("atomic unit of electric polarizability", 1.6487772754d-41, 0.0000000016d-41, "C^2 m^2 J^-1") ,&
+  codata_t_constant("atomic unit of electric potential", 27.21138505d0, 0.00000060d0, "V") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_40 = [&
-  t_constant("atomic unit of electric quadrupole mom", 4.486551331d-40, 0.000000099d-40, "C m^2") ,&
-  t_constant("atomic unit of energy", 4.35974434d-18, 0.00000019d-18, "J") ,&
-  t_constant("atomic unit of force", 8.23872278d-8, 0.00000036d-8, "N") ,&
-  t_constant("atomic unit of length", 0.52917721092d-10, 0.00000000017d-10, "m") ,&
-  t_constant("atomic unit of mag. dipole mom", 1.854801936d-23, 0.000000041d-23, "J T^-1") ,&
-  t_constant("atomic unit of mag. flux density", 2.350517464d5, 0.000000052d5, "T") ,&
-  t_constant("atomic unit of magnetizability", 7.891036607d-29, 0.000000013d-29, "J T^-2") ,&
-  t_constant("atomic unit of mass", 9.10938291d-31, 0.00000040d-31, "kg") ,&
-  t_constant("atomic unit of mom.um", 1.992851740d-24, 0.000000088d-24, "kg m s^-1") ,&
-  t_constant("atomic unit of permittivity", 1.112650056d-10, 0.0d0, "F m^-1") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_40 = [&
+  codata_t_constant("atomic unit of electric quadrupole mom", 4.486551331d-40, 0.000000099d-40, "C m^2") ,&
+  codata_t_constant("atomic unit of energy", 4.35974434d-18, 0.00000019d-18, "J") ,&
+  codata_t_constant("atomic unit of force", 8.23872278d-8, 0.00000036d-8, "N") ,&
+  codata_t_constant("atomic unit of length", 0.52917721092d-10, 0.00000000017d-10, "m") ,&
+  codata_t_constant("atomic unit of mag. dipole mom", 1.854801936d-23, 0.000000041d-23, "J T^-1") ,&
+  codata_t_constant("atomic unit of mag. flux density", 2.350517464d5, 0.000000052d5, "T") ,&
+  codata_t_constant("atomic unit of magnetizability", 7.891036607d-29, 0.000000013d-29, "J T^-2") ,&
+  codata_t_constant("atomic unit of mass", 9.10938291d-31, 0.00000040d-31, "kg") ,&
+  codata_t_constant("atomic unit of mom.um", 1.992851740d-24, 0.000000088d-24, "kg m s^-1") ,&
+  codata_t_constant("atomic unit of permittivity", 1.112650056d-10, 0.0d0, "F m^-1") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_50 = [&
-  t_constant("atomic unit of time", 2.418884326502d-17, 0.000000000012d-17, "s") ,&
-  t_constant("atomic unit of velocity", 2.18769126379d6, 0.00000000071d6, "m s^-1") ,&
-  t_constant("Avogadro constant", 6.02214129d23, 0.00000027d23, "mol^-1") ,&
-  t_constant("Bohr magneton", 927.400968d-26, 0.000020d-26, "J T^-1") ,&
-  t_constant("Bohr magneton in eV/T", 5.7883818066d-5, 0.0000000038d-5, "eV T^-1") ,&
-  t_constant("Bohr magneton in Hz/T", 13.99624555d9, 0.00000031d9, "Hz T^-1") ,&
-  t_constant("Bohr magneton in inverse meters per tesla", 46.6864498d0, 0.0000010d0, "m^-1 T^-1") ,&
-  t_constant("Bohr magneton in K/T", 0.67171388d0, 0.00000061d0, "K T^-1") ,&
-  t_constant("Bohr radius", 0.52917721092d-10, 0.00000000017d-10, "m") ,&
-  t_constant("Boltzmann constant", 1.3806488d-23, 0.0000013d-23, "J K^-1") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_50 = [&
+  codata_t_constant("atomic unit of time", 2.418884326502d-17, 0.000000000012d-17, "s") ,&
+  codata_t_constant("atomic unit of velocity", 2.18769126379d6, 0.00000000071d6, "m s^-1") ,&
+  codata_t_constant("Avogadro constant", 6.02214129d23, 0.00000027d23, "mol^-1") ,&
+  codata_t_constant("Bohr magneton", 927.400968d-26, 0.000020d-26, "J T^-1") ,&
+  codata_t_constant("Bohr magneton in eV/T", 5.7883818066d-5, 0.0000000038d-5, "eV T^-1") ,&
+  codata_t_constant("Bohr magneton in Hz/T", 13.99624555d9, 0.00000031d9, "Hz T^-1") ,&
+  codata_t_constant("Bohr magneton in inverse meters per tesla", 46.6864498d0, 0.0000010d0, "m^-1 T^-1") ,&
+  codata_t_constant("Bohr magneton in K/T", 0.67171388d0, 0.00000061d0, "K T^-1") ,&
+  codata_t_constant("Bohr radius", 0.52917721092d-10, 0.00000000017d-10, "m") ,&
+  codata_t_constant("Boltzmann constant", 1.3806488d-23, 0.0000013d-23, "J K^-1") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_60 = [&
-  t_constant("Boltzmann constant in eV/K", 8.6173324d-5, 0.0000078d-5, "eV K^-1") ,&
-  t_constant("Boltzmann constant in Hz/K", 2.0836618d10, 0.0000019d10, "Hz K^-1") ,&
-  t_constant("Boltzmann constant in inverse meters per kelvin", 69.503476d0, 0.000063d0, "m^-1 K^-1") ,&
-  t_constant("characteristic impedance of vacuum", 376.730313461d0, 0.0d0, "ohm") ,&
-  t_constant("classical electron radius", 2.8179403267d-15, 0.0000000027d-15, "m") ,&
-  t_constant("Compton wavelength", 2.4263102389d-12, 0.0000000016d-12, "m") ,&
-  t_constant("Compton wavelength over 2 pi", 386.15926800d-15, 0.00000025d-15, "m") ,&
-  t_constant("conductance quantum", 7.7480917346d-5, 0.0000000025d-5, "S") ,&
-  t_constant("conventional value of Josephson constant", 483597.9d9, 0.0d0, "Hz V^-1") ,&
-  t_constant("conventional value of von Klitzing constant", 25812.807d0, 0.0d0, "ohm") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_60 = [&
+  codata_t_constant("Boltzmann constant in eV/K", 8.6173324d-5, 0.0000078d-5, "eV K^-1") ,&
+  codata_t_constant("Boltzmann constant in Hz/K", 2.0836618d10, 0.0000019d10, "Hz K^-1") ,&
+  codata_t_constant("Boltzmann constant in inverse meters per kelvin", 69.503476d0, 0.000063d0, "m^-1 K^-1") ,&
+  codata_t_constant("characteristic impedance of vacuum", 376.730313461d0, 0.0d0, "ohm") ,&
+  codata_t_constant("classical electron radius", 2.8179403267d-15, 0.0000000027d-15, "m") ,&
+  codata_t_constant("Compton wavelength", 2.4263102389d-12, 0.0000000016d-12, "m") ,&
+  codata_t_constant("Compton wavelength over 2 pi", 386.15926800d-15, 0.00000025d-15, "m") ,&
+  codata_t_constant("conductance quantum", 7.7480917346d-5, 0.0000000025d-5, "S") ,&
+  codata_t_constant("conventional value of Josephson constant", 483597.9d9, 0.0d0, "Hz V^-1") ,&
+  codata_t_constant("conventional value of von Klitzing constant", 25812.807d0, 0.0d0, "ohm") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_70 = [&
-  t_constant("Cu x unit", 1.00207697d-13, 0.00000028d-13, "m") ,&
-  t_constant("deuteron-electron mag. mom. ratio", -4.664345537d-4, 0.000000039d-4, "") ,&
-  t_constant("deuteron-electron mass ratio", 3670.4829652d0, 0.0000015d0, "") ,&
-  t_constant("deuteron g factor", 0.8574382308d0, 0.0000000072d0, "") ,&
-  t_constant("deuteron mag. mom", 0.433073489d-26, 0.000000010d-26, "J T^-1") ,&
-  t_constant("deuteron mag. mom. to Bohr magneton ratio", 0.4669754556d-3, 0.0000000039d-3, "") ,&
-  t_constant("deuteron mag. mom. to nuclear magneton ratio", 0.8574382308d0, 0.0000000072d0, "") ,&
-  t_constant("deuteron mass", 3.34358348d-27, 0.00000015d-27, "kg") ,&
-  t_constant("deuteron mass energy equivalent", 3.00506297d-10, 0.00000013d-10, "J") ,&
-  t_constant("deuteron mass energy equivalent in MeV", 1875.612859d0, 0.000041d0, "MeV") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_70 = [&
+  codata_t_constant("Cu x unit", 1.00207697d-13, 0.00000028d-13, "m") ,&
+  codata_t_constant("deuteron-electron mag. mom. ratio", -4.664345537d-4, 0.000000039d-4, "") ,&
+  codata_t_constant("deuteron-electron mass ratio", 3670.4829652d0, 0.0000015d0, "") ,&
+  codata_t_constant("deuteron g factor", 0.8574382308d0, 0.0000000072d0, "") ,&
+  codata_t_constant("deuteron mag. mom", 0.433073489d-26, 0.000000010d-26, "J T^-1") ,&
+  codata_t_constant("deuteron mag. mom. to Bohr magneton ratio", 0.4669754556d-3, 0.0000000039d-3, "") ,&
+  codata_t_constant("deuteron mag. mom. to nuclear magneton ratio", 0.8574382308d0, 0.0000000072d0, "") ,&
+  codata_t_constant("deuteron mass", 3.34358348d-27, 0.00000015d-27, "kg") ,&
+  codata_t_constant("deuteron mass energy equivalent", 3.00506297d-10, 0.00000013d-10, "J") ,&
+  codata_t_constant("deuteron mass energy equivalent in MeV", 1875.612859d0, 0.000041d0, "MeV") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_80 = [&
-  t_constant("deuteron mass in u", 2.013553212712d0, 0.000000000077d0, "u") ,&
-  t_constant("deuteron molar mass", 2.013553212712d-3, 0.000000000077d-3, "kg mol^-1") ,&
-  t_constant("deuteron-neutron mag. mom. ratio", -0.44820652d0, 0.00000011d0, "") ,&
-  t_constant("deuteron-proton mag. mom. ratio", 0.3070122070d0, 0.0000000024d0, "") ,&
-  t_constant("deuteron-proton mass ratio", 1.99900750097d0, 0.00000000018d0, "") ,&
-  t_constant("deuteron rms charge radius", 2.1424d-15, 0.0021d-15, "m") ,&
-  t_constant("electric constant", 8.854187817d-12, 0.0d0, "F m^-1") ,&
-  t_constant("electron charge to mass quotient", -1.758820088d11, 0.000000039d11, "C kg^-1") ,&
-  t_constant("electron-deuteron mag. mom. ratio", -2143.923498d0, 0.000018d0, "") ,&
-  t_constant("electron-deuteron mass ratio", 2.7244371095d-4, 0.0000000011d-4, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_80 = [&
+  codata_t_constant("deuteron mass in u", 2.013553212712d0, 0.000000000077d0, "u") ,&
+  codata_t_constant("deuteron molar mass", 2.013553212712d-3, 0.000000000077d-3, "kg mol^-1") ,&
+  codata_t_constant("deuteron-neutron mag. mom. ratio", -0.44820652d0, 0.00000011d0, "") ,&
+  codata_t_constant("deuteron-proton mag. mom. ratio", 0.3070122070d0, 0.0000000024d0, "") ,&
+  codata_t_constant("deuteron-proton mass ratio", 1.99900750097d0, 0.00000000018d0, "") ,&
+  codata_t_constant("deuteron rms charge radius", 2.1424d-15, 0.0021d-15, "m") ,&
+  codata_t_constant("electric constant", 8.854187817d-12, 0.0d0, "F m^-1") ,&
+  codata_t_constant("electron charge to mass quotient", -1.758820088d11, 0.000000039d11, "C kg^-1") ,&
+  codata_t_constant("electron-deuteron mag. mom. ratio", -2143.923498d0, 0.000018d0, "") ,&
+  codata_t_constant("electron-deuteron mass ratio", 2.7244371095d-4, 0.0000000011d-4, "") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_90 = [&
-  t_constant("electron g factor", -2.00231930436153d0, 0.00000000000053d0, "") ,&
-  t_constant("electron gyromag. ratio", 1.760859708d11, 0.000000039d11, "s^-1 T^-1") ,&
-  t_constant("electron gyromag. ratio over 2 pi", 28024.95266d0, 0.00062d0, "MHz T^-1") ,&
-  t_constant("electron-helion mass ratio", 1.8195430761d-4, 0.0000000017d-4, "") ,&
-  t_constant("electron mag. mom", -928.476430d-26, 0.000021d-26, "J T^-1") ,&
-  t_constant("electron mag. mom. anomaly", 1.15965218076d-3, 0.00000000027d-3, "") ,&
-  t_constant("electron mag. mom. to Bohr magneton ratio", -1.00115965218076d0, 0.00000000000027d0, "") ,&
-  t_constant("electron mag. mom. to nuclear magneton ratio", -1838.28197090d0, 0.00000075d0, "") ,&
-  t_constant("electron mass", 9.10938291d-31, 0.00000040d-31, "kg") ,&
-  t_constant("electron mass energy equivalent", 8.18710506d-14, 0.00000036d-14, "J") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_90 = [&
+  codata_t_constant("electron g factor", -2.00231930436153d0, 0.00000000000053d0, "") ,&
+  codata_t_constant("electron gyromag. ratio", 1.760859708d11, 0.000000039d11, "s^-1 T^-1") ,&
+  codata_t_constant("electron gyromag. ratio over 2 pi", 28024.95266d0, 0.00062d0, "MHz T^-1") ,&
+  codata_t_constant("electron-helion mass ratio", 1.8195430761d-4, 0.0000000017d-4, "") ,&
+  codata_t_constant("electron mag. mom", -928.476430d-26, 0.000021d-26, "J T^-1") ,&
+  codata_t_constant("electron mag. mom. anomaly", 1.15965218076d-3, 0.00000000027d-3, "") ,&
+  codata_t_constant("electron mag. mom. to Bohr magneton ratio", -1.00115965218076d0, 0.00000000000027d0, "") ,&
+  codata_t_constant("electron mag. mom. to nuclear magneton ratio", -1838.28197090d0, 0.00000075d0, "") ,&
+  codata_t_constant("electron mass", 9.10938291d-31, 0.00000040d-31, "kg") ,&
+  codata_t_constant("electron mass energy equivalent", 8.18710506d-14, 0.00000036d-14, "J") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_100 = [&
-  t_constant("electron mass energy equivalent in MeV", 0.510998928d0, 0.000000011d0, "MeV") ,&
-  t_constant("electron mass in u", 5.4857990946d-4, 0.0000000022d-4, "u") ,&
-  t_constant("electron molar mass", 5.4857990946d-7, 0.0000000022d-7, "kg mol^-1") ,&
-  t_constant("electron-muon mag. mom. ratio", 206.7669896d0, 0.0000052d0, "") ,&
-  t_constant("electron-muon mass ratio", 4.83633166d-3, 0.00000012d-3, "") ,&
-  t_constant("electron-neutron mag. mom. ratio", 960.92050d0, 0.00023d0, "") ,&
-  t_constant("electron-neutron mass ratio", 5.4386734461d-4, 0.0000000032d-4, "") ,&
-  t_constant("electron-proton mag. mom. ratio", -658.2106848d0, 0.0000054d0, "") ,&
-  t_constant("electron-proton mass ratio", 5.4461702178d-4, 0.0000000022d-4, "") ,&
-  t_constant("electron-tau mass ratio", 2.87592d-4, 0.00026d-4, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_100 = [&
+  codata_t_constant("electron mass energy equivalent in MeV", 0.510998928d0, 0.000000011d0, "MeV") ,&
+  codata_t_constant("electron mass in u", 5.4857990946d-4, 0.0000000022d-4, "u") ,&
+  codata_t_constant("electron molar mass", 5.4857990946d-7, 0.0000000022d-7, "kg mol^-1") ,&
+  codata_t_constant("electron-muon mag. mom. ratio", 206.7669896d0, 0.0000052d0, "") ,&
+  codata_t_constant("electron-muon mass ratio", 4.83633166d-3, 0.00000012d-3, "") ,&
+  codata_t_constant("electron-neutron mag. mom. ratio", 960.92050d0, 0.00023d0, "") ,&
+  codata_t_constant("electron-neutron mass ratio", 5.4386734461d-4, 0.0000000032d-4, "") ,&
+  codata_t_constant("electron-proton mag. mom. ratio", -658.2106848d0, 0.0000054d0, "") ,&
+  codata_t_constant("electron-proton mass ratio", 5.4461702178d-4, 0.0000000022d-4, "") ,&
+  codata_t_constant("electron-tau mass ratio", 2.87592d-4, 0.00026d-4, "") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_110 = [&
-  t_constant("electron to alpha particle mass ratio", 1.37093355578d-4, 0.00000000055d-4, "") ,&
-  t_constant("electron to shielded helion mag. mom. ratio", 864.058257d0, 0.000010d0, "") ,&
-  t_constant("electron to shielded proton mag. mom. ratio", -658.2275971d0, 0.0000072d0, "") ,&
-  t_constant("electron-triton mass ratio", 1.8192000653d-4, 0.0000000017d-4, "") ,&
-  t_constant("electron volt", 1.602176565d-19, 0.000000035d-19, "J") ,&
-  t_constant("electron volt-atomic mass unit relationship", 1.073544150d-9, 0.000000024d-9, "u") ,&
-  t_constant("electron volt-hartree relationship", 3.674932379d-2, 0.000000081d-2, "E_h") ,&
-  t_constant("electron volt-hertz relationship", 2.417989348d14, 0.000000053d14, "Hz") ,&
-  t_constant("electron volt-inverse meter relationship", 8.06554429d5, 0.00000018d5, "m^-1") ,&
-  t_constant("electron volt-joule relationship", 1.602176565d-19, 0.000000035d-19, "J") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_110 = [&
+  codata_t_constant("electron to alpha particle mass ratio", 1.37093355578d-4, 0.00000000055d-4, "") ,&
+  codata_t_constant("electron to shielded helion mag. mom. ratio", 864.058257d0, 0.000010d0, "") ,&
+  codata_t_constant("electron to shielded proton mag. mom. ratio", -658.2275971d0, 0.0000072d0, "") ,&
+  codata_t_constant("electron-triton mass ratio", 1.8192000653d-4, 0.0000000017d-4, "") ,&
+  codata_t_constant("electron volt", 1.602176565d-19, 0.000000035d-19, "J") ,&
+  codata_t_constant("electron volt-atomic mass unit relationship", 1.073544150d-9, 0.000000024d-9, "u") ,&
+  codata_t_constant("electron volt-hartree relationship", 3.674932379d-2, 0.000000081d-2, "E_h") ,&
+  codata_t_constant("electron volt-hertz relationship", 2.417989348d14, 0.000000053d14, "Hz") ,&
+  codata_t_constant("electron volt-inverse meter relationship", 8.06554429d5, 0.00000018d5, "m^-1") ,&
+  codata_t_constant("electron volt-joule relationship", 1.602176565d-19, 0.000000035d-19, "J") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_120 = [&
-  t_constant("electron volt-kelvin relationship", 1.1604519d4, 0.0000011d4, "K") ,&
-  t_constant("electron volt-kilogram relationship", 1.782661845d-36, 0.000000039d-36, "kg") ,&
-  t_constant("elementary charge", 1.602176565d-19, 0.000000035d-19, "C") ,&
-  t_constant("elementary charge over h", 2.417989348d14, 0.000000053d14, "A J^-1") ,&
-  t_constant("Faraday constant", 96485.3365d0, 0.0021d0, "C mol^-1") ,&
-  t_constant("Faraday constant for conventional electric current", 96485.3321d0, 0.0043d0, "C_90 mol^-1") ,&
-  t_constant("Fermi coupling constant", 1.166364d-5, 0.000005d-5, "GeV^-2") ,&
-  t_constant("fine-structure constant", 7.2973525698d-3, 0.0000000024d-3, "") ,&
-  t_constant("first radiation constant", 3.74177153d-16, 0.00000017d-16, "W m^2") ,&
-  t_constant("first radiation constant for spectral radiance", 1.191042869d-16, 0.000000053d-16, "W m^2 sr^-1") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_120 = [&
+  codata_t_constant("electron volt-kelvin relationship", 1.1604519d4, 0.0000011d4, "K") ,&
+  codata_t_constant("electron volt-kilogram relationship", 1.782661845d-36, 0.000000039d-36, "kg") ,&
+  codata_t_constant("elementary charge", 1.602176565d-19, 0.000000035d-19, "C") ,&
+  codata_t_constant("elementary charge over h", 2.417989348d14, 0.000000053d14, "A J^-1") ,&
+  codata_t_constant("Faraday constant", 96485.3365d0, 0.0021d0, "C mol^-1") ,&
+  codata_t_constant("Faraday constant for conventional electric current", 96485.3321d0, 0.0043d0, "C_90 mol^-1") ,&
+  codata_t_constant("Fermi coupling constant", 1.166364d-5, 0.000005d-5, "GeV^-2") ,&
+  codata_t_constant("fine-structure constant", 7.2973525698d-3, 0.0000000024d-3, "") ,&
+  codata_t_constant("first radiation constant", 3.74177153d-16, 0.00000017d-16, "W m^2") ,&
+  codata_t_constant("first radiation constant for spectral radiance", 1.191042869d-16, 0.000000053d-16, "W m^2 sr^-1") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_130 = [&
-  t_constant("hartree-atomic mass unit relationship", 2.9212623246d-8, 0.0000000021d-8, "u") ,&
-  t_constant("hartree-electron volt relationship", 27.21138505d0, 0.00000060d0, "eV") ,&
-  t_constant("Hartree energy", 4.35974434d-18, 0.00000019d-18, "J") ,&
-  t_constant("Hartree energy in eV", 27.21138505d0, 0.00000060d0, "eV") ,&
-  t_constant("hartree-hertz relationship", 6.579683920729d15, 0.000000000033d15, "Hz") ,&
-  t_constant("hartree-inverse meter relationship", 2.194746313708d7, 0.000000000011d7, "m^-1") ,&
-  t_constant("hartree-joule relationship", 4.35974434d-18, 0.00000019d-18, "J") ,&
-  t_constant("hartree-kelvin relationship", 3.1577504d5, 0.0000029d5, "K") ,&
-  t_constant("hartree-kilogram relationship", 4.85086979d-35, 0.00000021d-35, "kg") ,&
-  t_constant("helion-electron mass ratio", 5495.8852754d0, 0.0000050d0, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_130 = [&
+  codata_t_constant("hartree-atomic mass unit relationship", 2.9212623246d-8, 0.0000000021d-8, "u") ,&
+  codata_t_constant("hartree-electron volt relationship", 27.21138505d0, 0.00000060d0, "eV") ,&
+  codata_t_constant("Hartree energy", 4.35974434d-18, 0.00000019d-18, "J") ,&
+  codata_t_constant("Hartree energy in eV", 27.21138505d0, 0.00000060d0, "eV") ,&
+  codata_t_constant("hartree-hertz relationship", 6.579683920729d15, 0.000000000033d15, "Hz") ,&
+  codata_t_constant("hartree-inverse meter relationship", 2.194746313708d7, 0.000000000011d7, "m^-1") ,&
+  codata_t_constant("hartree-joule relationship", 4.35974434d-18, 0.00000019d-18, "J") ,&
+  codata_t_constant("hartree-kelvin relationship", 3.1577504d5, 0.0000029d5, "K") ,&
+  codata_t_constant("hartree-kilogram relationship", 4.85086979d-35, 0.00000021d-35, "kg") ,&
+  codata_t_constant("helion-electron mass ratio", 5495.8852754d0, 0.0000050d0, "") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_140 = [&
-  t_constant("helion g factor", -4.255250613d0, 0.000000050d0, "") ,&
-  t_constant("helion mag. mom", -1.074617486d-26, 0.000000027d-26, "J T^-1") ,&
-  t_constant("helion mag. mom. to Bohr magneton ratio", -1.158740958d-3, 0.000000014d-3, "") ,&
-  t_constant("helion mag. mom. to nuclear magneton ratio", -2.127625306d0, 0.000000025d0, "") ,&
-  t_constant("helion mass", 5.00641234d-27, 0.00000022d-27, "kg") ,&
-  t_constant("helion mass energy equivalent", 4.49953902d-10, 0.00000020d-10, "J") ,&
-  t_constant("helion mass energy equivalent in MeV", 2808.391482d0, 0.000062d0, "MeV") ,&
-  t_constant("helion mass in u", 3.0149322468d0, 0.0000000025d0, "u") ,&
-  t_constant("helion molar mass", 3.0149322468d-3, 0.0000000025d-3, "kg mol^-1") ,&
-  t_constant("helion-proton mass ratio", 2.9931526707d0, 0.0000000025d0, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_140 = [&
+  codata_t_constant("helion g factor", -4.255250613d0, 0.000000050d0, "") ,&
+  codata_t_constant("helion mag. mom", -1.074617486d-26, 0.000000027d-26, "J T^-1") ,&
+  codata_t_constant("helion mag. mom. to Bohr magneton ratio", -1.158740958d-3, 0.000000014d-3, "") ,&
+  codata_t_constant("helion mag. mom. to nuclear magneton ratio", -2.127625306d0, 0.000000025d0, "") ,&
+  codata_t_constant("helion mass", 5.00641234d-27, 0.00000022d-27, "kg") ,&
+  codata_t_constant("helion mass energy equivalent", 4.49953902d-10, 0.00000020d-10, "J") ,&
+  codata_t_constant("helion mass energy equivalent in MeV", 2808.391482d0, 0.000062d0, "MeV") ,&
+  codata_t_constant("helion mass in u", 3.0149322468d0, 0.0000000025d0, "u") ,&
+  codata_t_constant("helion molar mass", 3.0149322468d-3, 0.0000000025d-3, "kg mol^-1") ,&
+  codata_t_constant("helion-proton mass ratio", 2.9931526707d0, 0.0000000025d0, "") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_150 = [&
-  t_constant("hertz-atomic mass unit relationship", 4.4398216689d-24, 0.0000000031d-24, "u") ,&
-  t_constant("hertz-electron volt relationship", 4.135667516d-15, 0.000000091d-15, "eV") ,&
-  t_constant("hertz-hartree relationship", 1.5198298460045d-16, 0.0000000000076d-16, "E_h") ,&
-  t_constant("hertz-inverse meter relationship", 3.335640951d-9, 0.0d0, "m^-1") ,&
-  t_constant("hertz-joule relationship", 6.62606957d-34, 0.00000029d-34, "J") ,&
-  t_constant("hertz-kelvin relationship", 4.7992434d-11, 0.0000044d-11, "K") ,&
-  t_constant("hertz-kilogram relationship", 7.37249668d-51, 0.00000033d-51, "kg") ,&
-  t_constant("inverse fine-structure constant", 137.035999074d0, 0.000000044d0, "") ,&
-  t_constant("inverse meter-atomic mass unit relationship", 1.33102505120d-15, 0.00000000094d-15, "u") ,&
-  t_constant("inverse meter-electron volt relationship", 1.239841930d-6, 0.000000027d-6, "eV") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_150 = [&
+  codata_t_constant("hertz-atomic mass unit relationship", 4.4398216689d-24, 0.0000000031d-24, "u") ,&
+  codata_t_constant("hertz-electron volt relationship", 4.135667516d-15, 0.000000091d-15, "eV") ,&
+  codata_t_constant("hertz-hartree relationship", 1.5198298460045d-16, 0.0000000000076d-16, "E_h") ,&
+  codata_t_constant("hertz-inverse meter relationship", 3.335640951d-9, 0.0d0, "m^-1") ,&
+  codata_t_constant("hertz-joule relationship", 6.62606957d-34, 0.00000029d-34, "J") ,&
+  codata_t_constant("hertz-kelvin relationship", 4.7992434d-11, 0.0000044d-11, "K") ,&
+  codata_t_constant("hertz-kilogram relationship", 7.37249668d-51, 0.00000033d-51, "kg") ,&
+  codata_t_constant("inverse fine-structure constant", 137.035999074d0, 0.000000044d0, "") ,&
+  codata_t_constant("inverse meter-atomic mass unit relationship", 1.33102505120d-15, 0.00000000094d-15, "u") ,&
+  codata_t_constant("inverse meter-electron volt relationship", 1.239841930d-6, 0.000000027d-6, "eV") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_160 = [&
-  t_constant("inverse meter-hartree relationship", 4.556335252755d-8, 0.000000000023d-8, "E_h") ,&
-  t_constant("inverse meter-hertz relationship", 299792458.0d0, 0.0d0, "Hz") ,&
-  t_constant("inverse meter-joule relationship", 1.986445684d-25, 0.000000088d-25, "J") ,&
-  t_constant("inverse meter-kelvin relationship", 1.4387770d-2, 0.0000013d-2, "K") ,&
-  t_constant("inverse meter-kilogram relationship", 2.210218902d-42, 0.000000098d-42, "kg") ,&
-  t_constant("inverse of conductance quantum", 12906.4037217d0, 0.0000042d0, "ohm") ,&
-  t_constant("Josephson constant", 483597.870d9, 0.011d9, "Hz V^-1") ,&
-  t_constant("joule-atomic mass unit relationship", 6.70053585d9, 0.00000030d9, "u") ,&
-  t_constant("joule-electron volt relationship", 6.24150934d18, 0.00000014d18, "eV") ,&
-  t_constant("joule-hartree relationship", 2.29371248d17, 0.00000010d17, "E_h") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_160 = [&
+  codata_t_constant("inverse meter-hartree relationship", 4.556335252755d-8, 0.000000000023d-8, "E_h") ,&
+  codata_t_constant("inverse meter-hertz relationship", 299792458.0d0, 0.0d0, "Hz") ,&
+  codata_t_constant("inverse meter-joule relationship", 1.986445684d-25, 0.000000088d-25, "J") ,&
+  codata_t_constant("inverse meter-kelvin relationship", 1.4387770d-2, 0.0000013d-2, "K") ,&
+  codata_t_constant("inverse meter-kilogram relationship", 2.210218902d-42, 0.000000098d-42, "kg") ,&
+  codata_t_constant("inverse of conductance quantum", 12906.4037217d0, 0.0000042d0, "ohm") ,&
+  codata_t_constant("Josephson constant", 483597.870d9, 0.011d9, "Hz V^-1") ,&
+  codata_t_constant("joule-atomic mass unit relationship", 6.70053585d9, 0.00000030d9, "u") ,&
+  codata_t_constant("joule-electron volt relationship", 6.24150934d18, 0.00000014d18, "eV") ,&
+  codata_t_constant("joule-hartree relationship", 2.29371248d17, 0.00000010d17, "E_h") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_170 = [&
-  t_constant("joule-hertz relationship", 1.509190311d33, 0.000000067d33, "Hz") ,&
-  t_constant("joule-inverse meter relationship", 5.03411701d24, 0.00000022d24, "m^-1") ,&
-  t_constant("joule-kelvin relationship", 7.2429716d22, 0.0000066d22, "K") ,&
-  t_constant("joule-kilogram relationship", 1.112650056d-17, 0.0d0, "kg") ,&
-  t_constant("kelvin-atomic mass unit relationship", 9.2510868d-14, 0.0000084d-14, "u") ,&
-  t_constant("kelvin-electron volt relationship", 8.6173324d-5, 0.0000078d-5, "eV") ,&
-  t_constant("kelvin-hartree relationship", 3.1668114d-6, 0.0000029d-6, "E_h") ,&
-  t_constant("kelvin-hertz relationship", 2.0836618d10, 0.0000019d10, "Hz") ,&
-  t_constant("kelvin-inverse meter relationship", 69.503476d0, 0.000063d0, "m^-1") ,&
-  t_constant("kelvin-joule relationship", 1.3806488d-23, 0.0000013d-23, "J") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_170 = [&
+  codata_t_constant("joule-hertz relationship", 1.509190311d33, 0.000000067d33, "Hz") ,&
+  codata_t_constant("joule-inverse meter relationship", 5.03411701d24, 0.00000022d24, "m^-1") ,&
+  codata_t_constant("joule-kelvin relationship", 7.2429716d22, 0.0000066d22, "K") ,&
+  codata_t_constant("joule-kilogram relationship", 1.112650056d-17, 0.0d0, "kg") ,&
+  codata_t_constant("kelvin-atomic mass unit relationship", 9.2510868d-14, 0.0000084d-14, "u") ,&
+  codata_t_constant("kelvin-electron volt relationship", 8.6173324d-5, 0.0000078d-5, "eV") ,&
+  codata_t_constant("kelvin-hartree relationship", 3.1668114d-6, 0.0000029d-6, "E_h") ,&
+  codata_t_constant("kelvin-hertz relationship", 2.0836618d10, 0.0000019d10, "Hz") ,&
+  codata_t_constant("kelvin-inverse meter relationship", 69.503476d0, 0.000063d0, "m^-1") ,&
+  codata_t_constant("kelvin-joule relationship", 1.3806488d-23, 0.0000013d-23, "J") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_180 = [&
-  t_constant("kelvin-kilogram relationship", 1.5361790d-40, 0.0000014d-40, "kg") ,&
-  t_constant("kilogram-atomic mass unit relationship", 6.02214129d26, 0.00000027d26, "u") ,&
-  t_constant("kilogram-electron volt relationship", 5.60958885d35, 0.00000012d35, "eV") ,&
-  t_constant("kilogram-hartree relationship", 2.061485968d34, 0.000000091d34, "E_h") ,&
-  t_constant("kilogram-hertz relationship", 1.356392608d50, 0.000000060d50, "Hz") ,&
-  t_constant("kilogram-inverse meter relationship", 4.52443873d41, 0.00000020d41, "m^-1") ,&
-  t_constant("kilogram-joule relationship", 8.987551787d16, 0.0d0, "J") ,&
-  t_constant("kilogram-kelvin relationship", 6.5096582d39, 0.0000059d39, "K") ,&
-  t_constant("lattice parameter of silicon", 543.1020504d-12, 0.0000089d-12, "m") ,&
-  t_constant("Loschmidt constant (273.15 K, 100 kPa", 2.6516462d25, 0.0000024d25, "m^-3") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_180 = [&
+  codata_t_constant("kelvin-kilogram relationship", 1.5361790d-40, 0.0000014d-40, "kg") ,&
+  codata_t_constant("kilogram-atomic mass unit relationship", 6.02214129d26, 0.00000027d26, "u") ,&
+  codata_t_constant("kilogram-electron volt relationship", 5.60958885d35, 0.00000012d35, "eV") ,&
+  codata_t_constant("kilogram-hartree relationship", 2.061485968d34, 0.000000091d34, "E_h") ,&
+  codata_t_constant("kilogram-hertz relationship", 1.356392608d50, 0.000000060d50, "Hz") ,&
+  codata_t_constant("kilogram-inverse meter relationship", 4.52443873d41, 0.00000020d41, "m^-1") ,&
+  codata_t_constant("kilogram-joule relationship", 8.987551787d16, 0.0d0, "J") ,&
+  codata_t_constant("kilogram-kelvin relationship", 6.5096582d39, 0.0000059d39, "K") ,&
+  codata_t_constant("lattice parameter of silicon", 543.1020504d-12, 0.0000089d-12, "m") ,&
+  codata_t_constant("Loschmidt constant (273.15 K, 100 kPa", 2.6516462d25, 0.0000024d25, "m^-3") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_190 = [&
-  t_constant("Loschmidt constant (273.15 K, 101.325 kPa", 2.6867805d25, 0.0000024d25, "m^-3") ,&
-  t_constant("mag. constant", 12.566370614d-7, 0.0d0, "N A^-2") ,&
-  t_constant("mag. flux quantum", 2.067833758d-15, 0.000000046d-15, "Wb") ,&
-  t_constant("molar gas constant", 8.3144621d0, 0.0000075d0, "J mol^-1 K^-1") ,&
-  t_constant("molar mass constant", 1d-3, 0.0d0, "kg mol^-1") ,&
-  t_constant("molar mass of carbon-12", 12d-3, 0.0d0, "kg mol^-1") ,&
-  t_constant("molar Planck constant", 3.9903127176d-10, 0.0000000028d-10, "J s mol^-1") ,&
-  t_constant("molar Planck constant times c", 0.119626565779d0, 0.000000000084d0, "J m mol^-1") ,&
-  t_constant("molar volume of ideal gas (273.15 K, 100 kPa", 22.710953d-3, 0.000021d-3, "m^3 mol^-1") ,&
-  t_constant("molar volume of ideal gas (273.15 K, 101.325 kPa", 22.413968d-3, 0.000020d-3, "m^3 mol^-1") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_190 = [&
+  codata_t_constant("Loschmidt constant (273.15 K, 101.325 kPa", 2.6867805d25, 0.0000024d25, "m^-3") ,&
+  codata_t_constant("mag. constant", 12.566370614d-7, 0.0d0, "N A^-2") ,&
+  codata_t_constant("mag. flux quantum", 2.067833758d-15, 0.000000046d-15, "Wb") ,&
+  codata_t_constant("molar gas constant", 8.3144621d0, 0.0000075d0, "J mol^-1 K^-1") ,&
+  codata_t_constant("molar mass constant", 1d-3, 0.0d0, "kg mol^-1") ,&
+  codata_t_constant("molar mass of carbon-12", 12d-3, 0.0d0, "kg mol^-1") ,&
+  codata_t_constant("molar Planck constant", 3.9903127176d-10, 0.0000000028d-10, "J s mol^-1") ,&
+  codata_t_constant("molar Planck constant times c", 0.119626565779d0, 0.000000000084d0, "J m mol^-1") ,&
+  codata_t_constant("molar volume of ideal gas (273.15 K, 100 kPa", 22.710953d-3, 0.000021d-3, "m^3 mol^-1") ,&
+  codata_t_constant("molar volume of ideal gas (273.15 K, 101.325 kPa", 22.413968d-3, 0.000020d-3, "m^3 mol^-1") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_200 = [&
-  t_constant("molar volume of silicon", 12.05883301d-6, 0.00000080d-6, "m^3 mol^-1") ,&
-  t_constant("Mo x unit", 1.00209952d-13, 0.00000053d-13, "m") ,&
-  t_constant("muon Compton wavelength", 11.73444103d-15, 0.00000030d-15, "m") ,&
-  t_constant("muon Compton wavelength over 2 pi", 1.867594294d-15, 0.000000047d-15, "m") ,&
-  t_constant("muon-electron mass ratio", 206.7682843d0, 0.0000052d0, "") ,&
-  t_constant("muon g factor", -2.0023318418d0, 0.0000000013d0, "") ,&
-  t_constant("muon mag. mom", -4.49044807d-26, 0.00000015d-26, "J T^-1") ,&
-  t_constant("muon mag. mom. anomaly", 1.16592091d-3, 0.00000063d-3, "") ,&
-  t_constant("muon mag. mom. to Bohr magneton ratio", -4.84197044d-3, 0.00000012d-3, "") ,&
-  t_constant("muon mag. mom. to nuclear magneton ratio", -8.89059697d0, 0.00000022d0, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_200 = [&
+  codata_t_constant("molar volume of silicon", 12.05883301d-6, 0.00000080d-6, "m^3 mol^-1") ,&
+  codata_t_constant("Mo x unit", 1.00209952d-13, 0.00000053d-13, "m") ,&
+  codata_t_constant("muon Compton wavelength", 11.73444103d-15, 0.00000030d-15, "m") ,&
+  codata_t_constant("muon Compton wavelength over 2 pi", 1.867594294d-15, 0.000000047d-15, "m") ,&
+  codata_t_constant("muon-electron mass ratio", 206.7682843d0, 0.0000052d0, "") ,&
+  codata_t_constant("muon g factor", -2.0023318418d0, 0.0000000013d0, "") ,&
+  codata_t_constant("muon mag. mom", -4.49044807d-26, 0.00000015d-26, "J T^-1") ,&
+  codata_t_constant("muon mag. mom. anomaly", 1.16592091d-3, 0.00000063d-3, "") ,&
+  codata_t_constant("muon mag. mom. to Bohr magneton ratio", -4.84197044d-3, 0.00000012d-3, "") ,&
+  codata_t_constant("muon mag. mom. to nuclear magneton ratio", -8.89059697d0, 0.00000022d0, "") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_210 = [&
-  t_constant("muon mass", 1.883531475d-28, 0.000000096d-28, "kg") ,&
-  t_constant("muon mass energy equivalent", 1.692833667d-11, 0.000000086d-11, "J") ,&
-  t_constant("muon mass energy equivalent in MeV", 105.6583715d0, 0.0000035d0, "MeV") ,&
-  t_constant("muon mass in u", 0.1134289267d0, 0.0000000029d0, "u") ,&
-  t_constant("muon molar mass", 0.1134289267d-3, 0.0000000029d-3, "kg mol^-1") ,&
-  t_constant("muon-neutron mass ratio", 0.1124545177d0, 0.0000000028d0, "") ,&
-  t_constant("muon-proton mag. mom. ratio", -3.183345107d0, 0.000000084d0, "") ,&
-  t_constant("muon-proton mass ratio", 0.1126095272d0, 0.0000000028d0, "") ,&
-  t_constant("muon-tau mass ratio", 5.94649d-2, 0.00054d-2, "") ,&
-  t_constant("natural unit of action", 1.054571726d-34, 0.000000047d-34, "J s") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_210 = [&
+  codata_t_constant("muon mass", 1.883531475d-28, 0.000000096d-28, "kg") ,&
+  codata_t_constant("muon mass energy equivalent", 1.692833667d-11, 0.000000086d-11, "J") ,&
+  codata_t_constant("muon mass energy equivalent in MeV", 105.6583715d0, 0.0000035d0, "MeV") ,&
+  codata_t_constant("muon mass in u", 0.1134289267d0, 0.0000000029d0, "u") ,&
+  codata_t_constant("muon molar mass", 0.1134289267d-3, 0.0000000029d-3, "kg mol^-1") ,&
+  codata_t_constant("muon-neutron mass ratio", 0.1124545177d0, 0.0000000028d0, "") ,&
+  codata_t_constant("muon-proton mag. mom. ratio", -3.183345107d0, 0.000000084d0, "") ,&
+  codata_t_constant("muon-proton mass ratio", 0.1126095272d0, 0.0000000028d0, "") ,&
+  codata_t_constant("muon-tau mass ratio", 5.94649d-2, 0.00054d-2, "") ,&
+  codata_t_constant("natural unit of action", 1.054571726d-34, 0.000000047d-34, "J s") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_220 = [&
-  t_constant("natural unit of action in eV s", 6.58211928d-16, 0.00000015d-16, "eV s") ,&
-  t_constant("natural unit of energy", 8.18710506d-14, 0.00000036d-14, "J") ,&
-  t_constant("natural unit of energy in MeV", 0.510998928d0, 0.000000011d0, "MeV") ,&
-  t_constant("natural unit of length", 386.15926800d-15, 0.00000025d-15, "m") ,&
-  t_constant("natural unit of mass", 9.10938291d-31, 0.00000040d-31, "kg") ,&
-  t_constant("natural unit of mom.um", 2.73092429d-22, 0.00000012d-22, "kg m s^-1") ,&
-  t_constant("natural unit of mom.um in MeV/c", 0.510998928d0, 0.000000011d0, "MeV/c") ,&
-  t_constant("natural unit of time", 1.28808866833d-21, 0.00000000083d-21, "s") ,&
-  t_constant("natural unit of velocity", 299792458.0d0, 0.0d0, "m s^-1") ,&
-  t_constant("neutron Compton wavelength", 1.3195909068d-15, 0.0000000011d-15, "m") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_220 = [&
+  codata_t_constant("natural unit of action in eV s", 6.58211928d-16, 0.00000015d-16, "eV s") ,&
+  codata_t_constant("natural unit of energy", 8.18710506d-14, 0.00000036d-14, "J") ,&
+  codata_t_constant("natural unit of energy in MeV", 0.510998928d0, 0.000000011d0, "MeV") ,&
+  codata_t_constant("natural unit of length", 386.15926800d-15, 0.00000025d-15, "m") ,&
+  codata_t_constant("natural unit of mass", 9.10938291d-31, 0.00000040d-31, "kg") ,&
+  codata_t_constant("natural unit of mom.um", 2.73092429d-22, 0.00000012d-22, "kg m s^-1") ,&
+  codata_t_constant("natural unit of mom.um in MeV/c", 0.510998928d0, 0.000000011d0, "MeV/c") ,&
+  codata_t_constant("natural unit of time", 1.28808866833d-21, 0.00000000083d-21, "s") ,&
+  codata_t_constant("natural unit of velocity", 299792458.0d0, 0.0d0, "m s^-1") ,&
+  codata_t_constant("neutron Compton wavelength", 1.3195909068d-15, 0.0000000011d-15, "m") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_230 = [&
-  t_constant("neutron Compton wavelength over 2 pi", 0.21001941568d-15, 0.00000000017d-15, "m") ,&
-  t_constant("neutron-electron mag. mom. ratio", 1.04066882d-3, 0.00000025d-3, "") ,&
-  t_constant("neutron-electron mass ratio", 1838.6836605d0, 0.0000011d0, "") ,&
-  t_constant("neutron g factor", -3.82608545d0, 0.00000090d0, "") ,&
-  t_constant("neutron gyromag. ratio", 1.83247179d8, 0.00000043d8, "s^-1 T^-1") ,&
-  t_constant("neutron gyromag. ratio over 2 pi", 29.1646943d0, 0.0000069d0, "MHz T^-1") ,&
-  t_constant("neutron mag. mom", -0.96623647d-26, 0.00000023d-26, "J T^-1") ,&
-  t_constant("neutron mag. mom. to Bohr magneton ratio", -1.04187563d-3, 0.00000025d-3, "") ,&
-  t_constant("neutron mag. mom. to nuclear magneton ratio", -1.91304272d0, 0.00000045d0, "") ,&
-  t_constant("neutron mass", 1.674927351d-27, 0.000000074d-27, "kg") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_230 = [&
+  codata_t_constant("neutron Compton wavelength over 2 pi", 0.21001941568d-15, 0.00000000017d-15, "m") ,&
+  codata_t_constant("neutron-electron mag. mom. ratio", 1.04066882d-3, 0.00000025d-3, "") ,&
+  codata_t_constant("neutron-electron mass ratio", 1838.6836605d0, 0.0000011d0, "") ,&
+  codata_t_constant("neutron g factor", -3.82608545d0, 0.00000090d0, "") ,&
+  codata_t_constant("neutron gyromag. ratio", 1.83247179d8, 0.00000043d8, "s^-1 T^-1") ,&
+  codata_t_constant("neutron gyromag. ratio over 2 pi", 29.1646943d0, 0.0000069d0, "MHz T^-1") ,&
+  codata_t_constant("neutron mag. mom", -0.96623647d-26, 0.00000023d-26, "J T^-1") ,&
+  codata_t_constant("neutron mag. mom. to Bohr magneton ratio", -1.04187563d-3, 0.00000025d-3, "") ,&
+  codata_t_constant("neutron mag. mom. to nuclear magneton ratio", -1.91304272d0, 0.00000045d0, "") ,&
+  codata_t_constant("neutron mass", 1.674927351d-27, 0.000000074d-27, "kg") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_240 = [&
-  t_constant("neutron mass energy equivalent", 1.505349631d-10, 0.000000066d-10, "J") ,&
-  t_constant("neutron mass energy equivalent in MeV", 939.565379d0, 0.000021d0, "MeV") ,&
-  t_constant("neutron mass in u", 1.00866491600d0, 0.00000000043d0, "u") ,&
-  t_constant("neutron molar mass", 1.00866491600d-3, 0.00000000043d-3, "kg mol^-1") ,&
-  t_constant("neutron-muon mass ratio", 8.89248400d0, 0.00000022d0, "") ,&
-  t_constant("neutron-proton mag. mom. ratio", -0.68497934d0, 0.00000016d0, "") ,&
-  t_constant("neutron-proton mass difference", 2.30557392d-30, 0.00000076d-30, "") ,&
-  t_constant("neutron-proton mass difference energy equivalent", 2.07214650d-13, 0.00000068d-13, "") ,&
-  t_constant("neutron-proton mass difference energy equivalent in MeV", 1.29333217d0, 0.00000042d0, "") ,&
-  t_constant("neutron-proton mass difference in u", 0.00138844919d0, 0.00000000045d0, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_240 = [&
+  codata_t_constant("neutron mass energy equivalent", 1.505349631d-10, 0.000000066d-10, "J") ,&
+  codata_t_constant("neutron mass energy equivalent in MeV", 939.565379d0, 0.000021d0, "MeV") ,&
+  codata_t_constant("neutron mass in u", 1.00866491600d0, 0.00000000043d0, "u") ,&
+  codata_t_constant("neutron molar mass", 1.00866491600d-3, 0.00000000043d-3, "kg mol^-1") ,&
+  codata_t_constant("neutron-muon mass ratio", 8.89248400d0, 0.00000022d0, "") ,&
+  codata_t_constant("neutron-proton mag. mom. ratio", -0.68497934d0, 0.00000016d0, "") ,&
+  codata_t_constant("neutron-proton mass difference", 2.30557392d-30, 0.00000076d-30, "") ,&
+  codata_t_constant("neutron-proton mass difference energy equivalent", 2.07214650d-13, 0.00000068d-13, "") ,&
+  codata_t_constant("neutron-proton mass difference energy equivalent in MeV", 1.29333217d0, 0.00000042d0, "") ,&
+  codata_t_constant("neutron-proton mass difference in u", 0.00138844919d0, 0.00000000045d0, "") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_250 = [&
-  t_constant("neutron-proton mass ratio", 1.00137841917d0, 0.00000000045d0, "") ,&
-  t_constant("neutron-tau mass ratio", 0.528790d0, 0.000048d0, "") ,&
-  t_constant("neutron to shielded proton mag. mom. ratio", -0.68499694d0, 0.00000016d0, "") ,&
-  t_constant("Newtonian constant of gravitation", 6.67384d-11, 0.00080d-11, "m^3 kg^-1 s^-2") ,&
-  t_constant("Newtonian constant of gravitation over h-bar c", 6.70837d-39, 0.00080d-39, "(GeV/c^2)^-2") ,&
-  t_constant("nuclear magneton", 5.05078353d-27, 0.00000011d-27, "J T^-1") ,&
-  t_constant("nuclear magneton in eV/T", 3.1524512605d-8, 0.0000000022d-8, "eV T^-1") ,&
-  t_constant("nuclear magneton in inverse meters per tesla", 2.542623527d-2, 0.000000056d-2, "m^-1 T^-1") ,&
-  t_constant("nuclear magneton in K/T", 3.6582682d-4, 0.0000033d-4, "K T^-1") ,&
-  t_constant("nuclear magneton in MHz/T", 7.62259357d0, 0.00000017d0, "MHz T^-1") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_250 = [&
+  codata_t_constant("neutron-proton mass ratio", 1.00137841917d0, 0.00000000045d0, "") ,&
+  codata_t_constant("neutron-tau mass ratio", 0.528790d0, 0.000048d0, "") ,&
+  codata_t_constant("neutron to shielded proton mag. mom. ratio", -0.68499694d0, 0.00000016d0, "") ,&
+  codata_t_constant("Newtonian constant of gravitation", 6.67384d-11, 0.00080d-11, "m^3 kg^-1 s^-2") ,&
+  codata_t_constant("Newtonian constant of gravitation over h-bar c", 6.70837d-39, 0.00080d-39, "(GeV/c^2)^-2") ,&
+  codata_t_constant("nuclear magneton", 5.05078353d-27, 0.00000011d-27, "J T^-1") ,&
+  codata_t_constant("nuclear magneton in eV/T", 3.1524512605d-8, 0.0000000022d-8, "eV T^-1") ,&
+  codata_t_constant("nuclear magneton in inverse meters per tesla", 2.542623527d-2, 0.000000056d-2, "m^-1 T^-1") ,&
+  codata_t_constant("nuclear magneton in K/T", 3.6582682d-4, 0.0000033d-4, "K T^-1") ,&
+  codata_t_constant("nuclear magneton in MHz/T", 7.62259357d0, 0.00000017d0, "MHz T^-1") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_260 = [&
-  t_constant("Planck constant", 6.62606957d-34, 0.00000029d-34, "J s") ,&
-  t_constant("Planck constant in eV s", 4.135667516d-15, 0.000000091d-15, "eV s") ,&
-  t_constant("Planck constant over 2 pi", 1.054571726d-34, 0.000000047d-34, "J s") ,&
-  t_constant("Planck constant over 2 pi in eV s", 6.58211928d-16, 0.00000015d-16, "eV s") ,&
-  t_constant("Planck constant over 2 pi times c in MeV fm", 197.3269718d0, 0.0000044d0, "MeV fm") ,&
-  t_constant("Planck length", 1.616199d-35, 0.000097d-35, "m") ,&
-  t_constant("Planck mass", 2.17651d-8, 0.00013d-8, "kg") ,&
-  t_constant("Planck mass energy equivalent in GeV", 1.220932d19, 0.000073d19, "GeV") ,&
-  t_constant("Planck temperature", 1.416833d32, 0.000085d32, "K") ,&
-  t_constant("Planck time", 5.39106d-44, 0.00032d-44, "s") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_260 = [&
+  codata_t_constant("Planck constant", 6.62606957d-34, 0.00000029d-34, "J s") ,&
+  codata_t_constant("Planck constant in eV s", 4.135667516d-15, 0.000000091d-15, "eV s") ,&
+  codata_t_constant("Planck constant over 2 pi", 1.054571726d-34, 0.000000047d-34, "J s") ,&
+  codata_t_constant("Planck constant over 2 pi in eV s", 6.58211928d-16, 0.00000015d-16, "eV s") ,&
+  codata_t_constant("Planck constant over 2 pi times c in MeV fm", 197.3269718d0, 0.0000044d0, "MeV fm") ,&
+  codata_t_constant("Planck length", 1.616199d-35, 0.000097d-35, "m") ,&
+  codata_t_constant("Planck mass", 2.17651d-8, 0.00013d-8, "kg") ,&
+  codata_t_constant("Planck mass energy equivalent in GeV", 1.220932d19, 0.000073d19, "GeV") ,&
+  codata_t_constant("Planck temperature", 1.416833d32, 0.000085d32, "K") ,&
+  codata_t_constant("Planck time", 5.39106d-44, 0.00032d-44, "s") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_270 = [&
-  t_constant("proton charge to mass quotient", 9.57883358d7, 0.00000021d7, "C kg^-1") ,&
-  t_constant("proton Compton wavelength", 1.32140985623d-15, 0.00000000094d-15, "m") ,&
-  t_constant("proton Compton wavelength over 2 pi", 0.21030891047d-15, 0.00000000015d-15, "m") ,&
-  t_constant("proton-electron mass ratio", 1836.15267245d0, 0.00000075d0, "") ,&
-  t_constant("proton g factor", 5.585694713d0, 0.000000046d0, "") ,&
-  t_constant("proton gyromag. ratio", 2.675222005d8, 0.000000063d8, "s^-1 T^-1") ,&
-  t_constant("proton gyromag. ratio over 2 pi", 42.5774806d0, 0.0000010d0, "MHz T^-1") ,&
-  t_constant("proton mag. mom", 1.410606743d-26, 0.000000033d-26, "J T^-1") ,&
-  t_constant("proton mag. mom. to Bohr magneton ratio", 1.521032210d-3, 0.000000012d-3, "") ,&
-  t_constant("proton mag. mom. to nuclear magneton ratio", 2.792847356d0, 0.000000023d0, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_270 = [&
+  codata_t_constant("proton charge to mass quotient", 9.57883358d7, 0.00000021d7, "C kg^-1") ,&
+  codata_t_constant("proton Compton wavelength", 1.32140985623d-15, 0.00000000094d-15, "m") ,&
+  codata_t_constant("proton Compton wavelength over 2 pi", 0.21030891047d-15, 0.00000000015d-15, "m") ,&
+  codata_t_constant("proton-electron mass ratio", 1836.15267245d0, 0.00000075d0, "") ,&
+  codata_t_constant("proton g factor", 5.585694713d0, 0.000000046d0, "") ,&
+  codata_t_constant("proton gyromag. ratio", 2.675222005d8, 0.000000063d8, "s^-1 T^-1") ,&
+  codata_t_constant("proton gyromag. ratio over 2 pi", 42.5774806d0, 0.0000010d0, "MHz T^-1") ,&
+  codata_t_constant("proton mag. mom", 1.410606743d-26, 0.000000033d-26, "J T^-1") ,&
+  codata_t_constant("proton mag. mom. to Bohr magneton ratio", 1.521032210d-3, 0.000000012d-3, "") ,&
+  codata_t_constant("proton mag. mom. to nuclear magneton ratio", 2.792847356d0, 0.000000023d0, "") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_280 = [&
-  t_constant("proton mag. shielding correction", 25.694d-6, 0.014d-6, "") ,&
-  t_constant("proton mass", 1.672621777d-27, 0.000000074d-27, "kg") ,&
-  t_constant("proton mass energy equivalent", 1.503277484d-10, 0.000000066d-10, "J") ,&
-  t_constant("proton mass energy equivalent in MeV", 938.272046d0, 0.000021d0, "MeV") ,&
-  t_constant("proton mass in u", 1.007276466812d0, 0.000000000090d0, "u") ,&
-  t_constant("proton molar mass", 1.007276466812d-3, 0.000000000090d-3, "kg mol^-1") ,&
-  t_constant("proton-muon mass ratio", 8.88024331d0, 0.00000022d0, "") ,&
-  t_constant("proton-neutron mag. mom. ratio", -1.45989806d0, 0.00000034d0, "") ,&
-  t_constant("proton-neutron mass ratio", 0.99862347826d0, 0.00000000045d0, "") ,&
-  t_constant("proton rms charge radius", 0.8775d-15, 0.0051d-15, "m") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_280 = [&
+  codata_t_constant("proton mag. shielding correction", 25.694d-6, 0.014d-6, "") ,&
+  codata_t_constant("proton mass", 1.672621777d-27, 0.000000074d-27, "kg") ,&
+  codata_t_constant("proton mass energy equivalent", 1.503277484d-10, 0.000000066d-10, "J") ,&
+  codata_t_constant("proton mass energy equivalent in MeV", 938.272046d0, 0.000021d0, "MeV") ,&
+  codata_t_constant("proton mass in u", 1.007276466812d0, 0.000000000090d0, "u") ,&
+  codata_t_constant("proton molar mass", 1.007276466812d-3, 0.000000000090d-3, "kg mol^-1") ,&
+  codata_t_constant("proton-muon mass ratio", 8.88024331d0, 0.00000022d0, "") ,&
+  codata_t_constant("proton-neutron mag. mom. ratio", -1.45989806d0, 0.00000034d0, "") ,&
+  codata_t_constant("proton-neutron mass ratio", 0.99862347826d0, 0.00000000045d0, "") ,&
+  codata_t_constant("proton rms charge radius", 0.8775d-15, 0.0051d-15, "m") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_290 = [&
-  t_constant("proton-tau mass ratio", 0.528063d0, 0.000048d0, "") ,&
-  t_constant("quantum of circulation", 3.6369475520d-4, 0.0000000024d-4, "m^2 s^-1") ,&
-  t_constant("quantum of circulation times 2", 7.2738951040d-4, 0.0000000047d-4, "m^2 s^-1") ,&
-  t_constant("Rydberg constant", 10973731.568539d0, 0.000055d0, "m^-1") ,&
-  t_constant("Rydberg constant times c in Hz", 3.289841960364d15, 0.000000000017d15, "Hz") ,&
-  t_constant("Rydberg constant times hc in eV", 13.60569253d0, 0.00000030d0, "eV") ,&
-  t_constant("Rydberg constant times hc in J", 2.179872171d-18, 0.000000096d-18, "J") ,&
-  t_constant("Sackur-Tetrode constant (1 K, 100 kPa", -1.1517078d0, 0.0000023d0, "") ,&
-  t_constant("Sackur-Tetrode constant (1 K, 101.325 kPa", -1.1648708d0, 0.0000023d0, "") ,&
-  t_constant("second radiation constant", 1.4387770d-2, 0.0000013d-2, "m K") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_290 = [&
+  codata_t_constant("proton-tau mass ratio", 0.528063d0, 0.000048d0, "") ,&
+  codata_t_constant("quantum of circulation", 3.6369475520d-4, 0.0000000024d-4, "m^2 s^-1") ,&
+  codata_t_constant("quantum of circulation times 2", 7.2738951040d-4, 0.0000000047d-4, "m^2 s^-1") ,&
+  codata_t_constant("Rydberg constant", 10973731.568539d0, 0.000055d0, "m^-1") ,&
+  codata_t_constant("Rydberg constant times c in Hz", 3.289841960364d15, 0.000000000017d15, "Hz") ,&
+  codata_t_constant("Rydberg constant times hc in eV", 13.60569253d0, 0.00000030d0, "eV") ,&
+  codata_t_constant("Rydberg constant times hc in J", 2.179872171d-18, 0.000000096d-18, "J") ,&
+  codata_t_constant("Sackur-Tetrode constant (1 K, 100 kPa", -1.1517078d0, 0.0000023d0, "") ,&
+  codata_t_constant("Sackur-Tetrode constant (1 K, 101.325 kPa", -1.1648708d0, 0.0000023d0, "") ,&
+  codata_t_constant("second radiation constant", 1.4387770d-2, 0.0000013d-2, "m K") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_300 = [&
-  t_constant("shielded helion gyromag. ratio", 2.037894659d8, 0.000000051d8, "s^-1 T^-1") ,&
-  t_constant("shielded helion gyromag. ratio over 2 pi", 32.43410084d0, 0.00000081d0, "MHz T^-1") ,&
-  t_constant("shielded helion mag. mom", -1.074553044d-26, 0.000000027d-26, "J T^-1") ,&
-  t_constant("shielded helion mag. mom. to Bohr magneton ratio", -1.158671471d-3, 0.000000014d-3, "") ,&
-  t_constant("shielded helion mag. mom. to nuclear magneton ratio", -2.127497718d0, 0.000000025d0, "") ,&
-  t_constant("shielded helion to proton mag. mom. ratio", -0.761766558d0, 0.000000011d0, "") ,&
-  t_constant("shielded helion to shielded proton mag. mom. ratio", -0.7617861313d0, 0.0000000033d0, "") ,&
-  t_constant("shielded proton gyromag. ratio", 2.675153268d8, 0.000000066d8, "s^-1 T^-1") ,&
-  t_constant("shielded proton gyromag. ratio over 2 pi", 42.5763866d0, 0.0000010d0, "MHz T^-1") ,&
-  t_constant("shielded proton mag. mom", 1.410570499d-26, 0.000000035d-26, "J T^-1") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_300 = [&
+  codata_t_constant("shielded helion gyromag. ratio", 2.037894659d8, 0.000000051d8, "s^-1 T^-1") ,&
+  codata_t_constant("shielded helion gyromag. ratio over 2 pi", 32.43410084d0, 0.00000081d0, "MHz T^-1") ,&
+  codata_t_constant("shielded helion mag. mom", -1.074553044d-26, 0.000000027d-26, "J T^-1") ,&
+  codata_t_constant("shielded helion mag. mom. to Bohr magneton ratio", -1.158671471d-3, 0.000000014d-3, "") ,&
+  codata_t_constant("shielded helion mag. mom. to nuclear magneton ratio", -2.127497718d0, 0.000000025d0, "") ,&
+  codata_t_constant("shielded helion to proton mag. mom. ratio", -0.761766558d0, 0.000000011d0, "") ,&
+  codata_t_constant("shielded helion to shielded proton mag. mom. ratio", -0.7617861313d0, 0.0000000033d0, "") ,&
+  codata_t_constant("shielded proton gyromag. ratio", 2.675153268d8, 0.000000066d8, "s^-1 T^-1") ,&
+  codata_t_constant("shielded proton gyromag. ratio over 2 pi", 42.5763866d0, 0.0000010d0, "MHz T^-1") ,&
+  codata_t_constant("shielded proton mag. mom", 1.410570499d-26, 0.000000035d-26, "J T^-1") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_310 = [&
-  t_constant("shielded proton mag. mom. to Bohr magneton ratio", 1.520993128d-3, 0.000000017d-3, "") ,&
-  t_constant("shielded proton mag. mom. to nuclear magneton ratio", 2.792775598d0, 0.000000030d0, "") ,&
-  t_constant("speed of light in vacuum", 299792458.0d0, 0.0d0, "m s^-1") ,&
-  t_constant("standard acceleration of gravity", 9.80665d0, 0.0d0, "m s^-2") ,&
-  t_constant("standard atmosphere", 101325.0d0, 0.0d0, "Pa") ,&
-  t_constant("standard-state pressure", 100000.0d0, 0.0d0, "Pa") ,&
-  t_constant("Stefan-Boltzmann constant", 5.670373d-8, 0.000021d-8, "W m^-2 K^-4") ,&
-  t_constant("tau Compton wavelength", 0.697787d-15, 0.000063d-15, "m") ,&
-  t_constant("tau Compton wavelength over 2 pi", 0.111056d-15, 0.000010d-15, "m") ,&
-  t_constant("tau-electron mass ratio", 3477.15d0, 0.31d0, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_310 = [&
+  codata_t_constant("shielded proton mag. mom. to Bohr magneton ratio", 1.520993128d-3, 0.000000017d-3, "") ,&
+  codata_t_constant("shielded proton mag. mom. to nuclear magneton ratio", 2.792775598d0, 0.000000030d0, "") ,&
+  codata_t_constant("speed of light in vacuum", 299792458.0d0, 0.0d0, "m s^-1") ,&
+  codata_t_constant("standard acceleration of gravity", 9.80665d0, 0.0d0, "m s^-2") ,&
+  codata_t_constant("standard atmosphere", 101325.0d0, 0.0d0, "Pa") ,&
+  codata_t_constant("standard-state pressure", 100000.0d0, 0.0d0, "Pa") ,&
+  codata_t_constant("Stefan-Boltzmann constant", 5.670373d-8, 0.000021d-8, "W m^-2 K^-4") ,&
+  codata_t_constant("tau Compton wavelength", 0.697787d-15, 0.000063d-15, "m") ,&
+  codata_t_constant("tau Compton wavelength over 2 pi", 0.111056d-15, 0.000010d-15, "m") ,&
+  codata_t_constant("tau-electron mass ratio", 3477.15d0, 0.31d0, "") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_320 = [&
-  t_constant("tau mass", 3.16747d-27, 0.00029d-27, "kg") ,&
-  t_constant("tau mass energy equivalent", 2.84678d-10, 0.00026d-10, "J") ,&
-  t_constant("tau mass energy equivalent in MeV", 1776.82d0, 0.16d0, "MeV") ,&
-  t_constant("tau mass in u", 1.90749d0, 0.00017d0, "u") ,&
-  t_constant("tau molar mass", 1.90749d-3, 0.00017d-3, "kg mol^-1") ,&
-  t_constant("tau-muon mass ratio", 16.8167d0, 0.0015d0, "") ,&
-  t_constant("tau-neutron mass ratio", 1.89111d0, 0.00017d0, "") ,&
-  t_constant("tau-proton mass ratio", 1.89372d0, 0.00017d0, "") ,&
-  t_constant("Thomson cross section", 0.6652458734d-28, 0.0000000013d-28, "m^2") ,&
-  t_constant("triton-electron mass ratio", 5496.9215267d0, 0.0000050d0, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_320 = [&
+  codata_t_constant("tau mass", 3.16747d-27, 0.00029d-27, "kg") ,&
+  codata_t_constant("tau mass energy equivalent", 2.84678d-10, 0.00026d-10, "J") ,&
+  codata_t_constant("tau mass energy equivalent in MeV", 1776.82d0, 0.16d0, "MeV") ,&
+  codata_t_constant("tau mass in u", 1.90749d0, 0.00017d0, "u") ,&
+  codata_t_constant("tau molar mass", 1.90749d-3, 0.00017d-3, "kg mol^-1") ,&
+  codata_t_constant("tau-muon mass ratio", 16.8167d0, 0.0015d0, "") ,&
+  codata_t_constant("tau-neutron mass ratio", 1.89111d0, 0.00017d0, "") ,&
+  codata_t_constant("tau-proton mass ratio", 1.89372d0, 0.00017d0, "") ,&
+  codata_t_constant("Thomson cross section", 0.6652458734d-28, 0.0000000013d-28, "m^2") ,&
+  codata_t_constant("triton-electron mass ratio", 5496.9215267d0, 0.0000050d0, "") ]
 
-type(t_constant), dimension(10), parameter, private :: codata_2010_330 = [&
-  t_constant("triton g factor", 5.957924896d0, 0.000000076d0, "") ,&
-  t_constant("triton mag. mom", 1.504609447d-26, 0.000000038d-26, "J T^-1") ,&
-  t_constant("triton mag. mom. to Bohr magneton ratio", 1.622393657d-3, 0.000000021d-3, "") ,&
-  t_constant("triton mag. mom. to nuclear magneton ratio", 2.978962448d0, 0.000000038d0, "") ,&
-  t_constant("triton mass", 5.00735630d-27, 0.00000022d-27, "kg") ,&
-  t_constant("triton mass energy equivalent", 4.50038741d-10, 0.00000020d-10, "J") ,&
-  t_constant("triton mass energy equivalent in MeV", 2808.921005d0, 0.000062d0, "MeV") ,&
-  t_constant("triton mass in u", 3.0155007134d0, 0.0000000025d0, "u") ,&
-  t_constant("triton molar mass", 3.0155007134d-3, 0.0000000025d-3, "kg mol^-1") ,&
-  t_constant("triton-proton mass ratio", 2.9937170308d0, 0.0000000025d0, "") ]
+type(codata_t_constant), dimension(10), parameter :: codata_2010_330 = [&
+  codata_t_constant("triton g factor", 5.957924896d0, 0.000000076d0, "") ,&
+  codata_t_constant("triton mag. mom", 1.504609447d-26, 0.000000038d-26, "J T^-1") ,&
+  codata_t_constant("triton mag. mom. to Bohr magneton ratio", 1.622393657d-3, 0.000000021d-3, "") ,&
+  codata_t_constant("triton mag. mom. to nuclear magneton ratio", 2.978962448d0, 0.000000038d0, "") ,&
+  codata_t_constant("triton mass", 5.00735630d-27, 0.00000022d-27, "kg") ,&
+  codata_t_constant("triton mass energy equivalent", 4.50038741d-10, 0.00000020d-10, "J") ,&
+  codata_t_constant("triton mass energy equivalent in MeV", 2808.921005d0, 0.000062d0, "MeV") ,&
+  codata_t_constant("triton mass in u", 3.0155007134d0, 0.0000000025d0, "u") ,&
+  codata_t_constant("triton molar mass", 3.0155007134d-3, 0.0000000025d-3, "kg mol^-1") ,&
+  codata_t_constant("triton-proton mass ratio", 2.9937170308d0, 0.0000000025d0, "") ]
 
-type(t_constant), dimension(5), parameter, private :: codata_2010_335 = [&
-  t_constant("unified atomic mass unit", 1.660538921d-27, 0.000000073d-27, "kg") ,&
-  t_constant("von Klitzing constant", 25812.8074434d0, 0.0000084d0, "ohm") ,&
-  t_constant("weak mixing angle", 0.2223d0, 0.0021d0, "") ,&
-  t_constant("Wien frequency displacement law constant", 5.8789254d10, 0.0000053d10, "Hz K^-1") ,&
-  t_constant("Wien wavelength displacement law constant", 2.8977721d-3, 0.0000026d-3, "m K") ]
+type(codata_t_constant), dimension(5), parameter :: codata_2010_335 = [&
+  codata_t_constant("unified atomic mass unit", 1.660538921d-27, 0.000000073d-27, "kg") ,&
+  codata_t_constant("von Klitzing constant", 25812.8074434d0, 0.0000084d0, "ohm") ,&
+  codata_t_constant("weak mixing angle", 0.2223d0, 0.0021d0, "") ,&
+  codata_t_constant("Wien frequency displacement law constant", 5.8789254d10, 0.0000053d10, "Hz K^-1") ,&
+  codata_t_constant("Wien wavelength displacement law constant", 2.8977721d-3, 0.0000026d-3, "m K") ]
 
-type(t_constant), dimension(335), public, target :: codata_constants_2010 = [&
+type(codata_t_constant), dimension(335), public, target :: codata_constants_2010 = [&
 codata_2010_10 ,&
 codata_2010_20 ,&
 codata_2010_30 ,&

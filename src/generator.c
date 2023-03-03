@@ -413,6 +413,7 @@ void write_module_declaration(FILE *fcode, struct codata_file_props *props){
     fprintf(fcode, "%s\n", "use iso_fortran_env");
     fprintf(fcode, "%s\n", "use codata_base");
     fprintf(fcode, "%s\n", "implicit none");
+    fprintf(fcode, "%s\n", "private");
     fprintf(fcode, "%s\n", "");
 }
 
@@ -447,7 +448,7 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
         if (i%subdim == 0){
             k += 1;
             fprintf(fcode, 
-                    "type(t_constant), dimension(%d), parameter, private :: codata_%s_%d = [&\n", 
+                    "type(codata_t_constant), dimension(%d), parameter :: codata_%s_%d = [&\n", 
                     subdim, props->year, k*subdim);
         }
         clean_line(line, LINE_LENGTH);
@@ -467,12 +468,12 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
             rtrim(unit, UNITS_LENGTH);
             if ((i%subdim)==(subdim-1)){
                 fprintf(fcode, 
-                        "  t_constant(\"%s\", %s, %s, \"%s\") %s\n",
+                        "  codata_t_constant(\"%s\", %s, %s, \"%s\") %s\n",
                         name, value, uncertainty, unit, "]\n");
             }
             else{
                 fprintf(fcode, 
-                        "  t_constant(\"%s\", %s, %s, \"%s\") %s\n",
+                        "  codata_t_constant(\"%s\", %s, %s, \"%s\") %s\n",
                         name, value, uncertainty, unit, ",&");
             }
         }
@@ -482,7 +483,7 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
         if (i%imax == 0){
             k += 1;
             fprintf(fcode, 
-                    "type(t_constant), dimension(%d), parameter, private :: codata_%s_%d = [&\n", 
+                    "type(codata_t_constant), dimension(%d), parameter :: codata_%s_%d = [&\n", 
                     imax, props->year, props->n);
         }
         clean_line(line, LINE_LENGTH);
@@ -502,17 +503,17 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
             rtrim(unit, UNITS_LENGTH);
             if ((i%imax)==(imax-1)){
                 fprintf(fcode, 
-                        "  t_constant(\"%s\", %s, %s, \"%s\") %s\n",
+                        "  codata_t_constant(\"%s\", %s, %s, \"%s\") %s\n",
                         name, value, uncertainty, unit, "]\n");
             }
             else{
                 fprintf(fcode, 
-                        "  t_constant(\"%s\", %s, %s, \"%s\") %s\n",
+                        "  codata_t_constant(\"%s\", %s, %s, \"%s\") %s\n",
                         name, value, uncertainty, unit, ",&");
             }
         }
     }
-    fprintf(fcode, "type(t_constant), dimension(%d), public, target :: codata_constants_%s = [&\n", props->n, props->year);
+    fprintf(fcode, "type(codata_t_constant), dimension(%d), public, target :: codata_constants_%s = [&\n", props->n, props->year);
     for(i=0; i<(k-1); i++){
         fprintf(fcode, "codata_%s_%d %s\n", props->year, (i+1)*subdim, ",&");
     }

@@ -8,9 +8,21 @@
 !! with members name, value, uncertainty and unit.
 !! Methods for getting the member values are available.
 module codata
+    use iso_fortran_env
+    use codata_base
     use codata_2010
     use codata_2014
     use codata_2018
+    private
+
+!> @brief Header for the print function.
+character(len=60), dimension(4), parameter :: codata_headers = [character(len=60):: "Names", "Values", "Uncertainties", "Units"]
+
+public :: codata_set_year, codata_get_year
+public :: codata_print, codata_get_number_constants
+public :: codata_get_name_by_index, codata_get_value_by_index
+public :: codata_get_uncertainty_by_index, codata_get_unit_by_index
+public :: codata_get_value, codata_get_uncertainty, codata_get_unit
 
 contains
 
@@ -61,7 +73,7 @@ contains
         if (codata_is_set .eqv. .false.) then
             call codata_set_year("XXXX")
         end if
-        print "(A60, 4X, A23, 4X, A23, 4X, A25)", headers(:)
+        print "(A60, 4X, A23, 4X, A23, 4X, A25)", codata_headers(:)
         do i=1, size(codata_constants)
             print "(A60, 4X, SP, ES23.16E2, 4X, ES23.16E2, 4X, A25)", codata_constants(i)%name, &
                                                                       codata_constants(i)%value, &
