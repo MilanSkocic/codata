@@ -7,10 +7,10 @@ configure_file("./src/config.h.in" "./src/config.h")
 
 # GNU / AppleClang
 set(C_FLAGS_DEBUG_GCC "-std=c11 -Wall -Wextra -pedantic")
-set(C_FLAGS_RELEASE_GCC "-std=c11 -O3 -w")
+set(C_FLAGS_RELEASE_GCC "-std=c11 -O2 -w")
 
 set(Fortran_FLAGS_DEBUG_GCC "-std=f2008 -Wall -Wextra -pedantic")
-set(Fortran_FLAGS_RELEASE_GCC "-std=f2008 -O3 -w")
+set(Fortran_FLAGS_RELEASE_GCC "-std=f2008 -O2 -w")
 
 # MSVC
 set(C_FLAGS_DEBUG_MSVC "/std:c11 /Wall")
@@ -18,15 +18,15 @@ set(C_FLAGS_RELEASE_MSVC "/std:c11 /O2 /w")
 
 # Intel C
 set(C_FLAGS_DEBUG_Intel_win32 "/std:c11 /Wall")
-set(C_FLAGS_RELEASE_Intel_win32 "/std:c11 /O3 /w")
+set(C_FLAGS_RELEASE_Intel_win32 "/std:c11 /O2 /w")
 set(C_FLAGS_DEBUG_Intel_unix "-std=c11 -Wall")
-set(C_FLAGS_RELEASE_Intel_unix "-std=c11 -O3 -w")
+set(C_FLAGS_RELEASE_Intel_unix "-std=c11 -O2 -w")
 
 #Intel Fortran
 set(Fortran_FLAGS_DEBUG_Intel_win32 "/stand:f08 /Wall ")
-set(Fortran_FLAGS_RELEASE_Intel_win32 "/stand:f08 /O3 /w")
+set(Fortran_FLAGS_RELEASE_Intel_win32 "/stand:f08 /O2 /w")
 set(Fortran_FLAGS_DEBUG_Intel_unix "-stand f08 -Wall ")
-set(Fortran_FLAGS_RELEASE_Intel_unix "-stand f08 -O3 -w ")
+set(Fortran_FLAGS_RELEASE_Intel_unix "-stand f08 -O2 -w ")
 
 # C flags
 if(CMAKE_C_COMPILER_ID STREQUAL "MSVC")
