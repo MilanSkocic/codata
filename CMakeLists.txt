@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_NAME "codata")
 
 project(${PROJECT_NAME} VERSION 0.2.1 LANGUAGES "C" "Fortran" DESCRIPTION "Codata from NIST.")
-configure_file("./src/config.h.in" "./src/config.h")
+configure_file("./app/config.h.in" "./app/config.h")
 
 # GNU / AppleClang
 set(C_FLAGS_DEBUG_GCC "-std=c11 -Wall -Wextra -pedantic")
@@ -81,7 +81,7 @@ message("Fortran Compiler ID = " ${CMAKE_Fortran_COMPILER_ID})
 add_subdirectory(src)
 add_subdirectory(examples)
 add_subdirectory(tests)
-
+add_subdirectory(app)
 
 enable_testing()
 add_test(NAME test_constants COMMAND test_constants)

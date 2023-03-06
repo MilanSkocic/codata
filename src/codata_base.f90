@@ -25,7 +25,7 @@ type(codata_t_constant), dimension(:), pointer :: codata_constants
 logical :: codata_is_set = .false. 
 
 !> @brief year that was set
-character(len=4) :: codata_year = "XXXX"
+character(len=4) :: codata_year = "2018"
 
 public :: codata_t_constant, codata_constants, codata_is_set, codata_year
 

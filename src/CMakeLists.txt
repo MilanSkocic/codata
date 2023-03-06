@@ -32,6 +32,3 @@ target_include_directories(static_codata PUBLIC ${CMAKE_BINARY_DIR}/src)
 add_library(shared_codata SHARED "${CODATA_SOURCES}")
 set_target_properties(shared_codata PROPERTIES PUBLIC_HEADER "${CODATA_PUBLIC_HEADERS}" OUTPUT_NAME codata)
 target_include_directories(shared_codata PUBLIC ${CMAKE_BINARY_DIR}/src)
-
-add_executable(codata-config config.c)
-target_include_directories(codata-config PRIVATE ${CMAKE_BINARY_DIR}/src)
