@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Codata: generator.c File Reference</title>
+<title>Codata: src/generator.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,8 +69,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">generator.c File Reference</div>  </div>
 </div><!--header-->
@@ -85,9 +84,9 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for generator.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="generator_8c__incl.png" border="0" usemap="#agenerator_8c" alt=""/></div>
-<map name="agenerator_8c" id="agenerator_8c">
-<area shape="rect" title="Generator for Fortran module." alt="" coords="131,5,226,32"/>
+<div class="center"><img src="generator_8c__incl.png" border="0" usemap="#asrc_2generator_8c" alt=""/></div>
+<map name="asrc_2generator_8c" id="asrc_2generator_8c">
+<area shape="rect" title="Generator for Fortran module." alt="" coords="119,5,238,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,72,107"/>
 <area shape="rect" title=" " alt="" coords="97,80,167,107"/>
 <area shape="rect" title=" " alt="" coords="191,80,262,107"/>
@@ -154,19 +153,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generator_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generated Fortran module.  <a href="generator_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">More...</a><br /></td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a22f9e1e065fa3a8cf7c4452074a89ae1"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generator_8c.html#a22f9e1e065fa3a8cf7c4452074a89ae1">LINE_LENGTH</a> = 256</td></tr>
-<tr class="separator:a22f9e1e065fa3a8cf7c4452074a89ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae123124d71d844822c3d5d60b207e71"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generator_8c.html#aae123124d71d844822c3d5d60b207e71">NAMES_LENGTH</a> = 60</td></tr>
-<tr class="separator:aae123124d71d844822c3d5d60b207e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dca171ae469f671b3acb5581cac7ea0"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generator_8c.html#a3dca171ae469f671b3acb5581cac7ea0">VALUES_LENGTH</a> = 25</td></tr>
-<tr class="separator:a3dca171ae469f671b3acb5581cac7ea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14db7979eefa00057893759639050596"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generator_8c.html#a14db7979eefa00057893759639050596">UNCERTAINTIES_LENGTH</a> = 25</td></tr>
-<tr class="separator:a14db7979eefa00057893759639050596"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1055be337df19028f41e94b9af9a62f"><td class="memItemLeft" align="right" valign="top">static const size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generator_8c.html#ae1055be337df19028f41e94b9af9a62f">UNITS_LENGTH</a> = 25</td></tr>
-<tr class="separator:ae1055be337df19028f41e94b9af9a62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generator for Fortran module. </p>
@@ -773,122 +759,6 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a22f9e1e065fa3a8cf7c4452074a89ae1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22f9e1e065fa3a8cf7c4452074a89ae1">&#9670;&nbsp;</a></span>LINE_LENGTH</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const size_t LINE_LENGTH = 256</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Length of line. </p>
-
-</div>
-</div>
-<a id="aae123124d71d844822c3d5d60b207e71"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae123124d71d844822c3d5d60b207e71">&#9670;&nbsp;</a></span>NAMES_LENGTH</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const size_t NAMES_LENGTH = 60</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Length of column name </p>
-
-</div>
-</div>
-<a id="a14db7979eefa00057893759639050596"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14db7979eefa00057893759639050596">&#9670;&nbsp;</a></span>UNCERTAINTIES_LENGTH</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const size_t UNCERTAINTIES_LENGTH = 25</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Length of column uncertainty </p>
-
-</div>
-</div>
-<a id="ae1055be337df19028f41e94b9af9a62f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae1055be337df19028f41e94b9af9a62f">&#9670;&nbsp;</a></span>UNITS_LENGTH</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const size_t UNITS_LENGTH = 25</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Length of column unit </p>
-
-</div>
-</div>
-<a id="a3dca171ae469f671b3acb5581cac7ea0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dca171ae469f671b3acb5581cac7ea0">&#9670;&nbsp;</a></span>VALUES_LENGTH</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const size_t VALUES_LENGTH = 25</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Length of column value </p>
 
 </div>
 </div>
