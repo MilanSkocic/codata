@@ -12,8 +12,10 @@ The static and shared libraries can be installed in order to be included in Fort
 
 The compilation was tested on Linux (Debian), MacOS, Windows.
 
-The sources are available are available on [github](https://github.com/MilanSkocic/codata).
+The sources are available on [github](https://github.com/MilanSkocic/codata).
 The online documentation is available [here](https://milanskocic.github.io/codata/index.html).
+A pdf version of the documentation can be found 
+[here](https://milanskocic.github.io/codata/refman.pdf). 
 
 
 # Installation
