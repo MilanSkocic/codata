@@ -2,6 +2,8 @@
 
 all: install.md license.md requirements.md
 	doxygen doxyfile
+	make -C build/latex
+	cp build/latex/refman.pdf build/html
 	rm -r ../docs/*
 	cp -r build/html/* ../docs/
 
@@ -13,3 +15,7 @@ license.md: ../LICENSE.txt
 
 requirements.md: ../REQUIREMENTS.txt
 	cp $< introduction/$@
+
+pdf: 
+	make -C build/latex
+	cp build/latex/refman.pdf build/html

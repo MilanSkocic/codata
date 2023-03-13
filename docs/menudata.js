@@ -29,8 +29,7 @@ var menudata={children:[
 {text:"Modules List",url:"namespaces.html"},
 {text:"Module Members",url:"namespacemembers.html",children:[
 {text:"All",url:"namespacemembers.html",children:[
-{text:"c",url:"namespacemembers.html#index_c"},
-{text:"h",url:"namespacemembers.html#index_h"}]},
+{text:"c",url:"namespacemembers.html#index_c"}]},
 {text:"Functions/Subroutines",url:"namespacemembers_func.html"},
 {text:"Variables",url:"namespacemembers_vars.html"}]}]},
 {text:"Data Types List",url:"annotated.html",children:[
@@ -42,19 +41,6 @@ var menudata={children:[
 {text:"Files",url:"files.html",children:[
 {text:"File List",url:"files.html"},
 {text:"Globals",url:"globals.html",children:[
-{text:"All",url:"globals.html",children:[
-{text:"c",url:"globals.html#index_c"},
-{text:"f",url:"globals.html#index_f"},
-{text:"g",url:"globals.html#index_g"},
-{text:"i",url:"globals.html#index_i"},
-{text:"l",url:"globals.html#index_l"},
-{text:"m",url:"globals.html#index_m"},
-{text:"n",url:"globals.html#index_n"},
-{text:"p",url:"globals.html#index_p"},
-{text:"r",url:"globals.html#index_r"},
-{text:"u",url:"globals.html#index_u"},
-{text:"v",url:"globals.html#index_v"},
-{text:"w",url:"globals.html#index_w"}]},
-{text:"Functions/Subroutines",url:"globals_func.html"},
-{text:"Variables",url:"globals_vars.html"}]}]},
+{text:"All",url:"globals.html"},
+{text:"Functions/Subroutines",url:"globals_func.html"}]}]},
 {text:"Examples",url:"examples.html"}]}

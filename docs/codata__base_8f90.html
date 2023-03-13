@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Codata: codata_base.f90 File Reference</title>
+<title>Codata: src/codata_base.f90 File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,12 +79,6 @@ $(function() {
 <p>Base for the codata module.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Data Types</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">type &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcodata__base_1_1t__constant.html">codata_base::t_constant</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">constant type  <a href="structcodata__base_1_1t__constant.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Modules</h2></td></tr>
 <tr class="memitem:namespacecodata__base"><td class="memItemLeft" align="right" valign="top">module &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata__base.html">codata_base</a></td></tr>
@@ -93,18 +87,15 @@ Modules</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a0021761013d529601dd064d68f1fe484"><td class="memItemLeft" align="right" valign="top">character(len=60), dimension(4), parameter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata__base.html#a0021761013d529601dd064d68f1fe484">codata_base::headers</a> = [character(len=60):: &quot;Names&quot;, &quot;Values&quot;, &quot;Uncertainties&quot;, &quot;Units&quot;]</td></tr>
-<tr class="memdesc:a0021761013d529601dd064d68f1fe484"><td class="mdescLeft">&#160;</td><td class="mdescRight">Header for the print function.  <a href="namespacecodata__base.html#a0021761013d529601dd064d68f1fe484">More...</a><br /></td></tr>
-<tr class="separator:a0021761013d529601dd064d68f1fe484"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6d215a50e266b0b6fd6520bd6642d6d"><td class="memItemLeft" align="right" valign="top">type(t_constant), dimension(:), pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata__base.html#af6d215a50e266b0b6fd6520bd6642d6d">codata_base::codata_constants</a></td></tr>
-<tr class="memdesc:af6d215a50e266b0b6fd6520bd6642d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the codata table.  <a href="namespacecodata__base.html#af6d215a50e266b0b6fd6520bd6642d6d">More...</a><br /></td></tr>
-<tr class="separator:af6d215a50e266b0b6fd6520bd6642d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fffdcbec0204bcc1900fa850a8999ad"><td class="memItemLeft" align="right" valign="top">logical&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata__base.html#a1fffdcbec0204bcc1900fa850a8999ad">codata_base::codata_is_set</a> = .false.</td></tr>
-<tr class="memdesc:a1fffdcbec0204bcc1900fa850a8999ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">flag for indicating if the codata year is set  <a href="namespacecodata__base.html#a1fffdcbec0204bcc1900fa850a8999ad">More...</a><br /></td></tr>
-<tr class="separator:a1fffdcbec0204bcc1900fa850a8999ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37bdc2e21d8b8d0f93e0e252088ee9a3"><td class="memItemLeft" align="right" valign="top">character(len=4)&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata__base.html#a37bdc2e21d8b8d0f93e0e252088ee9a3">codata_base::codata_year</a> = &quot;XXXX&quot;</td></tr>
-<tr class="memdesc:a37bdc2e21d8b8d0f93e0e252088ee9a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">year that was set  <a href="namespacecodata__base.html#a37bdc2e21d8b8d0f93e0e252088ee9a3">More...</a><br /></td></tr>
-<tr class="separator:a37bdc2e21d8b8d0f93e0e252088ee9a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0d2a856218052f0e2b24f00eb01486"><td class="memItemLeft" align="right" valign="top">type(codata_t_constant), dimension(:), pointer, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata__base.html#a0a0d2a856218052f0e2b24f00eb01486">codata_base::codata_constants</a></td></tr>
+<tr class="memdesc:a0a0d2a856218052f0e2b24f00eb01486"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the codata table.  <a href="namespacecodata__base.html#a0a0d2a856218052f0e2b24f00eb01486">More...</a><br /></td></tr>
+<tr class="separator:a0a0d2a856218052f0e2b24f00eb01486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b230ea4330c38113c1a660984705d80"><td class="memItemLeft" align="right" valign="top">logical, public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata__base.html#a7b230ea4330c38113c1a660984705d80">codata_base::codata_is_set</a> = .false.</td></tr>
+<tr class="memdesc:a7b230ea4330c38113c1a660984705d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">flag for indicating if the codata year is set  <a href="namespacecodata__base.html#a7b230ea4330c38113c1a660984705d80">More...</a><br /></td></tr>
+<tr class="separator:a7b230ea4330c38113c1a660984705d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd112e8c7da616325669a59105f748b6"><td class="memItemLeft" align="right" valign="top">character(len=4), public&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacecodata__base.html#acd112e8c7da616325669a59105f748b6">codata_base::codata_year</a> = &quot;2018&quot;</td></tr>
+<tr class="memdesc:acd112e8c7da616325669a59105f748b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">year that was set  <a href="namespacecodata__base.html#acd112e8c7da616325669a59105f748b6">More...</a><br /></td></tr>
+<tr class="separator:acd112e8c7da616325669a59105f748b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base for the codata module. </p>

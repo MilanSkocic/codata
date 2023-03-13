@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['line_5flength_177',['LINE_LENGTH',['../generator_8c.html#a22f9e1e065fa3a8cf7c4452074a89ae1',1,'generator.c']]]
+  ['year_167',['year',['../structcodata__file__props.html#a50208421f977d08838d95f7ebbdca44a',1,'codata_file_props']]]
 ];

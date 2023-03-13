@@ -1,5 +1,5 @@
-gcc>=10.0 or msvc>=14
+gcc>=4.6 or msvc>=14
 
-gfortran>=10.0 or ifort>=19
+gfortran>=4.6 or ifort>=18
 
-cmake>=3.10
+cmake>=3.20
