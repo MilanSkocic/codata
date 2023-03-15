@@ -409,7 +409,7 @@ void write_module_doc(FILE *fcode){
  * @param props Properties of the codata file. 
  */
 void write_module_declaration(FILE *fcode, struct codata_file_props *props){
-    fprintf(fcode, "module codata_%s\n", props->year);
+    fprintf(fcode, "module codata_last\n");
     fprintf(fcode, "%s\n", "use iso_fortran_env");
     fprintf(fcode, "%s\n", "use codata_base");
     fprintf(fcode, "%s\n", "implicit none");
@@ -513,7 +513,7 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
             }
         }
     }
-    fprintf(fcode, "type(codata_t_constant), dimension(%d), public, target :: codata_constants%s = [&\n", props->n, props->year);
+    fprintf(fcode, "type(codata_t_constant), dimension(%d), public :: codata_constants%s = [&\n", props->n, props->year);
     for(i=0; i<(k-1); i++){
         fprintf(fcode, "codata%d %s\n", (i+1)*subdim, ",&");
     }
@@ -535,7 +535,7 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
  * @param props Properties of the codata file.
  */
 void write_module_end(FILE *fcode, struct codata_file_props *props){
-    fprintf(fcode, "end module codata_%s\n", props->year);
+    fprintf(fcode, "end module codata_last\n");
 }
 
 /**
@@ -551,7 +551,7 @@ int main(int argc, char **argv){
     FILE *fcode;
     struct codata_file_props *props;
 
-    struct codata_file_props props_current = {0, 0, "./codata_2018.txt", "", "codata_2018.f90"}; 
+    struct codata_file_props props_current = {0, 0, "./codata_2018.txt", "", "codata_last.f90"}; 
     //struct codata_file_props props_2018 = {0, 0, "./codata_2018.txt", "2018", "codata_2018.f90"}; 
     //struct codata_file_props props_2014 = {0, 0, "./codata_2014.txt", "2014", "codata_2014.f90"}; 
     //struct codata_file_props props_2010 = {0, 0, "./codata_2010.txt", "2010", "codata_2010.f90"}; 

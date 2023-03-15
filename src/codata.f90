@@ -10,7 +10,7 @@
 module codata
     use iso_fortran_env
     use codata_base
-    use codata_
+    use codata_last
     implicit none
     private
 
