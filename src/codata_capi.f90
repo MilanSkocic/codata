@@ -36,28 +36,6 @@ module codata_capi
 
 contains
 
-    !> @brief Set the revision year for the codata constants.
-    !! @param[in] char_p Year of the revision.
-    !! @param[in] length Length of the string.
-    subroutine codata_capi_set_year(char_p, length)bind(C)
-        implicit none
-        integer(c_int), intent(in), value :: length
-        type(c_ptr), intent(in), value :: char_p
-        character, pointer, dimension(:) :: fstr_p
-
-        integer :: i
-        character(len=length) :: name
-
-        call c_f_pointer(char_p, fstr_p, shape=[length])
-
-        do i=1, length
-            name(i:i) = fstr_p(i)
-        enddo
-
-        call codata_set_year(name)
-
-    end subroutine
-    
     !> @brief Get the set year for the codata constants
     !! return Year of the codata constants
     function codata_capi_get_year() bind(C) result(year)

@@ -11,7 +11,6 @@ int main(int argc, char **argv){
     int precision;
     double value, ref;
     char name[60] = "";
-    char year[5] = "";
     char *unit;
     
     // avoid compiler complaining
@@ -19,8 +18,6 @@ int main(int argc, char **argv){
         printf("%d %s", argc, argv[1]);
     }
 
-    strcpy(year, "2018");
-    codata_capi_set_year(year, 4);
     strcpy(name, "alpha particle masss");
     value = codata_capi_get_value(name, strlen(name)); 
     ref = NAN;
@@ -30,8 +27,6 @@ int main(int argc, char **argv){
         return EXIT_FAILURE;
     }
     
-    strcpy(year, "2018");
-    codata_capi_set_year(year, 4);
     strcpy(name, "alpha particle masss");
     unit = codata_capi_get_unit(name, strlen(name)); 
     ref = NAN;

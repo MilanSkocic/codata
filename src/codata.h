@@ -5,13 +5,6 @@
  * @example example_in_c.c 
  */
 
-/**
- * @brief Set the revision year for the codata constants.
- * @param[in] year Year of the revision.
- * @param[in] length Length of the string.
- */
-extern void codata_capi_set_year(char *year, int length);
-
 
 /**
  * @brief Get the set year for the codata constants

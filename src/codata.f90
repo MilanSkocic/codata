@@ -10,15 +10,14 @@
 module codata
     use iso_fortran_env
     use codata_base
-    use codata_2010
-    use codata_2014
-    use codata_2018
+    use codata_
+    implicit none
     private
 
 !> @brief Header for the print function.
 character(len=60), dimension(4), parameter :: codata_headers = [character(len=60):: "Names", "Values", "Uncertainties", "Units"]
 
-public :: codata_set_year, codata_get_year
+public :: codata_get_year
 public :: codata_print, codata_get_number_constants
 public :: codata_get_name_by_index, codata_get_value_by_index
 public :: codata_get_uncertainty_by_index, codata_get_unit_by_index
@@ -26,26 +25,6 @@ public :: codata_get_value, codata_get_uncertainty, codata_get_unit
 
 contains
 
-    !> @brief Set the revision year for the codata constants.
-    !! @param[in] year Year of the revision.
-    subroutine codata_set_year(year)
-        character(len=*), intent(in) :: year
-        nullify(codata_constants)
-        if (year == "2018") then
-            codata_constants => codata_constants_2018
-            codata_year = "2018"
-        else if (year == "2014") then
-            codata_constants => codata_constants_2014
-            codata_year = "2014"
-        else if (year == "2010") then
-            codata_constants => codata_constants_2010
-            codata_year = "2010"
-        else
-            codata_constants => codata_constants_2018
-            codata_year = "2018"
-        end if
-        codata_is_set = .true.
-    end subroutine
 
     !> @brief Get the set year for the codata constants
     !! @return Year of the codata constants
@@ -60,9 +39,6 @@ contains
     function codata_get_number_constants() result(n)
         implicit none
         integer :: n
-        if (codata_is_set .eqv. .false.) then
-            call codata_set_year("XXXX")
-        end if
         n = size(codata_constants)
     end function
 
@@ -70,9 +46,6 @@ contains
     subroutine codata_print()
         implicit none
         integer :: i
-        if (codata_is_set .eqv. .false.) then
-            call codata_set_year("XXXX")
-        end if
         print "(A60, 4X, A23, 4X, A23, 4X, A25)", codata_headers(:)
         do i=1, size(codata_constants)
             print "(A60, 4X, SP, ES23.16E2, 4X, ES23.16E2, 4X, A25)", codata_constants(i)%name, &
@@ -89,9 +62,6 @@ contains
         implicit none    
         integer, intent(in) :: index
         character(len=:), allocatable :: name
-        if (codata_is_set .eqv. .false.) then
-            call codata_set_year("XXXX")
-        end if
         if ((index > size(codata_constants)) .or. (index<1))then
             name = "None"
         else
@@ -107,9 +77,6 @@ contains
         implicit none    
         integer, intent(in) :: index
         real(real64) :: value
-        if (codata_is_set .eqv. .false.) then
-            call codata_set_year("XXXX")
-        end if
         if ((index > size(codata_constants)) .or. (index<1))then
             value = ieee_value(1.0d0, ieee_quiet_nan)
         else
@@ -125,9 +92,6 @@ contains
         implicit none    
         integer, intent(in) :: index
         real(real64) :: value
-        if (codata_is_set .eqv. .false.) then
-            call codata_set_year("XXXX")
-        end if
         if ((index > size(codata_constants)) .or. (index<1))then
             value = ieee_value(1.0d0, ieee_quiet_nan)
         else
@@ -142,9 +106,6 @@ contains
         implicit none    
         integer, intent(in) :: index
         character(len=:), allocatable :: unit
-        if (codata_is_set .eqv. .false.) then
-            call codata_set_year("XXXX")
-        end if
         if ((index > size(codata_constants)) .or. (index<1))then
             unit = "None"
         else
@@ -162,9 +123,6 @@ contains
         real(real64) :: value
         integer :: i
 
-        if (codata_is_set .eqv. .false.) then
-            call codata_set_year("XXXX")
-        end if
         value = ieee_value(1.0d0, ieee_quiet_nan)
         do i=1, size(codata_constants)
             if (codata_constants(i)%name == name)then
@@ -184,9 +142,6 @@ contains
         real(real64) :: value
         integer :: i
 
-        if (codata_is_set .eqv. .false.) then
-            call codata_set_year("XXXX")
-        end if
         value = ieee_value(1.0d0, ieee_quiet_nan)
 
         do i=1, size(codata_constants)
@@ -207,9 +162,6 @@ contains
         character(len=25) :: unit
         integer :: i
 
-        if (codata_is_set .eqv. .false.) then
-            call codata_set_year("XXXX")
-        end if
         unit = "None"
 
         do i=1, size(codata_constants)

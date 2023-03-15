@@ -19,8 +19,6 @@ int main(int argc, char **argv){
     }
     
     printf("Test CODATA 2018\n");
-    strcpy(year, "2018");
-    codata_capi_set_year(year, 4);
     strcpy(name, "alpha particle mass");
     value = codata_capi_get_value(name, strlen(name)); 
     ref = 6.6446573357e-27;
@@ -30,29 +28,5 @@ int main(int argc, char **argv){
         return EXIT_FAILURE;
     }
     
-    printf("Test CODATA 2014\n");
-    strcpy(year, "2014");
-    codata_capi_set_year(year, 4);
-    strcpy(name, "alpha particle mass");
-    value = codata_capi_get_value(name, strlen(name)); 
-    ref = 6.644657230e-27;
-    precision = 37;
-    printf("value=%+23.16e / ref=%+23.16e / precision=%d\n", value, ref, precision);
-    if (roundn(value, precision) != roundn(ref, precision)){
-        return EXIT_FAILURE;
-    }
-    
-    printf("Test CODATA 2010\n");
-    strcpy(year, "2010");
-    codata_capi_set_year(year, 4);
-    strcpy(name, "alpha particle mass");
-    value = codata_capi_get_value(name, strlen(name)); 
-    ref = 6.64465675e-27;
-    precision = 37;
-    printf("value=%+23.16e / ref=%+23.16e / precision=%d\n", value, ref, precision);
-    if (roundn(value, precision) != roundn(ref, precision)){
-        return EXIT_FAILURE;
-    }
-
     return EXIT_SUCCESS;
 }

@@ -448,8 +448,8 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
         if (i%subdim == 0){
             k += 1;
             fprintf(fcode, 
-                    "type(codata_t_constant), dimension(%d), parameter :: codata_%s_%d = [&\n", 
-                    subdim, props->year, k*subdim);
+                    "type(codata_t_constant), dimension(%d), parameter :: codata%d = [&\n", 
+                    subdim, k*subdim);
         }
         clean_line(line, LINE_LENGTH);
         clean_line(name, NAMES_LENGTH);
@@ -483,8 +483,8 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
         if (i%imax == 0){
             k += 1;
             fprintf(fcode, 
-                    "type(codata_t_constant), dimension(%d), parameter :: codata_%s_%d = [&\n", 
-                    imax, props->year, props->n);
+                    "type(codata_t_constant), dimension(%d), parameter :: codata%d = [&\n", 
+                    imax, props->n);
         }
         clean_line(line, LINE_LENGTH);
         clean_line(name, NAMES_LENGTH);
@@ -513,11 +513,11 @@ void write_all_constants(FILE *fcodata, FILE *fcode, struct codata_file_props *p
             }
         }
     }
-    fprintf(fcode, "type(codata_t_constant), dimension(%d), public, target :: codata_constants_%s = [&\n", props->n, props->year);
+    fprintf(fcode, "type(codata_t_constant), dimension(%d), public, target :: codata_constants%s = [&\n", props->n, props->year);
     for(i=0; i<(k-1); i++){
-        fprintf(fcode, "codata_%s_%d %s\n", props->year, (i+1)*subdim, ",&");
+        fprintf(fcode, "codata%d %s\n", (i+1)*subdim, ",&");
     }
-    fprintf(fcode, "codata_%s_%d %s\n\n", props->year, props->n, "]");
+    fprintf(fcode, "codata%d %s\n\n", props->n, "]");
 
 
     free(line);
@@ -551,18 +551,31 @@ int main(int argc, char **argv){
     FILE *fcode;
     struct codata_file_props *props;
 
-    struct codata_file_props props_2018 = {0, 0, "./codata_2018.txt", "2018", "codata_2018.f90"}; 
-    struct codata_file_props props_2014 = {0, 0, "./codata_2014.txt", "2014", "codata_2014.f90"}; 
-    struct codata_file_props props_2010 = {0, 0, "./codata_2010.txt", "2010", "codata_2010.f90"}; 
+    struct codata_file_props props_current = {0, 0, "./codata_2018.txt", "", "codata_2018.f90"}; 
+    //struct codata_file_props props_2018 = {0, 0, "./codata_2018.txt", "2018", "codata_2018.f90"}; 
+    //struct codata_file_props props_2014 = {0, 0, "./codata_2014.txt", "2014", "codata_2014.f90"}; 
+    //struct codata_file_props props_2010 = {0, 0, "./codata_2010.txt", "2010", "codata_2010.f90"}; 
 
     // avoid compiler complaining
     if (argc>1){
         printf("%d %s", argc, argv[1]);
     }    
 
+    /* Codata current (2018)*/
+    props = &props_current;
+    fcodata =  fopen(props->codata_path, "r");
+    fcode = fopen(props->fmodule_path, "w");
+    get_props(props);
+    write_file_doc(fcode);
+    write_module_doc(fcode);
+    write_module_declaration(fcode, props);
+    write_all_constants(fcodata, fcode, props);
+    write_module_end(fcode, props);
+    fclose(fcode);
+    fclose(fcodata);
 
     /* Codata 2018 */
-    props = &props_2018;
+    /*props = &props_2018;
     fcodata =  fopen(props->codata_path, "r");
     fcode = fopen(props->fmodule_path, "w");
     get_props(props);
@@ -572,10 +585,10 @@ int main(int argc, char **argv){
     write_all_constants(fcodata, fcode, props);
     write_module_end(fcode, props);
     fclose(fcode);
-    fclose(fcodata);
+    fclose(fcodata);*/
     
     /* Codata 2014 */
-    props = &props_2014;
+    /*props = &props_2014;
     fcodata =  fopen(props->codata_path, "r");
     fcode = fopen(props->fmodule_path, "w");
     get_props(props);
@@ -585,10 +598,10 @@ int main(int argc, char **argv){
     write_all_constants(fcodata, fcode, props);
     write_module_end(fcode, props);
     fclose(fcode);
-    fclose(fcodata);
+    fclose(fcodata);*/
     
     /* Codata 2010 */
-    props = &props_2010;
+    /*props = &props_2010;
     fcodata =  fopen(props->codata_path, "r");
     fcode = fopen(props->fmodule_path, "w");
     get_props(props);
@@ -598,7 +611,7 @@ int main(int argc, char **argv){
     write_all_constants(fcodata, fcode, props);
     write_module_end(fcode, props);
     fclose(fcode);
-    fclose(fcodata);
+    fclose(fcodata);*/
 
     return EXIT_SUCCESS;
 }
