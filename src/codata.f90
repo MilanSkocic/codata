@@ -9,13 +9,15 @@
 !! Methods for getting the member values are available.
 module codata
     use iso_fortran_env
-    use codata_base
-    use codata_last
+    use codata_data
     implicit none
     private
 
 !> @brief Header for the print function.
 character(len=60), dimension(4), parameter :: codata_headers = [character(len=60):: "Names", "Values", "Uncertainties", "Units"]
+
+!> @brief year that was set
+character(len=4) :: codata_year = "2018"
 
 public :: codata_get_year
 public :: codata_print, codata_get_number_constants
