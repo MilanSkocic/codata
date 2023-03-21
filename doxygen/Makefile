@@ -16,6 +16,9 @@ license.md: ../LICENSE.txt
 requirements.md: ../REQUIREMENTS.txt
 	cp $< introduction/$@
 
+html: 
+	doxygen doxyfile
+	
 pdf: 
 	make -C build/latex
 	cp build/latex/refman.pdf build/html

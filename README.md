@@ -1,6 +1,6 @@
 # Introduction
 
-`codata` is a Fortran library providing the lastest codata constants.
+`codata` is a Fortran library providing the lastest codata constants (2018).
 It also provides a API for the C language. 
 The raw codata from http://physics.nist.gov/constants are parsed line by line
 where the columns name, value, uncertainty and unit are formatted to be conform to Fortran double precision.
