@@ -1,0 +1,12 @@
+# sdist
+recursive-include sphinx *
+
+include INSTALL.TXT
+include LICENSE.TXT
+include MANIFEST.in
+include README.rst
+include requirements.txt
+include site.cfg.example
+
+# bdist
+recursive-include pycodata *.c *.h *.f90

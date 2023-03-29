@@ -1,0 +1,23 @@
+PyCodata 0.2.0 Release Note
+===================================
+
+Changes
+------------
+
+* Implementation of the getter and setter around the codata constants.
+
+Download
+---------------
+`PyPI <https://pypi.org/project/pycodata/>`_
+
+
+Contributors
+----------------
+
+Milan Skocic
+
+
+Commits
+--------------
+
+Full Changelog: https://github.com/MilanSkocic/pycodata/compare/....0.2.0

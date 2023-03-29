@@ -1,0 +1,8 @@
+# This is an example how to set the paths for the codata library
+# If you want to add more than folder separate them by a comma and no spaces
+# Copy this file and rename it to site.cfg in order to be read by the setup.py.
+[CODATA]
+libraries = codata
+library_dirs = /usr/lib
+include_dirs = /usr/include
+runtime_library_dirs = /usr/lib

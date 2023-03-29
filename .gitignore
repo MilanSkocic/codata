@@ -28,10 +28,5 @@
 .vscode
 
 build/
-/python/pycodata/__pycache__
-/python/dist
-
-doxygen/html
-doxygen/xml/
-doxygen/latex/
-doxygen/man
+__pycache__/
+dist/
