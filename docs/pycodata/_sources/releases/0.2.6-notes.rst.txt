@@ -1,0 +1,24 @@
+PyCodata 0.2.6 Release Note
+===================================
+
+Changes
+------------
+
+* Functional setup for compiling the wrapper with pip. 
+* Update documentation.
+
+Download
+---------------
+`PyPI <https://pypi.org/project/pycodata/>`_
+
+
+Contributors
+----------------
+
+Milan Skocic
+
+
+Commits
+--------------
+
+Full Changelog: https://github.com/MilanSkocic/pycodata/compare/0.2.5...0.2.6

@@ -4,7 +4,7 @@ all: install.md license.md requirements.md
 	doxygen doxyfile
 	make -C build/latex
 	cp build/latex/refman.pdf build/html
-	rm -r ../docs/codata/*
+	rm -rf ../docs/codata/*
 	cp -r build/html/* ../docs/codata/
 
 install.md: ../INSTALL.txt
