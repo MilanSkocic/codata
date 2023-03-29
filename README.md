@@ -11,10 +11,12 @@ The generated Fortran module is then compiled (f2008+) into a shared and a stati
 
 The compilation was tested on Linux (Debian), MacOS and Windows.
 
-The sources are available on [github](https://github.com/MilanSkocic/codata).
-The online documentation is available [here](https://milanskocic.github.io/codata/index.html).
-A pdf version of the documentation can be found 
-[here](https://milanskocic.github.io/codata/refman.pdf). 
+Links:
+
+* Sources: <https://github.com/MilanSkocic/codata>.
+* Online documentation: <https://milanskocic.github.io/codata/index.html>.
+* PDF documentation: <https://milanskocic.github.io/codata/refman.pdf>. 
+* Python wrapper: <https://milanskocic.github.io/codata/pycodata/index.html>. 
 
 
 # Installation

@@ -7,7 +7,7 @@ Description
 A pdf version of the documentation can be found here 
 :download:`pycodata <../../build/latex/pycodata.pdf>`. 
 The source code can be viewed on 
-`GitHub <http://www.github.com/MilanSkocic/pycodata>`_.
+`GitHub <http://www.github.com/MilanSkocic/codata/tree/main/pywrapper>`_.
 
 How to install
 =================
