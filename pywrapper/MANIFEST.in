@@ -1,5 +1,6 @@
 # sdist
 recursive-include sphinx *
+recursive-exclude sphinx/build *
 
 include INSTALL.TXT
 include LICENSE.TXT
@@ -9,4 +10,4 @@ include requirements.txt
 include site.cfg.example
 
 # bdist
-recursive-include pycodata *.c *.h *.f90
+# recursive-include pycodata *.c *.h *.f90
