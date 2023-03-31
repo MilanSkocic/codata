@@ -74,29 +74,29 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Cmake is necessary for compiling and instaling the library.</p>
-<h1><a class="anchor" id="autotoc_md24"></a>
+<h1><a class="anchor" id="autotoc_md29"></a>
 Create build directory</h1>
 <ul>
 <li>mkdir build</li>
 <li>cd build</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md30"></a>
 Generate a makefile</h1>
 <ul>
 <li>On Unix-like OS: <code>cmake -G "Unix Makefiles" -S .. -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/path/to/folder</code></li>
 <li>On windows with MSYS2: <code>cmake -G "Unix Makefiles" -S .. -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/path/to/folder</code></li>
 <li>On windows with ifort and msvc: <code>cmake -G "NMake Makefiles" -S .. -DCMAKE_BUILD_TYPE=release -DCMAKE_INSTALL_PREFIX=/path/to/folder</code></li>
 </ul>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md31"></a>
 Build either with cmake</h1>
 <pre class="fragment">cmake --build . 
-</pre> <h1><a class="anchor" id="autotoc_md27"></a>
+</pre> <h1><a class="anchor" id="autotoc_md32"></a>
 Run tests</h1>
 <pre class="fragment">ctest
-</pre> <h1><a class="anchor" id="autotoc_md28"></a>
+</pre> <h1><a class="anchor" id="autotoc_md33"></a>
 Install</h1>
 <pre class="fragment">cmake --install .
-</pre><h1><a class="anchor" id="autotoc_md29"></a>
+</pre><h1><a class="anchor" id="autotoc_md34"></a>
 Dependencies</h1>
 <p>On windows when compiled with Intel Fortran compiler, the <a href="https://www.intel.com/content/www/us/en/developer/articles/tool/compilers-redistributable-libraries-by-version.html">Intel Fortran redistributable</a> must be installed. </p>
 </div></div><!-- contents -->
