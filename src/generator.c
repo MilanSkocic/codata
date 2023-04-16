@@ -432,7 +432,7 @@ void write_module_doc(FILE *fcode){
  */
 void write_module_declaration(FILE *fcode){
     fprintf(fcode, "module codata\n");
-    fprintf(fcode, "%s\n", "use iso_c_binding");
+    fprintf(fcode, "%s\n", "use iso_fortran_env");
     fprintf(fcode, "%s\n", "implicit none");
     fprintf(fcode, "%s\n", "");
 }
@@ -487,15 +487,15 @@ void write_all_constants(FILE *fcodata, FILE *fcode, FILE *cheader, struct codat
             rtrim(unit, UNITS_LENGTH);
 
             // fortran code
-            fprintf(fcode, "real(c_double), protected, bind(C,name=\"%s\") :: &\n%s=%s !< %s\n", name, name, value, unit);
-            fprintf(fcode, "real(c_double), protected, bind(C,name=\"U_%s\") :: &\nU_%s=%s !< %s\n", name, name, uncertainty, unit);
+            fprintf(fcode, "real(real64), parameter:: &\n%s=%s !< %s\n", name, value, unit);
+            fprintf(fcode, "real(real64), parameter :: &\nU_%s=%s !< %s\n", name, uncertainty, unit);
             fprintf(fcode, "\n");
 
             // C code
             convert_value_to_c(value);
             convert_value_to_c(uncertainty);
-            fprintf(cheader, "extern const double %s;/**< %s */\n", name, unit);
-            fprintf(cheader, "extern const double U_%s;/**< %s */\n", name, unit);
+            fprintf(cheader, "const double %s=%s;/**< %s */\n", name, value, unit);
+            fprintf(cheader, "const double U_%s=%s;/**< %s */\n", name, uncertainty, unit);
             fprintf(cheader, "\n");
         }
     }
