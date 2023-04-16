@@ -1,23 +1,19 @@
 # Introduction
 
-`codata` is a Fortran library providing the lastest codata constants (2018).
-It also provides a API for the C language. 
-The raw codata from http://physics.nist.gov/constants are parsed line by line
-where the columns name, value, uncertainty and unit are formatted to be conform to Fortran double precision.
-The formatted (as strings) names, values, uncertainties and units are then inserted in a 
-derived type in the generated Fortran module. The latter are then inserted into an array.
+`codata` provides, automatically generated, source files for the lastest codata constants (2018).
+The raw codata from http://physics.nist.gov/constants are parsed line by line and converted into
+declarations as constants for different languages:
 
-The generated Fortran module is then compiled (f2008+) into a shared and a static library `libcodata` with the Fortran and C headers. 
-
-The compilation was tested on Linux (Debian), MacOS and Windows.
+* Fortran module named codata.f90
+* C header named codata.h
+* Python module named codata.py
+* CPython extension named codata.c
 
 Links:
 
 * Sources: <https://github.com/MilanSkocic/codata>.
 * Online documentation: <https://milanskocic.github.io/codata/index.html>.
 * PDF documentation: <https://milanskocic.github.io/codata/codata/refman.pdf>. 
-* Python wrapper: <https://milanskocic.github.io/codata/pycodata/index.html>. 
-
 
 # Installation
 

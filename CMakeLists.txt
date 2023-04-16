@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 3.10)
 set(PROJECT_NAME "codata")
 
 project(${PROJECT_NAME} VERSION 0.4.0 LANGUAGES "C" "Fortran" DESCRIPTION "Codata from NIST.")
-configure_file("./app/config.h.in" "./app/config.h")
 
 # GNU / AppleClang
 set(C_FLAGS_DEBUG_GCC "-std=c11 -Wall -Wextra -pedantic")
@@ -79,22 +78,16 @@ message("Fortran Compiler = " ${CMAKE_Fortran_COMPILER})
 message("Fortran Compiler ID = " ${CMAKE_Fortran_COMPILER_ID})
 
 add_subdirectory(src)
-add_subdirectory(examples)
 add_subdirectory(tests)
-add_subdirectory(app)
 
 enable_testing()
 add_test(NAME test_constants COMMAND test_constants)
 
 
-install(TARGETS static_codata PUBLIC_HEADER DESTINATION include ARCHIVE DESTINATION lib)
-install(TARGETS shared_codata PUBLIC_HEADER DESTINATION include LIBRARY DESTINATION lib)
-install(TARGETS codata-config RUNTIME DESTINATION bin)
-
 # cpack for creating binary archive
 # make package_source for sources archive
-set(CPACK_SOURCE_GENERATOR "TGZ")
-set(CPACK_GENERATOR "TGZ")
-set(CPACK_SOURCE_IGNORE_FILES \\.git/ build/ \\.vscode/ ".*~$")
-set(CPACK_VERBATIM_VARIABLES YES)
-include(CPack)
+# set(CPACK_SOURCE_GENERATOR "TGZ")
+# set(CPACK_GENERATOR "TGZ")
+# set(CPACK_SOURCE_IGNORE_FILES \\.git/ build/ \\.vscode/ ".*~$")
+# set(CPACK_VERBATIM_VARIABLES YES)
+# include(CPack)
