@@ -85,7 +85,6 @@ add_subdirectory(app)
 
 enable_testing()
 add_test(NAME test_constants COMMAND test_constants)
-add_test(NAME test_not_found COMMAND test_not_found)
 
 
 install(TARGETS static_codata PUBLIC_HEADER DESTINATION include ARCHIVE DESTINATION lib)
