@@ -1,14 +1,10 @@
 /**
  * @file
  * 
- * @brief Generator for Fortran module.
+ * @brief Generator.
  * @details The raw data from NIST are parsed line by line
- * where the columns name, value, uncertainty and unit are formatted to be conform to Fortran.
- * The formatted (as strings) names, values, uncertainties and units are then inserted in a 
- * derived type in the generated Fortran module.
- * The raw codata from http://physics.nist.gov/constants are converted into
- * Fortran code. 
- *   
+ * The raw codata from http://physics.nist.gov/constants are parsed line by line and converted into
+ * declarations as constants for different languages:
 */
 #include <stdio.h>
 #include <stdlib.h>
