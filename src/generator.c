@@ -424,7 +424,6 @@ void write_module_doc(FILE *fcode){
  * @brief Generate the Fortran module declaration.
  * 
  * @param fcode File pointer of the Fortran module.
- * @param props Properties of the codata file. 
  */
 void write_module_declaration(FILE *fcode){
     fprintf(fcode, "module codata\n");
@@ -447,6 +446,7 @@ void write_cheader_doc(FILE *fcode){
  * 
  * @param fcodata File pointer to the codata file.
  * @param fcode File pointer to the Fortran module.
+ * @param cheader File pointer to the C header.
  * @param props Properties of the codata file.
  */
 void write_all_constants(FILE *fcodata, FILE *fcode, FILE *cheader, struct codata_file_props *props){
@@ -508,7 +508,6 @@ void write_all_constants(FILE *fcodata, FILE *fcode, FILE *cheader, struct codat
  * @brief Generate the end of the Fortran module.
  * 
  * @param fcode File pointer to the Fortran module.
- * @param props Properties of the codata file.
  */
 void write_module_end(FILE *fcode){
     fprintf(fcode, "end module codata\n");
