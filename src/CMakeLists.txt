@@ -8,6 +8,7 @@ add_custom_command(OUTPUT ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}_2018.txt
 add_executable(generator generator.c) 
 
 add_custom_command(TARGET generator POST_BUILD
+                   COMMENT "Generating source files."
                    COMMAND generator  
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.f90 ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}.f90
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.h ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}.h
