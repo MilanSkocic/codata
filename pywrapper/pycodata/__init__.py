@@ -1,7 +1,3 @@
-"""Python wrapper of the (Modern Fortran) codata library."""
-import platform
-import os
-import pathlib
-
+"""Python module containing the codata constants."""
 from .version import *
 from .codata import *

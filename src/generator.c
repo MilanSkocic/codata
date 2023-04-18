@@ -604,7 +604,7 @@ int main(int argc, char **argv){
     ffortran = fopen("codata.f90", "w");
     fcheader = fopen("codata.h", "w");
     fpython = fopen("codata.py", "w");
-    fcpython = fopen("codata.c", "w");
+    fcpython = fopen("cpycodata.c", "w");
     get_props(props);
     write_fortran_file_doc(ffortran);
     write_fortran_module_doc(ffortran);

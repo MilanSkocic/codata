@@ -13,7 +13,7 @@ spec.loader.exec_module(mod)
 if __name__ == "__main__":
 
     mod_ext = Extension(name="pycodata.codata",
-                                         sources=["./pycodata/codata.c"])
+                                         sources=["./pycodata/cpycodata.c"])
     setup(name=mod.__package_name__,
         version=mod.__version__,
         maintainer=mod.__maintainer__,
