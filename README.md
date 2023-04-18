@@ -9,11 +9,7 @@ declarations as constants for different languages:
 * Python module named codata.py
 * CPython extension named codata.c
 
-Links:
-
-* Sources: <https://github.com/MilanSkocic/codata>.
-* Online documentation: <https://milanskocic.github.io/codata/index.html>.
-* PDF documentation: <https://milanskocic.github.io/codata/codata/refman.pdf>. 
+The sources can be directly included in projects where they are needed.
 
 # Installation
 
