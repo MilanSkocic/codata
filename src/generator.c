@@ -561,6 +561,9 @@ void write_all_constants(FILE *fcodata,
             fprintf(fcpython, "\tv = PyFloat_FromDouble(%s);\n", name);
             fprintf(fcpython, "\tPyDict_SetItemString(d, \"%s\", v);\n", name);
             fprintf(fcpython, "\tPy_INCREF(v);\n");
+            fprintf(fcpython, "\tv = PyFloat_FromDouble(U_%s);\n", name);
+            fprintf(fcpython, "\tPyDict_SetItemString(d, \"U_%s\", v);\n", name);
+            fprintf(fcpython, "\tPy_INCREF(v);\n");
             fprintf(fcpython, "\n");
 
         }
