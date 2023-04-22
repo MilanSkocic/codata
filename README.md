@@ -11,6 +11,13 @@ declarations as constants for different languages:
 
 The sources can be directly included in projects where they are needed.
 
+Links:
+
+* Sources: <https://github.com/MilanSkocic/codata>.
+* Online documentation: <https://milanskocic.github.io/codata/index.html>.
+* PDF documentation: <https://milanskocic.github.io/codata/codata/refman.pdf>. 
+
+
 # Installation
 
 See the file `INSTALL`. 
