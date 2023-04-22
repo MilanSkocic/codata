@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['josephson_5fconstant_0',['JOSEPHSON_CONSTANT',['../ccodata_8h.html#a522a53f9cba8595f4b1959d30add1652',1,'JOSEPHSON_CONSTANT():&#160;ccodata.h'],['../namespacepycodata.html#a2050d66231740784e5932848ca5ce1f6',1,'pycodata.JOSEPHSON_CONSTANT()']]],
+  ['josephson_5fconstant_1',['josephson_constant',['../namespacecodata.html#acaa574016d2eb7b59bf075ca38e77163',1,'codata']]],
+  ['joule_5fatomic_5fmass_5funit_5frelationship_2',['JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP',['../ccodata_8h.html#a24262d9bb03ff4f07f52a4c2ea2bc086',1,'JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP():&#160;ccodata.h'],['../namespacepycodata.html#a8032dc88bf44732c9f00d76d39729f72',1,'pycodata.JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP()']]],
+  ['joule_5fatomic_5fmass_5funit_5frelationship_3',['joule_atomic_mass_unit_relationship',['../namespacecodata.html#a10e1a11783eb9aa64865b7f021fd95e9',1,'codata']]],
+  ['joule_5felectron_5fvolt_5frelationship_4',['JOULE_ELECTRON_VOLT_RELATIONSHIP',['../ccodata_8h.html#a9523fe2ed6f1742ad13f9387b0d301eb',1,'JOULE_ELECTRON_VOLT_RELATIONSHIP():&#160;ccodata.h'],['../namespacepycodata.html#a6b2c1d0c89a1cce7529fe500dcefc40f',1,'pycodata.JOULE_ELECTRON_VOLT_RELATIONSHIP()']]],
+  ['joule_5felectron_5fvolt_5frelationship_5',['joule_electron_volt_relationship',['../namespacecodata.html#a378e910f2f847faf3d7fded8d71e878e',1,'codata']]],
+  ['joule_5fhartree_5frelationship_6',['joule_hartree_relationship',['../namespacecodata.html#a56458b306536aee153ebc51f6b931d39',1,'codata']]],
+  ['joule_5fhartree_5frelationship_7',['JOULE_HARTREE_RELATIONSHIP',['../ccodata_8h.html#a5655c4525532980a65e4bee01290cbd9',1,'JOULE_HARTREE_RELATIONSHIP():&#160;ccodata.h'],['../namespacepycodata.html#a379c9654181edc696d685dc241bb2868',1,'pycodata.JOULE_HARTREE_RELATIONSHIP()']]],
+  ['joule_5fhertz_5frelationship_8',['JOULE_HERTZ_RELATIONSHIP',['../ccodata_8h.html#a0f990a826f050987e2ccaa59d2d74fbf',1,'JOULE_HERTZ_RELATIONSHIP():&#160;ccodata.h'],['../namespacepycodata.html#a48b711bc1b7a988d272aa76ed5e9316f',1,'pycodata.JOULE_HERTZ_RELATIONSHIP()']]],
+  ['joule_5fhertz_5frelationship_9',['joule_hertz_relationship',['../namespacecodata.html#a2b9f2ec15be0127267136314fa8500eb',1,'codata']]],
+  ['joule_5finverse_5fmeter_5frelationship_10',['joule_inverse_meter_relationship',['../namespacecodata.html#a6f8bf9dab0fba12910384229d3d031ba',1,'codata']]],
+  ['joule_5finverse_5fmeter_5frelationship_11',['JOULE_INVERSE_METER_RELATIONSHIP',['../ccodata_8h.html#a48d2491d6a91a9da4e2c22151780bd5d',1,'JOULE_INVERSE_METER_RELATIONSHIP():&#160;ccodata.h'],['../namespacepycodata.html#a1ff56fab5dfa2d308cfafb2643116ec0',1,'pycodata.JOULE_INVERSE_METER_RELATIONSHIP()']]],
+  ['joule_5fkelvin_5frelationship_12',['joule_kelvin_relationship',['../namespacecodata.html#a169354f1b2dd043a4beb9e5f8141d054',1,'codata']]],
+  ['joule_5fkelvin_5frelationship_13',['JOULE_KELVIN_RELATIONSHIP',['../ccodata_8h.html#a165706a9f262092c5bf7d1831016faa2',1,'JOULE_KELVIN_RELATIONSHIP():&#160;ccodata.h'],['../namespacepycodata.html#aec26dfffaffb49ba0d4a9af5bbb8c140',1,'pycodata.JOULE_KELVIN_RELATIONSHIP()']]],
+  ['joule_5fkilogram_5frelationship_14',['JOULE_KILOGRAM_RELATIONSHIP',['../ccodata_8h.html#a68715276eed6e50b2d1d24bc5f5ed67d',1,'JOULE_KILOGRAM_RELATIONSHIP():&#160;ccodata.h'],['../namespacepycodata.html#aaa5fa2151c44d2248180092e8b38e4d7',1,'pycodata.JOULE_KILOGRAM_RELATIONSHIP()']]],
+  ['joule_5fkilogram_5frelationship_15',['joule_kilogram_relationship',['../namespacecodata.html#a6da7e781c1eab4683dbe2416b4443809',1,'codata']]]
+];
