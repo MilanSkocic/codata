@@ -604,9 +604,9 @@ int main(int argc, char **argv){
     /* Codata current (2018)*/
     props = &props_current;
     fcodata =  fopen(props->codata_path, "r");
-    ffortran = fopen("codata.f90", "w");
-    fcheader = fopen("codata.h", "w");
-    fpython = fopen("codata.py", "w");
+    ffortran = fopen("fcodata.f90", "w");
+    fcheader = fopen("ccodata.h", "w");
+    fpython = fopen("pycodata.py", "w");
     fcpython = fopen("cpycodata.c", "w");
     get_props(props);
     write_fortran_file_doc(ffortran);

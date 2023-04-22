@@ -6,8 +6,8 @@ declarations as constants for different languages:
 
 * Fortran module named codata.f90
 * C header named codata.h
-* Python module named codata.py
-* CPython extension named codata.c
+* Python module named pycodata.py
+* CPython extension named cpycodata.c
 
 The sources can be directly included in projects where they are needed.
 
