@@ -15,7 +15,7 @@ Links:
 
 * Sources: <https://github.com/MilanSkocic/codata>.
 * Online documentation: <https://milanskocic.github.io/codata/index.html>.
-* PDF documentation: <https://milanskocic.github.io/codata/codata/refman.pdf>. 
+* PDF documentation: <https://milanskocic.github.io/codata/refman.pdf>. 
 
 
 # Installation
