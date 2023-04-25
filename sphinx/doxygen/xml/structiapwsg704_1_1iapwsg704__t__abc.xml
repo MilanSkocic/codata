@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="structiapwsg704_1_1iapwsg704__t__abc" kind="type" language="Fortran" prot="private">
+    <compoundname>iapwsg704::iapwsg704_t_abc</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structiapwsg704_1_1iapwsg704__t__abc_1a037d7a73c14ca287656aa73b80a765c6" prot="public" static="no" mutable="no">
+        <type>character(len=5)</type>
+        <definition>character(len=5) iapwsg704::iapwsg704_t_abc::gas</definition>
+        <argsstring></argsstring>
+        <name>gas</name>
+        <qualifiedname>iapwsg704::iapwsg704_t_abc::gas</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapwsG704.f90" line="30" column="1" bodyfile="/Users/milan/programs/iapws/src/iapwsG704.f90" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="variable" id="structiapwsg704_1_1iapwsg704__t__abc_1adf68174a59ebfc2a1e469700660f702a" prot="public" static="no" mutable="no">
+        <type>real(real64)</type>
+        <definition>real(real64) iapwsg704::iapwsg704_t_abc::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <qualifiedname>iapwsg704::iapwsg704_t_abc::a</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapwsG704.f90" line="31" column="1" bodyfile="/Users/milan/programs/iapws/src/iapwsG704.f90" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="variable" id="structiapwsg704_1_1iapwsg704__t__abc_1a45fcb6282b3f759848b1727219efc8a5" prot="public" static="no" mutable="no">
+        <type>real(real64)</type>
+        <definition>real(real64) iapwsg704::iapwsg704_t_abc::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <qualifiedname>iapwsg704::iapwsg704_t_abc::b</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapwsG704.f90" line="32" column="1" bodyfile="/Users/milan/programs/iapws/src/iapwsG704.f90" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="variable" id="structiapwsg704_1_1iapwsg704__t__abc_1ab3263536ceab5e170e49a013cc9ecbdf" prot="public" static="no" mutable="no">
+        <type>real(real64)</type>
+        <definition>real(real64) iapwsg704::iapwsg704_t_abc::c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <qualifiedname>iapwsg704::iapwsg704_t_abc::c</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapwsG704.f90" line="33" column="1" bodyfile="/Users/milan/programs/iapws/src/iapwsG704.f90" bodystart="33" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/milan/programs/iapws/src/iapwsG704.f90" line="29" column="1" bodyfile="/Users/milan/programs/iapws/src/iapwsG704.f90" bodystart="29" bodyend="34"/>
+    <listofallmembers>
+      <member refid="structiapwsg704_1_1iapwsg704__t__abc_1adf68174a59ebfc2a1e469700660f702a" prot="public" virt="non-virtual"><scope>iapwsg704::iapwsg704_t_abc</scope><name>a</name></member>
+      <member refid="structiapwsg704_1_1iapwsg704__t__abc_1a45fcb6282b3f759848b1727219efc8a5" prot="public" virt="non-virtual"><scope>iapwsg704::iapwsg704_t_abc</scope><name>b</name></member>
+      <member refid="structiapwsg704_1_1iapwsg704__t__abc_1ab3263536ceab5e170e49a013cc9ecbdf" prot="public" virt="non-virtual"><scope>iapwsg704::iapwsg704_t_abc</scope><name>c</name></member>
+      <member refid="structiapwsg704_1_1iapwsg704__t__abc_1a037d7a73c14ca287656aa73b80a765c6" prot="public" virt="non-virtual"><scope>iapwsg704::iapwsg704_t_abc</scope><name>gas</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

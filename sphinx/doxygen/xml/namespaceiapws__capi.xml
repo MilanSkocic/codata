@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespaceiapws__capi" kind="namespace" language="Fortran">
+    <compoundname>iapws_capi</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceiapws__capi_1a48416f647f665a353c05cd3985fd63a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real(c_double) function, public</type>
+        <definition>real(c_double) function, public iapws_capi::iapws_capi_kh</definition>
+        <argsstring>(t, gas, solvent, size_gas, size_solvent)</argsstring>
+        <name>iapws_capi_kh</name>
+        <qualifiedname>iapws_capi::iapws_capi_kh</qualifiedname>
+        <param>
+          <type>real(c_double), value</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>type(c_ptr), intent(in), value</type>
+          <defname>gas</defname>
+        </param>
+        <param>
+          <type>type(c_ptr), intent(in), value</type>
+          <defname>solvent</defname>
+        </param>
+        <param>
+          <type>integer(c_size_t), intent(in), value</type>
+          <defname>size_gas</defname>
+        </param>
+        <param>
+          <type>integer(c_size_t), intent(in), value</type>
+          <defname>size_solvent</defname>
+        </param>
+        <briefdescription>
+<para>Compute the henry constant for a given temperature and gas in solvent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in °C. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Solvents: H2O or D2O. Default is H2O. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the string gas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the string gas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>kh Henry constant in mole fraction per GPa. NaN if gas not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapws_capi.f90" line="23" column="1" bodyfile="/Users/milan/programs/iapws/src/iapws_capi.f90" bodystart="24" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceiapws__capi_1af9e2085699ea42893d6bbaf42e832ea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>real(c_double) function, public</type>
+        <definition>real(c_double) function, public iapws_capi::iapws_capi_kd</definition>
+        <argsstring>(t, gas, solvent, size_gas, size_solvent)</argsstring>
+        <name>iapws_capi_kd</name>
+        <qualifiedname>iapws_capi::iapws_capi_kd</qualifiedname>
+        <param>
+          <type>real(c_double), value</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>type(c_ptr), intent(in), value</type>
+          <defname>gas</defname>
+        </param>
+        <param>
+          <type>type(c_ptr), intent(in), value</type>
+          <defname>solvent</defname>
+        </param>
+        <param>
+          <type>integer(c_size_t), intent(in), value</type>
+          <defname>size_gas</defname>
+        </param>
+        <param>
+          <type>integer(c_size_t), intent(in), value</type>
+          <defname>size_solvent</defname>
+        </param>
+        <briefdescription>
+<para>Compute the vapor-liquid constant for a given temperature and gas in solvent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in °C. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Solvents: H2O or D2O. Default is H2O. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the string gas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the string gas. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>kd Vapor-Liquid constant. NaN if gas not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapws_capi.f90" line="63" column="1" bodyfile="/Users/milan/programs/iapws/src/iapws_capi.f90" bodystart="64" bodyend="93"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>C API for the IAPWS module. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/milan/programs/iapws/src/iapws_capi.f90" line="5" column="1"/>
+  </compounddef>
+</doxygen>

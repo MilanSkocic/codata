@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="namespaceiapws" kind="namespace" language="Fortran">
+    <compoundname>iapws</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceiapws_1a3332c46104887740dc06fe5b9167de92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pure real(real64) function, public</type>
+        <definition>pure real(real64) function, public iapws::iapws_kh</definition>
+        <argsstring>(t, gas, solvent)</argsstring>
+        <name>iapws_kh</name>
+        <qualifiedname>iapws::iapws_kh</qualifiedname>
+        <param>
+          <type>real(real64), intent(in)</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>character(len=*), intent(in)</type>
+          <defname>gas</defname>
+        </param>
+        <param>
+          <type>character(len=*), intent(in)</type>
+          <defname>solvent</defname>
+        </param>
+        <briefdescription>
+<para>Compute the henry constant for a given temperature and gas in solvent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in °C. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Solvents: H2O or D2O. Default is H2O. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>kh Henry constant in mole fraction per GPa. NaN if gas not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapws.f90" line="21" column="1" bodyfile="/Users/milan/programs/iapws/src/iapws.f90" bodystart="22" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceiapws_1a1a0937b529edb298a3a4fa18192c8b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pure real(real64) function, public</type>
+        <definition>pure real(real64) function, public iapws::iapws_kd</definition>
+        <argsstring>(t, gas, solvent)</argsstring>
+        <name>iapws_kd</name>
+        <qualifiedname>iapws::iapws_kd</qualifiedname>
+        <param>
+          <type>real(real64), intent(in)</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>character(len=*), intent(in)</type>
+          <defname>gas</defname>
+        </param>
+        <param>
+          <type>character(len=*), intent(in)</type>
+          <defname>solvent</defname>
+        </param>
+        <briefdescription>
+<para>Compute the vapor-liquid constant for a given temperature and gas in solvent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in °C. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Solvents: H2O or D2O. Default is H2O. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>kd Vapor-liquid constant. NaN if gas not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapws.f90" line="44" column="1" bodyfile="/Users/milan/programs/iapws/src/iapws.f90" bodystart="45" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Main module for IAPWS computations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/milan/programs/iapws/src/iapws.f90" line="5" column="1"/>
+  </compounddef>
+</doxygen>

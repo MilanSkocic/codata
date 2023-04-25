@@ -1,0 +1,11 @@
+# sdist
+
+
+include INSTALL.TXT
+include LICENSE.TXT
+include MANIFEST.in
+include README.rst
+include requirements.txt
+
+# bdist if package_data=True 
+recursive-include pycodata *.c *.h *.f90

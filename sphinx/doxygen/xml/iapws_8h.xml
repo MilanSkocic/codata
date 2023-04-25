@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="iapws_8h" kind="file" language="C++">
+    <compoundname>iapws.h</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="iapws_8h_1a725fee90e1f82929c246c5375b79ad61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double iapws_capi_kh</definition>
+        <argsstring>(double T, char *gas, char *solvent, size_t size_gas, size_t size_solvent)</argsstring>
+        <name>iapws_capi_kh</name>
+        <param>
+          <type>double</type>
+          <declname>T</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>gas</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>solvent</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size_gas</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size_solvent</declname>
+        </param>
+        <briefdescription>
+<para>Compute the henry constant for a given temperature and gas in solvent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in °C. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Solvents: H2O or D2O. Default is H2O. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of gas string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of solvent string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>kh Henry constant in mole fraction per GPa. NaN if gas not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapws.h" line="18" column="15" declfile="/Users/milan/programs/iapws/src/iapws.h" declline="18" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="iapws_8h_1a513b67e7b9a44ad583c263cd864b1beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double iapws_capi_kd</definition>
+        <argsstring>(double T, char *gas, char *solvent, size_t size_gas, size_t size_solvent)</argsstring>
+        <name>iapws_capi_kd</name>
+        <param>
+          <type>double</type>
+          <declname>T</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>gas</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>solvent</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size_gas</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size_solvent</declname>
+        </param>
+        <briefdescription>
+<para>Compute the vapor-liquid constant for a given temperature and gas in solvent. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Temperature in °C. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Gas. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Solvents: H2O or D2O. Default is H2O. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_gas</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of gas string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size_solvent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of solvent string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>kd Vapor-liquid constant. NaN if gas not found. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/milan/programs/iapws/src/iapws.h" line="29" column="15" declfile="/Users/milan/programs/iapws/src/iapws.h" declline="29" declcolumn="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>C header for the IAPWS libary. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>IAPWS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IAPWS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="iapws_8h_1a725fee90e1f82929c246c5375b79ad61" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="iapws_8h_1a725fee90e1f82929c246c5375b79ad61" kindref="member">iapws_capi_kh</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*gas,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*solvent,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size_gas,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size_solvent);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="iapws_8h_1a513b67e7b9a44ad583c263cd864b1beb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="iapws_8h_1a513b67e7b9a44ad583c263cd864b1beb" kindref="member">iapws_capi_kd</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>T,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*gas,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*solvent,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size_gas,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>size_solvent);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/milan/programs/iapws/src/iapws.h"/>
+  </compounddef>
+</doxygen>

@@ -1,1 +1,0 @@
-Copy and paste the source code for the language of your choice.
