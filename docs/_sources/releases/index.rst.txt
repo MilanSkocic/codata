@@ -1,0 +1,13 @@
+Release Notes
+==================================
+
+.. toctree::
+    :maxdepth: 1
+
+    0.6.0-notes.rst
+    0.5.0-notes.rst
+    0.4.0-notes.rst
+    0.3.0-notes.rst
+    0.2.1-notes.rst
+    0.2.0-notes.rst
+    0.1.0-notes.rst

@@ -1,0 +1,7 @@
+Python wrapper
+================
+
+See :ref:`C Header <Cheader>`.
+
+.. automodule:: pycodata.codata
+    :members:
