@@ -34,3 +34,4 @@ dist/
 .DS_Store
 
 tests
+sphinx/doxygen/xml/
