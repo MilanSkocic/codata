@@ -1,19 +1,26 @@
-# Codata 0.4.0 Release Note
+Codata 0.4.0 Release Note
+===========================================
 
-## Changes
+Changes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Bring back pywrapper in the codata repository to sync versions.
 * Improvements of the documentation.
 
-## Download
+Download
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-[Codata Releases](https://github.com/MilanSkocic/codata/releases)
+`Codata Releases <https://github.com/MilanSkocic/codata/releases>`_
 
-## Contributors
+`PYPI <https://pypi.org/project/pycodata>`_
+
+Contributors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Milan Skocic
 
 
-## Commits
+Commits
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Full Changelog: https://github.com/MilanSkocic/codata/compare/0.3.0...0.4.0 

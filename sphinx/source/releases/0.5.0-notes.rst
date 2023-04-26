@@ -1,17 +1,27 @@
-# Codata 0.5.0 Release Note
+Codata 0.5.0 Release Note
+============================
 
-## Changes
+Changes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Changed the complete approach by not generating a library but only source files for different languages.
 * Available languages: Fortran, C, python, CPython
 
-## Download
+Download
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-[Codata Releases](https://github.com/MilanSkocic/codata/releases)
+`Codata Releases <https://github.com/MilanSkocic/codata/releases>`_
+
+`PYPI <https://pypi.org/project/pycodata>`_
 
 
-## Contributors
+
+Contributors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Milan Skocic
 
-## Commits
+Commits
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 **Full Changelog**: https://github.com/MilanSkocic/codata/compare/0.4.0...0.5.0

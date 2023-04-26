@@ -1,6 +1,8 @@
-# Codata 0.1.0 Release Note
+Codata 0.1.0 Release Note
+===============================
 
-## Changes
+Changes
+^^^^^^^^^^^^^^
 
 Implementation of:
 
@@ -9,15 +11,20 @@ Implementation of:
 * the C API and C header
 * the python wrapper (will be moved to its repository next release).
 
-## Download
+Download
+^^^^^^^^^^^^^^^^^^
 
-[Codata Releases](https://github.com/MilanSkocic/codata/releases)
+`Codata Releases <https://github.com/MilanSkocic/codata/releases>`_
 
-## Contributors
+`PYPI <https://pypi.org/project/pycodata>`_
+
+Contributors
+^^^^^^^^^^^^^^^^
 
 Milan Skocic
 
 
-## Commits
+Commits
+^^^^^^^^^^^^^^^^^^^^^
 
 Full Changelog: https://github.com/MilanSkocic/codata/compare/....0.1.0 

@@ -1,4 +1,4 @@
-Python wrapper pycodata
+pycodata
 =========================
 
 .. include:: ../../../pywrapper/README.rst

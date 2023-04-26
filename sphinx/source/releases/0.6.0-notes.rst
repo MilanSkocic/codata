@@ -12,6 +12,8 @@ Download
 
 `Codata Releases <https://github.com/MilanSkocic/codata/releases>`_
 
+`PYPI <https://pypi.org/project/pycodata>`_
+
 
 Contributors
 ^^^^^^^^^^^^^^^
@@ -20,4 +22,4 @@ Milan Skocic
 Commits
 ^^^^^^^^^
 
-**Full Changelog**: https://github.com/MilanSkocic/codata/compare/0.4.0...0.5.0
+**Full Changelog**: https://github.com/MilanSkocic/codata/compare/0.5.0...0.6.0
