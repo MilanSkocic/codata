@@ -16,6 +16,10 @@ PyMODINIT_FUNC PyInit_codata(void){
 	m = PyModule_Create(&codata);
 	d = PyModule_GetDict(m);
 
+	v = PyLong_FromLong(2018);
+	PyDict_SetItemString(d, "YEAR", v);
+	Py_INCREF(v);
+
 	v = PyFloat_FromDouble(ALPHA_PARTICLE_ELECTRON_MASS_RATIO);
 	PyDict_SetItemString(d, "ALPHA_PARTICLE_ELECTRON_MASS_RATIO", v);
 	Py_INCREF(v);

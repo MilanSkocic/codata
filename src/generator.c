@@ -20,8 +20,6 @@ struct codata_file_props{
     size_t index_header_end; /**< Number of lines for the header.*/
     char codata_path[18]; /**< Filepath to the raw codata constants.*/
     char year[5]; /**< Year of release of the codata constants.*/
-    char fmodule_path[18]; /**< Filepath of the generated Fortran module.*/
-
 };
 
 static const size_t LINE_LENGTH = 256; /**< Length of line.*/
@@ -500,6 +498,7 @@ void write_cpython_extension_end(FILE *fcode){
  * @param fcheader File pointer to the C header.
  * @param fpython File pointer to the python module.
  * @param fcpython File pointer to the cpython module.
+ * @param flist File pointer to the list of constants.
  * @param props Properties of the codata file.
  */
 void write_all_constants(FILE *fcodata, 
@@ -507,6 +506,7 @@ void write_all_constants(FILE *fcodata,
                          FILE *fcheader, 
                          FILE *fpython,
                          FILE *fcpython,
+                         FILE *flist,
                          struct codata_file_props *props){
 
     int empty;
@@ -522,6 +522,18 @@ void write_all_constants(FILE *fcodata,
     for (i=0; i<props->index_header_end;i++){
         empty = read_line(fcodata, line, LINE_LENGTH);
     }
+    // fortran
+    fprintf(ffortran, "integer(int32), parameter :: YEAR = %s\n\n", props->year);
+    // C
+    fprintf(fcheader, "const int YEAR = %s;\n\n", props->year);
+    // python
+    fprintf(fpython, "YEAR = %s\n\n", props->year);
+    // CPython
+    fprintf(fcpython, "\tv = PyLong_FromLong(%s);\n", props->year);
+    fprintf(fcpython, "\tPyDict_SetItemString(d, \"YEAR\", v);\n");
+    fprintf(fcpython, "\tPy_INCREF(v);\n\n");
+    // list
+    fprintf(flist, "YEAR = %s\n\n", props->year);
 
     for(i=0; i<props->n; i++){
         clean_line(line, LINE_LENGTH);
@@ -566,6 +578,11 @@ void write_all_constants(FILE *fcodata,
             fprintf(fcpython, "\tPy_INCREF(v);\n");
             fprintf(fcpython, "\n");
 
+            // flist
+            fprintf(flist, "%s = %s %s\n", name, value, unit);
+            fprintf(flist, "U_%s = %s %s\n", name, uncertainty, unit);
+            fprintf(flist, "\n");
+
         }
     }
 
@@ -592,9 +609,10 @@ int main(int argc, char **argv){
     FILE *fcheader;
     FILE *fpython;
     FILE *fcpython;
+    FILE *flist;
     struct codata_file_props *props;
 
-    struct codata_file_props props_current = {0, 0, "./codata_2018.txt"};
+    struct codata_file_props props_current = {0, 0, "./codata_2018.txt", "2018"};
 
     // avoid compiler complaining
     if (argc>1){
@@ -608,6 +626,7 @@ int main(int argc, char **argv){
     fcheader = fopen("ccodata.h", "w");
     fpython = fopen("pycodata.py", "w");
     fcpython = fopen("cpycodata.c", "w");
+    flist = fopen("codata.txt", "w");
     get_props(props);
     write_fortran_file_doc(ffortran);
     write_fortran_module_doc(ffortran);
@@ -615,7 +634,7 @@ int main(int argc, char **argv){
     write_c_header_doc(fcheader);
     write_python_module_doc(fpython);
     write_cpython_extension_declaration(fcpython);
-    write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, props);
+    write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, flist, props);
     write_fortran_module_end(ffortran);
     write_cpython_extension_end(fcpython);
     fclose(ffortran);

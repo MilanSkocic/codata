@@ -7,6 +7,8 @@ module codata
 use iso_fortran_env
 implicit none
 
+integer(int32), parameter :: YEAR = 2018
+
 real(real64), parameter:: &
 ALPHA_PARTICLE_ELECTRON_MASS_RATIO=7294.29954142d0 !<  
 real(real64), parameter :: &
