@@ -11,7 +11,7 @@ __all__ = ['__package_name__',
            '__license__']
 
 __package_name__ = "pycodata"
-__version__ = "0.5.1"
+__version__ = "0.6.0"
 __author__ = "Milan Skocic"
 __author_email__ = "milan.skocic@icloud.com"
 __maintainer__ = __author__
