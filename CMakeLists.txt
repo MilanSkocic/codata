@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 set(PROJECT_NAME "codata")
 
-project(${PROJECT_NAME} VERSION 0.6.0 LANGUAGES "C" DESCRIPTION "Sources generator.")
+project(${PROJECT_NAME} VERSION 0.7.0 LANGUAGES "C" DESCRIPTION "Sources generator.")
 
 add_subdirectory(src)
 
