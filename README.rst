@@ -8,7 +8,7 @@ The raw codata from http://physics.nist.gov/constants are parsed line by line an
 declarations as constants for different languages:
 
 * Fortran module named `fcodata.f90`
-* C header named `ccodata.`
+* C header named `ccodata.h`
 * Python module named `pycodata.py`
 * CPython extension named `cpycodata.c`
 
