@@ -1,0 +1,27 @@
+Codata 0.2.0 Release Note
+=============================
+
+Changes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Bug fixes for the codata 2010.
+* Bug fixes in the tests linked to the codata 2010.
+* Add python wrapper for the number of constants method. 
+
+Download
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+`Codata Releases <https://github.com/MilanSkocic/codata/releases>`_
+
+`PYPI <https://pypi.org/project/pycodata>`_
+
+Contributors
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Milan Skocic
+
+
+Commits
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Full Changelog: https://github.com/MilanSkocic/codata/compare/0.1.0...0.2.0 
