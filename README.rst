@@ -1,9 +1,6 @@
 Description
 ==============
 
-.. image:: ./media/logo-codata.png
-    :width: 200
-
 .. readme_inclusion_start
 
 `codata` provides, automatically generated, source files for the lastest codata constants (2018).
