@@ -1,11 +1,11 @@
-Codata 0.6.0 Release Note
+Codata 0.7.1 Release Note
 ============================
 
-Changes
+Summary
 ---------------
 
-* Created documentation.
-* Fixed missing uncertainties for Cpython.
+* Minor fixes in generator code
+* Add automatic copy of c sources for the python wrapper.
 
 Download
 ---------------
@@ -22,4 +22,4 @@ Milan Skocic
 Commits
 ---------
 
-**Full Changelog**: https://github.com/MilanSkocic/codata/compare/0.5.0...0.6.0
+**Full Changelog**: https://github.com/MilanSkocic/codata/compare/0.7.0...0.7.1
