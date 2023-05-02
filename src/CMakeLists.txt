@@ -15,4 +15,6 @@ add_custom_command(TARGET generator POST_BUILD
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/py${PROJECT_NAME}.py ${CMAKE_SOURCE_DIR}/src/py${PROJECT_NAME}.py
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/cpy${PROJECT_NAME}.c ${CMAKE_SOURCE_DIR}/src/cpy${PROJECT_NAME}.c
                    COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/${PROJECT_NAME}.txt ${CMAKE_SOURCE_DIR}/src/${PROJECT_NAME}.txt
+                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/cpy${PROJECT_NAME}.c ${CMAKE_SOURCE_DIR}/pywrapper/pycodata/cpy${PROJECT_NAME}.c
+                   COMMAND ${CMAKE_COMMAND} -E copy ${CMAKE_BINARY_DIR}/src/c${PROJECT_NAME}.h ${CMAKE_SOURCE_DIR}/pywrapper/pycodata/${PROJECT_NAME}.h
                    )
