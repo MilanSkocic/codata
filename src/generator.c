@@ -641,6 +641,7 @@ int main(int argc, char **argv){
     fclose(fcheader);
     fclose(fpython);
     fclose(fcodata);
+    fclose(flist);
 
 
     return EXIT_SUCCESS;
