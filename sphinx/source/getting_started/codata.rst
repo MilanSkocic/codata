@@ -1,4 +1,4 @@
-Codata
+codata
 ==============
 
 .. include:: ../../../README.rst
