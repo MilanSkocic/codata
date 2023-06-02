@@ -428,7 +428,7 @@ void write_fortran_module_doc(FILE *fcode){
  */
 void write_fortran_module_declaration(FILE *fcode){
     fprintf(fcode, "module codata\n");
-    fprintf(fcode, "%s\n", "use iso_fortran_env");
+    fprintf(fcode, "%s\n", "use iso_c_binding");
     fprintf(fcode, "%s\n", "implicit none");
     fprintf(fcode, "%s\n", "");
 }
@@ -522,7 +522,7 @@ void write_all_constants(FILE *fcodata,
         empty = read_line(fcodata, line, LINE_LENGTH);
     }
     // fortran
-    fprintf(ffortran, "integer(int32), protected :: YEAR = %s\n\n", props->year);
+    fprintf(ffortran, "integer(c_int), protected, bind(C,name=\"YEAR\") :: YEAR = %s\n\n", props->year);
     // C
     fprintf(fcheader, "extern const int YEAR;\n\n");
     // python
@@ -550,8 +550,8 @@ void write_all_constants(FILE *fcodata,
             rtrim(unit, UNITS_LENGTH);
 
             // fortran code
-            fprintf(ffortran, "real(real64), protected:: &\n%s=%s !< %s\n", name, value, unit);
-            fprintf(ffortran, "real(real64), protected :: &\nU_%s=%s !< %s\n", name, uncertainty, unit);
+            fprintf(ffortran, "real(c_double), protected, bind(C,name=\"%s\"):: &\n%s=%s !< %s\n", name, name, value, unit);
+            fprintf(ffortran, "real(c_double), protected, bind(C,name=\"U_%s\") :: &\nU_%s=%s !< %s\n", name, name, uncertainty, unit);
             fprintf(ffortran, "\n");
 
             // C code
