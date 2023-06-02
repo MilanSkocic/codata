@@ -3,11 +3,11 @@
 
 import os
 import sys, importlib.util
-sys.path.insert(0, os.path.abspath('../../pywrapper/'))
-cautodoc_root = os.path.abspath('../../pywrapper/')
+sys.path.insert(0, os.path.abspath('../../../pywrapper/'))
+cautodoc_root = os.path.abspath('../../../pywrapper/')
 
 # Import only version.py file for extracting the version
-spec = importlib.util.spec_from_file_location('version', '../../pywrapper/pycodata/version.py')
+spec = importlib.util.spec_from_file_location('version', '../../../pywrapper/pycodata/version.py')
 mod = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(mod)
 
@@ -22,11 +22,9 @@ needs_sphinx = '5.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.autodoc', 'sphinx.ext.doctest', 'sphinx.ext.intersphinx',
-              'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.imgmath', "breathe",
+              'sphinx.ext.todo', 'sphinx.ext.coverage', 'sphinx.ext.imgmath',
               'sphinx.ext.ifconfig', 'sphinx.ext.viewcode','numpydoc']
 
-breathe_default_project = mod.__package_name__
-breathe_projects = {mod.__package_name__: "../doxygen/xml/"}
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 # bibtex_bibfiles = ["references/codata.bib"]
@@ -42,7 +40,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = "codata"
-copyright = mod.__copyright__
+copyright = mod.__copyright__[14:]
 author = mod.__author__
 
 # The version info for the project you're documenting, acts as replacement for
@@ -84,15 +82,38 @@ html_theme = 'classic'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-html_theme_options = {}
+
 # html_theme_path = []
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 # html_static_path = []
-
-
+ford_blue = "#337ab7"
+ford_light_gray = "#9d9d9d"
+ford_dark_gray = "#101010"
+ford_code_gray = "#f5f5f5"
+ford_white = "#FFFFFF"
+ford_black = "#000000"
+ford_purple = "#734f96"
+html_theme_options = {"nosidebar": True,
+                      "rightsidebar": False,
+                      "headfont": "Helvetica Neue",
+                      "bodyfont": "Helvetica Neue",
+                        "body_max_width": "100%",
+                        "relbarbgcolor": ford_black,
+                      "relbartextcolor": ford_light_gray,
+                      "relbarlinkcolor": ford_light_gray,
+                      "sidebarbgcolor": ford_white,
+                      "sidebarlinkcolor": ford_blue,
+                      "footerbgcolor": ford_dark_gray,
+                      "sidebartextcolor": ford_black,
+                      "textcolor": ford_black,
+                      "headbgcolor": ford_blue,
+                      "headtextcolor": ford_white,
+                      "linkcolor": ford_blue,
+                      "visitedlinkcolor": ford_blue,
+                      "codebgcolor": ford_code_gray}
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.

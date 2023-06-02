@@ -12,14 +12,14 @@ codata
 How to install
 ^^^^^^^^^^^^^^^^^
 
-.. include:: ../../../INSTALL.rst
+.. include:: ../../../../INSTALL.rst
 
 Dependencies
 ^^^^^^^^^^^^^^^^^
 
-.. literalinclude:: ../../../REQUIREMENTS.txt
+.. literalinclude:: ../../../../REQUIREMENTS.txt
 
 License
 ^^^^^^^^^^^^^^^^^
 
-:download:`GNU General Public License v3 (GPLv3) <../../../LICENSE.txt>`
+:download:`GNU General Public License v3 (GPLv3) <../../../../LICENSE.txt>`
