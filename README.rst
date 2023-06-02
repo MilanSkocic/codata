@@ -16,12 +16,6 @@ The sources can be directly included in projects where they are needed.
 
 .. readme_inclusion_end
 
-Links:
-
-* Sources: https://github.com/MilanSkocic/codata.
-* Online documentation: https://milanskocic.github.io/codata/index.html.
-
-
 Installation
 ================
 

@@ -1,13 +1,9 @@
 codata
 ==============
 
-.. include:: ../../../README.rst
+.. include:: ../../../../README.rst
   :start-after: readme_inclusion_start
   :end-before: readme_inclusion_end
-
-.. only:: html
-
-  PDF documentation: :download:`codata <../../build/latex/codata.pdf>`. 
 
 How to install
 ^^^^^^^^^^^^^^^^^
