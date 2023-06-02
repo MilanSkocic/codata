@@ -36,3 +36,5 @@ dist/
 tests
 
 sphinx/doxygen/xml/
+
+*generator*

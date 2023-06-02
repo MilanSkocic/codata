@@ -506,7 +506,6 @@ void write_all_constants(FILE *fcodata,
                          FILE *fcheader, 
                          FILE *fpython,
                          FILE *fcpython,
-                         FILE *flist,
                          struct codata_file_props *props){
 
     int empty;
@@ -523,17 +522,15 @@ void write_all_constants(FILE *fcodata,
         empty = read_line(fcodata, line, LINE_LENGTH);
     }
     // fortran
-    fprintf(ffortran, "integer(int32), parameter :: YEAR = %s\n\n", props->year);
+    fprintf(ffortran, "integer(int32), protected :: YEAR = %s\n\n", props->year);
     // C
-    fprintf(fcheader, "const int YEAR = %s;\n\n", props->year);
+    fprintf(fcheader, "extern const int YEAR;\n\n");
     // python
     fprintf(fpython, "YEAR = %s\n\n", props->year);
     // CPython
-    fprintf(fcpython, "\tv = PyLong_FromLong(%s);\n", props->year);
+    fprintf(fcpython, "\tv = PyLong_FromLong(YEAR);\n");
     fprintf(fcpython, "\tPyDict_SetItemString(d, \"YEAR\", v);\n");
     fprintf(fcpython, "\tPy_INCREF(v);\n\n");
-    // list
-    fprintf(flist, "YEAR = %s\n\n", props->year);
 
     for(i=0; i<props->n; i++){
         clean_line(line, LINE_LENGTH);
@@ -553,15 +550,15 @@ void write_all_constants(FILE *fcodata,
             rtrim(unit, UNITS_LENGTH);
 
             // fortran code
-            fprintf(ffortran, "real(real64), parameter:: &\n%s=%s !< %s\n", name, value, unit);
-            fprintf(ffortran, "real(real64), parameter :: &\nU_%s=%s !< %s\n", name, uncertainty, unit);
+            fprintf(ffortran, "real(real64), protected:: &\n%s=%s !< %s\n", name, value, unit);
+            fprintf(ffortran, "real(real64), protected :: &\nU_%s=%s !< %s\n", name, uncertainty, unit);
             fprintf(ffortran, "\n");
 
             // C code
             convert_value_to_c(value);
             convert_value_to_c(uncertainty);
-            fprintf(fcheader, "const double %s=%s;/**< %s */\n", name, value, unit);
-            fprintf(fcheader, "const double U_%s=%s;/**< %s */\n", name, uncertainty, unit);
+            fprintf(fcheader, "extern const double %s;/**< %s */\n", name, unit);
+            fprintf(fcheader, "extern const double U_%s;/**< %s */\n", name, unit);
             fprintf(fcheader, "\n");
 
             // Python code
@@ -577,11 +574,6 @@ void write_all_constants(FILE *fcodata,
             fprintf(fcpython, "\tPyDict_SetItemString(d, \"U_%s\", v);\n", name);
             fprintf(fcpython, "\tPy_INCREF(v);\n");
             fprintf(fcpython, "\n");
-
-            // flist
-            fprintf(flist, "%s = %s %s\n", name, value, unit);
-            fprintf(flist, "U_%s = %s %s\n", name, uncertainty, unit);
-            fprintf(flist, "\n");
 
         }
     }
@@ -622,11 +614,10 @@ int main(int argc, char **argv){
     /* Codata current (2018)*/
     props = &props_current;
     fcodata =  fopen(props->codata_path, "r");
-    ffortran = fopen("fcodata.f90", "w");
-    fcheader = fopen("ccodata.h", "w");
-    fpython = fopen("pycodata.py", "w");
-    fcpython = fopen("cpycodata.c", "w");
-    flist = fopen("codata.txt", "w");
+    ffortran = fopen("../src/codata.f90", "w");
+    fcheader = fopen("../include/codata.h", "w");
+    fpython = fopen("../include/codata.txt", "w");
+    fcpython = fopen("../pywrapper/pycodata/cpycodata.c", "w");
     get_props(props);
     write_fortran_file_doc(ffortran);
     write_fortran_module_doc(ffortran);
@@ -634,14 +625,13 @@ int main(int argc, char **argv){
     write_c_header_doc(fcheader);
     write_python_module_doc(fpython);
     write_cpython_extension_declaration(fcpython);
-    write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, flist, props);
+    write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, props);
     write_fortran_module_end(ffortran);
     write_cpython_extension_end(fcpython);
     fclose(ffortran);
     fclose(fcheader);
     fclose(fpython);
     fclose(fcodata);
-    fclose(flist);
 
 
     return EXIT_SUCCESS;

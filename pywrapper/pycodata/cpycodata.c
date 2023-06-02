@@ -16,7 +16,7 @@ PyMODINIT_FUNC PyInit_codata(void){
 	m = PyModule_Create(&codata);
 	d = PyModule_GetDict(m);
 
-	v = PyLong_FromLong(2018);
+	v = PyLong_FromLong(YEAR);
 	PyDict_SetItemString(d, "YEAR", v);
 	Py_INCREF(v);
 
