@@ -3,8 +3,8 @@ program main
     use codata
     implicit none
     
-    print *, "c=",  SPEED_OF_LIGHT_IN_VACUUM
-    print *, "U(c)=", U_SPEED_OF_LIGHT_IN_VACUUM
+    print *, "c=",  speed_of_light_in_vacuum
+    print *, "u(c)=", u_speed_of_light_in_vacuum
 
 contains
 
