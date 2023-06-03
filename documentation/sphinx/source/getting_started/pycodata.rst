@@ -8,8 +8,7 @@ pycodata
 How to install
 ^^^^^^^^^^^^^^^
 
-.. literalinclude:: ../../../../pywrapper/INSTALL.txt
-    :language: bash
+.. include:: ../../../../pywrapper/INSTALL.rst
 
 Dependencies
 ^^^^^^^^^^^^^^^
