@@ -1,7 +1,4 @@
 LIBNAME="codata"
-STATIC_EXT=".a"
-SHARED_EXT=".so"
-SHARED_OPTIONS="-shared --whole-archive"
 
 # Default flags
 fcommon="-std=f2008 -pedantic -Wall -Wextra -fmax-errors=1 -fcheck=array-temps -fbacktrace -fcoarray=single"
@@ -23,15 +20,11 @@ if [[ "$OSTYPE" == "msys" ]]; then
     fpic=""
     opt=""
     DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
-    SHARED_EXT=".dll"
-    SHARED_OPTIONS="-shared --export-all-symbols"
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]];then
     static=""
     FPM_LDFLAGS=$osx_ld_flags
-    SHARED_EXT=".dylib"
-    SHARED_OPTIONS="-dynamiclib -all_load"
 fi
 
 FPM_FFLAGS="$fcommon $fpic $opt $static"
@@ -44,9 +37,6 @@ export DEFAULT_INSTALL_DIR
 export LIBNAME
 export PYW_DIR
 export PYW_MOD_DIR
-export SHARED_EXT
-export STATIC_EXT
-export SHARED_OPTIONS
 
 echo "OS TYPE=" $OSTYPE
 echo "DEFAULT INSTALL DIR=" $DEFAULT_INSTALL_DIR
@@ -55,6 +45,3 @@ echo "FPM_CFLAGS=" $FPM_CFLAGS
 echo "FPM_LDFLAGS=" $FPM_LDFLAGS
 echo "PYW DIR=" $PYW_DIR
 echo "PYW MOD DIR=" $PYW_MOD_DIR
-echo "STATIC EXT=" $STATIC_EXT
-echo "SHARED EXT=" $SHARED_EXT
-echo "SHARED OPTIONS"= $SHARED_OPTIONS

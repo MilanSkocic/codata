@@ -9,14 +9,20 @@ endif
 all: $(LIBNAME)
 
 $(LIBNAME): build
-	cp $(shell find ./build -type f -name "lib$(LIBNAME)*$(STATIC_EXT)") $(PYW_MOD_DIR)/
+	cp $(shell find ./build -type f -name lib$(LIBNAME).a) $(PYW_MOD_DIR)/
 
 build: clean
 	$(MAKE) -C ./srcgen
 	fpm build
 
-shared: build
-	gcc $(SHARED_OPTIONS) $(shell find ./build -type f -name lib$(LIBNAME)$(STATIC_EXT)) -o $(dir $(shell find ./build -type f -name "lib$(LIBNAME)*$(STATIC_EXT)"))lib$(LIBNAME)$(SHARED_EXT)
+shared_linux: build
+	gcc -shared -o $(dir $(shell find ./build -type f -name lib$(LIBNAME).a))lib$(LIBNAME).so -Wl,--whole-archive $(shell find ./build -type f -name lib$(LIBNAME).a) -Wl,--no-whole-archive
+
+shared_darwin: build
+	gcc -shared -o $(dir $(shell find ./build -type f -name lib$(LIBNAME).a))lib$(LIBNAME).dylib -Wl,-all_load $(shell find ./build -type f -name lib$(LIBNAME).a) -Wl, -noall_load
+
+shared_windows:
+	gcc -shared -o $(dir $(shell find ./build -type f -name lib$(LIBNAME).a))$(LIBNAME).dll -Wl,out-implib=lib$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(shell find ./build -type f -name lib$(LIBNAME).a) -Wl,--no-whole-archive 
 
 clean:
 	$(MAKE) -C ./srcgen clean
