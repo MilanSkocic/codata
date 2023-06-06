@@ -11,6 +11,7 @@ all: $(LIBNAME)
 $(LIBNAME): build
 	cp $(shell find ./build -type f -name lib$(LIBNAME).a) $(BUILD_DIR)
 	cp $(BUILD_DIR)/lib$(LIBNAME).a $(PYW_MOD_DIR)/
+	cp ./include/$(LIBNAME).h $(PYW_MOD_DIR)/
 
 build: clean
 	$(MAKE) -C ./srcgen
