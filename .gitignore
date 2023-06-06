@@ -23,6 +23,7 @@
 *.cmake
 *.mod
 *.egg-info
+*.pyd
 
 .idea
 .vscode

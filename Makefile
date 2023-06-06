@@ -17,22 +17,28 @@ build: clean
 	fpm build
 
 shared_linux: $(LIBNAME)
-	gcc -shared  -o $(BUILD_DIR)/lib$(LIBNAME).so -Wl,--whole-library $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-library
+	gcc -shared -o $(BUILD_DIR)/lib$(LIBNAME).so -Wl,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
 
 shared_darwin: $(LIBNAME)
-	gcc -dynamiclib  -o $(BUILD_DIR)/lib$(LIBNAME).dylib -Wl,-all_load $(BUILD_DIR)/lib$(LIBNAME).a -Wl,-noall_load
+	gcc -dynamiclib -o $(BUILD_DIR)/lib$(LIBNAME).dylib -Wl,-all_load $(BUILD_DIR)/lib$(LIBNAME).a -Wl,-noall_load
+
+shared_windows: $(LIBNAME)
+	gcc -shared -o $(BUILD_DIR)/lib$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/lib$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
 
 clean:
 	$(MAKE) -C ./srcgen clean
 	fpm clean --all
 
 install:
+	mkdir -p $(install_dir)/bin
+	mkdir -p $(install_dir)/include
+	mkdir -p $(install_dir)/lib
 	fpm install --prefix=$(install_dir)
 	cp -f ./include/*.h $(install_dir)/include
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).so $(install_dir)/lib | true
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dylib $(install_dir)/lib | true
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll.a $(install_dir)/lib | true
-	cp -f $(BUILD_DIR)/$(LIBNAME).dll $(install_dir)/bin | true
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(install_dir)/bin | true
 
 uninstall:
 	rm -f $(install_dir)/include/$(LIBNAME)*.h
@@ -41,4 +47,4 @@ uninstall:
 	rm -f $(install_dir)/lib/lib$(LIBNAME).so
 	rm -f $(install_dir)/lib/lib$(LIBNAME).dylib
 	rm -f $(install_dir)/lib/lib$(LIBNAME).dll.a
-	rm -f $(install_dir)/bin/$(LIBNAME).dll
+	rm -f $(install_dir)/bin/lib$(LIBNAME).dll
