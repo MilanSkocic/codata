@@ -17,15 +17,18 @@ FPM_FFLAGS=""
 FPM_LDFLAGS=""
 FPM_CFLAGS=""
 DEFAULT_INSTALL_DIR="$HOME/.local"
+PLATFORM="linux"
 
 if [[ "$OSTYPE" == "msys" ]]; then
     opt="-O0"
     DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
+    PLATFORM="windows"
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]];then
     static=""
     FPM_LDFLAGS=$osx_ld_flags
+    PLATFORM="darwin"
 fi
 
 FPM_FFLAGS="$fcommon $fpic $opt $static"
@@ -40,8 +43,10 @@ export PYW_DIR
 export PYW_MOD_DIR
 export BUILD_DIR
 export INCLUDE_DIR
+export PLATFORM
 
 echo "OS TYPE=" $OSTYPE
+echo "PLATFORM=" $PLATFORM
 echo "DEFAULT INSTALL DIR=" $DEFAULT_INSTALL_DIR
 echo "FPM_FLAGS=" $FPM_FFLAGS
 echo "FPM_CFLAGS=" $FPM_CFLAGS

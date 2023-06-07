@@ -1,5 +1,5 @@
 name = "codata"
-version = "0.8.0-rc.1"
+version = "0.8.0"
 license = "GNU General Public License v3 (GPLv3)"
 author = "Milan Skocic"
 maintainer = "milan.skocic@icloud.com"

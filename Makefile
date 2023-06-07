@@ -17,6 +17,8 @@ build: clean
 	$(MAKE) -C ./srcgen
 	fpm build
 
+shared: shared_$(PLATFORM)
+
 shared_linux: $(LIBNAME)
 	gcc -shared -o $(BUILD_DIR)/lib$(LIBNAME).so -Wl,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
 
