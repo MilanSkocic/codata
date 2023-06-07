@@ -14,7 +14,7 @@ source-form = "free"
 auto-executables = true
 auto-tests = true
 auto-examples = true
-module-naming = false
+module-naming = true
 
 [install]
 library = true
