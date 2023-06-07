@@ -1,6 +1,10 @@
 codata
 ==============
 
+.. image:: ../../../../media/logo-codata.png
+  :width: 200
+  :align: center
+
 .. include:: ../../../../README.rst
   :start-after: readme_inclusion_start
   :end-before: readme_inclusion_end
