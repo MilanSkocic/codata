@@ -11,6 +11,7 @@ osx_ld_flags="-static-libgfortran -static-libquadmath -static-libgcc"
 # environment variables
 PYW_DIR="./pywrapper"
 BUILD_DIR="./build"
+INCLUDE_DIR="./include"
 PYW_MOD_DIR="$PYW_DIR/py$LIBNAME"
 FPM_FFLAGS=""
 FPM_LDFLAGS=""
@@ -38,6 +39,7 @@ export LIBNAME
 export PYW_DIR
 export PYW_MOD_DIR
 export BUILD_DIR
+export INCLUDE_DIR
 
 echo "OS TYPE=" $OSTYPE
 echo "DEFAULT INSTALL DIR=" $DEFAULT_INSTALL_DIR
@@ -47,3 +49,4 @@ echo "FPM_LDFLAGS=" $FPM_LDFLAGS
 echo "PYW DIR=" $PYW_DIR
 echo "PYW MOD DIR=" $PYW_MOD_DIR
 echo "BUILD DIR" $BUILD_DIR
+echo "INCLUDE_DIR" $INCLUDE_DIR
