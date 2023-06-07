@@ -8,7 +8,7 @@ Fortran
 
 `Fortran code API <../ford/index.html>`_
 
-C API
+C
 -------
 
 .. literalinclude:: ../../../../include/codata.h

@@ -1,4 +1,4 @@
-An Makefile is provided which uses `fpm <https://fpm.fortran-lang.org/en/index.html>`_ for building the library
+A Makefile is provided which uses `fpm <https://fpm.fortran-lang.org/en/index.html>`_ for building the library
 with additional options:
 
 * compile the source generator and generate the sources
