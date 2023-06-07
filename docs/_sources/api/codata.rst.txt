@@ -3,6 +3,13 @@
 codata
 ===============
 
-The available codata constants are listed here:
+Fortran
+--------------
 
-.. literalinclude:: ../../../src/codata.txt
+`Fortran code API <../ford/index.html>`_
+
+C API
+-------
+
+.. literalinclude:: ../../../../include/codata.h
+    :language: C
