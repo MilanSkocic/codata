@@ -12,7 +12,6 @@ if __name__ == "__main__":
 
     mod_ext = Extension(name="pycodata.codata", 
                         sources=["./pycodata/cpycodata.c"], 
-                        include_dirs=["../include"],
                         extra_objects=["./pycodata/libcodata.a"])
     setup(name=mod.__package_name__,
         version=mod.__version__,
