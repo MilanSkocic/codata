@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>codata &#8212; codata 0.7.1 documentation</title>
+    <title>codata &#8212; codata 0.8.0-rc1 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css" />
     
@@ -34,7 +34,7 @@
         <li class="right" >
           <a href="index.html" title="Getting Started"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">codata 0.7.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">codata 0.8.0-rc1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting Started</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">codata</a></li> 
       </ul>
@@ -54,13 +54,14 @@ The raw codata are taken from <a class="reference external" href="http://physics
 with additional options:</p>
 <ul class="simple">
 <li><p>compile the source generator and generate the sources</p></li>
-<li><p>copy the library into the python wrapper folder</p></li>
+<li><p>copy needed sources into the python wrapper folder</p></li>
+<li><p>build a shared library</p></li>
 <li><p>install the C headers</p></li>
 <li><p>uninstall the library and headers</p></li>
 </ul>
 <p>On windows, <a class="reference external" href="https://www.msys2.org">msys2</a> needs to be installed and use
 the mingw64 or mingw32 terminals.</p>
-<p>Build</p>
+<p>Build: the configuration file will set all the environmental variables necessary for the compilation</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>configuration
 make
 </pre></div>
@@ -75,6 +76,10 @@ make
 </div>
 <p>Uninstall</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>uninstall
+</pre></div>
+</div>
+<p>If a shared is needed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>shared
 </pre></div>
 </div>
 <p>Then, if you need to build to Python wrapper from sources</p>
@@ -117,7 +122,7 @@ python<span class="w"> </span>setup.py<span class="w"> </span>build_ext<span cla
         <li class="right" >
           <a href="index.html" title="Getting Started"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">codata 0.7.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">codata 0.8.0-rc1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Getting Started</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">codata</a></li> 
       </ul>
