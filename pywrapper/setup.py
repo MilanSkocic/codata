@@ -10,7 +10,10 @@ spec.loader.exec_module(mod)
 
 if __name__ == "__main__":
 
-    mod_ext = Extension(name="pycodata.codata", sources=["./pycodata/cpycodata.c"])
+    mod_ext = Extension(name="pycodata.codata", 
+                        sources=["./pycodata/cpycodata.c"], 
+                        extra_objects=["./pycodata/libcodata.a"])
+    
     setup(name=mod.__package_name__,
         version=mod.__version__,
         maintainer=mod.__maintainer__,
@@ -23,8 +26,8 @@ if __name__ == "__main__":
         url='https://milanskocic.github.io/codata/index.html',
         download_url='https://github.com/MilanSkocic/codata',
         packages=find_packages(),
-        include_package_data=False,
-        python_requires='>=3.7',
+        include_package_data=True,
+        python_requires='>=3.8',
         install_requires=pathlib.Path("requirements.txt").read_text(encoding="utf-8").split('\n'),
         classifiers=["Development Status :: 5 - Production/Stable",
                     "Intended Audience :: Science/Research",

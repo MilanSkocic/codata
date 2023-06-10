@@ -1,0 +1,33 @@
+Codata 0.8.0 Release Note
+============================
+
+Summary
+---------------
+
+* Back to the approach with a library.
+* Compatible with fpm.
+* Configuration file for setting all the environmental variables.
+* Global makefile for building a static library (through fpm) and a shared library.
+* Automatic copy of the necessary sources for the python wrapper.
+* Python wrapper built with the static library
+   * no dependency on a shared library.
+   * sources and static library embeded in the python wrapper.
+* FORD for documenting the Fortran code.
+* Integration of the FORD documentation into the main documentation with sphinx.
+
+Download
+---------------
+
+`Codata Releases <https://github.com/MilanSkocic/codata/releases>`_
+
+`PYPI <https://pypi.org/project/pycodata>`_
+
+
+Contributors
+---------------
+Milan Skocic
+
+Commits
+---------
+
+**Full Changelog**: https://github.com/MilanSkocic/codata/compare/0.7.1...0.8.0

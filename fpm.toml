@@ -1,0 +1,28 @@
+name = "codata"
+version = "0.8.0"
+license = "GNU General Public License v3 (GPLv3)"
+author = "Milan Skocic"
+maintainer = "milan.skocic@icloud.com"
+copyright = "Copyright 2023, Milan Skocic"
+
+[fortran]
+implicit-typing = false
+implicit-external = false
+source-form = "free"
+
+[build]
+auto-executables = true
+auto-tests = true
+auto-examples = true
+module-naming = true
+
+[install]
+library = true
+
+[[example]]
+name = "example_in_f"
+main = "example_in_f.f90"
+
+[[example]]
+name = "example_in_c"
+main = "example_in_c.c"

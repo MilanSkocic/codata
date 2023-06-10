@@ -23,6 +23,7 @@
 *.cmake
 *.mod
 *.egg-info
+*.pyd
 
 .idea
 .vscode
@@ -33,4 +34,6 @@ dist/
 
 .DS_Store
 
-sphinx/doxygen/xml/
+*generator*
+
+pywrapper/pycodata/*.h
