@@ -40,11 +40,3 @@ If a shared is needed:
 .. code-block:: bash
 
     make shared
-
-Then, if you need to build to Python wrapper from sources
-
-.. code-block:: bash
-
-    cd pywrapper
-    python setup.py build_ext --inplace
-
