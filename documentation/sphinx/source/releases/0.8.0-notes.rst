@@ -11,7 +11,7 @@ Summary
 * Automatic copy of the necessary sources for the python wrapper.
 * Python wrapper built with the static library
    * no dependency on a shared library.
-   * sources and static library embeded in the sdist of the python wrapper.
+   * sources and static library embeded in the python wrapper.
 * FORD for documenting the Fortran code.
 * Integration of the FORD documentation into the main documentation with sphinx.
 
