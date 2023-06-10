@@ -21,7 +21,7 @@ md_extensions: markdown.extensions.toc
                markdown.extensions.smarty
 ---
 
-![Codata](../../../../../media/logo-codata.png)
+![Codata](../_images/logo-codata.png)
 
 This is the documentation of the Fortran code. 
 
