@@ -14,6 +14,4 @@ Welcome to codata documentation!
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`

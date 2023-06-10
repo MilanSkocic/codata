@@ -535,8 +535,8 @@ void write_all_constants(FILE *fcodata,
             rtrim(unit, UNITS_LENGTH);
 
             // fortran code
-            fprintf(ffortran, "real(c_double), protected, bind(C,name=\"%s\"):: &\n%s=%s !< %s\n", name, name, value, unit);
-            fprintf(ffortran, "real(c_double), protected, bind(C,name=\"U_%s\") :: &\nU_%s=%s !< %s\n", name, name, uncertainty, unit);
+            fprintf(ffortran, "real(c_double), protected, bind(C,name=\"%s\"):: &\n%s=%s !! %s\n", name, name, value, unit);
+            fprintf(ffortran, "real(c_double), protected, bind(C,name=\"U_%s\") :: &\nU_%s=%s !! %s\n", name, name, uncertainty, unit);
             fprintf(ffortran, "\n");
 
             // C code
