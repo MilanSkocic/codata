@@ -5,4 +5,3 @@ All constant as declared in the :ref:`codata <codataAPI>` are inserted at the to
 of the module.
 
 .. automodule:: pycodata
-    :members:
