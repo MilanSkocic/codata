@@ -10,8 +10,9 @@ Welcome to codata documentation!
    api/index.rst
 
 
+.. only:: html
 
-Indices and tables
-==================
+   Search
+   ==================
 
-* :ref:`search`
+   * :ref:`search`
