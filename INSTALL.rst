@@ -1,14 +1,6 @@
-A Makefile is provided which uses `fpm <https://fpm.fortran-lang.org/en/index.html>`_ for building the library
-with additional options:
+A Makefile is provided, which uses `fpm <https://fpm.fortran-lang.org/en/index.html>`_, for building the library.
 
-* compile the source generator and generate the sources
-* copy needed sources into the python wrapper folder
-* build a shared library
-* install the C headers 
-* uninstall the library and headers
-
-On windows, `msys2 <https://www.msys2.org>`_ needs to be installed and use 
-the mingw64 or mingw32 terminals.
+On windows, `msys2 <https://www.msys2.org>`_ needs to be installed.
 
 On Darwin, the `gcc <https://formulae.brew.sh/formula/gcc>`_ toolchain needs to be installed.
 
@@ -37,17 +29,9 @@ Uninstall
 
     make uninstall
 
-If a shared is needed:
-
-.. code-block:: bash
-
-    make shared
-
 If building the python wrapper is needed:
 
 .. code-block:: bash
 
-    # Linux and darwin
-    # Windows: you need to use the msvc environment
     cd pywrapper
     python setup.py bdist_wheel
