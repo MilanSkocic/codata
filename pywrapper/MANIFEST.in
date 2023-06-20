@@ -1,11 +1,14 @@
 # sdist
 
-
 include INSTALL.rst
 include LICENSE.TXT
 include MANIFEST.in
 include README.rst
 include requirements.txt
 
-# bdist if package_data=True 
-recursive-include pycodata *.c *.h *.f90 *.a
+include codata/*.c
+include codata/*.h
+include codata/libcodata.so
+include codata/libcodata.dylib
+include codata/libcodata.dll
+include codata/libcodata.dll.a

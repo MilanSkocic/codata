@@ -1,38 +1,25 @@
 LIBNAME="codata"
 
-# Default flags
-fcommon="-std=f2008 -pedantic -Wall -Wextra -fmax-errors=1 -fcheck=array-temps -fbacktrace -fcoarray=single"
-ccommon="-std=c11 -pedantic -Wall -Wextra"
-fpic="-fPIC"
-opt="-O3"
-static="-static"
-osx_ld_flags="-static-libgfortran -static-libquadmath -static-libgcc"
-
 # environment variables
 PYW_DIR="./pywrapper"
 BUILD_DIR="./build"
 INCLUDE_DIR="./include"
 PYW_MOD_DIR="$PYW_DIR/py$LIBNAME"
-FPM_FFLAGS=""
-FPM_LDFLAGS=""
-FPM_CFLAGS=""
+FPM_FFLAGS="-std=f2008 -pedantic -Wall -Wextra"
+FPM_CFLAGS="-std=c11 -pedantic -Wall -Wextra"
+FPM_LDFLAGS="-static"
 DEFAULT_INSTALL_DIR="$HOME/.local"
 PLATFORM="linux"
 
 if [[ "$OSTYPE" == "msys" ]]; then
-    opt="-O0"
     DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
     PLATFORM="windows"
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]];then
-    static=""
-    FPM_LDFLAGS=$osx_ld_flags
+    FPM_LDFLAGS="-static-libgfortran -static-libquadmath -static-libgcc"
     PLATFORM="darwin"
 fi
-
-FPM_FFLAGS="$fcommon $fpic $opt $static"
-FPM_CFLAGS="$ccommon $fpic $opt $static"
 
 export FPM_FFLAGS
 export FPM_CFLAGS
