@@ -6,9 +6,6 @@ include MANIFEST.in
 include README.rst
 include requirements.txt
 
-include codata/*.c
-include codata/*.h
-include codata/libcodata.so
-include codata/libcodata.dylib
-include codata/libcodata.dll
-include codata/libcodata.dll.a
+include pycodata/*.c
+include pycodata/*.h
+include pycodata/libcodata.*
