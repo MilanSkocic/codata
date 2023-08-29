@@ -1,7 +1,7 @@
 codata
 ==============
 
-.. image:: ../../../../media/logo-codata.png
+.. image:: ../media/logo-codata.png
   :width: 200
   :align: center
 
