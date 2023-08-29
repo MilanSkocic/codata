@@ -37,3 +37,9 @@ dist/
 *generator*
 
 pywrapper/pycodata/*.h
+pywrapper/pycodata/*.a
+pywrapper/pycodata/*.dll
+pywrapper/pycodata/*.dll.a
+pywrapper/pycodata/*.so
+pywrapper/pycodata/*.dylib
+pywrapper/pycodata/*.pyd
