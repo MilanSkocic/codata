@@ -9,6 +9,14 @@ The raw codata are taken from http://physics.nist.gov/constants.
 
 .. readme_inclusion_end
 
+To use `codata` within your `fpm <https://github.com/fortran-lang/fpm>`_ project,
+add the following to your `fpm.toml` file:
+
+.. code-block::
+
+    [dependencies]
+    codata = { git="https://github.com/MilanSkocic/codata.git" }
+
 Installation
 ================
 
