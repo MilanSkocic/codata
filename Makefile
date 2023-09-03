@@ -33,7 +33,7 @@ copy_a:
 copy_h: 
 	cp $(INCLUDE_DIR)/$(LIBNAME)*.h $(PYW_MOD_DIR)/
 
-copy_shared: copy_a
+copy_shared: 
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).so $(PYW_MOD_DIR) | true
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dylib $(PYW_MOD_DIR) | true
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(PYW_MOD_DIR) | true
