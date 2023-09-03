@@ -8,7 +8,10 @@ endif
 
 all: $(LIBNAME)
 
-$(LIBNAME): build copy_h copy_a shared copy_shared
+$(LIBNAME): generator build copy_h copy_a shared copy_shared
+
+generator:
+	make -C srcgen all
 
 build: clean
 	fpm build --profile=release
