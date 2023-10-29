@@ -8,7 +8,8 @@ Build: the configuration file will set all the environmental variables necessary
 
 .. code-block:: bash
 
-    source configuration
+    chmod +x configure.sh
+    . ./configure.sh
     make
 
 Run tests
