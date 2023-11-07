@@ -265,6 +265,82 @@ subroutine format_values(line, value)
 
 end subroutine
 
+subroutine format_uncertainties(line, uncertainty)
+    !! Format the uncertainties to be conform to Fortran double precsion. 
+    implicit none
+    character(len=*), intent(in) :: line
+        !! Line to be parsed.
+    character(len=*), intent(inout) :: uncertainty
+        !! String where the uncertainty will be copied.
+        
+    ! Local vars
+    integer(int32) :: i, j, start,end
+    logical  :: flag_exponent
+    character(len=UNCERTAINTIES_LENGTH) :: temp
+
+    flag_exponent = .false.
+    start = NAMES_LENGTH + VALUES_LENGTH
+    end = NAMES_LENGTH + VALUES_LENGTH + UNCERTAINTIES_LENGTH
+
+    do i=1, UNCERTAINTIES_LENGTH, 1
+        temp(i:i) = ' '
+    end do
+    j = 1
+    if(line(start+1:start+1) /= '(')then
+        temp(j:j) = line(start+1:start+1);
+    endif
+    j = j+1
+    do i=(start+2), end-1, 1
+        if (trim(line(start+1:end)) == "(exact)")then
+            temp(1:1) = '0';
+            temp(2:2) = '.';
+            temp(3:3) = '0';
+            exit
+        endif
+
+        if(isdigit(line(i:i)))then
+            temp(j:j) = line(i:i);
+            j=j+1
+        endif
+
+        if(line(i:i)=='.' .and. isdigit(line(i-1:i-1)) .and. isdigit(line(i+1:i+1)))then
+            temp(j:j) = line(i:i);
+            j=j+1;
+        endif
+
+        if(line(i:i)=='e')then
+            temp(j:j) = line(i:i);
+            j=j+1
+        endif
+
+        if(line(i:i)=='-' .or. line(i:i)=='+')then
+            temp(j:j) = line(i:i);
+            j=j+1
+        endif
+    enddo
+    do i=1, UNCERTAINTIES_LENGTH, 1
+        uncertainty(i:i) = temp(i:i)
+    end do
+    do i=1, UNCERTAINTIES_LENGTH, 1
+        if (uncertainty(i:i)=='e')then
+            uncertainty(i:i) = 'd';
+        end if
+        if(uncertainty(i:i) == 'd')then
+            flag_exponent = .true.;
+        endif
+    end do
+    if (flag_exponent .eqv. .false.)then
+        do i=UNCERTAINTIES_LENGTH, 1, -1
+            if(isdigit(uncertainty(i:i)))then
+                uncertainty(i+1:i+1) = 'd';
+                uncertainty(i+2:i+2) = '0';
+                exit
+            end if
+        end do
+    end if
+
+end subroutine
+
 subroutine format_units(line, unit)
     !! Format the units to be conform to Fortran strings.
     implicit none
@@ -340,14 +416,16 @@ subroutine write_all_constants(fcodata, ffortran, props)
         if(len(line)>0)then
             call format_names(line, name);
             call format_values(line, value);
-            ! call format_uncertainties(line, uncertainty)
+            call format_uncertainties(line, uncertainty)
             call format_units(line, unit)
+            
             ! fortran code
             write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="'//trim(name)//'"):: &', &
             trim(name)//'='//trim(value)//' !! '//trim(unit)
             write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="U_'//trim(name)//'") :: &', &
-            "U_"//trim(name)//'='//trim(uncertainty)//' !! '//trim(unit)
+            "U_"//trim(name)//'='//trim(uncertainty)//' !! '//unit
             write(ffortran, "(A)") ""
+
         end if
 
     end do
