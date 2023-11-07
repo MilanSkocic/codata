@@ -12,7 +12,7 @@ srcgen: generator
 srcgenf: generatorf
 	./generatorf
 
-generatorf: fmain.o utilities.o
+generatorf: utilities.o fortran_code.o fmain.o
 	$(FC) $^ -o generatorf
 
 generator: main.o
