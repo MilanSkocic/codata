@@ -17,7 +17,6 @@ module utils
     integer(int32) :: UNCERTAINTIES_LENGTH = 25 !! Length of column uncertainty
     integer(int32) :: UNITS_LENGTH = 25 !! Length of column unit
 
-    integer(int32), parameter :: ASCII_UNDERSCORE = iachar("_")
     
 contains
 
@@ -66,7 +65,7 @@ pure function isdigit(c)result(r)
     if(i>=48 .and. i<=57)then
         r = .true.
     else 
-        .false.
+        r= .false.
     endif
 
 end function
@@ -158,7 +157,7 @@ subroutine format_names(line, name)
     character(len=*), intent(inout) :: name
         ! String where the name will be copied.
     ! Local vars
-    integer(int32) :: i, c
+    integer(int32) :: i
 
     do i=1, len(name)
         if(.not. isalnum(line(i:i)))then
@@ -169,8 +168,7 @@ subroutine format_names(line, name)
     end do  
 
     do i=len(name), 1, -1
-        c = ichar(name(i:i))
-        if(c /= ASCII_UNDERSCORE)then
+        if(name(i:i) /= "_")then
             exit
         else
             name(i:i) = " "
@@ -191,14 +189,115 @@ subroutine format_values(line, value)
         ! String where the value will be copied.
     
     ! Local vars
-    integer(int32) :: i, j, 
+    integer(int32) :: i, j 
     logical flag_decimal, flag_exponent
     character(len=VALUES_LENGTH) :: temp
 
+    flag_decimal = .false.
+    flag_exponent = .false.
+
+    do i=1, len(value)
+        temp(i:i) = " "
+    end do
     
+    j = 1
+    temp(j:j) = line(NAMES_LENGTH+1:NAMES_LENGTH+1)
+    j = j+1;
+    do i=(NAMES_LENGTH+2), (NAMES_LENGTH+VALUES_LENGTH-1), 1
+        if(isdigit(line(i:i)))then
+            temp(j:j) = line(i:i)
+            j = j + 1
+        endif
+        if(line(i:i) == "." .and. isdigit(line(i-1:i-1)) .and. isdigit(line(i+1:i+1)))then
+            temp(j:j) = line(i:i)
+            j = j + 1
+        endif
+        if(line(i:i) == "e")then
+            temp(j:j) = line(i:i)
+            j = j+1
+        endif
+        if(line(i:i) == "-" .or. line(i:i) == "+")then
+            temp(j:j) = line(i:i)
+            j = j+1
+        endif
+    end do
+
+    do i=1, VALUES_LENGTH
+        value(i:i) = temp(i:i)
+    end do
+    
+    do i=1, VALUES_LENGTH, 1
+        if(value(i:i) == ".")then
+            flag_decimal = .true.
+            exit
+        else
+            exit
+        end if
+    end do
+
+    do i=1, VALUES_LENGTH, 1
+        if(value(i:i) == "e")then
+            value(i:i) = achar(iachar("d"))
+        endif
+        if(value(i:i) == "d")then
+            flag_exponent = .true.
+        endif
+    end do
+
+    if(flag_decimal .eqv. .false. .and. flag_exponent .eqv. .false.)then
+        do i=VALUES_LENGTH, 1, -1
+            if(isdigit(value(i:i)))then
+                value(i+1:i+1) = achar(iachar("."))
+                value(i+2:i+2) = achar(iachar("0"))
+            endif
+        end do
+    endif
+
+    if(flag_exponent .eqv. .false.)then
+        do i=VALUES_LENGTH, 1, -1
+            if(isdigit(value(i:i)))then
+                value(i+1:i+1) = achar(iachar("d"))
+                value(i+2:i+2) = achar(iachar("0"))
+                exit
+            end if
+        end do
+    end if
 
 end subroutine
 
+subroutine format_units(line, unit)
+    !! Format the units to be conform to Fortran strings.
+    implicit none
+    ! Arguments
+    character(len=*), intent(in) :: line
+        ! Line to be parsed
+    character(len=*), intent(inout) :: unit
+        ! String where the unit will be copied.
+    ! Local vars
+    integer(int32) :: i
+
+    do i=1, UNITS_LENGTH, 1
+        unit(i:i) = line(i+NAMES_LENGTH+VALUES_LENGTH+UNCERTAINTIES_LENGTH:&
+                         i+NAMES_LENGTH+VALUES_LENGTH+UNCERTAINTIES_LENGTH)
+    enddo
+
+end subroutine
+
+subroutine convert_value_to_c(value)
+    !! Convert power symbol d to e for C code
+    ! Arguments
+    character(len=*), intent(inout) :: value
+        ! Value to be converted.
+    
+    ! Local vars
+    integer(int32) :: i
+
+    do i=1, VALUES_LENGTH, 1
+        if(value(i:i) == 'd')then
+            value(i:i) = achar(iachar("e"))
+        end if
+    end do
+end subroutine
 
 subroutine write_all_constants(fcodata, ffortran, props)
     !! Generate all constants in the Fortran module.
@@ -240,11 +339,14 @@ subroutine write_all_constants(fcodata, ffortran, props)
         read(fcodata, "(A)") line
         if(len(line)>0)then
             call format_names(line, name);
+            call format_values(line, value);
+            ! call format_uncertainties(line, uncertainty)
+            call format_units(line, unit)
             ! fortran code
-            write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="'//trim(name)//'") :: &', &
+            write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="'//trim(name)//'"):: &', &
             trim(name)//'='//trim(value)//' !! '//trim(unit)
             write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="U_'//trim(name)//'") :: &', &
-            "U_"//trim(name)//'='//trim(value)//' !! '//trim(unit)
+            "U_"//trim(name)//'='//trim(uncertainty)//' !! '//trim(unit)
             write(ffortran, "(A)") ""
         end if
 
