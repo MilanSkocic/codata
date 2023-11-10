@@ -375,7 +375,7 @@ subroutine convert_value_to_c(value)
     end do
 end subroutine
 
-subroutine write_all_constants(fcodata, ffortran, props)
+subroutine write_all_constants(fcodata, ffortran, fcheader, props)
     !! Generate all constants in the Fortran module.
     implicit none
     ! Arguments
@@ -383,7 +383,9 @@ subroutine write_all_constants(fcodata, ffortran, props)
         !! File unit of the codata file.
     integer(int32), intent(in) :: ffortran
         !! ffortran File unit of the Fortran module.
-        !! fcheader File unit of the C header.
+    integer(int32), intent(in) :: fcheader
+        !! File unit of the C header.
+    
         !! fpython File unit of the python module.
         !! fcpython File unit of the cpython module.
         !! flist File unit of the list of constants.
@@ -405,6 +407,8 @@ subroutine write_all_constants(fcodata, ffortran, props)
 
     ! fortran
     write(ffortran, "(A,/)") 'integer(c_int), protected, bind(C,name="YEAR") :: YEAR = ' // props%year
+    ! C Code
+    write(fcheader, "(A,/)") "ADD_IMPORT extern const int YEAR;"
 
     do i=1, props%n
         call clean_line(line)
@@ -423,8 +427,16 @@ subroutine write_all_constants(fcodata, ffortran, props)
             write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="'//trim(name)//'"):: &', &
             trim(name)//'='//trim(value)//' !! '//trim(unit)
             write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="U_'//trim(name)//'") :: &', &
-            "U_"//trim(name)//'='//trim(uncertainty)//' !! '//unit
+            "U_"//trim(name)//'='//trim(uncertainty)//' !! '//trim(unit)
             write(ffortran, "(A)") ""
+
+            ! C Code
+            call convert_value_to_c(value);
+            call convert_value_to_c(uncertainty);
+            write(fcheader, "(A)") "ADD_IMPORT extern const double "//trim(name)//";/**< "//trim(unit)//" */"
+            write(fcheader, "(A)") "ADD_IMPORT extern const double U_"//trim(name)//";/**< "//trim(unit)//" */"
+            write(fcheader, "(A)")  
+            
 
         end if
 

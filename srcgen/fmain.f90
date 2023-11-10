@@ -2,11 +2,13 @@ program generator
     use iso_fortran_env
     use utils
     use fortran_code
+    use c_code
     implicit none
     
     type(codata_file_props) :: props
     integer(int32) :: fcodata
     integer(int32) :: ffortran
+    integer(int32) :: fcheader
     integer(int32) :: unit
     logical :: exist
 
@@ -30,12 +32,22 @@ program generator
         close(unit=unit, status="delete")
     endif
     open(file="../src/codata_.f90", newunit=ffortran, status="new", action="write")
+    
+    print *, "Opening C header file..."
+    inquire(file="../include/codata.h", exist=exist)
+    if(exist)then
+        open(file="../include/codata.h", newunit=unit, status="old")
+        close(unit=unit, status="delete")
+    endif
+    open(file="../include/codata.h", newunit=fcheader, status="new", action="write")
 
     print *, "Writing fortran module declaration..."
     call write_fortran_module_declaration(ffortran)
+    print *, "Writing C header doc..."
+    call write_c_header_doc(fcheader)
 
     print *, "Writing all constants..."
-    call write_all_constants(fcodata, ffortran, props)
+    call write_all_constants(fcodata, ffortran, fcheader, props)
 
     print *, "Writing fortran module end..."
     call write_fortran_module_end(ffortran)
