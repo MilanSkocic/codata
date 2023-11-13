@@ -26,12 +26,12 @@ program generator
     open(file=props%codata_path, newunit=fcodata, status="old", action="read")
     
     print *, "Opening ffortran file..."
-    inquire(file="../src/codata_.f90", exist=exist)
+    inquire(file="../src/codata.f90", exist=exist)
     if(exist)then
-        open(file="../src/codata_.f90", newunit=unit, status="old")
+        open(file="../src/codata.f90", newunit=unit, status="old")
         close(unit=unit, status="delete")
     endif
-    open(file="../src/codata_.f90", newunit=ffortran, status="new", action="write")
+    open(file="../src/codata.f90", newunit=ffortran, status="new", action="write")
     
     print *, "Opening C header file..."
     inquire(file="../include/codata.h", exist=exist)
