@@ -375,7 +375,7 @@ subroutine convert_value_to_c(value)
     end do
 end subroutine
 
-subroutine write_all_constants(fcodata, ffortran, fcheader, props)
+subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, props)
     !! Generate all constants in the Fortran module.
     implicit none
     ! Arguments
@@ -385,10 +385,9 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, props)
         !! ffortran File unit of the Fortran module.
     integer(int32), intent(in) :: fcheader
         !! File unit of the C header.
-    
+    integer(int32), intent(in) :: fpython
         !! fpython File unit of the python module.
         !! fcpython File unit of the cpython module.
-        !! flist File unit of the list of constants.
     type(codata_file_props), intent(in) :: props
         !! props Properties of the codata file.
 
@@ -409,6 +408,8 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, props)
     write(ffortran, "(A,/)") 'integer(c_int), protected, bind(C,name="YEAR") :: YEAR = ' // props%year
     ! C Code
     write(fcheader, "(A,/)") "ADD_IMPORT extern const int YEAR;"
+    ! python
+    write(fpython, "(A,/)") 'YEAR = '//props%year
 
     do i=1, props%n
         call clean_line(line)
@@ -436,6 +437,11 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, props)
             write(fcheader, "(A)") "ADD_IMPORT extern const double "//trim(name)//";/**< "//trim(unit)//" */"
             write(fcheader, "(A)") "ADD_IMPORT extern const double U_"//trim(name)//";/**< "//trim(unit)//" */"
             write(fcheader, "(A)")  
+            
+            ! Python code
+            write(fpython, "(A)") trim(name)//"="//trim(value)//' # '//trim(unit)
+            write(fpython, "(A)") "U_"//trim(name)//"="//trim(uncertainty)//" # "//trim(unit)
+            write(fpython, "(A)") ""
             
 
         end if
