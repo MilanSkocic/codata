@@ -7,7 +7,7 @@ contains
 
 
 subroutine write_python_module_doc(fcode)
-    !! brief Generate the python module declaration.
+    !! Generate the python module declaration.
     implicit none
     ! Arguments
     integer(int32), intent(in) :: fcode

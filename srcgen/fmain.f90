@@ -4,6 +4,7 @@ program generator
     use fortran_code
     use c_code
     use py_code
+    use cpy_code
     implicit none
     
     type(codata_file_props) :: props
@@ -11,6 +12,7 @@ program generator
     integer(int32) :: ffortran
     integer(int32) :: fcheader
     integer(int32) :: fpython
+    integer(int32) :: fcpython
     integer(int32) :: unit
     logical :: exist
 
@@ -53,6 +55,15 @@ program generator
         close(unit=unit, status="delete")
     endif
     open(file="../include/codata.txt", newunit=fpython, status="new", action="write")
+    
+    ! CPYTHON
+    print *, "Opening cpython..."
+    inquire(file="../pywrapper/pycodata/cpycodata.c", exist=exist)
+    if(exist)then
+        open(file="../pywrapper/pycodata/cpycodata.c", newunit=unit, status="old")
+        close(unit=unit, status="delete")
+    endif
+    open(file="../pywrapper/pycodata/cpycodata.c", newunit=fcpython, status="new", action="write")
 
 
     print *, "Writing fortran module declaration..."
@@ -61,13 +72,16 @@ program generator
     call write_c_header_doc(fcheader)
     print *, "Writing Python code as txt doc..."
     call write_python_module_doc(fpython)
+    print *, "Writing Cpython code..."
+    call write_cpython_extension_declaration(fcpython);
 
     print *, "Writing all constants..."
-    call write_all_constants(fcodata, ffortran, fcheader, fpython, props)
+    call write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, props)
 
     print *, "Writing fortran module end..."
     call write_fortran_module_end(ffortran)
-
+    print *, "Writing cpython end..."
+    call write_cpython_extension_end(fcpython);
 
     print *, "Closing codata file..."
     close(fcodata)

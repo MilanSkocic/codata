@@ -375,7 +375,7 @@ subroutine convert_value_to_c(value)
     end do
 end subroutine
 
-subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, props)
+subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, props)
     !! Generate all constants in the Fortran module.
     implicit none
     ! Arguments
@@ -387,6 +387,7 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, props)
         !! File unit of the C header.
     integer(int32), intent(in) :: fpython
         !! fpython File unit of the python module.
+    integer(int32), intent(in) :: fcpython
         !! fcpython File unit of the cpython module.
     type(codata_file_props), intent(in) :: props
         !! props Properties of the codata file.
@@ -410,6 +411,11 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, props)
     write(fcheader, "(A,/)") "ADD_IMPORT extern const int YEAR;"
     ! python
     write(fpython, "(A,/)") 'YEAR = '//props%year
+    ! cpython
+    write(fcpython, "(4X, A)") "v = PyLong_FromLong(YEAR);"
+    write(fcpython, "(4X, A)") 'PyDict_SetItemString(d, "YEAR", v);'
+    write(fcpython, "(4X, A)") "Py_INCREF(v);"
+    write(fcpython, "(A)") ""
 
     do i=1, props%n
         call clean_line(line)
@@ -442,6 +448,16 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, props)
             write(fpython, "(A)") trim(name)//"="//trim(value)//' # '//trim(unit)
             write(fpython, "(A)") "U_"//trim(name)//"="//trim(uncertainty)//" # "//trim(unit)
             write(fpython, "(A)") ""
+
+            ! CPython code
+            write(fcpython, "(4X, A)") "v = PyFloat_FromDouble("//trim(name)//");"
+            write(fcpython, "(4X, A)") 'PyDict_SetItemString(d, "'//trim(name)//'", v);'
+            write(fcpython, "(4X, A)") "Py_INCREF(v);"
+            write(fcpython, "(4X, A)") "v = PyFloat_FromDouble(U_"//trim(name)//");"
+            write(fcpython, "(4X, A)") 'PyDict_SetItemString(d, "U_'//trim(name)//'", v);'
+            write(fcpython, "(4X, A)") "Py_INCREF(v);"
+            write(fcpython, "(A)") ""
+
             
 
         end if
