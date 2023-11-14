@@ -91,5 +91,7 @@ program generator
     close(fcheader)
     print *, "Closing python as txt header file..."
     close(fpython)
+    print *, "Closing cpython file..."
+    close(fcpython)
 
 end program
