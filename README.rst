@@ -4,7 +4,9 @@ Description
 .. |cidev| image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=dev
 .. |cimain| image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main
 
-branch dev: |cidev| and branch main: |cimain|
+dev: |cidev| 
+
+main: |cimain|
 
 .. readme_inclusion_start
 
