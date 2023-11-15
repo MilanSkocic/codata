@@ -1,12 +1,10 @@
-Description
-==============
-
 .. |cidev| image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=dev
 .. |cimain| image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main
 
-dev: |cidev| 
+dev |cidev| / main |cimain|
 
-main: |cimain|
+Description
+==============
 
 .. readme_inclusion_start
 
