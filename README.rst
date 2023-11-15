@@ -1,7 +1,7 @@
 Description
 ==============
 
-.. image:: https://github.com/MilanSkocic/ecx/actions/workflows/ci.yml/badge.svg?branch=main
+.. image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main
 
 .. readme_inclusion_start
 
