@@ -2,9 +2,11 @@ Description
 ==============
 
 branch dev: 
+
 .. image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=dev
 
 branch main:
+
 .. image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main
 
 .. readme_inclusion_start
