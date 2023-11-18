@@ -10,24 +10,25 @@ fi
 rm -r build
 rm -r dist
 rm -r *egg-info
-rm ./pyiapws/g704*.so
-
-py311 setup.py sdist
+rm ./pycodata/codata*.so
 
 py38 setup.py build_ext --inplace
 py39 setup.py build_ext --inplace
 py310 setup.py build_ext --inplace
 py311 setup.py build_ext --inplace
+py312 setup.py build_ext --inplace
 
-py38 setup.py bdist_wheel
-py39 setup.py bdist_wheel
-py310 setup.py bdist_wheel
-py311 setup.py bdist_wheel
+py38 -m build
+py39 -m build
+py310 -m build
+py311 -m build
+py312 -m build
 
 py38 -m unittest -v
 py39 -m unittest -v
 py310 -m unittest -v
 py311 -m unittest -v
+py312 -m unittest -v
 
 if [[ "$OSTYPE" == "linux"* ]];then
     cd ./dist
