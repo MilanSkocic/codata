@@ -18,11 +18,13 @@ py310 setup.py build_ext --inplace
 py311 setup.py build_ext --inplace
 py312 setup.py build_ext --inplace
 
-py38 -m build
-py39 -m build
-py310 -m build
-py311 -m build
-py312 -m build
+py312 -m build --no-isolation --sdist
+
+py38 -m build --no-isolation --wheel
+py39 -m build --no-isolation --wheel
+py310 -m build --no-isolation --wheel
+py311 -m build --no-isolation --wheel
+py312 -m build --no-isolation --wheel
 
 py38 -m unittest -v
 py39 -m unittest -v
