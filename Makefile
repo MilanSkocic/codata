@@ -45,6 +45,9 @@ copy_shared_windows:
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(PYW_MOD_DIR)
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll.a $(PYW_MOD_DIR)
 
+test: build
+	fpm test --profile=release
+
 clean:
 	fpm clean --all
 	rm -f src/*.mod
