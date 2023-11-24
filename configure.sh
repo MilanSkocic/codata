@@ -19,7 +19,8 @@ ARCH="${tmp_arr[0]}"
 IFS="="
 while read -r line; do
     # Reading line by line
-    if [[ $line == "version"* ]] then
+    if [[ $line == "version"* ]] 
+    then
         read -a tmp_arr <<< "$line"
         VERSION=${tmp_arr[1]:2:5}
         break
