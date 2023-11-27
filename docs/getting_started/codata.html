@@ -5,11 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>codata &#8212; codata 0.8.1 documentation</title>
+    <title>codata &#8212; codata 0.8.2 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
     <link rel="stylesheet" type="text/css" href="../_static/classic.css?v=7ea05869" />
     
-    <script src="../_static/documentation_options.js?v=ec16d22d"></script>
+    <script src="../_static/documentation_options.js?v=dbee5847"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     
@@ -33,7 +33,7 @@
         <li class="right" >
           <a href="index.html" title="Getting Started"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">codata 0.8.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">codata 0.8.2 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Getting Started</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">codata</a></li> 
       </ul>
@@ -51,11 +51,13 @@ It also  provides a API for the C language.
 The raw codata are taken from <a class="reference external" href="http://physics.nist.gov/constants">http://physics.nist.gov/constants</a>.</p>
 <section id="how-to-install">
 <h2>How to install<a class="headerlink" href="#how-to-install" title="Link to this heading">¶</a></h2>
-<p>A Makefile is provided, which uses <a class="reference external" href="https://fpm.fortran-lang.org/en/index.html">fpm</a>, for building the library.</p>
+<p>A Makefile is provided, which uses <a class="reference external" href="https://fpm.fortran-lang.org/en/index.html">fpm</a>,
+for building the library.</p>
 <p>On windows, <a class="reference external" href="https://www.msys2.org">msys2</a> needs to be installed.</p>
 <p>On Darwin, the <a class="reference external" href="https://formulae.brew.sh/formula/gcc">gcc</a> toolchain needs to be installed.</p>
 <p>Build: the configuration file will set all the environmental variables necessary for the compilation</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>configuration
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>+x<span class="w"> </span>configure.sh
+.<span class="w"> </span>./configure.sh
 make
 </pre></div>
 </div>
@@ -79,8 +81,8 @@ python<span class="w"> </span>setup.py<span class="w"> </span>bdist_wheel
 </section>
 <section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gcc</span><span class="o">&gt;=</span><span class="mi">9</span>
-<span class="n">gfortran</span><span class="o">&gt;=</span><span class="mi">9</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gcc</span><span class="o">&gt;=</span><span class="mi">10</span>
+<span class="n">gfortran</span><span class="o">&gt;=</span><span class="mi">10</span>
 </pre></div>
 </div>
 </section>
@@ -111,14 +113,14 @@ python<span class="w"> </span>setup.py<span class="w"> </span>bdist_wheel
         <li class="right" >
           <a href="index.html" title="Getting Started"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">codata 0.8.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">codata 0.8.2 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" >Getting Started</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">codata</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
     &#169; Copyright 2023 Milan Skocic.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>
