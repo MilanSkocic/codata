@@ -1,4 +1,4 @@
-A Makefile is provided, which uses `fpm <https://fpm.fortran-lang.org/en/index.html>`_, 
+A Makefile is provided, which uses `fpm <https://fpm.fortran-lang.org>`_, 
 for building the library.
 
 On windows, `msys2 <https://www.msys2.org>`_ needs to be installed.
