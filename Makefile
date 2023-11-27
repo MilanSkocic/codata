@@ -6,7 +6,10 @@ endif
 
 .PHONY: all clean install uninstall copy_h copy_a shared_linux shared_windows shared_darwin
 
-all: $(LIBNAME)
+all: generator $(LIBNAME)
+
+generator:
+	make -C ./srcgen
 
 $(LIBNAME): build copy_h copy_a shared copy_shared
 
@@ -15,40 +18,63 @@ build: clean
 
 shared: shared_$(PLATFORM)
 
+copy_shared: copy_shared_$(PLATFORM)
+
 shared_linux:
 	gfortran -shared -o $(BUILD_DIR)/lib$(LIBNAME).so -Wl,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
 
 shared_darwin: 
-	gfortran -dynamiclib -install_name @rpath/lib$(LIBNAME).dylib -static-libgfortran -static-libquadmath -static-libgcc -o $(BUILD_DIR)/lib$(LIBNAME).dylib -Wl,-all_load $(BUILD_DIR)/lib$(LIBNAME).a -Wl,-noall_load
+	gfortran -dynamiclib -install_name @rpath/lib$(LIBNAME).dylib $(FPM_LDFLAGS) -o $(BUILD_DIR)/lib$(LIBNAME).dylib -Wl,-all_load $(BUILD_DIR)/lib$(LIBNAME).a
 
 shared_windows: 
-	gfortran -shared -static -o $(BUILD_DIR)/lib$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/lib$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
+	gfortran -shared $(FPM_LDFLAGS) -o $(BUILD_DIR)/lib$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/lib$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
 
 copy_a:
-	cp $(shell find ./build -type f -name lib$(LIBNAME).a) $(BUILD_DIR)
+	cp -f $(shell find ./build -type f -name lib$(LIBNAME).a) $(BUILD_DIR)
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).a $(BUILD_DIR)/lib$(LIBNAME)-$(PLATFORM)-$(ARCH)-$(VERSION).a
 
 copy_h: 
-	cp $(INCLUDE_DIR)/$(LIBNAME)*.h $(PYW_MOD_DIR)/
+	cp -f $(INCLUDE_DIR)/$(LIBNAME)*.h $(PYW_MOD_DIR)/
 
-copy_shared: copy_a
-	cp -f $(BUILD_DIR)/lib$(LIBNAME).so $(PYW_MOD_DIR) | true
-	cp -f $(BUILD_DIR)/lib$(LIBNAME).dylib $(PYW_MOD_DIR) | true
-	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(PYW_MOD_DIR) | true
-	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll.a $(PYW_MOD_DIR) | true
+copy_shared_linux:
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).so $(BUILD_DIR)/lib$(LIBNAME)-$(PLATFORM)-$(ARCH)-$(VERSION).so
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).so $(PYW_MOD_DIR)
+
+copy_shared_darwin:
+	cp $(BUILD_DIR)/lib$(LIBNAME).dylib $(BUILD_DIR)/lib$(LIBNAME)-$(PLATFORM)-$(ARCH)-$(VERSION).dylib
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).dylib $(PYW_MOD_DIR)
+
+copy_shared_windows:
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(BUILD_DIR)/lib$(LIBNAME)-$(PLATFORM)-$(ARCH)-$(VERSION).dll
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll.a $(BUILD_DIR)/lib$(LIBNAME)-$(PLATFORM)-$(ARCH)-$(VERSION).dll.a
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(PYW_MOD_DIR)
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll.a $(PYW_MOD_DIR)
+
+test: all
+	fpm test --profile=release
 
 clean:
 	fpm clean --all
+	rm -f src/*.mod
 
-install:
+install: install_dirs install_$(PLATFORM)
+
+install_dirs: 
 	mkdir -p $(install_dir)/bin
 	mkdir -p $(install_dir)/include
 	mkdir -p $(install_dir)/lib
 	fpm install --prefix=$(install_dir)
 	cp -f ./include/*.h $(install_dir)/include
-	cp -f $(BUILD_DIR)/lib$(LIBNAME).so $(install_dir)/lib | true
-	cp -f $(BUILD_DIR)/lib$(LIBNAME).dylib $(install_dir)/lib | true
-	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll.a $(install_dir)/lib | true
-	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(install_dir)/bin | true
+
+install_linux:
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).so $(install_dir)/lib
+
+install_darwin:
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).dylib $(install_dir)/lib
+
+install_windows:
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll.a $(install_dir)/lib
+	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(install_dir)/bin
 
 uninstall:
 	rm -f $(install_dir)/include/$(LIBNAME)*.h

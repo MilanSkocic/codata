@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools", "wheel", "build"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pycodata"
+version = "0.8.2"
+authors = [{name = "Milan Skocic", email = "milan.skocic@icloud.com"}]
+description = "pycodata: CODATA constants for python."
+readme = "README.rst"
+requires-python = ">=3.8"
+license = {text = "GNU General Public License v3 (GPLv3)"}
+classifiers=["Development Status :: 5 - Production/Stable",
+             "Intended Audience :: Science/Research",
+             "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"]
+
+[project.urls]
+Documentation = "https://milanskocic.github.io/codata/index.html"
+Source = "https://github.com/MilanSkocic/codata"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+pycodata = ["libcodata.*"]

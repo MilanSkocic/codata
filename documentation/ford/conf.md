@@ -4,7 +4,7 @@ summary: Codata constants
 project_github: https://github.com/MilanSkocic/codata
 project_download: https://github.com/MilanSkocic/codata/releases
 author: Milan Skocic
-author_email: milan.skocic@icloud.com
+email: milan.skocic@icloud.com
 github: https://github.com/MilanSkocic
 website: https://milanskocic.github.io/codata/index.html
 src_dir: ../../src

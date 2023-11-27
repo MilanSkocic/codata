@@ -1,3 +1,8 @@
+.. |cidev| image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=dev
+.. |cimain| image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main
+
+dev |cidev| / main |cimain|
+
 Description
 ==============
 
@@ -8,6 +13,14 @@ It also  provides a API for the C language.
 The raw codata are taken from http://physics.nist.gov/constants. 
 
 .. readme_inclusion_end
+
+To use `codata` within your `fpm <https://github.com/fortran-lang/fpm>`_ project,
+add the following to your `fpm.toml` file:
+
+.. code-block::
+
+    [dependencies]
+    codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 Installation
 ================

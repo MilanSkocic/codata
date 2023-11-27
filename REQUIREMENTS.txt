@@ -1,2 +1,2 @@
-gcc>=9
-gfortran>=9
+gcc>=10
+gfortran>=10

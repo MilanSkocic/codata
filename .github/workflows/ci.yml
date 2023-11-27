@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main", "dev" ]
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Gfortran  
+      run: |
+        sudo update-alternatives \
+          --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 \
+          --slave /usr/bin/gfortran gfortran /usr/bin/gfortran-10 \
+          --slave /usr/bin/gcov gcov /usr/bin/gcov-10
+    - name: Set FPM
+      uses: fortran-lang/setup-fpm@v5
+      with: 
+        fpm-version: "v0.9.0"
+    - name: Gfortran version
+      run : gfortran --version
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Compile
+      run: |
+        . ./configure.sh
+        make
+
+  macos: 
+    runs-on: macos-latest
+    steps:
+    - name: Gfortran
+      run: |
+        brew reinstall gcc@10 gcc@13
+    - name: Set FPM
+      uses: fortran-lang/setup-fpm@v5
+      with: 
+        fpm-version: "v0.9.0"
+    - name: Gfortran version
+      run : gfortran --version
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Compile
+      run: |
+        . ./configure.sh
+        make
+  
+  windows: 
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps: 
+    - name: MSYS2, Gfortran, fpm
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        install: >-
+          mingw-w64-x86_64-gcc-fortran
+          mingw-w64-x86_64-fpm
+          git
+          make
+    - name: Gfortran version
+      run : gfortran --version
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Compile
+      run: |
+        . ./configure.sh
+        make
