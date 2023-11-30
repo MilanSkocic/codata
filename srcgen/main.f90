@@ -80,6 +80,8 @@ program generator
 
     print *, "Writing fortran module end..."
     call write_fortran_module_end(ffortran)
+    print *, "Writing C header end..."
+    call write_C_header_end(fcheader)
     print *, "Writing cpython end..."
     call write_cpython_extension_end(fcpython);
 
