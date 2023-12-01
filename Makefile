@@ -16,6 +16,9 @@ $(LIBNAME): build copy_h copy_a shared copy_shared
 build: clean
 	fpm build --profile=release
 
+build_debug: clean
+	fpm build --profile=debug
+
 shared: shared_$(PLATFORM)
 
 copy_shared: copy_shared_$(PLATFORM)
@@ -52,6 +55,9 @@ copy_shared_windows:
 
 test: all
 	fpm test --profile=release
+	
+test_debug: build_debug
+	fpm test --profile=debug
 
 clean:
 	fpm clean --all
