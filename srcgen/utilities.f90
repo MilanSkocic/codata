@@ -431,9 +431,9 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, p
             call format_units(line, unit)
             
             ! fortran code
-            write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="'//trim(name)//'"):: &', &
+            write(ffortran, "(A,/,A)") 'real(c_double), protected, public, bind(C,name="'//trim(name)//'"):: &', &
             trim(name)//'='//trim(value)//' !! '//trim(unit)
-            write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="U_'//trim(name)//'") :: &', &
+            write(ffortran, "(A,/,A)") 'real(c_double), protected, public, bind(C,name="U_'//trim(name)//'") :: &', &
             "U_"//trim(name)//'='//trim(uncertainty)//' !! '//trim(unit)
             write(ffortran, "(A)") ""
 
