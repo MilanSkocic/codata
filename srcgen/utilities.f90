@@ -406,7 +406,7 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, p
     end do
 
     ! fortran
-    write(ffortran, "(A,/)") 'integer(c_int), protected, bind(C,name="YEAR") :: YEAR = ' // props%year
+    write(ffortran, "(A,/)") 'integer(c_int), protected, public, bind(C,name="YEAR") :: YEAR = ' // props%year
     ! C Code
     write(fcheader, "(A,/)") "ADD_IMPORT extern const int YEAR;"
     ! python
