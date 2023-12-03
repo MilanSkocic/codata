@@ -5,6 +5,6 @@ implicit none
 private
 
 character(kind=c_char), protected, public, bind(C) :: codata_version_capi_version( 6) = &
-["0", ".", "8", ".", "2", c_null_char]
+["0", ".", "9", ".", "0", c_null_char]
 
 end module codata__version_capi
