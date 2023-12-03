@@ -1,5 +1,5 @@
 import unittest
-from ..codata import *
+from ..constants import *
 
 class TestLib(unittest.TestCase):
     r"""Test pyiawps library."""

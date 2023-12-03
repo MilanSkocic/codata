@@ -6,13 +6,13 @@ PyDoc_STRVAR(module_docstring, "C extension for codata constants.");
 
 static PyMethodDef myMethods[] = {{ NULL, NULL, 0, NULL }};
 
-static struct PyModuleDef codata = {PyModuleDef_HEAD_INIT, "codata", module_docstring, -1, myMethods};
+static struct PyModuleDef constants = {PyModuleDef_HEAD_INIT, "constants", module_docstring, -1, myMethods};
 
-PyMODINIT_FUNC PyInit_codata(void){
+PyMODINIT_FUNC PyInit_constants(void){
     PyObject *m;
     PyObject *d;
     PyObject *v;
-    m = PyModule_Create(&codata);
+    m = PyModule_Create(&constants);
     d = PyModule_GetDict(m);
 
     v = PyLong_FromLong(YEAR);
