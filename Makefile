@@ -27,10 +27,10 @@ test_debug: build_debug
 	fpm test --profile=debug
 
 example: build
-	fpm run --profile=release --example
+	fpm run --profile=release --example --all
 
 example_debug: build_debug
-	fpm run --profile=debug --example
+	fpm run --profile=debug --example --all
 	
 shared: shared_$(PLATFORM)
 
