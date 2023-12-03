@@ -16,6 +16,8 @@ program generator
     integer(int32) :: unit
     logical :: exist
 
+    character(len=*), parameter :: root = "../../"
+    character(len=64) :: fpath
     props = codata_file_props(0, 0, "./codata_2018.txt", "2018")
 
     print *, "Reading codata file properties..."
@@ -25,75 +27,65 @@ program generator
     print "(4X, A, A)", "fpath: ", props%codata_path
     print "(4X, A, A)", "Year: ", props%year
 
+    write(output_unit, "(A)", advance="NO") "Opening files..."
+    
     ! CODATA SOURCE
-    print *, "Opening codata file..."
     open(file=props%codata_path, newunit=fcodata, status="old", action="read")
     
     ! FORTRAN
-    print *, "Opening ffortran file..."
-    inquire(file="../src/codata.f90", exist=exist)
+    fpath = root//'include/codata_constants.f90'
+    inquire(file=fpath, exist=exist)
     if(exist)then
-        open(file="../src/codata.f90", newunit=unit, status="old")
+        open(file=fpath, newunit=unit, status="old")
         close(unit=unit, status="delete")
     endif
-    open(file="../src/codata.f90", newunit=ffortran, status="new", action="write")
+    open(file=fpath, newunit=ffortran, status="new", action="write")
     
     ! C HEADER
-    print *, "Opening C header file..."
-    inquire(file="../include/codata.h", exist=exist)
+    fpath = root//'include/codata_constants.h'
+    inquire(file=fpath, exist=exist)
     if(exist)then
-        open(file="../include/codata.h", newunit=unit, status="old")
+        open(file=fpath, newunit=unit, status="old")
         close(unit=unit, status="delete")
     endif
-    open(file="../include/codata.h", newunit=fcheader, status="new", action="write")
+    open(file=fpath, newunit=fcheader, status="new", action="write")
     
     ! TXT INCLUDE
-    print *, "Opening python as txt in include..."
-    inquire(file="../include/codata.txt", exist=exist)
+    fpath = root//'include/codata.txt'
+    inquire(file=fpath, exist=exist)
     if(exist)then
-        open(file="../include/codata.txt", newunit=unit, status="old")
+        open(file=fpath, newunit=unit, status="old")
         close(unit=unit, status="delete")
     endif
-    open(file="../include/codata.txt", newunit=fpython, status="new", action="write")
+    open(file=fpath, newunit=fpython, status="new", action="write")
     
     ! CPYTHON
-    print *, "Opening cpython..."
-    inquire(file="../pywrapper/pycodata/cpycodata.c", exist=exist)
+    fpath = root//'pywrapper/pycodata/cpy_codata.c'
+    inquire(file=fpath, exist=exist)
     if(exist)then
-        open(file="../pywrapper/pycodata/cpycodata.c", newunit=unit, status="old")
+        open(file=fpath, newunit=unit, status="old")
         close(unit=unit, status="delete")
     endif
-    open(file="../pywrapper/pycodata/cpycodata.c", newunit=fcpython, status="new", action="write")
+    open(file=fpath, newunit=fcpython, status="new", action="write")
+    
+    write(output_unit, "(A)", advance="YES") "OK"
 
 
-    print *, "Writing fortran module declaration..."
     call write_fortran_module_declaration(ffortran)
-    print *, "Writing C header doc..."
     call write_c_header_doc(fcheader)
-    print *, "Writing Python code as txt doc..."
     call write_python_module_doc(fpython)
-    print *, "Writing Cpython code..."
     call write_cpython_extension_declaration(fcpython);
 
-    print *, "Writing all constants..."
     call write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, props)
 
-    print *, "Writing fortran module end..."
     call write_fortran_module_end(ffortran)
-    print *, "Writing C header end..."
     call write_C_header_end(fcheader)
-    print *, "Writing cpython end..."
     call write_cpython_extension_end(fcpython);
 
-    print *, "Closing codata file..."
     close(fcodata)
-    print *, "Closing ffortran file..."
     close(ffortran)
-    print *, "Closing c header file..."
     close(fcheader)
-    print *, "Closing python as txt header file..."
     close(fpython)
-    print *, "Closing cpython file..."
     close(fcpython)
 
 end program

@@ -4,21 +4,34 @@ else
 	install_dir=$(DEFAULT_INSTALL_DIR)
 endif
 
-.PHONY: all clean install uninstall copy_h copy_a shared_linux shared_windows shared_darwin
+.PHONY: clean install uninstall copy_h copy_a shared_linux shared_windows shared_darwin
 
-all: generator $(LIBNAME)
+all: $(LIBNAME)
+
+$(LIBNAME): build copy_a shared copy_h copy_shared
 
 generator:
-	make -C ./srcgen
+	make -C ./srcgen/codata_constants
+	make -C ./srcgen/version
 
-$(LIBNAME): build copy_h copy_a shared copy_shared
-
-build: clean
+build: clean generator
 	fpm build --profile=release
 
-build_debug: generator clean
+build_debug: clean generator
 	fpm build --profile=debug
 
+test: build
+	fpm test --profile=release
+	
+test_debug: build_debug
+	fpm test --profile=debug
+
+example: build
+	fpm run --profile=release --example
+
+example_debug: build_debug
+	fpm run --profile=debug --example
+	
 shared: shared_$(PLATFORM)
 
 copy_shared: copy_shared_$(PLATFORM)
@@ -53,15 +66,12 @@ copy_shared_windows:
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(PYW_MOD_DIR)
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll.a $(PYW_MOD_DIR)
 
-test: all
-	fpm test --profile=release
-	
-test_debug: build_debug
-	fpm test --profile=debug
-
 clean:
 	fpm clean --all
 	rm -f src/*.mod
+	make -C srcgen/version clean
+	make -C srcgen/codata_constants clean
+	make -C $(PYW_MOD_DIR) clean
 
 install: install_dirs install_$(PLATFORM)
 

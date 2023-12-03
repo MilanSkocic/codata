@@ -13,3 +13,9 @@ C
 
 .. literalinclude:: ../../../../include/codata.h
     :language: C
+
+.. literalinclude:: ../../../../include/codata_version.h
+    :language: C
+
+.. literalinclude:: ../../../../include/codata_constants.h
+    :language: C
