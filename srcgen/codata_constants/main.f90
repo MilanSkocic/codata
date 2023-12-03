@@ -33,7 +33,7 @@ program generator
     open(file=props%codata_path, newunit=fcodata, status="old", action="read")
     
     ! FORTRAN
-    fpath = root//'include/codata_constants.f90'
+    fpath = root//'src/codata_constants.f90'
     inquire(file=fpath, exist=exist)
     if(exist)then
         open(file=fpath, newunit=unit, status="old")
@@ -70,7 +70,7 @@ program generator
     
     write(output_unit, "(A)", advance="YES") "OK"
 
-
+    write(output_unit, "(A)", advance="NO") "Generating code..."
     call write_fortran_module_declaration(ffortran)
     call write_c_header_doc(fcheader)
     call write_python_module_doc(fpython)
@@ -81,11 +81,14 @@ program generator
     call write_fortran_module_end(ffortran)
     call write_C_header_end(fcheader)
     call write_cpython_extension_end(fcpython);
+    
+    write(output_unit, "(A)", advance="YES") "OK"
 
     close(fcodata)
     close(ffortran)
     close(fcheader)
     close(fpython)
     close(fcpython)
+    
 
 end program
