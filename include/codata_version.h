@@ -10,6 +10,6 @@
 #else
 #define ADD_IMPORT
 #endif
-extern const char codata_version_capi_version[ 6];
+ADD_IMPORT extern const char codata_version_capi_version[ 6];
 #endif
 

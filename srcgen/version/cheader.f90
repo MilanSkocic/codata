@@ -37,7 +37,7 @@ subroutine write_C_header_declaration(fcode, version, name)
     write(fcode, "(A)") "#define ADD_IMPORT"
     write(fcode, "(A)") "#endif"
     
-    write(fcode, "(A)") 'extern const char '//trim(name)//'_version_capi_version['//trim(nstr)//'];'
+    write(fcode, "(A)") 'ADD_IMPORT extern const char '//trim(name)//'_version_capi_version['//trim(nstr)//'];'
 
     
 end subroutine
