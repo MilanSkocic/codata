@@ -1,7 +1,6 @@
 rd /s /q build
 rd /s /q dist
-rd /s /q codata.egg-info
-del .\pycodata\*.pyd
+rd /s /q *egg-info
 
 py -3.8 setup.py build_ext --inplace
 py -3.9 setup.py build_ext --inplace

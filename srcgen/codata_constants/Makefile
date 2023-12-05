@@ -1,15 +1,14 @@
 CC=gcc
 FC=gfortran
 FFLAGS=-std=f2008 -Wall -Wextra -pedantic
+OBJECTS=utilities.o fortran_code.o c_code.o py_code.o cpy_code.o main.o
 
-.PHONY: generate
+all: generator
 
-all: srcgen
-
-srcgen: generator
+generator: build
 	./generator
 
-generator: utilities.o fortran_code.o c_code.o py_code.o cpy_code.o main.o
+build: $(OBJECTS)
 	$(FC) $^ -o generator
 
 %.o: %.f90

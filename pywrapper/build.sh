@@ -10,7 +10,6 @@ fi
 rm -r build
 rm -r dist
 rm -r *egg-info
-rm ./pycodata/codata*.so
 
 py38 setup.py build_ext --inplace
 py39 setup.py build_ext --inplace

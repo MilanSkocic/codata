@@ -6,18 +6,17 @@ endif
 
 .PHONY: clean install uninstall copy_h copy_a shared_linux shared_windows shared_darwin
 
-all: $(LIBNAME)
+all: clean $(LIBNAME)
 
 $(LIBNAME): build copy_a shared copy_h copy_shared
 
 generator:
-	make -C ./srcgen/codata_constants
-	make -C ./srcgen/version
+	make -C srcgen generator
 
-build: clean generator
+build: generator
 	fpm build --profile=release
 
-build_debug: clean generator
+build_debug: generator
 	fpm build --profile=debug
 
 test: build
@@ -69,8 +68,7 @@ copy_shared_windows:
 clean:
 	fpm clean --all
 	rm -f src/*.mod
-	make -C srcgen/version clean
-	make -C srcgen/codata_constants clean
+	make -C srcgen clean
 	make -C $(PYW_MOD_DIR) clean
 
 install: install_dirs install_$(PLATFORM)
