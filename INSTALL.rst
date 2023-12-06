@@ -1,7 +1,7 @@
-A Makefile is provided, which uses `fpm <https://fpm.fortran-lang.org>`_, 
-for building the library.
+A Makefile is provided, which uses `fpm <https://fpm.fortran-lang.org>`_, for building the library.
 
-On windows, `msys2 <https://www.msys2.org>`_ needs to be installed.
+On windows, `msys2 <https://www.msys2.org>`_ needs to be installed the MSVC compiler for compiling the 
+python wrapper.
 
 On Darwin, the `gcc <https://formulae.brew.sh/formula/gcc>`_ toolchain needs to be installed.
 
@@ -17,7 +17,7 @@ Run tests
 
 .. code-block:: bash
     
-    fpm test
+    make test
 
 Install
     
@@ -36,4 +36,5 @@ If building the python wrapper is needed:
 .. code-block:: bash
 
     cd pywrapper
-    python setup.py bdist_wheel
+    make clean plat=(windows, linux or darwin)
+    make plat=(windows, linux or darwin)

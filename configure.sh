@@ -1,6 +1,7 @@
 LIBNAME="codata"
 
 # environment variables
+FC=gfortran
 PYW_DIR="./pywrapper"
 BUILD_DIR="./build"
 INCLUDE_DIR="./include"
@@ -49,6 +50,7 @@ export INCLUDE_DIR
 export PLATFORM
 export ARCH
 export VERSION
+export FC
 
 echo "OS TYPE=" $OSTYPE
 echo "PLATFORM=" $PLATFORM
@@ -60,5 +62,6 @@ echo "FPM_CFLAGS=" $FPM_CFLAGS
 echo "FPM_LDFLAGS=" $FPM_LDFLAGS
 echo "PYW DIR=" $PYW_DIR
 echo "PYW MOD DIR=" $PYW_MOD_DIR
-echo "BUILD DIR" $BUILD_DIR
-echo "INCLUDE_DIR" $INCLUDE_DIR
+echo "BUILD DIR=" $BUILD_DIR
+echo "INCLUDE_DIR=" $INCLUDE_DIR
+echo "FC=" $FC

@@ -1,0 +1,69 @@
+ifeq ($(plat), )
+	plat=linux
+	PY=python
+endif
+ifeq ($(plat), windows)
+	plat=linux
+	PY=py -
+endif
+ifeq ($(plat), linux)
+	plat=linux
+	PY=python
+endif
+ifeq ($(plat), darwin)
+	plat=darwin
+	PY=python
+endif
+
+DIRS=build dist *.egg-info
+SETUP=setup.py pyproject.toml
+
+all: python3.8 python3.9 python3.10 python3.11 python3.12
+
+python3.12: $(SETUP)
+	@echo "########### PYTHON 3.12 ##########"
+	$(PY)3.10 setup.py build_ext --inplace
+	$(PY)3.10 -m build --no-isolation --sdist
+	$(PY)3.10 -m build --no-isolation --wheel
+	$(PY)3.10 -m unittest -v
+	@echo "#################################"
+
+python3.11: $(SETUP)
+	@echo "########### PYTHON 3.11 ##########"
+	$(PY)3.10 setup.py build_ext --inplace
+	$(PY)3.10 -m build --no-isolation --wheel
+	$(PY)3.10 -m unittest -v
+	@echo "#################################"
+
+python3.10: $(SETUP)
+	@echo "########### PYTHON 3.10 ##########"
+	$(PY)3.10 setup.py build_ext --inplace
+	$(PY)3.10 -m build --no-isolation --wheel
+	$(PY)3.10 -m unittest -v
+	@echo "#################################"
+
+python3.9: $(SETUP)
+	@echo "########### PYTHON 3.9 ##########"
+	$(PY)3.9 setup.py build_ext --inplace
+	$(PY)3.9 -m build --no-isolation --wheel
+	$(PY)3.9 -m unittest -v
+	@echo "#################################"
+
+python3.8: $(SETUP)
+	@echo "########### PYTHON 3.8 ##########"
+	$(PY)3.8 setup.py build_ext --inplace
+	$(PY)3.8 -m build --no-isolation --wheel
+	$(PY)3.8 -m unittest -v
+	@echo "#################################"
+
+clean: clean_$(plat)
+
+
+clean_windows: 
+	rd /s /q $(DIRS)
+
+clean_linux: 
+	rm -rf $(DIRS)
+
+clean_darwin: 
+	rm -rf $(DIRS)
