@@ -19,13 +19,14 @@ subroutine write_cpython_extension_declaration(fcode)
     write(fcode, "(A)") ""
     write(fcode, "(A)") "static PyMethodDef myMethods[] = {{ NULL, NULL, 0, NULL }};"
     write(fcode, "(A)") ""
-    write(fcode, "(A)") 'static struct PyModuleDef codata = {PyModuleDef_HEAD_INIT, "codata", module_docstring, -1, myMethods};'
+    write(fcode, "(A)", advance="NO") 'static struct PyModuleDef constants = '
+    write(fcode, "(A)") '{PyModuleDef_HEAD_INIT, "constants", module_docstring, -1, myMethods};'
     write(fcode, "(A)") ""
-    write(fcode, "(A)") "PyMODINIT_FUNC PyInit_codata(void){"
+    write(fcode, "(A)") "PyMODINIT_FUNC PyInit_constants(void){"
     write(fcode, "(4X, A)") "PyObject *m;"
     write(fcode, "(4X, A)") "PyObject *d;"
     write(fcode, "(4X, A)") "PyObject *v;"
-    write(fcode, "(4X, A)") "m = PyModule_Create(&codata);"
+    write(fcode, "(4X, A)") "m = PyModule_Create(&constants);"
     write(fcode, "(4X, A)") "d = PyModule_GetDict(m);"
     write(fcode, "(A)") ""
 end subroutine

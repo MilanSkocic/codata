@@ -5,6 +5,7 @@ program main
     
     print *, "c=",  speed_of_light_in_vacuum
     print *, "u(c)=", u_speed_of_light_in_vacuum
+    print *, codata_version_version
 
 contains
 

@@ -4,30 +4,45 @@ else
 	install_dir=$(DEFAULT_INSTALL_DIR)
 endif
 
-.PHONY: all clean install uninstall copy_h copy_a shared_linux shared_windows shared_darwin
+.PHONY: clean install uninstall copy_h copy_a shared_linux shared_windows shared_darwin
 
-all: generator $(LIBNAME)
+all: clean $(LIBNAME)
+
+$(LIBNAME): build copy_a shared copy_h copy_shared
 
 generator:
-	make -C ./srcgen
+	make -C srcgen generator
 
-$(LIBNAME): build copy_h copy_a shared copy_shared
-
-build: clean
+build: generator
 	fpm build --profile=release
 
+build_debug: generator
+	fpm build --profile=debug
+
+test: build
+	fpm test --profile=release
+	
+test_debug: build_debug
+	fpm test --profile=debug
+
+example: build
+	fpm run --profile=release --example --all
+
+example_debug: build_debug
+	fpm run --profile=debug --example --all
+	
 shared: shared_$(PLATFORM)
 
 copy_shared: copy_shared_$(PLATFORM)
 
 shared_linux:
-	gfortran -shared -o $(BUILD_DIR)/lib$(LIBNAME).so -Wl,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
+	$(FC) -shared -o $(BUILD_DIR)/lib$(LIBNAME).so -Wl,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
 
 shared_darwin: 
-	gfortran -dynamiclib -install_name @rpath/lib$(LIBNAME).dylib $(FPM_LDFLAGS) -o $(BUILD_DIR)/lib$(LIBNAME).dylib -Wl,-all_load $(BUILD_DIR)/lib$(LIBNAME).a
+	$(FC) -dynamiclib -install_name @rpath/lib$(LIBNAME).dylib $(FPM_LDFLAGS) -o $(BUILD_DIR)/lib$(LIBNAME).dylib -Wl,-all_load $(BUILD_DIR)/lib$(LIBNAME).a
 
 shared_windows: 
-	gfortran -shared $(FPM_LDFLAGS) -o $(BUILD_DIR)/lib$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/lib$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
+	$(FC) -shared $(FPM_LDFLAGS) -o $(BUILD_DIR)/lib$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/lib$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/lib$(LIBNAME).a -Wl,--no-whole-archive
 
 copy_a:
 	cp -f $(shell find ./build -type f -name lib$(LIBNAME).a) $(BUILD_DIR)
@@ -50,12 +65,11 @@ copy_shared_windows:
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll $(PYW_MOD_DIR)
 	cp -f $(BUILD_DIR)/lib$(LIBNAME).dll.a $(PYW_MOD_DIR)
 
-test: all
-	fpm test --profile=release
-
 clean:
 	fpm clean --all
 	rm -f src/*.mod
+	make -C srcgen clean
+	make -C $(PYW_MOD_DIR) clean
 
 install: install_dirs install_$(PLATFORM)
 

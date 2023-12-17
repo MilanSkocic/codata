@@ -1,0 +1,28 @@
+Codata 0.9.0 Release Note
+============================
+
+Summary
+---------------
+
+* No API changes.
+* Automatic generation of the version module.
+* Generic Makefiles for automatic the building process of the library and the pywrapper.
+* Add targets: build, build_debug, test, test_debug.
+* Minor fixes in documentation.
+
+Download
+---------------
+
+`Codata Releases <https://github.com/MilanSkocic/codata/releases>`_
+
+`PYPI <https://pypi.org/project/pycodata>`_
+
+
+Contributors
+---------------
+Milan Skocic
+
+Commits
+---------
+
+**Full Changelog**: https://github.com/MilanSkocic/codata/compare/0.8.2...0.9.0

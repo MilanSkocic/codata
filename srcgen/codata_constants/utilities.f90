@@ -406,7 +406,7 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, p
     end do
 
     ! fortran
-    write(ffortran, "(A,/)") 'integer(c_int), protected, bind(C,name="YEAR") :: YEAR = ' // props%year
+    write(ffortran, "(A,/)") 'integer(c_int), protected, public, bind(C,name="YEAR") :: YEAR = ' // props%year
     ! C Code
     write(fcheader, "(A,/)") "ADD_IMPORT extern const int YEAR;"
     ! python
@@ -431,9 +431,9 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, p
             call format_units(line, unit)
             
             ! fortran code
-            write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="'//trim(name)//'"):: &', &
+            write(ffortran, "(A,/,A)") 'real(c_double), protected, public, bind(C,name="'//trim(name)//'"):: &', &
             trim(name)//'='//trim(value)//' !! '//trim(unit)
-            write(ffortran, "(A,/,A)") 'real(c_double), protected, bind(C,name="U_'//trim(name)//'") :: &', &
+            write(ffortran, "(A,/,A)") 'real(c_double), protected, public, bind(C,name="U_'//trim(name)//'") :: &', &
             "U_"//trim(name)//'='//trim(uncertainty)//' !! '//trim(unit)
             write(ffortran, "(A)") ""
 
