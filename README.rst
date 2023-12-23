@@ -3,8 +3,11 @@
 
 dev |cidev| / main |cimain|
 
-Description
+Introduction
 ==============
+
+.. image:: ./media/logo-codata.png
+    :width: 200
 
 .. readme_inclusion_start
 
