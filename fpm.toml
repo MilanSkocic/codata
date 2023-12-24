@@ -26,3 +26,11 @@ main = "example_in_f.f90"
 [[example]]
 name = "example_in_c"
 main = "example_in_c.c"
+
+[[test]]
+name = "test_codata"
+main = "test_codata.f90"
+
+[[test]]
+name = "test_codata_capi"
+main = "test_codata_capi.c"
