@@ -13,8 +13,23 @@ subroutine collect_suite_constants(testsuite)
   !> Collection of tests
   type(unittest_type), allocatable, intent(out) :: testsuite(:)
 
-  testsuite = [new_unittest("ATOMIC MASS CONSTANT", test_atomic_mass_constant),&
+  testsuite = [new_unittest("ALPHA_PARTICLE_ELECTRON_MASS_RATIO", test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO),&
+               new_unittest("ATOMIC MASS CONSTANT", test_atomic_mass_constant),&
                new_unittest("SPEED OF LIGHT IN VACUUM", test_speed_of_light)]
+
+end subroutine
+
+
+subroutine test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
+    type(error_type), allocatable, intent(out) :: error 
+    
+    real(real64) :: value, expected, fac
+    
+    expected = 7294.29954142d0
+    value = ALPHA_PARTICLE_ELECTRON_MASS_RATIO
+
+    call check(error, value, expected)
+    if (allocated(error)) return
 
 end subroutine
 
