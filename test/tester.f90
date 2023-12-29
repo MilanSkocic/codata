@@ -13,14 +13,14 @@ program tester
     testsuites = [new_testsuite("Year", collect_suite_year),&
                   new_testsuite("Constants", collect_suite_constants)]
 
-  do is = 1, size(testsuites)
-    write(error_unit, fmt) "Testing:", testsuites(is)%name
-    call run_testsuite(testsuites(is)%collect, error_unit, stat)
-  end do
+    do is = 1, size(testsuites)
+        write(error_unit, fmt) "Testing:", testsuites(is)%name
+        call run_testsuite(testsuites(is)%collect, error_unit, stat)
+    end do
 
-  if (stat > 0) then
-    write(error_unit, '(i0, 1x, a)') stat, "test(s) failed!"
-    error stop
-  end if
+    if (stat > 0) then
+        write(error_unit, '(i0, 1x, a)') stat, "test(s) failed!"
+        error stop
+    end if
 
 end program
