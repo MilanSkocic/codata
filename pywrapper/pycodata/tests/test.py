@@ -56,7 +56,7 @@ class TestConstants(unittest.TestCase):
         self.assertEqual(value, expected)
 
     def test_MOLAR_VOLUME_NTP(self):
-        value = MOLAR_VOLUME_OF_IDEAL_GAS__273_15K__101_325_KPA
+        value = MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA
         expected = 22.41396954e-3
         self.assertEqual(value, expected)
 
