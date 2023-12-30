@@ -1,4 +1,5 @@
 module testsuite_constants
+    !! Test some constants values
     use iso_fortran_env
     use testdrive, only : new_unittest, unittest_type, error_type, check
     use codata
@@ -8,12 +9,10 @@ module testsuite_constants
     public :: collect_suite_constants
 
 contains
-!> Collect all exported unit tests
+
 subroutine collect_suite_constants(testsuite)
-  !> Collection of tests
+  !! Collection of tests
   type(unittest_type), allocatable, intent(out) :: testsuite(:)
-
-
 
   testsuite = [&
                new_unittest("ALPHA_PARTICLE_ELECTRON_MASS_RATIO", test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO),&
@@ -29,7 +28,6 @@ subroutine collect_suite_constants(testsuite)
                new_unittest("PLANCK_CONSTANT", test_PLANCK_CONSTANT),&
                new_unittest("SPEED_OF_LIGHT_IN_VACUUM", test_SPEED_OF_LIGHT),&
                new_unittest("STANDARD_ACCELERATION_OF_GRAVITY", test_STANDARD_ACCELERATION_OF_GRAVITY)]
-
 end subroutine
 
 subroutine test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
