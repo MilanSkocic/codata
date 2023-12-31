@@ -14,7 +14,7 @@ source-form = "free"
 auto-executables = true
 auto-tests = true
 auto-examples = true
-module-naming = true
+module-naming = false 
 
 [install]
 library = true
@@ -26,3 +26,11 @@ main = "example_in_f.f90"
 [[example]]
 name = "example_in_c"
 main = "example_in_c.c"
+
+[dev-dependencies]
+
+[[test]]
+name = "tester"
+main = "tester.f90"
+[test.dependencies]
+test-drive = {git="https://github.com/fortran-lang/test-drive", tag="v0.4.0"}
