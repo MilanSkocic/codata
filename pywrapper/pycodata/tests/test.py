@@ -1,13 +1,15 @@
 import unittest
 from ..constants import *
 
+
 class TestYear(unittest.TestCase):
     r"""Test year."""
     def test_year(self):
         value = YEAR
         expected = 2018
         self.assertEqual(value, expected)
-        
+
+
 class TestConstants(unittest.TestCase):
     r"""Test constant values."""
     def test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(self):
