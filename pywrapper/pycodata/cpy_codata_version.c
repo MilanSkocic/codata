@@ -6,7 +6,7 @@
 PyDoc_STRVAR(module_docstring, "C extension for codata version.");
 
 static PyMethodDef myMethods[] = {{ NULL, NULL, 0, NULL }};
-static struct PyModuleDef version= {PyModuleDef_HEAD_INIT, "constants", module_docstring, -1, myMethods};
+static struct PyModuleDef version= {PyModuleDef_HEAD_INIT, "version", module_docstring, -1, myMethods};
 
 PyMODINIT_FUNC PyInit_version(void){
     PyObject *m;
