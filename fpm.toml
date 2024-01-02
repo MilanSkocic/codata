@@ -27,8 +27,6 @@ main = "example_in_f.f90"
 name = "example_in_c"
 main = "example_in_c.c"
 
-[dev-dependencies]
-
 [[test]]
 name = "tester"
 main = "tester.f90"
