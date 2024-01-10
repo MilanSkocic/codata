@@ -46,7 +46,7 @@ function capi_get_version()bind(c,name="codata_get_version")result(cptr)
     allocate(character(len=len(fptr)+1) :: version_c)
 
     version_c = fptr // c_null_char
-    cptr = c_loc(fptr)
+    cptr = c_loc(version_c)
 end function
 
 end module codata__version
