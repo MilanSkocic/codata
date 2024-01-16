@@ -6,6 +6,8 @@ module testsuite_constants
     implicit none
     private
     
+    public :: collect_suite_version
+    public :: collect_suite_year
     public :: collect_suite_constants
 
 contains
@@ -28,6 +30,41 @@ subroutine collect_suite_constants(testsuite)
                new_unittest("PLANCK_CONSTANT", test_PLANCK_CONSTANT),&
                new_unittest("SPEED_OF_LIGHT_IN_VACUUM", test_SPEED_OF_LIGHT),&
                new_unittest("STANDARD_ACCELERATION_OF_GRAVITY", test_STANDARD_ACCELERATION_OF_GRAVITY)]
+end subroutine
+
+subroutine collect_suite_year(testsuite)
+    implicit none
+    type(unittest_type), allocatable, intent(out) :: testsuite(:)
+    testsuite = [new_unittest("YEAR", test_year)]
+end subroutine
+
+subroutine collect_suite_version(testsuite)
+    implicit none
+    type(unittest_type), allocatable, intent(out) :: testsuite(:)
+    testsuite = [new_unittest("VERSION", test_version)]
+end subroutine
+
+subroutine test_year(error)
+    type(error_type), allocatable, intent(out) :: error 
+    
+    integer(int32) :: value, expected
+    
+    expected = 2018
+    value = YEAR
+
+    call check(error, value, expected)
+    if (allocated(error)) return
+end subroutine
+
+subroutine test_version(error)
+    implicit none
+    type(error_type), allocatable, intent(out) :: error
+    character(len=:), pointer :: value
+    character(len=:), allocatable :: expected
+    expected = "0.9.0"
+    value => get_version()
+    call check(error, value, expected)
+    if(allocated(error)) return
 end subroutine
 
 subroutine test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
