@@ -13,9 +13,7 @@ module testsuite_constants
 contains
 
 subroutine collect_suite_constants(testsuite)
-  !! Collection of tests
   type(unittest_type), allocatable, intent(out) :: testsuite(:)
-
   testsuite = [&
                new_unittest("ALPHA_PARTICLE_ELECTRON_MASS_RATIO", test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO),&
                new_unittest("ALPHA_PARTICLE_MASS", test_ALPHA_PARTICLE_MASS),&
