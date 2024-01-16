@@ -11,7 +11,7 @@ module testsuite_uncertainties
 contains
 
 subroutine collect_suite_uncertainties(testsuite)
-  !! Collection of tests
+    implicit none
   type(unittest_type), allocatable, intent(out) :: testsuite(:)
 
   testsuite = [&
@@ -31,6 +31,7 @@ subroutine collect_suite_uncertainties(testsuite)
 end subroutine
 
 subroutine test_U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.00000024d0
@@ -40,6 +41,7 @@ subroutine test_U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
 end subroutine
 
 subroutine test_U_ALPHA_PARTICLE_MASS(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.0000000020d-27
@@ -49,6 +51,7 @@ subroutine test_U_ALPHA_PARTICLE_MASS(error)
 end subroutine
 
 subroutine test_U_ATOMIC_MASS_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.00000000050d-27
@@ -58,6 +61,7 @@ subroutine test_U_ATOMIC_MASS_CONSTANT(error)
 end subroutine
 
 subroutine test_U_AVOGADRO_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.0d0 
@@ -67,6 +71,7 @@ subroutine test_U_AVOGADRO_CONSTANT(error)
 end subroutine
 
 subroutine test_U_BOLTZMANN_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.0d0
@@ -76,6 +81,7 @@ subroutine test_U_BOLTZMANN_CONSTANT(error)
 end subroutine
 
 subroutine test_U_ELECTRON_VOLT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.0d0
@@ -85,6 +91,7 @@ subroutine test_U_ELECTRON_VOLT(error)
 end subroutine
 
 subroutine test_U_ELEMENTARY_CHARGE(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.0d0
@@ -94,6 +101,7 @@ subroutine test_U_ELEMENTARY_CHARGE(error)
 end subroutine
 
 subroutine test_U_FARADAY_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.0d0
@@ -103,6 +111,7 @@ subroutine test_U_FARADAY_CONSTANT(error)
 end subroutine
 
 subroutine test_U_MOLAR_MASS_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.00000000030d-3
@@ -112,6 +121,7 @@ subroutine test_U_MOLAR_MASS_CONSTANT(error)
 end subroutine
 
 subroutine test_U_MOLAR_VOLUME_NTP(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.0d0
@@ -121,6 +131,7 @@ subroutine test_U_MOLAR_VOLUME_NTP(error)
 end subroutine
 
 subroutine test_U_PLANCK_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.0d0
@@ -130,6 +141,7 @@ subroutine test_U_PLANCK_CONSTANT(error)
 end subroutine
 
 subroutine test_U_SPEED_OF_LIGHT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected
     expected = 0.0d0
@@ -139,6 +151,7 @@ subroutine test_U_SPEED_OF_LIGHT(error)
 end subroutine
 
 subroutine test_U_STANDARD_ACCELERATION_OF_GRAVITY(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected
     expected = 0.0d0

@@ -13,6 +13,7 @@ module testsuite_constants
 contains
 
 subroutine collect_suite_constants(testsuite)
+    implicit none
   type(unittest_type), allocatable, intent(out) :: testsuite(:)
   testsuite = [&
                new_unittest("ALPHA_PARTICLE_ELECTRON_MASS_RATIO", test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO),&
@@ -43,6 +44,7 @@ subroutine collect_suite_version(testsuite)
 end subroutine
 
 subroutine test_year(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     
     integer(int32) :: value, expected
@@ -66,6 +68,7 @@ subroutine test_version(error)
 end subroutine
 
 subroutine test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 7294.29954142d0
@@ -75,6 +78,7 @@ subroutine test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
 end subroutine
 
 subroutine test_ALPHA_PARTICLE_MASS(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 6.6446573357d-27
@@ -84,6 +88,7 @@ subroutine test_ALPHA_PARTICLE_MASS(error)
 end subroutine
 
 subroutine test_ATOMIC_MASS_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 1.66053906660d-27
@@ -93,6 +98,7 @@ subroutine test_ATOMIC_MASS_CONSTANT(error)
 end subroutine
 
 subroutine test_AVOGADRO_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected =  6.02214076d23
@@ -102,6 +108,7 @@ subroutine test_AVOGADRO_CONSTANT(error)
 end subroutine
 
 subroutine test_BOLTZMANN_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected =  1.380649d-23
@@ -111,6 +118,7 @@ subroutine test_BOLTZMANN_CONSTANT(error)
 end subroutine
 
 subroutine test_ELECTRON_VOLT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 1.602176634d-19
@@ -120,6 +128,7 @@ subroutine test_ELECTRON_VOLT(error)
 end subroutine
 
 subroutine test_ELEMENTARY_CHARGE(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 1.602176634d-19
@@ -129,6 +138,7 @@ subroutine test_ELEMENTARY_CHARGE(error)
 end subroutine
 
 subroutine test_FARADAY_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 96485.33212d0
@@ -138,6 +148,7 @@ subroutine test_FARADAY_CONSTANT(error)
 end subroutine
 
 subroutine test_MOLAR_MASS_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 0.99999999965d-3
@@ -147,6 +158,7 @@ subroutine test_MOLAR_MASS_CONSTANT(error)
 end subroutine
 
 subroutine test_MOLAR_VOLUME_NTP(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 22.41396954d-3
@@ -156,6 +168,7 @@ subroutine test_MOLAR_VOLUME_NTP(error)
 end subroutine
 
 subroutine test_PLANCK_CONSTANT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected, fac
     expected = 6.62607015d-34 
@@ -165,6 +178,7 @@ subroutine test_PLANCK_CONSTANT(error)
 end subroutine
 
 subroutine test_SPEED_OF_LIGHT(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected
     expected = 299792458.0d0
@@ -174,6 +188,7 @@ subroutine test_SPEED_OF_LIGHT(error)
 end subroutine
 
 subroutine test_STANDARD_ACCELERATION_OF_GRAVITY(error)
+    implicit none
     type(error_type), allocatable, intent(out) :: error 
     real(real64) :: value, expected
     expected = 9.80665d0
