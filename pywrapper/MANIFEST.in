@@ -1,11 +1,5 @@
-# sdist
-
 include INSTALL.rst
 include LICENSE.TXT
 include MANIFEST.in
 include README.rst
 include requirements.txt
-
-include pycodata/*.c
-include pycodata/*.h
-include pycodata/libcodata.*
