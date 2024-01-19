@@ -61,7 +61,7 @@ subroutine test_version(error)
     type(error_type), allocatable, intent(out) :: error
     character(len=:), pointer :: value
     character(len=:), allocatable :: expected
-    expected = "0.9.0"
+    expected = "0.10.0"
     value => get_version()
     call check(error, value, expected)
     if(allocated(error)) return
