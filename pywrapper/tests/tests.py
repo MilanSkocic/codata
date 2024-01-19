@@ -6,7 +6,7 @@ from pycodata.version import __version__
 class TestVersion(unittest.TestCase):
     def test_version(self):
         value = __version__
-        expected = "0.9.0"
+        expected = "0.10.0"
         self.assertEqual(value, expected)
 
 
