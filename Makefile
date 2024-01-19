@@ -21,7 +21,7 @@ build_debug: generator
 
 test: build
 	fpm test --profile=release
-	
+
 test_debug: build_debug
 	fpm test --profile=debug
 
