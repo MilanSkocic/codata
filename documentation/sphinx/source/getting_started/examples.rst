@@ -18,5 +18,6 @@ Example in Python
 --------------------
 
 .. literalinclude:: ../../../../example/example_in_py.py
+    :lines: 4-
     :language: python
 

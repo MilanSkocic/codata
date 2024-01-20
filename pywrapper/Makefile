@@ -1,6 +1,7 @@
 ifeq ($(plat), )
 	plat=linux
 	PY=python
+	AW=auditwheel repair --plat manylinux_2_17_x86_64 ./dist/*.whl
 endif
 ifeq ($(plat), windows)
 	plat=linux
@@ -9,13 +10,14 @@ endif
 ifeq ($(plat), linux)
 	plat=linux
 	PY=python
+	AW=auditwheel repair --plat manylinux_2_17_x86_64 ./dist/*.whl
 endif
 ifeq ($(plat), darwin)
 	plat=darwin
 	PY=python
 endif
 
-DIRS=build dist *.egg-info __pycache__
+DIRS=build dist *.egg-info __pycache__ wheelhouse
 SETUP=setup.py pyproject.toml
 
 all: python3.8 python3.9 python3.10 python3.11 python3.12
@@ -26,6 +28,7 @@ python3.12: $(SETUP)
 	$(PY)3.12 -m build --no-isolation --sdist
 	$(PY)3.12 -m build --no-isolation --wheel
 	$(PY)3.12 -m unittest -v
+	$(AW)
 	@echo "#################################"
 
 python3.11: $(SETUP)

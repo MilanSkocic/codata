@@ -1,5 +1,5 @@
-Description
-============
+Introduction
+==============
 
 .. readme_inclusion_start
 

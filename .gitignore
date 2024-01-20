@@ -43,3 +43,4 @@ pywrapper/pycodata/*.dll.a
 pywrapper/pycodata/*.so
 pywrapper/pycodata/*.dylib
 pywrapper/pycodata/*.pyd
+pywrapper/wheelhouse/

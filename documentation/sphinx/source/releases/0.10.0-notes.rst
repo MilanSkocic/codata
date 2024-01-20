@@ -1,0 +1,29 @@
+Codata 0.10.0 Release Note
+============================
+
+Summary
+---------------
+
+* Remove remove generation of the version module.
+* Add tests using the test-drive framework.
+* Explicit parameter constants for Fortran and protected constants for C API.
+* Minor fixes in documentation.
+* Code cleanup.
+* Merge of all code for autogeneration in one file.
+
+Download
+---------------
+
+`Codata Releases <https://github.com/MilanSkocic/codata/releases>`_
+
+`PYPI <https://pypi.org/project/pycodata>`_
+
+
+Contributors
+---------------
+Milan Skocic
+
+Commits
+---------
+
+**Full Changelog**: https://github.com/MilanSkocic/codata/compare/0.9.0...0.10.0
