@@ -7,9 +7,9 @@ program example_in_f
     print *, "version = ", get_version()
     
     print '(A)', '########## CONSTANTS ##########'
-    print *, "c=",  speed_of_light_in_vacuum
+    print *, "c=",  SPEED_OF_LIGHT_IN_VACUUM
     
     print '(A)', '########## UNCERTAINTY ##########'
-    print *, "u(c)=", u_speed_of_light_in_vacuum
+    print *, "u(c)=", U_SPEED_OF_LIGHT_IN_VACUUM
 
 end program
