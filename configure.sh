@@ -5,7 +5,7 @@ FC=gfortran
 PYW_DIR="./pywrapper"
 BUILD_DIR="./build"
 INCLUDE_DIR="./include"
-PYW_MOD_DIR="$PYW_DIR/py$LIBNAME"
+PYW_MOD_DIR="$PYW_DIR/src/py$LIBNAME"
 FPM_FFLAGS="-std=f2008 -pedantic -Wall -Wextra"
 FPM_CFLAGS="-std=c11 -pedantic -Wall -Wextra"
 FPM_LDFLAGS="-static"

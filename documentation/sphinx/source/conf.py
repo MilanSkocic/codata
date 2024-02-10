@@ -3,8 +3,8 @@
 
 import os
 import sys, importlib.util
-sys.path.insert(0, os.path.abspath('../../../pywrapper/'))
-cautodoc_root = os.path.abspath('../../../pywrapper/')
+sys.path.insert(0, os.path.abspath('../../../pywrapper/src/'))
+cautodoc_root = os.path.abspath('../../../pywrapper/src/')
 
 # -- General configuration ------------------------------------------------
 

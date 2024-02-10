@@ -69,7 +69,7 @@ program generator
     open(file=fpath, newunit=fpython, status="new", action="write")
     
     ! CPYTHON
-    fpath = root//'pywrapper/pycodata/cpy_codata_constants.c'
+    fpath = root//'pywrapper/src/pycodata/cpy_codata_constants.c'
     inquire(file=fpath, exist=exist)
     if(exist)then
         open(file=fpath, newunit=unit, status="old")
