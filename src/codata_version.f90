@@ -5,7 +5,7 @@ use iso_c_binding
 implicit none
 private
 
-character(len=*), parameter :: version = "0.10.0"
+character(len=*), parameter :: version = "1.0.0"
 character(len=:), allocatable, target :: version_f
 character(len=:), allocatable, target :: version_c
 

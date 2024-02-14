@@ -1,0 +1,24 @@
+Codata 1.0.0 Release Note
+===========================
+
+Summary
+----------
+
+* Code refractoring and code cleaning.
+* Documentation update.
+
+Download
+------------
+
+`Codata Releases <https://github.com/MilanSkocic/codata/releases>`_
+
+`PYPI <https://pypi.org/project/pycodata>`_
+
+Contributors
+---------------
+Milan Skocic
+
+Commits
+---------
+
+**Full Changelog**: https://github.com/MilanSkocic/codata/compare/0.10.0...1.0.0.

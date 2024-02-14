@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pycodata"
-version = "0.10.0"
+version = "1.0.0"
 authors = [{name = "Milan Skocic", email = "milan.skocic@icloud.com"}]
 description = "pycodata: CODATA constants for python."
 readme = "README.rst"
