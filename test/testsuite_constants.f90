@@ -6,7 +6,6 @@ module testsuite_constants
     implicit none
     private
     
-    public :: collect_suite_version
     public :: collect_suite_year
     public :: collect_suite_constants
 
@@ -37,12 +36,6 @@ subroutine collect_suite_year(testsuite)
     testsuite = [new_unittest("YEAR", test_year)]
 end subroutine
 
-subroutine collect_suite_version(testsuite)
-    implicit none
-    type(unittest_type), allocatable, intent(out) :: testsuite(:)
-    testsuite = [new_unittest("VERSION", test_version)]
-end subroutine
-
 subroutine test_year(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
@@ -54,17 +47,6 @@ subroutine test_year(error)
 
     call check(error, value, expected)
     if (allocated(error)) return
-end subroutine
-
-subroutine test_version(error)
-    implicit none
-    type(error_type), allocatable, intent(out) :: error
-    character(len=:), pointer :: value
-    character(len=:), allocatable :: expected
-    expected = "0.10.0"
-    value => get_version()
-    call check(error, value, expected)
-    if(allocated(error)) return
 end subroutine
 
 subroutine test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
