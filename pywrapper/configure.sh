@@ -54,7 +54,7 @@ fi
 
 # C HEADERS
 echo "Include folder: $LIB_INCLUDE_DIR"
-for header in "$LIB_INCLUDE_DIR"/*; do
+for header in "$LIB_INCLUDE_DIR"/*.h; do
    echo -n "    $header."
    cp $LIB_INCLUDE_DIR/$header $PYW_SRC
    echo  " Copied."
