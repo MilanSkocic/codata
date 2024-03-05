@@ -1,18 +1,18 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
-#include "codata.h"
+#include "codata_constants_2018.h"
 
-PyDoc_STRVAR(module_docstring, "C extension for codata constants.");
+PyDoc_STRVAR(module_docstring, "C extension for codata constants 2018.");
 
 static PyMethodDef myMethods[] = {{ NULL, NULL, 0, NULL }};
 
-static struct PyModuleDef constants = {PyModuleDef_HEAD_INIT, "constants", module_docstring, -1, myMethods};
+static struct PyModuleDef constants_2018 = {PyModuleDef_HEAD_INIT, "constants_2018", module_docstring, -1, myMethods};
 
-PyMODINIT_FUNC PyInit_constants(void){
+PyMODINIT_FUNC PyInit_constants_2018(void){
     PyObject *m;
     PyObject *d;
     PyObject *v;
-    m = PyModule_Create(&constants);
+    m = PyModule_Create(&constants_2018);
     d = PyModule_GetDict(m);
 
     v = PyLong_FromLong(YEAR);
