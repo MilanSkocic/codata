@@ -1,6 +1,6 @@
 import unittest
-from pycodata.constants import *
-from pycodata.version import __version__
+from pycodata import *
+from pycodata import __version__
 
 
 class TestVersion(unittest.TestCase):

@@ -20,6 +20,12 @@ if platform.system() == "Darwin":
 
 if __name__ == "__main__":
 
+    mod_constants_latest = Extension(name="pycodata.constants_latest",
+                        sources=["./src/pycodata/cpy_codata_constants_latest.c"],
+                        libraries=libraries,
+                        library_dirs=library_dirs,
+                        runtime_library_dirs=runtime_library_dirs,
+                        extra_objects=extra_objects)
     mod_constants_2018 = Extension(name="pycodata.constants_2018",
                         sources=["./src/pycodata/cpy_codata_constants_2018.c"],
                         libraries=libraries,
@@ -38,5 +44,5 @@ if __name__ == "__main__":
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,
                         extra_objects=extra_objects)
-    setup(ext_modules=[mod_constants_2018, mod_constants_2014, mod_version])
+    setup(ext_modules=[mod_constants_latest, mod_constants_2018, mod_constants_2014, mod_version])
 

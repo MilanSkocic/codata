@@ -4,8 +4,8 @@ LIB_BUILD_DIR="../build"
 
 EXT=".so"
 
-LIBS=("libgfortran.5" "libquadmath.0" "libgcc_s.1.1")
-LIBSWINDOWS=("libwinpthread")
+LIBSDARWIN=("libgfortran.5" "libquadmath.0" "libgcc_s.1.1")
+LIBSWINDOWS=("libgfortran-5" "libquadmath-0" "libgcc_s_seh-1" "libwinpthread-1")
 
 ROOTLINUX=/usr/lib/
 ROOTDARWIN=/usr/local/opt/gcc/lib/gcc/current
@@ -25,12 +25,13 @@ echo "LIB_BUILD_DIR=" $LIB_BUILD_DIR
 if [ "$PLATFORM" = "darwin" ]; then
     ROOT=$ROOTDARWIN
     EXT=".dylib"
+    LIBS=( "${LIBSDARWIN[@]}" )
 fi
 
 if [ "$PLATFORM" = "windows" ]; then
     ROOT=$ROOTWINDOWS
     EXT=".dll"
-    LIBS+=$LIBSWINDOWS
+    LIBS=( "${LIBSWINDOWS[@]}" )
 fi
 
 if ! [ -z $1 ]; then
