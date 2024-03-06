@@ -26,11 +26,17 @@ if __name__ == "__main__":
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,
                         extra_objects=extra_objects)
+    mod_constants_2014 = Extension(name="pycodata.constants_2014",
+                        sources=["./src/pycodata/cpy_codata_constants_2014.c"],
+                        libraries=libraries,
+                        library_dirs=library_dirs,
+                        runtime_library_dirs=runtime_library_dirs,
+                        extra_objects=extra_objects)
     mod_version = Extension(name="pycodata.version",
                         sources=["./src/pycodata/cpy_codata_version.c"],
                         libraries=libraries,
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,
                         extra_objects=extra_objects)
-    setup(ext_modules=[mod_constants_2018, mod_version])
+    setup(ext_modules=[mod_constants_2018, mod_constants_2014, mod_version])
 

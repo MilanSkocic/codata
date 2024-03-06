@@ -18,7 +18,7 @@ program generator
 
     type(codata_file_props) :: props
     integer(int32) :: fcodata
-    integer(int32) :: ffortran
+    integer(int32) :: ffortran, ffortran_latest
     integer(int32) :: fcheader
     integer(int32) :: fpython
     integer(int32) :: fcpython
@@ -28,81 +28,102 @@ program generator
 
     character(len=*), parameter :: root = "../../"
     character(len=64) :: fpath
-    character(len=4) :: years(1) = [character(len=4) :: "2018"]
+    character(len=4), parameter :: years(2) = [character(len=4) :: "2018", "2014"]
+    character(len=4), parameter :: latest = years(1)
 
     
     do i=1, size(years)
-    props = codata_file_props(0, 0, "./codata_"//years(i)//".txt", years(i))
+        props = codata_file_props(0, 0, "./codata_"//years(i)//".txt", years(i))
 
-    print *, "Reading codata file properties..."
-    call get_props(props)
-    print "(4X, A, I3)", "Number of constants: ", props%n
-    print "(4X, A, I2)", "Header Offset: ", props%index_header_end
-    print "(4X, A, A)", "fpath: ", props%codata_path
-    print "(4X, A, A)", "Year: ", props%year
+        print *, "Reading codata file properties..."
+        call get_props(props)
+        print "(4X, A, I3)", "Number of constants: ", props%n
+        print "(4X, A, I2)", "Header Offset: ", props%index_header_end
+        print "(4X, A, A)", "fpath: ", props%codata_path
+        print "(4X, A, A)", "Year: ", props%year
 
-    write(output_unit, "(A)", advance="NO") "Opening files..."
-    
-    ! CODATA SOURCE
-    open(file=props%codata_path, newunit=fcodata, status="old", action="read")
-    
-    ! FORTRAN
-    fpath = root//'src/codata_constants_'//props%year//'.f90'
-    inquire(file=fpath, exist=exist)
-    if(exist)then
-        open(file=fpath, newunit=unit, status="old")
-        close(unit=unit, status="delete")
-    endif
-    open(file=fpath, newunit=ffortran, status="new", action="write")
-    
-    ! C HEADER
-    fpath = root//'include/codata_constants_'//props%year//'.h'
-    inquire(file=fpath, exist=exist)
-    if(exist)then
-        open(file=fpath, newunit=unit, status="old")
-        close(unit=unit, status="delete")
-    endif
-    open(file=fpath, newunit=fcheader, status="new", action="write")
-    
-    ! TXT INCLUDE
-    fpath = root//'include/codata.txt'
-    inquire(file=fpath, exist=exist)
-    if(exist)then
-        open(file=fpath, newunit=unit, status="old")
-        close(unit=unit, status="delete")
-    endif
-    open(file=fpath, newunit=fpython, status="new", action="write")
-    
-    ! CPYTHON
-    fpath = root//'pywrapper/src/pycodata/cpy_codata_constants_'//props%year//'.c'
-    inquire(file=fpath, exist=exist)
-    if(exist)then
-        open(file=fpath, newunit=unit, status="old")
-        close(unit=unit, status="delete")
-    endif
-    open(file=fpath, newunit=fcpython, status="new", action="write")
-    
-    write(output_unit, "(A)", advance="YES") "OK"
+        write(output_unit, "(A)", advance="NO") "Opening files..."
+        
+        ! CODATA SOURCE
+        open(file=props%codata_path, newunit=fcodata, status="old", action="read")
+        
+        ! FORTRAN
+        fpath = root//'src/codata_constants_'//props%year//'.f90'
+        inquire(file=fpath, exist=exist)
+        if(exist)then
+            open(file=fpath, newunit=unit, status="old")
+            close(unit=unit, status="delete")
+        endif
+        open(file=fpath, newunit=ffortran, status="new", action="write")
 
-    write(output_unit, "(A)", advance="NO") "Generating code..."
-    call write_fortran_module_declaration(ffortran, props%year)
-    call write_c_header_doc(fcheader, props%year)
-    call write_python_module_doc(fpython)
-    call write_cpython_extension_declaration(fcpython, props%year);
+        ! Fortran latest
+        if(years(i) == latest)then
+            fpath = root//'src/codata_constants_latest.f90'
+            inquire(file=fpath, exist=exist)
+            if(exist)then
+                open(file=fpath, newunit=unit, status="old")
+                close(unit=unit, status="delete")
+            endif
+            open(file=fpath, newunit=ffortran_latest, status="new", action="write")
+        end if
+        
+        ! C HEADER
+        fpath = root//'include/codata_constants_'//props%year//'.h'
+        inquire(file=fpath, exist=exist)
+        if(exist)then
+            open(file=fpath, newunit=unit, status="old")
+            close(unit=unit, status="delete")
+        endif
+        open(file=fpath, newunit=fcheader, status="new", action="write")
+        
+        ! TXT INCLUDE
+        fpath = root//'include/codata.txt'
+        inquire(file=fpath, exist=exist)
+        if(exist)then
+            open(file=fpath, newunit=unit, status="old")
+            close(unit=unit, status="delete")
+        endif
+        open(file=fpath, newunit=fpython, status="new", action="write")
+        
+        ! CPYTHON
+        fpath = root//'pywrapper/src/pycodata/cpy_codata_constants_'//props%year//'.c'
+        inquire(file=fpath, exist=exist)
+        if(exist)then
+            open(file=fpath, newunit=unit, status="old")
+            close(unit=unit, status="delete")
+        endif
+        open(file=fpath, newunit=fcpython, status="new", action="write")
+        
+        write(output_unit, "(A)", advance="YES") "OK"
 
-    call write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, props)
+        write(output_unit, "(A)", advance="NO") "Generating code..."
+        call write_fortran_module_declaration(ffortran, props%year)
+        if(years(i)==latest)then
+            call write_fortran_module_declaration(ffortran_latest, "latest")
+        endif
+        call write_c_header_doc(fcheader, props%year)
+        call write_python_module_doc(fpython)
+        call write_cpython_extension_declaration(fcpython, props%year);
+        
+        call write_all_constants(fcodata, ffortran, ffortran_latest, fcheader, fpython, fcpython, props)
 
-    call write_fortran_module_end(ffortran, props%year)
-    call write_C_header_end(fcheader)
-    call write_cpython_extension_end(fcpython);
-    
-    write(output_unit, "(A)", advance="YES") "OK"
+        call write_fortran_module_end(ffortran, props%year)
+        if(years(i) == latest)then
+            call write_fortran_module_end(ffortran_latest, "latest")
+        end if
+        call write_C_header_end(fcheader)
+        call write_cpython_extension_end(fcpython);
+        
+        write(output_unit, "(A)", advance="YES") "OK"
 
-    close(fcodata)
-    close(ffortran)
-    close(fcheader)
-    close(fpython)
-    close(fcpython)
+        close(fcodata)
+        close(ffortran)
+        if(years(i) == latest)then
+            close(ffortran_latest)
+        endif
+        close(fcheader)
+        close(fpython)
+        close(fcpython)
 
     end do
     
@@ -232,6 +253,15 @@ subroutine get_props(properties)
     close(unit)
 end subroutine
 
+subroutine check_name(name)
+    !! Check if name is valid.
+    character(len=*), intent(inout) :: name
+        ! String where the name will be copied.
+    if(name(1:1) == "_")then
+        name(1:1) = achar(iachar("v"))
+    endif
+end subroutine
+
 subroutine format_names(line, name)
     !! Format names simply by copying them.
     implicit none
@@ -260,6 +290,7 @@ subroutine format_names(line, name)
     end do
 
     call toupper(name)
+    call check_name(name)
 end subroutine
 
 subroutine format_values(line, value)
@@ -562,7 +593,7 @@ subroutine write_python_module_doc(fcode)
     write(fcode, "(A)") ""
 end subroutine
 
-subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, props)
+subroutine write_all_constants(fcodata, ffortran, ffortran_latest, fcheader, fpython, fcpython, props)
     !! Generate all constants in the Fortran module.
     implicit none
     ! Arguments
@@ -570,6 +601,8 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, p
         !! File unit of the codata file.
     integer(int32), intent(in) :: ffortran
         !! ffortran File unit of the Fortran module.
+    integer(int32), intent(in) :: ffortran_latest
+        !! ffortran File unit of the latest Fortran module.
     integer(int32), intent(in) :: fcheader
         !! File unit of the C header.
     integer(int32), intent(in) :: fpython
@@ -586,22 +619,33 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, p
     character(len=UNCERTAINTIES_LENGTH) :: uncertainty
     character(len=UNITS_LENGTH) :: unit
     integer(int32) :: i
+    character(len=:), allocatable :: suffix
+    character(len=3) :: capi_dummy
 
     rewind(unit=fcodata)
     do i=1, props%index_header_end
         read(fcodata, "(A)") line
     end do
+    
 
     ! fortran
-    write(ffortran, "(A)") 'integer(int32), parameter, public :: YEAR = ' // props%year
-    write(ffortran, "(A,/)") 'integer(c_int), protected, public, bind(C,name="YEAR") :: capi_YEAR = YEAR' 
+    suffix = '_'//props%year
+    write(ffortran, "(A)") 'integer(int32), parameter, public :: YEAR'//suffix//' = '//props%year
+    write(ffortran, "(A,A,/)") 'integer(c_int), protected, public, bind(C,name="YEAR'//suffix//'") ::',&
+                              'capi_YEAR'//suffix//' = YEAR'//suffix
+    
+    ! fortran latest
+    suffix = ''
+    write(ffortran_latest, "(A)") 'integer(int32), parameter, public :: YEAR'//suffix//' = '//props%year
+    write(ffortran_latest, "(A,A,/)") 'integer(c_int), protected, public, bind(C,name="YEAR'//suffix//'") ::',&
+                              'capi_YEAR'//suffix//' = YEAR'//suffix
     ! C Code
-    write(fcheader, "(A,/)") "ADD_IMPORT extern const int YEAR;"
+    write(fcheader, "(A,/)") 'ADD_IMPORT extern const int YEAR'//suffix//';'
     ! python
     write(fpython, "(A,/)") 'YEAR = '//props%year
     ! cpython
-    write(fcpython, "(4X, A)") "v = PyLong_FromLong(YEAR);"
-    write(fcpython, "(4X, A)") 'PyDict_SetItemString(d, "YEAR", v);'
+    write(fcpython, "(4X, A)") 'v = PyLong_FromLong(YEAR'//suffix//');'
+    write(fcpython, "(4X, A)") 'PyDict_SetItemString(d, "YEAR'//suffix//'", v);'
     write(fcpython, "(4X, A)") "Py_INCREF(v);"
     write(fcpython, "(A)") ""
 
@@ -619,21 +663,22 @@ subroutine write_all_constants(fcodata, ffortran, fcheader, fpython, fcpython, p
             call format_units(line, unit)
             
             ! fortran code
+            write(capi_dummy, '(I3.3)') i
             write(ffortran, "(A)") 'real(real64), parameter, public :: '&
-            //trim(name)//'='//trim(value)//' !! '//trim(unit)
+            //trim(name)//suffix//'='//trim(value)//' !! '//trim(unit)
             write(ffortran, "(A,/,A)") 'real(real64), parameter, public :: '//&
-            'U_'//trim(name)//'='//trim(uncertainty)//' !! '//trim(unit)
-            write(ffortran, "(A,/,A)") 'real(c_double), protected, public, bind(C,name="'//trim(name)//'"):: &', &
-            'capi_'//trim(name)//'='//trim(name)
-            write(ffortran, "(A,/,A)") 'real(c_double), protected, public, bind(C,name="U_'//trim(name)//'") :: &', &
-            "capi_U_"//trim(name)//'=U_'//trim(name)
+            'U_'//trim(name)//suffix//'='//trim(uncertainty)//' !! '//trim(unit)
+            write(ffortran, "(A,/,A)") 'real(c_double), protected, public, bind(C,name="'//trim(name)//suffix//'"):: &', &
+            'capi_'//trim(capi_dummy)//suffix//'='//trim(name)//suffix
+            write(ffortran, "(A,/,A)") 'real(c_double), protected, public, bind(C,name="U_'//trim(name)//suffix//'") :: &', &
+            "capi_U_"//trim(capi_dummy)//suffix//'=U_'//trim(name)//suffix
             write(ffortran, "(A)") ""
 
             ! C Code
             call convert_value_to_c(value);
             call convert_value_to_c(uncertainty);
-            write(fcheader, "(A)") "ADD_IMPORT extern const double "//trim(name)//";/**< "//trim(unit)//" */"
-            write(fcheader, "(A)") "ADD_IMPORT extern const double U_"//trim(name)//";/**< "//trim(unit)//" */"
+            write(fcheader, "(A)") "ADD_IMPORT extern const double "//trim(name)//suffix//";/**< "//trim(unit)//" */"
+            write(fcheader, "(A)") "ADD_IMPORT extern const double U_"//trim(name)//suffix//";/**< "//trim(unit)//" */"
             write(fcheader, "(A)")  
             
             ! Python code
