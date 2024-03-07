@@ -1,11 +1,13 @@
-"""Python module containing the codata constants.
+"""Constants module.
+ 
+The latest values (2018) do not have the year as a suffix in their name.
+Older values can be used and they feature the year as a suffix in their name.
 
-All latest constants as declared available at the top level of the module.
-Modules for specific years are also available in dedicated modules.
+The latest values are available at the top level and 
+older values are available in dedicated modules.
 """
 from .version import __version__
 from .constants_latest import *
-from . import constants_latest
 from . import constants_2018
 from . import constants_2014
 from . import constants_2010

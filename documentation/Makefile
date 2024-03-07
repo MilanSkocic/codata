@@ -12,8 +12,8 @@ latexpdf:
 	$(MAKE) -C ./sphinx latexpdf
 
 doxygen:
+	mkdir -p ./sphinx/build/html/doxygen
 	$(MAKE) -C ./doxygen
-	$(MAKE) -C ./sphinx/build/html/doxygen/latex
 
 clean:
 	$(MAKE) -C ./sphinx clean

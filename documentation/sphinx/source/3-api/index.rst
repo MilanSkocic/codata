@@ -7,3 +7,4 @@ API
 
     codata.rst
     pycodata.rst
+    raw_codata.rst
