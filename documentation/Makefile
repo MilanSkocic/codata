@@ -1,6 +1,6 @@
-.PHONY: html latexpdf ford clean upload logo
+.PHONY: html latexpdf doxygen clean upload logo
 
-all: logo ford latexpdf html
+all: logo doxygen latexpdf html
 
 logo: 
 	cp ../media/logo-codata.png ./sphinx/source/media
@@ -11,8 +11,9 @@ html:
 latexpdf:
 	$(MAKE) -C ./sphinx latexpdf
 
-ford:
-	$(MAKE) -C ./ford
+doxygen:
+	$(MAKE) -C ./doxygen
+	$(MAKE) -C ./sphinx/build/html/doxygen/latex
 
 clean:
 	$(MAKE) -C ./sphinx clean

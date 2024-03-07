@@ -1,5 +1,6 @@
+********
 pycodata
-=========================
+********
 
 .. include:: ../../../../pywrapper/README.rst
   :start-after: readme_inclusion_start

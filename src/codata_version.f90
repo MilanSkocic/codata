@@ -1,3 +1,7 @@
+!> @file
+!! @brief Codata version.
+
+!> @brief Codata version.
 module codata__version
 !! Version
 use iso_fortran_env
@@ -13,29 +17,25 @@ public :: get_version
 
 contains
 
+!> @brief Get the version.
+!! @return fptr Pointer to a string indicating the version.
 function get_version()result(fptr)
-    !! Get the version. 
     implicit none
-
-    !! Returns
     character(len=:), pointer :: fptr
-        !! Pointer to the version string.
 
     if(allocated(version_f))then
         deallocate(version_f)
     endif
     allocate(character(len=len(version)) :: version_f)
     version_f = version
-    fptr => version_f    
+    fptr => version_f
 end function
 
+!> @brief Get the version.
+!! @return cptr Pointer to C string indicating the version.
 function capi_get_version()bind(c,name="codata_get_version")result(cptr)
-    !! Get the version.
     implicit none
-    
-    ! Returns   
     type(c_ptr) :: cptr
-        !! Pointer to version string.
 
     character(len=:), pointer :: fptr
     fptr => get_version() 

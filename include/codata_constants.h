@@ -1,6 +1,6 @@
 /**
 * @file
-* @brief Current Codata Constants 
+* @brief Codata Constants 
 */
 
 #ifndef codata_CONSTANTS_H

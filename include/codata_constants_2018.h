@@ -10,10 +10,10 @@
 #else
 #define ADD_IMPORT
 #endif
-ADD_IMPORT extern const int YEAR_2018;
+ADD_IMPORT extern const int YEAR_2018;/**< Year of codata constants*/
 
-ADD_IMPORT extern const double ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double ALPHA_PARTICLE_MASS_2018;/**< kg */
 ADD_IMPORT extern const double U_ALPHA_PARTICLE_MASS_2018;/**< kg */
@@ -30,11 +30,11 @@ ADD_IMPORT extern const double U_ALPHA_PARTICLE_MASS_IN_U_2018;/**< u */
 ADD_IMPORT extern const double ALPHA_PARTICLE_MOLAR_MASS_2018;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_ALPHA_PARTICLE_MOLAR_MASS_2018;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double ALPHA_PARTICLE_PROTON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ALPHA_PARTICLE_PROTON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ALPHA_PARTICLE_PROTON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ALPHA_PARTICLE_PROTON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018;/**<  */
-ADD_IMPORT extern const double U_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018;/**<  */
+ADD_IMPORT extern const double ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double ANGSTROM_STAR_2018;/**< m */
 ADD_IMPORT extern const double U_ANGSTROM_STAR_2018;/**< m */
@@ -213,23 +213,23 @@ ADD_IMPORT extern const double U_CONVENTIONAL_VALUE_OF_WATT_90_2018;/**< W */
 ADD_IMPORT extern const double COPPER_X_UNIT_2018;/**< m */
 ADD_IMPORT extern const double U_COPPER_X_UNIT_2018;/**< m */
 
-ADD_IMPORT extern const double DEUTERON_ELECTRON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_ELECTRON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double DEUTERON_ELECTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_ELECTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_ELECTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_ELECTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double DEUTERON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_G_FACTOR_2018;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_G_FACTOR_2018;/**<  */
+ADD_IMPORT extern const double DEUTERON_G_FACTOR_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_G_FACTOR_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double DEUTERON_MAG__MOM_2018;/**< J T^-1 */
 ADD_IMPORT extern const double U_DEUTERON_MAG__MOM_2018;/**< J T^-1 */
 
-ADD_IMPORT extern const double DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double DEUTERON_MASS_2018;/**< kg */
 ADD_IMPORT extern const double U_DEUTERON_MASS_2018;/**< kg */
@@ -246,17 +246,17 @@ ADD_IMPORT extern const double U_DEUTERON_MASS_IN_U_2018;/**< u */
 ADD_IMPORT extern const double DEUTERON_MOLAR_MASS_2018;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_DEUTERON_MOLAR_MASS_2018;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double DEUTERON_NEUTRON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_NEUTRON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double DEUTERON_NEUTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_NEUTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_PROTON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_PROTON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double DEUTERON_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_PROTON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_PROTON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double DEUTERON_PROTON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_PROTON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_RELATIVE_ATOMIC_MASS_2018;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_RELATIVE_ATOMIC_MASS_2018;/**<  */
+ADD_IMPORT extern const double DEUTERON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double DEUTERON_RMS_CHARGE_RADIUS_2018;/**< m */
 ADD_IMPORT extern const double U_DEUTERON_RMS_CHARGE_RADIUS_2018;/**< m */
@@ -264,14 +264,14 @@ ADD_IMPORT extern const double U_DEUTERON_RMS_CHARGE_RADIUS_2018;/**< m */
 ADD_IMPORT extern const double ELECTRON_CHARGE_TO_MASS_QUOTIENT_2018;/**< C kg^-1 */
 ADD_IMPORT extern const double U_ELECTRON_CHARGE_TO_MASS_QUOTIENT_2018;/**< C kg^-1 */
 
-ADD_IMPORT extern const double ELECTRON_DEUTERON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_DEUTERON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_DEUTERON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_DEUTERON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_DEUTERON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_DEUTERON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_DEUTERON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_DEUTERON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_G_FACTOR_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_G_FACTOR_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_G_FACTOR_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_G_FACTOR_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double ELECTRON_GYROMAG__RATIO_2018;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double U_ELECTRON_GYROMAG__RATIO_2018;/**< s^-1 T^-1 */
@@ -279,20 +279,20 @@ ADD_IMPORT extern const double U_ELECTRON_GYROMAG__RATIO_2018;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double ELECTRON_GYROMAG__RATIO_IN_MHZ_T_2018;/**< MHz T^-1 */
 ADD_IMPORT extern const double U_ELECTRON_GYROMAG__RATIO_IN_MHZ_T_2018;/**< MHz T^-1 */
 
-ADD_IMPORT extern const double ELECTRON_HELION_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_HELION_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_HELION_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_HELION_MASS_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double ELECTRON_MAG__MOM_2018;/**< J T^-1 */
 ADD_IMPORT extern const double U_ELECTRON_MAG__MOM_2018;/**< J T^-1 */
 
-ADD_IMPORT extern const double ELECTRON_MAG__MOM__ANOMALY_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__ANOMALY_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_MAG__MOM__ANOMALY_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__ANOMALY_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double ELECTRON_MASS_2018;/**< kg */
 ADD_IMPORT extern const double U_ELECTRON_MASS_2018;/**< kg */
@@ -309,41 +309,41 @@ ADD_IMPORT extern const double U_ELECTRON_MASS_IN_U_2018;/**< u */
 ADD_IMPORT extern const double ELECTRON_MOLAR_MASS_2018;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_ELECTRON_MOLAR_MASS_2018;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double ELECTRON_MUON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MUON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_MUON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MUON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_MUON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MUON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_MUON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MUON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_NEUTRON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_NEUTRON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_NEUTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_NEUTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_NEUTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_NEUTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_NEUTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_NEUTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_PROTON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_PROTON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_PROTON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_PROTON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_PROTON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_PROTON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_RELATIVE_ATOMIC_MASS_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_RELATIVE_ATOMIC_MASS_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TAU_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TAU_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_TAU_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TAU_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TRITON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TRITON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double ELECTRON_TRITON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TRITON_MASS_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double ELECTRON_VOLT_2018;/**< J */
 ADD_IMPORT extern const double U_ELECTRON_VOLT_2018;/**< J */
@@ -381,8 +381,8 @@ ADD_IMPORT extern const double U_FARADAY_CONSTANT_2018;/**< C mol^-1 */
 ADD_IMPORT extern const double FERMI_COUPLING_CONSTANT_2018;/**< GeV^-2 */
 ADD_IMPORT extern const double U_FERMI_COUPLING_CONSTANT_2018;/**< GeV^-2 */
 
-ADD_IMPORT extern const double FINE_STRUCTURE_CONSTANT_2018;/**<  */
-ADD_IMPORT extern const double U_FINE_STRUCTURE_CONSTANT_2018;/**<  */
+ADD_IMPORT extern const double FINE_STRUCTURE_CONSTANT_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_FINE_STRUCTURE_CONSTANT_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double FIRST_RADIATION_CONSTANT_2018;/**< W m^2 */
 ADD_IMPORT extern const double U_FIRST_RADIATION_CONSTANT_2018;/**< W m^2 */
@@ -417,20 +417,20 @@ ADD_IMPORT extern const double U_HARTREE_KELVIN_RELATIONSHIP_2018;/**< K */
 ADD_IMPORT extern const double HARTREE_KILOGRAM_RELATIONSHIP_2018;/**< kg */
 ADD_IMPORT extern const double U_HARTREE_KILOGRAM_RELATIONSHIP_2018;/**< kg */
 
-ADD_IMPORT extern const double HELION_ELECTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_HELION_ELECTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double HELION_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double HELION_G_FACTOR_2018;/**<  */
-ADD_IMPORT extern const double U_HELION_G_FACTOR_2018;/**<  */
+ADD_IMPORT extern const double HELION_G_FACTOR_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_G_FACTOR_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double HELION_MAG__MOM_2018;/**< J T^-1 */
 ADD_IMPORT extern const double U_HELION_MAG__MOM_2018;/**< J T^-1 */
 
-ADD_IMPORT extern const double HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double HELION_MASS_2018;/**< kg */
 ADD_IMPORT extern const double U_HELION_MASS_2018;/**< kg */
@@ -447,14 +447,14 @@ ADD_IMPORT extern const double U_HELION_MASS_IN_U_2018;/**< u */
 ADD_IMPORT extern const double HELION_MOLAR_MASS_2018;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_HELION_MOLAR_MASS_2018;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double HELION_PROTON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_HELION_PROTON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double HELION_PROTON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_PROTON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double HELION_RELATIVE_ATOMIC_MASS_2018;/**<  */
-ADD_IMPORT extern const double U_HELION_RELATIVE_ATOMIC_MASS_2018;/**<  */
+ADD_IMPORT extern const double HELION_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double HELION_SHIELDING_SHIFT_2018;/**<  */
-ADD_IMPORT extern const double U_HELION_SHIELDING_SHIFT_2018;/**<  */
+ADD_IMPORT extern const double HELION_SHIELDING_SHIFT_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_SHIELDING_SHIFT_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2018;/**< u */
 ADD_IMPORT extern const double U_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2018;/**< u */
@@ -480,8 +480,8 @@ ADD_IMPORT extern const double U_HERTZ_KILOGRAM_RELATIONSHIP_2018;/**< kg */
 ADD_IMPORT extern const double HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2018;/**< Hz */
 ADD_IMPORT extern const double U_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2018;/**< Hz */
 
-ADD_IMPORT extern const double INVERSE_FINE_STRUCTURE_CONSTANT_2018;/**<  */
-ADD_IMPORT extern const double U_INVERSE_FINE_STRUCTURE_CONSTANT_2018;/**<  */
+ADD_IMPORT extern const double INVERSE_FINE_STRUCTURE_CONSTANT_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_INVERSE_FINE_STRUCTURE_CONSTANT_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2018;/**< u */
 ADD_IMPORT extern const double U_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2018;/**< u */
@@ -618,23 +618,23 @@ ADD_IMPORT extern const double U_MOLYBDENUM_X_UNIT_2018;/**< m */
 ADD_IMPORT extern const double MUON_COMPTON_WAVELENGTH_2018;/**< m */
 ADD_IMPORT extern const double U_MUON_COMPTON_WAVELENGTH_2018;/**< m */
 
-ADD_IMPORT extern const double MUON_ELECTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_MUON_ELECTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double MUON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_G_FACTOR_2018;/**<  */
-ADD_IMPORT extern const double U_MUON_G_FACTOR_2018;/**<  */
+ADD_IMPORT extern const double MUON_G_FACTOR_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_G_FACTOR_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double MUON_MAG__MOM_2018;/**< J T^-1 */
 ADD_IMPORT extern const double U_MUON_MAG__MOM_2018;/**< J T^-1 */
 
-ADD_IMPORT extern const double MUON_MAG__MOM__ANOMALY_2018;/**<  */
-ADD_IMPORT extern const double U_MUON_MAG__MOM__ANOMALY_2018;/**<  */
+ADD_IMPORT extern const double MUON_MAG__MOM__ANOMALY_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_MAG__MOM__ANOMALY_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double MUON_MASS_2018;/**< kg */
 ADD_IMPORT extern const double U_MUON_MASS_2018;/**< kg */
@@ -651,17 +651,17 @@ ADD_IMPORT extern const double U_MUON_MASS_IN_U_2018;/**< u */
 ADD_IMPORT extern const double MUON_MOLAR_MASS_2018;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_MUON_MOLAR_MASS_2018;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double MUON_NEUTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_MUON_NEUTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double MUON_NEUTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_NEUTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_PROTON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_MUON_PROTON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double MUON_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_PROTON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_MUON_PROTON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double MUON_PROTON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_PROTON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_TAU_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_MUON_TAU_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double MUON_TAU_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_TAU_MASS_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double NATURAL_UNIT_OF_ACTION_2018;/**< J s */
 ADD_IMPORT extern const double U_NATURAL_UNIT_OF_ACTION_2018;/**< J s */
@@ -696,14 +696,14 @@ ADD_IMPORT extern const double U_NATURAL_UNIT_OF_VELOCITY_2018;/**< m s^-1 */
 ADD_IMPORT extern const double NEUTRON_COMPTON_WAVELENGTH_2018;/**< m */
 ADD_IMPORT extern const double U_NEUTRON_COMPTON_WAVELENGTH_2018;/**< m */
 
-ADD_IMPORT extern const double NEUTRON_ELECTRON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_ELECTRON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_ELECTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_ELECTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_ELECTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_ELECTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_G_FACTOR_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_G_FACTOR_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_G_FACTOR_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_G_FACTOR_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double NEUTRON_GYROMAG__RATIO_2018;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double U_NEUTRON_GYROMAG__RATIO_2018;/**< s^-1 T^-1 */
@@ -714,11 +714,11 @@ ADD_IMPORT extern const double U_NEUTRON_GYROMAG__RATIO_IN_MHZ_T_2018;/**< MHz T
 ADD_IMPORT extern const double NEUTRON_MAG__MOM_2018;/**< J T^-1 */
 ADD_IMPORT extern const double U_NEUTRON_MAG__MOM_2018;/**< J T^-1 */
 
-ADD_IMPORT extern const double NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double NEUTRON_MASS_2018;/**< kg */
 ADD_IMPORT extern const double U_NEUTRON_MASS_2018;/**< kg */
@@ -735,11 +735,11 @@ ADD_IMPORT extern const double U_NEUTRON_MASS_IN_U_2018;/**< u */
 ADD_IMPORT extern const double NEUTRON_MOLAR_MASS_2018;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_NEUTRON_MOLAR_MASS_2018;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double NEUTRON_MUON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_MUON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_MUON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_MUON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_PROTON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_PROTON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_2018;/**< kg */
 ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_2018;/**< kg */
@@ -753,17 +753,17 @@ ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALEN
 ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2018;/**< u */
 ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2018;/**< u */
 
-ADD_IMPORT extern const double NEUTRON_PROTON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_PROTON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_RELATIVE_ATOMIC_MASS_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_RELATIVE_ATOMIC_MASS_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_TAU_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_TAU_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_TAU_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_TAU_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double NEWTONIAN_CONSTANT_OF_GRAVITATION_2018;/**< m^3 kg^-1 s^-2 */
 ADD_IMPORT extern const double U_NEWTONIAN_CONSTANT_OF_GRAVITATION_2018;/**< m^3 kg^-1 s^-2 */
@@ -813,11 +813,11 @@ ADD_IMPORT extern const double U_PROTON_CHARGE_TO_MASS_QUOTIENT_2018;/**< C kg^-
 ADD_IMPORT extern const double PROTON_COMPTON_WAVELENGTH_2018;/**< m */
 ADD_IMPORT extern const double U_PROTON_COMPTON_WAVELENGTH_2018;/**< m */
 
-ADD_IMPORT extern const double PROTON_ELECTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_ELECTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double PROTON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_G_FACTOR_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_G_FACTOR_2018;/**<  */
+ADD_IMPORT extern const double PROTON_G_FACTOR_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_G_FACTOR_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double PROTON_GYROMAG__RATIO_2018;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double U_PROTON_GYROMAG__RATIO_2018;/**< s^-1 T^-1 */
@@ -828,14 +828,14 @@ ADD_IMPORT extern const double U_PROTON_GYROMAG__RATIO_IN_MHZ_T_2018;/**< MHz T^
 ADD_IMPORT extern const double PROTON_MAG__MOM_2018;/**< J T^-1 */
 ADD_IMPORT extern const double U_PROTON_MAG__MOM_2018;/**< J T^-1 */
 
-ADD_IMPORT extern const double PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_MAG__SHIELDING_CORRECTION_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_MAG__SHIELDING_CORRECTION_2018;/**<  */
+ADD_IMPORT extern const double PROTON_MAG__SHIELDING_CORRECTION_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_MAG__SHIELDING_CORRECTION_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double PROTON_MASS_2018;/**< kg */
 ADD_IMPORT extern const double U_PROTON_MASS_2018;/**< kg */
@@ -852,23 +852,23 @@ ADD_IMPORT extern const double U_PROTON_MASS_IN_U_2018;/**< u */
 ADD_IMPORT extern const double PROTON_MOLAR_MASS_2018;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_PROTON_MOLAR_MASS_2018;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double PROTON_MUON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_MUON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double PROTON_MUON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_MUON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_NEUTRON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_NEUTRON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double PROTON_NEUTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_NEUTRON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_NEUTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_NEUTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double PROTON_NEUTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_NEUTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_RELATIVE_ATOMIC_MASS_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_RELATIVE_ATOMIC_MASS_2018;/**<  */
+ADD_IMPORT extern const double PROTON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double PROTON_RMS_CHARGE_RADIUS_2018;/**< m */
 ADD_IMPORT extern const double U_PROTON_RMS_CHARGE_RADIUS_2018;/**< m */
 
-ADD_IMPORT extern const double PROTON_TAU_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_PROTON_TAU_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double PROTON_TAU_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_TAU_MASS_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double QUANTUM_OF_CIRCULATION_2018;/**< m^2 s^-1 */
 ADD_IMPORT extern const double U_QUANTUM_OF_CIRCULATION_2018;/**< m^2 s^-1 */
@@ -912,11 +912,11 @@ ADD_IMPORT extern const double U_RYDBERG_CONSTANT_TIMES_HC_IN_EV_2018;/**< eV */
 ADD_IMPORT extern const double RYDBERG_CONSTANT_TIMES_HC_IN_J_2018;/**< J */
 ADD_IMPORT extern const double U_RYDBERG_CONSTANT_TIMES_HC_IN_J_2018;/**< J */
 
-ADD_IMPORT extern const double SACKUR_TETRODE_CONSTANT__1_K__100_KPA_2018;/**<  */
-ADD_IMPORT extern const double U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA_2018;/**<  */
+ADD_IMPORT extern const double SACKUR_TETRODE_CONSTANT__1_K__100_KPA_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA_2018;/**<  */
-ADD_IMPORT extern const double U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA_2018;/**<  */
+ADD_IMPORT extern const double SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double SECOND_RADIATION_CONSTANT_2018;/**< m K */
 ADD_IMPORT extern const double U_SECOND_RADIATION_CONSTANT_2018;/**< m K */
@@ -930,17 +930,17 @@ ADD_IMPORT extern const double U_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T_2018;/*
 ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM_2018;/**< J T^-1 */
 ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM_2018;/**< J T^-1 */
 
-ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double SHIELDED_PROTON_GYROMAG__RATIO_2018;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double U_SHIELDED_PROTON_GYROMAG__RATIO_2018;/**< s^-1 T^-1 */
@@ -951,17 +951,17 @@ ADD_IMPORT extern const double U_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T_2018;/*
 ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM_2018;/**< J T^-1 */
 ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM_2018;/**< J T^-1 */
 
-ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018;/**<  */
-ADD_IMPORT extern const double U_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018;/**<  */
+ADD_IMPORT extern const double SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018;/**<  */
-ADD_IMPORT extern const double U_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018;/**<  */
+ADD_IMPORT extern const double SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double SPEED_OF_LIGHT_IN_VACUUM_2018;/**< m s^-1 */
 ADD_IMPORT extern const double U_SPEED_OF_LIGHT_IN_VACUUM_2018;/**< m s^-1 */
@@ -981,8 +981,8 @@ ADD_IMPORT extern const double U_STEFAN_BOLTZMANN_CONSTANT_2018;/**< W m^-2 K^-4
 ADD_IMPORT extern const double TAU_COMPTON_WAVELENGTH_2018;/**< m */
 ADD_IMPORT extern const double U_TAU_COMPTON_WAVELENGTH_2018;/**< m */
 
-ADD_IMPORT extern const double TAU_ELECTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_TAU_ELECTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double TAU_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TAU_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double TAU_ENERGY_EQUIVALENT_2018;/**< MeV */
 ADD_IMPORT extern const double U_TAU_ENERGY_EQUIVALENT_2018;/**< MeV */
@@ -999,32 +999,32 @@ ADD_IMPORT extern const double U_TAU_MASS_IN_U_2018;/**< u */
 ADD_IMPORT extern const double TAU_MOLAR_MASS_2018;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_TAU_MOLAR_MASS_2018;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double TAU_MUON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_TAU_MUON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double TAU_MUON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TAU_MUON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double TAU_NEUTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_TAU_NEUTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double TAU_NEUTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TAU_NEUTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double TAU_PROTON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_TAU_PROTON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double TAU_PROTON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TAU_PROTON_MASS_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double THOMSON_CROSS_SECTION_2018;/**< m^2 */
 ADD_IMPORT extern const double U_THOMSON_CROSS_SECTION_2018;/**< m^2 */
 
-ADD_IMPORT extern const double TRITON_ELECTRON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_TRITON_ELECTRON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double TRITON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_ELECTRON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double TRITON_G_FACTOR_2018;/**<  */
-ADD_IMPORT extern const double U_TRITON_G_FACTOR_2018;/**<  */
+ADD_IMPORT extern const double TRITON_G_FACTOR_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_G_FACTOR_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double TRITON_MAG__MOM_2018;/**< J T^-1 */
 ADD_IMPORT extern const double U_TRITON_MAG__MOM_2018;/**< J T^-1 */
 
-ADD_IMPORT extern const double TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**<  */
+ADD_IMPORT extern const double TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double TRITON_MASS_2018;/**< kg */
 ADD_IMPORT extern const double U_TRITON_MASS_2018;/**< kg */
@@ -1041,14 +1041,14 @@ ADD_IMPORT extern const double U_TRITON_MASS_IN_U_2018;/**< u */
 ADD_IMPORT extern const double TRITON_MOLAR_MASS_2018;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_TRITON_MOLAR_MASS_2018;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double TRITON_PROTON_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_TRITON_PROTON_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double TRITON_PROTON_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_PROTON_MASS_RATIO_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double TRITON_RELATIVE_ATOMIC_MASS_2018;/**<  */
-ADD_IMPORT extern const double U_TRITON_RELATIVE_ATOMIC_MASS_2018;/**<  */
+ADD_IMPORT extern const double TRITON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_RELATIVE_ATOMIC_MASS_2018;/**< dimensionless */
 
-ADD_IMPORT extern const double TRITON_TO_PROTON_MAG__MOM__RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_TRITON_TO_PROTON_MAG__MOM__RATIO_2018;/**<  */
+ADD_IMPORT extern const double TRITON_TO_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_TO_PROTON_MAG__MOM__RATIO_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double UNIFIED_ATOMIC_MASS_UNIT_2018;/**< kg */
 ADD_IMPORT extern const double U_UNIFIED_ATOMIC_MASS_UNIT_2018;/**< kg */
@@ -1062,8 +1062,8 @@ ADD_IMPORT extern const double U_VACUUM_MAG__PERMEABILITY_2018;/**< N A^-2 */
 ADD_IMPORT extern const double VON_KLITZING_CONSTANT_2018;/**< ohm */
 ADD_IMPORT extern const double U_VON_KLITZING_CONSTANT_2018;/**< ohm */
 
-ADD_IMPORT extern const double WEAK_MIXING_ANGLE_2018;/**<  */
-ADD_IMPORT extern const double U_WEAK_MIXING_ANGLE_2018;/**<  */
+ADD_IMPORT extern const double WEAK_MIXING_ANGLE_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_WEAK_MIXING_ANGLE_2018;/**< dimensionless */
 
 ADD_IMPORT extern const double WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018;/**< Hz K^-1 */
 ADD_IMPORT extern const double U_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018;/**< Hz K^-1 */
@@ -1071,8 +1071,8 @@ ADD_IMPORT extern const double U_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018;/
 ADD_IMPORT extern const double WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018;/**< m K */
 ADD_IMPORT extern const double U_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018;/**< m K */
 
-ADD_IMPORT extern const double W_TO_Z_MASS_RATIO_2018;/**<  */
-ADD_IMPORT extern const double U_W_TO_Z_MASS_RATIO_2018;/**<  */
+ADD_IMPORT extern const double W_TO_Z_MASS_RATIO_2018;/**< dimensionless */
+ADD_IMPORT extern const double U_W_TO_Z_MASS_RATIO_2018;/**< dimensionless */
 
 #endif
 

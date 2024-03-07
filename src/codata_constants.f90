@@ -2,7 +2,7 @@
 !! @brief Codata constants. 
 
 !> @brief Constants module.
-!! @detail The latest values do not any year in their name.
+!! @details The latest values do not any year in their name.
 !! Older values than the latest can be used and they feature 
 !! a suffix in their name.
 module codata__constants

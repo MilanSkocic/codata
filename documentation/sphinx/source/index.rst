@@ -1,13 +1,14 @@
-Welcome to codata documentation!
-=========================================================
+######
+CODATA
+######
 
 .. toctree::
    :maxdepth: 1
    :caption: Contents:
 
-   getting_started/index.rst
-   releases/index.rst
-   api/index.rst
+   0-getting_started/index.rst
+   2-releases/index.rst
+   3-api/index.rst
 
 
 .. only:: html

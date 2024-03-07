@@ -10,13 +10,13 @@
 #else
 #define ADD_IMPORT
 #endif
-ADD_IMPORT extern const int YEAR_2010;
+ADD_IMPORT extern const int YEAR_2010;/**< Year of codata constants*/
 
 ADD_IMPORT extern const double v220__LATTICE_SPACING_OF_SILICON_2010;/**< m */
 ADD_IMPORT extern const double U_v220__LATTICE_SPACING_OF_SILICON_2010;/**< m */
 
-ADD_IMPORT extern const double ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double ALPHA_PARTICLE_MASS_2010;/**< kg */
 ADD_IMPORT extern const double U_ALPHA_PARTICLE_MASS_2010;/**< kg */
@@ -33,8 +33,8 @@ ADD_IMPORT extern const double U_ALPHA_PARTICLE_MASS_IN_U_2010;/**< u */
 ADD_IMPORT extern const double ALPHA_PARTICLE_MOLAR_MASS_2010;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_ALPHA_PARTICLE_MOLAR_MASS_2010;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double ALPHA_PARTICLE_PROTON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ALPHA_PARTICLE_PROTON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ALPHA_PARTICLE_PROTON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ALPHA_PARTICLE_PROTON_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double ANGSTROM_STAR_2010;/**< m */
 ADD_IMPORT extern const double U_ANGSTROM_STAR_2010;/**< m */
@@ -195,23 +195,23 @@ ADD_IMPORT extern const double U_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_201
 ADD_IMPORT extern const double CU_X_UNIT_2010;/**< m */
 ADD_IMPORT extern const double U_CU_X_UNIT_2010;/**< m */
 
-ADD_IMPORT extern const double DEUTERON_ELECTRON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_ELECTRON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double DEUTERON_ELECTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_ELECTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_ELECTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_ELECTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double DEUTERON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_G_FACTOR_2010;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_G_FACTOR_2010;/**<  */
+ADD_IMPORT extern const double DEUTERON_G_FACTOR_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_G_FACTOR_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double DEUTERON_MAG__MOM_2010;/**< J T^-1 */
 ADD_IMPORT extern const double U_DEUTERON_MAG__MOM_2010;/**< J T^-1 */
 
-ADD_IMPORT extern const double DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double DEUTERON_MASS_2010;/**< kg */
 ADD_IMPORT extern const double U_DEUTERON_MASS_2010;/**< kg */
@@ -228,14 +228,14 @@ ADD_IMPORT extern const double U_DEUTERON_MASS_IN_U_2010;/**< u */
 ADD_IMPORT extern const double DEUTERON_MOLAR_MASS_2010;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_DEUTERON_MOLAR_MASS_2010;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double DEUTERON_NEUTRON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_NEUTRON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double DEUTERON_NEUTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_NEUTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_PROTON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_PROTON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double DEUTERON_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double DEUTERON_PROTON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_DEUTERON_PROTON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double DEUTERON_PROTON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_DEUTERON_PROTON_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double DEUTERON_RMS_CHARGE_RADIUS_2010;/**< m */
 ADD_IMPORT extern const double U_DEUTERON_RMS_CHARGE_RADIUS_2010;/**< m */
@@ -246,14 +246,14 @@ ADD_IMPORT extern const double U_ELECTRIC_CONSTANT_2010;/**< F m^-1 */
 ADD_IMPORT extern const double ELECTRON_CHARGE_TO_MASS_QUOTIENT_2010;/**< C kg^-1 */
 ADD_IMPORT extern const double U_ELECTRON_CHARGE_TO_MASS_QUOTIENT_2010;/**< C kg^-1 */
 
-ADD_IMPORT extern const double ELECTRON_DEUTERON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_DEUTERON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_DEUTERON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_DEUTERON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_DEUTERON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_DEUTERON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_DEUTERON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_DEUTERON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_G_FACTOR_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_G_FACTOR_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_G_FACTOR_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_G_FACTOR_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double ELECTRON_GYROMAG__RATIO_2010;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double U_ELECTRON_GYROMAG__RATIO_2010;/**< s^-1 T^-1 */
@@ -261,20 +261,20 @@ ADD_IMPORT extern const double U_ELECTRON_GYROMAG__RATIO_2010;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double ELECTRON_GYROMAG__RATIO_OVER_2_PI_2010;/**< MHz T^-1 */
 ADD_IMPORT extern const double U_ELECTRON_GYROMAG__RATIO_OVER_2_PI_2010;/**< MHz T^-1 */
 
-ADD_IMPORT extern const double ELECTRON_HELION_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_HELION_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_HELION_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_HELION_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double ELECTRON_MAG__MOM_2010;/**< J T^-1 */
 ADD_IMPORT extern const double U_ELECTRON_MAG__MOM_2010;/**< J T^-1 */
 
-ADD_IMPORT extern const double ELECTRON_MAG__MOM__ANOMALY_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__ANOMALY_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_MAG__MOM__ANOMALY_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__ANOMALY_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double ELECTRON_MASS_2010;/**< kg */
 ADD_IMPORT extern const double U_ELECTRON_MASS_2010;/**< kg */
@@ -291,38 +291,38 @@ ADD_IMPORT extern const double U_ELECTRON_MASS_IN_U_2010;/**< u */
 ADD_IMPORT extern const double ELECTRON_MOLAR_MASS_2010;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_ELECTRON_MOLAR_MASS_2010;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double ELECTRON_MUON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MUON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_MUON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MUON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_MUON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_MUON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_MUON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_MUON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_NEUTRON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_NEUTRON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_NEUTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_NEUTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_NEUTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_NEUTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_NEUTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_NEUTRON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_PROTON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_PROTON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_PROTON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_PROTON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_PROTON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_PROTON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TAU_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TAU_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_TAU_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TAU_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double ELECTRON_TRITON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_ELECTRON_TRITON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double ELECTRON_TRITON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_ELECTRON_TRITON_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double ELECTRON_VOLT_2010;/**< J */
 ADD_IMPORT extern const double U_ELECTRON_VOLT_2010;/**< J */
@@ -363,8 +363,8 @@ ADD_IMPORT extern const double U_FARADAY_CONSTANT_FOR_CONVENTIONAL_ELECTRIC_CURR
 ADD_IMPORT extern const double FERMI_COUPLING_CONSTANT_2010;/**< GeV^-2 */
 ADD_IMPORT extern const double U_FERMI_COUPLING_CONSTANT_2010;/**< GeV^-2 */
 
-ADD_IMPORT extern const double FINE_STRUCTURE_CONSTANT_2010;/**<  */
-ADD_IMPORT extern const double U_FINE_STRUCTURE_CONSTANT_2010;/**<  */
+ADD_IMPORT extern const double FINE_STRUCTURE_CONSTANT_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_FINE_STRUCTURE_CONSTANT_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double FIRST_RADIATION_CONSTANT_2010;/**< W m^2 */
 ADD_IMPORT extern const double U_FIRST_RADIATION_CONSTANT_2010;/**< W m^2 */
@@ -399,20 +399,20 @@ ADD_IMPORT extern const double U_HARTREE_KELVIN_RELATIONSHIP_2010;/**< K */
 ADD_IMPORT extern const double HARTREE_KILOGRAM_RELATIONSHIP_2010;/**< kg */
 ADD_IMPORT extern const double U_HARTREE_KILOGRAM_RELATIONSHIP_2010;/**< kg */
 
-ADD_IMPORT extern const double HELION_ELECTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_HELION_ELECTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double HELION_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double HELION_G_FACTOR_2010;/**<  */
-ADD_IMPORT extern const double U_HELION_G_FACTOR_2010;/**<  */
+ADD_IMPORT extern const double HELION_G_FACTOR_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_G_FACTOR_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double HELION_MAG__MOM_2010;/**< J T^-1 */
 ADD_IMPORT extern const double U_HELION_MAG__MOM_2010;/**< J T^-1 */
 
-ADD_IMPORT extern const double HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double HELION_MASS_2010;/**< kg */
 ADD_IMPORT extern const double U_HELION_MASS_2010;/**< kg */
@@ -429,8 +429,8 @@ ADD_IMPORT extern const double U_HELION_MASS_IN_U_2010;/**< u */
 ADD_IMPORT extern const double HELION_MOLAR_MASS_2010;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_HELION_MOLAR_MASS_2010;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double HELION_PROTON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_HELION_PROTON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double HELION_PROTON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_HELION_PROTON_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2010;/**< u */
 ADD_IMPORT extern const double U_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2010;/**< u */
@@ -453,8 +453,8 @@ ADD_IMPORT extern const double U_HERTZ_KELVIN_RELATIONSHIP_2010;/**< K */
 ADD_IMPORT extern const double HERTZ_KILOGRAM_RELATIONSHIP_2010;/**< kg */
 ADD_IMPORT extern const double U_HERTZ_KILOGRAM_RELATIONSHIP_2010;/**< kg */
 
-ADD_IMPORT extern const double INVERSE_FINE_STRUCTURE_CONSTANT_2010;/**<  */
-ADD_IMPORT extern const double U_INVERSE_FINE_STRUCTURE_CONSTANT_2010;/**<  */
+ADD_IMPORT extern const double INVERSE_FINE_STRUCTURE_CONSTANT_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_INVERSE_FINE_STRUCTURE_CONSTANT_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2010;/**< u */
 ADD_IMPORT extern const double U_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2010;/**< u */
@@ -594,23 +594,23 @@ ADD_IMPORT extern const double U_MUON_COMPTON_WAVELENGTH_2010;/**< m */
 ADD_IMPORT extern const double MUON_COMPTON_WAVELENGTH_OVER_2_PI_2010;/**< m */
 ADD_IMPORT extern const double U_MUON_COMPTON_WAVELENGTH_OVER_2_PI_2010;/**< m */
 
-ADD_IMPORT extern const double MUON_ELECTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_MUON_ELECTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double MUON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_G_FACTOR_2010;/**<  */
-ADD_IMPORT extern const double U_MUON_G_FACTOR_2010;/**<  */
+ADD_IMPORT extern const double MUON_G_FACTOR_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_G_FACTOR_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double MUON_MAG__MOM_2010;/**< J T^-1 */
 ADD_IMPORT extern const double U_MUON_MAG__MOM_2010;/**< J T^-1 */
 
-ADD_IMPORT extern const double MUON_MAG__MOM__ANOMALY_2010;/**<  */
-ADD_IMPORT extern const double U_MUON_MAG__MOM__ANOMALY_2010;/**<  */
+ADD_IMPORT extern const double MUON_MAG__MOM__ANOMALY_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_MAG__MOM__ANOMALY_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double MUON_MASS_2010;/**< kg */
 ADD_IMPORT extern const double U_MUON_MASS_2010;/**< kg */
@@ -627,17 +627,17 @@ ADD_IMPORT extern const double U_MUON_MASS_IN_U_2010;/**< u */
 ADD_IMPORT extern const double MUON_MOLAR_MASS_2010;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_MUON_MOLAR_MASS_2010;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double MUON_NEUTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_MUON_NEUTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double MUON_NEUTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_NEUTRON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_PROTON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_MUON_PROTON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double MUON_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_PROTON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_MUON_PROTON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double MUON_PROTON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_PROTON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double MUON_TAU_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_MUON_TAU_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double MUON_TAU_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_MUON_TAU_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double NATURAL_UNIT_OF_ACTION_2010;/**< J s */
 ADD_IMPORT extern const double U_NATURAL_UNIT_OF_ACTION_2010;/**< J s */
@@ -675,14 +675,14 @@ ADD_IMPORT extern const double U_NEUTRON_COMPTON_WAVELENGTH_2010;/**< m */
 ADD_IMPORT extern const double NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2010;/**< m */
 ADD_IMPORT extern const double U_NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2010;/**< m */
 
-ADD_IMPORT extern const double NEUTRON_ELECTRON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_ELECTRON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_ELECTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_ELECTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_ELECTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_ELECTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_G_FACTOR_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_G_FACTOR_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_G_FACTOR_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_G_FACTOR_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double NEUTRON_GYROMAG__RATIO_2010;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double U_NEUTRON_GYROMAG__RATIO_2010;/**< s^-1 T^-1 */
@@ -693,11 +693,11 @@ ADD_IMPORT extern const double U_NEUTRON_GYROMAG__RATIO_OVER_2_PI_2010;/**< MHz 
 ADD_IMPORT extern const double NEUTRON_MAG__MOM_2010;/**< J T^-1 */
 ADD_IMPORT extern const double U_NEUTRON_MAG__MOM_2010;/**< J T^-1 */
 
-ADD_IMPORT extern const double NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double NEUTRON_MASS_2010;/**< kg */
 ADD_IMPORT extern const double U_NEUTRON_MASS_2010;/**< kg */
@@ -714,32 +714,32 @@ ADD_IMPORT extern const double U_NEUTRON_MASS_IN_U_2010;/**< u */
 ADD_IMPORT extern const double NEUTRON_MOLAR_MASS_2010;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_NEUTRON_MOLAR_MASS_2010;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double NEUTRON_MUON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_MUON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_MUON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_MUON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_PROTON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_PROTON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_PROTON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_PROTON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_PROTON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_TAU_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_TAU_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_TAU_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_TAU_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double NEWTONIAN_CONSTANT_OF_GRAVITATION_2010;/**< m^3 kg^-1 s^-2 */
 ADD_IMPORT extern const double U_NEWTONIAN_CONSTANT_OF_GRAVITATION_2010;/**< m^3 kg^-1 s^-2 */
@@ -801,11 +801,11 @@ ADD_IMPORT extern const double U_PROTON_COMPTON_WAVELENGTH_2010;/**< m */
 ADD_IMPORT extern const double PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2010;/**< m */
 ADD_IMPORT extern const double U_PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2010;/**< m */
 
-ADD_IMPORT extern const double PROTON_ELECTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_PROTON_ELECTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double PROTON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_G_FACTOR_2010;/**<  */
-ADD_IMPORT extern const double U_PROTON_G_FACTOR_2010;/**<  */
+ADD_IMPORT extern const double PROTON_G_FACTOR_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_G_FACTOR_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double PROTON_GYROMAG__RATIO_2010;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double U_PROTON_GYROMAG__RATIO_2010;/**< s^-1 T^-1 */
@@ -816,14 +816,14 @@ ADD_IMPORT extern const double U_PROTON_GYROMAG__RATIO_OVER_2_PI_2010;/**< MHz T
 ADD_IMPORT extern const double PROTON_MAG__MOM_2010;/**< J T^-1 */
 ADD_IMPORT extern const double U_PROTON_MAG__MOM_2010;/**< J T^-1 */
 
-ADD_IMPORT extern const double PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_MAG__SHIELDING_CORRECTION_2010;/**<  */
-ADD_IMPORT extern const double U_PROTON_MAG__SHIELDING_CORRECTION_2010;/**<  */
+ADD_IMPORT extern const double PROTON_MAG__SHIELDING_CORRECTION_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_MAG__SHIELDING_CORRECTION_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double PROTON_MASS_2010;/**< kg */
 ADD_IMPORT extern const double U_PROTON_MASS_2010;/**< kg */
@@ -840,20 +840,20 @@ ADD_IMPORT extern const double U_PROTON_MASS_IN_U_2010;/**< u */
 ADD_IMPORT extern const double PROTON_MOLAR_MASS_2010;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_PROTON_MOLAR_MASS_2010;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double PROTON_MUON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_PROTON_MUON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double PROTON_MUON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_MUON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_NEUTRON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_PROTON_NEUTRON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double PROTON_NEUTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_NEUTRON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double PROTON_NEUTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_PROTON_NEUTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double PROTON_NEUTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_NEUTRON_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double PROTON_RMS_CHARGE_RADIUS_2010;/**< m */
 ADD_IMPORT extern const double U_PROTON_RMS_CHARGE_RADIUS_2010;/**< m */
 
-ADD_IMPORT extern const double PROTON_TAU_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_PROTON_TAU_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double PROTON_TAU_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_PROTON_TAU_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double QUANTUM_OF_CIRCULATION_2010;/**< m^2 s^-1 */
 ADD_IMPORT extern const double U_QUANTUM_OF_CIRCULATION_2010;/**< m^2 s^-1 */
@@ -873,11 +873,11 @@ ADD_IMPORT extern const double U_RYDBERG_CONSTANT_TIMES_HC_IN_EV_2010;/**< eV */
 ADD_IMPORT extern const double RYDBERG_CONSTANT_TIMES_HC_IN_J_2010;/**< J */
 ADD_IMPORT extern const double U_RYDBERG_CONSTANT_TIMES_HC_IN_J_2010;/**< J */
 
-ADD_IMPORT extern const double SACKUR_TETRODE_CONSTANT__1_K__100_KPA_2010;/**<  */
-ADD_IMPORT extern const double U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA_2010;/**<  */
+ADD_IMPORT extern const double SACKUR_TETRODE_CONSTANT__1_K__100_KPA_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA_2010;/**<  */
-ADD_IMPORT extern const double U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA_2010;/**<  */
+ADD_IMPORT extern const double SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double SECOND_RADIATION_CONSTANT_2010;/**< m K */
 ADD_IMPORT extern const double U_SECOND_RADIATION_CONSTANT_2010;/**< m K */
@@ -891,17 +891,17 @@ ADD_IMPORT extern const double U_SHIELDED_HELION_GYROMAG__RATIO_OVER_2_PI_2010;/
 ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM_2010;/**< J T^-1 */
 ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM_2010;/**< J T^-1 */
 
-ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**<  */
+ADD_IMPORT extern const double SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double SHIELDED_PROTON_GYROMAG__RATIO_2010;/**< s^-1 T^-1 */
 ADD_IMPORT extern const double U_SHIELDED_PROTON_GYROMAG__RATIO_2010;/**< s^-1 T^-1 */
@@ -912,11 +912,11 @@ ADD_IMPORT extern const double U_SHIELDED_PROTON_GYROMAG__RATIO_OVER_2_PI_2010;/
 ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM_2010;/**< J T^-1 */
 ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM_2010;/**< J T^-1 */
 
-ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double SPEED_OF_LIGHT_IN_VACUUM_2010;/**< m s^-1 */
 ADD_IMPORT extern const double U_SPEED_OF_LIGHT_IN_VACUUM_2010;/**< m s^-1 */
@@ -939,8 +939,8 @@ ADD_IMPORT extern const double U_TAU_COMPTON_WAVELENGTH_2010;/**< m */
 ADD_IMPORT extern const double TAU_COMPTON_WAVELENGTH_OVER_2_PI_2010;/**< m */
 ADD_IMPORT extern const double U_TAU_COMPTON_WAVELENGTH_OVER_2_PI_2010;/**< m */
 
-ADD_IMPORT extern const double TAU_ELECTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_TAU_ELECTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double TAU_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_TAU_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double TAU_MASS_2010;/**< kg */
 ADD_IMPORT extern const double U_TAU_MASS_2010;/**< kg */
@@ -957,32 +957,32 @@ ADD_IMPORT extern const double U_TAU_MASS_IN_U_2010;/**< u */
 ADD_IMPORT extern const double TAU_MOLAR_MASS_2010;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_TAU_MOLAR_MASS_2010;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double TAU_MUON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_TAU_MUON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double TAU_MUON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_TAU_MUON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double TAU_NEUTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_TAU_NEUTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double TAU_NEUTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_TAU_NEUTRON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double TAU_PROTON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_TAU_PROTON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double TAU_PROTON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_TAU_PROTON_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double THOMSON_CROSS_SECTION_2010;/**< m^2 */
 ADD_IMPORT extern const double U_THOMSON_CROSS_SECTION_2010;/**< m^2 */
 
-ADD_IMPORT extern const double TRITON_ELECTRON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_TRITON_ELECTRON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double TRITON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_ELECTRON_MASS_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double TRITON_G_FACTOR_2010;/**<  */
-ADD_IMPORT extern const double U_TRITON_G_FACTOR_2010;/**<  */
+ADD_IMPORT extern const double TRITON_G_FACTOR_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_G_FACTOR_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double TRITON_MAG__MOM_2010;/**< J T^-1 */
 ADD_IMPORT extern const double U_TRITON_MAG__MOM_2010;/**< J T^-1 */
 
-ADD_IMPORT extern const double TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO_2010;/**< dimensionless */
 
-ADD_IMPORT extern const double TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**<  */
+ADD_IMPORT extern const double TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double TRITON_MASS_2010;/**< kg */
 ADD_IMPORT extern const double U_TRITON_MASS_2010;/**< kg */
@@ -999,8 +999,8 @@ ADD_IMPORT extern const double U_TRITON_MASS_IN_U_2010;/**< u */
 ADD_IMPORT extern const double TRITON_MOLAR_MASS_2010;/**< kg mol^-1 */
 ADD_IMPORT extern const double U_TRITON_MOLAR_MASS_2010;/**< kg mol^-1 */
 
-ADD_IMPORT extern const double TRITON_PROTON_MASS_RATIO_2010;/**<  */
-ADD_IMPORT extern const double U_TRITON_PROTON_MASS_RATIO_2010;/**<  */
+ADD_IMPORT extern const double TRITON_PROTON_MASS_RATIO_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_TRITON_PROTON_MASS_RATIO_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double UNIFIED_ATOMIC_MASS_UNIT_2010;/**< kg */
 ADD_IMPORT extern const double U_UNIFIED_ATOMIC_MASS_UNIT_2010;/**< kg */
@@ -1008,8 +1008,8 @@ ADD_IMPORT extern const double U_UNIFIED_ATOMIC_MASS_UNIT_2010;/**< kg */
 ADD_IMPORT extern const double VON_KLITZING_CONSTANT_2010;/**< ohm */
 ADD_IMPORT extern const double U_VON_KLITZING_CONSTANT_2010;/**< ohm */
 
-ADD_IMPORT extern const double WEAK_MIXING_ANGLE_2010;/**<  */
-ADD_IMPORT extern const double U_WEAK_MIXING_ANGLE_2010;/**<  */
+ADD_IMPORT extern const double WEAK_MIXING_ANGLE_2010;/**< dimensionless */
+ADD_IMPORT extern const double U_WEAK_MIXING_ANGLE_2010;/**< dimensionless */
 
 ADD_IMPORT extern const double WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2010;/**< Hz K^-1 */
 ADD_IMPORT extern const double U_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2010;/**< Hz K^-1 */
