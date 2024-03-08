@@ -8,5 +8,8 @@
 #ifndef codata_CONSTANTS_H
 #define codata_CONSTANTS_H
 #include "codata_constants_latest.h"
+#include "codata_constants_2018.h"
+#include "codata_constants_2014.h"
+#include "codata_constants_2010.h"
 #endif
 
