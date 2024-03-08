@@ -11,7 +11,8 @@ Introduction
 
 .. readme_inclusion_start
 
-`codata` is a Fortran library providing the lastest codata constants (2018).
+`codata` is a Fortran library providing the lastest codata constants (2018) and 
+older values (2014 and 2010).
 It also  provides a API for the C language.
 The raw codata are taken from http://physics.nist.gov/constants. 
 
@@ -24,6 +25,8 @@ add the following to your `fpm.toml` file:
 
     [dependencies]
     codata = { git="https://github.com/MilanSkocic/codata.git" }
+
+**Website**: https://milanskocic.github.io/codata/
 
 Installation
 ================
