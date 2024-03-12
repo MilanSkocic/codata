@@ -1,2 +1,3 @@
 gcc>=10
 gfortran>=10
+fpm>=0.7
