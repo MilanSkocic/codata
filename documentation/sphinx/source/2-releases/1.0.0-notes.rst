@@ -4,6 +4,8 @@ Codata 1.0.0 Release Note
 Summary
 ----------
 
+* Add codata values for 2010, 2014 and 2018.
+* Add module `codata_constants_latest` as alias for 2018.
 * Code refractoring and code cleaning.
 * Documentation update.
 
