@@ -8,6 +8,7 @@ Summary
 * Add module `codata_constants_latest` as alias for 2018.
 * Code refractoring and code cleaning.
 * Documentation update.
+* Switch to doxygen for Fortran and C code.
 
 Download
 ------------
