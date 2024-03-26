@@ -34,7 +34,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = "codata"
-copyright = "2023 Milan Skocic"
+copyright = "2022-2024 Milan Skocic"
 author = "M. Skocic"
 
 # The version info for the project you're documenting, acts as replacement for
