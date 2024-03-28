@@ -6,7 +6,7 @@ maintainer = "milan.skocic@icloud.com"
 copyright = "Copyright 2022-2024, Milan Skocic"
 description = "CODATA physical constants."
 categories  =["Science"]
-keywords = ["constants", "physics", "chemistry"]
+keywords = ["codata", "constants", "physics", "chemistry"]
 homepage = "https://milanskocic.github.io/codata/index.html"
 
 [fortran]
