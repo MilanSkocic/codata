@@ -22,9 +22,10 @@ build: generator
 
 test: build
 	fpm test --profile=$(btype)
-	
+
 example: build
-	fpm run --profile=$(btype) --example --all
+	fpm run --profile=$(btype) --example example_in_f
+	fpm run --profile=$(btype) --example example_in_c
 
 copy_a: 
 	cp -f $(shell find ./build/gfortran* -type f -name $(LIBNAME).a) $(BUILD_DIR)
