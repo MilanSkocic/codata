@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief Codata Constants 
+ * @brief CAPI - Constants 
  * @details The latest values (2018) do not have the year as a suffix in their name.
  * Older values can be used and they feature the year as a suffix in their name.
  */

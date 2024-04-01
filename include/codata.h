@@ -1,6 +1,6 @@
 /**
 * @file
-* @brief Main C header for the CODATA library.
+* @brief CAPI - Main C header for the CODATA library.
 */
 
 #ifndef CODATA_H

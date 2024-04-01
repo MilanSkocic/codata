@@ -1,6 +1,6 @@
 /**
 * @file
-* @brief Version
+* @brief CAPI - Version
 */
 
 #ifndef codata_VERSION_H
