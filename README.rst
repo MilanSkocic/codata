@@ -11,10 +11,19 @@ Introduction
 
 .. readme_inclusion_start
 
-`codata` is a Fortran library providing the lastest codata constants (2018) and 
+`codata` is a Fortran library providing the latest codata constants (2018) and 
 older values (2014 and 2010).
-It also  provides a API for the C language.
-The raw codata are taken from http://physics.nist.gov/constants. 
+It also provides an API for the C language and a python wrapper.
+The raw codata are taken from http://physics.nist.gov/constants.
+
+The constants (values and uncertainties) are implemented as double precision parameters for Fortran and
+as double precision protected variables for the C API. The units are given in the documentation.
+
+The names are quite long and you can alias them for shorter names
+
+.. code-block:: Fortran
+
+   use codata, only: c=>SPEED_OF_LIGHT_IN_VACUUM
 
 .. readme_inclusion_end
 
