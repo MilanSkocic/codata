@@ -13,12 +13,12 @@ character(len=*), parameter :: version = "1.0.0"
 character(len=:), allocatable, target :: version_f
 character(len=:), allocatable, target :: version_c
 
-public :: get_version
+public :: get_version, capi_get_version
 
 contains
 
 !> @brief Get the version.
-!! @return fptr Pointer to a string indicating the version.
+!! @return fptr Fortran pointer to a string indicating the version.
 function get_version()result(fptr)
     implicit none
     character(len=:), pointer :: fptr
@@ -32,7 +32,7 @@ function get_version()result(fptr)
 end function
 
 !> @brief Get the version.
-!! @return cptr Pointer to C string indicating the version.
+!! @return cptr C pointer to a string indicating the version.
 function capi_get_version()bind(c,name="codata_get_version")result(cptr)
     implicit none
     type(c_ptr) :: cptr
