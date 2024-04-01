@@ -2,7 +2,7 @@
 #include <Python.h>
 #include "codata_constants_2014.h"
 
-PyDoc_STRVAR(module_docstring, "C extension for codata constants 2014.");
+PyDoc_STRVAR(module_docstring, "C extension for constants 2014.");
 
 static PyMethodDef myMethods[] = {{ NULL, NULL, 0, NULL }};
 
