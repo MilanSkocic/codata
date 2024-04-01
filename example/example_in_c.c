@@ -3,6 +3,8 @@
 
 int main(void){
     
+    printf("########## EXAMPLE IN C ##########\n");
+
     printf("%s\n","########## VERSION ##########");
     printf("version = %s\n", codata_get_version());
     

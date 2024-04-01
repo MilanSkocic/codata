@@ -3,6 +3,8 @@ program example_in_f
     use codata
     implicit none
     
+    print '(A)', '########## EXAMPLE IN FORTRAN ##########'
+    
     print '(A)', '########## VERSION ##########'
     print *, "version = ", get_version()
     
