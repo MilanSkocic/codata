@@ -34,7 +34,7 @@ jobs:
     steps:
     - name: Gfortran
       run: |
-        brew install gcc@10
+        brew link gcc@10
     - name: Set FPM
       uses: fortran-lang/setup-fpm@v5
       with: 
