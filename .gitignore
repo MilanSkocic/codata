@@ -26,6 +26,7 @@
 *.dll.a
 *.so
 *.a
+*.log
 
 .idea
 .vscode
