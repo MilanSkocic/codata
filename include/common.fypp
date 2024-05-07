@@ -1,0 +1,22 @@
+#:mute
+
+#! Support for quadruple precision floating point numbers
+#:if not defined("WITH_QP")
+#:set WITH_QP = False
+#:endif
+
+#! Support for extended double precision floating point numbers
+#:if not defined("WITH_XDP")
+#:set WITH_XDP = False
+#:endif
+
+#! Real kinds to be considered during templating
+#:set REAL_KINDS = ["sp", "dp"]
+#:if WITH_XDP
+#:set REAL_KINDS = REAL_KINDS + ["xdp"]
+#:endif
+#:if WITH_QP
+#:set REAL_KINDS = REAL_KINDS + ["qp"]
+#:endif
+
+#:endmute

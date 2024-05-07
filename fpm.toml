@@ -20,6 +20,9 @@ auto-tests = true
 auto-examples = true
 module-naming = false 
 
+[dependencies]
+stdlib = "*"
+
 [install]
 library = true
 
