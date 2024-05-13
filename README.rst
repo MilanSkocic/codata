@@ -11,15 +11,17 @@ Introduction
 
 .. readme_inclusion_start
 
-`codata` is a Fortran library providing the latest codata constants (2018) and 
-older values (2014 and 2010).
+`codata` is a Fortran library providing the latest codata constants (2022) and 
+older values (2018, 2014 and 2010).
 It also provides an API for the C language and a python wrapper.
 The raw codata are taken from http://physics.nist.gov/constants.
 
 The constants (values and uncertainties) are implemented as double precision parameters for Fortran and
 as double precision protected variables for the C API. The units are given in the documentation.
 
-The names are quite long and you can alias them for shorter names
+**Warning**: The release 1.0 will intoduce an API break where the constants will be implemented as derived type like a the [stdlib](https://github.com/fortran-lang/stdlib/pull/800) (see notes below).
+
+The names are quite long and you can alias them for shorter names:
 
 .. code-block:: Fortran
 
@@ -39,7 +41,7 @@ add the following to your `fpm.toml` file:
 
 **Notes**: 
 
-* The latest codata constants will be soon integrated in the `stdlib`: https://github.com/fortran-lang/stdlib/pull/800.
+* The latest codata constants will be soon integrated in the [stdlib](https://github.com/fortran-lang/stdlib/pull/800). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit.
 
 * If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. 
 
