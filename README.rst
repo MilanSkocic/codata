@@ -19,7 +19,7 @@ The raw codata are taken from http://physics.nist.gov/constants.
 The constants (values and uncertainties) are implemented as double precision parameters for Fortran and
 as double precision protected variables for the C API. The units are given in the documentation.
 
-**Warning**: The release 1.0 will intoduce an API break where the constants will be implemented as derived type like a the [stdlib](https://github.com/fortran-lang/stdlib/pull/800) (see notes below).
+**Warning**: The release 1.0 will intoduce an API break where the constants will be implemented as derived type like a the `stdlib <https://github.com/fortran-lang/stdlib/pull/800>`_ (see notes below).
 
 The names are quite long and you can alias them for shorter names:
 
@@ -41,9 +41,9 @@ add the following to your `fpm.toml` file:
 
 **Notes**: 
 
-* The latest codata constants will be soon integrated in the [stdlib](https://github.com/fortran-lang/stdlib/pull/800). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit.
+* The latest codata constants will be soon integrated in the `stdlib <https://github.com/fortran-lang/stdlib/pull/800>`_. The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit.
 
-* The `stdlib` folder is dedicated to the generation of the sources that will feed the [stdlib](https://github.com/fortran-lang).
+* The `stdlib` folder is dedicated to the generation of the sources that will feed the `stdlib <https://github.com/fortran-lang>_`.
 
 * If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. 
 
