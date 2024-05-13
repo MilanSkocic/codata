@@ -33,130 +33,156 @@ end subroutine
 subroutine test_U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.00000024d0
-    value = U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d7
+    expected = 0.00000017d0 * fac
+    value = U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_ALPHA_PARTICLE_MASS(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.0000000020d-27
-    value = U_ALPHA_PARTICLE_MASS
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d36
+    expected = 0.0000000021d-27 * fac
+    value = U_ALPHA_PARTICLE_MASS * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_ATOMIC_MASS_CONSTANT(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.00000000050d-27
-    value = U_ATOMIC_MASS_CONSTANT
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d37
+    expected = 0.00000000052d-27 * fac
+    value = U_ATOMIC_MASS_CONSTANT * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_AVOGADRO_CONSTANT(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.0d0 
-    value = U_AVOGADRO_CONSTANT
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d0
+    expected = 0.0d0 * fac
+    value = U_AVOGADRO_CONSTANT * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_BOLTZMANN_CONSTANT(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.0d0
-    value = U_BOLTZMANN_CONSTANT
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d0
+    expected = 0.0d0 * fac
+    value = U_BOLTZMANN_CONSTANT * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_ELECTRON_VOLT(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.0d0
-    value = U_ELECTRON_VOLT 
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d0
+    expected = 0.0d0 * fac
+    value = U_ELECTRON_VOLT * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_ELEMENTARY_CHARGE(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.0d0
-    value = U_ELEMENTARY_CHARGE
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d0
+    expected = 0.0d0 * fac
+    value = U_ELEMENTARY_CHARGE * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_FARADAY_CONSTANT(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.0d0
-    value = U_FARADAY_CONSTANT 
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d0
+    expected = 0.0d0 * fac
+    value = U_FARADAY_CONSTANT * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_MOLAR_MASS_CONSTANT(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.00000000030d-3
-    value = U_MOLAR_MASS_CONSTANT
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d13
+    expected = 0.00000000031d-3 * fac
+    value = U_MOLAR_MASS_CONSTANT * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_MOLAR_VOLUME_NTP(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.0d0
-    value = U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d0
+    expected = 0.0d0 * fac
+    value = U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_PLANCK_CONSTANT(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected, fac
-    expected = 0.0d0
-    value = PLANCK_CONSTANT
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d0
+    expected = 0.0d0 * fac
+    value = PLANCK_CONSTANT * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_SPEED_OF_LIGHT(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected
-    expected = 0.0d0
-    value = U_SPEED_OF_LIGHT_IN_VACUUM
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d0
+    expected = 0.0d0 * fac
+    value = U_SPEED_OF_LIGHT_IN_VACUUM * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
 subroutine test_U_STANDARD_ACCELERATION_OF_GRAVITY(error)
     implicit none
     type(error_type), allocatable, intent(out) :: error 
-    real(real64) :: value, expected
-    expected = 0.0d0
-    value = U_STANDARD_ACCELERATION_OF_GRAVITY 
-    call check(error, value, expected)
+    real(real64) :: value, expected, diff, fac
+    fac = 1.0d0
+    expected = 0.0d0 * fac
+    value = U_STANDARD_ACCELERATION_OF_GRAVITY * fac
+    diff = expected - value
+    call check(error, diff, 0.0d0)
     if (allocated(error)) return
 end subroutine
 
