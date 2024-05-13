@@ -6,7 +6,7 @@ dev |cidev| / main |cimain|
 Introduction
 ==============
 
-.. image:: ./media/logo-codata.png
+.. image:: ./media/png/logo-codata.png
     :width: 200
 
 .. readme_inclusion_start
