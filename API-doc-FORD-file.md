@@ -1,6 +1,6 @@
 ---
-project: codata
-summary: Codata constants
+project: codata 
+summary: Fortran library providing the codata constants.
 project_github: https://github.com/MilanSkocic/codata
 project_download: https://github.com/MilanSkocic/codata/releases
 project_website: https://milanskocic.github.io/codata/index.html
@@ -28,6 +28,6 @@ coloured_edges: true
 license: by-sa
 ---
 
-![Codata](./media/png/logo-codata.png)
+![Codata](../media/png/logo-codata.png)
 
 This is the documentation of the Fortran code. 
