@@ -37,6 +37,12 @@ add the following to your `fpm.toml` file:
 
 **Website**: https://milanskocic.github.io/codata/
 
+**Notes**: 
+
+* The latest codata constants will be soon integrated in the `stdlib`: https://github.com/fortran-lang/stdlib/pull/800.
+
+* If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. 
+
 Installation
 ================
 
