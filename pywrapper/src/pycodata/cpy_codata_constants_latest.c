@@ -75,6 +75,13 @@ PyMODINIT_FUNC PyInit_constants_latest(void){
     PyDict_SetItemString(d, "U_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS", v);
     Py_INCREF(v);
 
+    v = PyFloat_FromDouble(ALPHA_PARTICLE_RMS_CHARGE_RADIUS);
+    PyDict_SetItemString(d, "ALPHA_PARTICLE_RMS_CHARGE_RADIUS", v);
+    Py_INCREF(v);
+    v = PyFloat_FromDouble(U_ALPHA_PARTICLE_RMS_CHARGE_RADIUS);
+    PyDict_SetItemString(d, "U_ALPHA_PARTICLE_RMS_CHARGE_RADIUS", v);
+    Py_INCREF(v);
+
     v = PyFloat_FromDouble(ANGSTROM_STAR);
     PyDict_SetItemString(d, "ANGSTROM_STAR", v);
     Py_INCREF(v);

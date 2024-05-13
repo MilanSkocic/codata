@@ -27,7 +27,7 @@ program generator
 
     character(len=*), parameter :: root = "../../"
     character(len=64) :: fpath
-    character(len=6), parameter :: years(4) = [character(len=6) :: "2018", "2014", "2010", "latest"]
+    character(len=6), parameter :: years(5) = [character(len=6) :: "2022", "2018", "2014", "2010", "latest"]
     character(len=:), allocatable :: suffix
 
     do i=1, size(years)

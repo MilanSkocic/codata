@@ -8,50 +8,50 @@ use iso_c_binding, only: cdp=>c_double, c_int
 implicit none
 private
  
-integer(int32), parameter, public :: YEAR = 2018   !< Year of codata constants
+integer(int32), parameter, public :: YEAR = 2022   !< Year of codata constants
 integer(c_int), protected, public, bind(C,name="YEAR") ::capi_YEAR = YEAR !< C API Year of codata constants
 
-real(dp), parameter, public :: ALPHA_PARTICLE_ELECTRON_MASS_RATIO=7294.29954142_dp !< dimensionless
-real(dp), parameter, public :: U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO=0.00000024_dp !< dimensionless
+real(dp), parameter, public :: ALPHA_PARTICLE_ELECTRON_MASS_RATIO=7294.29954171_dp !< dimensionless
+real(dp), parameter, public :: U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO=0.00000017_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ALPHA_PARTICLE_ELECTRON_MASS_RATIO"):: &
 capi_001=ALPHA_PARTICLE_ELECTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO") :: &
 capi_U_001=U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ALPHA_PARTICLE_MASS=6.6446573357e-27_dp !< kg
-real(dp), parameter, public :: U_ALPHA_PARTICLE_MASS=0.0000000020e-27_dp !< kg
+real(dp), parameter, public :: ALPHA_PARTICLE_MASS=6.6446573450e-27_dp !< kg
+real(dp), parameter, public :: U_ALPHA_PARTICLE_MASS=0.0000000021e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="ALPHA_PARTICLE_MASS"):: &
 capi_002=ALPHA_PARTICLE_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_ALPHA_PARTICLE_MASS") :: &
 capi_U_002=U_ALPHA_PARTICLE_MASS !< C API kg
 
-real(dp), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT=5.9719201914e-10_dp !< J
-real(dp), parameter, public :: U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT=0.0000000018e-10_dp !< J
+real(dp), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT=5.9719201997e-10_dp !< J
+real(dp), parameter, public :: U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT=0.0000000019e-10_dp !< J
 
 real(cdp), protected, public, bind(C,name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT"):: &
 capi_003=ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT") :: &
 capi_U_003=U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT !< C API J
 
-real(dp), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV=3727.3794066_dp !< MeV
-real(dp), parameter, public :: U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV=0.0000011_dp !< MeV
+real(dp), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV=3727.3794118_dp !< MeV
+real(dp), parameter, public :: U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV=0.0000012_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV"):: &
 capi_004=ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV") :: &
 capi_U_004=U_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: ALPHA_PARTICLE_MASS_IN_U=4.001506179127_dp !< u
-real(dp), parameter, public :: U_ALPHA_PARTICLE_MASS_IN_U=0.000000000063_dp !< u
+real(dp), parameter, public :: ALPHA_PARTICLE_MASS_IN_U=4.001506179129_dp !< u
+real(dp), parameter, public :: U_ALPHA_PARTICLE_MASS_IN_U=0.000000000062_dp !< u
 
 real(cdp), protected, public, bind(C,name="ALPHA_PARTICLE_MASS_IN_U"):: &
 capi_005=ALPHA_PARTICLE_MASS_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_ALPHA_PARTICLE_MASS_IN_U") :: &
 capi_U_005=U_ALPHA_PARTICLE_MASS_IN_U !< C API u
 
-real(dp), parameter, public :: ALPHA_PARTICLE_MOLAR_MASS=4.0015061777e-3_dp !< kg mol^-1
+real(dp), parameter, public :: ALPHA_PARTICLE_MOLAR_MASS=4.0015061833e-3_dp !< kg mol^-1
 real(dp), parameter, public :: U_ALPHA_PARTICLE_MOLAR_MASS=0.0000000012e-3_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="ALPHA_PARTICLE_MOLAR_MASS"):: &
@@ -59,2788 +59,2796 @@ capi_006=ALPHA_PARTICLE_MOLAR_MASS !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_ALPHA_PARTICLE_MOLAR_MASS") :: &
 capi_U_006=U_ALPHA_PARTICLE_MOLAR_MASS !< C API kg mol^-1
 
-real(dp), parameter, public :: ALPHA_PARTICLE_PROTON_MASS_RATIO=3.97259969009_dp !< dimensionless
-real(dp), parameter, public :: U_ALPHA_PARTICLE_PROTON_MASS_RATIO=0.00000000022_dp !< dimensionless
+real(dp), parameter, public :: ALPHA_PARTICLE_PROTON_MASS_RATIO=3.972599690252_dp !< dimensionless
+real(dp), parameter, public :: U_ALPHA_PARTICLE_PROTON_MASS_RATIO=0.000000000070_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ALPHA_PARTICLE_PROTON_MASS_RATIO"):: &
 capi_007=ALPHA_PARTICLE_PROTON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ALPHA_PARTICLE_PROTON_MASS_RATIO") :: &
 capi_U_007=U_ALPHA_PARTICLE_PROTON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS=4.001506179127_dp !< dimensionless
-real(dp), parameter, public :: U_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS=0.000000000063_dp !< dimensionless
+real(dp), parameter, public :: ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS=4.001506179129_dp !< dimensionless
+real(dp), parameter, public :: U_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS=0.000000000062_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS"):: &
 capi_008=ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS") :: &
 capi_U_008=U_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS !< C API dimensionless
 
+real(dp), parameter, public :: ALPHA_PARTICLE_RMS_CHARGE_RADIUS=1.6785e-15_dp !< m
+real(dp), parameter, public :: U_ALPHA_PARTICLE_RMS_CHARGE_RADIUS=0.0021e-15_dp !< m
+
+real(cdp), protected, public, bind(C,name="ALPHA_PARTICLE_RMS_CHARGE_RADIUS"):: &
+capi_009=ALPHA_PARTICLE_RMS_CHARGE_RADIUS !< C API m
+real(cdp), protected, public, bind(C,name="U_ALPHA_PARTICLE_RMS_CHARGE_RADIUS") :: &
+capi_U_009=U_ALPHA_PARTICLE_RMS_CHARGE_RADIUS !< C API m
+
 real(dp), parameter, public :: ANGSTROM_STAR=1.00001495e-10_dp !< m
 real(dp), parameter, public :: U_ANGSTROM_STAR=0.00000090e-10_dp !< m
 
 real(cdp), protected, public, bind(C,name="ANGSTROM_STAR"):: &
-capi_009=ANGSTROM_STAR !< C API m
+capi_010=ANGSTROM_STAR !< C API m
 real(cdp), protected, public, bind(C,name="U_ANGSTROM_STAR") :: &
-capi_U_009=U_ANGSTROM_STAR !< C API m
+capi_U_010=U_ANGSTROM_STAR !< C API m
 
-real(dp), parameter, public :: ATOMIC_MASS_CONSTANT=1.66053906660e-27_dp !< kg
-real(dp), parameter, public :: U_ATOMIC_MASS_CONSTANT=0.00000000050e-27_dp !< kg
+real(dp), parameter, public :: ATOMIC_MASS_CONSTANT=1.66053906892e-27_dp !< kg
+real(dp), parameter, public :: U_ATOMIC_MASS_CONSTANT=0.00000000052e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_CONSTANT"):: &
-capi_010=ATOMIC_MASS_CONSTANT !< C API kg
+capi_011=ATOMIC_MASS_CONSTANT !< C API kg
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_CONSTANT") :: &
-capi_U_010=U_ATOMIC_MASS_CONSTANT !< C API kg
+capi_U_011=U_ATOMIC_MASS_CONSTANT !< C API kg
 
-real(dp), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT=1.49241808560e-10_dp !< J
-real(dp), parameter, public :: U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT=0.00000000045e-10_dp !< J
+real(dp), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT=1.49241808768e-10_dp !< J
+real(dp), parameter, public :: U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT=0.00000000046e-10_dp !< J
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT"):: &
-capi_011=ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT !< C API J
+capi_012=ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT") :: &
-capi_U_011=U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT !< C API J
+capi_U_012=U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT !< C API J
 
-real(dp), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV=931.49410242_dp !< MeV
-real(dp), parameter, public :: U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV=0.00000028_dp !< MeV
+real(dp), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV=931.49410372_dp !< MeV
+real(dp), parameter, public :: U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV=0.00000029_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV"):: &
-capi_012=ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_013=ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV") :: &
-capi_U_012=U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_U_013=U_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP=9.3149410242e8_dp !< eV
-real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP=0.0000000028e8_dp !< eV
+real(dp), parameter, public :: ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP=9.3149410372e8_dp !< eV
+real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP=0.0000000029e8_dp !< eV
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP"):: &
-capi_013=ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_014=ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP") :: &
-capi_U_013=U_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_U_014=U_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 
-real(dp), parameter, public :: ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP=3.4231776874e7_dp !< E_h
-real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP=0.0000000010e7_dp !< E_h
+real(dp), parameter, public :: ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP=3.4231776922e7_dp !< E_h
+real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP=0.0000000011e7_dp !< E_h
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP"):: &
-capi_014=ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP !< C API E_h
+capi_015=ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP !< C API E_h
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP") :: &
-capi_U_014=U_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP !< C API E_h
+capi_U_015=U_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP !< C API E_h
 
-real(dp), parameter, public :: ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP=2.25234271871e23_dp !< Hz
-real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP=0.00000000068e23_dp !< Hz
+real(dp), parameter, public :: ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP=2.25234272185e23_dp !< Hz
+real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP=0.00000000070e23_dp !< Hz
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP"):: &
-capi_015=ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP !< C API Hz
+capi_016=ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP !< C API Hz
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP") :: &
-capi_U_015=U_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP !< C API Hz
+capi_U_016=U_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP !< C API Hz
 
-real(dp), parameter, public :: ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP=7.5130066104e14_dp !< m^-1
+real(dp), parameter, public :: ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP=7.5130066209e14_dp !< m^-1
 real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP=0.0000000023e14_dp !< m^-1
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP"):: &
-capi_016=ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_017=ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP !< C API m^-1
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP") :: &
-capi_U_016=U_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_U_017=U_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP !< C API m^-1
 
-real(dp), parameter, public :: ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP=1.49241808560e-10_dp !< J
-real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP=0.00000000045e-10_dp !< J
+real(dp), parameter, public :: ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP=1.49241808768e-10_dp !< J
+real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP=0.00000000046e-10_dp !< J
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP"):: &
-capi_017=ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP !< C API J
+capi_018=ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP !< C API J
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP") :: &
-capi_U_017=U_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP !< C API J
+capi_U_018=U_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP !< C API J
 
-real(dp), parameter, public :: ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP=1.08095401916e13_dp !< K
-real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP=0.00000000033e13_dp !< K
+real(dp), parameter, public :: ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP=1.08095402067e13_dp !< K
+real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP=0.00000000034e13_dp !< K
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP"):: &
-capi_018=ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP !< C API K
+capi_019=ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP !< C API K
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP") :: &
-capi_U_018=U_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP !< C API K
+capi_U_019=U_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP !< C API K
 
-real(dp), parameter, public :: ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP=1.66053906660e-27_dp !< kg
-real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP=0.00000000050e-27_dp !< kg
+real(dp), parameter, public :: ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP=1.66053906892e-27_dp !< kg
+real(dp), parameter, public :: U_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP=0.00000000052e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP"):: &
-capi_019=ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP !< C API kg
+capi_020=ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP !< C API kg
 real(cdp), protected, public, bind(C,name="U_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP") :: &
-capi_U_019=U_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP !< C API kg
+capi_U_020=U_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP !< C API kg
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY=3.2063613061e-53_dp !< C^3 m^3 J^-2
+real(dp), parameter, public :: ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY=3.2063612996e-53_dp !< C^3 m^3 J^-2
 real(dp), parameter, public :: U_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY=0.0000000015e-53_dp !< C^3 m^3 J^-2
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY"):: &
-capi_020=ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY !< C API C^3 m^3 J^-2
+capi_021=ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY !< C API C^3 m^3 J^-2
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY") :: &
-capi_U_020=U_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY !< C API C^3 m^3 J^-2
+capi_U_021=U_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY !< C API C^3 m^3 J^-2
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY=6.2353799905e-65_dp !< C^4 m^4 J^-3
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY=0.0000000038e-65_dp !< C^4 m^4 J^-3
+real(dp), parameter, public :: ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY=6.2353799735e-65_dp !< C^4 m^4 J^-3
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY=0.0000000039e-65_dp !< C^4 m^4 J^-3
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY"):: &
-capi_021=ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY !< C API C^4 m^4 J^-3
+capi_022=ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY !< C API C^4 m^4 J^-3
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY") :: &
-capi_U_021=U_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY !< C API C^4 m^4 J^-3
+capi_U_022=U_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY !< C API C^4 m^4 J^-3
 
 real(dp), parameter, public :: ATOMIC_UNIT_OF_ACTION=1.054571817e-34_dp !< J s
 real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ACTION=0.0_dp !< J s
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_ACTION"):: &
-capi_022=ATOMIC_UNIT_OF_ACTION !< C API J s
+capi_023=ATOMIC_UNIT_OF_ACTION !< C API J s
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_ACTION") :: &
-capi_U_022=U_ATOMIC_UNIT_OF_ACTION !< C API J s
+capi_U_023=U_ATOMIC_UNIT_OF_ACTION !< C API J s
 
 real(dp), parameter, public :: ATOMIC_UNIT_OF_CHARGE=1.602176634e-19_dp !< C
 real(dp), parameter, public :: U_ATOMIC_UNIT_OF_CHARGE=0.0_dp !< C
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_CHARGE"):: &
-capi_023=ATOMIC_UNIT_OF_CHARGE !< C API C
+capi_024=ATOMIC_UNIT_OF_CHARGE !< C API C
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_CHARGE") :: &
-capi_U_023=U_ATOMIC_UNIT_OF_CHARGE !< C API C
+capi_U_024=U_ATOMIC_UNIT_OF_CHARGE !< C API C
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_CHARGE_DENSITY=1.08120238457e12_dp !< C m^-3
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_CHARGE_DENSITY=0.00000000049e12_dp !< C m^-3
+real(dp), parameter, public :: ATOMIC_UNIT_OF_CHARGE_DENSITY=1.08120238677e12_dp !< C m^-3
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_CHARGE_DENSITY=0.00000000051e12_dp !< C m^-3
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_CHARGE_DENSITY"):: &
-capi_024=ATOMIC_UNIT_OF_CHARGE_DENSITY !< C API C m^-3
+capi_025=ATOMIC_UNIT_OF_CHARGE_DENSITY !< C API C m^-3
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_CHARGE_DENSITY") :: &
-capi_U_024=U_ATOMIC_UNIT_OF_CHARGE_DENSITY !< C API C m^-3
+capi_U_025=U_ATOMIC_UNIT_OF_CHARGE_DENSITY !< C API C m^-3
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_CURRENT=6.623618237510e-3_dp !< A
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_CURRENT=0.000000000013e-3_dp !< A
+real(dp), parameter, public :: ATOMIC_UNIT_OF_CURRENT=6.6236182375082e-3_dp !< A
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_CURRENT=0.0000000000072e-3_dp !< A
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_CURRENT"):: &
-capi_025=ATOMIC_UNIT_OF_CURRENT !< C API A
+capi_026=ATOMIC_UNIT_OF_CURRENT !< C API A
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_CURRENT") :: &
-capi_U_025=U_ATOMIC_UNIT_OF_CURRENT !< C API A
+capi_U_026=U_ATOMIC_UNIT_OF_CURRENT !< C API A
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM=8.4783536255e-30_dp !< C m
+real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM=8.4783536198e-30_dp !< C m
 real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM=0.0000000013e-30_dp !< C m
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM"):: &
-capi_026=ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM !< C API C m
+capi_027=ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM !< C API C m
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM") :: &
-capi_U_026=U_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM !< C API C m
+capi_U_027=U_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM !< C API C m
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD=5.14220674763e11_dp !< V m^-1
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_FIELD=0.00000000078e11_dp !< V m^-1
+real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD=5.14220675112e11_dp !< V m^-1
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_FIELD=0.00000000080e11_dp !< V m^-1
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_ELECTRIC_FIELD"):: &
-capi_027=ATOMIC_UNIT_OF_ELECTRIC_FIELD !< C API V m^-1
+capi_028=ATOMIC_UNIT_OF_ELECTRIC_FIELD !< C API V m^-1
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_ELECTRIC_FIELD") :: &
-capi_U_027=U_ATOMIC_UNIT_OF_ELECTRIC_FIELD !< C API V m^-1
+capi_U_028=U_ATOMIC_UNIT_OF_ELECTRIC_FIELD !< C API V m^-1
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT=9.7173624292e21_dp !< V m^-2
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT=0.0000000029e21_dp !< V m^-2
+real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT=9.7173624424e21_dp !< V m^-2
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT=0.0000000030e21_dp !< V m^-2
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT"):: &
-capi_028=ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT !< C API V m^-2
+capi_029=ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT !< C API V m^-2
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT") :: &
-capi_U_028=U_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT !< C API V m^-2
+capi_U_029=U_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT !< C API V m^-2
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY=1.64877727436e-41_dp !< C^2 m^2 J^-1
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY=0.00000000050e-41_dp !< C^2 m^2 J^-1
+real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY=1.64877727212e-41_dp !< C^2 m^2 J^-1
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY=0.00000000051e-41_dp !< C^2 m^2 J^-1
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY"):: &
-capi_029=ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY !< C API C^2 m^2 J^-1
+capi_030=ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY !< C API C^2 m^2 J^-1
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY") :: &
-capi_U_029=U_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY !< C API C^2 m^2 J^-1
+capi_U_030=U_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY !< C API C^2 m^2 J^-1
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL=27.211386245988_dp !< V
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL=0.000000000053_dp !< V
+real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL=27.211386245981_dp !< V
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL=0.000000000030_dp !< V
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL"):: &
-capi_030=ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL !< C API V
+capi_031=ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL !< C API V
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL") :: &
-capi_U_030=U_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL !< C API V
+capi_U_031=U_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL !< C API V
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM=4.4865515246e-40_dp !< C m^2
+real(dp), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM=4.4865515185e-40_dp !< C m^2
 real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM=0.0000000014e-40_dp !< C m^2
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM"):: &
-capi_031=ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM !< C API C m^2
+capi_032=ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM !< C API C m^2
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM") :: &
-capi_U_031=U_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM !< C API C m^2
+capi_U_032=U_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM !< C API C m^2
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_ENERGY=4.3597447222071e-18_dp !< J
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ENERGY=0.0000000000085e-18_dp !< J
+real(dp), parameter, public :: ATOMIC_UNIT_OF_ENERGY=4.3597447222060e-18_dp !< J
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_ENERGY=0.0000000000048e-18_dp !< J
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_ENERGY"):: &
-capi_032=ATOMIC_UNIT_OF_ENERGY !< C API J
+capi_033=ATOMIC_UNIT_OF_ENERGY !< C API J
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_ENERGY") :: &
-capi_U_032=U_ATOMIC_UNIT_OF_ENERGY !< C API J
+capi_U_033=U_ATOMIC_UNIT_OF_ENERGY !< C API J
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_FORCE=8.2387234983e-8_dp !< N
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_FORCE=0.0000000012e-8_dp !< N
+real(dp), parameter, public :: ATOMIC_UNIT_OF_FORCE=8.2387235038e-8_dp !< N
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_FORCE=0.0000000013e-8_dp !< N
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_FORCE"):: &
-capi_033=ATOMIC_UNIT_OF_FORCE !< C API N
+capi_034=ATOMIC_UNIT_OF_FORCE !< C API N
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_FORCE") :: &
-capi_U_033=U_ATOMIC_UNIT_OF_FORCE !< C API N
+capi_U_034=U_ATOMIC_UNIT_OF_FORCE !< C API N
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_LENGTH=5.29177210903e-11_dp !< m
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_LENGTH=0.00000000080e-11_dp !< m
+real(dp), parameter, public :: ATOMIC_UNIT_OF_LENGTH=5.29177210544e-11_dp !< m
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_LENGTH=0.00000000082e-11_dp !< m
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_LENGTH"):: &
-capi_034=ATOMIC_UNIT_OF_LENGTH !< C API m
+capi_035=ATOMIC_UNIT_OF_LENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_LENGTH") :: &
-capi_U_034=U_ATOMIC_UNIT_OF_LENGTH !< C API m
+capi_U_035=U_ATOMIC_UNIT_OF_LENGTH !< C API m
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_MAG__DIPOLE_MOM=1.85480201566e-23_dp !< J T^-1
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM=0.00000000056e-23_dp !< J T^-1
+real(dp), parameter, public :: ATOMIC_UNIT_OF_MAG__DIPOLE_MOM=1.85480201315e-23_dp !< J T^-1
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM=0.00000000058e-23_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_MAG__DIPOLE_MOM"):: &
-capi_035=ATOMIC_UNIT_OF_MAG__DIPOLE_MOM !< C API J T^-1
+capi_036=ATOMIC_UNIT_OF_MAG__DIPOLE_MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM") :: &
-capi_U_035=U_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM !< C API J T^-1
+capi_U_036=U_ATOMIC_UNIT_OF_MAG__DIPOLE_MOM !< C API J T^-1
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_MAG__FLUX_DENSITY=2.35051756758e5_dp !< T
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY=0.00000000071e5_dp !< T
+real(dp), parameter, public :: ATOMIC_UNIT_OF_MAG__FLUX_DENSITY=2.35051757077e5_dp !< T
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY=0.00000000073e5_dp !< T
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_MAG__FLUX_DENSITY"):: &
-capi_036=ATOMIC_UNIT_OF_MAG__FLUX_DENSITY !< C API T
+capi_037=ATOMIC_UNIT_OF_MAG__FLUX_DENSITY !< C API T
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY") :: &
-capi_U_036=U_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY !< C API T
+capi_U_037=U_ATOMIC_UNIT_OF_MAG__FLUX_DENSITY !< C API T
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_MAGNETIZABILITY=7.8910366008e-29_dp !< J T^-2
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_MAGNETIZABILITY=0.0000000048e-29_dp !< J T^-2
+real(dp), parameter, public :: ATOMIC_UNIT_OF_MAGNETIZABILITY=7.8910365794e-29_dp !< J T^-2
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_MAGNETIZABILITY=0.0000000049e-29_dp !< J T^-2
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_MAGNETIZABILITY"):: &
-capi_037=ATOMIC_UNIT_OF_MAGNETIZABILITY !< C API J T^-2
+capi_038=ATOMIC_UNIT_OF_MAGNETIZABILITY !< C API J T^-2
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_MAGNETIZABILITY") :: &
-capi_U_037=U_ATOMIC_UNIT_OF_MAGNETIZABILITY !< C API J T^-2
+capi_U_038=U_ATOMIC_UNIT_OF_MAGNETIZABILITY !< C API J T^-2
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_MASS=9.1093837015e-31_dp !< kg
+real(dp), parameter, public :: ATOMIC_UNIT_OF_MASS=9.1093837139e-31_dp !< kg
 real(dp), parameter, public :: U_ATOMIC_UNIT_OF_MASS=0.0000000028e-31_dp !< kg
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_MASS"):: &
-capi_038=ATOMIC_UNIT_OF_MASS !< C API kg
+capi_039=ATOMIC_UNIT_OF_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_MASS") :: &
-capi_U_038=U_ATOMIC_UNIT_OF_MASS !< C API kg
+capi_U_039=U_ATOMIC_UNIT_OF_MASS !< C API kg
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_MOMENTUM=1.99285191410e-24_dp !< kg m s^-1
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_MOMENTUM=0.00000000030e-24_dp !< kg m s^-1
+real(dp), parameter, public :: ATOMIC_UNIT_OF_MOMENTUM=1.99285191545e-24_dp !< kg m s^-1
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_MOMENTUM=0.00000000031e-24_dp !< kg m s^-1
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_MOMENTUM"):: &
-capi_039=ATOMIC_UNIT_OF_MOMENTUM !< C API kg m s^-1
+capi_040=ATOMIC_UNIT_OF_MOMENTUM !< C API kg m s^-1
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_MOMENTUM") :: &
-capi_U_039=U_ATOMIC_UNIT_OF_MOMENTUM !< C API kg m s^-1
+capi_U_040=U_ATOMIC_UNIT_OF_MOMENTUM !< C API kg m s^-1
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_PERMITTIVITY=1.11265005545e-10_dp !< F m^-1
+real(dp), parameter, public :: ATOMIC_UNIT_OF_PERMITTIVITY=1.11265005620e-10_dp !< F m^-1
 real(dp), parameter, public :: U_ATOMIC_UNIT_OF_PERMITTIVITY=0.00000000017e-10_dp !< F m^-1
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_PERMITTIVITY"):: &
-capi_040=ATOMIC_UNIT_OF_PERMITTIVITY !< C API F m^-1
+capi_041=ATOMIC_UNIT_OF_PERMITTIVITY !< C API F m^-1
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_PERMITTIVITY") :: &
-capi_U_040=U_ATOMIC_UNIT_OF_PERMITTIVITY !< C API F m^-1
+capi_U_041=U_ATOMIC_UNIT_OF_PERMITTIVITY !< C API F m^-1
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_TIME=2.4188843265857e-17_dp !< s
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_TIME=0.0000000000047e-17_dp !< s
+real(dp), parameter, public :: ATOMIC_UNIT_OF_TIME=2.4188843265864e-17_dp !< s
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_TIME=0.0000000000026e-17_dp !< s
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_TIME"):: &
-capi_041=ATOMIC_UNIT_OF_TIME !< C API s
+capi_042=ATOMIC_UNIT_OF_TIME !< C API s
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_TIME") :: &
-capi_U_041=U_ATOMIC_UNIT_OF_TIME !< C API s
+capi_U_042=U_ATOMIC_UNIT_OF_TIME !< C API s
 
-real(dp), parameter, public :: ATOMIC_UNIT_OF_VELOCITY=2.18769126364e6_dp !< m s^-1
-real(dp), parameter, public :: U_ATOMIC_UNIT_OF_VELOCITY=0.00000000033e6_dp !< m s^-1
+real(dp), parameter, public :: ATOMIC_UNIT_OF_VELOCITY=2.18769126216e6_dp !< m s^-1
+real(dp), parameter, public :: U_ATOMIC_UNIT_OF_VELOCITY=0.00000000034e6_dp !< m s^-1
 
 real(cdp), protected, public, bind(C,name="ATOMIC_UNIT_OF_VELOCITY"):: &
-capi_042=ATOMIC_UNIT_OF_VELOCITY !< C API m s^-1
+capi_043=ATOMIC_UNIT_OF_VELOCITY !< C API m s^-1
 real(cdp), protected, public, bind(C,name="U_ATOMIC_UNIT_OF_VELOCITY") :: &
-capi_U_042=U_ATOMIC_UNIT_OF_VELOCITY !< C API m s^-1
+capi_U_043=U_ATOMIC_UNIT_OF_VELOCITY !< C API m s^-1
 
 real(dp), parameter, public :: AVOGADRO_CONSTANT=6.02214076e23_dp !< mol^-1
 real(dp), parameter, public :: U_AVOGADRO_CONSTANT=0.0_dp !< mol^-1
 
 real(cdp), protected, public, bind(C,name="AVOGADRO_CONSTANT"):: &
-capi_043=AVOGADRO_CONSTANT !< C API mol^-1
+capi_044=AVOGADRO_CONSTANT !< C API mol^-1
 real(cdp), protected, public, bind(C,name="U_AVOGADRO_CONSTANT") :: &
-capi_U_043=U_AVOGADRO_CONSTANT !< C API mol^-1
+capi_U_044=U_AVOGADRO_CONSTANT !< C API mol^-1
 
-real(dp), parameter, public :: BOHR_MAGNETON=9.2740100783e-24_dp !< J T^-1
-real(dp), parameter, public :: U_BOHR_MAGNETON=0.0000000028e-24_dp !< J T^-1
+real(dp), parameter, public :: BOHR_MAGNETON=9.2740100657e-24_dp !< J T^-1
+real(dp), parameter, public :: U_BOHR_MAGNETON=0.0000000029e-24_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="BOHR_MAGNETON"):: &
-capi_044=BOHR_MAGNETON !< C API J T^-1
+capi_045=BOHR_MAGNETON !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_BOHR_MAGNETON") :: &
-capi_U_044=U_BOHR_MAGNETON !< C API J T^-1
+capi_U_045=U_BOHR_MAGNETON !< C API J T^-1
 
-real(dp), parameter, public :: BOHR_MAGNETON_IN_EV_T=5.7883818060e-5_dp !< eV T^-1
-real(dp), parameter, public :: U_BOHR_MAGNETON_IN_EV_T=0.0000000017e-5_dp !< eV T^-1
+real(dp), parameter, public :: BOHR_MAGNETON_IN_EV_T=5.7883817982e-5_dp !< eV T^-1
+real(dp), parameter, public :: U_BOHR_MAGNETON_IN_EV_T=0.0000000018e-5_dp !< eV T^-1
 
 real(cdp), protected, public, bind(C,name="BOHR_MAGNETON_IN_EV_T"):: &
-capi_045=BOHR_MAGNETON_IN_EV_T !< C API eV T^-1
+capi_046=BOHR_MAGNETON_IN_EV_T !< C API eV T^-1
 real(cdp), protected, public, bind(C,name="U_BOHR_MAGNETON_IN_EV_T") :: &
-capi_U_045=U_BOHR_MAGNETON_IN_EV_T !< C API eV T^-1
+capi_U_046=U_BOHR_MAGNETON_IN_EV_T !< C API eV T^-1
 
-real(dp), parameter, public :: BOHR_MAGNETON_IN_HZ_T=1.39962449361e10_dp !< Hz T^-1
-real(dp), parameter, public :: U_BOHR_MAGNETON_IN_HZ_T=0.00000000042e10_dp !< Hz T^-1
+real(dp), parameter, public :: BOHR_MAGNETON_IN_HZ_T=1.39962449171e10_dp !< Hz T^-1
+real(dp), parameter, public :: U_BOHR_MAGNETON_IN_HZ_T=0.00000000044e10_dp !< Hz T^-1
 
 real(cdp), protected, public, bind(C,name="BOHR_MAGNETON_IN_HZ_T"):: &
-capi_046=BOHR_MAGNETON_IN_HZ_T !< C API Hz T^-1
+capi_047=BOHR_MAGNETON_IN_HZ_T !< C API Hz T^-1
 real(cdp), protected, public, bind(C,name="U_BOHR_MAGNETON_IN_HZ_T") :: &
-capi_U_046=U_BOHR_MAGNETON_IN_HZ_T !< C API Hz T^-1
+capi_U_047=U_BOHR_MAGNETON_IN_HZ_T !< C API Hz T^-1
 
-real(dp), parameter, public :: BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA=46.686447783_dp !< m^-1 T^-1
-real(dp), parameter, public :: U_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA=0.000000014_dp !< m^-1 T^-1
+real(dp), parameter, public :: BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA=46.686447719_dp !< m^-1 T^-1
+real(dp), parameter, public :: U_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA=0.000000015_dp !< m^-1 T^-1
 
 real(cdp), protected, public, bind(C,name="BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA"):: &
-capi_047=BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA !< C API m^-1 T^-1
+capi_048=BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA !< C API m^-1 T^-1
 real(cdp), protected, public, bind(C,name="U_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA") :: &
-capi_U_047=U_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA !< C API m^-1 T^-1
+capi_U_048=U_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA !< C API m^-1 T^-1
 
-real(dp), parameter, public :: BOHR_MAGNETON_IN_K_T=0.67171381563_dp !< K T^-1
-real(dp), parameter, public :: U_BOHR_MAGNETON_IN_K_T=0.00000000020_dp !< K T^-1
+real(dp), parameter, public :: BOHR_MAGNETON_IN_K_T=0.67171381472_dp !< K T^-1
+real(dp), parameter, public :: U_BOHR_MAGNETON_IN_K_T=0.00000000021_dp !< K T^-1
 
 real(cdp), protected, public, bind(C,name="BOHR_MAGNETON_IN_K_T"):: &
-capi_048=BOHR_MAGNETON_IN_K_T !< C API K T^-1
+capi_049=BOHR_MAGNETON_IN_K_T !< C API K T^-1
 real(cdp), protected, public, bind(C,name="U_BOHR_MAGNETON_IN_K_T") :: &
-capi_U_048=U_BOHR_MAGNETON_IN_K_T !< C API K T^-1
+capi_U_049=U_BOHR_MAGNETON_IN_K_T !< C API K T^-1
 
-real(dp), parameter, public :: BOHR_RADIUS=5.29177210903e-11_dp !< m
-real(dp), parameter, public :: U_BOHR_RADIUS=0.00000000080e-11_dp !< m
+real(dp), parameter, public :: BOHR_RADIUS=5.29177210544e-11_dp !< m
+real(dp), parameter, public :: U_BOHR_RADIUS=0.00000000082e-11_dp !< m
 
 real(cdp), protected, public, bind(C,name="BOHR_RADIUS"):: &
-capi_049=BOHR_RADIUS !< C API m
+capi_050=BOHR_RADIUS !< C API m
 real(cdp), protected, public, bind(C,name="U_BOHR_RADIUS") :: &
-capi_U_049=U_BOHR_RADIUS !< C API m
+capi_U_050=U_BOHR_RADIUS !< C API m
 
 real(dp), parameter, public :: BOLTZMANN_CONSTANT=1.380649e-23_dp !< J K^-1
 real(dp), parameter, public :: U_BOLTZMANN_CONSTANT=0.0_dp !< J K^-1
 
 real(cdp), protected, public, bind(C,name="BOLTZMANN_CONSTANT"):: &
-capi_050=BOLTZMANN_CONSTANT !< C API J K^-1
+capi_051=BOLTZMANN_CONSTANT !< C API J K^-1
 real(cdp), protected, public, bind(C,name="U_BOLTZMANN_CONSTANT") :: &
-capi_U_050=U_BOLTZMANN_CONSTANT !< C API J K^-1
+capi_U_051=U_BOLTZMANN_CONSTANT !< C API J K^-1
 
 real(dp), parameter, public :: BOLTZMANN_CONSTANT_IN_EV_K=8.617333262e-5_dp !< eV K^-1
 real(dp), parameter, public :: U_BOLTZMANN_CONSTANT_IN_EV_K=0.0_dp !< eV K^-1
 
 real(cdp), protected, public, bind(C,name="BOLTZMANN_CONSTANT_IN_EV_K"):: &
-capi_051=BOLTZMANN_CONSTANT_IN_EV_K !< C API eV K^-1
+capi_052=BOLTZMANN_CONSTANT_IN_EV_K !< C API eV K^-1
 real(cdp), protected, public, bind(C,name="U_BOLTZMANN_CONSTANT_IN_EV_K") :: &
-capi_U_051=U_BOLTZMANN_CONSTANT_IN_EV_K !< C API eV K^-1
+capi_U_052=U_BOLTZMANN_CONSTANT_IN_EV_K !< C API eV K^-1
 
 real(dp), parameter, public :: BOLTZMANN_CONSTANT_IN_HZ_K=2.083661912e10_dp !< Hz K^-1
 real(dp), parameter, public :: U_BOLTZMANN_CONSTANT_IN_HZ_K=0.0_dp !< Hz K^-1
 
 real(cdp), protected, public, bind(C,name="BOLTZMANN_CONSTANT_IN_HZ_K"):: &
-capi_052=BOLTZMANN_CONSTANT_IN_HZ_K !< C API Hz K^-1
+capi_053=BOLTZMANN_CONSTANT_IN_HZ_K !< C API Hz K^-1
 real(cdp), protected, public, bind(C,name="U_BOLTZMANN_CONSTANT_IN_HZ_K") :: &
-capi_U_052=U_BOLTZMANN_CONSTANT_IN_HZ_K !< C API Hz K^-1
+capi_U_053=U_BOLTZMANN_CONSTANT_IN_HZ_K !< C API Hz K^-1
 
 real(dp), parameter, public :: BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN=69.50348004_dp !< m^-1 K^-1
 real(dp), parameter, public :: U_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN=0.0_dp !< m^-1 K^-1
 
 real(cdp), protected, public, bind(C,name="BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN"):: &
-capi_053=BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN !< C API m^-1 K^-1
+capi_054=BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN !< C API m^-1 K^-1
 real(cdp), protected, public, bind(C,name="U_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN") :: &
-capi_U_053=U_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN !< C API m^-1 K^-1
+capi_U_054=U_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN !< C API m^-1 K^-1
 
-real(dp), parameter, public :: CHARACTERISTIC_IMPEDANCE_OF_VACUUM=376.730313668_dp !< ohm
-real(dp), parameter, public :: U_CHARACTERISTIC_IMPEDANCE_OF_VACUUM=0.000000057_dp !< ohm
+real(dp), parameter, public :: CHARACTERISTIC_IMPEDANCE_OF_VACUUM=376.730313412_dp !< ohm
+real(dp), parameter, public :: U_CHARACTERISTIC_IMPEDANCE_OF_VACUUM=0.000000059_dp !< ohm
 
 real(cdp), protected, public, bind(C,name="CHARACTERISTIC_IMPEDANCE_OF_VACUUM"):: &
-capi_054=CHARACTERISTIC_IMPEDANCE_OF_VACUUM !< C API ohm
+capi_055=CHARACTERISTIC_IMPEDANCE_OF_VACUUM !< C API ohm
 real(cdp), protected, public, bind(C,name="U_CHARACTERISTIC_IMPEDANCE_OF_VACUUM") :: &
-capi_U_054=U_CHARACTERISTIC_IMPEDANCE_OF_VACUUM !< C API ohm
+capi_U_055=U_CHARACTERISTIC_IMPEDANCE_OF_VACUUM !< C API ohm
 
-real(dp), parameter, public :: CLASSICAL_ELECTRON_RADIUS=2.8179403262e-15_dp !< m
+real(dp), parameter, public :: CLASSICAL_ELECTRON_RADIUS=2.8179403205e-15_dp !< m
 real(dp), parameter, public :: U_CLASSICAL_ELECTRON_RADIUS=0.0000000013e-15_dp !< m
 
 real(cdp), protected, public, bind(C,name="CLASSICAL_ELECTRON_RADIUS"):: &
-capi_055=CLASSICAL_ELECTRON_RADIUS !< C API m
+capi_056=CLASSICAL_ELECTRON_RADIUS !< C API m
 real(cdp), protected, public, bind(C,name="U_CLASSICAL_ELECTRON_RADIUS") :: &
-capi_U_055=U_CLASSICAL_ELECTRON_RADIUS !< C API m
+capi_U_056=U_CLASSICAL_ELECTRON_RADIUS !< C API m
 
-real(dp), parameter, public :: COMPTON_WAVELENGTH=2.42631023867e-12_dp !< m
-real(dp), parameter, public :: U_COMPTON_WAVELENGTH=0.00000000073e-12_dp !< m
+real(dp), parameter, public :: COMPTON_WAVELENGTH=2.42631023538e-12_dp !< m
+real(dp), parameter, public :: U_COMPTON_WAVELENGTH=0.00000000076e-12_dp !< m
 
 real(cdp), protected, public, bind(C,name="COMPTON_WAVELENGTH"):: &
-capi_056=COMPTON_WAVELENGTH !< C API m
+capi_057=COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_COMPTON_WAVELENGTH") :: &
-capi_U_056=U_COMPTON_WAVELENGTH !< C API m
+capi_U_057=U_COMPTON_WAVELENGTH !< C API m
 
 real(dp), parameter, public :: CONDUCTANCE_QUANTUM=7.748091729e-5_dp !< S
 real(dp), parameter, public :: U_CONDUCTANCE_QUANTUM=0.0_dp !< S
 
 real(cdp), protected, public, bind(C,name="CONDUCTANCE_QUANTUM"):: &
-capi_057=CONDUCTANCE_QUANTUM !< C API S
+capi_058=CONDUCTANCE_QUANTUM !< C API S
 real(cdp), protected, public, bind(C,name="U_CONDUCTANCE_QUANTUM") :: &
-capi_U_057=U_CONDUCTANCE_QUANTUM !< C API S
+capi_U_058=U_CONDUCTANCE_QUANTUM !< C API S
 
 real(dp), parameter, public :: CONVENTIONAL_VALUE_OF_AMPERE_90=1.00000008887_dp !< A
 real(dp), parameter, public :: U_CONVENTIONAL_VALUE_OF_AMPERE_90=0.0_dp !< A
 
 real(cdp), protected, public, bind(C,name="CONVENTIONAL_VALUE_OF_AMPERE_90"):: &
-capi_058=CONVENTIONAL_VALUE_OF_AMPERE_90 !< C API A
+capi_059=CONVENTIONAL_VALUE_OF_AMPERE_90 !< C API A
 real(cdp), protected, public, bind(C,name="U_CONVENTIONAL_VALUE_OF_AMPERE_90") :: &
-capi_U_058=U_CONVENTIONAL_VALUE_OF_AMPERE_90 !< C API A
+capi_U_059=U_CONVENTIONAL_VALUE_OF_AMPERE_90 !< C API A
 
 real(dp), parameter, public :: CONVENTIONAL_VALUE_OF_COULOMB_90=1.00000008887_dp !< C
 real(dp), parameter, public :: U_CONVENTIONAL_VALUE_OF_COULOMB_90=0.0_dp !< C
 
 real(cdp), protected, public, bind(C,name="CONVENTIONAL_VALUE_OF_COULOMB_90"):: &
-capi_059=CONVENTIONAL_VALUE_OF_COULOMB_90 !< C API C
+capi_060=CONVENTIONAL_VALUE_OF_COULOMB_90 !< C API C
 real(cdp), protected, public, bind(C,name="U_CONVENTIONAL_VALUE_OF_COULOMB_90") :: &
-capi_U_059=U_CONVENTIONAL_VALUE_OF_COULOMB_90 !< C API C
+capi_U_060=U_CONVENTIONAL_VALUE_OF_COULOMB_90 !< C API C
 
 real(dp), parameter, public :: CONVENTIONAL_VALUE_OF_FARAD_90=0.99999998220_dp !< F
 real(dp), parameter, public :: U_CONVENTIONAL_VALUE_OF_FARAD_90=0.0_dp !< F
 
 real(cdp), protected, public, bind(C,name="CONVENTIONAL_VALUE_OF_FARAD_90"):: &
-capi_060=CONVENTIONAL_VALUE_OF_FARAD_90 !< C API F
+capi_061=CONVENTIONAL_VALUE_OF_FARAD_90 !< C API F
 real(cdp), protected, public, bind(C,name="U_CONVENTIONAL_VALUE_OF_FARAD_90") :: &
-capi_U_060=U_CONVENTIONAL_VALUE_OF_FARAD_90 !< C API F
+capi_U_061=U_CONVENTIONAL_VALUE_OF_FARAD_90 !< C API F
 
 real(dp), parameter, public :: CONVENTIONAL_VALUE_OF_HENRY_90=1.00000001779_dp !< H
 real(dp), parameter, public :: U_CONVENTIONAL_VALUE_OF_HENRY_90=0.0_dp !< H
 
 real(cdp), protected, public, bind(C,name="CONVENTIONAL_VALUE_OF_HENRY_90"):: &
-capi_061=CONVENTIONAL_VALUE_OF_HENRY_90 !< C API H
+capi_062=CONVENTIONAL_VALUE_OF_HENRY_90 !< C API H
 real(cdp), protected, public, bind(C,name="U_CONVENTIONAL_VALUE_OF_HENRY_90") :: &
-capi_U_061=U_CONVENTIONAL_VALUE_OF_HENRY_90 !< C API H
+capi_U_062=U_CONVENTIONAL_VALUE_OF_HENRY_90 !< C API H
 
 real(dp), parameter, public :: CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT=483597.9e9_dp !< Hz V^-1
 real(dp), parameter, public :: U_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT=0.0_dp !< Hz V^-1
 
 real(cdp), protected, public, bind(C,name="CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT"):: &
-capi_062=CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT !< C API Hz V^-1
+capi_063=CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT !< C API Hz V^-1
 real(cdp), protected, public, bind(C,name="U_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT") :: &
-capi_U_062=U_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT !< C API Hz V^-1
+capi_U_063=U_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT !< C API Hz V^-1
 
 real(dp), parameter, public :: CONVENTIONAL_VALUE_OF_OHM_90=1.00000001779_dp !< ohm
 real(dp), parameter, public :: U_CONVENTIONAL_VALUE_OF_OHM_90=0.0_dp !< ohm
 
 real(cdp), protected, public, bind(C,name="CONVENTIONAL_VALUE_OF_OHM_90"):: &
-capi_063=CONVENTIONAL_VALUE_OF_OHM_90 !< C API ohm
+capi_064=CONVENTIONAL_VALUE_OF_OHM_90 !< C API ohm
 real(cdp), protected, public, bind(C,name="U_CONVENTIONAL_VALUE_OF_OHM_90") :: &
-capi_U_063=U_CONVENTIONAL_VALUE_OF_OHM_90 !< C API ohm
+capi_U_064=U_CONVENTIONAL_VALUE_OF_OHM_90 !< C API ohm
 
 real(dp), parameter, public :: CONVENTIONAL_VALUE_OF_VOLT_90=1.00000010666_dp !< V
 real(dp), parameter, public :: U_CONVENTIONAL_VALUE_OF_VOLT_90=0.0_dp !< V
 
 real(cdp), protected, public, bind(C,name="CONVENTIONAL_VALUE_OF_VOLT_90"):: &
-capi_064=CONVENTIONAL_VALUE_OF_VOLT_90 !< C API V
+capi_065=CONVENTIONAL_VALUE_OF_VOLT_90 !< C API V
 real(cdp), protected, public, bind(C,name="U_CONVENTIONAL_VALUE_OF_VOLT_90") :: &
-capi_U_064=U_CONVENTIONAL_VALUE_OF_VOLT_90 !< C API V
+capi_U_065=U_CONVENTIONAL_VALUE_OF_VOLT_90 !< C API V
 
 real(dp), parameter, public :: CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT=25812.807_dp !< ohm
 real(dp), parameter, public :: U_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT=0.0_dp !< ohm
 
 real(cdp), protected, public, bind(C,name="CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT"):: &
-capi_065=CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT !< C API ohm
+capi_066=CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT !< C API ohm
 real(cdp), protected, public, bind(C,name="U_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT") :: &
-capi_U_065=U_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT !< C API ohm
+capi_U_066=U_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT !< C API ohm
 
 real(dp), parameter, public :: CONVENTIONAL_VALUE_OF_WATT_90=1.00000019553_dp !< W
 real(dp), parameter, public :: U_CONVENTIONAL_VALUE_OF_WATT_90=0.0_dp !< W
 
 real(cdp), protected, public, bind(C,name="CONVENTIONAL_VALUE_OF_WATT_90"):: &
-capi_066=CONVENTIONAL_VALUE_OF_WATT_90 !< C API W
+capi_067=CONVENTIONAL_VALUE_OF_WATT_90 !< C API W
 real(cdp), protected, public, bind(C,name="U_CONVENTIONAL_VALUE_OF_WATT_90") :: &
-capi_U_066=U_CONVENTIONAL_VALUE_OF_WATT_90 !< C API W
+capi_U_067=U_CONVENTIONAL_VALUE_OF_WATT_90 !< C API W
 
 real(dp), parameter, public :: COPPER_X_UNIT=1.00207697e-13_dp !< m
 real(dp), parameter, public :: U_COPPER_X_UNIT=0.00000028e-13_dp !< m
 
 real(cdp), protected, public, bind(C,name="COPPER_X_UNIT"):: &
-capi_067=COPPER_X_UNIT !< C API m
+capi_068=COPPER_X_UNIT !< C API m
 real(cdp), protected, public, bind(C,name="U_COPPER_X_UNIT") :: &
-capi_U_067=U_COPPER_X_UNIT !< C API m
+capi_U_068=U_COPPER_X_UNIT !< C API m
 
-real(dp), parameter, public :: DEUTERON_ELECTRON_MAG__MOM__RATIO=-4.664345551e-4_dp !< dimensionless
+real(dp), parameter, public :: DEUTERON_ELECTRON_MAG__MOM__RATIO=-4.664345550e-4_dp !< dimensionless
 real(dp), parameter, public :: U_DEUTERON_ELECTRON_MAG__MOM__RATIO=0.000000012e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="DEUTERON_ELECTRON_MAG__MOM__RATIO"):: &
-capi_068=DEUTERON_ELECTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_069=DEUTERON_ELECTRON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_DEUTERON_ELECTRON_MAG__MOM__RATIO") :: &
-capi_U_068=U_DEUTERON_ELECTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_069=U_DEUTERON_ELECTRON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: DEUTERON_ELECTRON_MASS_RATIO=3670.48296788_dp !< dimensionless
-real(dp), parameter, public :: U_DEUTERON_ELECTRON_MASS_RATIO=0.00000013_dp !< dimensionless
+real(dp), parameter, public :: DEUTERON_ELECTRON_MASS_RATIO=3670.482967655_dp !< dimensionless
+real(dp), parameter, public :: U_DEUTERON_ELECTRON_MASS_RATIO=0.000000063_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="DEUTERON_ELECTRON_MASS_RATIO"):: &
-capi_069=DEUTERON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_070=DEUTERON_ELECTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_DEUTERON_ELECTRON_MASS_RATIO") :: &
-capi_U_069=U_DEUTERON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_U_070=U_DEUTERON_ELECTRON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: DEUTERON_G_FACTOR=0.8574382338_dp !< dimensionless
+real(dp), parameter, public :: DEUTERON_G_FACTOR=0.8574382335_dp !< dimensionless
 real(dp), parameter, public :: U_DEUTERON_G_FACTOR=0.0000000022_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="DEUTERON_G_FACTOR"):: &
-capi_070=DEUTERON_G_FACTOR !< C API dimensionless
+capi_071=DEUTERON_G_FACTOR !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_DEUTERON_G_FACTOR") :: &
-capi_U_070=U_DEUTERON_G_FACTOR !< C API dimensionless
+capi_U_071=U_DEUTERON_G_FACTOR !< C API dimensionless
 
-real(dp), parameter, public :: DEUTERON_MAG__MOM=4.330735094e-27_dp !< J T^-1
+real(dp), parameter, public :: DEUTERON_MAG__MOM=4.330735087e-27_dp !< J T^-1
 real(dp), parameter, public :: U_DEUTERON_MAG__MOM=0.000000011e-27_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="DEUTERON_MAG__MOM"):: &
-capi_071=DEUTERON_MAG__MOM !< C API J T^-1
+capi_072=DEUTERON_MAG__MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_DEUTERON_MAG__MOM") :: &
-capi_U_071=U_DEUTERON_MAG__MOM !< C API J T^-1
+capi_U_072=U_DEUTERON_MAG__MOM !< C API J T^-1
 
-real(dp), parameter, public :: DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=4.669754570e-4_dp !< dimensionless
+real(dp), parameter, public :: DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=4.669754568e-4_dp !< dimensionless
 real(dp), parameter, public :: U_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.000000012e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO"):: &
-capi_072=DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_073=DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO") :: &
-capi_U_072=U_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_U_073=U_DEUTERON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.8574382338_dp !< dimensionless
+real(dp), parameter, public :: DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.8574382335_dp !< dimensionless
 real(dp), parameter, public :: U_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.0000000022_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO"):: &
-capi_073=DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_074=DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO") :: &
-capi_U_073=U_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_U_074=U_DEUTERON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: DEUTERON_MASS=3.3435837724e-27_dp !< kg
+real(dp), parameter, public :: DEUTERON_MASS=3.3435837768e-27_dp !< kg
 real(dp), parameter, public :: U_DEUTERON_MASS=0.0000000010e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="DEUTERON_MASS"):: &
-capi_074=DEUTERON_MASS !< C API kg
+capi_075=DEUTERON_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_DEUTERON_MASS") :: &
-capi_U_074=U_DEUTERON_MASS !< C API kg
+capi_U_075=U_DEUTERON_MASS !< C API kg
 
-real(dp), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT=3.00506323102e-10_dp !< J
-real(dp), parameter, public :: U_DEUTERON_MASS_ENERGY_EQUIVALENT=0.00000000091e-10_dp !< J
+real(dp), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT=3.00506323491e-10_dp !< J
+real(dp), parameter, public :: U_DEUTERON_MASS_ENERGY_EQUIVALENT=0.00000000094e-10_dp !< J
 
 real(cdp), protected, public, bind(C,name="DEUTERON_MASS_ENERGY_EQUIVALENT"):: &
-capi_075=DEUTERON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_076=DEUTERON_MASS_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_DEUTERON_MASS_ENERGY_EQUIVALENT") :: &
-capi_U_075=U_DEUTERON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_U_076=U_DEUTERON_MASS_ENERGY_EQUIVALENT !< C API J
 
-real(dp), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV=1875.61294257_dp !< MeV
-real(dp), parameter, public :: U_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000057_dp !< MeV
+real(dp), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV=1875.61294500_dp !< MeV
+real(dp), parameter, public :: U_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000058_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV"):: &
-capi_076=DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_077=DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV") :: &
-capi_U_076=U_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_U_077=U_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: DEUTERON_MASS_IN_U=2.013553212745_dp !< u
-real(dp), parameter, public :: U_DEUTERON_MASS_IN_U=0.000000000040_dp !< u
+real(dp), parameter, public :: DEUTERON_MASS_IN_U=2.013553212544_dp !< u
+real(dp), parameter, public :: U_DEUTERON_MASS_IN_U=0.000000000015_dp !< u
 
 real(cdp), protected, public, bind(C,name="DEUTERON_MASS_IN_U"):: &
-capi_077=DEUTERON_MASS_IN_U !< C API u
+capi_078=DEUTERON_MASS_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_DEUTERON_MASS_IN_U") :: &
-capi_U_077=U_DEUTERON_MASS_IN_U !< C API u
+capi_U_078=U_DEUTERON_MASS_IN_U !< C API u
 
-real(dp), parameter, public :: DEUTERON_MOLAR_MASS=2.01355321205e-3_dp !< kg mol^-1
-real(dp), parameter, public :: U_DEUTERON_MOLAR_MASS=0.00000000061e-3_dp !< kg mol^-1
+real(dp), parameter, public :: DEUTERON_MOLAR_MASS=2.01355321466e-3_dp !< kg mol^-1
+real(dp), parameter, public :: U_DEUTERON_MOLAR_MASS=0.00000000063e-3_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="DEUTERON_MOLAR_MASS"):: &
-capi_078=DEUTERON_MOLAR_MASS !< C API kg mol^-1
+capi_079=DEUTERON_MOLAR_MASS !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_DEUTERON_MOLAR_MASS") :: &
-capi_U_078=U_DEUTERON_MOLAR_MASS !< C API kg mol^-1
+capi_U_079=U_DEUTERON_MOLAR_MASS !< C API kg mol^-1
 
-real(dp), parameter, public :: DEUTERON_NEUTRON_MAG__MOM__RATIO=-0.44820653_dp !< dimensionless
+real(dp), parameter, public :: DEUTERON_NEUTRON_MAG__MOM__RATIO=-0.44820652_dp !< dimensionless
 real(dp), parameter, public :: U_DEUTERON_NEUTRON_MAG__MOM__RATIO=0.00000011_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="DEUTERON_NEUTRON_MAG__MOM__RATIO"):: &
-capi_079=DEUTERON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_080=DEUTERON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_DEUTERON_NEUTRON_MAG__MOM__RATIO") :: &
-capi_U_079=U_DEUTERON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_080=U_DEUTERON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: DEUTERON_PROTON_MAG__MOM__RATIO=0.30701220939_dp !< dimensionless
+real(dp), parameter, public :: DEUTERON_PROTON_MAG__MOM__RATIO=0.30701220930_dp !< dimensionless
 real(dp), parameter, public :: U_DEUTERON_PROTON_MAG__MOM__RATIO=0.00000000079_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="DEUTERON_PROTON_MAG__MOM__RATIO"):: &
-capi_080=DEUTERON_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_081=DEUTERON_PROTON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_DEUTERON_PROTON_MAG__MOM__RATIO") :: &
-capi_U_080=U_DEUTERON_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_081=U_DEUTERON_PROTON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: DEUTERON_PROTON_MASS_RATIO=1.99900750139_dp !< dimensionless
-real(dp), parameter, public :: U_DEUTERON_PROTON_MASS_RATIO=0.00000000011_dp !< dimensionless
+real(dp), parameter, public :: DEUTERON_PROTON_MASS_RATIO=1.9990075012699_dp !< dimensionless
+real(dp), parameter, public :: U_DEUTERON_PROTON_MASS_RATIO=0.0000000000084_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="DEUTERON_PROTON_MASS_RATIO"):: &
-capi_081=DEUTERON_PROTON_MASS_RATIO !< C API dimensionless
+capi_082=DEUTERON_PROTON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_DEUTERON_PROTON_MASS_RATIO") :: &
-capi_U_081=U_DEUTERON_PROTON_MASS_RATIO !< C API dimensionless
+capi_U_082=U_DEUTERON_PROTON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: DEUTERON_RELATIVE_ATOMIC_MASS=2.013553212745_dp !< dimensionless
-real(dp), parameter, public :: U_DEUTERON_RELATIVE_ATOMIC_MASS=0.000000000040_dp !< dimensionless
+real(dp), parameter, public :: DEUTERON_RELATIVE_ATOMIC_MASS=2.013553212544_dp !< dimensionless
+real(dp), parameter, public :: U_DEUTERON_RELATIVE_ATOMIC_MASS=0.000000000015_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="DEUTERON_RELATIVE_ATOMIC_MASS"):: &
-capi_082=DEUTERON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_083=DEUTERON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_DEUTERON_RELATIVE_ATOMIC_MASS") :: &
-capi_U_082=U_DEUTERON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_U_083=U_DEUTERON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 
-real(dp), parameter, public :: DEUTERON_RMS_CHARGE_RADIUS=2.12799e-15_dp !< m
-real(dp), parameter, public :: U_DEUTERON_RMS_CHARGE_RADIUS=0.00074e-15_dp !< m
+real(dp), parameter, public :: DEUTERON_RMS_CHARGE_RADIUS=2.12778e-15_dp !< m
+real(dp), parameter, public :: U_DEUTERON_RMS_CHARGE_RADIUS=0.00027e-15_dp !< m
 
 real(cdp), protected, public, bind(C,name="DEUTERON_RMS_CHARGE_RADIUS"):: &
-capi_083=DEUTERON_RMS_CHARGE_RADIUS !< C API m
+capi_084=DEUTERON_RMS_CHARGE_RADIUS !< C API m
 real(cdp), protected, public, bind(C,name="U_DEUTERON_RMS_CHARGE_RADIUS") :: &
-capi_U_083=U_DEUTERON_RMS_CHARGE_RADIUS !< C API m
+capi_U_084=U_DEUTERON_RMS_CHARGE_RADIUS !< C API m
 
-real(dp), parameter, public :: ELECTRON_CHARGE_TO_MASS_QUOTIENT=-1.75882001076e11_dp !< C kg^-1
-real(dp), parameter, public :: U_ELECTRON_CHARGE_TO_MASS_QUOTIENT=0.00000000053e11_dp !< C kg^-1
+real(dp), parameter, public :: ELECTRON_CHARGE_TO_MASS_QUOTIENT=-1.75882000838e11_dp !< C kg^-1
+real(dp), parameter, public :: U_ELECTRON_CHARGE_TO_MASS_QUOTIENT=0.00000000055e11_dp !< C kg^-1
 
 real(cdp), protected, public, bind(C,name="ELECTRON_CHARGE_TO_MASS_QUOTIENT"):: &
-capi_084=ELECTRON_CHARGE_TO_MASS_QUOTIENT !< C API C kg^-1
+capi_085=ELECTRON_CHARGE_TO_MASS_QUOTIENT !< C API C kg^-1
 real(cdp), protected, public, bind(C,name="U_ELECTRON_CHARGE_TO_MASS_QUOTIENT") :: &
-capi_U_084=U_ELECTRON_CHARGE_TO_MASS_QUOTIENT !< C API C kg^-1
+capi_U_085=U_ELECTRON_CHARGE_TO_MASS_QUOTIENT !< C API C kg^-1
 
-real(dp), parameter, public :: ELECTRON_DEUTERON_MAG__MOM__RATIO=-2143.9234915_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_DEUTERON_MAG__MOM__RATIO=-2143.9234921_dp !< dimensionless
 real(dp), parameter, public :: U_ELECTRON_DEUTERON_MAG__MOM__RATIO=0.0000056_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_DEUTERON_MAG__MOM__RATIO"):: &
-capi_085=ELECTRON_DEUTERON_MAG__MOM__RATIO !< C API dimensionless
+capi_086=ELECTRON_DEUTERON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_DEUTERON_MAG__MOM__RATIO") :: &
-capi_U_085=U_ELECTRON_DEUTERON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_086=U_ELECTRON_DEUTERON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_DEUTERON_MASS_RATIO=2.724437107462e-4_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_DEUTERON_MASS_RATIO=0.000000000096e-4_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_DEUTERON_MASS_RATIO=2.724437107629e-4_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_DEUTERON_MASS_RATIO=0.000000000047e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_DEUTERON_MASS_RATIO"):: &
-capi_086=ELECTRON_DEUTERON_MASS_RATIO !< C API dimensionless
+capi_087=ELECTRON_DEUTERON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_DEUTERON_MASS_RATIO") :: &
-capi_U_086=U_ELECTRON_DEUTERON_MASS_RATIO !< C API dimensionless
+capi_U_087=U_ELECTRON_DEUTERON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_G_FACTOR=-2.00231930436256_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_G_FACTOR=0.00000000000035_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_G_FACTOR=-2.00231930436092_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_G_FACTOR=0.00000000000036_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_G_FACTOR"):: &
-capi_087=ELECTRON_G_FACTOR !< C API dimensionless
+capi_088=ELECTRON_G_FACTOR !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_G_FACTOR") :: &
-capi_U_087=U_ELECTRON_G_FACTOR !< C API dimensionless
+capi_U_088=U_ELECTRON_G_FACTOR !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_GYROMAG__RATIO=1.76085963023e11_dp !< s^-1 T^-1
-real(dp), parameter, public :: U_ELECTRON_GYROMAG__RATIO=0.00000000053e11_dp !< s^-1 T^-1
+real(dp), parameter, public :: ELECTRON_GYROMAG__RATIO=1.76085962784e11_dp !< s^-1 T^-1
+real(dp), parameter, public :: U_ELECTRON_GYROMAG__RATIO=0.00000000055e11_dp !< s^-1 T^-1
 
 real(cdp), protected, public, bind(C,name="ELECTRON_GYROMAG__RATIO"):: &
-capi_088=ELECTRON_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_089=ELECTRON_GYROMAG__RATIO !< C API s^-1 T^-1
 real(cdp), protected, public, bind(C,name="U_ELECTRON_GYROMAG__RATIO") :: &
-capi_U_088=U_ELECTRON_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_U_089=U_ELECTRON_GYROMAG__RATIO !< C API s^-1 T^-1
 
-real(dp), parameter, public :: ELECTRON_GYROMAG__RATIO_IN_MHZ_T=28024.9514242_dp !< MHz T^-1
-real(dp), parameter, public :: U_ELECTRON_GYROMAG__RATIO_IN_MHZ_T=0.0000085_dp !< MHz T^-1
+real(dp), parameter, public :: ELECTRON_GYROMAG__RATIO_IN_MHZ_T=28024.9513861_dp !< MHz T^-1
+real(dp), parameter, public :: U_ELECTRON_GYROMAG__RATIO_IN_MHZ_T=0.0000087_dp !< MHz T^-1
 
 real(cdp), protected, public, bind(C,name="ELECTRON_GYROMAG__RATIO_IN_MHZ_T"):: &
-capi_089=ELECTRON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_090=ELECTRON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 real(cdp), protected, public, bind(C,name="U_ELECTRON_GYROMAG__RATIO_IN_MHZ_T") :: &
-capi_U_089=U_ELECTRON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_U_090=U_ELECTRON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 
-real(dp), parameter, public :: ELECTRON_HELION_MASS_RATIO=1.819543074573e-4_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_HELION_MASS_RATIO=0.000000000079e-4_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_HELION_MASS_RATIO=1.819543074649e-4_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_HELION_MASS_RATIO=0.000000000053e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_HELION_MASS_RATIO"):: &
-capi_090=ELECTRON_HELION_MASS_RATIO !< C API dimensionless
+capi_091=ELECTRON_HELION_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_HELION_MASS_RATIO") :: &
-capi_U_090=U_ELECTRON_HELION_MASS_RATIO !< C API dimensionless
+capi_U_091=U_ELECTRON_HELION_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_MAG__MOM=-9.2847647043e-24_dp !< J T^-1
-real(dp), parameter, public :: U_ELECTRON_MAG__MOM=0.0000000028e-24_dp !< J T^-1
+real(dp), parameter, public :: ELECTRON_MAG__MOM=-9.2847646917e-24_dp !< J T^-1
+real(dp), parameter, public :: U_ELECTRON_MAG__MOM=0.0000000029e-24_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MAG__MOM"):: &
-capi_091=ELECTRON_MAG__MOM !< C API J T^-1
+capi_092=ELECTRON_MAG__MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MAG__MOM") :: &
-capi_U_091=U_ELECTRON_MAG__MOM !< C API J T^-1
+capi_U_092=U_ELECTRON_MAG__MOM !< C API J T^-1
 
-real(dp), parameter, public :: ELECTRON_MAG__MOM__ANOMALY=1.15965218128e-3_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_MAG__MOM__ANOMALY=1.15965218046e-3_dp !< dimensionless
 real(dp), parameter, public :: U_ELECTRON_MAG__MOM__ANOMALY=0.00000000018e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MAG__MOM__ANOMALY"):: &
-capi_092=ELECTRON_MAG__MOM__ANOMALY !< C API dimensionless
+capi_093=ELECTRON_MAG__MOM__ANOMALY !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MAG__MOM__ANOMALY") :: &
-capi_U_092=U_ELECTRON_MAG__MOM__ANOMALY !< C API dimensionless
+capi_U_093=U_ELECTRON_MAG__MOM__ANOMALY !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-1.00115965218128_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-1.00115965218046_dp !< dimensionless
 real(dp), parameter, public :: U_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.00000000000018_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO"):: &
-capi_093=ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_094=ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO") :: &
-capi_U_093=U_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_U_094=U_ELECTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-1838.28197188_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.00000011_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-1838.281971877_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.000000032_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO"):: &
-capi_094=ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_095=ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO") :: &
-capi_U_094=U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_U_095=U_ELECTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_MASS=9.1093837015e-31_dp !< kg
+real(dp), parameter, public :: ELECTRON_MASS=9.1093837139e-31_dp !< kg
 real(dp), parameter, public :: U_ELECTRON_MASS=0.0000000028e-31_dp !< kg
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MASS"):: &
-capi_095=ELECTRON_MASS !< C API kg
+capi_096=ELECTRON_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MASS") :: &
-capi_U_095=U_ELECTRON_MASS !< C API kg
+capi_U_096=U_ELECTRON_MASS !< C API kg
 
-real(dp), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT=8.1871057769e-14_dp !< J
-real(dp), parameter, public :: U_ELECTRON_MASS_ENERGY_EQUIVALENT=0.0000000025e-14_dp !< J
+real(dp), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT=8.1871057880e-14_dp !< J
+real(dp), parameter, public :: U_ELECTRON_MASS_ENERGY_EQUIVALENT=0.0000000026e-14_dp !< J
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MASS_ENERGY_EQUIVALENT"):: &
-capi_096=ELECTRON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_097=ELECTRON_MASS_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MASS_ENERGY_EQUIVALENT") :: &
-capi_U_096=U_ELECTRON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_U_097=U_ELECTRON_MASS_ENERGY_EQUIVALENT !< C API J
 
-real(dp), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.51099895000_dp !< MeV
-real(dp), parameter, public :: U_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000000015_dp !< MeV
+real(dp), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.51099895069_dp !< MeV
+real(dp), parameter, public :: U_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000000016_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV"):: &
-capi_097=ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_098=ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") :: &
-capi_U_097=U_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_U_098=U_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: ELECTRON_MASS_IN_U=5.48579909065e-4_dp !< u
-real(dp), parameter, public :: U_ELECTRON_MASS_IN_U=0.00000000016e-4_dp !< u
+real(dp), parameter, public :: ELECTRON_MASS_IN_U=5.485799090441e-4_dp !< u
+real(dp), parameter, public :: U_ELECTRON_MASS_IN_U=0.000000000097e-4_dp !< u
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MASS_IN_U"):: &
-capi_098=ELECTRON_MASS_IN_U !< C API u
+capi_099=ELECTRON_MASS_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MASS_IN_U") :: &
-capi_U_098=U_ELECTRON_MASS_IN_U !< C API u
+capi_U_099=U_ELECTRON_MASS_IN_U !< C API u
 
-real(dp), parameter, public :: ELECTRON_MOLAR_MASS=5.4857990888e-7_dp !< kg mol^-1
+real(dp), parameter, public :: ELECTRON_MOLAR_MASS=5.4857990962e-7_dp !< kg mol^-1
 real(dp), parameter, public :: U_ELECTRON_MOLAR_MASS=0.0000000017e-7_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MOLAR_MASS"):: &
-capi_099=ELECTRON_MOLAR_MASS !< C API kg mol^-1
+capi_100=ELECTRON_MOLAR_MASS !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MOLAR_MASS") :: &
-capi_U_099=U_ELECTRON_MOLAR_MASS !< C API kg mol^-1
+capi_U_100=U_ELECTRON_MOLAR_MASS !< C API kg mol^-1
 
-real(dp), parameter, public :: ELECTRON_MUON_MAG__MOM__RATIO=206.7669883_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_MUON_MAG__MOM__RATIO=206.7669881_dp !< dimensionless
 real(dp), parameter, public :: U_ELECTRON_MUON_MAG__MOM__RATIO=0.0000046_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MUON_MAG__MOM__RATIO"):: &
-capi_100=ELECTRON_MUON_MAG__MOM__RATIO !< C API dimensionless
+capi_101=ELECTRON_MUON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MUON_MAG__MOM__RATIO") :: &
-capi_U_100=U_ELECTRON_MUON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_101=U_ELECTRON_MUON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_MUON_MASS_RATIO=4.83633169e-3_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_MUON_MASS_RATIO=4.83633170e-3_dp !< dimensionless
 real(dp), parameter, public :: U_ELECTRON_MUON_MASS_RATIO=0.00000011e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_MUON_MASS_RATIO"):: &
-capi_101=ELECTRON_MUON_MASS_RATIO !< C API dimensionless
+capi_102=ELECTRON_MUON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_MUON_MASS_RATIO") :: &
-capi_U_101=U_ELECTRON_MUON_MASS_RATIO !< C API dimensionless
+capi_U_102=U_ELECTRON_MUON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_NEUTRON_MAG__MOM__RATIO=960.92050_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_NEUTRON_MAG__MOM__RATIO=960.92048_dp !< dimensionless
 real(dp), parameter, public :: U_ELECTRON_NEUTRON_MAG__MOM__RATIO=0.00023_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_NEUTRON_MAG__MOM__RATIO"):: &
-capi_102=ELECTRON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_103=ELECTRON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_NEUTRON_MAG__MOM__RATIO") :: &
-capi_U_102=U_ELECTRON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_103=U_ELECTRON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_NEUTRON_MASS_RATIO=5.4386734424e-4_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_NEUTRON_MASS_RATIO=0.0000000026e-4_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_NEUTRON_MASS_RATIO=5.4386734416e-4_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_NEUTRON_MASS_RATIO=0.0000000022e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_NEUTRON_MASS_RATIO"):: &
-capi_103=ELECTRON_NEUTRON_MASS_RATIO !< C API dimensionless
+capi_104=ELECTRON_NEUTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_NEUTRON_MASS_RATIO") :: &
-capi_U_103=U_ELECTRON_NEUTRON_MASS_RATIO !< C API dimensionless
+capi_U_104=U_ELECTRON_NEUTRON_MASS_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: ELECTRON_PROTON_MAG__MOM__RATIO=-658.21068789_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_PROTON_MAG__MOM__RATIO=0.00000020_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_PROTON_MAG__MOM__RATIO=0.00000019_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_PROTON_MAG__MOM__RATIO"):: &
-capi_104=ELECTRON_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_105=ELECTRON_PROTON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_PROTON_MAG__MOM__RATIO") :: &
-capi_U_104=U_ELECTRON_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_105=U_ELECTRON_PROTON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_PROTON_MASS_RATIO=5.44617021487e-4_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_PROTON_MASS_RATIO=0.00000000033e-4_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_PROTON_MASS_RATIO=5.446170214889e-4_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_PROTON_MASS_RATIO=0.000000000094e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_PROTON_MASS_RATIO"):: &
-capi_105=ELECTRON_PROTON_MASS_RATIO !< C API dimensionless
+capi_106=ELECTRON_PROTON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_PROTON_MASS_RATIO") :: &
-capi_U_105=U_ELECTRON_PROTON_MASS_RATIO !< C API dimensionless
+capi_U_106=U_ELECTRON_PROTON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_RELATIVE_ATOMIC_MASS=5.48579909065e-4_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_RELATIVE_ATOMIC_MASS=0.00000000016e-4_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_RELATIVE_ATOMIC_MASS=5.485799090441e-4_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_RELATIVE_ATOMIC_MASS=0.000000000097e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_RELATIVE_ATOMIC_MASS"):: &
-capi_106=ELECTRON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_107=ELECTRON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_RELATIVE_ATOMIC_MASS") :: &
-capi_U_106=U_ELECTRON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_U_107=U_ELECTRON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 
 real(dp), parameter, public :: ELECTRON_TAU_MASS_RATIO=2.87585e-4_dp !< dimensionless
 real(dp), parameter, public :: U_ELECTRON_TAU_MASS_RATIO=0.00019e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_TAU_MASS_RATIO"):: &
-capi_107=ELECTRON_TAU_MASS_RATIO !< C API dimensionless
+capi_108=ELECTRON_TAU_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_TAU_MASS_RATIO") :: &
-capi_U_107=U_ELECTRON_TAU_MASS_RATIO !< C API dimensionless
+capi_U_108=U_ELECTRON_TAU_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO=1.370933554787e-4_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO=0.000000000045e-4_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO=1.370933554733e-4_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO=0.000000000032e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO"):: &
-capi_108=ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO !< C API dimensionless
+capi_109=ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO") :: &
-capi_U_108=U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO !< C API dimensionless
+capi_U_109=U_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO=864.058257_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO=0.000010_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO=864.05823986_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO=0.00000070_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO"):: &
-capi_109=ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO !< C API dimensionless
+capi_110=ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO") :: &
-capi_U_109=U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO !< C API dimensionless
+capi_U_110=U_ELECTRON_TO_SHIELDED_HELION_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO=-658.2275971_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO=0.0000072_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO=-658.2275856_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO=0.0000027_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO"):: &
-capi_110=ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_111=ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO") :: &
-capi_U_110=U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_111=U_ELECTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: ELECTRON_TRITON_MASS_RATIO=1.819200062251e-4_dp !< dimensionless
-real(dp), parameter, public :: U_ELECTRON_TRITON_MASS_RATIO=0.000000000090e-4_dp !< dimensionless
+real(dp), parameter, public :: ELECTRON_TRITON_MASS_RATIO=1.819200062327e-4_dp !< dimensionless
+real(dp), parameter, public :: U_ELECTRON_TRITON_MASS_RATIO=0.000000000068e-4_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="ELECTRON_TRITON_MASS_RATIO"):: &
-capi_111=ELECTRON_TRITON_MASS_RATIO !< C API dimensionless
+capi_112=ELECTRON_TRITON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_ELECTRON_TRITON_MASS_RATIO") :: &
-capi_U_111=U_ELECTRON_TRITON_MASS_RATIO !< C API dimensionless
+capi_U_112=U_ELECTRON_TRITON_MASS_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: ELECTRON_VOLT=1.602176634e-19_dp !< J
 real(dp), parameter, public :: U_ELECTRON_VOLT=0.0_dp !< J
 
 real(cdp), protected, public, bind(C,name="ELECTRON_VOLT"):: &
-capi_112=ELECTRON_VOLT !< C API J
+capi_113=ELECTRON_VOLT !< C API J
 real(cdp), protected, public, bind(C,name="U_ELECTRON_VOLT") :: &
-capi_U_112=U_ELECTRON_VOLT !< C API J
+capi_U_113=U_ELECTRON_VOLT !< C API J
 
-real(dp), parameter, public :: ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP=1.07354410233e-9_dp !< u
-real(dp), parameter, public :: U_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP=0.00000000032e-9_dp !< u
+real(dp), parameter, public :: ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP=1.07354410083e-9_dp !< u
+real(dp), parameter, public :: U_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP=0.00000000033e-9_dp !< u
 
 real(cdp), protected, public, bind(C,name="ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP"):: &
-capi_113=ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_114=ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 real(cdp), protected, public, bind(C,name="U_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP") :: &
-capi_U_113=U_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_U_114=U_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 
-real(dp), parameter, public :: ELECTRON_VOLT_HARTREE_RELATIONSHIP=3.6749322175655e-2_dp !< E_h
-real(dp), parameter, public :: U_ELECTRON_VOLT_HARTREE_RELATIONSHIP=0.0000000000071e-2_dp !< E_h
+real(dp), parameter, public :: ELECTRON_VOLT_HARTREE_RELATIONSHIP=3.6749322175665e-2_dp !< E_h
+real(dp), parameter, public :: U_ELECTRON_VOLT_HARTREE_RELATIONSHIP=0.0000000000040e-2_dp !< E_h
 
 real(cdp), protected, public, bind(C,name="ELECTRON_VOLT_HARTREE_RELATIONSHIP"):: &
-capi_114=ELECTRON_VOLT_HARTREE_RELATIONSHIP !< C API E_h
+capi_115=ELECTRON_VOLT_HARTREE_RELATIONSHIP !< C API E_h
 real(cdp), protected, public, bind(C,name="U_ELECTRON_VOLT_HARTREE_RELATIONSHIP") :: &
-capi_U_114=U_ELECTRON_VOLT_HARTREE_RELATIONSHIP !< C API E_h
+capi_U_115=U_ELECTRON_VOLT_HARTREE_RELATIONSHIP !< C API E_h
 
 real(dp), parameter, public :: ELECTRON_VOLT_HERTZ_RELATIONSHIP=2.417989242e14_dp !< Hz
 real(dp), parameter, public :: U_ELECTRON_VOLT_HERTZ_RELATIONSHIP=0.0_dp !< Hz
 
 real(cdp), protected, public, bind(C,name="ELECTRON_VOLT_HERTZ_RELATIONSHIP"):: &
-capi_115=ELECTRON_VOLT_HERTZ_RELATIONSHIP !< C API Hz
+capi_116=ELECTRON_VOLT_HERTZ_RELATIONSHIP !< C API Hz
 real(cdp), protected, public, bind(C,name="U_ELECTRON_VOLT_HERTZ_RELATIONSHIP") :: &
-capi_U_115=U_ELECTRON_VOLT_HERTZ_RELATIONSHIP !< C API Hz
+capi_U_116=U_ELECTRON_VOLT_HERTZ_RELATIONSHIP !< C API Hz
 
 real(dp), parameter, public :: ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP=8.065543937e5_dp !< m^-1
 real(dp), parameter, public :: U_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP=0.0_dp !< m^-1
 
 real(cdp), protected, public, bind(C,name="ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP"):: &
-capi_116=ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_117=ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP !< C API m^-1
 real(cdp), protected, public, bind(C,name="U_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP") :: &
-capi_U_116=U_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_U_117=U_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP !< C API m^-1
 
 real(dp), parameter, public :: ELECTRON_VOLT_JOULE_RELATIONSHIP=1.602176634e-19_dp !< J
 real(dp), parameter, public :: U_ELECTRON_VOLT_JOULE_RELATIONSHIP=0.0_dp !< J
 
 real(cdp), protected, public, bind(C,name="ELECTRON_VOLT_JOULE_RELATIONSHIP"):: &
-capi_117=ELECTRON_VOLT_JOULE_RELATIONSHIP !< C API J
+capi_118=ELECTRON_VOLT_JOULE_RELATIONSHIP !< C API J
 real(cdp), protected, public, bind(C,name="U_ELECTRON_VOLT_JOULE_RELATIONSHIP") :: &
-capi_U_117=U_ELECTRON_VOLT_JOULE_RELATIONSHIP !< C API J
+capi_U_118=U_ELECTRON_VOLT_JOULE_RELATIONSHIP !< C API J
 
 real(dp), parameter, public :: ELECTRON_VOLT_KELVIN_RELATIONSHIP=1.160451812e4_dp !< K
 real(dp), parameter, public :: U_ELECTRON_VOLT_KELVIN_RELATIONSHIP=0.0_dp !< K
 
 real(cdp), protected, public, bind(C,name="ELECTRON_VOLT_KELVIN_RELATIONSHIP"):: &
-capi_118=ELECTRON_VOLT_KELVIN_RELATIONSHIP !< C API K
+capi_119=ELECTRON_VOLT_KELVIN_RELATIONSHIP !< C API K
 real(cdp), protected, public, bind(C,name="U_ELECTRON_VOLT_KELVIN_RELATIONSHIP") :: &
-capi_U_118=U_ELECTRON_VOLT_KELVIN_RELATIONSHIP !< C API K
+capi_U_119=U_ELECTRON_VOLT_KELVIN_RELATIONSHIP !< C API K
 
 real(dp), parameter, public :: ELECTRON_VOLT_KILOGRAM_RELATIONSHIP=1.782661921e-36_dp !< kg
 real(dp), parameter, public :: U_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP=0.0_dp !< kg
 
 real(cdp), protected, public, bind(C,name="ELECTRON_VOLT_KILOGRAM_RELATIONSHIP"):: &
-capi_119=ELECTRON_VOLT_KILOGRAM_RELATIONSHIP !< C API kg
+capi_120=ELECTRON_VOLT_KILOGRAM_RELATIONSHIP !< C API kg
 real(cdp), protected, public, bind(C,name="U_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP") :: &
-capi_U_119=U_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP !< C API kg
+capi_U_120=U_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP !< C API kg
 
 real(dp), parameter, public :: ELEMENTARY_CHARGE=1.602176634e-19_dp !< C
 real(dp), parameter, public :: U_ELEMENTARY_CHARGE=0.0_dp !< C
 
 real(cdp), protected, public, bind(C,name="ELEMENTARY_CHARGE"):: &
-capi_120=ELEMENTARY_CHARGE !< C API C
+capi_121=ELEMENTARY_CHARGE !< C API C
 real(cdp), protected, public, bind(C,name="U_ELEMENTARY_CHARGE") :: &
-capi_U_120=U_ELEMENTARY_CHARGE !< C API C
+capi_U_121=U_ELEMENTARY_CHARGE !< C API C
 
 real(dp), parameter, public :: ELEMENTARY_CHARGE_OVER_H_BAR=1.519267447e15_dp !< A J^-1
 real(dp), parameter, public :: U_ELEMENTARY_CHARGE_OVER_H_BAR=0.0_dp !< A J^-1
 
 real(cdp), protected, public, bind(C,name="ELEMENTARY_CHARGE_OVER_H_BAR"):: &
-capi_121=ELEMENTARY_CHARGE_OVER_H_BAR !< C API A J^-1
+capi_122=ELEMENTARY_CHARGE_OVER_H_BAR !< C API A J^-1
 real(cdp), protected, public, bind(C,name="U_ELEMENTARY_CHARGE_OVER_H_BAR") :: &
-capi_U_121=U_ELEMENTARY_CHARGE_OVER_H_BAR !< C API A J^-1
+capi_U_122=U_ELEMENTARY_CHARGE_OVER_H_BAR !< C API A J^-1
 
 real(dp), parameter, public :: FARADAY_CONSTANT=96485.33212_dp !< C mol^-1
 real(dp), parameter, public :: U_FARADAY_CONSTANT=0.0_dp !< C mol^-1
 
 real(cdp), protected, public, bind(C,name="FARADAY_CONSTANT"):: &
-capi_122=FARADAY_CONSTANT !< C API C mol^-1
+capi_123=FARADAY_CONSTANT !< C API C mol^-1
 real(cdp), protected, public, bind(C,name="U_FARADAY_CONSTANT") :: &
-capi_U_122=U_FARADAY_CONSTANT !< C API C mol^-1
+capi_U_123=U_FARADAY_CONSTANT !< C API C mol^-1
 
 real(dp), parameter, public :: FERMI_COUPLING_CONSTANT=1.1663787e-5_dp !< GeV^-2
 real(dp), parameter, public :: U_FERMI_COUPLING_CONSTANT=0.0000006e-5_dp !< GeV^-2
 
 real(cdp), protected, public, bind(C,name="FERMI_COUPLING_CONSTANT"):: &
-capi_123=FERMI_COUPLING_CONSTANT !< C API GeV^-2
+capi_124=FERMI_COUPLING_CONSTANT !< C API GeV^-2
 real(cdp), protected, public, bind(C,name="U_FERMI_COUPLING_CONSTANT") :: &
-capi_U_123=U_FERMI_COUPLING_CONSTANT !< C API GeV^-2
+capi_U_124=U_FERMI_COUPLING_CONSTANT !< C API GeV^-2
 
-real(dp), parameter, public :: FINE_STRUCTURE_CONSTANT=7.2973525693e-3_dp !< dimensionless
+real(dp), parameter, public :: FINE_STRUCTURE_CONSTANT=7.2973525643e-3_dp !< dimensionless
 real(dp), parameter, public :: U_FINE_STRUCTURE_CONSTANT=0.0000000011e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="FINE_STRUCTURE_CONSTANT"):: &
-capi_124=FINE_STRUCTURE_CONSTANT !< C API dimensionless
+capi_125=FINE_STRUCTURE_CONSTANT !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_FINE_STRUCTURE_CONSTANT") :: &
-capi_U_124=U_FINE_STRUCTURE_CONSTANT !< C API dimensionless
+capi_U_125=U_FINE_STRUCTURE_CONSTANT !< C API dimensionless
 
 real(dp), parameter, public :: FIRST_RADIATION_CONSTANT=3.741771852e-16_dp !< W m^2
 real(dp), parameter, public :: U_FIRST_RADIATION_CONSTANT=0.0_dp !< W m^2
 
 real(cdp), protected, public, bind(C,name="FIRST_RADIATION_CONSTANT"):: &
-capi_125=FIRST_RADIATION_CONSTANT !< C API W m^2
+capi_126=FIRST_RADIATION_CONSTANT !< C API W m^2
 real(cdp), protected, public, bind(C,name="U_FIRST_RADIATION_CONSTANT") :: &
-capi_U_125=U_FIRST_RADIATION_CONSTANT !< C API W m^2
+capi_U_126=U_FIRST_RADIATION_CONSTANT !< C API W m^2
 
 real(dp), parameter, public :: FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE=1.191042972e-16_dp !< W m^2 sr^-1
 real(dp), parameter, public :: U_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE=0.0_dp !< W m^2 sr^-1
 
 real(cdp), protected, public, bind(C,name="FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE"):: &
-capi_126=FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE !< C API W m^2 sr^-1
+capi_127=FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE !< C API W m^2 sr^-1
 real(cdp), protected, public, bind(C,name="U_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE") :: &
-capi_U_126=U_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE !< C API W m^2 sr^-1
+capi_U_127=U_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE !< C API W m^2 sr^-1
 
-real(dp), parameter, public :: HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP=2.92126232205e-8_dp !< u
-real(dp), parameter, public :: U_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP=0.00000000088e-8_dp !< u
+real(dp), parameter, public :: HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP=2.92126231797e-8_dp !< u
+real(dp), parameter, public :: U_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP=0.00000000091e-8_dp !< u
 
 real(cdp), protected, public, bind(C,name="HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP"):: &
-capi_127=HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_128=HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 real(cdp), protected, public, bind(C,name="U_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP") :: &
-capi_U_127=U_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_U_128=U_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 
-real(dp), parameter, public :: HARTREE_ELECTRON_VOLT_RELATIONSHIP=27.211386245988_dp !< eV
-real(dp), parameter, public :: U_HARTREE_ELECTRON_VOLT_RELATIONSHIP=0.000000000053_dp !< eV
+real(dp), parameter, public :: HARTREE_ELECTRON_VOLT_RELATIONSHIP=27.211386245981_dp !< eV
+real(dp), parameter, public :: U_HARTREE_ELECTRON_VOLT_RELATIONSHIP=0.000000000030_dp !< eV
 
 real(cdp), protected, public, bind(C,name="HARTREE_ELECTRON_VOLT_RELATIONSHIP"):: &
-capi_128=HARTREE_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_129=HARTREE_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 real(cdp), protected, public, bind(C,name="U_HARTREE_ELECTRON_VOLT_RELATIONSHIP") :: &
-capi_U_128=U_HARTREE_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_U_129=U_HARTREE_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 
-real(dp), parameter, public :: HARTREE_ENERGY=4.3597447222071e-18_dp !< J
-real(dp), parameter, public :: U_HARTREE_ENERGY=0.0000000000085e-18_dp !< J
+real(dp), parameter, public :: HARTREE_ENERGY=4.3597447222060e-18_dp !< J
+real(dp), parameter, public :: U_HARTREE_ENERGY=0.0000000000048e-18_dp !< J
 
 real(cdp), protected, public, bind(C,name="HARTREE_ENERGY"):: &
-capi_129=HARTREE_ENERGY !< C API J
+capi_130=HARTREE_ENERGY !< C API J
 real(cdp), protected, public, bind(C,name="U_HARTREE_ENERGY") :: &
-capi_U_129=U_HARTREE_ENERGY !< C API J
+capi_U_130=U_HARTREE_ENERGY !< C API J
 
-real(dp), parameter, public :: HARTREE_ENERGY_IN_EV=27.211386245988_dp !< eV
-real(dp), parameter, public :: U_HARTREE_ENERGY_IN_EV=0.000000000053_dp !< eV
+real(dp), parameter, public :: HARTREE_ENERGY_IN_EV=27.211386245981_dp !< eV
+real(dp), parameter, public :: U_HARTREE_ENERGY_IN_EV=0.000000000030_dp !< eV
 
 real(cdp), protected, public, bind(C,name="HARTREE_ENERGY_IN_EV"):: &
-capi_130=HARTREE_ENERGY_IN_EV !< C API eV
+capi_131=HARTREE_ENERGY_IN_EV !< C API eV
 real(cdp), protected, public, bind(C,name="U_HARTREE_ENERGY_IN_EV") :: &
-capi_U_130=U_HARTREE_ENERGY_IN_EV !< C API eV
+capi_U_131=U_HARTREE_ENERGY_IN_EV !< C API eV
 
-real(dp), parameter, public :: HARTREE_HERTZ_RELATIONSHIP=6.579683920502e15_dp !< Hz
-real(dp), parameter, public :: U_HARTREE_HERTZ_RELATIONSHIP=0.000000000013e15_dp !< Hz
+real(dp), parameter, public :: HARTREE_HERTZ_RELATIONSHIP=6.5796839204999e15_dp !< Hz
+real(dp), parameter, public :: U_HARTREE_HERTZ_RELATIONSHIP=0.0000000000072e15_dp !< Hz
 
 real(cdp), protected, public, bind(C,name="HARTREE_HERTZ_RELATIONSHIP"):: &
-capi_131=HARTREE_HERTZ_RELATIONSHIP !< C API Hz
+capi_132=HARTREE_HERTZ_RELATIONSHIP !< C API Hz
 real(cdp), protected, public, bind(C,name="U_HARTREE_HERTZ_RELATIONSHIP") :: &
-capi_U_131=U_HARTREE_HERTZ_RELATIONSHIP !< C API Hz
+capi_U_132=U_HARTREE_HERTZ_RELATIONSHIP !< C API Hz
 
-real(dp), parameter, public :: HARTREE_INVERSE_METER_RELATIONSHIP=2.1947463136320e7_dp !< m^-1
-real(dp), parameter, public :: U_HARTREE_INVERSE_METER_RELATIONSHIP=0.0000000000043e7_dp !< m^-1
+real(dp), parameter, public :: HARTREE_INVERSE_METER_RELATIONSHIP=2.1947463136314e7_dp !< m^-1
+real(dp), parameter, public :: U_HARTREE_INVERSE_METER_RELATIONSHIP=0.0000000000024e7_dp !< m^-1
 
 real(cdp), protected, public, bind(C,name="HARTREE_INVERSE_METER_RELATIONSHIP"):: &
-capi_132=HARTREE_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_133=HARTREE_INVERSE_METER_RELATIONSHIP !< C API m^-1
 real(cdp), protected, public, bind(C,name="U_HARTREE_INVERSE_METER_RELATIONSHIP") :: &
-capi_U_132=U_HARTREE_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_U_133=U_HARTREE_INVERSE_METER_RELATIONSHIP !< C API m^-1
 
-real(dp), parameter, public :: HARTREE_JOULE_RELATIONSHIP=4.3597447222071e-18_dp !< J
-real(dp), parameter, public :: U_HARTREE_JOULE_RELATIONSHIP=0.0000000000085e-18_dp !< J
+real(dp), parameter, public :: HARTREE_JOULE_RELATIONSHIP=4.3597447222060e-18_dp !< J
+real(dp), parameter, public :: U_HARTREE_JOULE_RELATIONSHIP=0.0000000000048e-18_dp !< J
 
 real(cdp), protected, public, bind(C,name="HARTREE_JOULE_RELATIONSHIP"):: &
-capi_133=HARTREE_JOULE_RELATIONSHIP !< C API J
+capi_134=HARTREE_JOULE_RELATIONSHIP !< C API J
 real(cdp), protected, public, bind(C,name="U_HARTREE_JOULE_RELATIONSHIP") :: &
-capi_U_133=U_HARTREE_JOULE_RELATIONSHIP !< C API J
+capi_U_134=U_HARTREE_JOULE_RELATIONSHIP !< C API J
 
-real(dp), parameter, public :: HARTREE_KELVIN_RELATIONSHIP=3.1577502480407e5_dp !< K
-real(dp), parameter, public :: U_HARTREE_KELVIN_RELATIONSHIP=0.0000000000061e5_dp !< K
+real(dp), parameter, public :: HARTREE_KELVIN_RELATIONSHIP=3.1577502480398e5_dp !< K
+real(dp), parameter, public :: U_HARTREE_KELVIN_RELATIONSHIP=0.0000000000034e5_dp !< K
 
 real(cdp), protected, public, bind(C,name="HARTREE_KELVIN_RELATIONSHIP"):: &
-capi_134=HARTREE_KELVIN_RELATIONSHIP !< C API K
+capi_135=HARTREE_KELVIN_RELATIONSHIP !< C API K
 real(cdp), protected, public, bind(C,name="U_HARTREE_KELVIN_RELATIONSHIP") :: &
-capi_U_134=U_HARTREE_KELVIN_RELATIONSHIP !< C API K
+capi_U_135=U_HARTREE_KELVIN_RELATIONSHIP !< C API K
 
-real(dp), parameter, public :: HARTREE_KILOGRAM_RELATIONSHIP=4.8508702095432e-35_dp !< kg
-real(dp), parameter, public :: U_HARTREE_KILOGRAM_RELATIONSHIP=0.0000000000094e-35_dp !< kg
+real(dp), parameter, public :: HARTREE_KILOGRAM_RELATIONSHIP=4.8508702095419e-35_dp !< kg
+real(dp), parameter, public :: U_HARTREE_KILOGRAM_RELATIONSHIP=0.0000000000053e-35_dp !< kg
 
 real(cdp), protected, public, bind(C,name="HARTREE_KILOGRAM_RELATIONSHIP"):: &
-capi_135=HARTREE_KILOGRAM_RELATIONSHIP !< C API kg
+capi_136=HARTREE_KILOGRAM_RELATIONSHIP !< C API kg
 real(cdp), protected, public, bind(C,name="U_HARTREE_KILOGRAM_RELATIONSHIP") :: &
-capi_U_135=U_HARTREE_KILOGRAM_RELATIONSHIP !< C API kg
+capi_U_136=U_HARTREE_KILOGRAM_RELATIONSHIP !< C API kg
 
-real(dp), parameter, public :: HELION_ELECTRON_MASS_RATIO=5495.88528007_dp !< dimensionless
-real(dp), parameter, public :: U_HELION_ELECTRON_MASS_RATIO=0.00000024_dp !< dimensionless
+real(dp), parameter, public :: HELION_ELECTRON_MASS_RATIO=5495.88527984_dp !< dimensionless
+real(dp), parameter, public :: U_HELION_ELECTRON_MASS_RATIO=0.00000016_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="HELION_ELECTRON_MASS_RATIO"):: &
-capi_136=HELION_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_137=HELION_ELECTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_HELION_ELECTRON_MASS_RATIO") :: &
-capi_U_136=U_HELION_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_U_137=U_HELION_ELECTRON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: HELION_G_FACTOR=-4.255250615_dp !< dimensionless
-real(dp), parameter, public :: U_HELION_G_FACTOR=0.000000050_dp !< dimensionless
+real(dp), parameter, public :: HELION_G_FACTOR=-4.2552506995_dp !< dimensionless
+real(dp), parameter, public :: U_HELION_G_FACTOR=0.0000000034_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="HELION_G_FACTOR"):: &
-capi_137=HELION_G_FACTOR !< C API dimensionless
+capi_138=HELION_G_FACTOR !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_HELION_G_FACTOR") :: &
-capi_U_137=U_HELION_G_FACTOR !< C API dimensionless
+capi_U_138=U_HELION_G_FACTOR !< C API dimensionless
 
-real(dp), parameter, public :: HELION_MAG__MOM=-1.074617532e-26_dp !< J T^-1
-real(dp), parameter, public :: U_HELION_MAG__MOM=0.000000013e-26_dp !< J T^-1
+real(dp), parameter, public :: HELION_MAG__MOM=-1.07461755198e-26_dp !< J T^-1
+real(dp), parameter, public :: U_HELION_MAG__MOM=0.00000000093e-26_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="HELION_MAG__MOM"):: &
-capi_138=HELION_MAG__MOM !< C API J T^-1
+capi_139=HELION_MAG__MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_HELION_MAG__MOM") :: &
-capi_U_138=U_HELION_MAG__MOM !< C API J T^-1
+capi_U_139=U_HELION_MAG__MOM !< C API J T^-1
 
-real(dp), parameter, public :: HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-1.158740958e-3_dp !< dimensionless
-real(dp), parameter, public :: U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.000000014e-3_dp !< dimensionless
+real(dp), parameter, public :: HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-1.15874098083e-3_dp !< dimensionless
+real(dp), parameter, public :: U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.00000000094e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO"):: &
-capi_139=HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_140=HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO") :: &
-capi_U_139=U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_U_140=U_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-2.127625307_dp !< dimensionless
-real(dp), parameter, public :: U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.000000025_dp !< dimensionless
+real(dp), parameter, public :: HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-2.1276253498_dp !< dimensionless
+real(dp), parameter, public :: U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.0000000017_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO"):: &
-capi_140=HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_141=HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO") :: &
-capi_U_140=U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_U_141=U_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: HELION_MASS=5.0064127796e-27_dp !< kg
-real(dp), parameter, public :: U_HELION_MASS=0.0000000015e-27_dp !< kg
+real(dp), parameter, public :: HELION_MASS=5.0064127862e-27_dp !< kg
+real(dp), parameter, public :: U_HELION_MASS=0.0000000016e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="HELION_MASS"):: &
-capi_141=HELION_MASS !< C API kg
+capi_142=HELION_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_HELION_MASS") :: &
-capi_U_141=U_HELION_MASS !< C API kg
+capi_U_142=U_HELION_MASS !< C API kg
 
-real(dp), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT=4.4995394125e-10_dp !< J
+real(dp), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT=4.4995394185e-10_dp !< J
 real(dp), parameter, public :: U_HELION_MASS_ENERGY_EQUIVALENT=0.0000000014e-10_dp !< J
 
 real(cdp), protected, public, bind(C,name="HELION_MASS_ENERGY_EQUIVALENT"):: &
-capi_142=HELION_MASS_ENERGY_EQUIVALENT !< C API J
+capi_143=HELION_MASS_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_HELION_MASS_ENERGY_EQUIVALENT") :: &
-capi_U_142=U_HELION_MASS_ENERGY_EQUIVALENT !< C API J
+capi_U_143=U_HELION_MASS_ENERGY_EQUIVALENT !< C API J
 
-real(dp), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT_IN_MEV=2808.39160743_dp !< MeV
-real(dp), parameter, public :: U_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000085_dp !< MeV
+real(dp), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT_IN_MEV=2808.39161112_dp !< MeV
+real(dp), parameter, public :: U_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000088_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="HELION_MASS_ENERGY_EQUIVALENT_IN_MEV"):: &
-capi_143=HELION_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_144=HELION_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV") :: &
-capi_U_143=U_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_U_144=U_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: HELION_MASS_IN_U=3.014932247175_dp !< u
-real(dp), parameter, public :: U_HELION_MASS_IN_U=0.000000000097_dp !< u
+real(dp), parameter, public :: HELION_MASS_IN_U=3.014932246932_dp !< u
+real(dp), parameter, public :: U_HELION_MASS_IN_U=0.000000000074_dp !< u
 
 real(cdp), protected, public, bind(C,name="HELION_MASS_IN_U"):: &
-capi_144=HELION_MASS_IN_U !< C API u
+capi_145=HELION_MASS_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_HELION_MASS_IN_U") :: &
-capi_U_144=U_HELION_MASS_IN_U !< C API u
+capi_U_145=U_HELION_MASS_IN_U !< C API u
 
-real(dp), parameter, public :: HELION_MOLAR_MASS=3.01493224613e-3_dp !< kg mol^-1
-real(dp), parameter, public :: U_HELION_MOLAR_MASS=0.00000000091e-3_dp !< kg mol^-1
+real(dp), parameter, public :: HELION_MOLAR_MASS=3.01493225010e-3_dp !< kg mol^-1
+real(dp), parameter, public :: U_HELION_MOLAR_MASS=0.00000000094e-3_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="HELION_MOLAR_MASS"):: &
-capi_145=HELION_MOLAR_MASS !< C API kg mol^-1
+capi_146=HELION_MOLAR_MASS !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_HELION_MOLAR_MASS") :: &
-capi_U_145=U_HELION_MOLAR_MASS !< C API kg mol^-1
+capi_U_146=U_HELION_MOLAR_MASS !< C API kg mol^-1
 
-real(dp), parameter, public :: HELION_PROTON_MASS_RATIO=2.99315267167_dp !< dimensionless
-real(dp), parameter, public :: U_HELION_PROTON_MASS_RATIO=0.00000000013_dp !< dimensionless
+real(dp), parameter, public :: HELION_PROTON_MASS_RATIO=2.993152671552_dp !< dimensionless
+real(dp), parameter, public :: U_HELION_PROTON_MASS_RATIO=0.000000000070_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="HELION_PROTON_MASS_RATIO"):: &
-capi_146=HELION_PROTON_MASS_RATIO !< C API dimensionless
+capi_147=HELION_PROTON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_HELION_PROTON_MASS_RATIO") :: &
-capi_U_146=U_HELION_PROTON_MASS_RATIO !< C API dimensionless
+capi_U_147=U_HELION_PROTON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: HELION_RELATIVE_ATOMIC_MASS=3.014932247175_dp !< dimensionless
-real(dp), parameter, public :: U_HELION_RELATIVE_ATOMIC_MASS=0.000000000097_dp !< dimensionless
+real(dp), parameter, public :: HELION_RELATIVE_ATOMIC_MASS=3.014932246932_dp !< dimensionless
+real(dp), parameter, public :: U_HELION_RELATIVE_ATOMIC_MASS=0.000000000074_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="HELION_RELATIVE_ATOMIC_MASS"):: &
-capi_147=HELION_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_148=HELION_RELATIVE_ATOMIC_MASS !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_HELION_RELATIVE_ATOMIC_MASS") :: &
-capi_U_147=U_HELION_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_U_148=U_HELION_RELATIVE_ATOMIC_MASS !< C API dimensionless
 
-real(dp), parameter, public :: HELION_SHIELDING_SHIFT=5.996743e-5_dp !< dimensionless
-real(dp), parameter, public :: U_HELION_SHIELDING_SHIFT=0.000010e-5_dp !< dimensionless
+real(dp), parameter, public :: HELION_SHIELDING_SHIFT=5.9967029e-5_dp !< dimensionless
+real(dp), parameter, public :: U_HELION_SHIELDING_SHIFT=0.0000023e-5_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="HELION_SHIELDING_SHIFT"):: &
-capi_148=HELION_SHIELDING_SHIFT !< C API dimensionless
+capi_149=HELION_SHIELDING_SHIFT !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_HELION_SHIELDING_SHIFT") :: &
-capi_U_148=U_HELION_SHIELDING_SHIFT !< C API dimensionless
+capi_U_149=U_HELION_SHIELDING_SHIFT !< C API dimensionless
 
-real(dp), parameter, public :: HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP=4.4398216652e-24_dp !< u
-real(dp), parameter, public :: U_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP=0.0000000013e-24_dp !< u
+real(dp), parameter, public :: HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP=4.4398216590e-24_dp !< u
+real(dp), parameter, public :: U_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP=0.0000000014e-24_dp !< u
 
 real(cdp), protected, public, bind(C,name="HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP"):: &
-capi_149=HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_150=HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 real(cdp), protected, public, bind(C,name="U_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP") :: &
-capi_U_149=U_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_U_150=U_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 
 real(dp), parameter, public :: HERTZ_ELECTRON_VOLT_RELATIONSHIP=4.135667696e-15_dp !< eV
 real(dp), parameter, public :: U_HERTZ_ELECTRON_VOLT_RELATIONSHIP=0.0_dp !< eV
 
 real(cdp), protected, public, bind(C,name="HERTZ_ELECTRON_VOLT_RELATIONSHIP"):: &
-capi_150=HERTZ_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_151=HERTZ_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 real(cdp), protected, public, bind(C,name="U_HERTZ_ELECTRON_VOLT_RELATIONSHIP") :: &
-capi_U_150=U_HERTZ_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_U_151=U_HERTZ_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 
-real(dp), parameter, public :: HERTZ_HARTREE_RELATIONSHIP=1.5198298460570e-16_dp !< E_h
-real(dp), parameter, public :: U_HERTZ_HARTREE_RELATIONSHIP=0.0000000000029e-16_dp !< E_h
+real(dp), parameter, public :: HERTZ_HARTREE_RELATIONSHIP=1.5198298460574e-16_dp !< E_h
+real(dp), parameter, public :: U_HERTZ_HARTREE_RELATIONSHIP=0.0000000000017e-16_dp !< E_h
 
 real(cdp), protected, public, bind(C,name="HERTZ_HARTREE_RELATIONSHIP"):: &
-capi_151=HERTZ_HARTREE_RELATIONSHIP !< C API E_h
+capi_152=HERTZ_HARTREE_RELATIONSHIP !< C API E_h
 real(cdp), protected, public, bind(C,name="U_HERTZ_HARTREE_RELATIONSHIP") :: &
-capi_U_151=U_HERTZ_HARTREE_RELATIONSHIP !< C API E_h
+capi_U_152=U_HERTZ_HARTREE_RELATIONSHIP !< C API E_h
 
 real(dp), parameter, public :: HERTZ_INVERSE_METER_RELATIONSHIP=3.335640951e-9_dp !< m^-1
 real(dp), parameter, public :: U_HERTZ_INVERSE_METER_RELATIONSHIP=0.0_dp !< m^-1
 
 real(cdp), protected, public, bind(C,name="HERTZ_INVERSE_METER_RELATIONSHIP"):: &
-capi_152=HERTZ_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_153=HERTZ_INVERSE_METER_RELATIONSHIP !< C API m^-1
 real(cdp), protected, public, bind(C,name="U_HERTZ_INVERSE_METER_RELATIONSHIP") :: &
-capi_U_152=U_HERTZ_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_U_153=U_HERTZ_INVERSE_METER_RELATIONSHIP !< C API m^-1
 
 real(dp), parameter, public :: HERTZ_JOULE_RELATIONSHIP=6.62607015e-34_dp !< J
 real(dp), parameter, public :: U_HERTZ_JOULE_RELATIONSHIP=0.0_dp !< J
 
 real(cdp), protected, public, bind(C,name="HERTZ_JOULE_RELATIONSHIP"):: &
-capi_153=HERTZ_JOULE_RELATIONSHIP !< C API J
+capi_154=HERTZ_JOULE_RELATIONSHIP !< C API J
 real(cdp), protected, public, bind(C,name="U_HERTZ_JOULE_RELATIONSHIP") :: &
-capi_U_153=U_HERTZ_JOULE_RELATIONSHIP !< C API J
+capi_U_154=U_HERTZ_JOULE_RELATIONSHIP !< C API J
 
 real(dp), parameter, public :: HERTZ_KELVIN_RELATIONSHIP=4.799243073e-11_dp !< K
 real(dp), parameter, public :: U_HERTZ_KELVIN_RELATIONSHIP=0.0_dp !< K
 
 real(cdp), protected, public, bind(C,name="HERTZ_KELVIN_RELATIONSHIP"):: &
-capi_154=HERTZ_KELVIN_RELATIONSHIP !< C API K
+capi_155=HERTZ_KELVIN_RELATIONSHIP !< C API K
 real(cdp), protected, public, bind(C,name="U_HERTZ_KELVIN_RELATIONSHIP") :: &
-capi_U_154=U_HERTZ_KELVIN_RELATIONSHIP !< C API K
+capi_U_155=U_HERTZ_KELVIN_RELATIONSHIP !< C API K
 
 real(dp), parameter, public :: HERTZ_KILOGRAM_RELATIONSHIP=7.372497323e-51_dp !< kg
 real(dp), parameter, public :: U_HERTZ_KILOGRAM_RELATIONSHIP=0.0_dp !< kg
 
 real(cdp), protected, public, bind(C,name="HERTZ_KILOGRAM_RELATIONSHIP"):: &
-capi_155=HERTZ_KILOGRAM_RELATIONSHIP !< C API kg
+capi_156=HERTZ_KILOGRAM_RELATIONSHIP !< C API kg
 real(cdp), protected, public, bind(C,name="U_HERTZ_KILOGRAM_RELATIONSHIP") :: &
-capi_U_155=U_HERTZ_KILOGRAM_RELATIONSHIP !< C API kg
+capi_U_156=U_HERTZ_KILOGRAM_RELATIONSHIP !< C API kg
 
 real(dp), parameter, public :: HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133=9192631770_dp !< Hz
 real(dp), parameter, public :: U_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133=0.0_dp !< Hz
 
 real(cdp), protected, public, bind(C,name="HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133"):: &
-capi_156=HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133 !< C API Hz
+capi_157=HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133 !< C API Hz
 real(cdp), protected, public, bind(C,name="U_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133") :: &
-capi_U_156=U_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133 !< C API Hz
+capi_U_157=U_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133 !< C API Hz
 
-real(dp), parameter, public :: INVERSE_FINE_STRUCTURE_CONSTANT=137.035999084_dp !< dimensionless
+real(dp), parameter, public :: INVERSE_FINE_STRUCTURE_CONSTANT=137.035999177_dp !< dimensionless
 real(dp), parameter, public :: U_INVERSE_FINE_STRUCTURE_CONSTANT=0.000000021_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="INVERSE_FINE_STRUCTURE_CONSTANT"):: &
-capi_157=INVERSE_FINE_STRUCTURE_CONSTANT !< C API dimensionless
+capi_158=INVERSE_FINE_STRUCTURE_CONSTANT !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_INVERSE_FINE_STRUCTURE_CONSTANT") :: &
-capi_U_157=U_INVERSE_FINE_STRUCTURE_CONSTANT !< C API dimensionless
+capi_U_158=U_INVERSE_FINE_STRUCTURE_CONSTANT !< C API dimensionless
 
-real(dp), parameter, public :: INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP=1.33102505010e-15_dp !< u
-real(dp), parameter, public :: U_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP=0.00000000040e-15_dp !< u
+real(dp), parameter, public :: INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP=1.33102504824e-15_dp !< u
+real(dp), parameter, public :: U_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP=0.00000000041e-15_dp !< u
 
 real(cdp), protected, public, bind(C,name="INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP"):: &
-capi_158=INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_159=INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 real(cdp), protected, public, bind(C,name="U_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP") :: &
-capi_U_158=U_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_U_159=U_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 
 real(dp), parameter, public :: INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP=1.239841984e-6_dp !< eV
 real(dp), parameter, public :: U_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP=0.0_dp !< eV
 
 real(cdp), protected, public, bind(C,name="INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP"):: &
-capi_159=INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_160=INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 real(cdp), protected, public, bind(C,name="U_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP") :: &
-capi_U_159=U_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_U_160=U_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 
-real(dp), parameter, public :: INVERSE_METER_HARTREE_RELATIONSHIP=4.5563352529120e-8_dp !< E_h
-real(dp), parameter, public :: U_INVERSE_METER_HARTREE_RELATIONSHIP=0.0000000000088e-8_dp !< E_h
+real(dp), parameter, public :: INVERSE_METER_HARTREE_RELATIONSHIP=4.5563352529132e-8_dp !< E_h
+real(dp), parameter, public :: U_INVERSE_METER_HARTREE_RELATIONSHIP=0.0000000000050e-8_dp !< E_h
 
 real(cdp), protected, public, bind(C,name="INVERSE_METER_HARTREE_RELATIONSHIP"):: &
-capi_160=INVERSE_METER_HARTREE_RELATIONSHIP !< C API E_h
+capi_161=INVERSE_METER_HARTREE_RELATIONSHIP !< C API E_h
 real(cdp), protected, public, bind(C,name="U_INVERSE_METER_HARTREE_RELATIONSHIP") :: &
-capi_U_160=U_INVERSE_METER_HARTREE_RELATIONSHIP !< C API E_h
+capi_U_161=U_INVERSE_METER_HARTREE_RELATIONSHIP !< C API E_h
 
 real(dp), parameter, public :: INVERSE_METER_HERTZ_RELATIONSHIP=299792458_dp !< Hz
 real(dp), parameter, public :: U_INVERSE_METER_HERTZ_RELATIONSHIP=0.0_dp !< Hz
 
 real(cdp), protected, public, bind(C,name="INVERSE_METER_HERTZ_RELATIONSHIP"):: &
-capi_161=INVERSE_METER_HERTZ_RELATIONSHIP !< C API Hz
+capi_162=INVERSE_METER_HERTZ_RELATIONSHIP !< C API Hz
 real(cdp), protected, public, bind(C,name="U_INVERSE_METER_HERTZ_RELATIONSHIP") :: &
-capi_U_161=U_INVERSE_METER_HERTZ_RELATIONSHIP !< C API Hz
+capi_U_162=U_INVERSE_METER_HERTZ_RELATIONSHIP !< C API Hz
 
 real(dp), parameter, public :: INVERSE_METER_JOULE_RELATIONSHIP=1.986445857e-25_dp !< J
 real(dp), parameter, public :: U_INVERSE_METER_JOULE_RELATIONSHIP=0.0_dp !< J
 
 real(cdp), protected, public, bind(C,name="INVERSE_METER_JOULE_RELATIONSHIP"):: &
-capi_162=INVERSE_METER_JOULE_RELATIONSHIP !< C API J
+capi_163=INVERSE_METER_JOULE_RELATIONSHIP !< C API J
 real(cdp), protected, public, bind(C,name="U_INVERSE_METER_JOULE_RELATIONSHIP") :: &
-capi_U_162=U_INVERSE_METER_JOULE_RELATIONSHIP !< C API J
+capi_U_163=U_INVERSE_METER_JOULE_RELATIONSHIP !< C API J
 
 real(dp), parameter, public :: INVERSE_METER_KELVIN_RELATIONSHIP=1.438776877e-2_dp !< K
 real(dp), parameter, public :: U_INVERSE_METER_KELVIN_RELATIONSHIP=0.0_dp !< K
 
 real(cdp), protected, public, bind(C,name="INVERSE_METER_KELVIN_RELATIONSHIP"):: &
-capi_163=INVERSE_METER_KELVIN_RELATIONSHIP !< C API K
+capi_164=INVERSE_METER_KELVIN_RELATIONSHIP !< C API K
 real(cdp), protected, public, bind(C,name="U_INVERSE_METER_KELVIN_RELATIONSHIP") :: &
-capi_U_163=U_INVERSE_METER_KELVIN_RELATIONSHIP !< C API K
+capi_U_164=U_INVERSE_METER_KELVIN_RELATIONSHIP !< C API K
 
 real(dp), parameter, public :: INVERSE_METER_KILOGRAM_RELATIONSHIP=2.210219094e-42_dp !< kg
 real(dp), parameter, public :: U_INVERSE_METER_KILOGRAM_RELATIONSHIP=0.0_dp !< kg
 
 real(cdp), protected, public, bind(C,name="INVERSE_METER_KILOGRAM_RELATIONSHIP"):: &
-capi_164=INVERSE_METER_KILOGRAM_RELATIONSHIP !< C API kg
+capi_165=INVERSE_METER_KILOGRAM_RELATIONSHIP !< C API kg
 real(cdp), protected, public, bind(C,name="U_INVERSE_METER_KILOGRAM_RELATIONSHIP") :: &
-capi_U_164=U_INVERSE_METER_KILOGRAM_RELATIONSHIP !< C API kg
+capi_U_165=U_INVERSE_METER_KILOGRAM_RELATIONSHIP !< C API kg
 
 real(dp), parameter, public :: INVERSE_OF_CONDUCTANCE_QUANTUM=12906.40372_dp !< ohm
 real(dp), parameter, public :: U_INVERSE_OF_CONDUCTANCE_QUANTUM=0.0_dp !< ohm
 
 real(cdp), protected, public, bind(C,name="INVERSE_OF_CONDUCTANCE_QUANTUM"):: &
-capi_165=INVERSE_OF_CONDUCTANCE_QUANTUM !< C API ohm
+capi_166=INVERSE_OF_CONDUCTANCE_QUANTUM !< C API ohm
 real(cdp), protected, public, bind(C,name="U_INVERSE_OF_CONDUCTANCE_QUANTUM") :: &
-capi_U_165=U_INVERSE_OF_CONDUCTANCE_QUANTUM !< C API ohm
+capi_U_166=U_INVERSE_OF_CONDUCTANCE_QUANTUM !< C API ohm
 
 real(dp), parameter, public :: JOSEPHSON_CONSTANT=483597.8484e9_dp !< Hz V^-1
 real(dp), parameter, public :: U_JOSEPHSON_CONSTANT=0.0_dp !< Hz V^-1
 
 real(cdp), protected, public, bind(C,name="JOSEPHSON_CONSTANT"):: &
-capi_166=JOSEPHSON_CONSTANT !< C API Hz V^-1
+capi_167=JOSEPHSON_CONSTANT !< C API Hz V^-1
 real(cdp), protected, public, bind(C,name="U_JOSEPHSON_CONSTANT") :: &
-capi_U_166=U_JOSEPHSON_CONSTANT !< C API Hz V^-1
+capi_U_167=U_JOSEPHSON_CONSTANT !< C API Hz V^-1
 
-real(dp), parameter, public :: JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP=6.7005352565e9_dp !< u
-real(dp), parameter, public :: U_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP=0.0000000020e9_dp !< u
+real(dp), parameter, public :: JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP=6.7005352471e9_dp !< u
+real(dp), parameter, public :: U_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP=0.0000000021e9_dp !< u
 
 real(cdp), protected, public, bind(C,name="JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP"):: &
-capi_167=JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_168=JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 real(cdp), protected, public, bind(C,name="U_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP") :: &
-capi_U_167=U_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_U_168=U_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 
 real(dp), parameter, public :: JOULE_ELECTRON_VOLT_RELATIONSHIP=6.241509074e18_dp !< eV
 real(dp), parameter, public :: U_JOULE_ELECTRON_VOLT_RELATIONSHIP=0.0_dp !< eV
 
 real(cdp), protected, public, bind(C,name="JOULE_ELECTRON_VOLT_RELATIONSHIP"):: &
-capi_168=JOULE_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_169=JOULE_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 real(cdp), protected, public, bind(C,name="U_JOULE_ELECTRON_VOLT_RELATIONSHIP") :: &
-capi_U_168=U_JOULE_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_U_169=U_JOULE_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 
-real(dp), parameter, public :: JOULE_HARTREE_RELATIONSHIP=2.2937122783963e17_dp !< E_h
-real(dp), parameter, public :: U_JOULE_HARTREE_RELATIONSHIP=0.0000000000045e17_dp !< E_h
+real(dp), parameter, public :: JOULE_HARTREE_RELATIONSHIP=2.2937122783969e17_dp !< E_h
+real(dp), parameter, public :: U_JOULE_HARTREE_RELATIONSHIP=0.0000000000025e17_dp !< E_h
 
 real(cdp), protected, public, bind(C,name="JOULE_HARTREE_RELATIONSHIP"):: &
-capi_169=JOULE_HARTREE_RELATIONSHIP !< C API E_h
+capi_170=JOULE_HARTREE_RELATIONSHIP !< C API E_h
 real(cdp), protected, public, bind(C,name="U_JOULE_HARTREE_RELATIONSHIP") :: &
-capi_U_169=U_JOULE_HARTREE_RELATIONSHIP !< C API E_h
+capi_U_170=U_JOULE_HARTREE_RELATIONSHIP !< C API E_h
 
 real(dp), parameter, public :: JOULE_HERTZ_RELATIONSHIP=1.509190179e33_dp !< Hz
 real(dp), parameter, public :: U_JOULE_HERTZ_RELATIONSHIP=0.0_dp !< Hz
 
 real(cdp), protected, public, bind(C,name="JOULE_HERTZ_RELATIONSHIP"):: &
-capi_170=JOULE_HERTZ_RELATIONSHIP !< C API Hz
+capi_171=JOULE_HERTZ_RELATIONSHIP !< C API Hz
 real(cdp), protected, public, bind(C,name="U_JOULE_HERTZ_RELATIONSHIP") :: &
-capi_U_170=U_JOULE_HERTZ_RELATIONSHIP !< C API Hz
+capi_U_171=U_JOULE_HERTZ_RELATIONSHIP !< C API Hz
 
 real(dp), parameter, public :: JOULE_INVERSE_METER_RELATIONSHIP=5.034116567e24_dp !< m^-1
 real(dp), parameter, public :: U_JOULE_INVERSE_METER_RELATIONSHIP=0.0_dp !< m^-1
 
 real(cdp), protected, public, bind(C,name="JOULE_INVERSE_METER_RELATIONSHIP"):: &
-capi_171=JOULE_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_172=JOULE_INVERSE_METER_RELATIONSHIP !< C API m^-1
 real(cdp), protected, public, bind(C,name="U_JOULE_INVERSE_METER_RELATIONSHIP") :: &
-capi_U_171=U_JOULE_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_U_172=U_JOULE_INVERSE_METER_RELATIONSHIP !< C API m^-1
 
 real(dp), parameter, public :: JOULE_KELVIN_RELATIONSHIP=7.242970516e22_dp !< K
 real(dp), parameter, public :: U_JOULE_KELVIN_RELATIONSHIP=0.0_dp !< K
 
 real(cdp), protected, public, bind(C,name="JOULE_KELVIN_RELATIONSHIP"):: &
-capi_172=JOULE_KELVIN_RELATIONSHIP !< C API K
+capi_173=JOULE_KELVIN_RELATIONSHIP !< C API K
 real(cdp), protected, public, bind(C,name="U_JOULE_KELVIN_RELATIONSHIP") :: &
-capi_U_172=U_JOULE_KELVIN_RELATIONSHIP !< C API K
+capi_U_173=U_JOULE_KELVIN_RELATIONSHIP !< C API K
 
 real(dp), parameter, public :: JOULE_KILOGRAM_RELATIONSHIP=1.112650056e-17_dp !< kg
 real(dp), parameter, public :: U_JOULE_KILOGRAM_RELATIONSHIP=0.0_dp !< kg
 
 real(cdp), protected, public, bind(C,name="JOULE_KILOGRAM_RELATIONSHIP"):: &
-capi_173=JOULE_KILOGRAM_RELATIONSHIP !< C API kg
+capi_174=JOULE_KILOGRAM_RELATIONSHIP !< C API kg
 real(cdp), protected, public, bind(C,name="U_JOULE_KILOGRAM_RELATIONSHIP") :: &
-capi_U_173=U_JOULE_KILOGRAM_RELATIONSHIP !< C API kg
+capi_U_174=U_JOULE_KILOGRAM_RELATIONSHIP !< C API kg
 
-real(dp), parameter, public :: KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP=9.2510873014e-14_dp !< u
-real(dp), parameter, public :: U_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP=0.0000000028e-14_dp !< u
+real(dp), parameter, public :: KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP=9.2510872884e-14_dp !< u
+real(dp), parameter, public :: U_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP=0.0000000029e-14_dp !< u
 
 real(cdp), protected, public, bind(C,name="KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP"):: &
-capi_174=KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_175=KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 real(cdp), protected, public, bind(C,name="U_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP") :: &
-capi_U_174=U_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_U_175=U_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 
 real(dp), parameter, public :: KELVIN_ELECTRON_VOLT_RELATIONSHIP=8.617333262e-5_dp !< eV
 real(dp), parameter, public :: U_KELVIN_ELECTRON_VOLT_RELATIONSHIP=0.0_dp !< eV
 
 real(cdp), protected, public, bind(C,name="KELVIN_ELECTRON_VOLT_RELATIONSHIP"):: &
-capi_175=KELVIN_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_176=KELVIN_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 real(cdp), protected, public, bind(C,name="U_KELVIN_ELECTRON_VOLT_RELATIONSHIP") :: &
-capi_U_175=U_KELVIN_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_U_176=U_KELVIN_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 
-real(dp), parameter, public :: KELVIN_HARTREE_RELATIONSHIP=3.1668115634556e-6_dp !< E_h
-real(dp), parameter, public :: U_KELVIN_HARTREE_RELATIONSHIP=0.0000000000061e-6_dp !< E_h
+real(dp), parameter, public :: KELVIN_HARTREE_RELATIONSHIP=3.1668115634564e-6_dp !< E_h
+real(dp), parameter, public :: U_KELVIN_HARTREE_RELATIONSHIP=0.0000000000035e-6_dp !< E_h
 
 real(cdp), protected, public, bind(C,name="KELVIN_HARTREE_RELATIONSHIP"):: &
-capi_176=KELVIN_HARTREE_RELATIONSHIP !< C API E_h
+capi_177=KELVIN_HARTREE_RELATIONSHIP !< C API E_h
 real(cdp), protected, public, bind(C,name="U_KELVIN_HARTREE_RELATIONSHIP") :: &
-capi_U_176=U_KELVIN_HARTREE_RELATIONSHIP !< C API E_h
+capi_U_177=U_KELVIN_HARTREE_RELATIONSHIP !< C API E_h
 
 real(dp), parameter, public :: KELVIN_HERTZ_RELATIONSHIP=2.083661912e10_dp !< Hz
 real(dp), parameter, public :: U_KELVIN_HERTZ_RELATIONSHIP=0.0_dp !< Hz
 
 real(cdp), protected, public, bind(C,name="KELVIN_HERTZ_RELATIONSHIP"):: &
-capi_177=KELVIN_HERTZ_RELATIONSHIP !< C API Hz
+capi_178=KELVIN_HERTZ_RELATIONSHIP !< C API Hz
 real(cdp), protected, public, bind(C,name="U_KELVIN_HERTZ_RELATIONSHIP") :: &
-capi_U_177=U_KELVIN_HERTZ_RELATIONSHIP !< C API Hz
+capi_U_178=U_KELVIN_HERTZ_RELATIONSHIP !< C API Hz
 
 real(dp), parameter, public :: KELVIN_INVERSE_METER_RELATIONSHIP=69.50348004_dp !< m^-1
 real(dp), parameter, public :: U_KELVIN_INVERSE_METER_RELATIONSHIP=0.0_dp !< m^-1
 
 real(cdp), protected, public, bind(C,name="KELVIN_INVERSE_METER_RELATIONSHIP"):: &
-capi_178=KELVIN_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_179=KELVIN_INVERSE_METER_RELATIONSHIP !< C API m^-1
 real(cdp), protected, public, bind(C,name="U_KELVIN_INVERSE_METER_RELATIONSHIP") :: &
-capi_U_178=U_KELVIN_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_U_179=U_KELVIN_INVERSE_METER_RELATIONSHIP !< C API m^-1
 
 real(dp), parameter, public :: KELVIN_JOULE_RELATIONSHIP=1.380649e-23_dp !< J
 real(dp), parameter, public :: U_KELVIN_JOULE_RELATIONSHIP=0.0_dp !< J
 
 real(cdp), protected, public, bind(C,name="KELVIN_JOULE_RELATIONSHIP"):: &
-capi_179=KELVIN_JOULE_RELATIONSHIP !< C API J
+capi_180=KELVIN_JOULE_RELATIONSHIP !< C API J
 real(cdp), protected, public, bind(C,name="U_KELVIN_JOULE_RELATIONSHIP") :: &
-capi_U_179=U_KELVIN_JOULE_RELATIONSHIP !< C API J
+capi_U_180=U_KELVIN_JOULE_RELATIONSHIP !< C API J
 
 real(dp), parameter, public :: KELVIN_KILOGRAM_RELATIONSHIP=1.536179187e-40_dp !< kg
 real(dp), parameter, public :: U_KELVIN_KILOGRAM_RELATIONSHIP=0.0_dp !< kg
 
 real(cdp), protected, public, bind(C,name="KELVIN_KILOGRAM_RELATIONSHIP"):: &
-capi_180=KELVIN_KILOGRAM_RELATIONSHIP !< C API kg
+capi_181=KELVIN_KILOGRAM_RELATIONSHIP !< C API kg
 real(cdp), protected, public, bind(C,name="U_KELVIN_KILOGRAM_RELATIONSHIP") :: &
-capi_U_180=U_KELVIN_KILOGRAM_RELATIONSHIP !< C API kg
+capi_U_181=U_KELVIN_KILOGRAM_RELATIONSHIP !< C API kg
 
-real(dp), parameter, public :: KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP=6.0221407621e26_dp !< u
-real(dp), parameter, public :: U_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP=0.0000000018e26_dp !< u
+real(dp), parameter, public :: KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP=6.0221407537e26_dp !< u
+real(dp), parameter, public :: U_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP=0.0000000019e26_dp !< u
 
 real(cdp), protected, public, bind(C,name="KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP"):: &
-capi_181=KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_182=KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 real(cdp), protected, public, bind(C,name="U_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP") :: &
-capi_U_181=U_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
+capi_U_182=U_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP !< C API u
 
 real(dp), parameter, public :: KILOGRAM_ELECTRON_VOLT_RELATIONSHIP=5.609588603e35_dp !< eV
 real(dp), parameter, public :: U_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP=0.0_dp !< eV
 
 real(cdp), protected, public, bind(C,name="KILOGRAM_ELECTRON_VOLT_RELATIONSHIP"):: &
-capi_182=KILOGRAM_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_183=KILOGRAM_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 real(cdp), protected, public, bind(C,name="U_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP") :: &
-capi_U_182=U_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP !< C API eV
+capi_U_183=U_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP !< C API eV
 
-real(dp), parameter, public :: KILOGRAM_HARTREE_RELATIONSHIP=2.0614857887409e34_dp !< E_h
-real(dp), parameter, public :: U_KILOGRAM_HARTREE_RELATIONSHIP=0.0000000000040e34_dp !< E_h
+real(dp), parameter, public :: KILOGRAM_HARTREE_RELATIONSHIP=2.0614857887415e34_dp !< E_h
+real(dp), parameter, public :: U_KILOGRAM_HARTREE_RELATIONSHIP=0.0000000000022e34_dp !< E_h
 
 real(cdp), protected, public, bind(C,name="KILOGRAM_HARTREE_RELATIONSHIP"):: &
-capi_183=KILOGRAM_HARTREE_RELATIONSHIP !< C API E_h
+capi_184=KILOGRAM_HARTREE_RELATIONSHIP !< C API E_h
 real(cdp), protected, public, bind(C,name="U_KILOGRAM_HARTREE_RELATIONSHIP") :: &
-capi_U_183=U_KILOGRAM_HARTREE_RELATIONSHIP !< C API E_h
+capi_U_184=U_KILOGRAM_HARTREE_RELATIONSHIP !< C API E_h
 
 real(dp), parameter, public :: KILOGRAM_HERTZ_RELATIONSHIP=1.356392489e50_dp !< Hz
 real(dp), parameter, public :: U_KILOGRAM_HERTZ_RELATIONSHIP=0.0_dp !< Hz
 
 real(cdp), protected, public, bind(C,name="KILOGRAM_HERTZ_RELATIONSHIP"):: &
-capi_184=KILOGRAM_HERTZ_RELATIONSHIP !< C API Hz
+capi_185=KILOGRAM_HERTZ_RELATIONSHIP !< C API Hz
 real(cdp), protected, public, bind(C,name="U_KILOGRAM_HERTZ_RELATIONSHIP") :: &
-capi_U_184=U_KILOGRAM_HERTZ_RELATIONSHIP !< C API Hz
+capi_U_185=U_KILOGRAM_HERTZ_RELATIONSHIP !< C API Hz
 
 real(dp), parameter, public :: KILOGRAM_INVERSE_METER_RELATIONSHIP=4.524438335e41_dp !< m^-1
 real(dp), parameter, public :: U_KILOGRAM_INVERSE_METER_RELATIONSHIP=0.0_dp !< m^-1
 
 real(cdp), protected, public, bind(C,name="KILOGRAM_INVERSE_METER_RELATIONSHIP"):: &
-capi_185=KILOGRAM_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_186=KILOGRAM_INVERSE_METER_RELATIONSHIP !< C API m^-1
 real(cdp), protected, public, bind(C,name="U_KILOGRAM_INVERSE_METER_RELATIONSHIP") :: &
-capi_U_185=U_KILOGRAM_INVERSE_METER_RELATIONSHIP !< C API m^-1
+capi_U_186=U_KILOGRAM_INVERSE_METER_RELATIONSHIP !< C API m^-1
 
 real(dp), parameter, public :: KILOGRAM_JOULE_RELATIONSHIP=8.987551787e16_dp !< J
 real(dp), parameter, public :: U_KILOGRAM_JOULE_RELATIONSHIP=0.0_dp !< J
 
 real(cdp), protected, public, bind(C,name="KILOGRAM_JOULE_RELATIONSHIP"):: &
-capi_186=KILOGRAM_JOULE_RELATIONSHIP !< C API J
+capi_187=KILOGRAM_JOULE_RELATIONSHIP !< C API J
 real(cdp), protected, public, bind(C,name="U_KILOGRAM_JOULE_RELATIONSHIP") :: &
-capi_U_186=U_KILOGRAM_JOULE_RELATIONSHIP !< C API J
+capi_U_187=U_KILOGRAM_JOULE_RELATIONSHIP !< C API J
 
 real(dp), parameter, public :: KILOGRAM_KELVIN_RELATIONSHIP=6.509657260e39_dp !< K
 real(dp), parameter, public :: U_KILOGRAM_KELVIN_RELATIONSHIP=0.0_dp !< K
 
 real(cdp), protected, public, bind(C,name="KILOGRAM_KELVIN_RELATIONSHIP"):: &
-capi_187=KILOGRAM_KELVIN_RELATIONSHIP !< C API K
+capi_188=KILOGRAM_KELVIN_RELATIONSHIP !< C API K
 real(cdp), protected, public, bind(C,name="U_KILOGRAM_KELVIN_RELATIONSHIP") :: &
-capi_U_187=U_KILOGRAM_KELVIN_RELATIONSHIP !< C API K
+capi_U_188=U_KILOGRAM_KELVIN_RELATIONSHIP !< C API K
 
 real(dp), parameter, public :: LATTICE_PARAMETER_OF_SILICON=5.431020511e-10_dp !< m
 real(dp), parameter, public :: U_LATTICE_PARAMETER_OF_SILICON=0.000000089e-10_dp !< m
 
 real(cdp), protected, public, bind(C,name="LATTICE_PARAMETER_OF_SILICON"):: &
-capi_188=LATTICE_PARAMETER_OF_SILICON !< C API m
+capi_189=LATTICE_PARAMETER_OF_SILICON !< C API m
 real(cdp), protected, public, bind(C,name="U_LATTICE_PARAMETER_OF_SILICON") :: &
-capi_U_188=U_LATTICE_PARAMETER_OF_SILICON !< C API m
+capi_U_189=U_LATTICE_PARAMETER_OF_SILICON !< C API m
 
 real(dp), parameter, public :: LATTICE_SPACING_OF_IDEAL_SI__220=1.920155716e-10_dp !< m
 real(dp), parameter, public :: U_LATTICE_SPACING_OF_IDEAL_SI__220=0.000000032e-10_dp !< m
 
 real(cdp), protected, public, bind(C,name="LATTICE_SPACING_OF_IDEAL_SI__220"):: &
-capi_189=LATTICE_SPACING_OF_IDEAL_SI__220 !< C API m
+capi_190=LATTICE_SPACING_OF_IDEAL_SI__220 !< C API m
 real(cdp), protected, public, bind(C,name="U_LATTICE_SPACING_OF_IDEAL_SI__220") :: &
-capi_U_189=U_LATTICE_SPACING_OF_IDEAL_SI__220 !< C API m
+capi_U_190=U_LATTICE_SPACING_OF_IDEAL_SI__220 !< C API m
 
 real(dp), parameter, public :: LOSCHMIDT_CONSTANT__273_15_K__100_KPA=2.651645804e25_dp !< m^-3
 real(dp), parameter, public :: U_LOSCHMIDT_CONSTANT__273_15_K__100_KPA=0.0_dp !< m^-3
 
 real(cdp), protected, public, bind(C,name="LOSCHMIDT_CONSTANT__273_15_K__100_KPA"):: &
-capi_190=LOSCHMIDT_CONSTANT__273_15_K__100_KPA !< C API m^-3
+capi_191=LOSCHMIDT_CONSTANT__273_15_K__100_KPA !< C API m^-3
 real(cdp), protected, public, bind(C,name="U_LOSCHMIDT_CONSTANT__273_15_K__100_KPA") :: &
-capi_U_190=U_LOSCHMIDT_CONSTANT__273_15_K__100_KPA !< C API m^-3
+capi_U_191=U_LOSCHMIDT_CONSTANT__273_15_K__100_KPA !< C API m^-3
 
 real(dp), parameter, public :: LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA=2.686780111e25_dp !< m^-3
 real(dp), parameter, public :: U_LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA=0.0_dp !< m^-3
 
 real(cdp), protected, public, bind(C,name="LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA"):: &
-capi_191=LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA !< C API m^-3
+capi_192=LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA !< C API m^-3
 real(cdp), protected, public, bind(C,name="U_LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA") :: &
-capi_U_191=U_LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA !< C API m^-3
+capi_U_192=U_LOSCHMIDT_CONSTANT__273_15_K__101_325_KPA !< C API m^-3
 
 real(dp), parameter, public :: LUMINOUS_EFFICACY=683_dp !< lm W^-1
 real(dp), parameter, public :: U_LUMINOUS_EFFICACY=0.0_dp !< lm W^-1
 
 real(cdp), protected, public, bind(C,name="LUMINOUS_EFFICACY"):: &
-capi_192=LUMINOUS_EFFICACY !< C API lm W^-1
+capi_193=LUMINOUS_EFFICACY !< C API lm W^-1
 real(cdp), protected, public, bind(C,name="U_LUMINOUS_EFFICACY") :: &
-capi_U_192=U_LUMINOUS_EFFICACY !< C API lm W^-1
+capi_U_193=U_LUMINOUS_EFFICACY !< C API lm W^-1
 
 real(dp), parameter, public :: MAG__FLUX_QUANTUM=2.067833848e-15_dp !< Wb
 real(dp), parameter, public :: U_MAG__FLUX_QUANTUM=0.0_dp !< Wb
 
 real(cdp), protected, public, bind(C,name="MAG__FLUX_QUANTUM"):: &
-capi_193=MAG__FLUX_QUANTUM !< C API Wb
+capi_194=MAG__FLUX_QUANTUM !< C API Wb
 real(cdp), protected, public, bind(C,name="U_MAG__FLUX_QUANTUM") :: &
-capi_U_193=U_MAG__FLUX_QUANTUM !< C API Wb
+capi_U_194=U_MAG__FLUX_QUANTUM !< C API Wb
 
 real(dp), parameter, public :: MOLAR_GAS_CONSTANT=8.314462618_dp !< J mol^-1 K^-1
 real(dp), parameter, public :: U_MOLAR_GAS_CONSTANT=0.0_dp !< J mol^-1 K^-1
 
 real(cdp), protected, public, bind(C,name="MOLAR_GAS_CONSTANT"):: &
-capi_194=MOLAR_GAS_CONSTANT !< C API J mol^-1 K^-1
+capi_195=MOLAR_GAS_CONSTANT !< C API J mol^-1 K^-1
 real(cdp), protected, public, bind(C,name="U_MOLAR_GAS_CONSTANT") :: &
-capi_U_194=U_MOLAR_GAS_CONSTANT !< C API J mol^-1 K^-1
+capi_U_195=U_MOLAR_GAS_CONSTANT !< C API J mol^-1 K^-1
 
-real(dp), parameter, public :: MOLAR_MASS_CONSTANT=0.99999999965e-3_dp !< kg mol^-1
-real(dp), parameter, public :: U_MOLAR_MASS_CONSTANT=0.00000000030e-3_dp !< kg mol^-1
+real(dp), parameter, public :: MOLAR_MASS_CONSTANT=1.00000000105e-3_dp !< kg mol^-1
+real(dp), parameter, public :: U_MOLAR_MASS_CONSTANT=0.00000000031e-3_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="MOLAR_MASS_CONSTANT"):: &
-capi_195=MOLAR_MASS_CONSTANT !< C API kg mol^-1
+capi_196=MOLAR_MASS_CONSTANT !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_MOLAR_MASS_CONSTANT") :: &
-capi_U_195=U_MOLAR_MASS_CONSTANT !< C API kg mol^-1
+capi_U_196=U_MOLAR_MASS_CONSTANT !< C API kg mol^-1
 
-real(dp), parameter, public :: MOLAR_MASS_OF_CARBON_12=11.9999999958e-3_dp !< kg mol^-1
-real(dp), parameter, public :: U_MOLAR_MASS_OF_CARBON_12=0.0000000036e-3_dp !< kg mol^-1
+real(dp), parameter, public :: MOLAR_MASS_OF_CARBON_12=12.0000000126e-3_dp !< kg mol^-1
+real(dp), parameter, public :: U_MOLAR_MASS_OF_CARBON_12=0.0000000037e-3_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="MOLAR_MASS_OF_CARBON_12"):: &
-capi_196=MOLAR_MASS_OF_CARBON_12 !< C API kg mol^-1
+capi_197=MOLAR_MASS_OF_CARBON_12 !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_MOLAR_MASS_OF_CARBON_12") :: &
-capi_U_196=U_MOLAR_MASS_OF_CARBON_12 !< C API kg mol^-1
+capi_U_197=U_MOLAR_MASS_OF_CARBON_12 !< C API kg mol^-1
 
 real(dp), parameter, public :: MOLAR_PLANCK_CONSTANT=3.990312712e-10_dp !< J Hz^-1 mol^-1
 real(dp), parameter, public :: U_MOLAR_PLANCK_CONSTANT=0.0_dp !< J Hz^-1 mol^-1
 
 real(cdp), protected, public, bind(C,name="MOLAR_PLANCK_CONSTANT"):: &
-capi_197=MOLAR_PLANCK_CONSTANT !< C API J Hz^-1 mol^-1
+capi_198=MOLAR_PLANCK_CONSTANT !< C API J Hz^-1 mol^-1
 real(cdp), protected, public, bind(C,name="U_MOLAR_PLANCK_CONSTANT") :: &
-capi_U_197=U_MOLAR_PLANCK_CONSTANT !< C API J Hz^-1 mol^-1
+capi_U_198=U_MOLAR_PLANCK_CONSTANT !< C API J Hz^-1 mol^-1
 
 real(dp), parameter, public :: MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA=22.71095464e-3_dp !< m^3 mol^-1
 real(dp), parameter, public :: U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA=0.0_dp !< m^3 mol^-1
 
 real(cdp), protected, public, bind(C,name="MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA"):: &
-capi_198=MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA !< C API m^3 mol^-1
+capi_199=MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA !< C API m^3 mol^-1
 real(cdp), protected, public, bind(C,name="U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA") :: &
-capi_U_198=U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA !< C API m^3 mol^-1
+capi_U_199=U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__100_KPA !< C API m^3 mol^-1
 
 real(dp), parameter, public :: MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA=22.41396954e-3_dp !< m^3 mol^-1
 real(dp), parameter, public :: U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA=0.0_dp !< m^3 mol^-1
 
 real(cdp), protected, public, bind(C,name="MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA"):: &
-capi_199=MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA !< C API m^3 mol^-1
+capi_200=MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA !< C API m^3 mol^-1
 real(cdp), protected, public, bind(C,name="U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA") :: &
-capi_U_199=U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA !< C API m^3 mol^-1
+capi_U_200=U_MOLAR_VOLUME_OF_IDEAL_GAS__273_15_K__101_325_KPA !< C API m^3 mol^-1
 
 real(dp), parameter, public :: MOLAR_VOLUME_OF_SILICON=1.205883199e-5_dp !< m^3 mol^-1
 real(dp), parameter, public :: U_MOLAR_VOLUME_OF_SILICON=0.000000060e-5_dp !< m^3 mol^-1
 
 real(cdp), protected, public, bind(C,name="MOLAR_VOLUME_OF_SILICON"):: &
-capi_200=MOLAR_VOLUME_OF_SILICON !< C API m^3 mol^-1
+capi_201=MOLAR_VOLUME_OF_SILICON !< C API m^3 mol^-1
 real(cdp), protected, public, bind(C,name="U_MOLAR_VOLUME_OF_SILICON") :: &
-capi_U_200=U_MOLAR_VOLUME_OF_SILICON !< C API m^3 mol^-1
+capi_U_201=U_MOLAR_VOLUME_OF_SILICON !< C API m^3 mol^-1
 
 real(dp), parameter, public :: MOLYBDENUM_X_UNIT=1.00209952e-13_dp !< m
 real(dp), parameter, public :: U_MOLYBDENUM_X_UNIT=0.00000053e-13_dp !< m
 
 real(cdp), protected, public, bind(C,name="MOLYBDENUM_X_UNIT"):: &
-capi_201=MOLYBDENUM_X_UNIT !< C API m
+capi_202=MOLYBDENUM_X_UNIT !< C API m
 real(cdp), protected, public, bind(C,name="U_MOLYBDENUM_X_UNIT") :: &
-capi_U_201=U_MOLYBDENUM_X_UNIT !< C API m
+capi_U_202=U_MOLYBDENUM_X_UNIT !< C API m
 
 real(dp), parameter, public :: MUON_COMPTON_WAVELENGTH=1.173444110e-14_dp !< m
 real(dp), parameter, public :: U_MUON_COMPTON_WAVELENGTH=0.000000026e-14_dp !< m
 
 real(cdp), protected, public, bind(C,name="MUON_COMPTON_WAVELENGTH"):: &
-capi_202=MUON_COMPTON_WAVELENGTH !< C API m
+capi_203=MUON_COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_MUON_COMPTON_WAVELENGTH") :: &
-capi_U_202=U_MUON_COMPTON_WAVELENGTH !< C API m
+capi_U_203=U_MUON_COMPTON_WAVELENGTH !< C API m
 
-real(dp), parameter, public :: MUON_ELECTRON_MASS_RATIO=206.7682830_dp !< dimensionless
+real(dp), parameter, public :: MUON_ELECTRON_MASS_RATIO=206.7682827_dp !< dimensionless
 real(dp), parameter, public :: U_MUON_ELECTRON_MASS_RATIO=0.0000046_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="MUON_ELECTRON_MASS_RATIO"):: &
-capi_203=MUON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_204=MUON_ELECTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_MUON_ELECTRON_MASS_RATIO") :: &
-capi_U_203=U_MUON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_U_204=U_MUON_ELECTRON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: MUON_G_FACTOR=-2.0023318418_dp !< dimensionless
-real(dp), parameter, public :: U_MUON_G_FACTOR=0.0000000013_dp !< dimensionless
+real(dp), parameter, public :: MUON_G_FACTOR=-2.00233184123_dp !< dimensionless
+real(dp), parameter, public :: U_MUON_G_FACTOR=0.00000000082_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="MUON_G_FACTOR"):: &
-capi_204=MUON_G_FACTOR !< C API dimensionless
+capi_205=MUON_G_FACTOR !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_MUON_G_FACTOR") :: &
-capi_U_204=U_MUON_G_FACTOR !< C API dimensionless
+capi_U_205=U_MUON_G_FACTOR !< C API dimensionless
 
 real(dp), parameter, public :: MUON_MAG__MOM=-4.49044830e-26_dp !< J T^-1
 real(dp), parameter, public :: U_MUON_MAG__MOM=0.00000010e-26_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="MUON_MAG__MOM"):: &
-capi_205=MUON_MAG__MOM !< C API J T^-1
+capi_206=MUON_MAG__MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_MUON_MAG__MOM") :: &
-capi_U_205=U_MUON_MAG__MOM !< C API J T^-1
+capi_U_206=U_MUON_MAG__MOM !< C API J T^-1
 
-real(dp), parameter, public :: MUON_MAG__MOM__ANOMALY=1.16592089e-3_dp !< dimensionless
-real(dp), parameter, public :: U_MUON_MAG__MOM__ANOMALY=0.00000063e-3_dp !< dimensionless
+real(dp), parameter, public :: MUON_MAG__MOM__ANOMALY=1.16592062e-3_dp !< dimensionless
+real(dp), parameter, public :: U_MUON_MAG__MOM__ANOMALY=0.00000041e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="MUON_MAG__MOM__ANOMALY"):: &
-capi_206=MUON_MAG__MOM__ANOMALY !< C API dimensionless
+capi_207=MUON_MAG__MOM__ANOMALY !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_MUON_MAG__MOM__ANOMALY") :: &
-capi_U_206=U_MUON_MAG__MOM__ANOMALY !< C API dimensionless
+capi_U_207=U_MUON_MAG__MOM__ANOMALY !< C API dimensionless
 
-real(dp), parameter, public :: MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-4.84197047e-3_dp !< dimensionless
+real(dp), parameter, public :: MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-4.84197048e-3_dp !< dimensionless
 real(dp), parameter, public :: U_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.00000011e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO"):: &
-capi_207=MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_208=MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO") :: &
-capi_U_207=U_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_U_208=U_MUON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-8.89059703_dp !< dimensionless
+real(dp), parameter, public :: MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-8.89059704_dp !< dimensionless
 real(dp), parameter, public :: U_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.00000020_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO"):: &
-capi_208=MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_209=MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO") :: &
-capi_U_208=U_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_U_209=U_MUON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: MUON_MASS=1.883531627e-28_dp !< kg
 real(dp), parameter, public :: U_MUON_MASS=0.000000042e-28_dp !< kg
 
 real(cdp), protected, public, bind(C,name="MUON_MASS"):: &
-capi_209=MUON_MASS !< C API kg
+capi_210=MUON_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_MUON_MASS") :: &
-capi_U_209=U_MUON_MASS !< C API kg
+capi_U_210=U_MUON_MASS !< C API kg
 
 real(dp), parameter, public :: MUON_MASS_ENERGY_EQUIVALENT=1.692833804e-11_dp !< J
 real(dp), parameter, public :: U_MUON_MASS_ENERGY_EQUIVALENT=0.000000038e-11_dp !< J
 
 real(cdp), protected, public, bind(C,name="MUON_MASS_ENERGY_EQUIVALENT"):: &
-capi_210=MUON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_211=MUON_MASS_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_MUON_MASS_ENERGY_EQUIVALENT") :: &
-capi_U_210=U_MUON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_U_211=U_MUON_MASS_ENERGY_EQUIVALENT !< C API J
 
 real(dp), parameter, public :: MUON_MASS_ENERGY_EQUIVALENT_IN_MEV=105.6583755_dp !< MeV
 real(dp), parameter, public :: U_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.0000023_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="MUON_MASS_ENERGY_EQUIVALENT_IN_MEV"):: &
-capi_211=MUON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_212=MUON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV") :: &
-capi_U_211=U_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_U_212=U_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: MUON_MASS_IN_U=0.1134289259_dp !< u
+real(dp), parameter, public :: MUON_MASS_IN_U=0.1134289257_dp !< u
 real(dp), parameter, public :: U_MUON_MASS_IN_U=0.0000000025_dp !< u
 
 real(cdp), protected, public, bind(C,name="MUON_MASS_IN_U"):: &
-capi_212=MUON_MASS_IN_U !< C API u
+capi_213=MUON_MASS_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_MUON_MASS_IN_U") :: &
-capi_U_212=U_MUON_MASS_IN_U !< C API u
+capi_U_213=U_MUON_MASS_IN_U !< C API u
 
-real(dp), parameter, public :: MUON_MOLAR_MASS=1.134289259e-4_dp !< kg mol^-1
+real(dp), parameter, public :: MUON_MOLAR_MASS=1.134289258e-4_dp !< kg mol^-1
 real(dp), parameter, public :: U_MUON_MOLAR_MASS=0.000000025e-4_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="MUON_MOLAR_MASS"):: &
-capi_213=MUON_MOLAR_MASS !< C API kg mol^-1
+capi_214=MUON_MOLAR_MASS !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_MUON_MOLAR_MASS") :: &
-capi_U_213=U_MUON_MOLAR_MASS !< C API kg mol^-1
+capi_U_214=U_MUON_MOLAR_MASS !< C API kg mol^-1
 
-real(dp), parameter, public :: MUON_NEUTRON_MASS_RATIO=0.1124545170_dp !< dimensionless
+real(dp), parameter, public :: MUON_NEUTRON_MASS_RATIO=0.1124545168_dp !< dimensionless
 real(dp), parameter, public :: U_MUON_NEUTRON_MASS_RATIO=0.0000000025_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="MUON_NEUTRON_MASS_RATIO"):: &
-capi_214=MUON_NEUTRON_MASS_RATIO !< C API dimensionless
+capi_215=MUON_NEUTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_MUON_NEUTRON_MASS_RATIO") :: &
-capi_U_214=U_MUON_NEUTRON_MASS_RATIO !< C API dimensionless
+capi_U_215=U_MUON_NEUTRON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: MUON_PROTON_MAG__MOM__RATIO=-3.183345142_dp !< dimensionless
+real(dp), parameter, public :: MUON_PROTON_MAG__MOM__RATIO=-3.183345146_dp !< dimensionless
 real(dp), parameter, public :: U_MUON_PROTON_MAG__MOM__RATIO=0.000000071_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="MUON_PROTON_MAG__MOM__RATIO"):: &
-capi_215=MUON_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_216=MUON_PROTON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_MUON_PROTON_MAG__MOM__RATIO") :: &
-capi_U_215=U_MUON_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_216=U_MUON_PROTON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: MUON_PROTON_MASS_RATIO=0.1126095264_dp !< dimensionless
+real(dp), parameter, public :: MUON_PROTON_MASS_RATIO=0.1126095262_dp !< dimensionless
 real(dp), parameter, public :: U_MUON_PROTON_MASS_RATIO=0.0000000025_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="MUON_PROTON_MASS_RATIO"):: &
-capi_216=MUON_PROTON_MASS_RATIO !< C API dimensionless
+capi_217=MUON_PROTON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_MUON_PROTON_MASS_RATIO") :: &
-capi_U_216=U_MUON_PROTON_MASS_RATIO !< C API dimensionless
+capi_U_217=U_MUON_PROTON_MASS_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: MUON_TAU_MASS_RATIO=5.94635e-2_dp !< dimensionless
 real(dp), parameter, public :: U_MUON_TAU_MASS_RATIO=0.00040e-2_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="MUON_TAU_MASS_RATIO"):: &
-capi_217=MUON_TAU_MASS_RATIO !< C API dimensionless
+capi_218=MUON_TAU_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_MUON_TAU_MASS_RATIO") :: &
-capi_U_217=U_MUON_TAU_MASS_RATIO !< C API dimensionless
+capi_U_218=U_MUON_TAU_MASS_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: NATURAL_UNIT_OF_ACTION=1.054571817e-34_dp !< J s
 real(dp), parameter, public :: U_NATURAL_UNIT_OF_ACTION=0.0_dp !< J s
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_ACTION"):: &
-capi_218=NATURAL_UNIT_OF_ACTION !< C API J s
+capi_219=NATURAL_UNIT_OF_ACTION !< C API J s
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_ACTION") :: &
-capi_U_218=U_NATURAL_UNIT_OF_ACTION !< C API J s
+capi_U_219=U_NATURAL_UNIT_OF_ACTION !< C API J s
 
 real(dp), parameter, public :: NATURAL_UNIT_OF_ACTION_IN_EV_S=6.582119569e-16_dp !< eV s
 real(dp), parameter, public :: U_NATURAL_UNIT_OF_ACTION_IN_EV_S=0.0_dp !< eV s
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_ACTION_IN_EV_S"):: &
-capi_219=NATURAL_UNIT_OF_ACTION_IN_EV_S !< C API eV s
+capi_220=NATURAL_UNIT_OF_ACTION_IN_EV_S !< C API eV s
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_ACTION_IN_EV_S") :: &
-capi_U_219=U_NATURAL_UNIT_OF_ACTION_IN_EV_S !< C API eV s
+capi_U_220=U_NATURAL_UNIT_OF_ACTION_IN_EV_S !< C API eV s
 
-real(dp), parameter, public :: NATURAL_UNIT_OF_ENERGY=8.1871057769e-14_dp !< J
-real(dp), parameter, public :: U_NATURAL_UNIT_OF_ENERGY=0.0000000025e-14_dp !< J
+real(dp), parameter, public :: NATURAL_UNIT_OF_ENERGY=8.1871057880e-14_dp !< J
+real(dp), parameter, public :: U_NATURAL_UNIT_OF_ENERGY=0.0000000026e-14_dp !< J
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_ENERGY"):: &
-capi_220=NATURAL_UNIT_OF_ENERGY !< C API J
+capi_221=NATURAL_UNIT_OF_ENERGY !< C API J
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_ENERGY") :: &
-capi_U_220=U_NATURAL_UNIT_OF_ENERGY !< C API J
+capi_U_221=U_NATURAL_UNIT_OF_ENERGY !< C API J
 
-real(dp), parameter, public :: NATURAL_UNIT_OF_ENERGY_IN_MEV=0.51099895000_dp !< MeV
-real(dp), parameter, public :: U_NATURAL_UNIT_OF_ENERGY_IN_MEV=0.00000000015_dp !< MeV
+real(dp), parameter, public :: NATURAL_UNIT_OF_ENERGY_IN_MEV=0.51099895069_dp !< MeV
+real(dp), parameter, public :: U_NATURAL_UNIT_OF_ENERGY_IN_MEV=0.00000000016_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_ENERGY_IN_MEV"):: &
-capi_221=NATURAL_UNIT_OF_ENERGY_IN_MEV !< C API MeV
+capi_222=NATURAL_UNIT_OF_ENERGY_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_ENERGY_IN_MEV") :: &
-capi_U_221=U_NATURAL_UNIT_OF_ENERGY_IN_MEV !< C API MeV
+capi_U_222=U_NATURAL_UNIT_OF_ENERGY_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: NATURAL_UNIT_OF_LENGTH=3.8615926796e-13_dp !< m
+real(dp), parameter, public :: NATURAL_UNIT_OF_LENGTH=3.8615926744e-13_dp !< m
 real(dp), parameter, public :: U_NATURAL_UNIT_OF_LENGTH=0.0000000012e-13_dp !< m
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_LENGTH"):: &
-capi_222=NATURAL_UNIT_OF_LENGTH !< C API m
+capi_223=NATURAL_UNIT_OF_LENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_LENGTH") :: &
-capi_U_222=U_NATURAL_UNIT_OF_LENGTH !< C API m
+capi_U_223=U_NATURAL_UNIT_OF_LENGTH !< C API m
 
-real(dp), parameter, public :: NATURAL_UNIT_OF_MASS=9.1093837015e-31_dp !< kg
+real(dp), parameter, public :: NATURAL_UNIT_OF_MASS=9.1093837139e-31_dp !< kg
 real(dp), parameter, public :: U_NATURAL_UNIT_OF_MASS=0.0000000028e-31_dp !< kg
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_MASS"):: &
-capi_223=NATURAL_UNIT_OF_MASS !< C API kg
+capi_224=NATURAL_UNIT_OF_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_MASS") :: &
-capi_U_223=U_NATURAL_UNIT_OF_MASS !< C API kg
+capi_U_224=U_NATURAL_UNIT_OF_MASS !< C API kg
 
-real(dp), parameter, public :: NATURAL_UNIT_OF_MOMENTUM=2.73092453075e-22_dp !< kg m s^-1
-real(dp), parameter, public :: U_NATURAL_UNIT_OF_MOMENTUM=0.00000000082e-22_dp !< kg m s^-1
+real(dp), parameter, public :: NATURAL_UNIT_OF_MOMENTUM=2.73092453446e-22_dp !< kg m s^-1
+real(dp), parameter, public :: U_NATURAL_UNIT_OF_MOMENTUM=0.00000000085e-22_dp !< kg m s^-1
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_MOMENTUM"):: &
-capi_224=NATURAL_UNIT_OF_MOMENTUM !< C API kg m s^-1
+capi_225=NATURAL_UNIT_OF_MOMENTUM !< C API kg m s^-1
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_MOMENTUM") :: &
-capi_U_224=U_NATURAL_UNIT_OF_MOMENTUM !< C API kg m s^-1
+capi_U_225=U_NATURAL_UNIT_OF_MOMENTUM !< C API kg m s^-1
 
-real(dp), parameter, public :: NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C=0.51099895000_dp !< MeV/c
-real(dp), parameter, public :: U_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C=0.00000000015_dp !< MeV/c
+real(dp), parameter, public :: NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C=0.51099895069_dp !< MeV/c
+real(dp), parameter, public :: U_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C=0.00000000016_dp !< MeV/c
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C"):: &
-capi_225=NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C !< C API MeV/c
+capi_226=NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C !< C API MeV/c
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C") :: &
-capi_U_225=U_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C !< C API MeV/c
+capi_U_226=U_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C !< C API MeV/c
 
-real(dp), parameter, public :: NATURAL_UNIT_OF_TIME=1.28808866819e-21_dp !< s
-real(dp), parameter, public :: U_NATURAL_UNIT_OF_TIME=0.00000000039e-21_dp !< s
+real(dp), parameter, public :: NATURAL_UNIT_OF_TIME=1.28808866644e-21_dp !< s
+real(dp), parameter, public :: U_NATURAL_UNIT_OF_TIME=0.00000000040e-21_dp !< s
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_TIME"):: &
-capi_226=NATURAL_UNIT_OF_TIME !< C API s
+capi_227=NATURAL_UNIT_OF_TIME !< C API s
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_TIME") :: &
-capi_U_226=U_NATURAL_UNIT_OF_TIME !< C API s
+capi_U_227=U_NATURAL_UNIT_OF_TIME !< C API s
 
 real(dp), parameter, public :: NATURAL_UNIT_OF_VELOCITY=299792458_dp !< m s^-1
 real(dp), parameter, public :: U_NATURAL_UNIT_OF_VELOCITY=0.0_dp !< m s^-1
 
 real(cdp), protected, public, bind(C,name="NATURAL_UNIT_OF_VELOCITY"):: &
-capi_227=NATURAL_UNIT_OF_VELOCITY !< C API m s^-1
+capi_228=NATURAL_UNIT_OF_VELOCITY !< C API m s^-1
 real(cdp), protected, public, bind(C,name="U_NATURAL_UNIT_OF_VELOCITY") :: &
-capi_U_227=U_NATURAL_UNIT_OF_VELOCITY !< C API m s^-1
+capi_U_228=U_NATURAL_UNIT_OF_VELOCITY !< C API m s^-1
 
-real(dp), parameter, public :: NEUTRON_COMPTON_WAVELENGTH=1.31959090581e-15_dp !< m
-real(dp), parameter, public :: U_NEUTRON_COMPTON_WAVELENGTH=0.00000000075e-15_dp !< m
+real(dp), parameter, public :: NEUTRON_COMPTON_WAVELENGTH=1.31959090382e-15_dp !< m
+real(dp), parameter, public :: U_NEUTRON_COMPTON_WAVELENGTH=0.00000000067e-15_dp !< m
 
 real(cdp), protected, public, bind(C,name="NEUTRON_COMPTON_WAVELENGTH"):: &
-capi_228=NEUTRON_COMPTON_WAVELENGTH !< C API m
+capi_229=NEUTRON_COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_NEUTRON_COMPTON_WAVELENGTH") :: &
-capi_U_228=U_NEUTRON_COMPTON_WAVELENGTH !< C API m
+capi_U_229=U_NEUTRON_COMPTON_WAVELENGTH !< C API m
 
-real(dp), parameter, public :: NEUTRON_ELECTRON_MAG__MOM__RATIO=1.04066882e-3_dp !< dimensionless
-real(dp), parameter, public :: U_NEUTRON_ELECTRON_MAG__MOM__RATIO=0.00000025e-3_dp !< dimensionless
+real(dp), parameter, public :: NEUTRON_ELECTRON_MAG__MOM__RATIO=1.04066884e-3_dp !< dimensionless
+real(dp), parameter, public :: U_NEUTRON_ELECTRON_MAG__MOM__RATIO=0.00000024e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_ELECTRON_MAG__MOM__RATIO"):: &
-capi_229=NEUTRON_ELECTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_230=NEUTRON_ELECTRON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_ELECTRON_MAG__MOM__RATIO") :: &
-capi_U_229=U_NEUTRON_ELECTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_230=U_NEUTRON_ELECTRON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: NEUTRON_ELECTRON_MASS_RATIO=1838.68366173_dp !< dimensionless
-real(dp), parameter, public :: U_NEUTRON_ELECTRON_MASS_RATIO=0.00000089_dp !< dimensionless
+real(dp), parameter, public :: NEUTRON_ELECTRON_MASS_RATIO=1838.68366200_dp !< dimensionless
+real(dp), parameter, public :: U_NEUTRON_ELECTRON_MASS_RATIO=0.00000074_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_ELECTRON_MASS_RATIO"):: &
-capi_230=NEUTRON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_231=NEUTRON_ELECTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_ELECTRON_MASS_RATIO") :: &
-capi_U_230=U_NEUTRON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_U_231=U_NEUTRON_ELECTRON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: NEUTRON_G_FACTOR=-3.82608545_dp !< dimensionless
+real(dp), parameter, public :: NEUTRON_G_FACTOR=-3.82608552_dp !< dimensionless
 real(dp), parameter, public :: U_NEUTRON_G_FACTOR=0.00000090_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_G_FACTOR"):: &
-capi_231=NEUTRON_G_FACTOR !< C API dimensionless
+capi_232=NEUTRON_G_FACTOR !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_G_FACTOR") :: &
-capi_U_231=U_NEUTRON_G_FACTOR !< C API dimensionless
+capi_U_232=U_NEUTRON_G_FACTOR !< C API dimensionless
 
-real(dp), parameter, public :: NEUTRON_GYROMAG__RATIO=1.83247171e8_dp !< s^-1 T^-1
+real(dp), parameter, public :: NEUTRON_GYROMAG__RATIO=1.83247174e8_dp !< s^-1 T^-1
 real(dp), parameter, public :: U_NEUTRON_GYROMAG__RATIO=0.00000043e8_dp !< s^-1 T^-1
 
 real(cdp), protected, public, bind(C,name="NEUTRON_GYROMAG__RATIO"):: &
-capi_232=NEUTRON_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_233=NEUTRON_GYROMAG__RATIO !< C API s^-1 T^-1
 real(cdp), protected, public, bind(C,name="U_NEUTRON_GYROMAG__RATIO") :: &
-capi_U_232=U_NEUTRON_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_U_233=U_NEUTRON_GYROMAG__RATIO !< C API s^-1 T^-1
 
-real(dp), parameter, public :: NEUTRON_GYROMAG__RATIO_IN_MHZ_T=29.1646931_dp !< MHz T^-1
+real(dp), parameter, public :: NEUTRON_GYROMAG__RATIO_IN_MHZ_T=29.1646935_dp !< MHz T^-1
 real(dp), parameter, public :: U_NEUTRON_GYROMAG__RATIO_IN_MHZ_T=0.0000069_dp !< MHz T^-1
 
 real(cdp), protected, public, bind(C,name="NEUTRON_GYROMAG__RATIO_IN_MHZ_T"):: &
-capi_233=NEUTRON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_234=NEUTRON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 real(cdp), protected, public, bind(C,name="U_NEUTRON_GYROMAG__RATIO_IN_MHZ_T") :: &
-capi_U_233=U_NEUTRON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_U_234=U_NEUTRON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 
-real(dp), parameter, public :: NEUTRON_MAG__MOM=-9.6623651e-27_dp !< J T^-1
+real(dp), parameter, public :: NEUTRON_MAG__MOM=-9.6623653e-27_dp !< J T^-1
 real(dp), parameter, public :: U_NEUTRON_MAG__MOM=0.0000023e-27_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="NEUTRON_MAG__MOM"):: &
-capi_234=NEUTRON_MAG__MOM !< C API J T^-1
+capi_235=NEUTRON_MAG__MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_NEUTRON_MAG__MOM") :: &
-capi_U_234=U_NEUTRON_MAG__MOM !< C API J T^-1
+capi_U_235=U_NEUTRON_MAG__MOM !< C API J T^-1
 
-real(dp), parameter, public :: NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-1.04187563e-3_dp !< dimensionless
+real(dp), parameter, public :: NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-1.04187565e-3_dp !< dimensionless
 real(dp), parameter, public :: U_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.00000025e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO"):: &
-capi_235=NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_236=NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO") :: &
-capi_U_235=U_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_U_236=U_NEUTRON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-1.91304273_dp !< dimensionless
+real(dp), parameter, public :: NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-1.91304276_dp !< dimensionless
 real(dp), parameter, public :: U_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.00000045_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO"):: &
-capi_236=NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_237=NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO") :: &
-capi_U_236=U_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_U_237=U_NEUTRON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: NEUTRON_MASS=1.67492749804e-27_dp !< kg
-real(dp), parameter, public :: U_NEUTRON_MASS=0.00000000095e-27_dp !< kg
+real(dp), parameter, public :: NEUTRON_MASS=1.67492750056e-27_dp !< kg
+real(dp), parameter, public :: U_NEUTRON_MASS=0.00000000085e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="NEUTRON_MASS"):: &
-capi_237=NEUTRON_MASS !< C API kg
+capi_238=NEUTRON_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_NEUTRON_MASS") :: &
-capi_U_237=U_NEUTRON_MASS !< C API kg
+capi_U_238=U_NEUTRON_MASS !< C API kg
 
-real(dp), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT=1.50534976287e-10_dp !< J
-real(dp), parameter, public :: U_NEUTRON_MASS_ENERGY_EQUIVALENT=0.00000000086e-10_dp !< J
+real(dp), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT=1.50534976514e-10_dp !< J
+real(dp), parameter, public :: U_NEUTRON_MASS_ENERGY_EQUIVALENT=0.00000000076e-10_dp !< J
 
 real(cdp), protected, public, bind(C,name="NEUTRON_MASS_ENERGY_EQUIVALENT"):: &
-capi_238=NEUTRON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_239=NEUTRON_MASS_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_NEUTRON_MASS_ENERGY_EQUIVALENT") :: &
-capi_U_238=U_NEUTRON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_U_239=U_NEUTRON_MASS_ENERGY_EQUIVALENT !< C API J
 
-real(dp), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV=939.56542052_dp !< MeV
-real(dp), parameter, public :: U_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000054_dp !< MeV
+real(dp), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV=939.56542194_dp !< MeV
+real(dp), parameter, public :: U_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000048_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV"):: &
-capi_239=NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_240=NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") :: &
-capi_U_239=U_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_U_240=U_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: NEUTRON_MASS_IN_U=1.00866491595_dp !< u
-real(dp), parameter, public :: U_NEUTRON_MASS_IN_U=0.00000000049_dp !< u
+real(dp), parameter, public :: NEUTRON_MASS_IN_U=1.00866491606_dp !< u
+real(dp), parameter, public :: U_NEUTRON_MASS_IN_U=0.00000000040_dp !< u
 
 real(cdp), protected, public, bind(C,name="NEUTRON_MASS_IN_U"):: &
-capi_240=NEUTRON_MASS_IN_U !< C API u
+capi_241=NEUTRON_MASS_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_NEUTRON_MASS_IN_U") :: &
-capi_U_240=U_NEUTRON_MASS_IN_U !< C API u
+capi_U_241=U_NEUTRON_MASS_IN_U !< C API u
 
-real(dp), parameter, public :: NEUTRON_MOLAR_MASS=1.00866491560e-3_dp !< kg mol^-1
-real(dp), parameter, public :: U_NEUTRON_MOLAR_MASS=0.00000000057e-3_dp !< kg mol^-1
+real(dp), parameter, public :: NEUTRON_MOLAR_MASS=1.00866491712e-3_dp !< kg mol^-1
+real(dp), parameter, public :: U_NEUTRON_MOLAR_MASS=0.00000000051e-3_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="NEUTRON_MOLAR_MASS"):: &
-capi_241=NEUTRON_MOLAR_MASS !< C API kg mol^-1
+capi_242=NEUTRON_MOLAR_MASS !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_NEUTRON_MOLAR_MASS") :: &
-capi_U_241=U_NEUTRON_MOLAR_MASS !< C API kg mol^-1
+capi_U_242=U_NEUTRON_MOLAR_MASS !< C API kg mol^-1
 
-real(dp), parameter, public :: NEUTRON_MUON_MASS_RATIO=8.89248406_dp !< dimensionless
+real(dp), parameter, public :: NEUTRON_MUON_MASS_RATIO=8.89248408_dp !< dimensionless
 real(dp), parameter, public :: U_NEUTRON_MUON_MASS_RATIO=0.00000020_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_MUON_MASS_RATIO"):: &
-capi_242=NEUTRON_MUON_MASS_RATIO !< C API dimensionless
+capi_243=NEUTRON_MUON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_MUON_MASS_RATIO") :: &
-capi_U_242=U_NEUTRON_MUON_MASS_RATIO !< C API dimensionless
+capi_U_243=U_NEUTRON_MUON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: NEUTRON_PROTON_MAG__MOM__RATIO=-0.68497934_dp !< dimensionless
+real(dp), parameter, public :: NEUTRON_PROTON_MAG__MOM__RATIO=-0.68497935_dp !< dimensionless
 real(dp), parameter, public :: U_NEUTRON_PROTON_MAG__MOM__RATIO=0.00000016_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_PROTON_MAG__MOM__RATIO"):: &
-capi_243=NEUTRON_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_244=NEUTRON_PROTON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_PROTON_MAG__MOM__RATIO") :: &
-capi_U_243=U_NEUTRON_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_244=U_NEUTRON_PROTON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE=2.30557435e-30_dp !< kg
-real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_DIFFERENCE=0.00000082e-30_dp !< kg
+real(dp), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE=2.30557461e-30_dp !< kg
+real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_DIFFERENCE=0.00000067e-30_dp !< kg
 
 real(cdp), protected, public, bind(C,name="NEUTRON_PROTON_MASS_DIFFERENCE"):: &
-capi_244=NEUTRON_PROTON_MASS_DIFFERENCE !< C API kg
+capi_245=NEUTRON_PROTON_MASS_DIFFERENCE !< C API kg
 real(cdp), protected, public, bind(C,name="U_NEUTRON_PROTON_MASS_DIFFERENCE") :: &
-capi_U_244=U_NEUTRON_PROTON_MASS_DIFFERENCE !< C API kg
+capi_U_245=U_NEUTRON_PROTON_MASS_DIFFERENCE !< C API kg
 
-real(dp), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT=2.07214689e-13_dp !< J
-real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT=0.00000074e-13_dp !< J
+real(dp), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT=2.07214712e-13_dp !< J
+real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT=0.00000060e-13_dp !< J
 
 real(cdp), protected, public, bind(C,name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT"):: &
-capi_245=NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT !< C API J
+capi_246=NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT") :: &
-capi_U_245=U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT !< C API J
+capi_U_246=U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT !< C API J
 
-real(dp), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV=1.29333236_dp !< MeV
-real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV=0.00000046_dp !< MeV
+real(dp), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV=1.29333251_dp !< MeV
+real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV=0.00000038_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV"):: &
-capi_246=NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_247=NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV") :: &
-capi_U_246=U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_U_247=U_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_IN_U=1.38844933e-3_dp !< u
-real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U=0.00000049e-3_dp !< u
+real(dp), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_IN_U=1.38844948e-3_dp !< u
+real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U=0.00000040e-3_dp !< u
 
 real(cdp), protected, public, bind(C,name="NEUTRON_PROTON_MASS_DIFFERENCE_IN_U"):: &
-capi_247=NEUTRON_PROTON_MASS_DIFFERENCE_IN_U !< C API u
+capi_248=NEUTRON_PROTON_MASS_DIFFERENCE_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U") :: &
-capi_U_247=U_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U !< C API u
+capi_U_248=U_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U !< C API u
 
-real(dp), parameter, public :: NEUTRON_PROTON_MASS_RATIO=1.00137841931_dp !< dimensionless
-real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_RATIO=0.00000000049_dp !< dimensionless
+real(dp), parameter, public :: NEUTRON_PROTON_MASS_RATIO=1.00137841946_dp !< dimensionless
+real(dp), parameter, public :: U_NEUTRON_PROTON_MASS_RATIO=0.00000000040_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_PROTON_MASS_RATIO"):: &
-capi_248=NEUTRON_PROTON_MASS_RATIO !< C API dimensionless
+capi_249=NEUTRON_PROTON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_PROTON_MASS_RATIO") :: &
-capi_U_248=U_NEUTRON_PROTON_MASS_RATIO !< C API dimensionless
+capi_U_249=U_NEUTRON_PROTON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: NEUTRON_RELATIVE_ATOMIC_MASS=1.00866491595_dp !< dimensionless
-real(dp), parameter, public :: U_NEUTRON_RELATIVE_ATOMIC_MASS=0.00000000049_dp !< dimensionless
+real(dp), parameter, public :: NEUTRON_RELATIVE_ATOMIC_MASS=1.00866491606_dp !< dimensionless
+real(dp), parameter, public :: U_NEUTRON_RELATIVE_ATOMIC_MASS=0.00000000040_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_RELATIVE_ATOMIC_MASS"):: &
-capi_249=NEUTRON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_250=NEUTRON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_RELATIVE_ATOMIC_MASS") :: &
-capi_U_249=U_NEUTRON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_U_250=U_NEUTRON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 
 real(dp), parameter, public :: NEUTRON_TAU_MASS_RATIO=0.528779_dp !< dimensionless
 real(dp), parameter, public :: U_NEUTRON_TAU_MASS_RATIO=0.000036_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_TAU_MASS_RATIO"):: &
-capi_250=NEUTRON_TAU_MASS_RATIO !< C API dimensionless
+capi_251=NEUTRON_TAU_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_TAU_MASS_RATIO") :: &
-capi_U_250=U_NEUTRON_TAU_MASS_RATIO !< C API dimensionless
+capi_U_251=U_NEUTRON_TAU_MASS_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO=-0.68499694_dp !< dimensionless
 real(dp), parameter, public :: U_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO=0.00000016_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO"):: &
-capi_251=NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_252=NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO") :: &
-capi_U_251=U_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_252=U_NEUTRON_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
 
 real(dp), parameter, public :: NEWTONIAN_CONSTANT_OF_GRAVITATION=6.67430e-11_dp !< m^3 kg^-1 s^-2
 real(dp), parameter, public :: U_NEWTONIAN_CONSTANT_OF_GRAVITATION=0.00015e-11_dp !< m^3 kg^-1 s^-2
 
 real(cdp), protected, public, bind(C,name="NEWTONIAN_CONSTANT_OF_GRAVITATION"):: &
-capi_252=NEWTONIAN_CONSTANT_OF_GRAVITATION !< C API m^3 kg^-1 s^-2
+capi_253=NEWTONIAN_CONSTANT_OF_GRAVITATION !< C API m^3 kg^-1 s^-2
 real(cdp), protected, public, bind(C,name="U_NEWTONIAN_CONSTANT_OF_GRAVITATION") :: &
-capi_U_252=U_NEWTONIAN_CONSTANT_OF_GRAVITATION !< C API m^3 kg^-1 s^-2
+capi_U_253=U_NEWTONIAN_CONSTANT_OF_GRAVITATION !< C API m^3 kg^-1 s^-2
 
 real(dp), parameter, public :: NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C=6.70883e-39_dp !< (GeV/c^2)^-2
 real(dp), parameter, public :: U_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C=0.00015e-39_dp !< (GeV/c^2)^-2
 
 real(cdp), protected, public, bind(C,name="NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C"):: &
-capi_253=NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C !< C API (GeV/c^2)^-2
+capi_254=NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C !< C API (GeV/c^2)^-2
 real(cdp), protected, public, bind(C,name="U_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C") :: &
-capi_U_253=U_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C !< C API (GeV/c^2)^-2
+capi_U_254=U_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C !< C API (GeV/c^2)^-2
 
-real(dp), parameter, public :: NUCLEAR_MAGNETON=5.0507837461e-27_dp !< J T^-1
-real(dp), parameter, public :: U_NUCLEAR_MAGNETON=0.0000000015e-27_dp !< J T^-1
+real(dp), parameter, public :: NUCLEAR_MAGNETON=5.0507837393e-27_dp !< J T^-1
+real(dp), parameter, public :: U_NUCLEAR_MAGNETON=0.0000000016e-27_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="NUCLEAR_MAGNETON"):: &
-capi_254=NUCLEAR_MAGNETON !< C API J T^-1
+capi_255=NUCLEAR_MAGNETON !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_NUCLEAR_MAGNETON") :: &
-capi_U_254=U_NUCLEAR_MAGNETON !< C API J T^-1
+capi_U_255=U_NUCLEAR_MAGNETON !< C API J T^-1
 
-real(dp), parameter, public :: NUCLEAR_MAGNETON_IN_EV_T=3.15245125844e-8_dp !< eV T^-1
-real(dp), parameter, public :: U_NUCLEAR_MAGNETON_IN_EV_T=0.00000000096e-8_dp !< eV T^-1
+real(dp), parameter, public :: NUCLEAR_MAGNETON_IN_EV_T=3.15245125417e-8_dp !< eV T^-1
+real(dp), parameter, public :: U_NUCLEAR_MAGNETON_IN_EV_T=0.00000000098e-8_dp !< eV T^-1
 
 real(cdp), protected, public, bind(C,name="NUCLEAR_MAGNETON_IN_EV_T"):: &
-capi_255=NUCLEAR_MAGNETON_IN_EV_T !< C API eV T^-1
+capi_256=NUCLEAR_MAGNETON_IN_EV_T !< C API eV T^-1
 real(cdp), protected, public, bind(C,name="U_NUCLEAR_MAGNETON_IN_EV_T") :: &
-capi_U_255=U_NUCLEAR_MAGNETON_IN_EV_T !< C API eV T^-1
+capi_U_256=U_NUCLEAR_MAGNETON_IN_EV_T !< C API eV T^-1
 
-real(dp), parameter, public :: NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA=2.54262341353e-2_dp !< m^-1 T^-1
-real(dp), parameter, public :: U_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA=0.00000000078e-2_dp !< m^-1 T^-1
+real(dp), parameter, public :: NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA=2.54262341009e-2_dp !< m^-1 T^-1
+real(dp), parameter, public :: U_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA=0.00000000079e-2_dp !< m^-1 T^-1
 
 real(cdp), protected, public, bind(C,name="NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA"):: &
-capi_256=NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA !< C API m^-1 T^-1
+capi_257=NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA !< C API m^-1 T^-1
 real(cdp), protected, public, bind(C,name="U_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA") :: &
-capi_U_256=U_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA !< C API m^-1 T^-1
+capi_U_257=U_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA !< C API m^-1 T^-1
 
-real(dp), parameter, public :: NUCLEAR_MAGNETON_IN_K_T=3.6582677756e-4_dp !< K T^-1
+real(dp), parameter, public :: NUCLEAR_MAGNETON_IN_K_T=3.6582677706e-4_dp !< K T^-1
 real(dp), parameter, public :: U_NUCLEAR_MAGNETON_IN_K_T=0.0000000011e-4_dp !< K T^-1
 
 real(cdp), protected, public, bind(C,name="NUCLEAR_MAGNETON_IN_K_T"):: &
-capi_257=NUCLEAR_MAGNETON_IN_K_T !< C API K T^-1
+capi_258=NUCLEAR_MAGNETON_IN_K_T !< C API K T^-1
 real(cdp), protected, public, bind(C,name="U_NUCLEAR_MAGNETON_IN_K_T") :: &
-capi_U_257=U_NUCLEAR_MAGNETON_IN_K_T !< C API K T^-1
+capi_U_258=U_NUCLEAR_MAGNETON_IN_K_T !< C API K T^-1
 
-real(dp), parameter, public :: NUCLEAR_MAGNETON_IN_MHZ_T=7.6225932291_dp !< MHz T^-1
-real(dp), parameter, public :: U_NUCLEAR_MAGNETON_IN_MHZ_T=0.0000000023_dp !< MHz T^-1
+real(dp), parameter, public :: NUCLEAR_MAGNETON_IN_MHZ_T=7.6225932188_dp !< MHz T^-1
+real(dp), parameter, public :: U_NUCLEAR_MAGNETON_IN_MHZ_T=0.0000000024_dp !< MHz T^-1
 
 real(cdp), protected, public, bind(C,name="NUCLEAR_MAGNETON_IN_MHZ_T"):: &
-capi_258=NUCLEAR_MAGNETON_IN_MHZ_T !< C API MHz T^-1
+capi_259=NUCLEAR_MAGNETON_IN_MHZ_T !< C API MHz T^-1
 real(cdp), protected, public, bind(C,name="U_NUCLEAR_MAGNETON_IN_MHZ_T") :: &
-capi_U_258=U_NUCLEAR_MAGNETON_IN_MHZ_T !< C API MHz T^-1
+capi_U_259=U_NUCLEAR_MAGNETON_IN_MHZ_T !< C API MHz T^-1
 
 real(dp), parameter, public :: PLANCK_CONSTANT=6.62607015e-34_dp !< J Hz^-1
 real(dp), parameter, public :: U_PLANCK_CONSTANT=0.0_dp !< J Hz^-1
 
 real(cdp), protected, public, bind(C,name="PLANCK_CONSTANT"):: &
-capi_259=PLANCK_CONSTANT !< C API J Hz^-1
+capi_260=PLANCK_CONSTANT !< C API J Hz^-1
 real(cdp), protected, public, bind(C,name="U_PLANCK_CONSTANT") :: &
-capi_U_259=U_PLANCK_CONSTANT !< C API J Hz^-1
+capi_U_260=U_PLANCK_CONSTANT !< C API J Hz^-1
 
 real(dp), parameter, public :: PLANCK_CONSTANT_IN_EV_HZ=4.135667696e-15_dp !< eV Hz^-1
 real(dp), parameter, public :: U_PLANCK_CONSTANT_IN_EV_HZ=0.0_dp !< eV Hz^-1
 
 real(cdp), protected, public, bind(C,name="PLANCK_CONSTANT_IN_EV_HZ"):: &
-capi_260=PLANCK_CONSTANT_IN_EV_HZ !< C API eV Hz^-1
+capi_261=PLANCK_CONSTANT_IN_EV_HZ !< C API eV Hz^-1
 real(cdp), protected, public, bind(C,name="U_PLANCK_CONSTANT_IN_EV_HZ") :: &
-capi_U_260=U_PLANCK_CONSTANT_IN_EV_HZ !< C API eV Hz^-1
+capi_U_261=U_PLANCK_CONSTANT_IN_EV_HZ !< C API eV Hz^-1
 
 real(dp), parameter, public :: PLANCK_LENGTH=1.616255e-35_dp !< m
 real(dp), parameter, public :: U_PLANCK_LENGTH=0.000018e-35_dp !< m
 
 real(cdp), protected, public, bind(C,name="PLANCK_LENGTH"):: &
-capi_261=PLANCK_LENGTH !< C API m
+capi_262=PLANCK_LENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_PLANCK_LENGTH") :: &
-capi_U_261=U_PLANCK_LENGTH !< C API m
+capi_U_262=U_PLANCK_LENGTH !< C API m
 
 real(dp), parameter, public :: PLANCK_MASS=2.176434e-8_dp !< kg
 real(dp), parameter, public :: U_PLANCK_MASS=0.000024e-8_dp !< kg
 
 real(cdp), protected, public, bind(C,name="PLANCK_MASS"):: &
-capi_262=PLANCK_MASS !< C API kg
+capi_263=PLANCK_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_PLANCK_MASS") :: &
-capi_U_262=U_PLANCK_MASS !< C API kg
+capi_U_263=U_PLANCK_MASS !< C API kg
 
 real(dp), parameter, public :: PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV=1.220890e19_dp !< GeV
 real(dp), parameter, public :: U_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV=0.000014e19_dp !< GeV
 
 real(cdp), protected, public, bind(C,name="PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV"):: &
-capi_263=PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV !< C API GeV
+capi_264=PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV !< C API GeV
 real(cdp), protected, public, bind(C,name="U_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV") :: &
-capi_U_263=U_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV !< C API GeV
+capi_U_264=U_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV !< C API GeV
 
 real(dp), parameter, public :: PLANCK_TEMPERATURE=1.416784e32_dp !< K
 real(dp), parameter, public :: U_PLANCK_TEMPERATURE=0.000016e32_dp !< K
 
 real(cdp), protected, public, bind(C,name="PLANCK_TEMPERATURE"):: &
-capi_264=PLANCK_TEMPERATURE !< C API K
+capi_265=PLANCK_TEMPERATURE !< C API K
 real(cdp), protected, public, bind(C,name="U_PLANCK_TEMPERATURE") :: &
-capi_U_264=U_PLANCK_TEMPERATURE !< C API K
+capi_U_265=U_PLANCK_TEMPERATURE !< C API K
 
 real(dp), parameter, public :: PLANCK_TIME=5.391247e-44_dp !< s
 real(dp), parameter, public :: U_PLANCK_TIME=0.000060e-44_dp !< s
 
 real(cdp), protected, public, bind(C,name="PLANCK_TIME"):: &
-capi_265=PLANCK_TIME !< C API s
+capi_266=PLANCK_TIME !< C API s
 real(cdp), protected, public, bind(C,name="U_PLANCK_TIME") :: &
-capi_U_265=U_PLANCK_TIME !< C API s
+capi_U_266=U_PLANCK_TIME !< C API s
 
-real(dp), parameter, public :: PROTON_CHARGE_TO_MASS_QUOTIENT=9.5788331560e7_dp !< C kg^-1
-real(dp), parameter, public :: U_PROTON_CHARGE_TO_MASS_QUOTIENT=0.0000000029e7_dp !< C kg^-1
+real(dp), parameter, public :: PROTON_CHARGE_TO_MASS_QUOTIENT=9.5788331430e7_dp !< C kg^-1
+real(dp), parameter, public :: U_PROTON_CHARGE_TO_MASS_QUOTIENT=0.0000000030e7_dp !< C kg^-1
 
 real(cdp), protected, public, bind(C,name="PROTON_CHARGE_TO_MASS_QUOTIENT"):: &
-capi_266=PROTON_CHARGE_TO_MASS_QUOTIENT !< C API C kg^-1
+capi_267=PROTON_CHARGE_TO_MASS_QUOTIENT !< C API C kg^-1
 real(cdp), protected, public, bind(C,name="U_PROTON_CHARGE_TO_MASS_QUOTIENT") :: &
-capi_U_266=U_PROTON_CHARGE_TO_MASS_QUOTIENT !< C API C kg^-1
+capi_U_267=U_PROTON_CHARGE_TO_MASS_QUOTIENT !< C API C kg^-1
 
-real(dp), parameter, public :: PROTON_COMPTON_WAVELENGTH=1.32140985539e-15_dp !< m
-real(dp), parameter, public :: U_PROTON_COMPTON_WAVELENGTH=0.00000000040e-15_dp !< m
+real(dp), parameter, public :: PROTON_COMPTON_WAVELENGTH=1.32140985360e-15_dp !< m
+real(dp), parameter, public :: U_PROTON_COMPTON_WAVELENGTH=0.00000000041e-15_dp !< m
 
 real(cdp), protected, public, bind(C,name="PROTON_COMPTON_WAVELENGTH"):: &
-capi_267=PROTON_COMPTON_WAVELENGTH !< C API m
+capi_268=PROTON_COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_PROTON_COMPTON_WAVELENGTH") :: &
-capi_U_267=U_PROTON_COMPTON_WAVELENGTH !< C API m
+capi_U_268=U_PROTON_COMPTON_WAVELENGTH !< C API m
 
-real(dp), parameter, public :: PROTON_ELECTRON_MASS_RATIO=1836.15267343_dp !< dimensionless
-real(dp), parameter, public :: U_PROTON_ELECTRON_MASS_RATIO=0.00000011_dp !< dimensionless
+real(dp), parameter, public :: PROTON_ELECTRON_MASS_RATIO=1836.152673426_dp !< dimensionless
+real(dp), parameter, public :: U_PROTON_ELECTRON_MASS_RATIO=0.000000032_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_ELECTRON_MASS_RATIO"):: &
-capi_268=PROTON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_269=PROTON_ELECTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_ELECTRON_MASS_RATIO") :: &
-capi_U_268=U_PROTON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_U_269=U_PROTON_ELECTRON_MASS_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: PROTON_G_FACTOR=5.5856946893_dp !< dimensionless
 real(dp), parameter, public :: U_PROTON_G_FACTOR=0.0000000016_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_G_FACTOR"):: &
-capi_269=PROTON_G_FACTOR !< C API dimensionless
+capi_270=PROTON_G_FACTOR !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_G_FACTOR") :: &
-capi_U_269=U_PROTON_G_FACTOR !< C API dimensionless
+capi_U_270=U_PROTON_G_FACTOR !< C API dimensionless
 
-real(dp), parameter, public :: PROTON_GYROMAG__RATIO=2.6752218744e8_dp !< s^-1 T^-1
+real(dp), parameter, public :: PROTON_GYROMAG__RATIO=2.6752218708e8_dp !< s^-1 T^-1
 real(dp), parameter, public :: U_PROTON_GYROMAG__RATIO=0.0000000011e8_dp !< s^-1 T^-1
 
 real(cdp), protected, public, bind(C,name="PROTON_GYROMAG__RATIO"):: &
-capi_270=PROTON_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_271=PROTON_GYROMAG__RATIO !< C API s^-1 T^-1
 real(cdp), protected, public, bind(C,name="U_PROTON_GYROMAG__RATIO") :: &
-capi_U_270=U_PROTON_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_U_271=U_PROTON_GYROMAG__RATIO !< C API s^-1 T^-1
 
-real(dp), parameter, public :: PROTON_GYROMAG__RATIO_IN_MHZ_T=42.577478518_dp !< MHz T^-1
+real(dp), parameter, public :: PROTON_GYROMAG__RATIO_IN_MHZ_T=42.577478461_dp !< MHz T^-1
 real(dp), parameter, public :: U_PROTON_GYROMAG__RATIO_IN_MHZ_T=0.000000018_dp !< MHz T^-1
 
 real(cdp), protected, public, bind(C,name="PROTON_GYROMAG__RATIO_IN_MHZ_T"):: &
-capi_271=PROTON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_272=PROTON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 real(cdp), protected, public, bind(C,name="U_PROTON_GYROMAG__RATIO_IN_MHZ_T") :: &
-capi_U_271=U_PROTON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_U_272=U_PROTON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 
-real(dp), parameter, public :: PROTON_MAG__MOM=1.41060679736e-26_dp !< J T^-1
+real(dp), parameter, public :: PROTON_MAG__MOM=1.41060679545e-26_dp !< J T^-1
 real(dp), parameter, public :: U_PROTON_MAG__MOM=0.00000000060e-26_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="PROTON_MAG__MOM"):: &
-capi_272=PROTON_MAG__MOM !< C API J T^-1
+capi_273=PROTON_MAG__MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_PROTON_MAG__MOM") :: &
-capi_U_272=U_PROTON_MAG__MOM !< C API J T^-1
+capi_U_273=U_PROTON_MAG__MOM !< C API J T^-1
 
 real(dp), parameter, public :: PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=1.52103220230e-3_dp !< dimensionless
-real(dp), parameter, public :: U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.00000000046e-3_dp !< dimensionless
+real(dp), parameter, public :: U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.00000000045e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO"):: &
-capi_273=PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_274=PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO") :: &
-capi_U_273=U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_U_274=U_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=2.79284734463_dp !< dimensionless
 real(dp), parameter, public :: U_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.00000000082_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO"):: &
-capi_274=PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_275=PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO") :: &
-capi_U_274=U_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_U_275=U_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: PROTON_MAG__SHIELDING_CORRECTION=2.5689e-5_dp !< dimensionless
-real(dp), parameter, public :: U_PROTON_MAG__SHIELDING_CORRECTION=0.0011e-5_dp !< dimensionless
+real(dp), parameter, public :: PROTON_MAG__SHIELDING_CORRECTION=2.56715e-5_dp !< dimensionless
+real(dp), parameter, public :: U_PROTON_MAG__SHIELDING_CORRECTION=0.00041e-5_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_MAG__SHIELDING_CORRECTION"):: &
-capi_275=PROTON_MAG__SHIELDING_CORRECTION !< C API dimensionless
+capi_276=PROTON_MAG__SHIELDING_CORRECTION !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_MAG__SHIELDING_CORRECTION") :: &
-capi_U_275=U_PROTON_MAG__SHIELDING_CORRECTION !< C API dimensionless
+capi_U_276=U_PROTON_MAG__SHIELDING_CORRECTION !< C API dimensionless
 
-real(dp), parameter, public :: PROTON_MASS=1.67262192369e-27_dp !< kg
-real(dp), parameter, public :: U_PROTON_MASS=0.00000000051e-27_dp !< kg
+real(dp), parameter, public :: PROTON_MASS=1.67262192595e-27_dp !< kg
+real(dp), parameter, public :: U_PROTON_MASS=0.00000000052e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="PROTON_MASS"):: &
-capi_276=PROTON_MASS !< C API kg
+capi_277=PROTON_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_PROTON_MASS") :: &
-capi_U_276=U_PROTON_MASS !< C API kg
+capi_U_277=U_PROTON_MASS !< C API kg
 
-real(dp), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT=1.50327761598e-10_dp !< J
-real(dp), parameter, public :: U_PROTON_MASS_ENERGY_EQUIVALENT=0.00000000046e-10_dp !< J
+real(dp), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT=1.50327761802e-10_dp !< J
+real(dp), parameter, public :: U_PROTON_MASS_ENERGY_EQUIVALENT=0.00000000047e-10_dp !< J
 
 real(cdp), protected, public, bind(C,name="PROTON_MASS_ENERGY_EQUIVALENT"):: &
-capi_277=PROTON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_278=PROTON_MASS_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_PROTON_MASS_ENERGY_EQUIVALENT") :: &
-capi_U_277=U_PROTON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_U_278=U_PROTON_MASS_ENERGY_EQUIVALENT !< C API J
 
-real(dp), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV=938.27208816_dp !< MeV
+real(dp), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV=938.27208943_dp !< MeV
 real(dp), parameter, public :: U_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000029_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV"):: &
-capi_278=PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_279=PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV") :: &
-capi_U_278=U_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_U_279=U_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: PROTON_MASS_IN_U=1.007276466621_dp !< u
-real(dp), parameter, public :: U_PROTON_MASS_IN_U=0.000000000053_dp !< u
+real(dp), parameter, public :: PROTON_MASS_IN_U=1.0072764665789_dp !< u
+real(dp), parameter, public :: U_PROTON_MASS_IN_U=0.0000000000083_dp !< u
 
 real(cdp), protected, public, bind(C,name="PROTON_MASS_IN_U"):: &
-capi_279=PROTON_MASS_IN_U !< C API u
+capi_280=PROTON_MASS_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_PROTON_MASS_IN_U") :: &
-capi_U_279=U_PROTON_MASS_IN_U !< C API u
+capi_U_280=U_PROTON_MASS_IN_U !< C API u
 
-real(dp), parameter, public :: PROTON_MOLAR_MASS=1.00727646627e-3_dp !< kg mol^-1
+real(dp), parameter, public :: PROTON_MOLAR_MASS=1.00727646764e-3_dp !< kg mol^-1
 real(dp), parameter, public :: U_PROTON_MOLAR_MASS=0.00000000031e-3_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="PROTON_MOLAR_MASS"):: &
-capi_280=PROTON_MOLAR_MASS !< C API kg mol^-1
+capi_281=PROTON_MOLAR_MASS !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_PROTON_MOLAR_MASS") :: &
-capi_U_280=U_PROTON_MOLAR_MASS !< C API kg mol^-1
+capi_U_281=U_PROTON_MOLAR_MASS !< C API kg mol^-1
 
-real(dp), parameter, public :: PROTON_MUON_MASS_RATIO=8.88024337_dp !< dimensionless
+real(dp), parameter, public :: PROTON_MUON_MASS_RATIO=8.88024338_dp !< dimensionless
 real(dp), parameter, public :: U_PROTON_MUON_MASS_RATIO=0.00000020_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_MUON_MASS_RATIO"):: &
-capi_281=PROTON_MUON_MASS_RATIO !< C API dimensionless
+capi_282=PROTON_MUON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_MUON_MASS_RATIO") :: &
-capi_U_281=U_PROTON_MUON_MASS_RATIO !< C API dimensionless
+capi_U_282=U_PROTON_MUON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: PROTON_NEUTRON_MAG__MOM__RATIO=-1.45989805_dp !< dimensionless
+real(dp), parameter, public :: PROTON_NEUTRON_MAG__MOM__RATIO=-1.45989802_dp !< dimensionless
 real(dp), parameter, public :: U_PROTON_NEUTRON_MAG__MOM__RATIO=0.00000034_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_NEUTRON_MAG__MOM__RATIO"):: &
-capi_282=PROTON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_283=PROTON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_NEUTRON_MAG__MOM__RATIO") :: &
-capi_U_282=U_PROTON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_283=U_PROTON_NEUTRON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: PROTON_NEUTRON_MASS_RATIO=0.99862347812_dp !< dimensionless
-real(dp), parameter, public :: U_PROTON_NEUTRON_MASS_RATIO=0.00000000049_dp !< dimensionless
+real(dp), parameter, public :: PROTON_NEUTRON_MASS_RATIO=0.99862347797_dp !< dimensionless
+real(dp), parameter, public :: U_PROTON_NEUTRON_MASS_RATIO=0.00000000040_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_NEUTRON_MASS_RATIO"):: &
-capi_283=PROTON_NEUTRON_MASS_RATIO !< C API dimensionless
+capi_284=PROTON_NEUTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_NEUTRON_MASS_RATIO") :: &
-capi_U_283=U_PROTON_NEUTRON_MASS_RATIO !< C API dimensionless
+capi_U_284=U_PROTON_NEUTRON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: PROTON_RELATIVE_ATOMIC_MASS=1.007276466621_dp !< dimensionless
-real(dp), parameter, public :: U_PROTON_RELATIVE_ATOMIC_MASS=0.000000000053_dp !< dimensionless
+real(dp), parameter, public :: PROTON_RELATIVE_ATOMIC_MASS=1.0072764665789_dp !< dimensionless
+real(dp), parameter, public :: U_PROTON_RELATIVE_ATOMIC_MASS=0.0000000000083_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_RELATIVE_ATOMIC_MASS"):: &
-capi_284=PROTON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_285=PROTON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_RELATIVE_ATOMIC_MASS") :: &
-capi_U_284=U_PROTON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_U_285=U_PROTON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 
-real(dp), parameter, public :: PROTON_RMS_CHARGE_RADIUS=8.414e-16_dp !< m
-real(dp), parameter, public :: U_PROTON_RMS_CHARGE_RADIUS=0.019e-16_dp !< m
+real(dp), parameter, public :: PROTON_RMS_CHARGE_RADIUS=8.4075e-16_dp !< m
+real(dp), parameter, public :: U_PROTON_RMS_CHARGE_RADIUS=0.0064e-16_dp !< m
 
 real(cdp), protected, public, bind(C,name="PROTON_RMS_CHARGE_RADIUS"):: &
-capi_285=PROTON_RMS_CHARGE_RADIUS !< C API m
+capi_286=PROTON_RMS_CHARGE_RADIUS !< C API m
 real(cdp), protected, public, bind(C,name="U_PROTON_RMS_CHARGE_RADIUS") :: &
-capi_U_285=U_PROTON_RMS_CHARGE_RADIUS !< C API m
+capi_U_286=U_PROTON_RMS_CHARGE_RADIUS !< C API m
 
 real(dp), parameter, public :: PROTON_TAU_MASS_RATIO=0.528051_dp !< dimensionless
 real(dp), parameter, public :: U_PROTON_TAU_MASS_RATIO=0.000036_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="PROTON_TAU_MASS_RATIO"):: &
-capi_286=PROTON_TAU_MASS_RATIO !< C API dimensionless
+capi_287=PROTON_TAU_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_PROTON_TAU_MASS_RATIO") :: &
-capi_U_286=U_PROTON_TAU_MASS_RATIO !< C API dimensionless
+capi_U_287=U_PROTON_TAU_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: QUANTUM_OF_CIRCULATION=3.6369475516e-4_dp !< m^2 s^-1
+real(dp), parameter, public :: QUANTUM_OF_CIRCULATION=3.6369475467e-4_dp !< m^2 s^-1
 real(dp), parameter, public :: U_QUANTUM_OF_CIRCULATION=0.0000000011e-4_dp !< m^2 s^-1
 
 real(cdp), protected, public, bind(C,name="QUANTUM_OF_CIRCULATION"):: &
-capi_287=QUANTUM_OF_CIRCULATION !< C API m^2 s^-1
+capi_288=QUANTUM_OF_CIRCULATION !< C API m^2 s^-1
 real(cdp), protected, public, bind(C,name="U_QUANTUM_OF_CIRCULATION") :: &
-capi_U_287=U_QUANTUM_OF_CIRCULATION !< C API m^2 s^-1
+capi_U_288=U_QUANTUM_OF_CIRCULATION !< C API m^2 s^-1
 
-real(dp), parameter, public :: QUANTUM_OF_CIRCULATION_TIMES_2=7.2738951032e-4_dp !< m^2 s^-1
-real(dp), parameter, public :: U_QUANTUM_OF_CIRCULATION_TIMES_2=0.0000000022e-4_dp !< m^2 s^-1
+real(dp), parameter, public :: QUANTUM_OF_CIRCULATION_TIMES_2=7.2738950934e-4_dp !< m^2 s^-1
+real(dp), parameter, public :: U_QUANTUM_OF_CIRCULATION_TIMES_2=0.0000000023e-4_dp !< m^2 s^-1
 
 real(cdp), protected, public, bind(C,name="QUANTUM_OF_CIRCULATION_TIMES_2"):: &
-capi_288=QUANTUM_OF_CIRCULATION_TIMES_2 !< C API m^2 s^-1
+capi_289=QUANTUM_OF_CIRCULATION_TIMES_2 !< C API m^2 s^-1
 real(cdp), protected, public, bind(C,name="U_QUANTUM_OF_CIRCULATION_TIMES_2") :: &
-capi_U_288=U_QUANTUM_OF_CIRCULATION_TIMES_2 !< C API m^2 s^-1
+capi_U_289=U_QUANTUM_OF_CIRCULATION_TIMES_2 !< C API m^2 s^-1
 
-real(dp), parameter, public :: REDUCED_COMPTON_WAVELENGTH=3.8615926796e-13_dp !< m
+real(dp), parameter, public :: REDUCED_COMPTON_WAVELENGTH=3.8615926744e-13_dp !< m
 real(dp), parameter, public :: U_REDUCED_COMPTON_WAVELENGTH=0.0000000012e-13_dp !< m
 
 real(cdp), protected, public, bind(C,name="REDUCED_COMPTON_WAVELENGTH"):: &
-capi_289=REDUCED_COMPTON_WAVELENGTH !< C API m
+capi_290=REDUCED_COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_REDUCED_COMPTON_WAVELENGTH") :: &
-capi_U_289=U_REDUCED_COMPTON_WAVELENGTH !< C API m
+capi_U_290=U_REDUCED_COMPTON_WAVELENGTH !< C API m
 
 real(dp), parameter, public :: REDUCED_MUON_COMPTON_WAVELENGTH=1.867594306e-15_dp !< m
 real(dp), parameter, public :: U_REDUCED_MUON_COMPTON_WAVELENGTH=0.000000042e-15_dp !< m
 
 real(cdp), protected, public, bind(C,name="REDUCED_MUON_COMPTON_WAVELENGTH"):: &
-capi_290=REDUCED_MUON_COMPTON_WAVELENGTH !< C API m
+capi_291=REDUCED_MUON_COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_REDUCED_MUON_COMPTON_WAVELENGTH") :: &
-capi_U_290=U_REDUCED_MUON_COMPTON_WAVELENGTH !< C API m
+capi_U_291=U_REDUCED_MUON_COMPTON_WAVELENGTH !< C API m
 
-real(dp), parameter, public :: REDUCED_NEUTRON_COMPTON_WAVELENGTH=2.1001941552e-16_dp !< m
-real(dp), parameter, public :: U_REDUCED_NEUTRON_COMPTON_WAVELENGTH=0.0000000012e-16_dp !< m
+real(dp), parameter, public :: REDUCED_NEUTRON_COMPTON_WAVELENGTH=2.1001941520e-16_dp !< m
+real(dp), parameter, public :: U_REDUCED_NEUTRON_COMPTON_WAVELENGTH=0.0000000011e-16_dp !< m
 
 real(cdp), protected, public, bind(C,name="REDUCED_NEUTRON_COMPTON_WAVELENGTH"):: &
-capi_291=REDUCED_NEUTRON_COMPTON_WAVELENGTH !< C API m
+capi_292=REDUCED_NEUTRON_COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_REDUCED_NEUTRON_COMPTON_WAVELENGTH") :: &
-capi_U_291=U_REDUCED_NEUTRON_COMPTON_WAVELENGTH !< C API m
+capi_U_292=U_REDUCED_NEUTRON_COMPTON_WAVELENGTH !< C API m
 
 real(dp), parameter, public :: REDUCED_PLANCK_CONSTANT=1.054571817e-34_dp !< J s
 real(dp), parameter, public :: U_REDUCED_PLANCK_CONSTANT=0.0_dp !< J s
 
 real(cdp), protected, public, bind(C,name="REDUCED_PLANCK_CONSTANT"):: &
-capi_292=REDUCED_PLANCK_CONSTANT !< C API J s
+capi_293=REDUCED_PLANCK_CONSTANT !< C API J s
 real(cdp), protected, public, bind(C,name="U_REDUCED_PLANCK_CONSTANT") :: &
-capi_U_292=U_REDUCED_PLANCK_CONSTANT !< C API J s
+capi_U_293=U_REDUCED_PLANCK_CONSTANT !< C API J s
 
 real(dp), parameter, public :: REDUCED_PLANCK_CONSTANT_IN_EV_S=6.582119569e-16_dp !< eV s
 real(dp), parameter, public :: U_REDUCED_PLANCK_CONSTANT_IN_EV_S=0.0_dp !< eV s
 
 real(cdp), protected, public, bind(C,name="REDUCED_PLANCK_CONSTANT_IN_EV_S"):: &
-capi_293=REDUCED_PLANCK_CONSTANT_IN_EV_S !< C API eV s
+capi_294=REDUCED_PLANCK_CONSTANT_IN_EV_S !< C API eV s
 real(cdp), protected, public, bind(C,name="U_REDUCED_PLANCK_CONSTANT_IN_EV_S") :: &
-capi_U_293=U_REDUCED_PLANCK_CONSTANT_IN_EV_S !< C API eV s
+capi_U_294=U_REDUCED_PLANCK_CONSTANT_IN_EV_S !< C API eV s
 
 real(dp), parameter, public :: REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM=197.3269804_dp !< MeV fm
 real(dp), parameter, public :: U_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM=0.0_dp !< MeV fm
 
 real(cdp), protected, public, bind(C,name="REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM"):: &
-capi_294=REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM !< C API MeV fm
+capi_295=REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM !< C API MeV fm
 real(cdp), protected, public, bind(C,name="U_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM") :: &
-capi_U_294=U_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM !< C API MeV fm
+capi_U_295=U_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM !< C API MeV fm
 
-real(dp), parameter, public :: REDUCED_PROTON_COMPTON_WAVELENGTH=2.10308910336e-16_dp !< m
-real(dp), parameter, public :: U_REDUCED_PROTON_COMPTON_WAVELENGTH=0.00000000064e-16_dp !< m
+real(dp), parameter, public :: REDUCED_PROTON_COMPTON_WAVELENGTH=2.10308910051e-16_dp !< m
+real(dp), parameter, public :: U_REDUCED_PROTON_COMPTON_WAVELENGTH=0.00000000066e-16_dp !< m
 
 real(cdp), protected, public, bind(C,name="REDUCED_PROTON_COMPTON_WAVELENGTH"):: &
-capi_295=REDUCED_PROTON_COMPTON_WAVELENGTH !< C API m
+capi_296=REDUCED_PROTON_COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_REDUCED_PROTON_COMPTON_WAVELENGTH") :: &
-capi_U_295=U_REDUCED_PROTON_COMPTON_WAVELENGTH !< C API m
+capi_U_296=U_REDUCED_PROTON_COMPTON_WAVELENGTH !< C API m
 
 real(dp), parameter, public :: REDUCED_TAU_COMPTON_WAVELENGTH=1.110538e-16_dp !< m
 real(dp), parameter, public :: U_REDUCED_TAU_COMPTON_WAVELENGTH=0.000075e-16_dp !< m
 
 real(cdp), protected, public, bind(C,name="REDUCED_TAU_COMPTON_WAVELENGTH"):: &
-capi_296=REDUCED_TAU_COMPTON_WAVELENGTH !< C API m
+capi_297=REDUCED_TAU_COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_REDUCED_TAU_COMPTON_WAVELENGTH") :: &
-capi_U_296=U_REDUCED_TAU_COMPTON_WAVELENGTH !< C API m
+capi_U_297=U_REDUCED_TAU_COMPTON_WAVELENGTH !< C API m
 
-real(dp), parameter, public :: RYDBERG_CONSTANT=10973731.568160_dp !< m^-1
-real(dp), parameter, public :: U_RYDBERG_CONSTANT=0.000021_dp !< m^-1
+real(dp), parameter, public :: RYDBERG_CONSTANT=10973731.568157_dp !< m^-1
+real(dp), parameter, public :: U_RYDBERG_CONSTANT=0.000012_dp !< m^-1
 
 real(cdp), protected, public, bind(C,name="RYDBERG_CONSTANT"):: &
-capi_297=RYDBERG_CONSTANT !< C API m^-1
+capi_298=RYDBERG_CONSTANT !< C API m^-1
 real(cdp), protected, public, bind(C,name="U_RYDBERG_CONSTANT") :: &
-capi_U_297=U_RYDBERG_CONSTANT !< C API m^-1
+capi_U_298=U_RYDBERG_CONSTANT !< C API m^-1
 
-real(dp), parameter, public :: RYDBERG_CONSTANT_TIMES_C_IN_HZ=3.2898419602508e15_dp !< Hz
-real(dp), parameter, public :: U_RYDBERG_CONSTANT_TIMES_C_IN_HZ=0.0000000000064e15_dp !< Hz
+real(dp), parameter, public :: RYDBERG_CONSTANT_TIMES_C_IN_HZ=3.2898419602500e15_dp !< Hz
+real(dp), parameter, public :: U_RYDBERG_CONSTANT_TIMES_C_IN_HZ=0.0000000000036e15_dp !< Hz
 
 real(cdp), protected, public, bind(C,name="RYDBERG_CONSTANT_TIMES_C_IN_HZ"):: &
-capi_298=RYDBERG_CONSTANT_TIMES_C_IN_HZ !< C API Hz
+capi_299=RYDBERG_CONSTANT_TIMES_C_IN_HZ !< C API Hz
 real(cdp), protected, public, bind(C,name="U_RYDBERG_CONSTANT_TIMES_C_IN_HZ") :: &
-capi_U_298=U_RYDBERG_CONSTANT_TIMES_C_IN_HZ !< C API Hz
+capi_U_299=U_RYDBERG_CONSTANT_TIMES_C_IN_HZ !< C API Hz
 
-real(dp), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_EV=13.605693122994_dp !< eV
-real(dp), parameter, public :: U_RYDBERG_CONSTANT_TIMES_HC_IN_EV=0.000000000026_dp !< eV
+real(dp), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_EV=13.605693122990_dp !< eV
+real(dp), parameter, public :: U_RYDBERG_CONSTANT_TIMES_HC_IN_EV=0.000000000015_dp !< eV
 
 real(cdp), protected, public, bind(C,name="RYDBERG_CONSTANT_TIMES_HC_IN_EV"):: &
-capi_299=RYDBERG_CONSTANT_TIMES_HC_IN_EV !< C API eV
+capi_300=RYDBERG_CONSTANT_TIMES_HC_IN_EV !< C API eV
 real(cdp), protected, public, bind(C,name="U_RYDBERG_CONSTANT_TIMES_HC_IN_EV") :: &
-capi_U_299=U_RYDBERG_CONSTANT_TIMES_HC_IN_EV !< C API eV
+capi_U_300=U_RYDBERG_CONSTANT_TIMES_HC_IN_EV !< C API eV
 
-real(dp), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_J=2.1798723611035e-18_dp !< J
-real(dp), parameter, public :: U_RYDBERG_CONSTANT_TIMES_HC_IN_J=0.0000000000042e-18_dp !< J
+real(dp), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_J=2.1798723611030e-18_dp !< J
+real(dp), parameter, public :: U_RYDBERG_CONSTANT_TIMES_HC_IN_J=0.0000000000024e-18_dp !< J
 
 real(cdp), protected, public, bind(C,name="RYDBERG_CONSTANT_TIMES_HC_IN_J"):: &
-capi_300=RYDBERG_CONSTANT_TIMES_HC_IN_J !< C API J
+capi_301=RYDBERG_CONSTANT_TIMES_HC_IN_J !< C API J
 real(cdp), protected, public, bind(C,name="U_RYDBERG_CONSTANT_TIMES_HC_IN_J") :: &
-capi_U_300=U_RYDBERG_CONSTANT_TIMES_HC_IN_J !< C API J
+capi_U_301=U_RYDBERG_CONSTANT_TIMES_HC_IN_J !< C API J
 
-real(dp), parameter, public :: SACKUR_TETRODE_CONSTANT__1_K__100_KPA=-1.15170753706_dp !< dimensionless
-real(dp), parameter, public :: U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA=0.00000000045_dp !< dimensionless
+real(dp), parameter, public :: SACKUR_TETRODE_CONSTANT__1_K__100_KPA=-1.15170753496_dp !< dimensionless
+real(dp), parameter, public :: U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA=0.00000000047_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SACKUR_TETRODE_CONSTANT__1_K__100_KPA"):: &
-capi_301=SACKUR_TETRODE_CONSTANT__1_K__100_KPA !< C API dimensionless
+capi_302=SACKUR_TETRODE_CONSTANT__1_K__100_KPA !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA") :: &
-capi_U_301=U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA !< C API dimensionless
+capi_U_302=U_SACKUR_TETRODE_CONSTANT__1_K__100_KPA !< C API dimensionless
 
-real(dp), parameter, public :: SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA=-1.16487052358_dp !< dimensionless
-real(dp), parameter, public :: U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA=0.00000000045_dp !< dimensionless
+real(dp), parameter, public :: SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA=-1.16487052149_dp !< dimensionless
+real(dp), parameter, public :: U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA=0.00000000047_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA"):: &
-capi_302=SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA !< C API dimensionless
+capi_303=SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA") :: &
-capi_U_302=U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA !< C API dimensionless
+capi_U_303=U_SACKUR_TETRODE_CONSTANT__1_K__101_325_KPA !< C API dimensionless
 
 real(dp), parameter, public :: SECOND_RADIATION_CONSTANT=1.438776877e-2_dp !< m K
 real(dp), parameter, public :: U_SECOND_RADIATION_CONSTANT=0.0_dp !< m K
 
 real(cdp), protected, public, bind(C,name="SECOND_RADIATION_CONSTANT"):: &
-capi_303=SECOND_RADIATION_CONSTANT !< C API m K
+capi_304=SECOND_RADIATION_CONSTANT !< C API m K
 real(cdp), protected, public, bind(C,name="U_SECOND_RADIATION_CONSTANT") :: &
-capi_U_303=U_SECOND_RADIATION_CONSTANT !< C API m K
+capi_U_304=U_SECOND_RADIATION_CONSTANT !< C API m K
 
-real(dp), parameter, public :: SHIELDED_HELION_GYROMAG__RATIO=2.037894569e8_dp !< s^-1 T^-1
-real(dp), parameter, public :: U_SHIELDED_HELION_GYROMAG__RATIO=0.000000024e8_dp !< s^-1 T^-1
+real(dp), parameter, public :: SHIELDED_HELION_GYROMAG__RATIO=2.0378946078e8_dp !< s^-1 T^-1
+real(dp), parameter, public :: U_SHIELDED_HELION_GYROMAG__RATIO=0.0000000018e8_dp !< s^-1 T^-1
 
 real(cdp), protected, public, bind(C,name="SHIELDED_HELION_GYROMAG__RATIO"):: &
-capi_304=SHIELDED_HELION_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_305=SHIELDED_HELION_GYROMAG__RATIO !< C API s^-1 T^-1
 real(cdp), protected, public, bind(C,name="U_SHIELDED_HELION_GYROMAG__RATIO") :: &
-capi_U_304=U_SHIELDED_HELION_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_U_305=U_SHIELDED_HELION_GYROMAG__RATIO !< C API s^-1 T^-1
 
-real(dp), parameter, public :: SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T=32.43409942_dp !< MHz T^-1
-real(dp), parameter, public :: U_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T=0.00000038_dp !< MHz T^-1
+real(dp), parameter, public :: SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T=32.434100033_dp !< MHz T^-1
+real(dp), parameter, public :: U_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T=0.000000028_dp !< MHz T^-1
 
 real(cdp), protected, public, bind(C,name="SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T"):: &
-capi_305=SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_306=SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 real(cdp), protected, public, bind(C,name="U_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T") :: &
-capi_U_305=U_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_U_306=U_SHIELDED_HELION_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 
-real(dp), parameter, public :: SHIELDED_HELION_MAG__MOM=-1.074553090e-26_dp !< J T^-1
-real(dp), parameter, public :: U_SHIELDED_HELION_MAG__MOM=0.000000013e-26_dp !< J T^-1
+real(dp), parameter, public :: SHIELDED_HELION_MAG__MOM=-1.07455311035e-26_dp !< J T^-1
+real(dp), parameter, public :: U_SHIELDED_HELION_MAG__MOM=0.00000000093e-26_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="SHIELDED_HELION_MAG__MOM"):: &
-capi_306=SHIELDED_HELION_MAG__MOM !< C API J T^-1
+capi_307=SHIELDED_HELION_MAG__MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_SHIELDED_HELION_MAG__MOM") :: &
-capi_U_306=U_SHIELDED_HELION_MAG__MOM !< C API J T^-1
+capi_U_307=U_SHIELDED_HELION_MAG__MOM !< C API J T^-1
 
-real(dp), parameter, public :: SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-1.158671471e-3_dp !< dimensionless
-real(dp), parameter, public :: U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.000000014e-3_dp !< dimensionless
+real(dp), parameter, public :: SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO=-1.15867149457e-3_dp !< dimensionless
+real(dp), parameter, public :: U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.00000000094e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO"):: &
-capi_307=SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_308=SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO") :: &
-capi_U_307=U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_U_308=U_SHIELDED_HELION_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-2.127497719_dp !< dimensionless
-real(dp), parameter, public :: U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.000000025_dp !< dimensionless
+real(dp), parameter, public :: SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=-2.1274977624_dp !< dimensionless
+real(dp), parameter, public :: U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.0000000017_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO"):: &
-capi_308=SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_309=SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO") :: &
-capi_U_308=U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_U_309=U_SHIELDED_HELION_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO=-0.7617665618_dp !< dimensionless
-real(dp), parameter, public :: U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO=0.0000000089_dp !< dimensionless
+real(dp), parameter, public :: SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO=-0.76176657721_dp !< dimensionless
+real(dp), parameter, public :: U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO=0.00000000066_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO"):: &
-capi_309=SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_310=SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO") :: &
-capi_U_309=U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_310=U_SHIELDED_HELION_TO_PROTON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO=-0.7617861313_dp !< dimensionless
-real(dp), parameter, public :: U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO=0.0000000033_dp !< dimensionless
+real(dp), parameter, public :: SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO=-0.7617861334_dp !< dimensionless
+real(dp), parameter, public :: U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO=0.0000000031_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO"):: &
-capi_310=SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_311=SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO") :: &
-capi_U_310=U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_311=U_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: SHIELDED_PROTON_GYROMAG__RATIO=2.675153151e8_dp !< s^-1 T^-1
-real(dp), parameter, public :: U_SHIELDED_PROTON_GYROMAG__RATIO=0.000000029e8_dp !< s^-1 T^-1
+real(dp), parameter, public :: SHIELDED_PROTON_GYROMAG__RATIO=2.675153194e8_dp !< s^-1 T^-1
+real(dp), parameter, public :: U_SHIELDED_PROTON_GYROMAG__RATIO=0.000000011e8_dp !< s^-1 T^-1
 
 real(cdp), protected, public, bind(C,name="SHIELDED_PROTON_GYROMAG__RATIO"):: &
-capi_311=SHIELDED_PROTON_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_312=SHIELDED_PROTON_GYROMAG__RATIO !< C API s^-1 T^-1
 real(cdp), protected, public, bind(C,name="U_SHIELDED_PROTON_GYROMAG__RATIO") :: &
-capi_U_311=U_SHIELDED_PROTON_GYROMAG__RATIO !< C API s^-1 T^-1
+capi_U_312=U_SHIELDED_PROTON_GYROMAG__RATIO !< C API s^-1 T^-1
 
-real(dp), parameter, public :: SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T=42.57638474_dp !< MHz T^-1
-real(dp), parameter, public :: U_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T=0.00000046_dp !< MHz T^-1
+real(dp), parameter, public :: SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T=42.57638543_dp !< MHz T^-1
+real(dp), parameter, public :: U_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T=0.00000017_dp !< MHz T^-1
 
 real(cdp), protected, public, bind(C,name="SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T"):: &
-capi_312=SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_313=SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 real(cdp), protected, public, bind(C,name="U_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T") :: &
-capi_U_312=U_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
+capi_U_313=U_SHIELDED_PROTON_GYROMAG__RATIO_IN_MHZ_T !< C API MHz T^-1
 
-real(dp), parameter, public :: SHIELDED_PROTON_MAG__MOM=1.410570560e-26_dp !< J T^-1
-real(dp), parameter, public :: U_SHIELDED_PROTON_MAG__MOM=0.000000015e-26_dp !< J T^-1
+real(dp), parameter, public :: SHIELDED_PROTON_MAG__MOM=1.4105705830e-26_dp !< J T^-1
+real(dp), parameter, public :: U_SHIELDED_PROTON_MAG__MOM=0.0000000058e-26_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="SHIELDED_PROTON_MAG__MOM"):: &
-capi_313=SHIELDED_PROTON_MAG__MOM !< C API J T^-1
+capi_314=SHIELDED_PROTON_MAG__MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_SHIELDED_PROTON_MAG__MOM") :: &
-capi_U_313=U_SHIELDED_PROTON_MAG__MOM !< C API J T^-1
+capi_U_314=U_SHIELDED_PROTON_MAG__MOM !< C API J T^-1
 
-real(dp), parameter, public :: SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=1.520993128e-3_dp !< dimensionless
-real(dp), parameter, public :: U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.000000017e-3_dp !< dimensionless
+real(dp), parameter, public :: SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=1.5209931551e-3_dp !< dimensionless
+real(dp), parameter, public :: U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.0000000062e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO"):: &
-capi_314=SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_315=SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO") :: &
-capi_U_314=U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_U_315=U_SHIELDED_PROTON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=2.792775599_dp !< dimensionless
-real(dp), parameter, public :: U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.000000030_dp !< dimensionless
+real(dp), parameter, public :: SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=2.792775648_dp !< dimensionless
+real(dp), parameter, public :: U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.000000011_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO"):: &
-capi_315=SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_316=SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO") :: &
-capi_U_315=U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_U_316=U_SHIELDED_PROTON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD=2.0200e-8_dp !< dimensionless
-real(dp), parameter, public :: U_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD=0.0020e-8_dp !< dimensionless
+real(dp), parameter, public :: SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD=1.98770e-8_dp !< dimensionless
+real(dp), parameter, public :: U_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD=0.00010e-8_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD"):: &
-capi_316=SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD !< C API dimensionless
+capi_317=SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD") :: &
-capi_U_316=U_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD !< C API dimensionless
+capi_U_317=U_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD !< C API dimensionless
 
-real(dp), parameter, public :: SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT=2.4140e-8_dp !< dimensionless
-real(dp), parameter, public :: U_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT=0.0020e-8_dp !< dimensionless
+real(dp), parameter, public :: SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT=2.39450e-8_dp !< dimensionless
+real(dp), parameter, public :: U_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT=0.00020e-8_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT"):: &
-capi_317=SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT !< C API dimensionless
+capi_318=SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT") :: &
-capi_U_317=U_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT !< C API dimensionless
+capi_U_318=U_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT !< C API dimensionless
 
 real(dp), parameter, public :: SPEED_OF_LIGHT_IN_VACUUM=299792458_dp !< m s^-1
 real(dp), parameter, public :: U_SPEED_OF_LIGHT_IN_VACUUM=0.0_dp !< m s^-1
 
 real(cdp), protected, public, bind(C,name="SPEED_OF_LIGHT_IN_VACUUM"):: &
-capi_318=SPEED_OF_LIGHT_IN_VACUUM !< C API m s^-1
+capi_319=SPEED_OF_LIGHT_IN_VACUUM !< C API m s^-1
 real(cdp), protected, public, bind(C,name="U_SPEED_OF_LIGHT_IN_VACUUM") :: &
-capi_U_318=U_SPEED_OF_LIGHT_IN_VACUUM !< C API m s^-1
+capi_U_319=U_SPEED_OF_LIGHT_IN_VACUUM !< C API m s^-1
 
 real(dp), parameter, public :: STANDARD_ACCELERATION_OF_GRAVITY=9.80665_dp !< m s^-2
 real(dp), parameter, public :: U_STANDARD_ACCELERATION_OF_GRAVITY=0.0_dp !< m s^-2
 
 real(cdp), protected, public, bind(C,name="STANDARD_ACCELERATION_OF_GRAVITY"):: &
-capi_319=STANDARD_ACCELERATION_OF_GRAVITY !< C API m s^-2
+capi_320=STANDARD_ACCELERATION_OF_GRAVITY !< C API m s^-2
 real(cdp), protected, public, bind(C,name="U_STANDARD_ACCELERATION_OF_GRAVITY") :: &
-capi_U_319=U_STANDARD_ACCELERATION_OF_GRAVITY !< C API m s^-2
+capi_U_320=U_STANDARD_ACCELERATION_OF_GRAVITY !< C API m s^-2
 
 real(dp), parameter, public :: STANDARD_ATMOSPHERE=101325_dp !< Pa
 real(dp), parameter, public :: U_STANDARD_ATMOSPHERE=0.0_dp !< Pa
 
 real(cdp), protected, public, bind(C,name="STANDARD_ATMOSPHERE"):: &
-capi_320=STANDARD_ATMOSPHERE !< C API Pa
+capi_321=STANDARD_ATMOSPHERE !< C API Pa
 real(cdp), protected, public, bind(C,name="U_STANDARD_ATMOSPHERE") :: &
-capi_U_320=U_STANDARD_ATMOSPHERE !< C API Pa
+capi_U_321=U_STANDARD_ATMOSPHERE !< C API Pa
 
 real(dp), parameter, public :: STANDARD_STATE_PRESSURE=100000_dp !< Pa
 real(dp), parameter, public :: U_STANDARD_STATE_PRESSURE=0.0_dp !< Pa
 
 real(cdp), protected, public, bind(C,name="STANDARD_STATE_PRESSURE"):: &
-capi_321=STANDARD_STATE_PRESSURE !< C API Pa
+capi_322=STANDARD_STATE_PRESSURE !< C API Pa
 real(cdp), protected, public, bind(C,name="U_STANDARD_STATE_PRESSURE") :: &
-capi_U_321=U_STANDARD_STATE_PRESSURE !< C API Pa
+capi_U_322=U_STANDARD_STATE_PRESSURE !< C API Pa
 
 real(dp), parameter, public :: STEFAN_BOLTZMANN_CONSTANT=5.670374419e-8_dp !< W m^-2 K^-4
 real(dp), parameter, public :: U_STEFAN_BOLTZMANN_CONSTANT=0.0_dp !< W m^-2 K^-4
 
 real(cdp), protected, public, bind(C,name="STEFAN_BOLTZMANN_CONSTANT"):: &
-capi_322=STEFAN_BOLTZMANN_CONSTANT !< C API W m^-2 K^-4
+capi_323=STEFAN_BOLTZMANN_CONSTANT !< C API W m^-2 K^-4
 real(cdp), protected, public, bind(C,name="U_STEFAN_BOLTZMANN_CONSTANT") :: &
-capi_U_322=U_STEFAN_BOLTZMANN_CONSTANT !< C API W m^-2 K^-4
+capi_U_323=U_STEFAN_BOLTZMANN_CONSTANT !< C API W m^-2 K^-4
 
 real(dp), parameter, public :: TAU_COMPTON_WAVELENGTH=6.97771e-16_dp !< m
 real(dp), parameter, public :: U_TAU_COMPTON_WAVELENGTH=0.00047e-16_dp !< m
 
 real(cdp), protected, public, bind(C,name="TAU_COMPTON_WAVELENGTH"):: &
-capi_323=TAU_COMPTON_WAVELENGTH !< C API m
+capi_324=TAU_COMPTON_WAVELENGTH !< C API m
 real(cdp), protected, public, bind(C,name="U_TAU_COMPTON_WAVELENGTH") :: &
-capi_U_323=U_TAU_COMPTON_WAVELENGTH !< C API m
+capi_U_324=U_TAU_COMPTON_WAVELENGTH !< C API m
 
 real(dp), parameter, public :: TAU_ELECTRON_MASS_RATIO=3477.23_dp !< dimensionless
 real(dp), parameter, public :: U_TAU_ELECTRON_MASS_RATIO=0.23_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TAU_ELECTRON_MASS_RATIO"):: &
-capi_324=TAU_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_325=TAU_ELECTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TAU_ELECTRON_MASS_RATIO") :: &
-capi_U_324=U_TAU_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_U_325=U_TAU_ELECTRON_MASS_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: TAU_ENERGY_EQUIVALENT=1776.86_dp !< MeV
 real(dp), parameter, public :: U_TAU_ENERGY_EQUIVALENT=0.12_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="TAU_ENERGY_EQUIVALENT"):: &
-capi_325=TAU_ENERGY_EQUIVALENT !< C API MeV
+capi_326=TAU_ENERGY_EQUIVALENT !< C API MeV
 real(cdp), protected, public, bind(C,name="U_TAU_ENERGY_EQUIVALENT") :: &
-capi_U_325=U_TAU_ENERGY_EQUIVALENT !< C API MeV
+capi_U_326=U_TAU_ENERGY_EQUIVALENT !< C API MeV
 
 real(dp), parameter, public :: TAU_MASS=3.16754e-27_dp !< kg
 real(dp), parameter, public :: U_TAU_MASS=0.00021e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="TAU_MASS"):: &
-capi_326=TAU_MASS !< C API kg
+capi_327=TAU_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_TAU_MASS") :: &
-capi_U_326=U_TAU_MASS !< C API kg
+capi_U_327=U_TAU_MASS !< C API kg
 
 real(dp), parameter, public :: TAU_MASS_ENERGY_EQUIVALENT=2.84684e-10_dp !< J
 real(dp), parameter, public :: U_TAU_MASS_ENERGY_EQUIVALENT=0.00019e-10_dp !< J
 
 real(cdp), protected, public, bind(C,name="TAU_MASS_ENERGY_EQUIVALENT"):: &
-capi_327=TAU_MASS_ENERGY_EQUIVALENT !< C API J
+capi_328=TAU_MASS_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_TAU_MASS_ENERGY_EQUIVALENT") :: &
-capi_U_327=U_TAU_MASS_ENERGY_EQUIVALENT !< C API J
+capi_U_328=U_TAU_MASS_ENERGY_EQUIVALENT !< C API J
 
 real(dp), parameter, public :: TAU_MASS_IN_U=1.90754_dp !< u
 real(dp), parameter, public :: U_TAU_MASS_IN_U=0.00013_dp !< u
 
 real(cdp), protected, public, bind(C,name="TAU_MASS_IN_U"):: &
-capi_328=TAU_MASS_IN_U !< C API u
+capi_329=TAU_MASS_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_TAU_MASS_IN_U") :: &
-capi_U_328=U_TAU_MASS_IN_U !< C API u
+capi_U_329=U_TAU_MASS_IN_U !< C API u
 
 real(dp), parameter, public :: TAU_MOLAR_MASS=1.90754e-3_dp !< kg mol^-1
 real(dp), parameter, public :: U_TAU_MOLAR_MASS=0.00013e-3_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="TAU_MOLAR_MASS"):: &
-capi_329=TAU_MOLAR_MASS !< C API kg mol^-1
+capi_330=TAU_MOLAR_MASS !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_TAU_MOLAR_MASS") :: &
-capi_U_329=U_TAU_MOLAR_MASS !< C API kg mol^-1
+capi_U_330=U_TAU_MOLAR_MASS !< C API kg mol^-1
 
 real(dp), parameter, public :: TAU_MUON_MASS_RATIO=16.8170_dp !< dimensionless
 real(dp), parameter, public :: U_TAU_MUON_MASS_RATIO=0.0011_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TAU_MUON_MASS_RATIO"):: &
-capi_330=TAU_MUON_MASS_RATIO !< C API dimensionless
+capi_331=TAU_MUON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TAU_MUON_MASS_RATIO") :: &
-capi_U_330=U_TAU_MUON_MASS_RATIO !< C API dimensionless
+capi_U_331=U_TAU_MUON_MASS_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: TAU_NEUTRON_MASS_RATIO=1.89115_dp !< dimensionless
 real(dp), parameter, public :: U_TAU_NEUTRON_MASS_RATIO=0.00013_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TAU_NEUTRON_MASS_RATIO"):: &
-capi_331=TAU_NEUTRON_MASS_RATIO !< C API dimensionless
+capi_332=TAU_NEUTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TAU_NEUTRON_MASS_RATIO") :: &
-capi_U_331=U_TAU_NEUTRON_MASS_RATIO !< C API dimensionless
+capi_U_332=U_TAU_NEUTRON_MASS_RATIO !< C API dimensionless
 
 real(dp), parameter, public :: TAU_PROTON_MASS_RATIO=1.89376_dp !< dimensionless
 real(dp), parameter, public :: U_TAU_PROTON_MASS_RATIO=0.00013_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TAU_PROTON_MASS_RATIO"):: &
-capi_332=TAU_PROTON_MASS_RATIO !< C API dimensionless
+capi_333=TAU_PROTON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TAU_PROTON_MASS_RATIO") :: &
-capi_U_332=U_TAU_PROTON_MASS_RATIO !< C API dimensionless
+capi_U_333=U_TAU_PROTON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: THOMSON_CROSS_SECTION=6.6524587321e-29_dp !< m^2
-real(dp), parameter, public :: U_THOMSON_CROSS_SECTION=0.0000000060e-29_dp !< m^2
+real(dp), parameter, public :: THOMSON_CROSS_SECTION=6.6524587051e-29_dp !< m^2
+real(dp), parameter, public :: U_THOMSON_CROSS_SECTION=0.0000000062e-29_dp !< m^2
 
 real(cdp), protected, public, bind(C,name="THOMSON_CROSS_SECTION"):: &
-capi_333=THOMSON_CROSS_SECTION !< C API m^2
+capi_334=THOMSON_CROSS_SECTION !< C API m^2
 real(cdp), protected, public, bind(C,name="U_THOMSON_CROSS_SECTION") :: &
-capi_U_333=U_THOMSON_CROSS_SECTION !< C API m^2
+capi_U_334=U_THOMSON_CROSS_SECTION !< C API m^2
 
-real(dp), parameter, public :: TRITON_ELECTRON_MASS_RATIO=5496.92153573_dp !< dimensionless
-real(dp), parameter, public :: U_TRITON_ELECTRON_MASS_RATIO=0.00000027_dp !< dimensionless
+real(dp), parameter, public :: TRITON_ELECTRON_MASS_RATIO=5496.92153551_dp !< dimensionless
+real(dp), parameter, public :: U_TRITON_ELECTRON_MASS_RATIO=0.00000021_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TRITON_ELECTRON_MASS_RATIO"):: &
-capi_334=TRITON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_335=TRITON_ELECTRON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TRITON_ELECTRON_MASS_RATIO") :: &
-capi_U_334=U_TRITON_ELECTRON_MASS_RATIO !< C API dimensionless
+capi_U_335=U_TRITON_ELECTRON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: TRITON_G_FACTOR=5.957924931_dp !< dimensionless
+real(dp), parameter, public :: TRITON_G_FACTOR=5.957924930_dp !< dimensionless
 real(dp), parameter, public :: U_TRITON_G_FACTOR=0.000000012_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TRITON_G_FACTOR"):: &
-capi_335=TRITON_G_FACTOR !< C API dimensionless
+capi_336=TRITON_G_FACTOR !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TRITON_G_FACTOR") :: &
-capi_U_335=U_TRITON_G_FACTOR !< C API dimensionless
+capi_U_336=U_TRITON_G_FACTOR !< C API dimensionless
 
-real(dp), parameter, public :: TRITON_MAG__MOM=1.5046095202e-26_dp !< J T^-1
+real(dp), parameter, public :: TRITON_MAG__MOM=1.5046095178e-26_dp !< J T^-1
 real(dp), parameter, public :: U_TRITON_MAG__MOM=0.0000000030e-26_dp !< J T^-1
 
 real(cdp), protected, public, bind(C,name="TRITON_MAG__MOM"):: &
-capi_336=TRITON_MAG__MOM !< C API J T^-1
+capi_337=TRITON_MAG__MOM !< C API J T^-1
 real(cdp), protected, public, bind(C,name="U_TRITON_MAG__MOM") :: &
-capi_U_336=U_TRITON_MAG__MOM !< C API J T^-1
+capi_U_337=U_TRITON_MAG__MOM !< C API J T^-1
 
-real(dp), parameter, public :: TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=1.6223936651e-3_dp !< dimensionless
+real(dp), parameter, public :: TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=1.6223936648e-3_dp !< dimensionless
 real(dp), parameter, public :: U_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO=0.0000000032e-3_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO"):: &
-capi_337=TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_338=TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO") :: &
-capi_U_337=U_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
+capi_U_338=U_TRITON_MAG__MOM__TO_BOHR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=2.9789624656_dp !< dimensionless
+real(dp), parameter, public :: TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=2.9789624650_dp !< dimensionless
 real(dp), parameter, public :: U_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO=0.0000000059_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO"):: &
-capi_338=TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_339=TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO") :: &
-capi_U_338=U_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
+capi_U_339=U_TRITON_MAG__MOM__TO_NUCLEAR_MAGNETON_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: TRITON_MASS=5.0073567446e-27_dp !< kg
-real(dp), parameter, public :: U_TRITON_MASS=0.0000000015e-27_dp !< kg
+real(dp), parameter, public :: TRITON_MASS=5.0073567512e-27_dp !< kg
+real(dp), parameter, public :: U_TRITON_MASS=0.0000000016e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="TRITON_MASS"):: &
-capi_339=TRITON_MASS !< C API kg
+capi_340=TRITON_MASS !< C API kg
 real(cdp), protected, public, bind(C,name="U_TRITON_MASS") :: &
-capi_U_339=U_TRITON_MASS !< C API kg
+capi_U_340=U_TRITON_MASS !< C API kg
 
-real(dp), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT=4.5003878060e-10_dp !< J
+real(dp), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT=4.5003878119e-10_dp !< J
 real(dp), parameter, public :: U_TRITON_MASS_ENERGY_EQUIVALENT=0.0000000014e-10_dp !< J
 
 real(cdp), protected, public, bind(C,name="TRITON_MASS_ENERGY_EQUIVALENT"):: &
-capi_340=TRITON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_341=TRITON_MASS_ENERGY_EQUIVALENT !< C API J
 real(cdp), protected, public, bind(C,name="U_TRITON_MASS_ENERGY_EQUIVALENT") :: &
-capi_U_340=U_TRITON_MASS_ENERGY_EQUIVALENT !< C API J
+capi_U_341=U_TRITON_MASS_ENERGY_EQUIVALENT !< C API J
 
-real(dp), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV=2808.92113298_dp !< MeV
-real(dp), parameter, public :: U_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000085_dp !< MeV
+real(dp), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV=2808.92113668_dp !< MeV
+real(dp), parameter, public :: U_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV=0.00000088_dp !< MeV
 
 real(cdp), protected, public, bind(C,name="TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV"):: &
-capi_341=TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_342=TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 real(cdp), protected, public, bind(C,name="U_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV") :: &
-capi_U_341=U_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
+capi_U_342=U_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV !< C API MeV
 
-real(dp), parameter, public :: TRITON_MASS_IN_U=3.01550071621_dp !< u
-real(dp), parameter, public :: U_TRITON_MASS_IN_U=0.00000000012_dp !< u
+real(dp), parameter, public :: TRITON_MASS_IN_U=3.01550071597_dp !< u
+real(dp), parameter, public :: U_TRITON_MASS_IN_U=0.00000000010_dp !< u
 
 real(cdp), protected, public, bind(C,name="TRITON_MASS_IN_U"):: &
-capi_342=TRITON_MASS_IN_U !< C API u
+capi_343=TRITON_MASS_IN_U !< C API u
 real(cdp), protected, public, bind(C,name="U_TRITON_MASS_IN_U") :: &
-capi_U_342=U_TRITON_MASS_IN_U !< C API u
+capi_U_343=U_TRITON_MASS_IN_U !< C API u
 
-real(dp), parameter, public :: TRITON_MOLAR_MASS=3.01550071517e-3_dp !< kg mol^-1
-real(dp), parameter, public :: U_TRITON_MOLAR_MASS=0.00000000092e-3_dp !< kg mol^-1
+real(dp), parameter, public :: TRITON_MOLAR_MASS=3.01550071913e-3_dp !< kg mol^-1
+real(dp), parameter, public :: U_TRITON_MOLAR_MASS=0.00000000094e-3_dp !< kg mol^-1
 
 real(cdp), protected, public, bind(C,name="TRITON_MOLAR_MASS"):: &
-capi_343=TRITON_MOLAR_MASS !< C API kg mol^-1
+capi_344=TRITON_MOLAR_MASS !< C API kg mol^-1
 real(cdp), protected, public, bind(C,name="U_TRITON_MOLAR_MASS") :: &
-capi_U_343=U_TRITON_MOLAR_MASS !< C API kg mol^-1
+capi_U_344=U_TRITON_MOLAR_MASS !< C API kg mol^-1
 
-real(dp), parameter, public :: TRITON_PROTON_MASS_RATIO=2.99371703414_dp !< dimensionless
-real(dp), parameter, public :: U_TRITON_PROTON_MASS_RATIO=0.00000000015_dp !< dimensionless
+real(dp), parameter, public :: TRITON_PROTON_MASS_RATIO=2.99371703403_dp !< dimensionless
+real(dp), parameter, public :: U_TRITON_PROTON_MASS_RATIO=0.00000000010_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TRITON_PROTON_MASS_RATIO"):: &
-capi_344=TRITON_PROTON_MASS_RATIO !< C API dimensionless
+capi_345=TRITON_PROTON_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TRITON_PROTON_MASS_RATIO") :: &
-capi_U_344=U_TRITON_PROTON_MASS_RATIO !< C API dimensionless
+capi_U_345=U_TRITON_PROTON_MASS_RATIO !< C API dimensionless
 
-real(dp), parameter, public :: TRITON_RELATIVE_ATOMIC_MASS=3.01550071621_dp !< dimensionless
-real(dp), parameter, public :: U_TRITON_RELATIVE_ATOMIC_MASS=0.00000000012_dp !< dimensionless
+real(dp), parameter, public :: TRITON_RELATIVE_ATOMIC_MASS=3.01550071597_dp !< dimensionless
+real(dp), parameter, public :: U_TRITON_RELATIVE_ATOMIC_MASS=0.00000000010_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TRITON_RELATIVE_ATOMIC_MASS"):: &
-capi_345=TRITON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_346=TRITON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TRITON_RELATIVE_ATOMIC_MASS") :: &
-capi_U_345=U_TRITON_RELATIVE_ATOMIC_MASS !< C API dimensionless
+capi_U_346=U_TRITON_RELATIVE_ATOMIC_MASS !< C API dimensionless
 
-real(dp), parameter, public :: TRITON_TO_PROTON_MAG__MOM__RATIO=1.0666399191_dp !< dimensionless
+real(dp), parameter, public :: TRITON_TO_PROTON_MAG__MOM__RATIO=1.0666399189_dp !< dimensionless
 real(dp), parameter, public :: U_TRITON_TO_PROTON_MAG__MOM__RATIO=0.0000000021_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="TRITON_TO_PROTON_MAG__MOM__RATIO"):: &
-capi_346=TRITON_TO_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_347=TRITON_TO_PROTON_MAG__MOM__RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_TRITON_TO_PROTON_MAG__MOM__RATIO") :: &
-capi_U_346=U_TRITON_TO_PROTON_MAG__MOM__RATIO !< C API dimensionless
+capi_U_347=U_TRITON_TO_PROTON_MAG__MOM__RATIO !< C API dimensionless
 
-real(dp), parameter, public :: UNIFIED_ATOMIC_MASS_UNIT=1.66053906660e-27_dp !< kg
-real(dp), parameter, public :: U_UNIFIED_ATOMIC_MASS_UNIT=0.00000000050e-27_dp !< kg
+real(dp), parameter, public :: UNIFIED_ATOMIC_MASS_UNIT=1.66053906892e-27_dp !< kg
+real(dp), parameter, public :: U_UNIFIED_ATOMIC_MASS_UNIT=0.00000000052e-27_dp !< kg
 
 real(cdp), protected, public, bind(C,name="UNIFIED_ATOMIC_MASS_UNIT"):: &
-capi_347=UNIFIED_ATOMIC_MASS_UNIT !< C API kg
+capi_348=UNIFIED_ATOMIC_MASS_UNIT !< C API kg
 real(cdp), protected, public, bind(C,name="U_UNIFIED_ATOMIC_MASS_UNIT") :: &
-capi_U_347=U_UNIFIED_ATOMIC_MASS_UNIT !< C API kg
+capi_U_348=U_UNIFIED_ATOMIC_MASS_UNIT !< C API kg
 
-real(dp), parameter, public :: VACUUM_ELECTRIC_PERMITTIVITY=8.8541878128e-12_dp !< F m^-1
-real(dp), parameter, public :: U_VACUUM_ELECTRIC_PERMITTIVITY=0.0000000013e-12_dp !< F m^-1
+real(dp), parameter, public :: VACUUM_ELECTRIC_PERMITTIVITY=8.8541878188e-12_dp !< F m^-1
+real(dp), parameter, public :: U_VACUUM_ELECTRIC_PERMITTIVITY=0.0000000014e-12_dp !< F m^-1
 
 real(cdp), protected, public, bind(C,name="VACUUM_ELECTRIC_PERMITTIVITY"):: &
-capi_348=VACUUM_ELECTRIC_PERMITTIVITY !< C API F m^-1
+capi_349=VACUUM_ELECTRIC_PERMITTIVITY !< C API F m^-1
 real(cdp), protected, public, bind(C,name="U_VACUUM_ELECTRIC_PERMITTIVITY") :: &
-capi_U_348=U_VACUUM_ELECTRIC_PERMITTIVITY !< C API F m^-1
+capi_U_349=U_VACUUM_ELECTRIC_PERMITTIVITY !< C API F m^-1
 
-real(dp), parameter, public :: VACUUM_MAG__PERMEABILITY=1.25663706212e-6_dp !< N A^-2
-real(dp), parameter, public :: U_VACUUM_MAG__PERMEABILITY=0.00000000019e-6_dp !< N A^-2
+real(dp), parameter, public :: VACUUM_MAG__PERMEABILITY=1.25663706127e-6_dp !< N A^-2
+real(dp), parameter, public :: U_VACUUM_MAG__PERMEABILITY=0.00000000020e-6_dp !< N A^-2
 
 real(cdp), protected, public, bind(C,name="VACUUM_MAG__PERMEABILITY"):: &
-capi_349=VACUUM_MAG__PERMEABILITY !< C API N A^-2
+capi_350=VACUUM_MAG__PERMEABILITY !< C API N A^-2
 real(cdp), protected, public, bind(C,name="U_VACUUM_MAG__PERMEABILITY") :: &
-capi_U_349=U_VACUUM_MAG__PERMEABILITY !< C API N A^-2
+capi_U_350=U_VACUUM_MAG__PERMEABILITY !< C API N A^-2
 
 real(dp), parameter, public :: VON_KLITZING_CONSTANT=25812.80745_dp !< ohm
 real(dp), parameter, public :: U_VON_KLITZING_CONSTANT=0.0_dp !< ohm
 
 real(cdp), protected, public, bind(C,name="VON_KLITZING_CONSTANT"):: &
-capi_350=VON_KLITZING_CONSTANT !< C API ohm
+capi_351=VON_KLITZING_CONSTANT !< C API ohm
 real(cdp), protected, public, bind(C,name="U_VON_KLITZING_CONSTANT") :: &
-capi_U_350=U_VON_KLITZING_CONSTANT !< C API ohm
+capi_U_351=U_VON_KLITZING_CONSTANT !< C API ohm
 
-real(dp), parameter, public :: WEAK_MIXING_ANGLE=0.22290_dp !< dimensionless
-real(dp), parameter, public :: U_WEAK_MIXING_ANGLE=0.00030_dp !< dimensionless
+real(dp), parameter, public :: WEAK_MIXING_ANGLE=0.22305_dp !< dimensionless
+real(dp), parameter, public :: U_WEAK_MIXING_ANGLE=0.00023_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="WEAK_MIXING_ANGLE"):: &
-capi_351=WEAK_MIXING_ANGLE !< C API dimensionless
+capi_352=WEAK_MIXING_ANGLE !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_WEAK_MIXING_ANGLE") :: &
-capi_U_351=U_WEAK_MIXING_ANGLE !< C API dimensionless
+capi_U_352=U_WEAK_MIXING_ANGLE !< C API dimensionless
 
 real(dp), parameter, public :: WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT=5.878925757e10_dp !< Hz K^-1
 real(dp), parameter, public :: U_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT=0.0_dp !< Hz K^-1
 
 real(cdp), protected, public, bind(C,name="WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT"):: &
-capi_352=WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT !< C API Hz K^-1
+capi_353=WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT !< C API Hz K^-1
 real(cdp), protected, public, bind(C,name="U_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT") :: &
-capi_U_352=U_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT !< C API Hz K^-1
+capi_U_353=U_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT !< C API Hz K^-1
 
 real(dp), parameter, public :: WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT=2.897771955e-3_dp !< m K
 real(dp), parameter, public :: U_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT=0.0_dp !< m K
 
 real(cdp), protected, public, bind(C,name="WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT"):: &
-capi_353=WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT !< C API m K
+capi_354=WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT !< C API m K
 real(cdp), protected, public, bind(C,name="U_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT") :: &
-capi_U_353=U_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT !< C API m K
+capi_U_354=U_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT !< C API m K
 
-real(dp), parameter, public :: W_TO_Z_MASS_RATIO=0.88153_dp !< dimensionless
-real(dp), parameter, public :: U_W_TO_Z_MASS_RATIO=0.00017_dp !< dimensionless
+real(dp), parameter, public :: W_TO_Z_MASS_RATIO=0.88145_dp !< dimensionless
+real(dp), parameter, public :: U_W_TO_Z_MASS_RATIO=0.00013_dp !< dimensionless
 
 real(cdp), protected, public, bind(C,name="W_TO_Z_MASS_RATIO"):: &
-capi_354=W_TO_Z_MASS_RATIO !< C API dimensionless
+capi_355=W_TO_Z_MASS_RATIO !< C API dimensionless
 real(cdp), protected, public, bind(C,name="U_W_TO_Z_MASS_RATIO") :: &
-capi_U_354=U_W_TO_Z_MASS_RATIO !< C API dimensionless
+capi_U_355=U_W_TO_Z_MASS_RATIO !< C API dimensionless
 
 end module codata__constants_latest

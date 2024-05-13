@@ -36,6 +36,9 @@ ADD_IMPORT extern const double U_ALPHA_PARTICLE_PROTON_MASS_RATIO;/**< dimension
 ADD_IMPORT extern const double ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS;/**< dimensionless */
 ADD_IMPORT extern const double U_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS;/**< dimensionless */
 
+ADD_IMPORT extern const double ALPHA_PARTICLE_RMS_CHARGE_RADIUS;/**< m */
+ADD_IMPORT extern const double U_ALPHA_PARTICLE_RMS_CHARGE_RADIUS;/**< m */
+
 ADD_IMPORT extern const double ANGSTROM_STAR;/**< m */
 ADD_IMPORT extern const double U_ANGSTROM_STAR;/**< m */
 
