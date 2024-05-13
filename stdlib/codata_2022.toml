@@ -1328,14 +1328,14 @@ value = "1.920155716e-10"
 uncertainty = "0.000000032e-10"
 unit = "m"
 
-[LOSCHMIDT_CONSTANT_27315_K_100_KPA]
+[LOSCHMIDT_CONSTANT_273_15_K_100_KPA]
 name = "Loschmidt constant (273.15 K, 100 kPa)"
 year = "2022"
 value = "2.651645804e25"
 uncertainty = "0.0"
 unit = "m^-3"
 
-[LOSCHMIDT_CONSTANT_27315_K_101325_KPA]
+[LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA]
 name = "Loschmidt constant (273.15 K, 101.325 kPa)"
 year = "2022"
 value = "2.686780111e25"
@@ -1384,14 +1384,14 @@ value = "3.990312712e-10"
 uncertainty = "0.0"
 unit = "J Hz^-1 mol^-1"
 
-[MOLAR_VOLUME_OF_IDEAL_GAS_27315_K_100_KPA]
+[MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA]
 name = "molar volume of ideal gas (273.15 K, 100 kPa)"
 year = "2022"
 value = "22.71095464e-3"
 uncertainty = "0.0"
 unit = "m^3 mol^-1"
 
-[MOLAR_VOLUME_OF_IDEAL_GAS_27315_K_101325_KPA]
+[MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA]
 name = "molar volume of ideal gas (273.15 K, 101.325 kPa)"
 year = "2022"
 value = "22.41396954e-3"
@@ -2112,7 +2112,7 @@ value = "-1.15170753496"
 uncertainty = "0.00000000047"
 unit = ""
 
-[SACKUR_TETRODE_CONSTANT_1_K_101325_KPA]
+[SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA]
 name = "Sackur-Tetrode constant (1 K, 101.325 kPa)"
 year = "2022"
 value = "-1.16487052149"

@@ -42,10 +42,13 @@ def format_name(line: str)->str:
     return line[i:j].rstrip()
 
 def format_variable(name: str)->str:
-    variable = name.replace(" ", "_").replace(".","").replace(",","")
+    variable = name.replace("101.325", "101_325")
+    variable = variable.replace("273.15 K,", "273_15_K")
+    variable = variable.replace(" ", "_").replace(".","").replace(",","")
     variable = variable.replace("-","_").replace("(","").replace(")","")
     variable = variable.replace("/","_")
     variable = variable.replace("{220}_","").upper()
+    variable = variable.rstrip()
     return variable
 
 def format_value(line: str)->str:
