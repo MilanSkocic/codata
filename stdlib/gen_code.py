@@ -44,7 +44,6 @@ def run(fpath_ast: str, fpath_code: str)->None:
     fcode = open(fpath_code, "w")
 
     write_module_start(fcode)
-    # write_types(fcode)
     write_year(fcode, year)
 
     ast = tomlkit.load(fast)
