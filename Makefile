@@ -10,6 +10,8 @@ else
 	btype=release
 endif
 
+.PHONY: nist stdlib
+
 all: $(LIBNAME)
 
 $(LIBNAME): build copy_a shared
@@ -45,6 +47,8 @@ clean:
 	fpm clean --all
 	rm -f src/*.mod
 	make -C srcgen clean
+	make -C nist clean
+	make -C stdlib clean
 
 install: install_dirs install_$(PLATFORM)
 
@@ -74,3 +78,8 @@ uninstall:
 	rm -f $(install_dir)/lib/$(LIBNAME).dll.a
 	rm -f $(install_dir)/bin/$(LIBNAME).dll
 
+nist:
+	make -C nist
+
+stdlib: nist
+	make -C stdlib
