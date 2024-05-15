@@ -1,6 +1,6 @@
 include ./make.in
 
-all: $(OUTPUTS)
+all: $(OUTPUTS) $(ICO_FOLDER)/logo-codata.ico
 
 $(BUILD_FOLDER)/%.pdf: $(SRC_FOLDER)/%.tex
 	$(TEX) $(TEX_OPTIONS) $<
@@ -8,8 +8,12 @@ $(BUILD_FOLDER)/%.pdf: $(SRC_FOLDER)/%.tex
 $(PNG_FOLDER)/%.png: $(BUILD_FOLDER)/%.pdf
 	$(CONVERT) $(CONVERT_DENSITY) $< $(CONVERT_RESIZE) $@
 
+$(ICO_FOLDER)/%.ico: $(PNG_FOLDER)/%.png
+	$(CONVERT) -background transparent $< -define icon:auto-resize=64 $@
+
 clean:
 	rm -rf $(BUILD_FOLDER)/*
 
-cleanall:
+cleanall: clean
 	rm -rf $(PNG_FOLDER)/*
+	rm -rf $(ICO_FOLDER)/*

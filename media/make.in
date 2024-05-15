@@ -1,6 +1,7 @@
 PNG_FOLDER=png
 BUILD_FOLDER=build
 SRC_FOLDER=src
+ICO_FOLDER=ico
 
 TEX=pdflatex
 TEX_OPTIONS=-output-directory=$(BUILD_FOLDER) -interaction=batchmode
