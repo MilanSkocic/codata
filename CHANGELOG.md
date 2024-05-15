@@ -1,4 +1,4 @@
-# Codata 0.11.0
+# Version 0.11.0
 
 * Add codata values for 2010, 2014 and 2018.
 * Add module `codata_constants_latest` as alias for 2018.
