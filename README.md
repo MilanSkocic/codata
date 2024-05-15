@@ -4,10 +4,10 @@
 * main: ![cimain](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main)
 
 
+![logo](media/png/logo-codata.png)
+
 
 # Introduction
-
-![logo](media/png/logo-codata.png)
 
 `codata` is a Fortran library providing the latest codata constants (2022) and 
 older values (2018, 2014 and 2010).
