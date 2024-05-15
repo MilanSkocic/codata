@@ -1,5 +1,5 @@
 PY=python
-GENAST=gen_ast.py
+GENAST=../scripts/gen_ast.py
 
 RAW_SRC=$(wildcard *.txt)
 AST_SRC=$(patsubst %.txt, %.toml, $(RAW_SRC))

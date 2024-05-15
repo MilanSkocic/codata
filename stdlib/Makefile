@@ -1,5 +1,5 @@
 PY=python
-GENCODE=gen_code.py
+GENCODE=../scripts/gen_stdlib.py
 
 AST_DIR=../nist
 SRC_DIR=.
