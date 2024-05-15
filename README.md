@@ -1,6 +1,6 @@
-![cidev](image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=dev)
+![cidev](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=dev)
 
-![cimain](image:: https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main)
+![cimain](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main)
 
 
 
@@ -99,6 +99,6 @@ If building the python wrapper is needed:
 
 
 
-# License information
+# License
 
 GPL-3.0-or-later
