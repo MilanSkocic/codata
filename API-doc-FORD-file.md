@@ -26,6 +26,7 @@ graph_maxnodes: 250
 graph_maxdepth: 5
 coloured_edges: true
 license: by-sa
+favicon: media/ico/logo-codata.ico
 ---
 
 ![Codata](../media/png/logo-codata.png)
