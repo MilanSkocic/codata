@@ -32,15 +32,6 @@ subroutine print(self)
     print "(A64, SP, "//FMT_REAL_DP//", A5, "//FMT_REAL_DP//", 1X, A32)", self%name, self%value, "+/-", self%uncertainty, self%unit 
 end subroutine
 
-subroutine capi_print(o)bind(c)
-    implicit none
-    type(c_ptr), intent(in), value :: o
-    type(codata_constant_type), pointer :: fp
-    nullify(fp)
-    call c_f_pointer(o, fp)
-    call fp%print()
-end subroutine
-
 elemental pure real(dp) function to_real(self, uncertainty) result(r)
     !! Get the constant value or uncertainty 
     
