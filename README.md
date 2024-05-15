@@ -3,13 +3,9 @@
 
 dev |cidev| / main |cimain|
 
-Introduction
-==============
+# Introduction
 
-.. image:: ./media/png/logo-codata.png
-    :width: 200
-
-.. readme_inclusion_start
+![logo](media/png/logo-codata.png)
 
 `codata` is a Fortran library providing the latest codata constants (2022) and 
 older values (2018, 2014 and 2010).
@@ -47,18 +43,20 @@ add the following to your `fpm.toml` file:
 
 * If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. 
 
-Installation
-================
+# Installation
 
-See the file ``INSTALL.rst``. 
-
-
-Dependencies
-================
-
-See the file ``REQUIREMENTS.txt``.
+See the file `INSTALL.rst`. 
 
 
-License information
+# Dependencies
 
-See the file ``LICENSE.txt``.
+```
+gcc>=10
+gfortran>=10
+fpm>=0.7
+```
+
+
+# License information
+
+GPL-3.0-or-later
