@@ -8,6 +8,8 @@ author: Milan Skocic
 email: milan.skocic@icloud.com
 github: https://github.com/MilanSkocic
 src_dir: ./src
+media_dir: ./media/png
+page_dir: ./documentation
 output_dir: API-doc
 exclude_dir: ./example
              ./test
@@ -21,7 +23,7 @@ md_extensions: markdown.extensions.toc
                markdown.extensions.smarty
 fpp_extensions: fypp
 preprocess: true
-graph: true
+graph: false
 graph_maxnodes: 250
 graph_maxdepth: 5
 coloured_edges: true
@@ -29,6 +31,6 @@ license: by-sa
 favicon: media/ico/logo-codata.ico
 ---
 
-![Codata](../media/png/logo-codata.png)
+[TOC]
 
-This is the documentation of the Fortran code. 
+{!README.md!}

@@ -4,7 +4,7 @@
 * main: ![cimain](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main)
 
 
-![logo](media/png/logo-codata.png)
+![logo](media/logo-codata.png)
 
 
 # Introduction
