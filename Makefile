@@ -49,6 +49,8 @@ clean:
 	make -C srcgen clean
 	make -C nist clean
 	make -C stdlib clean
+	rm -rf API-doc/*
+	make -C media cleanall
 
 install: install_dirs install_$(PLATFORM)
 
@@ -83,3 +85,9 @@ nist:
 
 stdlib: nist
 	make -C stdlib
+
+ford:
+	ford API-doc-FORD-file.md
+
+logo:
+	make -C media
