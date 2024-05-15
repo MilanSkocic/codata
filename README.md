@@ -1,6 +1,7 @@
-![cidev](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=dev)
 
-![cimain](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main)
+* dev: ![cidev](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=dev)
+
+* main: ![cimain](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main)
 
 
 
