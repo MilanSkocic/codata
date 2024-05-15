@@ -40,4 +40,4 @@ print(f"Mu_2010 = {pycodata.constants_2010.MOLAR_MASS_CONSTANT_2010:23.16f}")
 
 # License
 
-GPL
+GPL-3.0-or-later
