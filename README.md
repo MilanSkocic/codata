@@ -11,7 +11,7 @@
 
 `codata` is a Fortran library providing the latest codata constants (2022) and 
 older values (2018, 2014 and 2010).
-It also provides an API for the C language and a python wrapper.
+It also provides an API for the C language and a [python wrapper](https://pypi.org/project/pycodata).
 The raw codata are taken from http://physics.nist.gov/constants.
 
 The constants (values and uncertainties) are implemented as double precision parameters for Fortran and
