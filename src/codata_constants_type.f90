@@ -1,5 +1,6 @@
 module codata__constants_type
     use iso_fortran_env, only: dp=>real64
+    use iso_c_binding, only: c_char, c_double
     private
 
     character(len=*), parameter :: FMT_REAL_DP = "(ES24.16E3)"
@@ -15,12 +16,29 @@ module codata__constants_type
         procedure :: to_real
     end type
 
+    type, public, bind(c) :: capi_codata_constant_type
+        !! Derived type for representing a Codata constant for C.
+        character(kind=c_char) :: name(65)
+        real(c_double) :: value
+        real(c_double) :: uncertainty
+        character(kind=c_char) :: unit(33)
+    end type
+
 contains
 
 subroutine print(self)
     !! Print out the constant's name, value, uncertainty and unit.
     class(codata_constant_type), intent(in) :: self
     print "(A64, SP, "//FMT_REAL_DP//", A5, "//FMT_REAL_DP//", 1X, A32)", self%name, self%value, "+/-", self%uncertainty, self%unit 
+end subroutine
+
+subroutine capi_print(o)bind(c)
+    implicit none
+    type(c_ptr), intent(in), value :: o
+    type(codata_constant_type), pointer :: fp
+    nullify(fp)
+    call c_f_pointer(o, fp)
+    call fp%print()
 end subroutine
 
 elemental pure real(dp) function to_real(self, uncertainty) result(r)
