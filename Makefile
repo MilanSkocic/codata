@@ -89,5 +89,8 @@ stdlib: nist
 ford:
 	ford API-doc-FORD-file.md
 
+upload_doc:
+	cp -rf API-doc/* docs/
+
 logo:
 	make -C media
