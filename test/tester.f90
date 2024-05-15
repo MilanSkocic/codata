@@ -1,8 +1,7 @@
 program tester
     use iso_fortran_env
     use testdrive, only : run_testsuite, new_testsuite, testsuite_type
-    use testsuite_constants, only : collect_suite_year, collect_suite_constants
-    use testsuite_uncertainties, only : collect_suite_uncertainties
+    use test_constants, only : collect_constants
     implicit none
     type(testsuite_type), allocatable :: testsuites(:)
     character(len=*), parameter :: fmt = '("#", *(1x, a))'
@@ -10,9 +9,7 @@ program tester
 
     stat = 0
 
-    testsuites = [new_testsuite("Year", collect_suite_year),&
-                  new_testsuite("Constants", collect_suite_constants),&
-                  new_testsuite("Uncertainties", collect_suite_uncertainties)]
+    testsuites = [new_testsuite("constants", collect_constants)]
 
     do is = 1, size(testsuites)
         write(error_unit, fmt) "Testing:", testsuites(is)%name

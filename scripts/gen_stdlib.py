@@ -62,7 +62,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(prog='gencode', description='Generate source code.')
+    parser = argparse.ArgumentParser(prog='genstdlib', description='Generate source code for stdlib.')
     parser.add_argument("ast", help="File path to the Toml file for ast input.")
     parser.add_argument("code", help="File path to the source file for output.")
     args = parser.parse_args() 

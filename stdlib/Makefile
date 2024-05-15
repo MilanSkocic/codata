@@ -1,17 +1,16 @@
 PY=python
-GENCODE=../scripts/gen_stdlib.py
+GENCODE=../scripts/gen_stdlib2.py
 
-AST_DIR=../nist
-SRC_DIR=.
+SRC_DIR=../src
 
-AST_SRC=$(AST_DIR)/codata_2022.toml
-F_MODULE = $(SRC_DIR)/stdlib_codata.f90
+IN=$(SRC_DIR)/codata_constants_2022.f90
+OUT= stdlib_codata.f90
 
 .PHONY: clean copy
 
-all: $(F_MODULE)
+all: $(OUT)
 
-$(F_MODULE): $(AST_SRC)
+$(OUT): $(IN)
 	$(PY) $(GENCODE) $< $@
 
 copy:

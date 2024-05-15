@@ -16,10 +16,10 @@ all: $(LIBNAME)
 
 $(LIBNAME): build copy_a shared
 
-generator:
-	make -C srcgen generator
+sources: nist 
+	make -C src 
 
-build: generator
+build: sources
 	fpm build --profile=$(btype)
 
 test: build
@@ -44,13 +44,12 @@ shared_windows:
 	$(FC) -shared $(FPM_LDFLAGS) -o $(BUILD_DIR)/$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/$(LIBNAME).a -Wl,--no-whole-archive
 
 clean:
-	fpm clean --all
-	rm -f src/*.mod
-	make -C srcgen clean
+	make -C media clean
 	make -C nist clean
 	make -C stdlib clean
+	make -C src clean
 	rm -rf API-doc/*
-	make -C media cleanall
+	fpm clean --all
 
 install: install_dirs install_$(PLATFORM)
 
@@ -80,10 +79,11 @@ uninstall:
 	rm -f $(install_dir)/lib/$(LIBNAME).dll.a
 	rm -f $(install_dir)/bin/$(LIBNAME).dll
 
+
 nist:
 	make -C nist
 
-stdlib: nist
+stdlib: nist sources
 	make -C stdlib
 
 ford:
