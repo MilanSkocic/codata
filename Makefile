@@ -18,7 +18,7 @@ all: $(LIBNAME)
 
 $(LIBNAME): build copy_a shared
 
-build: sources capi cpython
+build: 
 	fpm build --profile=$(btype)
 
 test: build
