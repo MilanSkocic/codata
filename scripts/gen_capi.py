@@ -1,4 +1,4 @@
-r"""Generate sources for Fortran."""
+r"""Generate C headers."""
 import argparse
 import tomlkit
 
@@ -30,7 +30,7 @@ def write_module_start(f, year):
 
 def write_year(f, year):
     suffix = get_suffix(year)
-    f.write(f"ADD_IMPORT extern const int YEAR;" + newline)
+    f.write(f"ADD_IMPORT extern const int YEAR{suffix:s};" + newline)
     f.write(newline)
 
 def write_constant(f, var, name, value, uncertainty, unit, year):
@@ -67,7 +67,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(prog='gencheader', description='Generate source code.')
+    parser = argparse.ArgumentParser(prog='gencheader', description='Generate C headers.')
     parser.add_argument("ast", help="File path to the Toml file for ast input.")
     parser.add_argument("code", help="File path to the source file for output.")
     args = parser.parse_args() 

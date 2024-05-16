@@ -30,6 +30,7 @@ def write_module_start(f, year):
 def write_year(f, year):
     suffix = get_suffix(year)
     f.write(f"integer(int32), parameter, public :: YEAR{suffix:s} = {year:s} !! Year of release." + newline)
+    f.write(f"integer(int32), protected, public, bind(C, name=\"YEAR{suffix}\") :: capi_YEAR{suffix:s} = YEAR{suffix:s} !capi" + newline)
     f.write(newline)
 
 def write_constant(f, var, name, value, uncertainty, unit, year, count):
@@ -56,7 +57,7 @@ def write_constant(f, var, name, value, uncertainty, unit, year, count):
         cnames.append(", ".join(cname[indexes[i]: indexes[i+1]]))
     cnames.append(", ".join(cname[indexes[-1]:]))
     
-    f.write(f"type(capi_codata_constant_type), protected, public, bind(C, name=\"{var:s}{suffix}\") ::&" + newline)
+    f.write(f"type(capi_codata_constant_type), protected, public, bind(C, name=\"{var:s}{suffix}\") ::&" + ctag + newline)
     f.write(f"capi_{count:d}{suffix} = capi_codata_constant_type([ &" + ctag + newline)
 
     # last not comma at the end
