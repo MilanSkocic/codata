@@ -99,6 +99,7 @@ clean:
 	make -C nist clean
 	make -C src clean
 	make -C include clean
+	make -C stdlib clean
 	make -C pywrapper/src/pycodata clean
 	rm -rf API-doc/*
 	fpm clean --all
