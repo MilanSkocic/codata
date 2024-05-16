@@ -20,8 +20,8 @@ if platform.system() == "Darwin":
 
 if __name__ == "__main__":
 
-    mod_constants_latest = Extension(name="pycodata.constants_latest",
-                        sources=["./src/pycodata/cpy_codata_constants_latest.c"],
+    mod_constants_latest = Extension(name="pycodata.constants_2022",
+                        sources=["./src/pycodata/cpy_codata_constants_2022.c"],
                         libraries=libraries,
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,
