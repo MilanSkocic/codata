@@ -37,7 +37,7 @@ add the following to your `fpm.toml` file:
 
 * The latest codata constants will be soon integrated in the [stdlib](https://github.com/fortran-lang/stdlib/pull/800). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants.  
 
-* The `stdlib` folder is dedicated to the generation of the sources that will feed the [stdlib](https://github.com/fortran-lang/stdlib).
+* The `scripts` folder contains the routines for generating of the sources that will feed the [stdlib](https://github.com/fortran-lang/stdlib).
 
 * If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. 
 
