@@ -36,5 +36,5 @@ stdlib_codata.f90: codata_constants_2022.f90
 	fypp -I ../include $< $@
 
 clean:
-	rm -rf $(F_MODULE) $(SRC_FYPP_F90)
+	rm -rf $(F_MODULE) $(SRC_FYPP_F90) $(STDLIB)
 

@@ -91,7 +91,6 @@ logo:
 clean:
 	make -C media clean
 	make -C nist clean
-	make -C stdlib clean
 	make -C src clean
 	rm -rf API-doc/*
 	fpm clean --all
