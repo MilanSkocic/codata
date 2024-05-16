@@ -7,7 +7,7 @@
 #endif
 #include "codata_constants_type.h"
 
-ADD_IMPORT extern const int YEAR;
+ADD_IMPORT extern const int YEAR_2014;
 
 ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_SILICON_2014;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2014;
