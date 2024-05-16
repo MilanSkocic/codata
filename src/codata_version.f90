@@ -31,9 +31,9 @@ function capi_get_version()bind(c,name="codata_get_version")result(cptr)
     !! Get the version
     implicit none
     type(c_ptr) :: cptr
+        !! C pointer to a string indicating the version.
 
     character(len=:), pointer :: fptr 
-        !! C pointer to a string indicating the version.
 
     fptr => get_version() 
 
