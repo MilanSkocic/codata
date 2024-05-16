@@ -1,9 +1,3 @@
-
-* dev: ![cidev](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=dev)
-
-* main: ![cimain](https://github.com/MilanSkocic/codata/actions/workflows/ci.yml/badge.svg?branch=main)
-
-
 ![logo](media/logo-codata.png)
 
 
@@ -14,16 +8,9 @@ older values (2018, 2014 and 2010).
 It also provides an API for the C language and a [python wrapper](https://pypi.org/project/pycodata).
 The raw codata are taken from http://physics.nist.gov/constants.
 
-The constants (values and uncertainties) are implemented as double precision parameters for Fortran and
-as double precision protected variables for the C API. The units are given in the documentation.
+The constants (values and uncertainties) are implemented as double precision reals.
 
-**Warning**: The release 1.0 will intoduce an API break where the constants will be implemented as derived type like a the [stdlib](https://github.com/fortran-lang/stdlib/pull/800). See notes below.
-
-The names are quite long and you can alias them for shorter names:
-
-```Fortran
-   use codata, only: c=>SPEED_OF_LIGHT_IN_VACUUM
-```
+The names are quite long and can be aliased with shorter names.
 
 To use `codata` within your [fpm](https://github.com/fortran-lang/fpm) project,
 add the following to your `fpm.toml` file:
@@ -37,8 +24,6 @@ add the following to your `fpm.toml` file:
 
 * The latest codata constants will be soon integrated in the [stdlib](https://github.com/fortran-lang/stdlib/pull/800). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants.  
 
-* The `scripts` folder contains the routines for generating of the sources that will feed the [stdlib](https://github.com/fortran-lang/stdlib).
-
 * If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. 
 
 
@@ -49,6 +34,7 @@ add the following to your `fpm.toml` file:
 gcc>=10
 gfortran>=10
 fpm>=0.7
+stdlib>=0.5
 ```
 
 
