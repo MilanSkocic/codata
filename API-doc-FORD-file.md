@@ -8,6 +8,7 @@ author: Milan Skocic
 email: milan.skocic@icloud.com
 github: https://github.com/MilanSkocic
 src_dir: ./src
+include: ./include
 media_dir: ./media/png
 page_dir: ./documentation
 output_dir: API-doc
@@ -23,7 +24,8 @@ md_extensions: markdown.extensions.toc
                markdown.extensions.smarty
 fpp_extensions: fypp
 preprocess: true
-graph: false
+preprocessor: fypp
+graph: true
 graph_maxnodes: 250
 graph_maxdepth: 5
 coloured_edges: true
