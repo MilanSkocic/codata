@@ -1,9 +1,11 @@
-r"""Generate the Python modules."""
+r"""Generate sources for Fortran."""
 import argparse
 import tomlkit
 
 newline = "\n"
 latest_year = "2022"
+cname_len = 65
+cunit_len = 33
 
 def get_year(fpath: str)->str:
     return fpath.split("/")[-1].split("_")[1].split(".")[0]
@@ -25,29 +27,70 @@ def write_module_start(f, year):
     f.write("    private"+newline)
     f.write(newline)
 
-def write_types(f, year):
-        suffix = get_suffix(year)
-        f.write(f"type, public :: codata_constant_type" + suffix + newline)
-        f.write("!! Derived type for representing a Codata constant." + newline)
-        f.write("    character(len=64) :: name" + newline)
-        f.write(f"    real(dp) :: value" + newline)
-        f.write(f"    real(dp) :: uncertainty" + newline)
-        f.write("    character(len=32) :: unit" + newline)
-        f.write("end type" + newline)
-        f.write(newline)
-
 def write_year(f, year):
     suffix = get_suffix(year)
     f.write(f"integer(int32), parameter, public :: YEAR{suffix:s} = {year:s} !! Year of release." + newline)
     f.write(newline)
 
-def write_constant(f, var, name, value, uncertainty, unit, year):
+def write_constant(f, var, name, value, uncertainty, unit, year, count):
     suffix = get_suffix(year)
+    
     f.write(f"type(codata_constant_type), parameter, public :: "+\
                 f"{var}{suffix} = &" + newline +\
                 f"codata_constant_type(\"{name:s}\", &" + newline+\
                 f"{value:s}_dp, {uncertainty:s}_dp, &" + newline+\
                 f"\"{unit:s}\") !! {name:s}" + newline)
+    
+
+    ctag = "!capi"
+
+    # NAMES
+    name_list = list(map(lambda s: '"' + s + '"', name))
+    cname = ['\" \"'] * cname_len
+    cname[0:len(name)] = name_list[:]
+    cname[len(name)] = "c_null_char"
+    
+    indexes = (0, 10, 20, 30, 40, 50)
+    cnames = []
+    for i in range(0, len(indexes)-1):
+        cnames.append(", ".join(cname[indexes[i]: indexes[i+1]]))
+    cnames.append(", ".join(cname[indexes[-1]:]))
+    
+    f.write(f"type(capi_codata_constant_type), protected, public, bind(C, name=\"{var:s}{suffix}\") ::&" + newline)
+    f.write(f"capi_{count:d}{suffix} = capi_codata_constant_type([ &" + ctag + newline)
+
+    # last not comma at the end
+    for _cname in cnames[:-1]:
+        f.write(f"{_cname:s}, &" + ctag + newline)
+    _cname = cnames[-1]
+    f.write(f"{_cname:s} &" + ctag + newline)
+
+    # VALUES AND UNCERTAINTY
+    f.write("], &" + ctag + newline +\
+           f"{value:s}_dp, {uncertainty:s}_dp, &" + ctag + newline)
+   
+    
+    # UNITS
+    unit_list = list(map(lambda s: '"' + s + '"', unit))
+    cname = ['\" \"'] * cunit_len
+    cname[0:len(unit)] = unit_list[:]
+    cname[len(unit)] = "c_null_char"
+    
+    indexes = (0, 10, 20)
+    cnames = []
+    for i in range(0, len(indexes)-1):
+        cnames.append(", ".join(cname[indexes[i]: indexes[i+1]]))
+    cnames.append(", ".join(cname[indexes[-1]:]))
+    
+    # last not comma at the end
+    f.write("[ &" + ctag + newline)
+    for _cname in cnames[:-1]:
+        f.write(f"{_cname:s}, &" + ctag + newline)
+    _cname = cnames[-1]
+    f.write(f"{_cname:s} &" + ctag + newline)
+    f.write("])" + ctag + newline)
+
+
     f.write(newline)
 
 def write_module_end(f, year):
@@ -66,13 +109,13 @@ def run(fpath_ast: str, fpath_code: str)->None:
     write_year(fcode, year)
 
     ast = tomlkit.load(fast)
-    for var in ast.keys():
+    for i, var in enumerate(ast.keys()):
         name = ast[var]["name"]
         value = ast[var]["value"]
         uncertainty = ast[var]["uncertainty"]
         unit = ast[var]["unit"]
         
-        write_constant(fcode, var, name, value, uncertainty, unit, year)
+        write_constant(fcode, var, name, value, uncertainty, unit, year, i)
     
     write_module_end(fcode, year)
 

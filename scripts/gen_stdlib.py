@@ -1,4 +1,4 @@
-r"""Generate the Python modules."""
+r"""Generate sources for stdlib."""
 import argparse
 
 
@@ -9,6 +9,8 @@ def run(fpath_ast: str, fpath_code: str)->None:
     for line in fast:
         new_line = line.replace("codata__constants_type", "stdlib_codata_type")
         new_line = new_line.replace("codata__constants_2022", "stdlib_codata")
+        if "!capi" in new_line:
+            new_line=""
         fcode.write(new_line)
 
     fast.close()

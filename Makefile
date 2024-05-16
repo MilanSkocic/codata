@@ -76,6 +76,9 @@ nist:
 sources: nist 
 	make -C src 
 
+capi: nist
+	make -C include
+
 stdlib: nist sources
 	make -C stdlib
 
@@ -92,5 +95,6 @@ clean:
 	make -C media clean
 	make -C nist clean
 	make -C src clean
+	make -C include clean
 	rm -rf API-doc/*
 	fpm clean --all

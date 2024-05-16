@@ -10,1770 +10,7080 @@ type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_ELECTRON_MASS_RA
 codata_constant_type("alpha particle-electron mass ratio", &
 7294.29954142_dp, 0.00000024_dp, &
 "") !! alpha particle-electron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018") ::&
+capi_0_2018 = capi_codata_constant_type([ &!capi
+"a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
+"i", "c", "l", "e", "-", "e", "l", "e", "c", "t", &!capi
+"r", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
+"a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+7294.29954142_dp, 0.00000024_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_2018 = &
 codata_constant_type("alpha particle mass", &
 6.6446573357e-27_dp, 0.0000000020e-27_dp, &
 "kg") !! alpha particle mass
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_2018") ::&
+capi_1_2018 = capi_codata_constant_type([ &!capi
+"a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
+"i", "c", "l", "e", " ", "m", "a", "s", "s", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.6446573357e-27_dp, 0.0000000020e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("alpha particle mass energy equivalent", &
 5.9719201914e-10_dp, 0.0000000018e-10_dp, &
 "J") !! alpha particle mass energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018") ::&
+capi_2_2018 = capi_codata_constant_type([ &!capi
+"a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
+"i", "c", "l", "e", " ", "m", "a", "s", "s", " ", &!capi
+"e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
+"i", "v", "a", "l", "e", "n", "t", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.9719201914e-10_dp, 0.0000000018e-10_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("alpha particle mass energy equivalent in MeV", &
 3727.3794066_dp, 0.0000011_dp, &
 "MeV") !! alpha particle mass energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_3_2018 = capi_codata_constant_type([ &!capi
+"a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
+"i", "c", "l", "e", " ", "m", "a", "s", "s", " ", &!capi
+"e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
+"i", "v", "a", "l", "e", "n", "t", " ", "i", "n", &!capi
+" ", "M", "e", "V", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3727.3794066_dp, 0.0000011_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_IN_U_2018 = &
 codata_constant_type("alpha particle mass in u", &
 4.001506179127_dp, 0.000000000063_dp, &
 "u") !! alpha particle mass in u
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_IN_U_2018") ::&
+capi_4_2018 = capi_codata_constant_type([ &!capi
+"a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
+"i", "c", "l", "e", " ", "m", "a", "s", "s", " ", &!capi
+"i", "n", " ", "u", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.001506179127_dp, 0.000000000063_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MOLAR_MASS_2018 = &
 codata_constant_type("alpha particle molar mass", &
 4.0015061777e-3_dp, 0.0000000012e-3_dp, &
 "kg mol^-1") !! alpha particle molar mass
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MOLAR_MASS_2018") ::&
+capi_5_2018 = capi_codata_constant_type([ &!capi
+"a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
+"i", "c", "l", "e", " ", "m", "o", "l", "a", "r", &!capi
+" ", "m", "a", "s", "s", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.0015061777e-3_dp, 0.0000000012e-3_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_PROTON_MASS_RATIO_2018 = &
 codata_constant_type("alpha particle-proton mass ratio", &
 3.97259969009_dp, 0.00000000022_dp, &
 "") !! alpha particle-proton mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_PROTON_MASS_RATIO_2018") ::&
+capi_6_2018 = capi_codata_constant_type([ &!capi
+"a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
+"i", "c", "l", "e", "-", "p", "r", "o", "t", "o", &!capi
+"n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.97259969009_dp, 0.00000000022_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018 = &
 codata_constant_type("alpha particle relative atomic mass", &
 4.001506179127_dp, 0.000000000063_dp, &
 "") !! alpha particle relative atomic mass
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018") ::&
+capi_7_2018 = capi_codata_constant_type([ &!capi
+"a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
+"i", "c", "l", "e", " ", "r", "e", "l", "a", "t", &!capi
+"i", "v", "e", " ", "a", "t", "o", "m", "i", "c", &!capi
+" ", "m", "a", "s", "s", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.001506179127_dp, 0.000000000063_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ANGSTROM_STAR_2018 = &
 codata_constant_type("Angstrom star", &
 1.00001495e-10_dp, 0.00000090e-10_dp, &
 "m") !! Angstrom star
+type(capi_codata_constant_type), protected, public, bind(C, name="ANGSTROM_STAR_2018") ::&
+capi_8_2018 = capi_codata_constant_type([ &!capi
+"A", "n", "g", "s", "t", "r", "o", "m", " ", "s", &!capi
+"t", "a", "r", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00001495e-10_dp, 0.00000090e-10_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_CONSTANT_2018 = &
 codata_constant_type("atomic mass constant", &
 1.66053906660e-27_dp, 0.00000000050e-27_dp, &
 "kg") !! atomic mass constant
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_2018") ::&
+capi_9_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.66053906660e-27_dp, 0.00000000050e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("atomic mass constant energy equivalent", &
 1.49241808560e-10_dp, 0.00000000045e-10_dp, &
 "J") !! atomic mass constant energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2018") ::&
+capi_10_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
+" ", "e", "n", "e", "r", "g", "y", " ", "e", "q", &!capi
+"u", "i", "v", "a", "l", "e", "n", "t", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.49241808560e-10_dp, 0.00000000045e-10_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("atomic mass constant energy equivalent in MeV", &
 931.49410242_dp, 0.00000028_dp, &
 "MeV") !! atomic mass constant energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_11_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
+" ", "e", "n", "e", "r", "g", "y", " ", "e", "q", &!capi
+"u", "i", "v", "a", "l", "e", "n", "t", " ", "i", &!capi
+"n", " ", "M", "e", "V", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+931.49410242_dp, 0.00000028_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2018 = &
 codata_constant_type("atomic mass unit-electron volt relationship", &
 9.3149410242e8_dp, 0.0000000028e8_dp, &
 "eV") !! atomic mass unit-electron volt relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2018") ::&
+capi_12_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "u", "n", "i", "t", "-", "e", "l", "e", &!capi
+"c", "t", "r", "o", "n", " ", "v", "o", "l", "t", &!capi
+" ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
+"h", "i", "p", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9.3149410242e8_dp, 0.0000000028e8_dp, &!capi
+[ &!capi
+"e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2018 = &
 codata_constant_type("atomic mass unit-hartree relationship", &
 3.4231776874e7_dp, 0.0000000010e7_dp, &
 "E_h") !! atomic mass unit-hartree relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2018") ::&
+capi_13_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "u", "n", "i", "t", "-", "h", "a", "r", &!capi
+"t", "r", "e", "e", " ", "r", "e", "l", "a", "t", &!capi
+"i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.4231776874e7_dp, 0.0000000010e7_dp, &!capi
+[ &!capi
+"E", "_", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2018 = &
 codata_constant_type("atomic mass unit-hertz relationship", &
 2.25234271871e23_dp, 0.00000000068e23_dp, &
 "Hz") !! atomic mass unit-hertz relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2018") ::&
+capi_14_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "u", "n", "i", "t", "-", "h", "e", "r", &!capi
+"t", "z", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.25234271871e23_dp, 0.00000000068e23_dp, &!capi
+[ &!capi
+"H", "z", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2018 = &
 codata_constant_type("atomic mass unit-inverse meter relationship", &
 7.5130066104e14_dp, 0.0000000023e14_dp, &
 "m^-1") !! atomic mass unit-inverse meter relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2018") ::&
+capi_15_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "u", "n", "i", "t", "-", "i", "n", "v", &!capi
+"e", "r", "s", "e", " ", "m", "e", "t", "e", "r", &!capi
+" ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
+"h", "i", "p", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+7.5130066104e14_dp, 0.0000000023e14_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2018 = &
 codata_constant_type("atomic mass unit-joule relationship", &
 1.49241808560e-10_dp, 0.00000000045e-10_dp, &
 "J") !! atomic mass unit-joule relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2018") ::&
+capi_16_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "u", "n", "i", "t", "-", "j", "o", "u", &!capi
+"l", "e", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.49241808560e-10_dp, 0.00000000045e-10_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2018 = &
 codata_constant_type("atomic mass unit-kelvin relationship", &
 1.08095401916e13_dp, 0.00000000033e13_dp, &
 "K") !! atomic mass unit-kelvin relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2018") ::&
+capi_17_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "u", "n", "i", "t", "-", "k", "e", "l", &!capi
+"v", "i", "n", " ", "r", "e", "l", "a", "t", "i", &!capi
+"o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.08095401916e13_dp, 0.00000000033e13_dp, &!capi
+[ &!capi
+"K", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2018 = &
 codata_constant_type("atomic mass unit-kilogram relationship", &
 1.66053906660e-27_dp, 0.00000000050e-27_dp, &
 "kg") !! atomic mass unit-kilogram relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2018") ::&
+capi_18_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
+"s", " ", "u", "n", "i", "t", "-", "k", "i", "l", &!capi
+"o", "g", "r", "a", "m", " ", "r", "e", "l", "a", &!capi
+"t", "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.66053906660e-27_dp, 0.00000000050e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2018 = &
 codata_constant_type("atomic unit of 1st hyperpolarizability", &
 3.2063613061e-53_dp, 0.0000000015e-53_dp, &
 "C^3 m^3 J^-2") !! atomic unit of 1st hyperpolarizability
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2018") ::&
+capi_19_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "1", "s", "t", " ", "h", &!capi
+"y", "p", "e", "r", "p", "o", "l", "a", "r", "i", &!capi
+"z", "a", "b", "i", "l", "i", "t", "y", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.2063613061e-53_dp, 0.0000000015e-53_dp, &!capi
+[ &!capi
+"C", "^", "3", " ", "m", "^", "3", " ", "J", "^", &!capi
+"-", "2", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2018 = &
 codata_constant_type("atomic unit of 2nd hyperpolarizability", &
 6.2353799905e-65_dp, 0.0000000038e-65_dp, &
 "C^4 m^4 J^-3") !! atomic unit of 2nd hyperpolarizability
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2018") ::&
+capi_20_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "2", "n", "d", " ", "h", &!capi
+"y", "p", "e", "r", "p", "o", "l", "a", "r", "i", &!capi
+"z", "a", "b", "i", "l", "i", "t", "y", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.2353799905e-65_dp, 0.0000000038e-65_dp, &!capi
+[ &!capi
+"C", "^", "4", " ", "m", "^", "4", " ", "J", "^", &!capi
+"-", "3", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ACTION_2018 = &
 codata_constant_type("atomic unit of action", &
 1.054571817e-34_dp, 0.0_dp, &
 "J s") !! atomic unit of action
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ACTION_2018") ::&
+capi_21_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "a", "c", "t", "i", "o", &!capi
+"n", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.054571817e-34_dp, 0.0_dp, &!capi
+[ &!capi
+"J", " ", "s", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_CHARGE_2018 = &
 codata_constant_type("atomic unit of charge", &
 1.602176634e-19_dp, 0.0_dp, &
 "C") !! atomic unit of charge
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE_2018") ::&
+capi_22_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "c", "h", "a", "r", "g", &!capi
+"e", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.602176634e-19_dp, 0.0_dp, &!capi
+[ &!capi
+"C", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_CHARGE_DENSITY_2018 = &
 codata_constant_type("atomic unit of charge density", &
 1.08120238457e12_dp, 0.00000000049e12_dp, &
 "C m^-3") !! atomic unit of charge density
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE_DENSITY_2018") ::&
+capi_23_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "c", "h", "a", "r", "g", &!capi
+"e", " ", "d", "e", "n", "s", "i", "t", "y", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.08120238457e12_dp, 0.00000000049e12_dp, &!capi
+[ &!capi
+"C", " ", "m", "^", "-", "3", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_CURRENT_2018 = &
 codata_constant_type("atomic unit of current", &
 6.623618237510e-3_dp, 0.000000000013e-3_dp, &
 "A") !! atomic unit of current
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CURRENT_2018") ::&
+capi_24_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "c", "u", "r", "r", "e", &!capi
+"n", "t", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.623618237510e-3_dp, 0.000000000013e-3_dp, &!capi
+[ &!capi
+"A", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2018 = &
 codata_constant_type("atomic unit of electric dipole mom.", &
 8.4783536255e-30_dp, 0.0000000013e-30_dp, &
 "C m") !! atomic unit of electric dipole mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2018") ::&
+capi_25_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
+"r", "i", "c", " ", "d", "i", "p", "o", "l", "e", &!capi
+" ", "m", "o", "m", ".", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.4783536255e-30_dp, 0.0000000013e-30_dp, &!capi
+[ &!capi
+"C", " ", "m", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD_2018 = &
 codata_constant_type("atomic unit of electric field", &
 5.14220674763e11_dp, 0.00000000078e11_dp, &
 "V m^-1") !! atomic unit of electric field
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD_2018") ::&
+capi_26_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
+"r", "i", "c", " ", "f", "i", "e", "l", "d", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.14220674763e11_dp, 0.00000000078e11_dp, &!capi
+[ &!capi
+"V", " ", "m", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2018 = &
 codata_constant_type("atomic unit of electric field gradient", &
 9.7173624292e21_dp, 0.0000000029e21_dp, &
 "V m^-2") !! atomic unit of electric field gradient
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2018") ::&
+capi_27_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
+"r", "i", "c", " ", "f", "i", "e", "l", "d", " ", &!capi
+"g", "r", "a", "d", "i", "e", "n", "t", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9.7173624292e21_dp, 0.0000000029e21_dp, &!capi
+[ &!capi
+"V", " ", "m", "^", "-", "2", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2018 = &
 codata_constant_type("atomic unit of electric polarizability", &
 1.64877727436e-41_dp, 0.00000000050e-41_dp, &
 "C^2 m^2 J^-1") !! atomic unit of electric polarizability
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2018") ::&
+capi_28_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
+"r", "i", "c", " ", "p", "o", "l", "a", "r", "i", &!capi
+"z", "a", "b", "i", "l", "i", "t", "y", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.64877727436e-41_dp, 0.00000000050e-41_dp, &!capi
+[ &!capi
+"C", "^", "2", " ", "m", "^", "2", " ", "J", "^", &!capi
+"-", "1", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2018 = &
 codata_constant_type("atomic unit of electric potential", &
 27.211386245988_dp, 0.000000000053_dp, &
 "V") !! atomic unit of electric potential
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2018") ::&
+capi_29_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
+"r", "i", "c", " ", "p", "o", "t", "e", "n", "t", &!capi
+"i", "a", "l", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+27.211386245988_dp, 0.000000000053_dp, &!capi
+[ &!capi
+"V", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2018 = &
 codata_constant_type("atomic unit of electric quadrupole mom.", &
 4.4865515246e-40_dp, 0.0000000014e-40_dp, &
 "C m^2") !! atomic unit of electric quadrupole mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2018") ::&
+capi_30_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
+"r", "i", "c", " ", "q", "u", "a", "d", "r", "u", &!capi
+"p", "o", "l", "e", " ", "m", "o", "m", ".", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.4865515246e-40_dp, 0.0000000014e-40_dp, &!capi
+[ &!capi
+"C", " ", "m", "^", "2", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ENERGY_2018 = &
 codata_constant_type("atomic unit of energy", &
 4.3597447222071e-18_dp, 0.0000000000085e-18_dp, &
 "J") !! atomic unit of energy
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ENERGY_2018") ::&
+capi_31_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "e", "n", "e", "r", "g", &!capi
+"y", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.3597447222071e-18_dp, 0.0000000000085e-18_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_FORCE_2018 = &
 codata_constant_type("atomic unit of force", &
 8.2387234983e-8_dp, 0.0000000012e-8_dp, &
 "N") !! atomic unit of force
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_FORCE_2018") ::&
+capi_32_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "f", "o", "r", "c", "e", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.2387234983e-8_dp, 0.0000000012e-8_dp, &!capi
+[ &!capi
+"N", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_LENGTH_2018 = &
 codata_constant_type("atomic unit of length", &
 5.29177210903e-11_dp, 0.00000000080e-11_dp, &
 "m") !! atomic unit of length
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_LENGTH_2018") ::&
+capi_33_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "l", "e", "n", "g", "t", &!capi
+"h", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.29177210903e-11_dp, 0.00000000080e-11_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2018 = &
 codata_constant_type("atomic unit of mag. dipole mom.", &
 1.85480201566e-23_dp, 0.00000000056e-23_dp, &
 "J T^-1") !! atomic unit of mag. dipole mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2018") ::&
+capi_34_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "m", "a", "g", ".", " ", &!capi
+"d", "i", "p", "o", "l", "e", " ", "m", "o", "m", &!capi
+".", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.85480201566e-23_dp, 0.00000000056e-23_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2018 = &
 codata_constant_type("atomic unit of mag. flux density", &
 2.35051756758e5_dp, 0.00000000071e5_dp, &
 "T") !! atomic unit of mag. flux density
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2018") ::&
+capi_35_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "m", "a", "g", ".", " ", &!capi
+"f", "l", "u", "x", " ", "d", "e", "n", "s", "i", &!capi
+"t", "y", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.35051756758e5_dp, 0.00000000071e5_dp, &!capi
+[ &!capi
+"T", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MAGNETIZABILITY_2018 = &
 codata_constant_type("atomic unit of magnetizability", &
 7.8910366008e-29_dp, 0.0000000048e-29_dp, &
 "J T^-2") !! atomic unit of magnetizability
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAGNETIZABILITY_2018") ::&
+capi_36_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "m", "a", "g", "n", "e", &!capi
+"t", "i", "z", "a", "b", "i", "l", "i", "t", "y", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+7.8910366008e-29_dp, 0.0000000048e-29_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "2", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MASS_2018 = &
 codata_constant_type("atomic unit of mass", &
 9.1093837015e-31_dp, 0.0000000028e-31_dp, &
 "kg") !! atomic unit of mass
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MASS_2018") ::&
+capi_37_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "m", "a", "s", "s", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9.1093837015e-31_dp, 0.0000000028e-31_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MOMENTUM_2018 = &
 codata_constant_type("atomic unit of momentum", &
 1.99285191410e-24_dp, 0.00000000030e-24_dp, &
 "kg m s^-1") !! atomic unit of momentum
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MOMENTUM_2018") ::&
+capi_38_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "m", "o", "m", "e", "n", &!capi
+"t", "u", "m", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.99285191410e-24_dp, 0.00000000030e-24_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", " ", "s", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_PERMITTIVITY_2018 = &
 codata_constant_type("atomic unit of permittivity", &
 1.11265005545e-10_dp, 0.00000000017e-10_dp, &
 "F m^-1") !! atomic unit of permittivity
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_PERMITTIVITY_2018") ::&
+capi_39_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "p", "e", "r", "m", "i", &!capi
+"t", "t", "i", "v", "i", "t", "y", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.11265005545e-10_dp, 0.00000000017e-10_dp, &!capi
+[ &!capi
+"F", " ", "m", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_TIME_2018 = &
 codata_constant_type("atomic unit of time", &
 2.4188843265857e-17_dp, 0.0000000000047e-17_dp, &
 "s") !! atomic unit of time
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_TIME_2018") ::&
+capi_40_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "t", "i", "m", "e", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.4188843265857e-17_dp, 0.0000000000047e-17_dp, &!capi
+[ &!capi
+"s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_VELOCITY_2018 = &
 codata_constant_type("atomic unit of velocity", &
 2.18769126364e6_dp, 0.00000000033e6_dp, &
 "m s^-1") !! atomic unit of velocity
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_VELOCITY_2018") ::&
+capi_41_2018 = capi_codata_constant_type([ &!capi
+"a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
+"t", " ", "o", "f", " ", "v", "e", "l", "o", "c", &!capi
+"i", "t", "y", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.18769126364e6_dp, 0.00000000033e6_dp, &!capi
+[ &!capi
+"m", " ", "s", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: AVOGADRO_CONSTANT_2018 = &
 codata_constant_type("Avogadro constant", &
 6.02214076e23_dp, 0.0_dp, &
 "mol^-1") !! Avogadro constant
+type(capi_codata_constant_type), protected, public, bind(C, name="AVOGADRO_CONSTANT_2018") ::&
+capi_42_2018 = capi_codata_constant_type([ &!capi
+"A", "v", "o", "g", "a", "d", "r", "o", " ", "c", &!capi
+"o", "n", "s", "t", "a", "n", "t", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.02214076e23_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "o", "l", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOHR_MAGNETON_2018 = &
 codata_constant_type("Bohr magneton", &
 9.2740100783e-24_dp, 0.0000000028e-24_dp, &
 "J T^-1") !! Bohr magneton
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_2018") ::&
+capi_43_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
+"t", "o", "n", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9.2740100783e-24_dp, 0.0000000028e-24_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_EV_T_2018 = &
 codata_constant_type("Bohr magneton in eV/T", &
 5.7883818060e-5_dp, 0.0000000017e-5_dp, &
 "eV T^-1") !! Bohr magneton in eV/T
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_EV_T_2018") ::&
+capi_44_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
+"t", "o", "n", " ", "i", "n", " ", "e", "V", "/", &!capi
+"T", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.7883818060e-5_dp, 0.0000000017e-5_dp, &!capi
+[ &!capi
+"e", "V", " ", "T", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_HZ_T_2018 = &
 codata_constant_type("Bohr magneton in Hz/T", &
 1.39962449361e10_dp, 0.00000000042e10_dp, &
 "Hz T^-1") !! Bohr magneton in Hz/T
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_HZ_T_2018") ::&
+capi_45_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
+"t", "o", "n", " ", "i", "n", " ", "H", "z", "/", &!capi
+"T", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.39962449361e10_dp, 0.00000000042e10_dp, &!capi
+[ &!capi
+"H", "z", " ", "T", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018 = &
 codata_constant_type("Bohr magneton in inverse meter per tesla", &
 46.686447783_dp, 0.000000014_dp, &
 "m^-1 T^-1") !! Bohr magneton in inverse meter per tesla
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018") ::&
+capi_46_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
+"t", "o", "n", " ", "i", "n", " ", "i", "n", "v", &!capi
+"e", "r", "s", "e", " ", "m", "e", "t", "e", "r", &!capi
+" ", "p", "e", "r", " ", "t", "e", "s", "l", "a", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+46.686447783_dp, 0.000000014_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", " ", "T", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_K_T_2018 = &
 codata_constant_type("Bohr magneton in K/T", &
 0.67171381563_dp, 0.00000000020_dp, &
 "K T^-1") !! Bohr magneton in K/T
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_K_T_2018") ::&
+capi_47_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
+"t", "o", "n", " ", "i", "n", " ", "K", "/", "T", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.67171381563_dp, 0.00000000020_dp, &!capi
+[ &!capi
+"K", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOHR_RADIUS_2018 = &
 codata_constant_type("Bohr radius", &
 5.29177210903e-11_dp, 0.00000000080e-11_dp, &
 "m") !! Bohr radius
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_RADIUS_2018") ::&
+capi_48_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "h", "r", " ", "r", "a", "d", "i", "u", &!capi
+"s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.29177210903e-11_dp, 0.00000000080e-11_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_2018 = &
 codata_constant_type("Boltzmann constant", &
 1.380649e-23_dp, 0.0_dp, &
 "J K^-1") !! Boltzmann constant
+type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_2018") ::&
+capi_49_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.380649e-23_dp, 0.0_dp, &!capi
+[ &!capi
+"J", " ", "K", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_EV_K_2018 = &
 codata_constant_type("Boltzmann constant in eV/K", &
 8.617333262e-5_dp, 0.0_dp, &
 "eV K^-1") !! Boltzmann constant in eV/K
+type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_EV_K_2018") ::&
+capi_50_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", " ", "i", &!capi
+"n", " ", "e", "V", "/", "K", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.617333262e-5_dp, 0.0_dp, &!capi
+[ &!capi
+"e", "V", " ", "K", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_HZ_K_2018 = &
 codata_constant_type("Boltzmann constant in Hz/K", &
 2.083661912e10_dp, 0.0_dp, &
 "Hz K^-1") !! Boltzmann constant in Hz/K
+type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_HZ_K_2018") ::&
+capi_51_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", " ", "i", &!capi
+"n", " ", "H", "z", "/", "K", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.083661912e10_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", " ", "K", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2018 = &
 codata_constant_type("Boltzmann constant in inverse meter per kelvin", &
 69.50348004_dp, 0.0_dp, &
 "m^-1 K^-1") !! Boltzmann constant in inverse meter per kelvin
+type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2018") ::&
+capi_52_2018 = capi_codata_constant_type([ &!capi
+"B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", " ", "i", &!capi
+"n", " ", "i", "n", "v", "e", "r", "s", "e", " ", &!capi
+"m", "e", "t", "e", "r", " ", "p", "e", "r", " ", &!capi
+"k", "e", "l", "v", "i", "n", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+69.50348004_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", " ", "K", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2018 = &
 codata_constant_type("characteristic impedance of vacuum", &
 376.730313668_dp, 0.000000057_dp, &
 "ohm") !! characteristic impedance of vacuum
+type(capi_codata_constant_type), protected, public, bind(C, name="CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2018") ::&
+capi_53_2018 = capi_codata_constant_type([ &!capi
+"c", "h", "a", "r", "a", "c", "t", "e", "r", "i", &!capi
+"s", "t", "i", "c", " ", "i", "m", "p", "e", "d", &!capi
+"a", "n", "c", "e", " ", "o", "f", " ", "v", "a", &!capi
+"c", "u", "u", "m", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+376.730313668_dp, 0.000000057_dp, &!capi
+[ &!capi
+"o", "h", "m", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CLASSICAL_ELECTRON_RADIUS_2018 = &
 codata_constant_type("classical electron radius", &
 2.8179403262e-15_dp, 0.0000000013e-15_dp, &
 "m") !! classical electron radius
+type(capi_codata_constant_type), protected, public, bind(C, name="CLASSICAL_ELECTRON_RADIUS_2018") ::&
+capi_54_2018 = capi_codata_constant_type([ &!capi
+"c", "l", "a", "s", "s", "i", "c", "a", "l", " ", &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "r", &!capi
+"a", "d", "i", "u", "s", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.8179403262e-15_dp, 0.0000000013e-15_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("Compton wavelength", &
 2.42631023867e-12_dp, 0.00000000073e-12_dp, &
 "m") !! Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="COMPTON_WAVELENGTH_2018") ::&
+capi_55_2018 = capi_codata_constant_type([ &!capi
+"C", "o", "m", "p", "t", "o", "n", " ", "w", "a", &!capi
+"v", "e", "l", "e", "n", "g", "t", "h", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.42631023867e-12_dp, 0.00000000073e-12_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONDUCTANCE_QUANTUM_2018 = &
 codata_constant_type("conductance quantum", &
 7.748091729e-5_dp, 0.0_dp, &
 "S") !! conductance quantum
+type(capi_codata_constant_type), protected, public, bind(C, name="CONDUCTANCE_QUANTUM_2018") ::&
+capi_56_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "d", "u", "c", "t", "a", "n", "c", &!capi
+"e", " ", "q", "u", "a", "n", "t", "u", "m", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+7.748091729e-5_dp, 0.0_dp, &!capi
+[ &!capi
+"S", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_AMPERE_90_2018 = &
 codata_constant_type("conventional value of ampere-90", &
 1.00000008887_dp, 0.0_dp, &
 "A") !! conventional value of ampere-90
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_AMPERE_90_2018") ::&
+capi_57_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
+"a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
+"f", " ", "a", "m", "p", "e", "r", "e", "-", "9", &!capi
+"0", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00000008887_dp, 0.0_dp, &!capi
+[ &!capi
+"A", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_COULOMB_90_2018 = &
 codata_constant_type("conventional value of coulomb-90", &
 1.00000008887_dp, 0.0_dp, &
 "C") !! conventional value of coulomb-90
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_COULOMB_90_2018") ::&
+capi_58_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
+"a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
+"f", " ", "c", "o", "u", "l", "o", "m", "b", "-", &!capi
+"9", "0", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00000008887_dp, 0.0_dp, &!capi
+[ &!capi
+"C", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_FARAD_90_2018 = &
 codata_constant_type("conventional value of farad-90", &
 0.99999998220_dp, 0.0_dp, &
 "F") !! conventional value of farad-90
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_FARAD_90_2018") ::&
+capi_59_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
+"a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
+"f", " ", "f", "a", "r", "a", "d", "-", "9", "0", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.99999998220_dp, 0.0_dp, &!capi
+[ &!capi
+"F", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_HENRY_90_2018 = &
 codata_constant_type("conventional value of henry-90", &
 1.00000001779_dp, 0.0_dp, &
 "H") !! conventional value of henry-90
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_HENRY_90_2018") ::&
+capi_60_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
+"a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
+"f", " ", "h", "e", "n", "r", "y", "-", "9", "0", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00000001779_dp, 0.0_dp, &!capi
+[ &!capi
+"H", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2018 = &
 codata_constant_type("conventional value of Josephson constant", &
 483597.9e9_dp, 0.0_dp, &
 "Hz V^-1") !! conventional value of Josephson constant
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2018") ::&
+capi_61_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
+"a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
+"f", " ", "J", "o", "s", "e", "p", "h", "s", "o", &!capi
+"n", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+483597.9e9_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", " ", "V", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_OHM_90_2018 = &
 codata_constant_type("conventional value of ohm-90", &
 1.00000001779_dp, 0.0_dp, &
 "ohm") !! conventional value of ohm-90
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_OHM_90_2018") ::&
+capi_62_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
+"a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
+"f", " ", "o", "h", "m", "-", "9", "0", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00000001779_dp, 0.0_dp, &!capi
+[ &!capi
+"o", "h", "m", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_VOLT_90_2018 = &
 codata_constant_type("conventional value of volt-90", &
 1.00000010666_dp, 0.0_dp, &
 "V") !! conventional value of volt-90
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VOLT_90_2018") ::&
+capi_63_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
+"a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
+"f", " ", "v", "o", "l", "t", "-", "9", "0", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00000010666_dp, 0.0_dp, &!capi
+[ &!capi
+"V", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2018 = &
 codata_constant_type("conventional value of von Klitzing constant", &
 25812.807_dp, 0.0_dp, &
 "ohm") !! conventional value of von Klitzing constant
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2018") ::&
+capi_64_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
+"a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
+"f", " ", "v", "o", "n", " ", "K", "l", "i", "t", &!capi
+"z", "i", "n", "g", " ", "c", "o", "n", "s", "t", &!capi
+"a", "n", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+25812.807_dp, 0.0_dp, &!capi
+[ &!capi
+"o", "h", "m", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_WATT_90_2018 = &
 codata_constant_type("conventional value of watt-90", &
 1.00000019553_dp, 0.0_dp, &
 "W") !! conventional value of watt-90
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_WATT_90_2018") ::&
+capi_65_2018 = capi_codata_constant_type([ &!capi
+"c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
+"a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
+"f", " ", "w", "a", "t", "t", "-", "9", "0", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00000019553_dp, 0.0_dp, &!capi
+[ &!capi
+"W", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: COPPER_X_UNIT_2018 = &
 codata_constant_type("Copper x unit", &
 1.00207697e-13_dp, 0.00000028e-13_dp, &
 "m") !! Copper x unit
+type(capi_codata_constant_type), protected, public, bind(C, name="COPPER_X_UNIT_2018") ::&
+capi_66_2018 = capi_codata_constant_type([ &!capi
+"C", "o", "p", "p", "e", "r", " ", "x", " ", "u", &!capi
+"n", "i", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00207697e-13_dp, 0.00000028e-13_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_ELECTRON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("deuteron-electron mag. mom. ratio", &
 -4.664345551e-4_dp, 0.000000012e-4_dp, &
 "") !! deuteron-electron mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MAG_MOM_RATIO_2018") ::&
+capi_67_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", "-", "e", &!capi
+"l", "e", "c", "t", "r", "o", "n", " ", "m", "a", &!capi
+"g", ".", " ", "m", "o", "m", ".", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-4.664345551e-4_dp, 0.000000012e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_ELECTRON_MASS_RATIO_2018 = &
 codata_constant_type("deuteron-electron mass ratio", &
 3670.48296788_dp, 0.00000013_dp, &
 "") !! deuteron-electron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MASS_RATIO_2018") ::&
+capi_68_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", "-", "e", &!capi
+"l", "e", "c", "t", "r", "o", "n", " ", "m", "a", &!capi
+"s", "s", " ", "r", "a", "t", "i", "o", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3670.48296788_dp, 0.00000013_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_G_FACTOR_2018 = &
 codata_constant_type("deuteron g factor", &
 0.8574382338_dp, 0.0000000022_dp, &
 "") !! deuteron g factor
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_G_FACTOR_2018") ::&
+capi_69_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "g", &!capi
+" ", "f", "a", "c", "t", "o", "r", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.8574382338_dp, 0.0000000022_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_MAG_MOM_2018 = &
 codata_constant_type("deuteron mag. mom.", &
 4.330735094e-27_dp, 0.000000011e-27_dp, &
 "J T^-1") !! deuteron mag. mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_2018") ::&
+capi_70_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
+"a", "g", ".", " ", "m", "o", "m", ".", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.330735094e-27_dp, 0.000000011e-27_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018 = &
 codata_constant_type("deuteron mag. mom. to Bohr magneton ratio", &
 4.669754570e-4_dp, 0.000000012e-4_dp, &
 "") !! deuteron mag. mom. to Bohr magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018") ::&
+capi_71_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
+"a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
+"o", " ", "B", "o", "h", "r", " ", "m", "a", "g", &!capi
+"n", "e", "t", "o", "n", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.669754570e-4_dp, 0.000000012e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018 = &
 codata_constant_type("deuteron mag. mom. to nuclear magneton ratio", &
 0.8574382338_dp, 0.0000000022_dp, &
 "") !! deuteron mag. mom. to nuclear magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018") ::&
+capi_72_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
+"a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
+"o", " ", "n", "u", "c", "l", "e", "a", "r", " ", &!capi
+"m", "a", "g", "n", "e", "t", "o", "n", " ", "r", &!capi
+"a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.8574382338_dp, 0.0000000022_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_MASS_2018 = &
 codata_constant_type("deuteron mass", &
 3.3435837724e-27_dp, 0.0000000010e-27_dp, &
 "kg") !! deuteron mass
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_2018") ::&
+capi_73_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
+"a", "s", "s", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.3435837724e-27_dp, 0.0000000010e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("deuteron mass energy equivalent", &
 3.00506323102e-10_dp, 0.00000000091e-10_dp, &
 "J") !! deuteron mass energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT_2018") ::&
+capi_74_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
+"a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
+" ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
+"t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.00506323102e-10_dp, 0.00000000091e-10_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("deuteron mass energy equivalent in MeV", &
 1875.61294257_dp, 0.00000057_dp, &
 "MeV") !! deuteron mass energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_75_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
+"a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
+" ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
+"t", " ", "i", "n", " ", "M", "e", "V", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1875.61294257_dp, 0.00000057_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_MASS_IN_U_2018 = &
 codata_constant_type("deuteron mass in u", &
 2.013553212745_dp, 0.000000000040_dp, &
 "u") !! deuteron mass in u
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_IN_U_2018") ::&
+capi_76_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
+"a", "s", "s", " ", "i", "n", " ", "u", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.013553212745_dp, 0.000000000040_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_MOLAR_MASS_2018 = &
 codata_constant_type("deuteron molar mass", &
 2.01355321205e-3_dp, 0.00000000061e-3_dp, &
 "kg mol^-1") !! deuteron molar mass
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MOLAR_MASS_2018") ::&
+capi_77_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
+"o", "l", "a", "r", " ", "m", "a", "s", "s", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.01355321205e-3_dp, 0.00000000061e-3_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_NEUTRON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("deuteron-neutron mag. mom. ratio", &
 -0.44820653_dp, 0.00000011_dp, &
 "") !! deuteron-neutron mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_NEUTRON_MAG_MOM_RATIO_2018") ::&
+capi_78_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", "-", "n", &!capi
+"e", "u", "t", "r", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-0.44820653_dp, 0.00000011_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_PROTON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("deuteron-proton mag. mom. ratio", &
 0.30701220939_dp, 0.00000000079_dp, &
 "") !! deuteron-proton mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MAG_MOM_RATIO_2018") ::&
+capi_79_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", "-", "p", &!capi
+"r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
+" ", "m", "o", "m", ".", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.30701220939_dp, 0.00000000079_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_PROTON_MASS_RATIO_2018 = &
 codata_constant_type("deuteron-proton mass ratio", &
 1.99900750139_dp, 0.00000000011_dp, &
 "") !! deuteron-proton mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MASS_RATIO_2018") ::&
+capi_80_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", "-", "p", &!capi
+"r", "o", "t", "o", "n", " ", "m", "a", "s", "s", &!capi
+" ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.99900750139_dp, 0.00000000011_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_RELATIVE_ATOMIC_MASS_2018 = &
 codata_constant_type("deuteron relative atomic mass", &
 2.013553212745_dp, 0.000000000040_dp, &
 "") !! deuteron relative atomic mass
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_RELATIVE_ATOMIC_MASS_2018") ::&
+capi_81_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "r", &!capi
+"e", "l", "a", "t", "i", "v", "e", " ", "a", "t", &!capi
+"o", "m", "i", "c", " ", "m", "a", "s", "s", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.013553212745_dp, 0.000000000040_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: DEUTERON_RMS_CHARGE_RADIUS_2018 = &
 codata_constant_type("deuteron rms charge radius", &
 2.12799e-15_dp, 0.00074e-15_dp, &
 "m") !! deuteron rms charge radius
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_RMS_CHARGE_RADIUS_2018") ::&
+capi_82_2018 = capi_codata_constant_type([ &!capi
+"d", "e", "u", "t", "e", "r", "o", "n", " ", "r", &!capi
+"m", "s", " ", "c", "h", "a", "r", "g", "e", " ", &!capi
+"r", "a", "d", "i", "u", "s", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.12799e-15_dp, 0.00074e-15_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_CHARGE_TO_MASS_QUOTIENT_2018 = &
 codata_constant_type("electron charge to mass quotient", &
 -1.75882001076e11_dp, 0.00000000053e11_dp, &
 "C kg^-1") !! electron charge to mass quotient
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_CHARGE_TO_MASS_QUOTIENT_2018") ::&
+capi_83_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "c", &!capi
+"h", "a", "r", "g", "e", " ", "t", "o", " ", "m", &!capi
+"a", "s", "s", " ", "q", "u", "o", "t", "i", "e", &!capi
+"n", "t", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.75882001076e11_dp, 0.00000000053e11_dp, &!capi
+[ &!capi
+"C", " ", "k", "g", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_DEUTERON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("electron-deuteron mag. mom. ratio", &
 -2143.9234915_dp, 0.0000056_dp, &
 "") !! electron-deuteron mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MAG_MOM_RATIO_2018") ::&
+capi_84_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "d", &!capi
+"e", "u", "t", "e", "r", "o", "n", " ", "m", "a", &!capi
+"g", ".", " ", "m", "o", "m", ".", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-2143.9234915_dp, 0.0000056_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_DEUTERON_MASS_RATIO_2018 = &
 codata_constant_type("electron-deuteron mass ratio", &
 2.724437107462e-4_dp, 0.000000000096e-4_dp, &
 "") !! electron-deuteron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MASS_RATIO_2018") ::&
+capi_85_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "d", &!capi
+"e", "u", "t", "e", "r", "o", "n", " ", "m", "a", &!capi
+"s", "s", " ", "r", "a", "t", "i", "o", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.724437107462e-4_dp, 0.000000000096e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_G_FACTOR_2018 = &
 codata_constant_type("electron g factor", &
 -2.00231930436256_dp, 0.00000000000035_dp, &
 "") !! electron g factor
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_G_FACTOR_2018") ::&
+capi_86_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "g", &!capi
+" ", "f", "a", "c", "t", "o", "r", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-2.00231930436256_dp, 0.00000000000035_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO_2018 = &
 codata_constant_type("electron gyromag. ratio", &
 1.76085963023e11_dp, 0.00000000053e11_dp, &
 "s^-1 T^-1") !! electron gyromag. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO_2018") ::&
+capi_87_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "g", &!capi
+"y", "r", "o", "m", "a", "g", ".", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.76085963023e11_dp, 0.00000000053e11_dp, &!capi
+[ &!capi
+"s", "^", "-", "1", " ", "T", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2018 = &
 codata_constant_type("electron gyromag. ratio in MHz/T", &
 28024.9514242_dp, 0.0000085_dp, &
 "MHz T^-1") !! electron gyromag. ratio in MHz/T
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2018") ::&
+capi_88_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "g", &!capi
+"y", "r", "o", "m", "a", "g", ".", " ", "r", "a", &!capi
+"t", "i", "o", " ", "i", "n", " ", "M", "H", "z", &!capi
+"/", "T", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+28024.9514242_dp, 0.0000085_dp, &!capi
+[ &!capi
+"M", "H", "z", " ", "T", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_HELION_MASS_RATIO_2018 = &
 codata_constant_type("electron-helion mass ratio", &
 1.819543074573e-4_dp, 0.000000000079e-4_dp, &
 "") !! electron-helion mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_HELION_MASS_RATIO_2018") ::&
+capi_89_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "h", &!capi
+"e", "l", "i", "o", "n", " ", "m", "a", "s", "s", &!capi
+" ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.819543074573e-4_dp, 0.000000000079e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_2018 = &
 codata_constant_type("electron mag. mom.", &
 -9.2847647043e-24_dp, 0.0000000028e-24_dp, &
 "J T^-1") !! electron mag. mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_2018") ::&
+capi_90_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
+"a", "g", ".", " ", "m", "o", "m", ".", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-9.2847647043e-24_dp, 0.0000000028e-24_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_ANOMALY_2018 = &
 codata_constant_type("electron mag. mom. anomaly", &
 1.15965218128e-3_dp, 0.00000000018e-3_dp, &
 "") !! electron mag. mom. anomaly
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_ANOMALY_2018") ::&
+capi_91_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
+"a", "g", ".", " ", "m", "o", "m", ".", " ", "a", &!capi
+"n", "o", "m", "a", "l", "y", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.15965218128e-3_dp, 0.00000000018e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018 = &
 codata_constant_type("electron mag. mom. to Bohr magneton ratio", &
 -1.00115965218128_dp, 0.00000000000018_dp, &
 "") !! electron mag. mom. to Bohr magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018") ::&
+capi_92_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
+"a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
+"o", " ", "B", "o", "h", "r", " ", "m", "a", "g", &!capi
+"n", "e", "t", "o", "n", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.00115965218128_dp, 0.00000000000018_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018 = &
 codata_constant_type("electron mag. mom. to nuclear magneton ratio", &
 -1838.28197188_dp, 0.00000011_dp, &
 "") !! electron mag. mom. to nuclear magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018") ::&
+capi_93_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
+"a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
+"o", " ", "n", "u", "c", "l", "e", "a", "r", " ", &!capi
+"m", "a", "g", "n", "e", "t", "o", "n", " ", "r", &!capi
+"a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1838.28197188_dp, 0.00000011_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MASS_2018 = &
 codata_constant_type("electron mass", &
 9.1093837015e-31_dp, 0.0000000028e-31_dp, &
 "kg") !! electron mass
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_2018") ::&
+capi_94_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
+"a", "s", "s", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9.1093837015e-31_dp, 0.0000000028e-31_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("electron mass energy equivalent", &
 8.1871057769e-14_dp, 0.0000000025e-14_dp, &
 "J") !! electron mass energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT_2018") ::&
+capi_95_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
+"a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
+" ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
+"t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.1871057769e-14_dp, 0.0000000025e-14_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("electron mass energy equivalent in MeV", &
 0.51099895000_dp, 0.00000000015_dp, &
 "MeV") !! electron mass energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_96_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
+"a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
+" ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
+"t", " ", "i", "n", " ", "M", "e", "V", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.51099895000_dp, 0.00000000015_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MASS_IN_U_2018 = &
 codata_constant_type("electron mass in u", &
 5.48579909065e-4_dp, 0.00000000016e-4_dp, &
 "u") !! electron mass in u
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_IN_U_2018") ::&
+capi_97_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
+"a", "s", "s", " ", "i", "n", " ", "u", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.48579909065e-4_dp, 0.00000000016e-4_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MOLAR_MASS_2018 = &
 codata_constant_type("electron molar mass", &
 5.4857990888e-7_dp, 0.0000000017e-7_dp, &
 "kg mol^-1") !! electron molar mass
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MOLAR_MASS_2018") ::&
+capi_98_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
+"o", "l", "a", "r", " ", "m", "a", "s", "s", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.4857990888e-7_dp, 0.0000000017e-7_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MUON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("electron-muon mag. mom. ratio", &
 206.7669883_dp, 0.0000046_dp, &
 "") !! electron-muon mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MAG_MOM_RATIO_2018") ::&
+capi_99_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "m", &!capi
+"u", "o", "n", " ", "m", "a", "g", ".", " ", "m", &!capi
+"o", "m", ".", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+206.7669883_dp, 0.0000046_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_MUON_MASS_RATIO_2018 = &
 codata_constant_type("electron-muon mass ratio", &
 4.83633169e-3_dp, 0.00000011e-3_dp, &
 "") !! electron-muon mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MASS_RATIO_2018") ::&
+capi_100_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "m", &!capi
+"u", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
+"a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.83633169e-3_dp, 0.00000011e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_NEUTRON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("electron-neutron mag. mom. ratio", &
 960.92050_dp, 0.00023_dp, &
 "") !! electron-neutron mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MAG_MOM_RATIO_2018") ::&
+capi_101_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "n", &!capi
+"e", "u", "t", "r", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+960.92050_dp, 0.00023_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_NEUTRON_MASS_RATIO_2018 = &
 codata_constant_type("electron-neutron mass ratio", &
 5.4386734424e-4_dp, 0.0000000026e-4_dp, &
 "") !! electron-neutron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MASS_RATIO_2018") ::&
+capi_102_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "n", &!capi
+"e", "u", "t", "r", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.4386734424e-4_dp, 0.0000000026e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_PROTON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("electron-proton mag. mom. ratio", &
 -658.21068789_dp, 0.00000020_dp, &
 "") !! electron-proton mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MAG_MOM_RATIO_2018") ::&
+capi_103_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "p", &!capi
+"r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
+" ", "m", "o", "m", ".", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-658.21068789_dp, 0.00000020_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_PROTON_MASS_RATIO_2018 = &
 codata_constant_type("electron-proton mass ratio", &
 5.44617021487e-4_dp, 0.00000000033e-4_dp, &
 "") !! electron-proton mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MASS_RATIO_2018") ::&
+capi_104_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "p", &!capi
+"r", "o", "t", "o", "n", " ", "m", "a", "s", "s", &!capi
+" ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.44617021487e-4_dp, 0.00000000033e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_RELATIVE_ATOMIC_MASS_2018 = &
 codata_constant_type("electron relative atomic mass", &
 5.48579909065e-4_dp, 0.00000000016e-4_dp, &
 "") !! electron relative atomic mass
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_RELATIVE_ATOMIC_MASS_2018") ::&
+capi_105_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "r", &!capi
+"e", "l", "a", "t", "i", "v", "e", " ", "a", "t", &!capi
+"o", "m", "i", "c", " ", "m", "a", "s", "s", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.48579909065e-4_dp, 0.00000000016e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_TAU_MASS_RATIO_2018 = &
 codata_constant_type("electron-tau mass ratio", &
 2.87585e-4_dp, 0.00019e-4_dp, &
 "") !! electron-tau mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TAU_MASS_RATIO_2018") ::&
+capi_106_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "t", &!capi
+"a", "u", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.87585e-4_dp, 0.00019e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018 = &
 codata_constant_type("electron to alpha particle mass ratio", &
 1.370933554787e-4_dp, 0.000000000045e-4_dp, &
 "") !! electron to alpha particle mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018") ::&
+capi_107_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "t", &!capi
+"o", " ", "a", "l", "p", "h", "a", " ", "p", "a", &!capi
+"r", "t", "i", "c", "l", "e", " ", "m", "a", "s", &!capi
+"s", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.370933554787e-4_dp, 0.000000000045e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2018 = &
 codata_constant_type("electron to shielded helion mag. mom. ratio", &
 864.058257_dp, 0.000010_dp, &
 "") !! electron to shielded helion mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2018") ::&
+capi_108_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "t", &!capi
+"o", " ", "s", "h", "i", "e", "l", "d", "e", "d", &!capi
+" ", "h", "e", "l", "i", "o", "n", " ", "m", "a", &!capi
+"g", ".", " ", "m", "o", "m", ".", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+864.058257_dp, 0.000010_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("electron to shielded proton mag. mom. ratio", &
 -658.2275971_dp, 0.0000072_dp, &
 "") !! electron to shielded proton mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018") ::&
+capi_109_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "t", &!capi
+"o", " ", "s", "h", "i", "e", "l", "d", "e", "d", &!capi
+" ", "p", "r", "o", "t", "o", "n", " ", "m", "a", &!capi
+"g", ".", " ", "m", "o", "m", ".", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-658.2275971_dp, 0.0000072_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_TRITON_MASS_RATIO_2018 = &
 codata_constant_type("electron-triton mass ratio", &
 1.819200062251e-4_dp, 0.000000000090e-4_dp, &
 "") !! electron-triton mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TRITON_MASS_RATIO_2018") ::&
+capi_110_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", "-", "t", &!capi
+"r", "i", "t", "o", "n", " ", "m", "a", "s", "s", &!capi
+" ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.819200062251e-4_dp, 0.000000000090e-4_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_VOLT_2018 = &
 codata_constant_type("electron volt", &
 1.602176634e-19_dp, 0.0_dp, &
 "J") !! electron volt
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_2018") ::&
+capi_111_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
+"o", "l", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.602176634e-19_dp, 0.0_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2018 = &
 codata_constant_type("electron volt-atomic mass unit relationship", &
 1.07354410233e-9_dp, 0.00000000032e-9_dp, &
 "u") !! electron volt-atomic mass unit relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2018") ::&
+capi_112_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
+"o", "l", "t", "-", "a", "t", "o", "m", "i", "c", &!capi
+" ", "m", "a", "s", "s", " ", "u", "n", "i", "t", &!capi
+" ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
+"h", "i", "p", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.07354410233e-9_dp, 0.00000000032e-9_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_VOLT_HARTREE_RELATIONSHIP_2018 = &
 codata_constant_type("electron volt-hartree relationship", &
 3.6749322175655e-2_dp, 0.0000000000071e-2_dp, &
 "E_h") !! electron volt-hartree relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HARTREE_RELATIONSHIP_2018") ::&
+capi_113_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
+"o", "l", "t", "-", "h", "a", "r", "t", "r", "e", &!capi
+"e", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
+"s", "h", "i", "p", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.6749322175655e-2_dp, 0.0000000000071e-2_dp, &!capi
+[ &!capi
+"E", "_", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_VOLT_HERTZ_RELATIONSHIP_2018 = &
 codata_constant_type("electron volt-hertz relationship", &
 2.417989242e14_dp, 0.0_dp, &
 "Hz") !! electron volt-hertz relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HERTZ_RELATIONSHIP_2018") ::&
+capi_114_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
+"o", "l", "t", "-", "h", "e", "r", "t", "z", " ", &!capi
+"r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
+"i", "p", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.417989242e14_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2018 = &
 codata_constant_type("electron volt-inverse meter relationship", &
 8.065543937e5_dp, 0.0_dp, &
 "m^-1") !! electron volt-inverse meter relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2018") ::&
+capi_115_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
+"o", "l", "t", "-", "i", "n", "v", "e", "r", "s", &!capi
+"e", " ", "m", "e", "t", "e", "r", " ", "r", "e", &!capi
+"l", "a", "t", "i", "o", "n", "s", "h", "i", "p", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.065543937e5_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_VOLT_JOULE_RELATIONSHIP_2018 = &
 codata_constant_type("electron volt-joule relationship", &
 1.602176634e-19_dp, 0.0_dp, &
 "J") !! electron volt-joule relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_JOULE_RELATIONSHIP_2018") ::&
+capi_116_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
+"o", "l", "t", "-", "j", "o", "u", "l", "e", " ", &!capi
+"r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
+"i", "p", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.602176634e-19_dp, 0.0_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_VOLT_KELVIN_RELATIONSHIP_2018 = &
 codata_constant_type("electron volt-kelvin relationship", &
 1.160451812e4_dp, 0.0_dp, &
 "K") !! electron volt-kelvin relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KELVIN_RELATIONSHIP_2018") ::&
+capi_117_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
+"o", "l", "t", "-", "k", "e", "l", "v", "i", "n", &!capi
+" ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
+"h", "i", "p", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.160451812e4_dp, 0.0_dp, &!capi
+[ &!capi
+"K", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2018 = &
 codata_constant_type("electron volt-kilogram relationship", &
 1.782661921e-36_dp, 0.0_dp, &
 "kg") !! electron volt-kilogram relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2018") ::&
+capi_118_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
+"o", "l", "t", "-", "k", "i", "l", "o", "g", "r", &!capi
+"a", "m", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.782661921e-36_dp, 0.0_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELEMENTARY_CHARGE_2018 = &
 codata_constant_type("elementary charge", &
 1.602176634e-19_dp, 0.0_dp, &
 "C") !! elementary charge
+type(capi_codata_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE_2018") ::&
+capi_119_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "m", "e", "n", "t", "a", "r", "y", &!capi
+" ", "c", "h", "a", "r", "g", "e", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.602176634e-19_dp, 0.0_dp, &!capi
+[ &!capi
+"C", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: ELEMENTARY_CHARGE_OVER_H_BAR_2018 = &
 codata_constant_type("elementary charge over h-bar", &
 1.519267447e15_dp, 0.0_dp, &
 "A J^-1") !! elementary charge over h-bar
+type(capi_codata_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE_OVER_H_BAR_2018") ::&
+capi_120_2018 = capi_codata_constant_type([ &!capi
+"e", "l", "e", "m", "e", "n", "t", "a", "r", "y", &!capi
+" ", "c", "h", "a", "r", "g", "e", " ", "o", "v", &!capi
+"e", "r", " ", "h", "-", "b", "a", "r", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.519267447e15_dp, 0.0_dp, &!capi
+[ &!capi
+"A", " ", "J", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: FARADAY_CONSTANT_2018 = &
 codata_constant_type("Faraday constant", &
 96485.33212_dp, 0.0_dp, &
 "C mol^-1") !! Faraday constant
+type(capi_codata_constant_type), protected, public, bind(C, name="FARADAY_CONSTANT_2018") ::&
+capi_121_2018 = capi_codata_constant_type([ &!capi
+"F", "a", "r", "a", "d", "a", "y", " ", "c", "o", &!capi
+"n", "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+96485.33212_dp, 0.0_dp, &!capi
+[ &!capi
+"C", " ", "m", "o", "l", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: FERMI_COUPLING_CONSTANT_2018 = &
 codata_constant_type("Fermi coupling constant", &
 1.1663787e-5_dp, 0.0000006e-5_dp, &
 "GeV^-2") !! Fermi coupling constant
+type(capi_codata_constant_type), protected, public, bind(C, name="FERMI_COUPLING_CONSTANT_2018") ::&
+capi_122_2018 = capi_codata_constant_type([ &!capi
+"F", "e", "r", "m", "i", " ", "c", "o", "u", "p", &!capi
+"l", "i", "n", "g", " ", "c", "o", "n", "s", "t", &!capi
+"a", "n", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.1663787e-5_dp, 0.0000006e-5_dp, &!capi
+[ &!capi
+"G", "e", "V", "^", "-", "2", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: FINE_STRUCTURE_CONSTANT_2018 = &
 codata_constant_type("fine-structure constant", &
 7.2973525693e-3_dp, 0.0000000011e-3_dp, &
 "") !! fine-structure constant
+type(capi_codata_constant_type), protected, public, bind(C, name="FINE_STRUCTURE_CONSTANT_2018") ::&
+capi_123_2018 = capi_codata_constant_type([ &!capi
+"f", "i", "n", "e", "-", "s", "t", "r", "u", "c", &!capi
+"t", "u", "r", "e", " ", "c", "o", "n", "s", "t", &!capi
+"a", "n", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+7.2973525693e-3_dp, 0.0000000011e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: FIRST_RADIATION_CONSTANT_2018 = &
 codata_constant_type("first radiation constant", &
 3.741771852e-16_dp, 0.0_dp, &
 "W m^2") !! first radiation constant
+type(capi_codata_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT_2018") ::&
+capi_124_2018 = capi_codata_constant_type([ &!capi
+"f", "i", "r", "s", "t", " ", "r", "a", "d", "i", &!capi
+"a", "t", "i", "o", "n", " ", "c", "o", "n", "s", &!capi
+"t", "a", "n", "t", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.741771852e-16_dp, 0.0_dp, &!capi
+[ &!capi
+"W", " ", "m", "^", "2", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2018 = &
 codata_constant_type("first radiation constant for spectral radiance", &
 1.191042972e-16_dp, 0.0_dp, &
 "W m^2 sr^-1") !! first radiation constant for spectral radiance
+type(capi_codata_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2018") ::&
+capi_125_2018 = capi_codata_constant_type([ &!capi
+"f", "i", "r", "s", "t", " ", "r", "a", "d", "i", &!capi
+"a", "t", "i", "o", "n", " ", "c", "o", "n", "s", &!capi
+"t", "a", "n", "t", " ", "f", "o", "r", " ", "s", &!capi
+"p", "e", "c", "t", "r", "a", "l", " ", "r", "a", &!capi
+"d", "i", "a", "n", "c", "e", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.191042972e-16_dp, 0.0_dp, &!capi
+[ &!capi
+"W", " ", "m", "^", "2", " ", "s", "r", "^", "-", &!capi
+"1", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018 = &
 codata_constant_type("hartree-atomic mass unit relationship", &
 2.92126232205e-8_dp, 0.00000000088e-8_dp, &
 "u") !! hartree-atomic mass unit relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018") ::&
+capi_126_2018 = capi_codata_constant_type([ &!capi
+"h", "a", "r", "t", "r", "e", "e", "-", "a", "t", &!capi
+"o", "m", "i", "c", " ", "m", "a", "s", "s", " ", &!capi
+"u", "n", "i", "t", " ", "r", "e", "l", "a", "t", &!capi
+"i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.92126232205e-8_dp, 0.00000000088e-8_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HARTREE_ELECTRON_VOLT_RELATIONSHIP_2018 = &
 codata_constant_type("hartree-electron volt relationship", &
 27.211386245988_dp, 0.000000000053_dp, &
 "eV") !! hartree-electron volt relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ELECTRON_VOLT_RELATIONSHIP_2018") ::&
+capi_127_2018 = capi_codata_constant_type([ &!capi
+"h", "a", "r", "t", "r", "e", "e", "-", "e", "l", &!capi
+"e", "c", "t", "r", "o", "n", " ", "v", "o", "l", &!capi
+"t", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
+"s", "h", "i", "p", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+27.211386245988_dp, 0.000000000053_dp, &!capi
+[ &!capi
+"e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HARTREE_ENERGY_2018 = &
 codata_constant_type("Hartree energy", &
 4.3597447222071e-18_dp, 0.0000000000085e-18_dp, &
 "J") !! Hartree energy
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ENERGY_2018") ::&
+capi_128_2018 = capi_codata_constant_type([ &!capi
+"H", "a", "r", "t", "r", "e", "e", " ", "e", "n", &!capi
+"e", "r", "g", "y", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.3597447222071e-18_dp, 0.0000000000085e-18_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HARTREE_ENERGY_IN_EV_2018 = &
 codata_constant_type("Hartree energy in eV", &
 27.211386245988_dp, 0.000000000053_dp, &
 "eV") !! Hartree energy in eV
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ENERGY_IN_EV_2018") ::&
+capi_129_2018 = capi_codata_constant_type([ &!capi
+"H", "a", "r", "t", "r", "e", "e", " ", "e", "n", &!capi
+"e", "r", "g", "y", " ", "i", "n", " ", "e", "V", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+27.211386245988_dp, 0.000000000053_dp, &!capi
+[ &!capi
+"e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HARTREE_HERTZ_RELATIONSHIP_2018 = &
 codata_constant_type("hartree-hertz relationship", &
 6.579683920502e15_dp, 0.000000000013e15_dp, &
 "Hz") !! hartree-hertz relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_HERTZ_RELATIONSHIP_2018") ::&
+capi_130_2018 = capi_codata_constant_type([ &!capi
+"h", "a", "r", "t", "r", "e", "e", "-", "h", "e", &!capi
+"r", "t", "z", " ", "r", "e", "l", "a", "t", "i", &!capi
+"o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.579683920502e15_dp, 0.000000000013e15_dp, &!capi
+[ &!capi
+"H", "z", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HARTREE_INVERSE_METER_RELATIONSHIP_2018 = &
 codata_constant_type("hartree-inverse meter relationship", &
 2.1947463136320e7_dp, 0.0000000000043e7_dp, &
 "m^-1") !! hartree-inverse meter relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_INVERSE_METER_RELATIONSHIP_2018") ::&
+capi_131_2018 = capi_codata_constant_type([ &!capi
+"h", "a", "r", "t", "r", "e", "e", "-", "i", "n", &!capi
+"v", "e", "r", "s", "e", " ", "m", "e", "t", "e", &!capi
+"r", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
+"s", "h", "i", "p", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.1947463136320e7_dp, 0.0000000000043e7_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HARTREE_JOULE_RELATIONSHIP_2018 = &
 codata_constant_type("hartree-joule relationship", &
 4.3597447222071e-18_dp, 0.0000000000085e-18_dp, &
 "J") !! hartree-joule relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_JOULE_RELATIONSHIP_2018") ::&
+capi_132_2018 = capi_codata_constant_type([ &!capi
+"h", "a", "r", "t", "r", "e", "e", "-", "j", "o", &!capi
+"u", "l", "e", " ", "r", "e", "l", "a", "t", "i", &!capi
+"o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.3597447222071e-18_dp, 0.0000000000085e-18_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HARTREE_KELVIN_RELATIONSHIP_2018 = &
 codata_constant_type("hartree-kelvin relationship", &
 3.1577502480407e5_dp, 0.0000000000061e5_dp, &
 "K") !! hartree-kelvin relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_KELVIN_RELATIONSHIP_2018") ::&
+capi_133_2018 = capi_codata_constant_type([ &!capi
+"h", "a", "r", "t", "r", "e", "e", "-", "k", "e", &!capi
+"l", "v", "i", "n", " ", "r", "e", "l", "a", "t", &!capi
+"i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.1577502480407e5_dp, 0.0000000000061e5_dp, &!capi
+[ &!capi
+"K", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HARTREE_KILOGRAM_RELATIONSHIP_2018 = &
 codata_constant_type("hartree-kilogram relationship", &
 4.8508702095432e-35_dp, 0.0000000000094e-35_dp, &
 "kg") !! hartree-kilogram relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_KILOGRAM_RELATIONSHIP_2018") ::&
+capi_134_2018 = capi_codata_constant_type([ &!capi
+"h", "a", "r", "t", "r", "e", "e", "-", "k", "i", &!capi
+"l", "o", "g", "r", "a", "m", " ", "r", "e", "l", &!capi
+"a", "t", "i", "o", "n", "s", "h", "i", "p", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.8508702095432e-35_dp, 0.0000000000094e-35_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_ELECTRON_MASS_RATIO_2018 = &
 codata_constant_type("helion-electron mass ratio", &
 5495.88528007_dp, 0.00000024_dp, &
 "") !! helion-electron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_ELECTRON_MASS_RATIO_2018") ::&
+capi_135_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", "-", "e", "l", "e", &!capi
+"c", "t", "r", "o", "n", " ", "m", "a", "s", "s", &!capi
+" ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5495.88528007_dp, 0.00000024_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_G_FACTOR_2018 = &
 codata_constant_type("helion g factor", &
 -4.255250615_dp, 0.000000050_dp, &
 "") !! helion g factor
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_G_FACTOR_2018") ::&
+capi_136_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "g", " ", "f", &!capi
+"a", "c", "t", "o", "r", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-4.255250615_dp, 0.000000050_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_MAG_MOM_2018 = &
 codata_constant_type("helion mag. mom.", &
 -1.074617532e-26_dp, 0.000000013e-26_dp, &
 "J T^-1") !! helion mag. mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_2018") ::&
+capi_137_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.074617532e-26_dp, 0.000000013e-26_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018 = &
 codata_constant_type("helion mag. mom. to Bohr magneton ratio", &
 -1.158740958e-3_dp, 0.000000014e-3_dp, &
 "") !! helion mag. mom. to Bohr magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018") ::&
+capi_138_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
+"B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
+"t", "o", "n", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.158740958e-3_dp, 0.000000014e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018 = &
 codata_constant_type("helion mag. mom. to nuclear magneton ratio", &
 -2.127625307_dp, 0.000000025_dp, &
 "") !! helion mag. mom. to nuclear magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018") ::&
+capi_139_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
+"n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
+"g", "n", "e", "t", "o", "n", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-2.127625307_dp, 0.000000025_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_MASS_2018 = &
 codata_constant_type("helion mass", &
 5.0064127796e-27_dp, 0.0000000015e-27_dp, &
 "kg") !! helion mass
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_2018") ::&
+capi_140_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
+"s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.0064127796e-27_dp, 0.0000000015e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("helion mass energy equivalent", &
 4.4995394125e-10_dp, 0.0000000014e-10_dp, &
 "J") !! helion mass energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT_2018") ::&
+capi_141_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
+"q", "u", "i", "v", "a", "l", "e", "n", "t", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.4995394125e-10_dp, 0.0000000014e-10_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("helion mass energy equivalent in MeV", &
 2808.39160743_dp, 0.00000085_dp, &
 "MeV") !! helion mass energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_142_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
+"q", "u", "i", "v", "a", "l", "e", "n", "t", " ", &!capi
+"i", "n", " ", "M", "e", "V", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2808.39160743_dp, 0.00000085_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_MASS_IN_U_2018 = &
 codata_constant_type("helion mass in u", &
 3.014932247175_dp, 0.000000000097_dp, &
 "u") !! helion mass in u
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_IN_U_2018") ::&
+capi_143_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "i", "n", " ", "u", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.014932247175_dp, 0.000000000097_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_MOLAR_MASS_2018 = &
 codata_constant_type("helion molar mass", &
 3.01493224613e-3_dp, 0.00000000091e-3_dp, &
 "kg mol^-1") !! helion molar mass
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MOLAR_MASS_2018") ::&
+capi_144_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "m", "o", "l", &!capi
+"a", "r", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.01493224613e-3_dp, 0.00000000091e-3_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_PROTON_MASS_RATIO_2018 = &
 codata_constant_type("helion-proton mass ratio", &
 2.99315267167_dp, 0.00000000013_dp, &
 "") !! helion-proton mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_PROTON_MASS_RATIO_2018") ::&
+capi_145_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", "-", "p", "r", "o", &!capi
+"t", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
+"a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.99315267167_dp, 0.00000000013_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_RELATIVE_ATOMIC_MASS_2018 = &
 codata_constant_type("helion relative atomic mass", &
 3.014932247175_dp, 0.000000000097_dp, &
 "") !! helion relative atomic mass
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_RELATIVE_ATOMIC_MASS_2018") ::&
+capi_146_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "r", "e", "l", &!capi
+"a", "t", "i", "v", "e", " ", "a", "t", "o", "m", &!capi
+"i", "c", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.014932247175_dp, 0.000000000097_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HELION_SHIELDING_SHIFT_2018 = &
 codata_constant_type("helion shielding shift", &
 5.996743e-5_dp, 0.000010e-5_dp, &
 "") !! helion shielding shift
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_SHIELDING_SHIFT_2018") ::&
+capi_147_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "l", "i", "o", "n", " ", "s", "h", "i", &!capi
+"e", "l", "d", "i", "n", "g", " ", "s", "h", "i", &!capi
+"f", "t", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.996743e-5_dp, 0.000010e-5_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2018 = &
 codata_constant_type("hertz-atomic mass unit relationship", &
 4.4398216652e-24_dp, 0.0000000013e-24_dp, &
 "u") !! hertz-atomic mass unit relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2018") ::&
+capi_148_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "r", "t", "z", "-", "a", "t", "o", "m", &!capi
+"i", "c", " ", "m", "a", "s", "s", " ", "u", "n", &!capi
+"i", "t", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.4398216652e-24_dp, 0.0000000013e-24_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HERTZ_ELECTRON_VOLT_RELATIONSHIP_2018 = &
 codata_constant_type("hertz-electron volt relationship", &
 4.135667696e-15_dp, 0.0_dp, &
 "eV") !! hertz-electron volt relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_ELECTRON_VOLT_RELATIONSHIP_2018") ::&
+capi_149_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "r", "t", "z", "-", "e", "l", "e", "c", &!capi
+"t", "r", "o", "n", " ", "v", "o", "l", "t", " ", &!capi
+"r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
+"i", "p", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.135667696e-15_dp, 0.0_dp, &!capi
+[ &!capi
+"e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HERTZ_HARTREE_RELATIONSHIP_2018 = &
 codata_constant_type("hertz-hartree relationship", &
 1.5198298460570e-16_dp, 0.0000000000029e-16_dp, &
 "E_h") !! hertz-hartree relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_HARTREE_RELATIONSHIP_2018") ::&
+capi_150_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "r", "t", "z", "-", "h", "a", "r", "t", &!capi
+"r", "e", "e", " ", "r", "e", "l", "a", "t", "i", &!capi
+"o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.5198298460570e-16_dp, 0.0000000000029e-16_dp, &!capi
+[ &!capi
+"E", "_", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HERTZ_INVERSE_METER_RELATIONSHIP_2018 = &
 codata_constant_type("hertz-inverse meter relationship", &
 3.335640951e-9_dp, 0.0_dp, &
 "m^-1") !! hertz-inverse meter relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_INVERSE_METER_RELATIONSHIP_2018") ::&
+capi_151_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "r", "t", "z", "-", "i", "n", "v", "e", &!capi
+"r", "s", "e", " ", "m", "e", "t", "e", "r", " ", &!capi
+"r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
+"i", "p", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.335640951e-9_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HERTZ_JOULE_RELATIONSHIP_2018 = &
 codata_constant_type("hertz-joule relationship", &
 6.62607015e-34_dp, 0.0_dp, &
 "J") !! hertz-joule relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_JOULE_RELATIONSHIP_2018") ::&
+capi_152_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "r", "t", "z", "-", "j", "o", "u", "l", &!capi
+"e", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
+"s", "h", "i", "p", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.62607015e-34_dp, 0.0_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HERTZ_KELVIN_RELATIONSHIP_2018 = &
 codata_constant_type("hertz-kelvin relationship", &
 4.799243073e-11_dp, 0.0_dp, &
 "K") !! hertz-kelvin relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_KELVIN_RELATIONSHIP_2018") ::&
+capi_153_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "r", "t", "z", "-", "k", "e", "l", "v", &!capi
+"i", "n", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.799243073e-11_dp, 0.0_dp, &!capi
+[ &!capi
+"K", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HERTZ_KILOGRAM_RELATIONSHIP_2018 = &
 codata_constant_type("hertz-kilogram relationship", &
 7.372497323e-51_dp, 0.0_dp, &
 "kg") !! hertz-kilogram relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_KILOGRAM_RELATIONSHIP_2018") ::&
+capi_154_2018 = capi_codata_constant_type([ &!capi
+"h", "e", "r", "t", "z", "-", "k", "i", "l", "o", &!capi
+"g", "r", "a", "m", " ", "r", "e", "l", "a", "t", &!capi
+"i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+7.372497323e-51_dp, 0.0_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2018 = &
 codata_constant_type("hyperfine transition frequency of Cs-133", &
 9192631770_dp, 0.0_dp, &
 "Hz") !! hyperfine transition frequency of Cs-133
+type(capi_codata_constant_type), protected, public, bind(C, name="HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2018") ::&
+capi_155_2018 = capi_codata_constant_type([ &!capi
+"h", "y", "p", "e", "r", "f", "i", "n", "e", " ", &!capi
+"t", "r", "a", "n", "s", "i", "t", "i", "o", "n", &!capi
+" ", "f", "r", "e", "q", "u", "e", "n", "c", "y", &!capi
+" ", "o", "f", " ", "C", "s", "-", "1", "3", "3", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9192631770_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: INVERSE_FINE_STRUCTURE_CONSTANT_2018 = &
 codata_constant_type("inverse fine-structure constant", &
 137.035999084_dp, 0.000000021_dp, &
 "") !! inverse fine-structure constant
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_FINE_STRUCTURE_CONSTANT_2018") ::&
+capi_156_2018 = capi_codata_constant_type([ &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "f", "i", &!capi
+"n", "e", "-", "s", "t", "r", "u", "c", "t", "u", &!capi
+"r", "e", " ", "c", "o", "n", "s", "t", "a", "n", &!capi
+"t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+137.035999084_dp, 0.000000021_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2018 = &
 codata_constant_type("inverse meter-atomic mass unit relationship", &
 1.33102505010e-15_dp, 0.00000000040e-15_dp, &
 "u") !! inverse meter-atomic mass unit relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2018") ::&
+capi_157_2018 = capi_codata_constant_type([ &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
+"t", "e", "r", "-", "a", "t", "o", "m", "i", "c", &!capi
+" ", "m", "a", "s", "s", " ", "u", "n", "i", "t", &!capi
+" ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
+"h", "i", "p", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.33102505010e-15_dp, 0.00000000040e-15_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2018 = &
 codata_constant_type("inverse meter-electron volt relationship", &
 1.239841984e-6_dp, 0.0_dp, &
 "eV") !! inverse meter-electron volt relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2018") ::&
+capi_158_2018 = capi_codata_constant_type([ &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
+"t", "e", "r", "-", "e", "l", "e", "c", "t", "r", &!capi
+"o", "n", " ", "v", "o", "l", "t", " ", "r", "e", &!capi
+"l", "a", "t", "i", "o", "n", "s", "h", "i", "p", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.239841984e-6_dp, 0.0_dp, &!capi
+[ &!capi
+"e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: INVERSE_METER_HARTREE_RELATIONSHIP_2018 = &
 codata_constant_type("inverse meter-hartree relationship", &
 4.5563352529120e-8_dp, 0.0000000000088e-8_dp, &
 "E_h") !! inverse meter-hartree relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_HARTREE_RELATIONSHIP_2018") ::&
+capi_159_2018 = capi_codata_constant_type([ &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
+"t", "e", "r", "-", "h", "a", "r", "t", "r", "e", &!capi
+"e", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
+"s", "h", "i", "p", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.5563352529120e-8_dp, 0.0000000000088e-8_dp, &!capi
+[ &!capi
+"E", "_", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: INVERSE_METER_HERTZ_RELATIONSHIP_2018 = &
 codata_constant_type("inverse meter-hertz relationship", &
 299792458_dp, 0.0_dp, &
 "Hz") !! inverse meter-hertz relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_HERTZ_RELATIONSHIP_2018") ::&
+capi_160_2018 = capi_codata_constant_type([ &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
+"t", "e", "r", "-", "h", "e", "r", "t", "z", " ", &!capi
+"r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
+"i", "p", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+299792458_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: INVERSE_METER_JOULE_RELATIONSHIP_2018 = &
 codata_constant_type("inverse meter-joule relationship", &
 1.986445857e-25_dp, 0.0_dp, &
 "J") !! inverse meter-joule relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_JOULE_RELATIONSHIP_2018") ::&
+capi_161_2018 = capi_codata_constant_type([ &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
+"t", "e", "r", "-", "j", "o", "u", "l", "e", " ", &!capi
+"r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
+"i", "p", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.986445857e-25_dp, 0.0_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: INVERSE_METER_KELVIN_RELATIONSHIP_2018 = &
 codata_constant_type("inverse meter-kelvin relationship", &
 1.438776877e-2_dp, 0.0_dp, &
 "K") !! inverse meter-kelvin relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_KELVIN_RELATIONSHIP_2018") ::&
+capi_162_2018 = capi_codata_constant_type([ &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
+"t", "e", "r", "-", "k", "e", "l", "v", "i", "n", &!capi
+" ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
+"h", "i", "p", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.438776877e-2_dp, 0.0_dp, &!capi
+[ &!capi
+"K", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: INVERSE_METER_KILOGRAM_RELATIONSHIP_2018 = &
 codata_constant_type("inverse meter-kilogram relationship", &
 2.210219094e-42_dp, 0.0_dp, &
 "kg") !! inverse meter-kilogram relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_KILOGRAM_RELATIONSHIP_2018") ::&
+capi_163_2018 = capi_codata_constant_type([ &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
+"t", "e", "r", "-", "k", "i", "l", "o", "g", "r", &!capi
+"a", "m", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.210219094e-42_dp, 0.0_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: INVERSE_OF_CONDUCTANCE_QUANTUM_2018 = &
 codata_constant_type("inverse of conductance quantum", &
 12906.40372_dp, 0.0_dp, &
 "ohm") !! inverse of conductance quantum
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_OF_CONDUCTANCE_QUANTUM_2018") ::&
+capi_164_2018 = capi_codata_constant_type([ &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "o", "f", &!capi
+" ", "c", "o", "n", "d", "u", "c", "t", "a", "n", &!capi
+"c", "e", " ", "q", "u", "a", "n", "t", "u", "m", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+12906.40372_dp, 0.0_dp, &!capi
+[ &!capi
+"o", "h", "m", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: JOSEPHSON_CONSTANT_2018 = &
 codata_constant_type("Josephson constant", &
 483597.8484e9_dp, 0.0_dp, &
 "Hz V^-1") !! Josephson constant
+type(capi_codata_constant_type), protected, public, bind(C, name="JOSEPHSON_CONSTANT_2018") ::&
+capi_165_2018 = capi_codata_constant_type([ &!capi
+"J", "o", "s", "e", "p", "h", "s", "o", "n", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+483597.8484e9_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", " ", "V", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018 = &
 codata_constant_type("joule-atomic mass unit relationship", &
 6.7005352565e9_dp, 0.0000000020e9_dp, &
 "u") !! joule-atomic mass unit relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018") ::&
+capi_166_2018 = capi_codata_constant_type([ &!capi
+"j", "o", "u", "l", "e", "-", "a", "t", "o", "m", &!capi
+"i", "c", " ", "m", "a", "s", "s", " ", "u", "n", &!capi
+"i", "t", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.7005352565e9_dp, 0.0000000020e9_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: JOULE_ELECTRON_VOLT_RELATIONSHIP_2018 = &
 codata_constant_type("joule-electron volt relationship", &
 6.241509074e18_dp, 0.0_dp, &
 "eV") !! joule-electron volt relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_ELECTRON_VOLT_RELATIONSHIP_2018") ::&
+capi_167_2018 = capi_codata_constant_type([ &!capi
+"j", "o", "u", "l", "e", "-", "e", "l", "e", "c", &!capi
+"t", "r", "o", "n", " ", "v", "o", "l", "t", " ", &!capi
+"r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
+"i", "p", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.241509074e18_dp, 0.0_dp, &!capi
+[ &!capi
+"e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: JOULE_HARTREE_RELATIONSHIP_2018 = &
 codata_constant_type("joule-hartree relationship", &
 2.2937122783963e17_dp, 0.0000000000045e17_dp, &
 "E_h") !! joule-hartree relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_HARTREE_RELATIONSHIP_2018") ::&
+capi_168_2018 = capi_codata_constant_type([ &!capi
+"j", "o", "u", "l", "e", "-", "h", "a", "r", "t", &!capi
+"r", "e", "e", " ", "r", "e", "l", "a", "t", "i", &!capi
+"o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.2937122783963e17_dp, 0.0000000000045e17_dp, &!capi
+[ &!capi
+"E", "_", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: JOULE_HERTZ_RELATIONSHIP_2018 = &
 codata_constant_type("joule-hertz relationship", &
 1.509190179e33_dp, 0.0_dp, &
 "Hz") !! joule-hertz relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_HERTZ_RELATIONSHIP_2018") ::&
+capi_169_2018 = capi_codata_constant_type([ &!capi
+"j", "o", "u", "l", "e", "-", "h", "e", "r", "t", &!capi
+"z", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
+"s", "h", "i", "p", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.509190179e33_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: JOULE_INVERSE_METER_RELATIONSHIP_2018 = &
 codata_constant_type("joule-inverse meter relationship", &
 5.034116567e24_dp, 0.0_dp, &
 "m^-1") !! joule-inverse meter relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_INVERSE_METER_RELATIONSHIP_2018") ::&
+capi_170_2018 = capi_codata_constant_type([ &!capi
+"j", "o", "u", "l", "e", "-", "i", "n", "v", "e", &!capi
+"r", "s", "e", " ", "m", "e", "t", "e", "r", " ", &!capi
+"r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
+"i", "p", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.034116567e24_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: JOULE_KELVIN_RELATIONSHIP_2018 = &
 codata_constant_type("joule-kelvin relationship", &
 7.242970516e22_dp, 0.0_dp, &
 "K") !! joule-kelvin relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_KELVIN_RELATIONSHIP_2018") ::&
+capi_171_2018 = capi_codata_constant_type([ &!capi
+"j", "o", "u", "l", "e", "-", "k", "e", "l", "v", &!capi
+"i", "n", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+7.242970516e22_dp, 0.0_dp, &!capi
+[ &!capi
+"K", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: JOULE_KILOGRAM_RELATIONSHIP_2018 = &
 codata_constant_type("joule-kilogram relationship", &
 1.112650056e-17_dp, 0.0_dp, &
 "kg") !! joule-kilogram relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_KILOGRAM_RELATIONSHIP_2018") ::&
+capi_172_2018 = capi_codata_constant_type([ &!capi
+"j", "o", "u", "l", "e", "-", "k", "i", "l", "o", &!capi
+"g", "r", "a", "m", " ", "r", "e", "l", "a", "t", &!capi
+"i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.112650056e-17_dp, 0.0_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2018 = &
 codata_constant_type("kelvin-atomic mass unit relationship", &
 9.2510873014e-14_dp, 0.0000000028e-14_dp, &
 "u") !! kelvin-atomic mass unit relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2018") ::&
+capi_173_2018 = capi_codata_constant_type([ &!capi
+"k", "e", "l", "v", "i", "n", "-", "a", "t", "o", &!capi
+"m", "i", "c", " ", "m", "a", "s", "s", " ", "u", &!capi
+"n", "i", "t", " ", "r", "e", "l", "a", "t", "i", &!capi
+"o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9.2510873014e-14_dp, 0.0000000028e-14_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KELVIN_ELECTRON_VOLT_RELATIONSHIP_2018 = &
 codata_constant_type("kelvin-electron volt relationship", &
 8.617333262e-5_dp, 0.0_dp, &
 "eV") !! kelvin-electron volt relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_ELECTRON_VOLT_RELATIONSHIP_2018") ::&
+capi_174_2018 = capi_codata_constant_type([ &!capi
+"k", "e", "l", "v", "i", "n", "-", "e", "l", "e", &!capi
+"c", "t", "r", "o", "n", " ", "v", "o", "l", "t", &!capi
+" ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
+"h", "i", "p", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.617333262e-5_dp, 0.0_dp, &!capi
+[ &!capi
+"e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KELVIN_HARTREE_RELATIONSHIP_2018 = &
 codata_constant_type("kelvin-hartree relationship", &
 3.1668115634556e-6_dp, 0.0000000000061e-6_dp, &
 "E_h") !! kelvin-hartree relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_HARTREE_RELATIONSHIP_2018") ::&
+capi_175_2018 = capi_codata_constant_type([ &!capi
+"k", "e", "l", "v", "i", "n", "-", "h", "a", "r", &!capi
+"t", "r", "e", "e", " ", "r", "e", "l", "a", "t", &!capi
+"i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.1668115634556e-6_dp, 0.0000000000061e-6_dp, &!capi
+[ &!capi
+"E", "_", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KELVIN_HERTZ_RELATIONSHIP_2018 = &
 codata_constant_type("kelvin-hertz relationship", &
 2.083661912e10_dp, 0.0_dp, &
 "Hz") !! kelvin-hertz relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_HERTZ_RELATIONSHIP_2018") ::&
+capi_176_2018 = capi_codata_constant_type([ &!capi
+"k", "e", "l", "v", "i", "n", "-", "h", "e", "r", &!capi
+"t", "z", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.083661912e10_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KELVIN_INVERSE_METER_RELATIONSHIP_2018 = &
 codata_constant_type("kelvin-inverse meter relationship", &
 69.50348004_dp, 0.0_dp, &
 "m^-1") !! kelvin-inverse meter relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_INVERSE_METER_RELATIONSHIP_2018") ::&
+capi_177_2018 = capi_codata_constant_type([ &!capi
+"k", "e", "l", "v", "i", "n", "-", "i", "n", "v", &!capi
+"e", "r", "s", "e", " ", "m", "e", "t", "e", "r", &!capi
+" ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
+"h", "i", "p", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+69.50348004_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KELVIN_JOULE_RELATIONSHIP_2018 = &
 codata_constant_type("kelvin-joule relationship", &
 1.380649e-23_dp, 0.0_dp, &
 "J") !! kelvin-joule relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_JOULE_RELATIONSHIP_2018") ::&
+capi_178_2018 = capi_codata_constant_type([ &!capi
+"k", "e", "l", "v", "i", "n", "-", "j", "o", "u", &!capi
+"l", "e", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.380649e-23_dp, 0.0_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KELVIN_KILOGRAM_RELATIONSHIP_2018 = &
 codata_constant_type("kelvin-kilogram relationship", &
 1.536179187e-40_dp, 0.0_dp, &
 "kg") !! kelvin-kilogram relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_KILOGRAM_RELATIONSHIP_2018") ::&
+capi_179_2018 = capi_codata_constant_type([ &!capi
+"k", "e", "l", "v", "i", "n", "-", "k", "i", "l", &!capi
+"o", "g", "r", "a", "m", " ", "r", "e", "l", "a", &!capi
+"t", "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.536179187e-40_dp, 0.0_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2018 = &
 codata_constant_type("kilogram-atomic mass unit relationship", &
 6.0221407621e26_dp, 0.0000000018e26_dp, &
 "u") !! kilogram-atomic mass unit relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2018") ::&
+capi_180_2018 = capi_codata_constant_type([ &!capi
+"k", "i", "l", "o", "g", "r", "a", "m", "-", "a", &!capi
+"t", "o", "m", "i", "c", " ", "m", "a", "s", "s", &!capi
+" ", "u", "n", "i", "t", " ", "r", "e", "l", "a", &!capi
+"t", "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.0221407621e26_dp, 0.0000000018e26_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2018 = &
 codata_constant_type("kilogram-electron volt relationship", &
 5.609588603e35_dp, 0.0_dp, &
 "eV") !! kilogram-electron volt relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2018") ::&
+capi_181_2018 = capi_codata_constant_type([ &!capi
+"k", "i", "l", "o", "g", "r", "a", "m", "-", "e", &!capi
+"l", "e", "c", "t", "r", "o", "n", " ", "v", "o", &!capi
+"l", "t", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.609588603e35_dp, 0.0_dp, &!capi
+[ &!capi
+"e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KILOGRAM_HARTREE_RELATIONSHIP_2018 = &
 codata_constant_type("kilogram-hartree relationship", &
 2.0614857887409e34_dp, 0.0000000000040e34_dp, &
 "E_h") !! kilogram-hartree relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_HARTREE_RELATIONSHIP_2018") ::&
+capi_182_2018 = capi_codata_constant_type([ &!capi
+"k", "i", "l", "o", "g", "r", "a", "m", "-", "h", &!capi
+"a", "r", "t", "r", "e", "e", " ", "r", "e", "l", &!capi
+"a", "t", "i", "o", "n", "s", "h", "i", "p", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.0614857887409e34_dp, 0.0000000000040e34_dp, &!capi
+[ &!capi
+"E", "_", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KILOGRAM_HERTZ_RELATIONSHIP_2018 = &
 codata_constant_type("kilogram-hertz relationship", &
 1.356392489e50_dp, 0.0_dp, &
 "Hz") !! kilogram-hertz relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_HERTZ_RELATIONSHIP_2018") ::&
+capi_183_2018 = capi_codata_constant_type([ &!capi
+"k", "i", "l", "o", "g", "r", "a", "m", "-", "h", &!capi
+"e", "r", "t", "z", " ", "r", "e", "l", "a", "t", &!capi
+"i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.356392489e50_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KILOGRAM_INVERSE_METER_RELATIONSHIP_2018 = &
 codata_constant_type("kilogram-inverse meter relationship", &
 4.524438335e41_dp, 0.0_dp, &
 "m^-1") !! kilogram-inverse meter relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_INVERSE_METER_RELATIONSHIP_2018") ::&
+capi_184_2018 = capi_codata_constant_type([ &!capi
+"k", "i", "l", "o", "g", "r", "a", "m", "-", "i", &!capi
+"n", "v", "e", "r", "s", "e", " ", "m", "e", "t", &!capi
+"e", "r", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
+"n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.524438335e41_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KILOGRAM_JOULE_RELATIONSHIP_2018 = &
 codata_constant_type("kilogram-joule relationship", &
 8.987551787e16_dp, 0.0_dp, &
 "J") !! kilogram-joule relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_JOULE_RELATIONSHIP_2018") ::&
+capi_185_2018 = capi_codata_constant_type([ &!capi
+"k", "i", "l", "o", "g", "r", "a", "m", "-", "j", &!capi
+"o", "u", "l", "e", " ", "r", "e", "l", "a", "t", &!capi
+"i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.987551787e16_dp, 0.0_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: KILOGRAM_KELVIN_RELATIONSHIP_2018 = &
 codata_constant_type("kilogram-kelvin relationship", &
 6.509657260e39_dp, 0.0_dp, &
 "K") !! kilogram-kelvin relationship
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_KELVIN_RELATIONSHIP_2018") ::&
+capi_186_2018 = capi_codata_constant_type([ &!capi
+"k", "i", "l", "o", "g", "r", "a", "m", "-", "k", &!capi
+"e", "l", "v", "i", "n", " ", "r", "e", "l", "a", &!capi
+"t", "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.509657260e39_dp, 0.0_dp, &!capi
+[ &!capi
+"K", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: LATTICE_PARAMETER_OF_SILICON_2018 = &
 codata_constant_type("lattice parameter of silicon", &
 5.431020511e-10_dp, 0.000000089e-10_dp, &
 "m") !! lattice parameter of silicon
+type(capi_codata_constant_type), protected, public, bind(C, name="LATTICE_PARAMETER_OF_SILICON_2018") ::&
+capi_187_2018 = capi_codata_constant_type([ &!capi
+"l", "a", "t", "t", "i", "c", "e", " ", "p", "a", &!capi
+"r", "a", "m", "e", "t", "e", "r", " ", "o", "f", &!capi
+" ", "s", "i", "l", "i", "c", "o", "n", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.431020511e-10_dp, 0.000000089e-10_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: LATTICE_SPACING_OF_IDEAL_SI_220_2018 = &
 codata_constant_type("lattice spacing of ideal Si (220)", &
 1.920155716e-10_dp, 0.000000032e-10_dp, &
 "m") !! lattice spacing of ideal Si (220)
+type(capi_codata_constant_type), protected, public, bind(C, name="LATTICE_SPACING_OF_IDEAL_SI_220_2018") ::&
+capi_188_2018 = capi_codata_constant_type([ &!capi
+"l", "a", "t", "t", "i", "c", "e", " ", "s", "p", &!capi
+"a", "c", "i", "n", "g", " ", "o", "f", " ", "i", &!capi
+"d", "e", "a", "l", " ", "S", "i", " ", "(", "2", &!capi
+"2", "0", ")", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.920155716e-10_dp, 0.000000032e-10_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2018 = &
 codata_constant_type("Loschmidt constant (273.15 K, 100 kPa)", &
 2.651645804e25_dp, 0.0_dp, &
 "m^-3") !! Loschmidt constant (273.15 K, 100 kPa)
+type(capi_codata_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2018") ::&
+capi_189_2018 = capi_codata_constant_type([ &!capi
+"L", "o", "s", "c", "h", "m", "i", "d", "t", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", " ", "(", &!capi
+"2", "7", "3", ".", "1", "5", " ", "K", ",", " ", &!capi
+"1", "0", "0", " ", "k", "P", "a", ")", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.651645804e25_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "-", "3", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2018 = &
 codata_constant_type("Loschmidt constant (273.15 K, 101.325 kPa)", &
 2.686780111e25_dp, 0.0_dp, &
 "m^-3") !! Loschmidt constant (273.15 K, 101.325 kPa)
+type(capi_codata_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2018") ::&
+capi_190_2018 = capi_codata_constant_type([ &!capi
+"L", "o", "s", "c", "h", "m", "i", "d", "t", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", " ", "(", &!capi
+"2", "7", "3", ".", "1", "5", " ", "K", ",", " ", &!capi
+"1", "0", "1", ".", "3", "2", "5", " ", "k", "P", &!capi
+"a", ")", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.686780111e25_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "-", "3", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: LUMINOUS_EFFICACY_2018 = &
 codata_constant_type("luminous efficacy", &
 683_dp, 0.0_dp, &
 "lm W^-1") !! luminous efficacy
+type(capi_codata_constant_type), protected, public, bind(C, name="LUMINOUS_EFFICACY_2018") ::&
+capi_191_2018 = capi_codata_constant_type([ &!capi
+"l", "u", "m", "i", "n", "o", "u", "s", " ", "e", &!capi
+"f", "f", "i", "c", "a", "c", "y", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+683_dp, 0.0_dp, &!capi
+[ &!capi
+"l", "m", " ", "W", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MAG_FLUX_QUANTUM_2018 = &
 codata_constant_type("mag. flux quantum", &
 2.067833848e-15_dp, 0.0_dp, &
 "Wb") !! mag. flux quantum
+type(capi_codata_constant_type), protected, public, bind(C, name="MAG_FLUX_QUANTUM_2018") ::&
+capi_192_2018 = capi_codata_constant_type([ &!capi
+"m", "a", "g", ".", " ", "f", "l", "u", "x", " ", &!capi
+"q", "u", "a", "n", "t", "u", "m", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.067833848e-15_dp, 0.0_dp, &!capi
+[ &!capi
+"W", "b", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MOLAR_GAS_CONSTANT_2018 = &
 codata_constant_type("molar gas constant", &
 8.314462618_dp, 0.0_dp, &
 "J mol^-1 K^-1") !! molar gas constant
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_GAS_CONSTANT_2018") ::&
+capi_193_2018 = capi_codata_constant_type([ &!capi
+"m", "o", "l", "a", "r", " ", "g", "a", "s", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.314462618_dp, 0.0_dp, &!capi
+[ &!capi
+"J", " ", "m", "o", "l", "^", "-", "1", " ", "K", &!capi
+"^", "-", "1", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MOLAR_MASS_CONSTANT_2018 = &
 codata_constant_type("molar mass constant", &
 0.99999999965e-3_dp, 0.00000000030e-3_dp, &
 "kg mol^-1") !! molar mass constant
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_MASS_CONSTANT_2018") ::&
+capi_194_2018 = capi_codata_constant_type([ &!capi
+"m", "o", "l", "a", "r", " ", "m", "a", "s", "s", &!capi
+" ", "c", "o", "n", "s", "t", "a", "n", "t", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.99999999965e-3_dp, 0.00000000030e-3_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MOLAR_MASS_OF_CARBON_12_2018 = &
 codata_constant_type("molar mass of carbon-12", &
 11.9999999958e-3_dp, 0.0000000036e-3_dp, &
 "kg mol^-1") !! molar mass of carbon-12
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_MASS_OF_CARBON_12_2018") ::&
+capi_195_2018 = capi_codata_constant_type([ &!capi
+"m", "o", "l", "a", "r", " ", "m", "a", "s", "s", &!capi
+" ", "o", "f", " ", "c", "a", "r", "b", "o", "n", &!capi
+"-", "1", "2", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+11.9999999958e-3_dp, 0.0000000036e-3_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MOLAR_PLANCK_CONSTANT_2018 = &
 codata_constant_type("molar Planck constant", &
 3.990312712e-10_dp, 0.0_dp, &
 "J Hz^-1 mol^-1") !! molar Planck constant
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_PLANCK_CONSTANT_2018") ::&
+capi_196_2018 = capi_codata_constant_type([ &!capi
+"m", "o", "l", "a", "r", " ", "P", "l", "a", "n", &!capi
+"c", "k", " ", "c", "o", "n", "s", "t", "a", "n", &!capi
+"t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.990312712e-10_dp, 0.0_dp, &!capi
+[ &!capi
+"J", " ", "H", "z", "^", "-", "1", " ", "m", "o", &!capi
+"l", "^", "-", "1", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2018 = &
 codata_constant_type("molar volume of ideal gas (273.15 K, 100 kPa)", &
 22.71095464e-3_dp, 0.0_dp, &
 "m^3 mol^-1") !! molar volume of ideal gas (273.15 K, 100 kPa)
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2018") ::&
+capi_197_2018 = capi_codata_constant_type([ &!capi
+"m", "o", "l", "a", "r", " ", "v", "o", "l", "u", &!capi
+"m", "e", " ", "o", "f", " ", "i", "d", "e", "a", &!capi
+"l", " ", "g", "a", "s", " ", "(", "2", "7", "3", &!capi
+".", "1", "5", " ", "K", ",", " ", "1", "0", "0", &!capi
+" ", "k", "P", "a", ")", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+22.71095464e-3_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "3", " ", "m", "o", "l", "^", "-", "1", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2018 = &
 codata_constant_type("molar volume of ideal gas (273.15 K, 101.325 kPa)", &
 22.41396954e-3_dp, 0.0_dp, &
 "m^3 mol^-1") !! molar volume of ideal gas (273.15 K, 101.325 kPa)
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2018") ::&
+capi_198_2018 = capi_codata_constant_type([ &!capi
+"m", "o", "l", "a", "r", " ", "v", "o", "l", "u", &!capi
+"m", "e", " ", "o", "f", " ", "i", "d", "e", "a", &!capi
+"l", " ", "g", "a", "s", " ", "(", "2", "7", "3", &!capi
+".", "1", "5", " ", "K", ",", " ", "1", "0", "1", &!capi
+".", "3", "2", "5", " ", "k", "P", "a", ")", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+22.41396954e-3_dp, 0.0_dp, &!capi
+[ &!capi
+"m", "^", "3", " ", "m", "o", "l", "^", "-", "1", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MOLAR_VOLUME_OF_SILICON_2018 = &
 codata_constant_type("molar volume of silicon", &
 1.205883199e-5_dp, 0.000000060e-5_dp, &
 "m^3 mol^-1") !! molar volume of silicon
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_SILICON_2018") ::&
+capi_199_2018 = capi_codata_constant_type([ &!capi
+"m", "o", "l", "a", "r", " ", "v", "o", "l", "u", &!capi
+"m", "e", " ", "o", "f", " ", "s", "i", "l", "i", &!capi
+"c", "o", "n", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.205883199e-5_dp, 0.000000060e-5_dp, &!capi
+[ &!capi
+"m", "^", "3", " ", "m", "o", "l", "^", "-", "1", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MOLYBDENUM_X_UNIT_2018 = &
 codata_constant_type("Molybdenum x unit", &
 1.00209952e-13_dp, 0.00000053e-13_dp, &
 "m") !! Molybdenum x unit
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLYBDENUM_X_UNIT_2018") ::&
+capi_200_2018 = capi_codata_constant_type([ &!capi
+"M", "o", "l", "y", "b", "d", "e", "n", "u", "m", &!capi
+" ", "x", " ", "u", "n", "i", "t", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00209952e-13_dp, 0.00000053e-13_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("muon Compton wavelength", &
 1.173444110e-14_dp, 0.000000026e-14_dp, &
 "m") !! muon Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_COMPTON_WAVELENGTH_2018") ::&
+capi_201_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "C", "o", "m", "p", "t", &!capi
+"o", "n", " ", "w", "a", "v", "e", "l", "e", "n", &!capi
+"g", "t", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.173444110e-14_dp, 0.000000026e-14_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_ELECTRON_MASS_RATIO_2018 = &
 codata_constant_type("muon-electron mass ratio", &
 206.7682830_dp, 0.0000046_dp, &
 "") !! muon-electron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_ELECTRON_MASS_RATIO_2018") ::&
+capi_202_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", "-", "e", "l", "e", "c", "t", &!capi
+"r", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
+"a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+206.7682830_dp, 0.0000046_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_G_FACTOR_2018 = &
 codata_constant_type("muon g factor", &
 -2.0023318418_dp, 0.0000000013_dp, &
 "") !! muon g factor
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_G_FACTOR_2018") ::&
+capi_203_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "g", " ", "f", "a", "c", &!capi
+"t", "o", "r", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-2.0023318418_dp, 0.0000000013_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_MAG_MOM_2018 = &
 codata_constant_type("muon mag. mom.", &
 -4.49044830e-26_dp, 0.00000010e-26_dp, &
 "J T^-1") !! muon mag. mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_2018") ::&
+capi_204_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
+"m", "o", "m", ".", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-4.49044830e-26_dp, 0.00000010e-26_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_MAG_MOM_ANOMALY_2018 = &
 codata_constant_type("muon mag. mom. anomaly", &
 1.16592089e-3_dp, 0.00000063e-3_dp, &
 "") !! muon mag. mom. anomaly
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_ANOMALY_2018") ::&
+capi_205_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
+"m", "o", "m", ".", " ", "a", "n", "o", "m", "a", &!capi
+"l", "y", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.16592089e-3_dp, 0.00000063e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018 = &
 codata_constant_type("muon mag. mom. to Bohr magneton ratio", &
 -4.84197047e-3_dp, 0.00000011e-3_dp, &
 "") !! muon mag. mom. to Bohr magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018") ::&
+capi_206_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
+"m", "o", "m", ".", " ", "t", "o", " ", "B", "o", &!capi
+"h", "r", " ", "m", "a", "g", "n", "e", "t", "o", &!capi
+"n", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-4.84197047e-3_dp, 0.00000011e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018 = &
 codata_constant_type("muon mag. mom. to nuclear magneton ratio", &
 -8.89059703_dp, 0.00000020_dp, &
 "") !! muon mag. mom. to nuclear magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018") ::&
+capi_207_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
+"m", "o", "m", ".", " ", "t", "o", " ", "n", "u", &!capi
+"c", "l", "e", "a", "r", " ", "m", "a", "g", "n", &!capi
+"e", "t", "o", "n", " ", "r", "a", "t", "i", "o", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-8.89059703_dp, 0.00000020_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_MASS_2018 = &
 codata_constant_type("muon mass", &
 1.883531627e-28_dp, 0.000000042e-28_dp, &
 "kg") !! muon mass
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_2018") ::&
+capi_208_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "m", "a", "s", "s", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.883531627e-28_dp, 0.000000042e-28_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_MASS_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("muon mass energy equivalent", &
 1.692833804e-11_dp, 0.000000038e-11_dp, &
 "J") !! muon mass energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT_2018") ::&
+capi_209_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
+"e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
+"i", "v", "a", "l", "e", "n", "t", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.692833804e-11_dp, 0.000000038e-11_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("muon mass energy equivalent in MeV", &
 105.6583755_dp, 0.0000023_dp, &
 "MeV") !! muon mass energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_210_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
+"e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
+"i", "v", "a", "l", "e", "n", "t", " ", "i", "n", &!capi
+" ", "M", "e", "V", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+105.6583755_dp, 0.0000023_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_MASS_IN_U_2018 = &
 codata_constant_type("muon mass in u", &
 0.1134289259_dp, 0.0000000025_dp, &
 "u") !! muon mass in u
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_IN_U_2018") ::&
+capi_211_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
+"i", "n", " ", "u", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.1134289259_dp, 0.0000000025_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_MOLAR_MASS_2018 = &
 codata_constant_type("muon molar mass", &
 1.134289259e-4_dp, 0.000000025e-4_dp, &
 "kg mol^-1") !! muon molar mass
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MOLAR_MASS_2018") ::&
+capi_212_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", " ", "m", "o", "l", "a", "r", &!capi
+" ", "m", "a", "s", "s", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.134289259e-4_dp, 0.000000025e-4_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_NEUTRON_MASS_RATIO_2018 = &
 codata_constant_type("muon-neutron mass ratio", &
 0.1124545170_dp, 0.0000000025_dp, &
 "") !! muon-neutron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_NEUTRON_MASS_RATIO_2018") ::&
+capi_213_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", "-", "n", "e", "u", "t", "r", &!capi
+"o", "n", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.1124545170_dp, 0.0000000025_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_PROTON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("muon-proton mag. mom. ratio", &
 -3.183345142_dp, 0.000000071_dp, &
 "") !! muon-proton mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_PROTON_MAG_MOM_RATIO_2018") ::&
+capi_214_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", "-", "p", "r", "o", "t", "o", &!capi
+"n", " ", "m", "a", "g", ".", " ", "m", "o", "m", &!capi
+".", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-3.183345142_dp, 0.000000071_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_PROTON_MASS_RATIO_2018 = &
 codata_constant_type("muon-proton mass ratio", &
 0.1126095264_dp, 0.0000000025_dp, &
 "") !! muon-proton mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_PROTON_MASS_RATIO_2018") ::&
+capi_215_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", "-", "p", "r", "o", "t", "o", &!capi
+"n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.1126095264_dp, 0.0000000025_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: MUON_TAU_MASS_RATIO_2018 = &
 codata_constant_type("muon-tau mass ratio", &
 5.94635e-2_dp, 0.00040e-2_dp, &
 "") !! muon-tau mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_TAU_MASS_RATIO_2018") ::&
+capi_216_2018 = capi_codata_constant_type([ &!capi
+"m", "u", "o", "n", "-", "t", "a", "u", " ", "m", &!capi
+"a", "s", "s", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.94635e-2_dp, 0.00040e-2_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ACTION_2018 = &
 codata_constant_type("natural unit of action", &
 1.054571817e-34_dp, 0.0_dp, &
 "J s") !! natural unit of action
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION_2018") ::&
+capi_217_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "a", "c", "t", "i", &!capi
+"o", "n", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.054571817e-34_dp, 0.0_dp, &!capi
+[ &!capi
+"J", " ", "s", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ACTION_IN_EV_S_2018 = &
 codata_constant_type("natural unit of action in eV s", &
 6.582119569e-16_dp, 0.0_dp, &
 "eV s") !! natural unit of action in eV s
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION_IN_EV_S_2018") ::&
+capi_218_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "a", "c", "t", "i", &!capi
+"o", "n", " ", "i", "n", " ", "e", "V", " ", "s", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.582119569e-16_dp, 0.0_dp, &!capi
+[ &!capi
+"e", "V", " ", "s", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ENERGY_2018 = &
 codata_constant_type("natural unit of energy", &
 8.1871057769e-14_dp, 0.0000000025e-14_dp, &
 "J") !! natural unit of energy
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY_2018") ::&
+capi_219_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "e", "n", "e", "r", &!capi
+"g", "y", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.1871057769e-14_dp, 0.0000000025e-14_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ENERGY_IN_MEV_2018 = &
 codata_constant_type("natural unit of energy in MeV", &
 0.51099895000_dp, 0.00000000015_dp, &
 "MeV") !! natural unit of energy in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY_IN_MEV_2018") ::&
+capi_220_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "e", "n", "e", "r", &!capi
+"g", "y", " ", "i", "n", " ", "M", "e", "V", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.51099895000_dp, 0.00000000015_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_LENGTH_2018 = &
 codata_constant_type("natural unit of length", &
 3.8615926796e-13_dp, 0.0000000012e-13_dp, &
 "m") !! natural unit of length
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_LENGTH_2018") ::&
+capi_221_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "l", "e", "n", "g", &!capi
+"t", "h", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.8615926796e-13_dp, 0.0000000012e-13_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MASS_2018 = &
 codata_constant_type("natural unit of mass", &
 9.1093837015e-31_dp, 0.0000000028e-31_dp, &
 "kg") !! natural unit of mass
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MASS_2018") ::&
+capi_222_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "m", "a", "s", "s", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9.1093837015e-31_dp, 0.0000000028e-31_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMENTUM_2018 = &
 codata_constant_type("natural unit of momentum", &
 2.73092453075e-22_dp, 0.00000000082e-22_dp, &
 "kg m s^-1") !! natural unit of momentum
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM_2018") ::&
+capi_223_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "m", "o", "m", "e", &!capi
+"n", "t", "u", "m", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.73092453075e-22_dp, 0.00000000082e-22_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", " ", "s", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018 = &
 codata_constant_type("natural unit of momentum in MeV/c", &
 0.51099895000_dp, 0.00000000015_dp, &
 "MeV/c") !! natural unit of momentum in MeV/c
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018") ::&
+capi_224_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "m", "o", "m", "e", &!capi
+"n", "t", "u", "m", " ", "i", "n", " ", "M", "e", &!capi
+"V", "/", "c", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.51099895000_dp, 0.00000000015_dp, &!capi
+[ &!capi
+"M", "e", "V", "/", "c", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_TIME_2018 = &
 codata_constant_type("natural unit of time", &
 1.28808866819e-21_dp, 0.00000000039e-21_dp, &
 "s") !! natural unit of time
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_TIME_2018") ::&
+capi_225_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "t", "i", "m", "e", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.28808866819e-21_dp, 0.00000000039e-21_dp, &!capi
+[ &!capi
+"s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_VELOCITY_2018 = &
 codata_constant_type("natural unit of velocity", &
 299792458_dp, 0.0_dp, &
 "m s^-1") !! natural unit of velocity
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_VELOCITY_2018") ::&
+capi_226_2018 = capi_codata_constant_type([ &!capi
+"n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
+"i", "t", " ", "o", "f", " ", "v", "e", "l", "o", &!capi
+"c", "i", "t", "y", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+299792458_dp, 0.0_dp, &!capi
+[ &!capi
+"m", " ", "s", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("neutron Compton wavelength", &
 1.31959090581e-15_dp, 0.00000000075e-15_dp, &
 "m") !! neutron Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_COMPTON_WAVELENGTH_2018") ::&
+capi_227_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "C", "o", &!capi
+"m", "p", "t", "o", "n", " ", "w", "a", "v", "e", &!capi
+"l", "e", "n", "g", "t", "h", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.31959090581e-15_dp, 0.00000000075e-15_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_ELECTRON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("neutron-electron mag. mom. ratio", &
 1.04066882e-3_dp, 0.00000025e-3_dp, &
 "") !! neutron-electron mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MAG_MOM_RATIO_2018") ::&
+capi_228_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "e", "l", &!capi
+"e", "c", "t", "r", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.04066882e-3_dp, 0.00000025e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_ELECTRON_MASS_RATIO_2018 = &
 codata_constant_type("neutron-electron mass ratio", &
 1838.68366173_dp, 0.00000089_dp, &
 "") !! neutron-electron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MASS_RATIO_2018") ::&
+capi_229_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "e", "l", &!capi
+"e", "c", "t", "r", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1838.68366173_dp, 0.00000089_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_G_FACTOR_2018 = &
 codata_constant_type("neutron g factor", &
 -3.82608545_dp, 0.00000090_dp, &
 "") !! neutron g factor
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_G_FACTOR_2018") ::&
+capi_230_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "g", " ", &!capi
+"f", "a", "c", "t", "o", "r", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-3.82608545_dp, 0.00000090_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO_2018 = &
 codata_constant_type("neutron gyromag. ratio", &
 1.83247171e8_dp, 0.00000043e8_dp, &
 "s^-1 T^-1") !! neutron gyromag. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO_2018") ::&
+capi_231_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "g", "y", &!capi
+"r", "o", "m", "a", "g", ".", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.83247171e8_dp, 0.00000043e8_dp, &!capi
+[ &!capi
+"s", "^", "-", "1", " ", "T", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018 = &
 codata_constant_type("neutron gyromag. ratio in MHz/T", &
 29.1646931_dp, 0.0000069_dp, &
 "MHz T^-1") !! neutron gyromag. ratio in MHz/T
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018") ::&
+capi_232_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "g", "y", &!capi
+"r", "o", "m", "a", "g", ".", " ", "r", "a", "t", &!capi
+"i", "o", " ", "i", "n", " ", "M", "H", "z", "/", &!capi
+"T", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+29.1646931_dp, 0.0000069_dp, &!capi
+[ &!capi
+"M", "H", "z", " ", "T", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_MAG_MOM_2018 = &
 codata_constant_type("neutron mag. mom.", &
 -9.6623651e-27_dp, 0.0000023e-27_dp, &
 "J T^-1") !! neutron mag. mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_2018") ::&
+capi_233_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
+"g", ".", " ", "m", "o", "m", ".", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-9.6623651e-27_dp, 0.0000023e-27_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018 = &
 codata_constant_type("neutron mag. mom. to Bohr magneton ratio", &
 -1.04187563e-3_dp, 0.00000025e-3_dp, &
 "") !! neutron mag. mom. to Bohr magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018") ::&
+capi_234_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
+"g", ".", " ", "m", "o", "m", ".", " ", "t", "o", &!capi
+" ", "B", "o", "h", "r", " ", "m", "a", "g", "n", &!capi
+"e", "t", "o", "n", " ", "r", "a", "t", "i", "o", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.04187563e-3_dp, 0.00000025e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018 = &
 codata_constant_type("neutron mag. mom. to nuclear magneton ratio", &
 -1.91304273_dp, 0.00000045_dp, &
 "") !! neutron mag. mom. to nuclear magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018") ::&
+capi_235_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
+"g", ".", " ", "m", "o", "m", ".", " ", "t", "o", &!capi
+" ", "n", "u", "c", "l", "e", "a", "r", " ", "m", &!capi
+"a", "g", "n", "e", "t", "o", "n", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.91304273_dp, 0.00000045_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_MASS_2018 = &
 codata_constant_type("neutron mass", &
 1.67492749804e-27_dp, 0.00000000095e-27_dp, &
 "kg") !! neutron mass
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_2018") ::&
+capi_236_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
+"s", "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.67492749804e-27_dp, 0.00000000095e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("neutron mass energy equivalent", &
 1.50534976287e-10_dp, 0.00000000086e-10_dp, &
 "J") !! neutron mass energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT_2018") ::&
+capi_237_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
+"s", "s", " ", "e", "n", "e", "r", "g", "y", " ", &!capi
+"e", "q", "u", "i", "v", "a", "l", "e", "n", "t", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.50534976287e-10_dp, 0.00000000086e-10_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("neutron mass energy equivalent in MeV", &
 939.56542052_dp, 0.00000054_dp, &
 "MeV") !! neutron mass energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_238_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
+"s", "s", " ", "e", "n", "e", "r", "g", "y", " ", &!capi
+"e", "q", "u", "i", "v", "a", "l", "e", "n", "t", &!capi
+" ", "i", "n", " ", "M", "e", "V", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+939.56542052_dp, 0.00000054_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_MASS_IN_U_2018 = &
 codata_constant_type("neutron mass in u", &
 1.00866491595_dp, 0.00000000049_dp, &
 "u") !! neutron mass in u
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_IN_U_2018") ::&
+capi_239_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
+"s", "s", " ", "i", "n", " ", "u", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00866491595_dp, 0.00000000049_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_MOLAR_MASS_2018 = &
 codata_constant_type("neutron molar mass", &
 1.00866491560e-3_dp, 0.00000000057e-3_dp, &
 "kg mol^-1") !! neutron molar mass
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MOLAR_MASS_2018") ::&
+capi_240_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "m", "o", &!capi
+"l", "a", "r", " ", "m", "a", "s", "s", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00866491560e-3_dp, 0.00000000057e-3_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_MUON_MASS_RATIO_2018 = &
 codata_constant_type("neutron-muon mass ratio", &
 8.89248406_dp, 0.00000020_dp, &
 "") !! neutron-muon mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MUON_MASS_RATIO_2018") ::&
+capi_241_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "m", "u", &!capi
+"o", "n", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.89248406_dp, 0.00000020_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("neutron-proton mag. mom. ratio", &
 -0.68497934_dp, 0.00000016_dp, &
 "") !! neutron-proton mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MAG_MOM_RATIO_2018") ::&
+capi_242_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
+"o", "t", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
+"m", "o", "m", ".", " ", "r", "a", "t", "i", "o", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-0.68497934_dp, 0.00000016_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_2018 = &
 codata_constant_type("neutron-proton mass difference", &
 2.30557435e-30_dp, 0.00000082e-30_dp, &
 "kg") !! neutron-proton mass difference
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_2018") ::&
+capi_243_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
+"o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
+"d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.30557435e-30_dp, 0.00000082e-30_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("neutron-proton mass difference energy equivalent", &
 2.07214689e-13_dp, 0.00000074e-13_dp, &
 "J") !! neutron-proton mass difference energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2018") ::&
+capi_244_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
+"o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
+"d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
+" ", "e", "n", "e", "r", "g", "y", " ", "e", "q", &!capi
+"u", "i", "v", "a", "l", "e", "n", "t", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.07214689e-13_dp, 0.00000074e-13_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("neutron-proton mass difference energy equivalent in MeV", &
 1.29333236_dp, 0.00000046_dp, &
 "MeV") !! neutron-proton mass difference energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_245_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
+"o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
+"d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
+" ", "e", "n", "e", "r", "g", "y", " ", "e", "q", &!capi
+"u", "i", "v", "a", "l", "e", "n", "t", " ", "i", &!capi
+"n", " ", "M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.29333236_dp, 0.00000046_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2018 = &
 codata_constant_type("neutron-proton mass difference in u", &
 1.38844933e-3_dp, 0.00000049e-3_dp, &
 "u") !! neutron-proton mass difference in u
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2018") ::&
+capi_246_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
+"o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
+"d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
+" ", "i", "n", " ", "u", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.38844933e-3_dp, 0.00000049e-3_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_RATIO_2018 = &
 codata_constant_type("neutron-proton mass ratio", &
 1.00137841931_dp, 0.00000000049_dp, &
 "") !! neutron-proton mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_RATIO_2018") ::&
+capi_247_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
+"o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
+"r", "a", "t", "i", "o", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00137841931_dp, 0.00000000049_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_RELATIVE_ATOMIC_MASS_2018 = &
 codata_constant_type("neutron relative atomic mass", &
 1.00866491595_dp, 0.00000000049_dp, &
 "") !! neutron relative atomic mass
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_RELATIVE_ATOMIC_MASS_2018") ::&
+capi_248_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "r", "e", &!capi
+"l", "a", "t", "i", "v", "e", " ", "a", "t", "o", &!capi
+"m", "i", "c", " ", "m", "a", "s", "s", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00866491595_dp, 0.00000000049_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_TAU_MASS_RATIO_2018 = &
 codata_constant_type("neutron-tau mass ratio", &
 0.528779_dp, 0.000036_dp, &
 "") !! neutron-tau mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_TAU_MASS_RATIO_2018") ::&
+capi_249_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", "-", "t", "a", &!capi
+"u", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.528779_dp, 0.000036_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("neutron to shielded proton mag. mom. ratio", &
 -0.68499694_dp, 0.00000016_dp, &
 "") !! neutron to shielded proton mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018") ::&
+capi_250_2018 = capi_codata_constant_type([ &!capi
+"n", "e", "u", "t", "r", "o", "n", " ", "t", "o", &!capi
+" ", "s", "h", "i", "e", "l", "d", "e", "d", " ", &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-0.68499694_dp, 0.00000016_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEWTONIAN_CONSTANT_OF_GRAVITATION_2018 = &
 codata_constant_type("Newtonian constant of gravitation", &
 6.67430e-11_dp, 0.00015e-11_dp, &
 "m^3 kg^-1 s^-2") !! Newtonian constant of gravitation
+type(capi_codata_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION_2018") ::&
+capi_251_2018 = capi_codata_constant_type([ &!capi
+"N", "e", "w", "t", "o", "n", "i", "a", "n", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", " ", "o", &!capi
+"f", " ", "g", "r", "a", "v", "i", "t", "a", "t", &!capi
+"i", "o", "n", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.67430e-11_dp, 0.00015e-11_dp, &!capi
+[ &!capi
+"m", "^", "3", " ", "k", "g", "^", "-", "1", " ", &!capi
+"s", "^", "-", "2", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2018 = &
 codata_constant_type("Newtonian constant of gravitation over h-bar c", &
 6.70883e-39_dp, 0.00015e-39_dp, &
 "(GeV/c^2)^-2") !! Newtonian constant of gravitation over h-bar c
+type(capi_codata_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2018") ::&
+capi_252_2018 = capi_codata_constant_type([ &!capi
+"N", "e", "w", "t", "o", "n", "i", "a", "n", " ", &!capi
+"c", "o", "n", "s", "t", "a", "n", "t", " ", "o", &!capi
+"f", " ", "g", "r", "a", "v", "i", "t", "a", "t", &!capi
+"i", "o", "n", " ", "o", "v", "e", "r", " ", "h", &!capi
+"-", "b", "a", "r", " ", "c", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.70883e-39_dp, 0.00015e-39_dp, &!capi
+[ &!capi
+"(", "G", "e", "V", "/", "c", "^", "2", ")", "^", &!capi
+"-", "2", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_2018 = &
 codata_constant_type("nuclear magneton", &
 5.0507837461e-27_dp, 0.0000000015e-27_dp, &
 "J T^-1") !! nuclear magneton
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_2018") ::&
+capi_253_2018 = capi_codata_constant_type([ &!capi
+"n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
+"g", "n", "e", "t", "o", "n", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.0507837461e-27_dp, 0.0000000015e-27_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_EV_T_2018 = &
 codata_constant_type("nuclear magneton in eV/T", &
 3.15245125844e-8_dp, 0.00000000096e-8_dp, &
 "eV T^-1") !! nuclear magneton in eV/T
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_EV_T_2018") ::&
+capi_254_2018 = capi_codata_constant_type([ &!capi
+"n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
+"g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
+"e", "V", "/", "T", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.15245125844e-8_dp, 0.00000000096e-8_dp, &!capi
+[ &!capi
+"e", "V", " ", "T", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018 = &
 codata_constant_type("nuclear magneton in inverse meter per tesla", &
 2.54262341353e-2_dp, 0.00000000078e-2_dp, &
 "m^-1 T^-1") !! nuclear magneton in inverse meter per tesla
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018") ::&
+capi_255_2018 = capi_codata_constant_type([ &!capi
+"n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
+"g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
+"i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
+"t", "e", "r", " ", "p", "e", "r", " ", "t", "e", &!capi
+"s", "l", "a", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.54262341353e-2_dp, 0.00000000078e-2_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", " ", "T", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_K_T_2018 = &
 codata_constant_type("nuclear magneton in K/T", &
 3.6582677756e-4_dp, 0.0000000011e-4_dp, &
 "K T^-1") !! nuclear magneton in K/T
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_K_T_2018") ::&
+capi_256_2018 = capi_codata_constant_type([ &!capi
+"n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
+"g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
+"K", "/", "T", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.6582677756e-4_dp, 0.0000000011e-4_dp, &!capi
+[ &!capi
+"K", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_MHZ_T_2018 = &
 codata_constant_type("nuclear magneton in MHz/T", &
 7.6225932291_dp, 0.0000000023_dp, &
 "MHz T^-1") !! nuclear magneton in MHz/T
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_MHZ_T_2018") ::&
+capi_257_2018 = capi_codata_constant_type([ &!capi
+"n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
+"g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
+"M", "H", "z", "/", "T", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+7.6225932291_dp, 0.0000000023_dp, &!capi
+[ &!capi
+"M", "H", "z", " ", "T", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_2018 = &
 codata_constant_type("Planck constant", &
 6.62607015e-34_dp, 0.0_dp, &
 "J Hz^-1") !! Planck constant
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT_2018") ::&
+capi_258_2018 = capi_codata_constant_type([ &!capi
+"P", "l", "a", "n", "c", "k", " ", "c", "o", "n", &!capi
+"s", "t", "a", "n", "t", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.62607015e-34_dp, 0.0_dp, &!capi
+[ &!capi
+"J", " ", "H", "z", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_IN_EV_HZ_2018 = &
 codata_constant_type("Planck constant in eV/Hz", &
 4.135667696e-15_dp, 0.0_dp, &
 "eV Hz^-1") !! Planck constant in eV/Hz
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT_IN_EV_HZ_2018") ::&
+capi_259_2018 = capi_codata_constant_type([ &!capi
+"P", "l", "a", "n", "c", "k", " ", "c", "o", "n", &!capi
+"s", "t", "a", "n", "t", " ", "i", "n", " ", "e", &!capi
+"V", "/", "H", "z", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.135667696e-15_dp, 0.0_dp, &!capi
+[ &!capi
+"e", "V", " ", "H", "z", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PLANCK_LENGTH_2018 = &
 codata_constant_type("Planck length", &
 1.616255e-35_dp, 0.000018e-35_dp, &
 "m") !! Planck length
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_LENGTH_2018") ::&
+capi_260_2018 = capi_codata_constant_type([ &!capi
+"P", "l", "a", "n", "c", "k", " ", "l", "e", "n", &!capi
+"g", "t", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.616255e-35_dp, 0.000018e-35_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PLANCK_MASS_2018 = &
 codata_constant_type("Planck mass", &
 2.176434e-8_dp, 0.000024e-8_dp, &
 "kg") !! Planck mass
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_MASS_2018") ::&
+capi_261_2018 = capi_codata_constant_type([ &!capi
+"P", "l", "a", "n", "c", "k", " ", "m", "a", "s", &!capi
+"s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.176434e-8_dp, 0.000024e-8_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2018 = &
 codata_constant_type("Planck mass energy equivalent in GeV", &
 1.220890e19_dp, 0.000014e19_dp, &
 "GeV") !! Planck mass energy equivalent in GeV
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2018") ::&
+capi_262_2018 = capi_codata_constant_type([ &!capi
+"P", "l", "a", "n", "c", "k", " ", "m", "a", "s", &!capi
+"s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
+"q", "u", "i", "v", "a", "l", "e", "n", "t", " ", &!capi
+"i", "n", " ", "G", "e", "V", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.220890e19_dp, 0.000014e19_dp, &!capi
+[ &!capi
+"G", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PLANCK_TEMPERATURE_2018 = &
 codata_constant_type("Planck temperature", &
 1.416784e32_dp, 0.000016e32_dp, &
 "K") !! Planck temperature
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_TEMPERATURE_2018") ::&
+capi_263_2018 = capi_codata_constant_type([ &!capi
+"P", "l", "a", "n", "c", "k", " ", "t", "e", "m", &!capi
+"p", "e", "r", "a", "t", "u", "r", "e", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.416784e32_dp, 0.000016e32_dp, &!capi
+[ &!capi
+"K", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PLANCK_TIME_2018 = &
 codata_constant_type("Planck time", &
 5.391247e-44_dp, 0.000060e-44_dp, &
 "s") !! Planck time
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_TIME_2018") ::&
+capi_264_2018 = capi_codata_constant_type([ &!capi
+"P", "l", "a", "n", "c", "k", " ", "t", "i", "m", &!capi
+"e", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.391247e-44_dp, 0.000060e-44_dp, &!capi
+[ &!capi
+"s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_CHARGE_TO_MASS_QUOTIENT_2018 = &
 codata_constant_type("proton charge to mass quotient", &
 9.5788331560e7_dp, 0.0000000029e7_dp, &
 "C kg^-1") !! proton charge to mass quotient
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_CHARGE_TO_MASS_QUOTIENT_2018") ::&
+capi_265_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "c", "h", "a", &!capi
+"r", "g", "e", " ", "t", "o", " ", "m", "a", "s", &!capi
+"s", " ", "q", "u", "o", "t", "i", "e", "n", "t", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9.5788331560e7_dp, 0.0000000029e7_dp, &!capi
+[ &!capi
+"C", " ", "k", "g", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("proton Compton wavelength", &
 1.32140985539e-15_dp, 0.00000000040e-15_dp, &
 "m") !! proton Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_COMPTON_WAVELENGTH_2018") ::&
+capi_266_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "C", "o", "m", &!capi
+"p", "t", "o", "n", " ", "w", "a", "v", "e", "l", &!capi
+"e", "n", "g", "t", "h", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.32140985539e-15_dp, 0.00000000040e-15_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_ELECTRON_MASS_RATIO_2018 = &
 codata_constant_type("proton-electron mass ratio", &
 1836.15267343_dp, 0.00000011_dp, &
 "") !! proton-electron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_ELECTRON_MASS_RATIO_2018") ::&
+capi_267_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", "-", "e", "l", "e", &!capi
+"c", "t", "r", "o", "n", " ", "m", "a", "s", "s", &!capi
+" ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1836.15267343_dp, 0.00000011_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_G_FACTOR_2018 = &
 codata_constant_type("proton g factor", &
 5.5856946893_dp, 0.0000000016_dp, &
 "") !! proton g factor
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_G_FACTOR_2018") ::&
+capi_268_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "g", " ", "f", &!capi
+"a", "c", "t", "o", "r", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.5856946893_dp, 0.0000000016_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO_2018 = &
 codata_constant_type("proton gyromag. ratio", &
 2.6752218744e8_dp, 0.0000000011e8_dp, &
 "s^-1 T^-1") !! proton gyromag. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO_2018") ::&
+capi_269_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "g", "y", "r", &!capi
+"o", "m", "a", "g", ".", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.6752218744e8_dp, 0.0000000011e8_dp, &!capi
+[ &!capi
+"s", "^", "-", "1", " ", "T", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO_IN_MHZ_T_2018 = &
 codata_constant_type("proton gyromag. ratio in MHz/T", &
 42.577478518_dp, 0.000000018_dp, &
 "MHz T^-1") !! proton gyromag. ratio in MHz/T
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO_IN_MHZ_T_2018") ::&
+capi_270_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "g", "y", "r", &!capi
+"o", "m", "a", "g", ".", " ", "r", "a", "t", "i", &!capi
+"o", " ", "i", "n", " ", "M", "H", "z", "/", "T", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+42.577478518_dp, 0.000000018_dp, &!capi
+[ &!capi
+"M", "H", "z", " ", "T", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MAG_MOM_2018 = &
 codata_constant_type("proton mag. mom.", &
 1.41060679736e-26_dp, 0.00000000060e-26_dp, &
 "J T^-1") !! proton mag. mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_2018") ::&
+capi_271_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.41060679736e-26_dp, 0.00000000060e-26_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018 = &
 codata_constant_type("proton mag. mom. to Bohr magneton ratio", &
 1.52103220230e-3_dp, 0.00000000046e-3_dp, &
 "") !! proton mag. mom. to Bohr magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018") ::&
+capi_272_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
+"B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
+"t", "o", "n", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.52103220230e-3_dp, 0.00000000046e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018 = &
 codata_constant_type("proton mag. mom. to nuclear magneton ratio", &
 2.79284734463_dp, 0.00000000082_dp, &
 "") !! proton mag. mom. to nuclear magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018") ::&
+capi_273_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
+"n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
+"g", "n", "e", "t", "o", "n", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.79284734463_dp, 0.00000000082_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MAG_SHIELDING_CORRECTION_2018 = &
 codata_constant_type("proton mag. shielding correction", &
 2.5689e-5_dp, 0.0011e-5_dp, &
 "") !! proton mag. shielding correction
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_SHIELDING_CORRECTION_2018") ::&
+capi_274_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "s", "h", "i", "e", "l", "d", "i", "n", &!capi
+"g", " ", "c", "o", "r", "r", "e", "c", "t", "i", &!capi
+"o", "n", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.5689e-5_dp, 0.0011e-5_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MASS_2018 = &
 codata_constant_type("proton mass", &
 1.67262192369e-27_dp, 0.00000000051e-27_dp, &
 "kg") !! proton mass
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_2018") ::&
+capi_275_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
+"s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.67262192369e-27_dp, 0.00000000051e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("proton mass energy equivalent", &
 1.50327761598e-10_dp, 0.00000000046e-10_dp, &
 "J") !! proton mass energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT_2018") ::&
+capi_276_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
+"q", "u", "i", "v", "a", "l", "e", "n", "t", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.50327761598e-10_dp, 0.00000000046e-10_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("proton mass energy equivalent in MeV", &
 938.27208816_dp, 0.00000029_dp, &
 "MeV") !! proton mass energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_277_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
+"q", "u", "i", "v", "a", "l", "e", "n", "t", " ", &!capi
+"i", "n", " ", "M", "e", "V", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+938.27208816_dp, 0.00000029_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MASS_IN_U_2018 = &
 codata_constant_type("proton mass in u", &
 1.007276466621_dp, 0.000000000053_dp, &
 "u") !! proton mass in u
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_IN_U_2018") ::&
+capi_278_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "i", "n", " ", "u", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.007276466621_dp, 0.000000000053_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MOLAR_MASS_2018 = &
 codata_constant_type("proton molar mass", &
 1.00727646627e-3_dp, 0.00000000031e-3_dp, &
 "kg mol^-1") !! proton molar mass
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MOLAR_MASS_2018") ::&
+capi_279_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "o", "l", &!capi
+"a", "r", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.00727646627e-3_dp, 0.00000000031e-3_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_MUON_MASS_RATIO_2018 = &
 codata_constant_type("proton-muon mass ratio", &
 8.88024337_dp, 0.00000020_dp, &
 "") !! proton-muon mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MUON_MASS_RATIO_2018") ::&
+capi_280_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", "-", "m", "u", "o", &!capi
+"n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.88024337_dp, 0.00000020_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_NEUTRON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("proton-neutron mag. mom. ratio", &
 -1.45989805_dp, 0.00000034_dp, &
 "") !! proton-neutron mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MAG_MOM_RATIO_2018") ::&
+capi_281_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", "-", "n", "e", "u", &!capi
+"t", "r", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
+"m", "o", "m", ".", " ", "r", "a", "t", "i", "o", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.45989805_dp, 0.00000034_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_NEUTRON_MASS_RATIO_2018 = &
 codata_constant_type("proton-neutron mass ratio", &
 0.99862347812_dp, 0.00000000049_dp, &
 "") !! proton-neutron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MASS_RATIO_2018") ::&
+capi_282_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", "-", "n", "e", "u", &!capi
+"t", "r", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
+"r", "a", "t", "i", "o", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.99862347812_dp, 0.00000000049_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_RELATIVE_ATOMIC_MASS_2018 = &
 codata_constant_type("proton relative atomic mass", &
 1.007276466621_dp, 0.000000000053_dp, &
 "") !! proton relative atomic mass
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_RELATIVE_ATOMIC_MASS_2018") ::&
+capi_283_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "r", "e", "l", &!capi
+"a", "t", "i", "v", "e", " ", "a", "t", "o", "m", &!capi
+"i", "c", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.007276466621_dp, 0.000000000053_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_RMS_CHARGE_RADIUS_2018 = &
 codata_constant_type("proton rms charge radius", &
 8.414e-16_dp, 0.019e-16_dp, &
 "m") !! proton rms charge radius
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_RMS_CHARGE_RADIUS_2018") ::&
+capi_284_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", " ", "r", "m", "s", &!capi
+" ", "c", "h", "a", "r", "g", "e", " ", "r", "a", &!capi
+"d", "i", "u", "s", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.414e-16_dp, 0.019e-16_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: PROTON_TAU_MASS_RATIO_2018 = &
 codata_constant_type("proton-tau mass ratio", &
 0.528051_dp, 0.000036_dp, &
 "") !! proton-tau mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_TAU_MASS_RATIO_2018") ::&
+capi_285_2018 = capi_codata_constant_type([ &!capi
+"p", "r", "o", "t", "o", "n", "-", "t", "a", "u", &!capi
+" ", "m", "a", "s", "s", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.528051_dp, 0.000036_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: QUANTUM_OF_CIRCULATION_2018 = &
 codata_constant_type("quantum of circulation", &
 3.6369475516e-4_dp, 0.0000000011e-4_dp, &
 "m^2 s^-1") !! quantum of circulation
+type(capi_codata_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION_2018") ::&
+capi_286_2018 = capi_codata_constant_type([ &!capi
+"q", "u", "a", "n", "t", "u", "m", " ", "o", "f", &!capi
+" ", "c", "i", "r", "c", "u", "l", "a", "t", "i", &!capi
+"o", "n", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.6369475516e-4_dp, 0.0000000011e-4_dp, &!capi
+[ &!capi
+"m", "^", "2", " ", "s", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: QUANTUM_OF_CIRCULATION_TIMES_2_2018 = &
 codata_constant_type("quantum of circulation times 2", &
 7.2738951032e-4_dp, 0.0000000022e-4_dp, &
 "m^2 s^-1") !! quantum of circulation times 2
+type(capi_codata_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION_TIMES_2_2018") ::&
+capi_287_2018 = capi_codata_constant_type([ &!capi
+"q", "u", "a", "n", "t", "u", "m", " ", "o", "f", &!capi
+" ", "c", "i", "r", "c", "u", "l", "a", "t", "i", &!capi
+"o", "n", " ", "t", "i", "m", "e", "s", " ", "2", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+7.2738951032e-4_dp, 0.0000000022e-4_dp, &!capi
+[ &!capi
+"m", "^", "2", " ", "s", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: REDUCED_COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("reduced Compton wavelength", &
 3.8615926796e-13_dp, 0.0000000012e-13_dp, &
 "m") !! reduced Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_COMPTON_WAVELENGTH_2018") ::&
+capi_288_2018 = capi_codata_constant_type([ &!capi
+"r", "e", "d", "u", "c", "e", "d", " ", "C", "o", &!capi
+"m", "p", "t", "o", "n", " ", "w", "a", "v", "e", &!capi
+"l", "e", "n", "g", "t", "h", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.8615926796e-13_dp, 0.0000000012e-13_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: REDUCED_MUON_COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("reduced muon Compton wavelength", &
 1.867594306e-15_dp, 0.000000042e-15_dp, &
 "m") !! reduced muon Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_MUON_COMPTON_WAVELENGTH_2018") ::&
+capi_289_2018 = capi_codata_constant_type([ &!capi
+"r", "e", "d", "u", "c", "e", "d", " ", "m", "u", &!capi
+"o", "n", " ", "C", "o", "m", "p", "t", "o", "n", &!capi
+" ", "w", "a", "v", "e", "l", "e", "n", "g", "t", &!capi
+"h", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.867594306e-15_dp, 0.000000042e-15_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("reduced neutron Compton wavelength", &
 2.1001941552e-16_dp, 0.0000000012e-16_dp, &
 "m") !! reduced neutron Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018") ::&
+capi_290_2018 = capi_codata_constant_type([ &!capi
+"r", "e", "d", "u", "c", "e", "d", " ", "n", "e", &!capi
+"u", "t", "r", "o", "n", " ", "C", "o", "m", "p", &!capi
+"t", "o", "n", " ", "w", "a", "v", "e", "l", "e", &!capi
+"n", "g", "t", "h", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.1001941552e-16_dp, 0.0000000012e-16_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_2018 = &
 codata_constant_type("reduced Planck constant", &
 1.054571817e-34_dp, 0.0_dp, &
 "J s") !! reduced Planck constant
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_2018") ::&
+capi_291_2018 = capi_codata_constant_type([ &!capi
+"r", "e", "d", "u", "c", "e", "d", " ", "P", "l", &!capi
+"a", "n", "c", "k", " ", "c", "o", "n", "s", "t", &!capi
+"a", "n", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.054571817e-34_dp, 0.0_dp, &!capi
+[ &!capi
+"J", " ", "s", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_IN_EV_S_2018 = &
 codata_constant_type("reduced Planck constant in eV s", &
 6.582119569e-16_dp, 0.0_dp, &
 "eV s") !! reduced Planck constant in eV s
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_IN_EV_S_2018") ::&
+capi_292_2018 = capi_codata_constant_type([ &!capi
+"r", "e", "d", "u", "c", "e", "d", " ", "P", "l", &!capi
+"a", "n", "c", "k", " ", "c", "o", "n", "s", "t", &!capi
+"a", "n", "t", " ", "i", "n", " ", "e", "V", " ", &!capi
+"s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.582119569e-16_dp, 0.0_dp, &!capi
+[ &!capi
+"e", "V", " ", "s", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018 = &
 codata_constant_type("reduced Planck constant times c in MeV fm", &
 197.3269804_dp, 0.0_dp, &
 "MeV fm") !! reduced Planck constant times c in MeV fm
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018") ::&
+capi_293_2018 = capi_codata_constant_type([ &!capi
+"r", "e", "d", "u", "c", "e", "d", " ", "P", "l", &!capi
+"a", "n", "c", "k", " ", "c", "o", "n", "s", "t", &!capi
+"a", "n", "t", " ", "t", "i", "m", "e", "s", " ", &!capi
+"c", " ", "i", "n", " ", "M", "e", "V", " ", "f", &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+197.3269804_dp, 0.0_dp, &!capi
+[ &!capi
+"M", "e", "V", " ", "f", "m", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: REDUCED_PROTON_COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("reduced proton Compton wavelength", &
 2.10308910336e-16_dp, 0.00000000064e-16_dp, &
 "m") !! reduced proton Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PROTON_COMPTON_WAVELENGTH_2018") ::&
+capi_294_2018 = capi_codata_constant_type([ &!capi
+"r", "e", "d", "u", "c", "e", "d", " ", "p", "r", &!capi
+"o", "t", "o", "n", " ", "C", "o", "m", "p", "t", &!capi
+"o", "n", " ", "w", "a", "v", "e", "l", "e", "n", &!capi
+"g", "t", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.10308910336e-16_dp, 0.00000000064e-16_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: REDUCED_TAU_COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("reduced tau Compton wavelength", &
 1.110538e-16_dp, 0.000075e-16_dp, &
 "m") !! reduced tau Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_TAU_COMPTON_WAVELENGTH_2018") ::&
+capi_295_2018 = capi_codata_constant_type([ &!capi
+"r", "e", "d", "u", "c", "e", "d", " ", "t", "a", &!capi
+"u", " ", "C", "o", "m", "p", "t", "o", "n", " ", &!capi
+"w", "a", "v", "e", "l", "e", "n", "g", "t", "h", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.110538e-16_dp, 0.000075e-16_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_2018 = &
 codata_constant_type("Rydberg constant", &
 10973731.568160_dp, 0.000021_dp, &
 "m^-1") !! Rydberg constant
+type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_2018") ::&
+capi_296_2018 = capi_codata_constant_type([ &!capi
+"R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
+"n", "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+10973731.568160_dp, 0.000021_dp, &!capi
+[ &!capi
+"m", "^", "-", "1", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_TIMES_C_IN_HZ_2018 = &
 codata_constant_type("Rydberg constant times c in Hz", &
 3.2898419602508e15_dp, 0.0000000000064e15_dp, &
 "Hz") !! Rydberg constant times c in Hz
+type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_C_IN_HZ_2018") ::&
+capi_297_2018 = capi_codata_constant_type([ &!capi
+"R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
+"n", "s", "t", "a", "n", "t", " ", "t", "i", "m", &!capi
+"e", "s", " ", "c", " ", "i", "n", " ", "H", "z", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.2898419602508e15_dp, 0.0000000000064e15_dp, &!capi
+[ &!capi
+"H", "z", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_EV_2018 = &
 codata_constant_type("Rydberg constant times hc in eV", &
 13.605693122994_dp, 0.000000000026_dp, &
 "eV") !! Rydberg constant times hc in eV
+type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_EV_2018") ::&
+capi_298_2018 = capi_codata_constant_type([ &!capi
+"R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
+"n", "s", "t", "a", "n", "t", " ", "t", "i", "m", &!capi
+"e", "s", " ", "h", "c", " ", "i", "n", " ", "e", &!capi
+"V", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+13.605693122994_dp, 0.000000000026_dp, &!capi
+[ &!capi
+"e", "V", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_J_2018 = &
 codata_constant_type("Rydberg constant times hc in J", &
 2.1798723611035e-18_dp, 0.0000000000042e-18_dp, &
 "J") !! Rydberg constant times hc in J
+type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_J_2018") ::&
+capi_299_2018 = capi_codata_constant_type([ &!capi
+"R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
+"n", "s", "t", "a", "n", "t", " ", "t", "i", "m", &!capi
+"e", "s", " ", "h", "c", " ", "i", "n", " ", "J", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.1798723611035e-18_dp, 0.0000000000042e-18_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2018 = &
 codata_constant_type("Sackur-Tetrode constant (1 K, 100 kPa)", &
 -1.15170753706_dp, 0.00000000045_dp, &
 "") !! Sackur-Tetrode constant (1 K, 100 kPa)
+type(capi_codata_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2018") ::&
+capi_300_2018 = capi_codata_constant_type([ &!capi
+"S", "a", "c", "k", "u", "r", "-", "T", "e", "t", &!capi
+"r", "o", "d", "e", " ", "c", "o", "n", "s", "t", &!capi
+"a", "n", "t", " ", "(", "1", " ", "K", ",", " ", &!capi
+"1", "0", "0", " ", "k", "P", "a", ")", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.15170753706_dp, 0.00000000045_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2018 = &
 codata_constant_type("Sackur-Tetrode constant (1 K, 101.325 kPa)", &
 -1.16487052358_dp, 0.00000000045_dp, &
 "") !! Sackur-Tetrode constant (1 K, 101.325 kPa)
+type(capi_codata_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2018") ::&
+capi_301_2018 = capi_codata_constant_type([ &!capi
+"S", "a", "c", "k", "u", "r", "-", "T", "e", "t", &!capi
+"r", "o", "d", "e", " ", "c", "o", "n", "s", "t", &!capi
+"a", "n", "t", " ", "(", "1", " ", "K", ",", " ", &!capi
+"1", "0", "1", ".", "3", "2", "5", " ", "k", "P", &!capi
+"a", ")", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.16487052358_dp, 0.00000000045_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SECOND_RADIATION_CONSTANT_2018 = &
 codata_constant_type("second radiation constant", &
 1.438776877e-2_dp, 0.0_dp, &
 "m K") !! second radiation constant
+type(capi_codata_constant_type), protected, public, bind(C, name="SECOND_RADIATION_CONSTANT_2018") ::&
+capi_302_2018 = capi_codata_constant_type([ &!capi
+"s", "e", "c", "o", "n", "d", " ", "r", "a", "d", &!capi
+"i", "a", "t", "i", "o", "n", " ", "c", "o", "n", &!capi
+"s", "t", "a", "n", "t", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.438776877e-2_dp, 0.0_dp, &!capi
+[ &!capi
+"m", " ", "K", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO_2018 = &
 codata_constant_type("shielded helion gyromag. ratio", &
 2.037894569e8_dp, 0.000000024e8_dp, &
 "s^-1 T^-1") !! shielded helion gyromag. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO_2018") ::&
+capi_303_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
+"e", "l", "i", "o", "n", " ", "g", "y", "r", "o", &!capi
+"m", "a", "g", ".", " ", "r", "a", "t", "i", "o", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.037894569e8_dp, 0.000000024e8_dp, &!capi
+[ &!capi
+"s", "^", "-", "1", " ", "T", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018 = &
 codata_constant_type("shielded helion gyromag. ratio in MHz/T", &
 32.43409942_dp, 0.00000038_dp, &
 "MHz T^-1") !! shielded helion gyromag. ratio in MHz/T
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018") ::&
+capi_304_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
+"e", "l", "i", "o", "n", " ", "g", "y", "r", "o", &!capi
+"m", "a", "g", ".", " ", "r", "a", "t", "i", "o", &!capi
+" ", "i", "n", " ", "M", "H", "z", "/", "T", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+32.43409942_dp, 0.00000038_dp, &!capi
+[ &!capi
+"M", "H", "z", " ", "T", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_HELION_MAG_MOM_2018 = &
 codata_constant_type("shielded helion mag. mom.", &
 -1.074553090e-26_dp, 0.000000013e-26_dp, &
 "J T^-1") !! shielded helion mag. mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_2018") ::&
+capi_305_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
+"e", "l", "i", "o", "n", " ", "m", "a", "g", ".", &!capi
+" ", "m", "o", "m", ".", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.074553090e-26_dp, 0.000000013e-26_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018 = &
 codata_constant_type("shielded helion mag. mom. to Bohr magneton ratio", &
 -1.158671471e-3_dp, 0.000000014e-3_dp, &
 "") !! shielded helion mag. mom. to Bohr magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018") ::&
+capi_306_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
+"e", "l", "i", "o", "n", " ", "m", "a", "g", ".", &!capi
+" ", "m", "o", "m", ".", " ", "t", "o", " ", "B", &!capi
+"o", "h", "r", " ", "m", "a", "g", "n", "e", "t", &!capi
+"o", "n", " ", "r", "a", "t", "i", "o", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-1.158671471e-3_dp, 0.000000014e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018 = &
 codata_constant_type("shielded helion mag. mom. to nuclear magneton ratio", &
 -2.127497719_dp, 0.000000025_dp, &
 "") !! shielded helion mag. mom. to nuclear magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018") ::&
+capi_307_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
+"e", "l", "i", "o", "n", " ", "m", "a", "g", ".", &!capi
+" ", "m", "o", "m", ".", " ", "t", "o", " ", "n", &!capi
+"u", "c", "l", "e", "a", "r", " ", "m", "a", "g", &!capi
+"n", "e", "t", "o", "n", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-2.127497719_dp, 0.000000025_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("shielded helion to proton mag. mom. ratio", &
 -0.7617665618_dp, 0.0000000089_dp, &
 "") !! shielded helion to proton mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2018") ::&
+capi_308_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
+"e", "l", "i", "o", "n", " ", "t", "o", " ", "p", &!capi
+"r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
+" ", "m", "o", "m", ".", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-0.7617665618_dp, 0.0000000089_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("shielded helion to shielded proton mag. mom. ratio", &
 -0.7617861313_dp, 0.0000000033_dp, &
 "") !! shielded helion to shielded proton mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018") ::&
+capi_309_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
+"e", "l", "i", "o", "n", " ", "t", "o", " ", "s", &!capi
+"h", "i", "e", "l", "d", "e", "d", " ", "p", "r", &!capi
+"o", "t", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
+"m", "o", "m", ".", " ", "r", "a", "t", "i", "o", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+-0.7617861313_dp, 0.0000000033_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO_2018 = &
 codata_constant_type("shielded proton gyromag. ratio", &
 2.675153151e8_dp, 0.000000029e8_dp, &
 "s^-1 T^-1") !! shielded proton gyromag. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO_2018") ::&
+capi_310_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
+"r", "o", "t", "o", "n", " ", "g", "y", "r", "o", &!capi
+"m", "a", "g", ".", " ", "r", "a", "t", "i", "o", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.675153151e8_dp, 0.000000029e8_dp, &!capi
+[ &!capi
+"s", "^", "-", "1", " ", "T", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018 = &
 codata_constant_type("shielded proton gyromag. ratio in MHz/T", &
 42.57638474_dp, 0.00000046_dp, &
 "MHz T^-1") !! shielded proton gyromag. ratio in MHz/T
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018") ::&
+capi_311_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
+"r", "o", "t", "o", "n", " ", "g", "y", "r", "o", &!capi
+"m", "a", "g", ".", " ", "r", "a", "t", "i", "o", &!capi
+" ", "i", "n", " ", "M", "H", "z", "/", "T", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+42.57638474_dp, 0.00000046_dp, &!capi
+[ &!capi
+"M", "H", "z", " ", "T", "^", "-", "1", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_PROTON_MAG_MOM_2018 = &
 codata_constant_type("shielded proton mag. mom.", &
 1.410570560e-26_dp, 0.000000015e-26_dp, &
 "J T^-1") !! shielded proton mag. mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_2018") ::&
+capi_312_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
+"r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
+" ", "m", "o", "m", ".", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.410570560e-26_dp, 0.000000015e-26_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018 = &
 codata_constant_type("shielded proton mag. mom. to Bohr magneton ratio", &
 1.520993128e-3_dp, 0.000000017e-3_dp, &
 "") !! shielded proton mag. mom. to Bohr magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018") ::&
+capi_313_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
+"r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
+" ", "m", "o", "m", ".", " ", "t", "o", " ", "B", &!capi
+"o", "h", "r", " ", "m", "a", "g", "n", "e", "t", &!capi
+"o", "n", " ", "r", "a", "t", "i", "o", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.520993128e-3_dp, 0.000000017e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018 = &
 codata_constant_type("shielded proton mag. mom. to nuclear magneton ratio", &
 2.792775599_dp, 0.000000030_dp, &
 "") !! shielded proton mag. mom. to nuclear magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018") ::&
+capi_314_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
+"r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
+" ", "m", "o", "m", ".", " ", "t", "o", " ", "n", &!capi
+"u", "c", "l", "e", "a", "r", " ", "m", "a", "g", &!capi
+"n", "e", "t", "o", "n", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.792775599_dp, 0.000000030_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018 = &
 codata_constant_type("shielding difference of d and p in HD", &
 2.0200e-8_dp, 0.0020e-8_dp, &
 "") !! shielding difference of d and p in HD
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018") ::&
+capi_315_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "i", "n", "g", " ", &!capi
+"d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
+" ", "o", "f", " ", "d", " ", "a", "n", "d", " ", &!capi
+"p", " ", "i", "n", " ", "H", "D", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.0200e-8_dp, 0.0020e-8_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018 = &
 codata_constant_type("shielding difference of t and p in HT", &
 2.4140e-8_dp, 0.0020e-8_dp, &
 "") !! shielding difference of t and p in HT
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018") ::&
+capi_316_2018 = capi_codata_constant_type([ &!capi
+"s", "h", "i", "e", "l", "d", "i", "n", "g", " ", &!capi
+"d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
+" ", "o", "f", " ", "t", " ", "a", "n", "d", " ", &!capi
+"p", " ", "i", "n", " ", "H", "T", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.4140e-8_dp, 0.0020e-8_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: SPEED_OF_LIGHT_IN_VACUUM_2018 = &
 codata_constant_type("speed of light in vacuum", &
 299792458_dp, 0.0_dp, &
 "m s^-1") !! speed of light in vacuum
+type(capi_codata_constant_type), protected, public, bind(C, name="SPEED_OF_LIGHT_IN_VACUUM_2018") ::&
+capi_317_2018 = capi_codata_constant_type([ &!capi
+"s", "p", "e", "e", "d", " ", "o", "f", " ", "l", &!capi
+"i", "g", "h", "t", " ", "i", "n", " ", "v", "a", &!capi
+"c", "u", "u", "m", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+299792458_dp, 0.0_dp, &!capi
+[ &!capi
+"m", " ", "s", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: STANDARD_ACCELERATION_OF_GRAVITY_2018 = &
 codata_constant_type("standard acceleration of gravity", &
 9.80665_dp, 0.0_dp, &
 "m s^-2") !! standard acceleration of gravity
+type(capi_codata_constant_type), protected, public, bind(C, name="STANDARD_ACCELERATION_OF_GRAVITY_2018") ::&
+capi_318_2018 = capi_codata_constant_type([ &!capi
+"s", "t", "a", "n", "d", "a", "r", "d", " ", "a", &!capi
+"c", "c", "e", "l", "e", "r", "a", "t", "i", "o", &!capi
+"n", " ", "o", "f", " ", "g", "r", "a", "v", "i", &!capi
+"t", "y", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+9.80665_dp, 0.0_dp, &!capi
+[ &!capi
+"m", " ", "s", "^", "-", "2", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: STANDARD_ATMOSPHERE_2018 = &
 codata_constant_type("standard atmosphere", &
 101325_dp, 0.0_dp, &
 "Pa") !! standard atmosphere
+type(capi_codata_constant_type), protected, public, bind(C, name="STANDARD_ATMOSPHERE_2018") ::&
+capi_319_2018 = capi_codata_constant_type([ &!capi
+"s", "t", "a", "n", "d", "a", "r", "d", " ", "a", &!capi
+"t", "m", "o", "s", "p", "h", "e", "r", "e", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+101325_dp, 0.0_dp, &!capi
+[ &!capi
+"P", "a", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: STANDARD_STATE_PRESSURE_2018 = &
 codata_constant_type("standard-state pressure", &
 100000_dp, 0.0_dp, &
 "Pa") !! standard-state pressure
+type(capi_codata_constant_type), protected, public, bind(C, name="STANDARD_STATE_PRESSURE_2018") ::&
+capi_320_2018 = capi_codata_constant_type([ &!capi
+"s", "t", "a", "n", "d", "a", "r", "d", "-", "s", &!capi
+"t", "a", "t", "e", " ", "p", "r", "e", "s", "s", &!capi
+"u", "r", "e", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+100000_dp, 0.0_dp, &!capi
+[ &!capi
+"P", "a", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: STEFAN_BOLTZMANN_CONSTANT_2018 = &
 codata_constant_type("Stefan-Boltzmann constant", &
 5.670374419e-8_dp, 0.0_dp, &
 "W m^-2 K^-4") !! Stefan-Boltzmann constant
+type(capi_codata_constant_type), protected, public, bind(C, name="STEFAN_BOLTZMANN_CONSTANT_2018") ::&
+capi_321_2018 = capi_codata_constant_type([ &!capi
+"S", "t", "e", "f", "a", "n", "-", "B", "o", "l", &!capi
+"t", "z", "m", "a", "n", "n", " ", "c", "o", "n", &!capi
+"s", "t", "a", "n", "t", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.670374419e-8_dp, 0.0_dp, &!capi
+[ &!capi
+"W", " ", "m", "^", "-", "2", " ", "K", "^", "-", &!capi
+"4", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_COMPTON_WAVELENGTH_2018 = &
 codata_constant_type("tau Compton wavelength", &
 6.97771e-16_dp, 0.00047e-16_dp, &
 "m") !! tau Compton wavelength
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_COMPTON_WAVELENGTH_2018") ::&
+capi_322_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", " ", "C", "o", "m", "p", "t", "o", &!capi
+"n", " ", "w", "a", "v", "e", "l", "e", "n", "g", &!capi
+"t", "h", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.97771e-16_dp, 0.00047e-16_dp, &!capi
+[ &!capi
+"m", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_ELECTRON_MASS_RATIO_2018 = &
 codata_constant_type("tau-electron mass ratio", &
 3477.23_dp, 0.23_dp, &
 "") !! tau-electron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_ELECTRON_MASS_RATIO_2018") ::&
+capi_323_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", "-", "e", "l", "e", "c", "t", "r", &!capi
+"o", "n", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
+"t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3477.23_dp, 0.23_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("tau energy equivalent", &
 1776.86_dp, 0.12_dp, &
 "MeV") !! tau energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_ENERGY_EQUIVALENT_2018") ::&
+capi_324_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", " ", "e", "n", "e", "r", "g", "y", &!capi
+" ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
+"t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1776.86_dp, 0.12_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_MASS_2018 = &
 codata_constant_type("tau mass", &
 3.16754e-27_dp, 0.00021e-27_dp, &
 "kg") !! tau mass
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MASS_2018") ::&
+capi_325_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", " ", "m", "a", "s", "s", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.16754e-27_dp, 0.00021e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_MASS_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("tau mass energy equivalent", &
 2.84684e-10_dp, 0.00019e-10_dp, &
 "J") !! tau mass energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MASS_ENERGY_EQUIVALENT_2018") ::&
+capi_326_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", " ", "m", "a", "s", "s", " ", "e", &!capi
+"n", "e", "r", "g", "y", " ", "e", "q", "u", "i", &!capi
+"v", "a", "l", "e", "n", "t", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.84684e-10_dp, 0.00019e-10_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_MASS_IN_U_2018 = &
 codata_constant_type("tau mass in u", &
 1.90754_dp, 0.00013_dp, &
 "u") !! tau mass in u
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MASS_IN_U_2018") ::&
+capi_327_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", " ", "m", "a", "s", "s", " ", "i", &!capi
+"n", " ", "u", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.90754_dp, 0.00013_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_MOLAR_MASS_2018 = &
 codata_constant_type("tau molar mass", &
 1.90754e-3_dp, 0.00013e-3_dp, &
 "kg mol^-1") !! tau molar mass
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MOLAR_MASS_2018") ::&
+capi_328_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", " ", "m", "o", "l", "a", "r", " ", &!capi
+"m", "a", "s", "s", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.90754e-3_dp, 0.00013e-3_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_MUON_MASS_RATIO_2018 = &
 codata_constant_type("tau-muon mass ratio", &
 16.8170_dp, 0.0011_dp, &
 "") !! tau-muon mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MUON_MASS_RATIO_2018") ::&
+capi_329_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", "-", "m", "u", "o", "n", " ", "m", &!capi
+"a", "s", "s", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+16.8170_dp, 0.0011_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_NEUTRON_MASS_RATIO_2018 = &
 codata_constant_type("tau-neutron mass ratio", &
 1.89115_dp, 0.00013_dp, &
 "") !! tau-neutron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_NEUTRON_MASS_RATIO_2018") ::&
+capi_330_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", "-", "n", "e", "u", "t", "r", "o", &!capi
+"n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.89115_dp, 0.00013_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TAU_PROTON_MASS_RATIO_2018 = &
 codata_constant_type("tau-proton mass ratio", &
 1.89376_dp, 0.00013_dp, &
 "") !! tau-proton mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_PROTON_MASS_RATIO_2018") ::&
+capi_331_2018 = capi_codata_constant_type([ &!capi
+"t", "a", "u", "-", "p", "r", "o", "t", "o", "n", &!capi
+" ", "m", "a", "s", "s", " ", "r", "a", "t", "i", &!capi
+"o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.89376_dp, 0.00013_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: THOMSON_CROSS_SECTION_2018 = &
 codata_constant_type("Thomson cross section", &
 6.6524587321e-29_dp, 0.0000000060e-29_dp, &
 "m^2") !! Thomson cross section
+type(capi_codata_constant_type), protected, public, bind(C, name="THOMSON_CROSS_SECTION_2018") ::&
+capi_332_2018 = capi_codata_constant_type([ &!capi
+"T", "h", "o", "m", "s", "o", "n", " ", "c", "r", &!capi
+"o", "s", "s", " ", "s", "e", "c", "t", "i", "o", &!capi
+"n", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+6.6524587321e-29_dp, 0.0000000060e-29_dp, &!capi
+[ &!capi
+"m", "^", "2", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_ELECTRON_MASS_RATIO_2018 = &
 codata_constant_type("triton-electron mass ratio", &
 5496.92153573_dp, 0.00000027_dp, &
 "") !! triton-electron mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_ELECTRON_MASS_RATIO_2018") ::&
+capi_333_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", "-", "e", "l", "e", &!capi
+"c", "t", "r", "o", "n", " ", "m", "a", "s", "s", &!capi
+" ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5496.92153573_dp, 0.00000027_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_G_FACTOR_2018 = &
 codata_constant_type("triton g factor", &
 5.957924931_dp, 0.000000012_dp, &
 "") !! triton g factor
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_G_FACTOR_2018") ::&
+capi_334_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "g", " ", "f", &!capi
+"a", "c", "t", "o", "r", c_null_char, " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.957924931_dp, 0.000000012_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_MAG_MOM_2018 = &
 codata_constant_type("triton mag. mom.", &
 1.5046095202e-26_dp, 0.0000000030e-26_dp, &
 "J T^-1") !! triton mag. mom.
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_2018") ::&
+capi_335_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.5046095202e-26_dp, 0.0000000030e-26_dp, &!capi
+[ &!capi
+"J", " ", "T", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018 = &
 codata_constant_type("triton mag. mom. to Bohr magneton ratio", &
 1.6223936651e-3_dp, 0.0000000032e-3_dp, &
 "") !! triton mag. mom. to Bohr magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018") ::&
+capi_336_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
+"B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
+"t", "o", "n", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.6223936651e-3_dp, 0.0000000032e-3_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018 = &
 codata_constant_type("triton mag. mom. to nuclear magneton ratio", &
 2.9789624656_dp, 0.0000000059_dp, &
 "") !! triton mag. mom. to nuclear magneton ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018") ::&
+capi_337_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
+"n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
+"g", "n", "e", "t", "o", "n", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.9789624656_dp, 0.0000000059_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_MASS_2018 = &
 codata_constant_type("triton mass", &
 5.0073567446e-27_dp, 0.0000000015e-27_dp, &
 "kg") !! triton mass
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_2018") ::&
+capi_338_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
+"s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.0073567446e-27_dp, 0.0000000015e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT_2018 = &
 codata_constant_type("triton mass energy equivalent", &
 4.5003878060e-10_dp, 0.0000000014e-10_dp, &
 "J") !! triton mass energy equivalent
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT_2018") ::&
+capi_339_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
+"q", "u", "i", "v", "a", "l", "e", "n", "t", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+4.5003878060e-10_dp, 0.0000000014e-10_dp, &!capi
+[ &!capi
+"J", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = &
 codata_constant_type("triton mass energy equivalent in MeV", &
 2808.92113298_dp, 0.00000085_dp, &
 "MeV") !! triton mass energy equivalent in MeV
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018") ::&
+capi_340_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
+"q", "u", "i", "v", "a", "l", "e", "n", "t", " ", &!capi
+"i", "n", " ", "M", "e", "V", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2808.92113298_dp, 0.00000085_dp, &!capi
+[ &!capi
+"M", "e", "V", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_MASS_IN_U_2018 = &
 codata_constant_type("triton mass in u", &
 3.01550071621_dp, 0.00000000012_dp, &
 "u") !! triton mass in u
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_IN_U_2018") ::&
+capi_341_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
+"s", " ", "i", "n", " ", "u", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.01550071621_dp, 0.00000000012_dp, &!capi
+[ &!capi
+"u", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_MOLAR_MASS_2018 = &
 codata_constant_type("triton molar mass", &
 3.01550071517e-3_dp, 0.00000000092e-3_dp, &
 "kg mol^-1") !! triton molar mass
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MOLAR_MASS_2018") ::&
+capi_342_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "m", "o", "l", &!capi
+"a", "r", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.01550071517e-3_dp, 0.00000000092e-3_dp, &!capi
+[ &!capi
+"k", "g", " ", "m", "o", "l", "^", "-", "1", c_null_char, &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_PROTON_MASS_RATIO_2018 = &
 codata_constant_type("triton-proton mass ratio", &
 2.99371703414_dp, 0.00000000015_dp, &
 "") !! triton-proton mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_PROTON_MASS_RATIO_2018") ::&
+capi_343_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", "-", "p", "r", "o", &!capi
+"t", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
+"a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.99371703414_dp, 0.00000000015_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_RELATIVE_ATOMIC_MASS_2018 = &
 codata_constant_type("triton relative atomic mass", &
 3.01550071621_dp, 0.00000000012_dp, &
 "") !! triton relative atomic mass
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_RELATIVE_ATOMIC_MASS_2018") ::&
+capi_344_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "r", "e", "l", &!capi
+"a", "t", "i", "v", "e", " ", "a", "t", "o", "m", &!capi
+"i", "c", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+3.01550071621_dp, 0.00000000012_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: TRITON_TO_PROTON_MAG_MOM_RATIO_2018 = &
 codata_constant_type("triton to proton mag. mom. ratio", &
 1.0666399191_dp, 0.0000000021_dp, &
 "") !! triton to proton mag. mom. ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_TO_PROTON_MAG_MOM_RATIO_2018") ::&
+capi_345_2018 = capi_codata_constant_type([ &!capi
+"t", "r", "i", "t", "o", "n", " ", "t", "o", " ", &!capi
+"p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
+".", " ", "m", "o", "m", ".", " ", "r", "a", "t", &!capi
+"i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.0666399191_dp, 0.0000000021_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: UNIFIED_ATOMIC_MASS_UNIT_2018 = &
 codata_constant_type("unified atomic mass unit", &
 1.66053906660e-27_dp, 0.00000000050e-27_dp, &
 "kg") !! unified atomic mass unit
+type(capi_codata_constant_type), protected, public, bind(C, name="UNIFIED_ATOMIC_MASS_UNIT_2018") ::&
+capi_346_2018 = capi_codata_constant_type([ &!capi
+"u", "n", "i", "f", "i", "e", "d", " ", "a", "t", &!capi
+"o", "m", "i", "c", " ", "m", "a", "s", "s", " ", &!capi
+"u", "n", "i", "t", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.66053906660e-27_dp, 0.00000000050e-27_dp, &!capi
+[ &!capi
+"k", "g", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: VACUUM_ELECTRIC_PERMITTIVITY_2018 = &
 codata_constant_type("vacuum electric permittivity", &
 8.8541878128e-12_dp, 0.0000000013e-12_dp, &
 "F m^-1") !! vacuum electric permittivity
+type(capi_codata_constant_type), protected, public, bind(C, name="VACUUM_ELECTRIC_PERMITTIVITY_2018") ::&
+capi_347_2018 = capi_codata_constant_type([ &!capi
+"v", "a", "c", "u", "u", "m", " ", "e", "l", "e", &!capi
+"c", "t", "r", "i", "c", " ", "p", "e", "r", "m", &!capi
+"i", "t", "t", "i", "v", "i", "t", "y", c_null_char, " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+8.8541878128e-12_dp, 0.0000000013e-12_dp, &!capi
+[ &!capi
+"F", " ", "m", "^", "-", "1", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: VACUUM_MAG_PERMEABILITY_2018 = &
 codata_constant_type("vacuum mag. permeability", &
 1.25663706212e-6_dp, 0.00000000019e-6_dp, &
 "N A^-2") !! vacuum mag. permeability
+type(capi_codata_constant_type), protected, public, bind(C, name="VACUUM_MAG_PERMEABILITY_2018") ::&
+capi_348_2018 = capi_codata_constant_type([ &!capi
+"v", "a", "c", "u", "u", "m", " ", "m", "a", "g", &!capi
+".", " ", "p", "e", "r", "m", "e", "a", "b", "i", &!capi
+"l", "i", "t", "y", c_null_char, " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+1.25663706212e-6_dp, 0.00000000019e-6_dp, &!capi
+[ &!capi
+"N", " ", "A", "^", "-", "2", c_null_char, " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: VON_KLITZING_CONSTANT_2018 = &
 codata_constant_type("von Klitzing constant", &
 25812.80745_dp, 0.0_dp, &
 "ohm") !! von Klitzing constant
+type(capi_codata_constant_type), protected, public, bind(C, name="VON_KLITZING_CONSTANT_2018") ::&
+capi_349_2018 = capi_codata_constant_type([ &!capi
+"v", "o", "n", " ", "K", "l", "i", "t", "z", "i", &!capi
+"n", "g", " ", "c", "o", "n", "s", "t", "a", "n", &!capi
+"t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+25812.80745_dp, 0.0_dp, &!capi
+[ &!capi
+"o", "h", "m", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: WEAK_MIXING_ANGLE_2018 = &
 codata_constant_type("weak mixing angle", &
 0.22290_dp, 0.00030_dp, &
 "") !! weak mixing angle
+type(capi_codata_constant_type), protected, public, bind(C, name="WEAK_MIXING_ANGLE_2018") ::&
+capi_350_2018 = capi_codata_constant_type([ &!capi
+"w", "e", "a", "k", " ", "m", "i", "x", "i", "n", &!capi
+"g", " ", "a", "n", "g", "l", "e", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.22290_dp, 0.00030_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018 = &
 codata_constant_type("Wien frequency displacement law constant", &
 5.878925757e10_dp, 0.0_dp, &
 "Hz K^-1") !! Wien frequency displacement law constant
+type(capi_codata_constant_type), protected, public, bind(C, name="WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018") ::&
+capi_351_2018 = capi_codata_constant_type([ &!capi
+"W", "i", "e", "n", " ", "f", "r", "e", "q", "u", &!capi
+"e", "n", "c", "y", " ", "d", "i", "s", "p", "l", &!capi
+"a", "c", "e", "m", "e", "n", "t", " ", "l", "a", &!capi
+"w", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+5.878925757e10_dp, 0.0_dp, &!capi
+[ &!capi
+"H", "z", " ", "K", "^", "-", "1", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018 = &
 codata_constant_type("Wien wavelength displacement law constant", &
 2.897771955e-3_dp, 0.0_dp, &
 "m K") !! Wien wavelength displacement law constant
+type(capi_codata_constant_type), protected, public, bind(C, name="WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018") ::&
+capi_352_2018 = capi_codata_constant_type([ &!capi
+"W", "i", "e", "n", " ", "w", "a", "v", "e", "l", &!capi
+"e", "n", "g", "t", "h", " ", "d", "i", "s", "p", &!capi
+"l", "a", "c", "e", "m", "e", "n", "t", " ", "l", &!capi
+"a", "w", " ", "c", "o", "n", "s", "t", "a", "n", &!capi
+"t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+2.897771955e-3_dp, 0.0_dp, &!capi
+[ &!capi
+"m", " ", "K", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 type(codata_constant_type), parameter, public :: W_TO_Z_MASS_RATIO_2018 = &
 codata_constant_type("W to Z mass ratio", &
 0.88153_dp, 0.00017_dp, &
 "") !! W to Z mass ratio
+type(capi_codata_constant_type), protected, public, bind(C, name="W_TO_Z_MASS_RATIO_2018") ::&
+capi_353_2018 = capi_codata_constant_type([ &!capi
+"W", " ", "t", "o", " ", "Z", " ", "m", "a", "s", &!capi
+"s", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+], &!capi
+0.88153_dp, 0.00017_dp, &!capi
+[ &!capi
+c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
+" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
+])!capi
 
 end module codata__constants_2018
