@@ -18,7 +18,7 @@ all: $(LIBNAME)
 
 $(LIBNAME): build copy_a shared
 
-build:
+build: sources capi cpython
 	fpm build --profile=$(btype)
 
 test: build
@@ -79,6 +79,9 @@ sources: nist
 capi: nist
 	make -C include
 
+cpython: nist
+	make -C pywrapper/src/pycodata
+
 stdlib: nist sources
 	make -C stdlib
 
@@ -96,5 +99,6 @@ clean:
 	make -C nist clean
 	make -C src clean
 	make -C include clean
+	make -C pywrapper/src/pycodata clean
 	rm -rf API-doc/*
 	fpm clean --all
