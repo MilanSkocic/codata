@@ -1,10 +1,11 @@
-# Version 0.11.0
+# Version 1.0.0
 
 * Add codata values for 2010, 2014 and 2018.
-* Add module `codata_constants_latest` as alias for 2018.
 * Code refractoring and code cleaning.
-* Documentation update.
-* Switch to doxygen for Fortran and C code.
+* Documentation update and switch to only FORD documentation.
+* Rewrite code generators in python.
+* Generate source code for stdlib.
+* API break: constants are defined as DT like in stdlib.
 
 Full changelog available at [github](https://github.com/MilanSkocic/codata/releases)
 
