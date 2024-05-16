@@ -10,16 +10,13 @@ else
 	btype=release
 endif
 
-.PHONY: nist stdlib
+.PHONY: build nist stdlib
 
 all: $(LIBNAME)
 
 $(LIBNAME): build copy_a shared
 
-sources: nist 
-	make -C src 
-
-build: sources
+build: 
 	fpm build --profile=$(btype)
 
 test: build
@@ -43,14 +40,6 @@ shared_darwin:
 shared_windows: 
 	$(FC) -shared $(FPM_LDFLAGS) -o $(BUILD_DIR)/$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/$(LIBNAME).a -Wl,--no-whole-archive
 
-clean:
-	make -C media clean
-	make -C nist clean
-	make -C stdlib clean
-	make -C src clean
-	rm -rf API-doc/*
-	fpm clean --all
-
 install: install_dirs install_$(PLATFORM)
 
 install_dirs: 
@@ -58,7 +47,7 @@ install_dirs:
 	mkdir -p $(install_dir)/include
 	mkdir -p $(install_dir)/lib
 	fpm install --prefix=$(install_dir)
-	cp -f ./include/*.h $(install_dir)/include
+	cp -f ./include/$(HEADER_PREFIX)*.h $(install_dir)/include
 
 install_linux: 
 	cp -f $(BUILD_DIR)/$(LIBNAME).so $(install_dir)/lib
@@ -79,14 +68,16 @@ uninstall:
 	rm -f $(install_dir)/lib/$(LIBNAME).dll.a
 	rm -f $(install_dir)/bin/$(LIBNAME).dll
 
-
 nist:
 	make -C nist
+
+sources: nist 
+	make -C src 
 
 stdlib: nist sources
 	make -C stdlib
 
-ford:
+doc:
 	ford API-doc-FORD-file.md
 
 upload_doc:
@@ -94,3 +85,11 @@ upload_doc:
 
 logo:
 	make -C media
+
+clean:
+	make -C media clean
+	make -C nist clean
+	make -C stdlib clean
+	make -C src clean
+	rm -rf API-doc/*
+	fpm clean --all
