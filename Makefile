@@ -10,13 +10,15 @@ else
 	btype=release
 endif
 
+SRC_FYPP=$(wildcard ./src/*.fypp)
+
 .PHONY: build nist stdlib
 
 all: $(LIBNAME)
 
 $(LIBNAME): build copy_a shared
 
-build: 
+build:
 	fpm build --profile=$(btype)
 
 test: build
