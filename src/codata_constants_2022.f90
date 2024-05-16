@@ -5,12 +5,13 @@ module codata__constants_2022
     private
 
 integer(int32), parameter, public :: YEAR = 2022 !! Year of release.
+integer(int32), protected, public, bind(C, name="YEAR") :: capi_YEAR = YEAR !capi
 
 type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_ELECTRON_MASS_RATIO = &
 codata_constant_type("alpha particle-electron mass ratio", &
 7294.29954171_dp, 0.00000017_dp, &
 "") !! alpha particle-electron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_ELECTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_ELECTRON_MASS_RATIO") ::&!capi
 capi_0 = capi_codata_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", "-", "e", "l", "e", "c", "t", &!capi
@@ -30,7 +31,7 @@ type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS = &
 codata_constant_type("alpha particle mass", &
 6.6446573450e-27_dp, 0.0000000021e-27_dp, &
 "kg") !! alpha particle mass
-type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS") ::&!capi
 capi_1 = capi_codata_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "a", "s", "s", c_null_char, &!capi
@@ -50,7 +51,7 @@ type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUI
 codata_constant_type("alpha particle mass energy equivalent", &
 5.9719201997e-10_dp, 0.0000000019e-10_dp, &
 "J") !! alpha particle mass energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT") ::&!capi
 capi_2 = capi_codata_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "a", "s", "s", " ", &!capi
@@ -70,7 +71,7 @@ type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUI
 codata_constant_type("alpha particle mass energy equivalent in MeV", &
 3727.3794118_dp, 0.0000012_dp, &
 "MeV") !! alpha particle mass energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_3 = capi_codata_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "a", "s", "s", " ", &!capi
@@ -90,7 +91,7 @@ type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_IN_U = &
 codata_constant_type("alpha particle mass in u", &
 4.001506179129_dp, 0.000000000062_dp, &
 "u") !! alpha particle mass in u
-type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_IN_U") ::&!capi
 capi_4 = capi_codata_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "a", "s", "s", " ", &!capi
@@ -110,7 +111,7 @@ type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MOLAR_MASS = &
 codata_constant_type("alpha particle molar mass", &
 4.0015061833e-3_dp, 0.0000000012e-3_dp, &
 "kg mol^-1") !! alpha particle molar mass
-type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MOLAR_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MOLAR_MASS") ::&!capi
 capi_5 = capi_codata_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "o", "l", "a", "r", &!capi
@@ -130,7 +131,7 @@ type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_PROTON_MASS_RATI
 codata_constant_type("alpha particle-proton mass ratio", &
 3.972599690252_dp, 0.000000000070_dp, &
 "") !! alpha particle-proton mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_PROTON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_PROTON_MASS_RATIO") ::&!capi
 capi_6 = capi_codata_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", "-", "p", "r", "o", "t", "o", &!capi
@@ -150,7 +151,7 @@ type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_RELATIVE_ATOMIC_
 codata_constant_type("alpha particle relative atomic mass", &
 4.001506179129_dp, 0.000000000062_dp, &
 "") !! alpha particle relative atomic mass
-type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS") ::&!capi
 capi_7 = capi_codata_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "r", "e", "l", "a", "t", &!capi
@@ -170,7 +171,7 @@ type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_RMS_CHARGE_RADIU
 codata_constant_type("alpha particle rms charge radius", &
 1.6785e-15_dp, 0.0021e-15_dp, &
 "m") !! alpha particle rms charge radius
-type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_RMS_CHARGE_RADIUS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_RMS_CHARGE_RADIUS") ::&!capi
 capi_8 = capi_codata_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "r", "m", "s", " ", "c", &!capi
@@ -190,7 +191,7 @@ type(codata_constant_type), parameter, public :: ANGSTROM_STAR = &
 codata_constant_type("Angstrom star", &
 1.00001495e-10_dp, 0.00000090e-10_dp, &
 "m") !! Angstrom star
-type(capi_codata_constant_type), protected, public, bind(C, name="ANGSTROM_STAR") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ANGSTROM_STAR") ::&!capi
 capi_9 = capi_codata_constant_type([ &!capi
 "A", "n", "g", "s", "t", "r", "o", "m", " ", "s", &!capi
 "t", "a", "r", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -210,7 +211,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_CONSTANT = &
 codata_constant_type("atomic mass constant", &
 1.66053906892e-27_dp, 0.00000000052e-27_dp, &
 "kg") !! atomic mass constant
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT") ::&!capi
 capi_10 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
@@ -230,7 +231,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQU
 codata_constant_type("atomic mass constant energy equivalent", &
 1.49241808768e-10_dp, 0.00000000046e-10_dp, &
 "J") !! atomic mass constant energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT") ::&!capi
 capi_11 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
@@ -250,7 +251,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQU
 codata_constant_type("atomic mass constant energy equivalent in MeV", &
 931.49410372_dp, 0.00000029_dp, &
 "MeV") !! atomic mass constant energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_12 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
@@ -270,7 +271,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_ELECTRON_VOLT_
 codata_constant_type("atomic mass unit-electron volt relationship", &
 9.3149410372e8_dp, 0.0000000029e8_dp, &
 "eV") !! atomic mass unit-electron volt relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
 capi_13 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "e", "l", "e", &!capi
@@ -290,7 +291,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_HARTREE_RELATI
 codata_constant_type("atomic mass unit-hartree relationship", &
 3.4231776922e7_dp, 0.0000000011e7_dp, &
 "E_h") !! atomic mass unit-hartree relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP") ::&!capi
 capi_14 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "h", "a", "r", &!capi
@@ -310,7 +311,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_HERTZ_RELATION
 codata_constant_type("atomic mass unit-hertz relationship", &
 2.25234272185e23_dp, 0.00000000070e23_dp, &
 "Hz") !! atomic mass unit-hertz relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP") ::&!capi
 capi_15 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "h", "e", "r", &!capi
@@ -330,7 +331,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_INVERSE_METER_
 codata_constant_type("atomic mass unit-inverse meter relationship", &
 7.5130066209e14_dp, 0.0000000023e14_dp, &
 "m^-1") !! atomic mass unit-inverse meter relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP") ::&!capi
 capi_16 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "i", "n", "v", &!capi
@@ -350,7 +351,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_JOULE_RELATION
 codata_constant_type("atomic mass unit-joule relationship", &
 1.49241808768e-10_dp, 0.00000000046e-10_dp, &
 "J") !! atomic mass unit-joule relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP") ::&!capi
 capi_17 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "j", "o", "u", &!capi
@@ -370,7 +371,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_KELVIN_RELATIO
 codata_constant_type("atomic mass unit-kelvin relationship", &
 1.08095402067e13_dp, 0.00000000034e13_dp, &
 "K") !! atomic mass unit-kelvin relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP") ::&!capi
 capi_18 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "k", "e", "l", &!capi
@@ -390,7 +391,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_KILOGRAM_RELAT
 codata_constant_type("atomic mass unit-kilogram relationship", &
 1.66053906892e-27_dp, 0.00000000052e-27_dp, &
 "kg") !! atomic mass unit-kilogram relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP") ::&!capi
 capi_19 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "k", "i", "l", &!capi
@@ -410,7 +411,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_1ST_HYPERPOLARIZ
 codata_constant_type("atomic unit of 1st hyperpolarizability", &
 3.2063612996e-53_dp, 0.0000000015e-53_dp, &
 "C^3 m^3 J^-2") !! atomic unit of 1st hyperpolarizability
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY") ::&!capi
 capi_20 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "1", "s", "t", " ", "h", &!capi
@@ -430,7 +431,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_2ND_HYPERPOLARIZ
 codata_constant_type("atomic unit of 2nd hyperpolarizability", &
 6.2353799735e-65_dp, 0.0000000039e-65_dp, &
 "C^4 m^4 J^-3") !! atomic unit of 2nd hyperpolarizability
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY") ::&!capi
 capi_21 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "2", "n", "d", " ", "h", &!capi
@@ -450,7 +451,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ACTION = &
 codata_constant_type("atomic unit of action", &
 1.054571817e-34_dp, 0.0_dp, &
 "J s") !! atomic unit of action
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ACTION") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ACTION") ::&!capi
 capi_22 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "a", "c", "t", "i", "o", &!capi
@@ -470,7 +471,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_CHARGE = &
 codata_constant_type("atomic unit of charge", &
 1.602176634e-19_dp, 0.0_dp, &
 "C") !! atomic unit of charge
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE") ::&!capi
 capi_23 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "c", "h", "a", "r", "g", &!capi
@@ -490,7 +491,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_CHARGE_DENSITY =
 codata_constant_type("atomic unit of charge density", &
 1.08120238677e12_dp, 0.00000000051e12_dp, &
 "C m^-3") !! atomic unit of charge density
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE_DENSITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE_DENSITY") ::&!capi
 capi_24 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "c", "h", "a", "r", "g", &!capi
@@ -510,7 +511,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_CURRENT = &
 codata_constant_type("atomic unit of current", &
 6.6236182375082e-3_dp, 0.0000000000072e-3_dp, &
 "A") !! atomic unit of current
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CURRENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CURRENT") ::&!capi
 capi_25 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "c", "u", "r", "r", "e", &!capi
@@ -530,7 +531,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_
 codata_constant_type("atomic unit of electric dipole mom.", &
 8.4783536198e-30_dp, 0.0000000013e-30_dp, &
 "C m") !! atomic unit of electric dipole mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM") ::&!capi
 capi_26 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
@@ -550,7 +551,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD =
 codata_constant_type("atomic unit of electric field", &
 5.14220675112e11_dp, 0.00000000080e11_dp, &
 "V m^-1") !! atomic unit of electric field
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD") ::&!capi
 capi_27 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
@@ -570,7 +571,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD_G
 codata_constant_type("atomic unit of electric field gradient", &
 9.7173624424e21_dp, 0.0000000030e21_dp, &
 "V m^-2") !! atomic unit of electric field gradient
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT") ::&!capi
 capi_28 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
@@ -590,7 +591,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POLARIZ
 codata_constant_type("atomic unit of electric polarizability", &
 1.64877727212e-41_dp, 0.00000000051e-41_dp, &
 "C^2 m^2 J^-1") !! atomic unit of electric polarizability
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY") ::&!capi
 capi_29 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
@@ -610,7 +611,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POTENTI
 codata_constant_type("atomic unit of electric potential", &
 27.211386245981_dp, 0.000000000030_dp, &
 "V") !! atomic unit of electric potential
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL") ::&!capi
 capi_30 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
@@ -630,7 +631,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_QUADRUP
 codata_constant_type("atomic unit of electric quadrupole mom.", &
 4.4865515185e-40_dp, 0.0000000014e-40_dp, &
 "C m^2") !! atomic unit of electric quadrupole mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM") ::&!capi
 capi_31 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
@@ -650,7 +651,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ENERGY = &
 codata_constant_type("atomic unit of energy", &
 4.3597447222060e-18_dp, 0.0000000000048e-18_dp, &
 "J") !! atomic unit of energy
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ENERGY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ENERGY") ::&!capi
 capi_32 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "n", "e", "r", "g", &!capi
@@ -670,7 +671,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_FORCE = &
 codata_constant_type("atomic unit of force", &
 8.2387235038e-8_dp, 0.0000000013e-8_dp, &
 "N") !! atomic unit of force
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_FORCE") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_FORCE") ::&!capi
 capi_33 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "f", "o", "r", "c", "e", &!capi
@@ -690,7 +691,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_LENGTH = &
 codata_constant_type("atomic unit of length", &
 5.29177210544e-11_dp, 0.00000000082e-11_dp, &
 "m") !! atomic unit of length
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_LENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_LENGTH") ::&!capi
 capi_34 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "l", "e", "n", "g", "t", &!capi
@@ -710,7 +711,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MAG_DIPOLE_MOM =
 codata_constant_type("atomic unit of mag. dipole mom.", &
 1.85480201315e-23_dp, 0.00000000058e-23_dp, &
 "J T^-1") !! atomic unit of mag. dipole mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_DIPOLE_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_DIPOLE_MOM") ::&!capi
 capi_35 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "a", "g", ".", " ", &!capi
@@ -730,7 +731,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MAG_FLUX_DENSITY
 codata_constant_type("atomic unit of mag. flux density", &
 2.35051757077e5_dp, 0.00000000073e5_dp, &
 "T") !! atomic unit of mag. flux density
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_FLUX_DENSITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_FLUX_DENSITY") ::&!capi
 capi_36 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "a", "g", ".", " ", &!capi
@@ -750,7 +751,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MAGNETIZABILITY 
 codata_constant_type("atomic unit of magnetizability", &
 7.8910365794e-29_dp, 0.0000000049e-29_dp, &
 "J T^-2") !! atomic unit of magnetizability
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAGNETIZABILITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAGNETIZABILITY") ::&!capi
 capi_37 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "a", "g", "n", "e", &!capi
@@ -770,7 +771,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MASS = &
 codata_constant_type("atomic unit of mass", &
 9.1093837139e-31_dp, 0.0000000028e-31_dp, &
 "kg") !! atomic unit of mass
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MASS") ::&!capi
 capi_38 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "a", "s", "s", c_null_char, &!capi
@@ -790,7 +791,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MOMENTUM = &
 codata_constant_type("atomic unit of momentum", &
 1.99285191545e-24_dp, 0.00000000031e-24_dp, &
 "kg m s^-1") !! atomic unit of momentum
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MOMENTUM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MOMENTUM") ::&!capi
 capi_39 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "o", "m", "e", "n", &!capi
@@ -810,7 +811,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_PERMITTIVITY = &
 codata_constant_type("atomic unit of permittivity", &
 1.11265005620e-10_dp, 0.00000000017e-10_dp, &
 "F m^-1") !! atomic unit of permittivity
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_PERMITTIVITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_PERMITTIVITY") ::&!capi
 capi_40 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "p", "e", "r", "m", "i", &!capi
@@ -830,7 +831,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_TIME = &
 codata_constant_type("atomic unit of time", &
 2.4188843265864e-17_dp, 0.0000000000026e-17_dp, &
 "s") !! atomic unit of time
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_TIME") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_TIME") ::&!capi
 capi_41 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "t", "i", "m", "e", c_null_char, &!capi
@@ -850,7 +851,7 @@ type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_VELOCITY = &
 codata_constant_type("atomic unit of velocity", &
 2.18769126216e6_dp, 0.00000000034e6_dp, &
 "m s^-1") !! atomic unit of velocity
-type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_VELOCITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_VELOCITY") ::&!capi
 capi_42 = capi_codata_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "v", "e", "l", "o", "c", &!capi
@@ -870,7 +871,7 @@ type(codata_constant_type), parameter, public :: AVOGADRO_CONSTANT = &
 codata_constant_type("Avogadro constant", &
 6.02214076e23_dp, 0.0_dp, &
 "mol^-1") !! Avogadro constant
-type(capi_codata_constant_type), protected, public, bind(C, name="AVOGADRO_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="AVOGADRO_CONSTANT") ::&!capi
 capi_43 = capi_codata_constant_type([ &!capi
 "A", "v", "o", "g", "a", "d", "r", "o", " ", "c", &!capi
 "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", " ", &!capi
@@ -890,7 +891,7 @@ type(codata_constant_type), parameter, public :: BOHR_MAGNETON = &
 codata_constant_type("Bohr magneton", &
 9.2740100657e-24_dp, 0.0000000029e-24_dp, &
 "J T^-1") !! Bohr magneton
-type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON") ::&!capi
 capi_44 = capi_codata_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -910,7 +911,7 @@ type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_EV_T = &
 codata_constant_type("Bohr magneton in eV/T", &
 5.7883817982e-5_dp, 0.0000000018e-5_dp, &
 "eV T^-1") !! Bohr magneton in eV/T
-type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_EV_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_EV_T") ::&!capi
 capi_45 = capi_codata_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", " ", "i", "n", " ", "e", "V", "/", &!capi
@@ -930,7 +931,7 @@ type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_HZ_T = &
 codata_constant_type("Bohr magneton in Hz/T", &
 1.39962449171e10_dp, 0.00000000044e10_dp, &
 "Hz T^-1") !! Bohr magneton in Hz/T
-type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_HZ_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_HZ_T") ::&!capi
 capi_46 = capi_codata_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", " ", "i", "n", " ", "H", "z", "/", &!capi
@@ -950,7 +951,7 @@ type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_INVERSE_METER_
 codata_constant_type("Bohr magneton in inverse meter per tesla", &
 46.686447719_dp, 0.000000015_dp, &
 "m^-1 T^-1") !! Bohr magneton in inverse meter per tesla
-type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA") ::&!capi
 capi_47 = capi_codata_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", " ", "i", "n", " ", "i", "n", "v", &!capi
@@ -970,7 +971,7 @@ type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_K_T = &
 codata_constant_type("Bohr magneton in K/T", &
 0.67171381472_dp, 0.00000000021_dp, &
 "K T^-1") !! Bohr magneton in K/T
-type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_K_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_K_T") ::&!capi
 capi_48 = capi_codata_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", " ", "i", "n", " ", "K", "/", "T", &!capi
@@ -990,7 +991,7 @@ type(codata_constant_type), parameter, public :: BOHR_RADIUS = &
 codata_constant_type("Bohr radius", &
 5.29177210544e-11_dp, 0.00000000082e-11_dp, &
 "m") !! Bohr radius
-type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_RADIUS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOHR_RADIUS") ::&!capi
 capi_49 = capi_codata_constant_type([ &!capi
 "B", "o", "h", "r", " ", "r", "a", "d", "i", "u", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1010,7 +1011,7 @@ type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT = &
 codata_constant_type("Boltzmann constant", &
 1.380649e-23_dp, 0.0_dp, &
 "J K^-1") !! Boltzmann constant
-type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT") ::&!capi
 capi_50 = capi_codata_constant_type([ &!capi
 "B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", &!capi
@@ -1030,7 +1031,7 @@ type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_EV_K = &
 codata_constant_type("Boltzmann constant in eV/K", &
 8.617333262e-5_dp, 0.0_dp, &
 "eV K^-1") !! Boltzmann constant in eV/K
-type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_EV_K") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_EV_K") ::&!capi
 capi_51 = capi_codata_constant_type([ &!capi
 "B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "i", &!capi
@@ -1050,7 +1051,7 @@ type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_HZ_K = &
 codata_constant_type("Boltzmann constant in Hz/K", &
 2.083661912e10_dp, 0.0_dp, &
 "Hz K^-1") !! Boltzmann constant in Hz/K
-type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_HZ_K") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_HZ_K") ::&!capi
 capi_52 = capi_codata_constant_type([ &!capi
 "B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "i", &!capi
@@ -1070,7 +1071,7 @@ type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_INVERSE_M
 codata_constant_type("Boltzmann constant in inverse meter per kelvin", &
 69.50348004_dp, 0.0_dp, &
 "m^-1 K^-1") !! Boltzmann constant in inverse meter per kelvin
-type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN") ::&!capi
 capi_53 = capi_codata_constant_type([ &!capi
 "B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "i", &!capi
@@ -1090,7 +1091,7 @@ type(codata_constant_type), parameter, public :: CHARACTERISTIC_IMPEDANCE_OF_VAC
 codata_constant_type("characteristic impedance of vacuum", &
 376.730313412_dp, 0.000000059_dp, &
 "ohm") !! characteristic impedance of vacuum
-type(capi_codata_constant_type), protected, public, bind(C, name="CHARACTERISTIC_IMPEDANCE_OF_VACUUM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CHARACTERISTIC_IMPEDANCE_OF_VACUUM") ::&!capi
 capi_54 = capi_codata_constant_type([ &!capi
 "c", "h", "a", "r", "a", "c", "t", "e", "r", "i", &!capi
 "s", "t", "i", "c", " ", "i", "m", "p", "e", "d", &!capi
@@ -1110,7 +1111,7 @@ type(codata_constant_type), parameter, public :: CLASSICAL_ELECTRON_RADIUS = &
 codata_constant_type("classical electron radius", &
 2.8179403205e-15_dp, 0.0000000013e-15_dp, &
 "m") !! classical electron radius
-type(capi_codata_constant_type), protected, public, bind(C, name="CLASSICAL_ELECTRON_RADIUS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CLASSICAL_ELECTRON_RADIUS") ::&!capi
 capi_55 = capi_codata_constant_type([ &!capi
 "c", "l", "a", "s", "s", "i", "c", "a", "l", " ", &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "r", &!capi
@@ -1130,7 +1131,7 @@ type(codata_constant_type), parameter, public :: COMPTON_WAVELENGTH = &
 codata_constant_type("Compton wavelength", &
 2.42631023538e-12_dp, 0.00000000076e-12_dp, &
 "m") !! Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="COMPTON_WAVELENGTH") ::&!capi
 capi_56 = capi_codata_constant_type([ &!capi
 "C", "o", "m", "p", "t", "o", "n", " ", "w", "a", &!capi
 "v", "e", "l", "e", "n", "g", "t", "h", c_null_char, " ", &!capi
@@ -1150,7 +1151,7 @@ type(codata_constant_type), parameter, public :: CONDUCTANCE_QUANTUM = &
 codata_constant_type("conductance quantum", &
 7.748091729e-5_dp, 0.0_dp, &
 "S") !! conductance quantum
-type(capi_codata_constant_type), protected, public, bind(C, name="CONDUCTANCE_QUANTUM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONDUCTANCE_QUANTUM") ::&!capi
 capi_57 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "d", "u", "c", "t", "a", "n", "c", &!capi
 "e", " ", "q", "u", "a", "n", "t", "u", "m", c_null_char, &!capi
@@ -1170,7 +1171,7 @@ type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_AMPERE_90
 codata_constant_type("conventional value of ampere-90", &
 1.00000008887_dp, 0.0_dp, &
 "A") !! conventional value of ampere-90
-type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_AMPERE_90") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_AMPERE_90") ::&!capi
 capi_58 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
@@ -1190,7 +1191,7 @@ type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_COULOMB_9
 codata_constant_type("conventional value of coulomb-90", &
 1.00000008887_dp, 0.0_dp, &
 "C") !! conventional value of coulomb-90
-type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_COULOMB_90") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_COULOMB_90") ::&!capi
 capi_59 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
@@ -1210,7 +1211,7 @@ type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_FARAD_90 
 codata_constant_type("conventional value of farad-90", &
 0.99999998220_dp, 0.0_dp, &
 "F") !! conventional value of farad-90
-type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_FARAD_90") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_FARAD_90") ::&!capi
 capi_60 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
@@ -1230,7 +1231,7 @@ type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_HENRY_90 
 codata_constant_type("conventional value of henry-90", &
 1.00000001779_dp, 0.0_dp, &
 "H") !! conventional value of henry-90
-type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_HENRY_90") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_HENRY_90") ::&!capi
 capi_61 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
@@ -1250,7 +1251,7 @@ type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_JOSEPHSON
 codata_constant_type("conventional value of Josephson constant", &
 483597.9e9_dp, 0.0_dp, &
 "Hz V^-1") !! conventional value of Josephson constant
-type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT") ::&!capi
 capi_62 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
@@ -1270,7 +1271,7 @@ type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_OHM_90 = 
 codata_constant_type("conventional value of ohm-90", &
 1.00000001779_dp, 0.0_dp, &
 "ohm") !! conventional value of ohm-90
-type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_OHM_90") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_OHM_90") ::&!capi
 capi_63 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
@@ -1290,7 +1291,7 @@ type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_VOLT_90 =
 codata_constant_type("conventional value of volt-90", &
 1.00000010666_dp, 0.0_dp, &
 "V") !! conventional value of volt-90
-type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VOLT_90") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VOLT_90") ::&!capi
 capi_64 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
@@ -1310,7 +1311,7 @@ type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_VON_KLITZ
 codata_constant_type("conventional value of von Klitzing constant", &
 25812.807_dp, 0.0_dp, &
 "ohm") !! conventional value of von Klitzing constant
-type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT") ::&!capi
 capi_65 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
@@ -1330,7 +1331,7 @@ type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_WATT_90 =
 codata_constant_type("conventional value of watt-90", &
 1.00000019553_dp, 0.0_dp, &
 "W") !! conventional value of watt-90
-type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_WATT_90") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_WATT_90") ::&!capi
 capi_66 = capi_codata_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
@@ -1350,7 +1351,7 @@ type(codata_constant_type), parameter, public :: COPPER_X_UNIT = &
 codata_constant_type("Copper x unit", &
 1.00207697e-13_dp, 0.00000028e-13_dp, &
 "m") !! Copper x unit
-type(capi_codata_constant_type), protected, public, bind(C, name="COPPER_X_UNIT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="COPPER_X_UNIT") ::&!capi
 capi_67 = capi_codata_constant_type([ &!capi
 "C", "o", "p", "p", "e", "r", " ", "x", " ", "u", &!capi
 "n", "i", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -1370,7 +1371,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_ELECTRON_MAG_MOM_RATIO
 codata_constant_type("deuteron-electron mag. mom. ratio", &
 -4.664345550e-4_dp, 0.000000012e-4_dp, &
 "") !! deuteron-electron mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MAG_MOM_RATIO") ::&!capi
 capi_68 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "e", &!capi
 "l", "e", "c", "t", "r", "o", "n", " ", "m", "a", &!capi
@@ -1390,7 +1391,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_ELECTRON_MASS_RATIO = 
 codata_constant_type("deuteron-electron mass ratio", &
 3670.482967655_dp, 0.000000063_dp, &
 "") !! deuteron-electron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MASS_RATIO") ::&!capi
 capi_69 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "e", &!capi
 "l", "e", "c", "t", "r", "o", "n", " ", "m", "a", &!capi
@@ -1410,7 +1411,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_G_FACTOR = &
 codata_constant_type("deuteron g factor", &
 0.8574382335_dp, 0.0000000022_dp, &
 "") !! deuteron g factor
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_G_FACTOR") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_G_FACTOR") ::&!capi
 capi_70 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "g", &!capi
 " ", "f", "a", "c", "t", "o", "r", c_null_char, " ", " ", &!capi
@@ -1430,7 +1431,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_MAG_MOM = &
 codata_constant_type("deuteron mag. mom.", &
 4.330735087e-27_dp, 0.000000011e-27_dp, &
 "J T^-1") !! deuteron mag. mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM") ::&!capi
 capi_71 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", c_null_char, " ", &!capi
@@ -1450,7 +1451,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_MAG_MOM_TO_BOHR_MAGNET
 codata_constant_type("deuteron mag. mom. to Bohr magneton ratio", &
 4.669754568e-4_dp, 0.000000012e-4_dp, &
 "") !! deuteron mag. mom. to Bohr magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
 capi_72 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
@@ -1470,7 +1471,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_MAG_MOM_TO_NUCLEAR_MAG
 codata_constant_type("deuteron mag. mom. to nuclear magneton ratio", &
 0.8574382335_dp, 0.0000000022_dp, &
 "") !! deuteron mag. mom. to nuclear magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
 capi_73 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
@@ -1490,7 +1491,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_MASS = &
 codata_constant_type("deuteron mass", &
 3.3435837768e-27_dp, 0.0000000010e-27_dp, &
 "kg") !! deuteron mass
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS") ::&!capi
 capi_74 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -1510,7 +1511,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT
 codata_constant_type("deuteron mass energy equivalent", &
 3.00506323491e-10_dp, 0.00000000094e-10_dp, &
 "J") !! deuteron mass energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT") ::&!capi
 capi_75 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
@@ -1530,7 +1531,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT
 codata_constant_type("deuteron mass energy equivalent in MeV", &
 1875.61294500_dp, 0.00000058_dp, &
 "MeV") !! deuteron mass energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_76 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
@@ -1550,7 +1551,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_MASS_IN_U = &
 codata_constant_type("deuteron mass in u", &
 2.013553212544_dp, 0.000000000015_dp, &
 "u") !! deuteron mass in u
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MASS_IN_U") ::&!capi
 capi_77 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "i", "n", " ", "u", c_null_char, " ", &!capi
@@ -1570,7 +1571,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_MOLAR_MASS = &
 codata_constant_type("deuteron molar mass", &
 2.01355321466e-3_dp, 0.00000000063e-3_dp, &
 "kg mol^-1") !! deuteron molar mass
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MOLAR_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_MOLAR_MASS") ::&!capi
 capi_78 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "o", "l", "a", "r", " ", "m", "a", "s", "s", c_null_char, &!capi
@@ -1590,7 +1591,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_NEUTRON_MAG_MOM_RATIO 
 codata_constant_type("deuteron-neutron mag. mom. ratio", &
 -0.44820652_dp, 0.00000011_dp, &
 "") !! deuteron-neutron mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_NEUTRON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_NEUTRON_MAG_MOM_RATIO") ::&!capi
 capi_79 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "n", &!capi
 "e", "u", "t", "r", "o", "n", " ", "m", "a", "g", &!capi
@@ -1610,7 +1611,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_PROTON_MAG_MOM_RATIO =
 codata_constant_type("deuteron-proton mag. mom. ratio", &
 0.30701220930_dp, 0.00000000079_dp, &
 "") !! deuteron-proton mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MAG_MOM_RATIO") ::&!capi
 capi_80 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
@@ -1630,7 +1631,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_PROTON_MASS_RATIO = &
 codata_constant_type("deuteron-proton mass ratio", &
 1.9990075012699_dp, 0.0000000000084_dp, &
 "") !! deuteron-proton mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MASS_RATIO") ::&!capi
 capi_81 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "s", "s", &!capi
@@ -1650,7 +1651,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_RELATIVE_ATOMIC_MASS =
 codata_constant_type("deuteron relative atomic mass", &
 2.013553212544_dp, 0.000000000015_dp, &
 "") !! deuteron relative atomic mass
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_RELATIVE_ATOMIC_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_RELATIVE_ATOMIC_MASS") ::&!capi
 capi_82 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "r", &!capi
 "e", "l", "a", "t", "i", "v", "e", " ", "a", "t", &!capi
@@ -1670,7 +1671,7 @@ type(codata_constant_type), parameter, public :: DEUTERON_RMS_CHARGE_RADIUS = &
 codata_constant_type("deuteron rms charge radius", &
 2.12778e-15_dp, 0.00027e-15_dp, &
 "m") !! deuteron rms charge radius
-type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_RMS_CHARGE_RADIUS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="DEUTERON_RMS_CHARGE_RADIUS") ::&!capi
 capi_83 = capi_codata_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "r", &!capi
 "m", "s", " ", "c", "h", "a", "r", "g", "e", " ", &!capi
@@ -1690,7 +1691,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_CHARGE_TO_MASS_QUOTIEN
 codata_constant_type("electron charge to mass quotient", &
 -1.75882000838e11_dp, 0.00000000055e11_dp, &
 "C kg^-1") !! electron charge to mass quotient
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_CHARGE_TO_MASS_QUOTIENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_CHARGE_TO_MASS_QUOTIENT") ::&!capi
 capi_84 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "c", &!capi
 "h", "a", "r", "g", "e", " ", "t", "o", " ", "m", &!capi
@@ -1710,7 +1711,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_DEUTERON_MAG_MOM_RATIO
 codata_constant_type("electron-deuteron mag. mom. ratio", &
 -2143.9234921_dp, 0.0000056_dp, &
 "") !! electron-deuteron mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MAG_MOM_RATIO") ::&!capi
 capi_85 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "d", &!capi
 "e", "u", "t", "e", "r", "o", "n", " ", "m", "a", &!capi
@@ -1730,7 +1731,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_DEUTERON_MASS_RATIO = 
 codata_constant_type("electron-deuteron mass ratio", &
 2.724437107629e-4_dp, 0.000000000047e-4_dp, &
 "") !! electron-deuteron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MASS_RATIO") ::&!capi
 capi_86 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "d", &!capi
 "e", "u", "t", "e", "r", "o", "n", " ", "m", "a", &!capi
@@ -1750,7 +1751,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_G_FACTOR = &
 codata_constant_type("electron g factor", &
 -2.00231930436092_dp, 0.00000000000036_dp, &
 "") !! electron g factor
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_G_FACTOR") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_G_FACTOR") ::&!capi
 capi_87 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "g", &!capi
 " ", "f", "a", "c", "t", "o", "r", c_null_char, " ", " ", &!capi
@@ -1770,7 +1771,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO = &
 codata_constant_type("electron gyromag. ratio", &
 1.76085962784e11_dp, 0.00000000055e11_dp, &
 "s^-1 T^-1") !! electron gyromag. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO") ::&!capi
 capi_88 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "g", &!capi
 "y", "r", "o", "m", "a", "g", ".", " ", "r", "a", &!capi
@@ -1790,7 +1791,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO_IN_MHZ_T
 codata_constant_type("electron gyromag. ratio in MHz/T", &
 28024.9513861_dp, 0.0000087_dp, &
 "MHz T^-1") !! electron gyromag. ratio in MHz/T
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO_IN_MHZ_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
 capi_89 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "g", &!capi
 "y", "r", "o", "m", "a", "g", ".", " ", "r", "a", &!capi
@@ -1810,7 +1811,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_HELION_MASS_RATIO = &
 codata_constant_type("electron-helion mass ratio", &
 1.819543074649e-4_dp, 0.000000000053e-4_dp, &
 "") !! electron-helion mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_HELION_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_HELION_MASS_RATIO") ::&!capi
 capi_90 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "h", &!capi
 "e", "l", "i", "o", "n", " ", "m", "a", "s", "s", &!capi
@@ -1830,7 +1831,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM = &
 codata_constant_type("electron mag. mom.", &
 -9.2847646917e-24_dp, 0.0000000029e-24_dp, &
 "J T^-1") !! electron mag. mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM") ::&!capi
 capi_91 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", c_null_char, " ", &!capi
@@ -1850,7 +1851,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_ANOMALY = &
 codata_constant_type("electron mag. mom. anomaly", &
 1.15965218046e-3_dp, 0.00000000018e-3_dp, &
 "") !! electron mag. mom. anomaly
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_ANOMALY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_ANOMALY") ::&!capi
 capi_92 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "a", &!capi
@@ -1870,7 +1871,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_TO_BOHR_MAGNET
 codata_constant_type("electron mag. mom. to Bohr magneton ratio", &
 -1.00115965218046_dp, 0.00000000000018_dp, &
 "") !! electron mag. mom. to Bohr magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
 capi_93 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
@@ -1890,7 +1891,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_TO_NUCLEAR_MAG
 codata_constant_type("electron mag. mom. to nuclear magneton ratio", &
 -1838.281971877_dp, 0.000000032_dp, &
 "") !! electron mag. mom. to nuclear magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
 capi_94 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
@@ -1910,7 +1911,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MASS = &
 codata_constant_type("electron mass", &
 9.1093837139e-31_dp, 0.0000000028e-31_dp, &
 "kg") !! electron mass
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS") ::&!capi
 capi_95 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -1930,7 +1931,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT
 codata_constant_type("electron mass energy equivalent", &
 8.1871057880e-14_dp, 0.0000000026e-14_dp, &
 "J") !! electron mass energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT") ::&!capi
 capi_96 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
@@ -1950,7 +1951,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT
 codata_constant_type("electron mass energy equivalent in MeV", &
 0.51099895069_dp, 0.00000000016_dp, &
 "MeV") !! electron mass energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_97 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
@@ -1970,7 +1971,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MASS_IN_U = &
 codata_constant_type("electron mass in u", &
 5.485799090441e-4_dp, 0.000000000097e-4_dp, &
 "u") !! electron mass in u
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MASS_IN_U") ::&!capi
 capi_98 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "i", "n", " ", "u", c_null_char, " ", &!capi
@@ -1990,7 +1991,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MOLAR_MASS = &
 codata_constant_type("electron molar mass", &
 5.4857990962e-7_dp, 0.0000000017e-7_dp, &
 "kg mol^-1") !! electron molar mass
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MOLAR_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MOLAR_MASS") ::&!capi
 capi_99 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "o", "l", "a", "r", " ", "m", "a", "s", "s", c_null_char, &!capi
@@ -2010,7 +2011,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MUON_MAG_MOM_RATIO = &
 codata_constant_type("electron-muon mag. mom. ratio", &
 206.7669881_dp, 0.0000046_dp, &
 "") !! electron-muon mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MAG_MOM_RATIO") ::&!capi
 capi_100 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "m", &!capi
 "u", "o", "n", " ", "m", "a", "g", ".", " ", "m", &!capi
@@ -2030,7 +2031,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_MUON_MASS_RATIO = &
 codata_constant_type("electron-muon mass ratio", &
 4.83633170e-3_dp, 0.00000011e-3_dp, &
 "") !! electron-muon mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MASS_RATIO") ::&!capi
 capi_101 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "m", &!capi
 "u", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
@@ -2050,7 +2051,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_NEUTRON_MAG_MOM_RATIO 
 codata_constant_type("electron-neutron mag. mom. ratio", &
 960.92048_dp, 0.00023_dp, &
 "") !! electron-neutron mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MAG_MOM_RATIO") ::&!capi
 capi_102 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "n", &!capi
 "e", "u", "t", "r", "o", "n", " ", "m", "a", "g", &!capi
@@ -2070,7 +2071,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_NEUTRON_MASS_RATIO = &
 codata_constant_type("electron-neutron mass ratio", &
 5.4386734416e-4_dp, 0.0000000022e-4_dp, &
 "") !! electron-neutron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MASS_RATIO") ::&!capi
 capi_103 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "n", &!capi
 "e", "u", "t", "r", "o", "n", " ", "m", "a", "s", &!capi
@@ -2090,7 +2091,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_PROTON_MAG_MOM_RATIO =
 codata_constant_type("electron-proton mag. mom. ratio", &
 -658.21068789_dp, 0.00000019_dp, &
 "") !! electron-proton mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MAG_MOM_RATIO") ::&!capi
 capi_104 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
@@ -2110,7 +2111,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_PROTON_MASS_RATIO = &
 codata_constant_type("electron-proton mass ratio", &
 5.446170214889e-4_dp, 0.000000000094e-4_dp, &
 "") !! electron-proton mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MASS_RATIO") ::&!capi
 capi_105 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "s", "s", &!capi
@@ -2130,7 +2131,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_RELATIVE_ATOMIC_MASS =
 codata_constant_type("electron relative atomic mass", &
 5.485799090441e-4_dp, 0.000000000097e-4_dp, &
 "") !! electron relative atomic mass
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_RELATIVE_ATOMIC_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_RELATIVE_ATOMIC_MASS") ::&!capi
 capi_106 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "r", &!capi
 "e", "l", "a", "t", "i", "v", "e", " ", "a", "t", &!capi
@@ -2150,7 +2151,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_TAU_MASS_RATIO = &
 codata_constant_type("electron-tau mass ratio", &
 2.87585e-4_dp, 0.00019e-4_dp, &
 "") !! electron-tau mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TAU_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TAU_MASS_RATIO") ::&!capi
 capi_107 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "t", &!capi
 "a", "u", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
@@ -2170,7 +2171,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_TO_ALPHA_PARTICLE_MASS
 codata_constant_type("electron to alpha particle mass ratio", &
 1.370933554733e-4_dp, 0.000000000032e-4_dp, &
 "") !! electron to alpha particle mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO") ::&!capi
 capi_108 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "t", &!capi
 "o", " ", "a", "l", "p", "h", "a", " ", "p", "a", &!capi
@@ -2190,7 +2191,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_TO_SHIELDED_HELION_MAG
 codata_constant_type("electron to shielded helion mag. mom. ratio", &
 864.05823986_dp, 0.00000070_dp, &
 "") !! electron to shielded helion mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO") ::&!capi
 capi_109 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "t", &!capi
 "o", " ", "s", "h", "i", "e", "l", "d", "e", "d", &!capi
@@ -2210,7 +2211,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_TO_SHIELDED_PROTON_MAG
 codata_constant_type("electron to shielded proton mag. mom. ratio", &
 -658.2275856_dp, 0.0000027_dp, &
 "") !! electron to shielded proton mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&!capi
 capi_110 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "t", &!capi
 "o", " ", "s", "h", "i", "e", "l", "d", "e", "d", &!capi
@@ -2230,7 +2231,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_TRITON_MASS_RATIO = &
 codata_constant_type("electron-triton mass ratio", &
 1.819200062327e-4_dp, 0.000000000068e-4_dp, &
 "") !! electron-triton mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TRITON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_TRITON_MASS_RATIO") ::&!capi
 capi_111 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "t", &!capi
 "r", "i", "t", "o", "n", " ", "m", "a", "s", "s", &!capi
@@ -2250,7 +2251,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_VOLT = &
 codata_constant_type("electron volt", &
 1.602176634e-19_dp, 0.0_dp, &
 "J") !! electron volt
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT") ::&!capi
 capi_112 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -2270,7 +2271,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_VOLT_ATOMIC_MASS_UNIT_
 codata_constant_type("electron volt-atomic mass unit relationship", &
 1.07354410083e-9_dp, 0.00000000033e-9_dp, &
 "u") !! electron volt-atomic mass unit relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
 capi_113 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "a", "t", "o", "m", "i", "c", &!capi
@@ -2290,7 +2291,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_VOLT_HARTREE_RELATIONS
 codata_constant_type("electron volt-hartree relationship", &
 3.6749322175665e-2_dp, 0.0000000000040e-2_dp, &
 "E_h") !! electron volt-hartree relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HARTREE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HARTREE_RELATIONSHIP") ::&!capi
 capi_114 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "h", "a", "r", "t", "r", "e", &!capi
@@ -2310,7 +2311,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_VOLT_HERTZ_RELATIONSHI
 codata_constant_type("electron volt-hertz relationship", &
 2.417989242e14_dp, 0.0_dp, &
 "Hz") !! electron volt-hertz relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HERTZ_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HERTZ_RELATIONSHIP") ::&!capi
 capi_115 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "h", "e", "r", "t", "z", " ", &!capi
@@ -2330,7 +2331,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_VOLT_INVERSE_METER_REL
 codata_constant_type("electron volt-inverse meter relationship", &
 8.065543937e5_dp, 0.0_dp, &
 "m^-1") !! electron volt-inverse meter relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP") ::&!capi
 capi_116 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "i", "n", "v", "e", "r", "s", &!capi
@@ -2350,7 +2351,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_VOLT_JOULE_RELATIONSHI
 codata_constant_type("electron volt-joule relationship", &
 1.602176634e-19_dp, 0.0_dp, &
 "J") !! electron volt-joule relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_JOULE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_JOULE_RELATIONSHIP") ::&!capi
 capi_117 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "j", "o", "u", "l", "e", " ", &!capi
@@ -2370,7 +2371,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_VOLT_KELVIN_RELATIONSH
 codata_constant_type("electron volt-kelvin relationship", &
 1.160451812e4_dp, 0.0_dp, &
 "K") !! electron volt-kelvin relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KELVIN_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KELVIN_RELATIONSHIP") ::&!capi
 capi_118 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "k", "e", "l", "v", "i", "n", &!capi
@@ -2390,7 +2391,7 @@ type(codata_constant_type), parameter, public :: ELECTRON_VOLT_KILOGRAM_RELATION
 codata_constant_type("electron volt-kilogram relationship", &
 1.782661921e-36_dp, 0.0_dp, &
 "kg") !! electron volt-kilogram relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KILOGRAM_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KILOGRAM_RELATIONSHIP") ::&!capi
 capi_119 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "k", "i", "l", "o", "g", "r", &!capi
@@ -2410,7 +2411,7 @@ type(codata_constant_type), parameter, public :: ELEMENTARY_CHARGE = &
 codata_constant_type("elementary charge", &
 1.602176634e-19_dp, 0.0_dp, &
 "C") !! elementary charge
-type(capi_codata_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE") ::&!capi
 capi_120 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "m", "e", "n", "t", "a", "r", "y", &!capi
 " ", "c", "h", "a", "r", "g", "e", c_null_char, " ", " ", &!capi
@@ -2430,7 +2431,7 @@ type(codata_constant_type), parameter, public :: ELEMENTARY_CHARGE_OVER_H_BAR = 
 codata_constant_type("elementary charge over h-bar", &
 1.519267447e15_dp, 0.0_dp, &
 "A J^-1") !! elementary charge over h-bar
-type(capi_codata_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE_OVER_H_BAR") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE_OVER_H_BAR") ::&!capi
 capi_121 = capi_codata_constant_type([ &!capi
 "e", "l", "e", "m", "e", "n", "t", "a", "r", "y", &!capi
 " ", "c", "h", "a", "r", "g", "e", " ", "o", "v", &!capi
@@ -2450,7 +2451,7 @@ type(codata_constant_type), parameter, public :: FARADAY_CONSTANT = &
 codata_constant_type("Faraday constant", &
 96485.33212_dp, 0.0_dp, &
 "C mol^-1") !! Faraday constant
-type(capi_codata_constant_type), protected, public, bind(C, name="FARADAY_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="FARADAY_CONSTANT") ::&!capi
 capi_122 = capi_codata_constant_type([ &!capi
 "F", "a", "r", "a", "d", "a", "y", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", &!capi
@@ -2470,7 +2471,7 @@ type(codata_constant_type), parameter, public :: FERMI_COUPLING_CONSTANT = &
 codata_constant_type("Fermi coupling constant", &
 1.1663787e-5_dp, 0.0000006e-5_dp, &
 "GeV^-2") !! Fermi coupling constant
-type(capi_codata_constant_type), protected, public, bind(C, name="FERMI_COUPLING_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="FERMI_COUPLING_CONSTANT") ::&!capi
 capi_123 = capi_codata_constant_type([ &!capi
 "F", "e", "r", "m", "i", " ", "c", "o", "u", "p", &!capi
 "l", "i", "n", "g", " ", "c", "o", "n", "s", "t", &!capi
@@ -2490,7 +2491,7 @@ type(codata_constant_type), parameter, public :: FINE_STRUCTURE_CONSTANT = &
 codata_constant_type("fine-structure constant", &
 7.2973525643e-3_dp, 0.0000000011e-3_dp, &
 "") !! fine-structure constant
-type(capi_codata_constant_type), protected, public, bind(C, name="FINE_STRUCTURE_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="FINE_STRUCTURE_CONSTANT") ::&!capi
 capi_124 = capi_codata_constant_type([ &!capi
 "f", "i", "n", "e", "-", "s", "t", "r", "u", "c", &!capi
 "t", "u", "r", "e", " ", "c", "o", "n", "s", "t", &!capi
@@ -2510,7 +2511,7 @@ type(codata_constant_type), parameter, public :: FIRST_RADIATION_CONSTANT = &
 codata_constant_type("first radiation constant", &
 3.741771852e-16_dp, 0.0_dp, &
 "W m^2") !! first radiation constant
-type(capi_codata_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT") ::&!capi
 capi_125 = capi_codata_constant_type([ &!capi
 "f", "i", "r", "s", "t", " ", "r", "a", "d", "i", &!capi
 "a", "t", "i", "o", "n", " ", "c", "o", "n", "s", &!capi
@@ -2530,7 +2531,7 @@ type(codata_constant_type), parameter, public :: FIRST_RADIATION_CONSTANT_FOR_SP
 codata_constant_type("first radiation constant for spectral radiance", &
 1.191042972e-16_dp, 0.0_dp, &
 "W m^2 sr^-1") !! first radiation constant for spectral radiance
-type(capi_codata_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE") ::&!capi
 capi_126 = capi_codata_constant_type([ &!capi
 "f", "i", "r", "s", "t", " ", "r", "a", "d", "i", &!capi
 "a", "t", "i", "o", "n", " ", "c", "o", "n", "s", &!capi
@@ -2550,7 +2551,7 @@ type(codata_constant_type), parameter, public :: HARTREE_ATOMIC_MASS_UNIT_RELATI
 codata_constant_type("hartree-atomic mass unit relationship", &
 2.92126231797e-8_dp, 0.00000000091e-8_dp, &
 "u") !! hartree-atomic mass unit relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
 capi_127 = capi_codata_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "a", "t", &!capi
 "o", "m", "i", "c", " ", "m", "a", "s", "s", " ", &!capi
@@ -2570,7 +2571,7 @@ type(codata_constant_type), parameter, public :: HARTREE_ELECTRON_VOLT_RELATIONS
 codata_constant_type("hartree-electron volt relationship", &
 27.211386245981_dp, 0.000000000030_dp, &
 "eV") !! hartree-electron volt relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ELECTRON_VOLT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
 capi_128 = capi_codata_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "e", "l", &!capi
 "e", "c", "t", "r", "o", "n", " ", "v", "o", "l", &!capi
@@ -2590,7 +2591,7 @@ type(codata_constant_type), parameter, public :: HARTREE_ENERGY = &
 codata_constant_type("Hartree energy", &
 4.3597447222060e-18_dp, 0.0000000000048e-18_dp, &
 "J") !! Hartree energy
-type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ENERGY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ENERGY") ::&!capi
 capi_129 = capi_codata_constant_type([ &!capi
 "H", "a", "r", "t", "r", "e", "e", " ", "e", "n", &!capi
 "e", "r", "g", "y", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -2610,7 +2611,7 @@ type(codata_constant_type), parameter, public :: HARTREE_ENERGY_IN_EV = &
 codata_constant_type("Hartree energy in eV", &
 27.211386245981_dp, 0.000000000030_dp, &
 "eV") !! Hartree energy in eV
-type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ENERGY_IN_EV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_ENERGY_IN_EV") ::&!capi
 capi_130 = capi_codata_constant_type([ &!capi
 "H", "a", "r", "t", "r", "e", "e", " ", "e", "n", &!capi
 "e", "r", "g", "y", " ", "i", "n", " ", "e", "V", &!capi
@@ -2630,7 +2631,7 @@ type(codata_constant_type), parameter, public :: HARTREE_HERTZ_RELATIONSHIP = &
 codata_constant_type("hartree-hertz relationship", &
 6.5796839204999e15_dp, 0.0000000000072e15_dp, &
 "Hz") !! hartree-hertz relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_HERTZ_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_HERTZ_RELATIONSHIP") ::&!capi
 capi_131 = capi_codata_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "h", "e", &!capi
 "r", "t", "z", " ", "r", "e", "l", "a", "t", "i", &!capi
@@ -2650,7 +2651,7 @@ type(codata_constant_type), parameter, public :: HARTREE_INVERSE_METER_RELATIONS
 codata_constant_type("hartree-inverse meter relationship", &
 2.1947463136314e7_dp, 0.0000000000024e7_dp, &
 "m^-1") !! hartree-inverse meter relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_INVERSE_METER_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_INVERSE_METER_RELATIONSHIP") ::&!capi
 capi_132 = capi_codata_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "i", "n", &!capi
 "v", "e", "r", "s", "e", " ", "m", "e", "t", "e", &!capi
@@ -2670,7 +2671,7 @@ type(codata_constant_type), parameter, public :: HARTREE_JOULE_RELATIONSHIP = &
 codata_constant_type("hartree-joule relationship", &
 4.3597447222060e-18_dp, 0.0000000000048e-18_dp, &
 "J") !! hartree-joule relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_JOULE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_JOULE_RELATIONSHIP") ::&!capi
 capi_133 = capi_codata_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "j", "o", &!capi
 "u", "l", "e", " ", "r", "e", "l", "a", "t", "i", &!capi
@@ -2690,7 +2691,7 @@ type(codata_constant_type), parameter, public :: HARTREE_KELVIN_RELATIONSHIP = &
 codata_constant_type("hartree-kelvin relationship", &
 3.1577502480398e5_dp, 0.0000000000034e5_dp, &
 "K") !! hartree-kelvin relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_KELVIN_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_KELVIN_RELATIONSHIP") ::&!capi
 capi_134 = capi_codata_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "k", "e", &!capi
 "l", "v", "i", "n", " ", "r", "e", "l", "a", "t", &!capi
@@ -2710,7 +2711,7 @@ type(codata_constant_type), parameter, public :: HARTREE_KILOGRAM_RELATIONSHIP =
 codata_constant_type("hartree-kilogram relationship", &
 4.8508702095419e-35_dp, 0.0000000000053e-35_dp, &
 "kg") !! hartree-kilogram relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_KILOGRAM_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HARTREE_KILOGRAM_RELATIONSHIP") ::&!capi
 capi_135 = capi_codata_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "k", "i", &!capi
 "l", "o", "g", "r", "a", "m", " ", "r", "e", "l", &!capi
@@ -2730,7 +2731,7 @@ type(codata_constant_type), parameter, public :: HELION_ELECTRON_MASS_RATIO = &
 codata_constant_type("helion-electron mass ratio", &
 5495.88527984_dp, 0.00000016_dp, &
 "") !! helion-electron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_ELECTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_ELECTRON_MASS_RATIO") ::&!capi
 capi_136 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", "-", "e", "l", "e", &!capi
 "c", "t", "r", "o", "n", " ", "m", "a", "s", "s", &!capi
@@ -2750,7 +2751,7 @@ type(codata_constant_type), parameter, public :: HELION_G_FACTOR = &
 codata_constant_type("helion g factor", &
 -4.2552506995_dp, 0.0000000034_dp, &
 "") !! helion g factor
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_G_FACTOR") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_G_FACTOR") ::&!capi
 capi_137 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "g", " ", "f", &!capi
 "a", "c", "t", "o", "r", c_null_char, " ", " ", " ", " ", &!capi
@@ -2770,7 +2771,7 @@ type(codata_constant_type), parameter, public :: HELION_MAG_MOM = &
 codata_constant_type("helion mag. mom.", &
 -1.07461755198e-26_dp, 0.00000000093e-26_dp, &
 "J T^-1") !! helion mag. mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MAG_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MAG_MOM") ::&!capi
 capi_138 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", &!capi
@@ -2790,7 +2791,7 @@ type(codata_constant_type), parameter, public :: HELION_MAG_MOM_TO_BOHR_MAGNETON
 codata_constant_type("helion mag. mom. to Bohr magneton ratio", &
 -1.15874098083e-3_dp, 0.00000000094e-3_dp, &
 "") !! helion mag. mom. to Bohr magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
 capi_139 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
@@ -2810,7 +2811,7 @@ type(codata_constant_type), parameter, public :: HELION_MAG_MOM_TO_NUCLEAR_MAGNE
 codata_constant_type("helion mag. mom. to nuclear magneton ratio", &
 -2.1276253498_dp, 0.0000000017_dp, &
 "") !! helion mag. mom. to nuclear magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
 capi_140 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
@@ -2830,7 +2831,7 @@ type(codata_constant_type), parameter, public :: HELION_MASS = &
 codata_constant_type("helion mass", &
 5.0064127862e-27_dp, 0.0000000016e-27_dp, &
 "kg") !! helion mass
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS") ::&!capi
 capi_141 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2850,7 +2851,7 @@ type(codata_constant_type), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT =
 codata_constant_type("helion mass energy equivalent", &
 4.4995394185e-10_dp, 0.0000000014e-10_dp, &
 "J") !! helion mass energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT") ::&!capi
 capi_142 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
@@ -2870,7 +2871,7 @@ type(codata_constant_type), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT_I
 codata_constant_type("helion mass energy equivalent in MeV", &
 2808.39161112_dp, 0.00000088_dp, &
 "MeV") !! helion mass energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_143 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
@@ -2890,7 +2891,7 @@ type(codata_constant_type), parameter, public :: HELION_MASS_IN_U = &
 codata_constant_type("helion mass in u", &
 3.014932246932_dp, 0.000000000074_dp, &
 "u") !! helion mass in u
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MASS_IN_U") ::&!capi
 capi_144 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "i", "n", " ", "u", c_null_char, " ", " ", " ", &!capi
@@ -2910,7 +2911,7 @@ type(codata_constant_type), parameter, public :: HELION_MOLAR_MASS = &
 codata_constant_type("helion molar mass", &
 3.01493225010e-3_dp, 0.00000000094e-3_dp, &
 "kg mol^-1") !! helion molar mass
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MOLAR_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_MOLAR_MASS") ::&!capi
 capi_145 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "o", "l", &!capi
 "a", "r", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
@@ -2930,7 +2931,7 @@ type(codata_constant_type), parameter, public :: HELION_PROTON_MASS_RATIO = &
 codata_constant_type("helion-proton mass ratio", &
 2.993152671552_dp, 0.000000000070_dp, &
 "") !! helion-proton mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_PROTON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_PROTON_MASS_RATIO") ::&!capi
 capi_146 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", "-", "p", "r", "o", &!capi
 "t", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
@@ -2950,7 +2951,7 @@ type(codata_constant_type), parameter, public :: HELION_RELATIVE_ATOMIC_MASS = &
 codata_constant_type("helion relative atomic mass", &
 3.014932246932_dp, 0.000000000074_dp, &
 "") !! helion relative atomic mass
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_RELATIVE_ATOMIC_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_RELATIVE_ATOMIC_MASS") ::&!capi
 capi_147 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "r", "e", "l", &!capi
 "a", "t", "i", "v", "e", " ", "a", "t", "o", "m", &!capi
@@ -2970,7 +2971,7 @@ type(codata_constant_type), parameter, public :: HELION_SHIELDING_SHIFT = &
 codata_constant_type("helion shielding shift", &
 5.9967029e-5_dp, 0.0000023e-5_dp, &
 "") !! helion shielding shift
-type(capi_codata_constant_type), protected, public, bind(C, name="HELION_SHIELDING_SHIFT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HELION_SHIELDING_SHIFT") ::&!capi
 capi_148 = capi_codata_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "s", "h", "i", &!capi
 "e", "l", "d", "i", "n", "g", " ", "s", "h", "i", &!capi
@@ -2990,7 +2991,7 @@ type(codata_constant_type), parameter, public :: HERTZ_ATOMIC_MASS_UNIT_RELATION
 codata_constant_type("hertz-atomic mass unit relationship", &
 4.4398216590e-24_dp, 0.0000000014e-24_dp, &
 "u") !! hertz-atomic mass unit relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
 capi_149 = capi_codata_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "a", "t", "o", "m", &!capi
 "i", "c", " ", "m", "a", "s", "s", " ", "u", "n", &!capi
@@ -3010,7 +3011,7 @@ type(codata_constant_type), parameter, public :: HERTZ_ELECTRON_VOLT_RELATIONSHI
 codata_constant_type("hertz-electron volt relationship", &
 4.135667696e-15_dp, 0.0_dp, &
 "eV") !! hertz-electron volt relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_ELECTRON_VOLT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
 capi_150 = capi_codata_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "e", "l", "e", "c", &!capi
 "t", "r", "o", "n", " ", "v", "o", "l", "t", " ", &!capi
@@ -3030,7 +3031,7 @@ type(codata_constant_type), parameter, public :: HERTZ_HARTREE_RELATIONSHIP = &
 codata_constant_type("hertz-hartree relationship", &
 1.5198298460574e-16_dp, 0.0000000000017e-16_dp, &
 "E_h") !! hertz-hartree relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_HARTREE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_HARTREE_RELATIONSHIP") ::&!capi
 capi_151 = capi_codata_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "h", "a", "r", "t", &!capi
 "r", "e", "e", " ", "r", "e", "l", "a", "t", "i", &!capi
@@ -3050,7 +3051,7 @@ type(codata_constant_type), parameter, public :: HERTZ_INVERSE_METER_RELATIONSHI
 codata_constant_type("hertz-inverse meter relationship", &
 3.335640951e-9_dp, 0.0_dp, &
 "m^-1") !! hertz-inverse meter relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_INVERSE_METER_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_INVERSE_METER_RELATIONSHIP") ::&!capi
 capi_152 = capi_codata_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "i", "n", "v", "e", &!capi
 "r", "s", "e", " ", "m", "e", "t", "e", "r", " ", &!capi
@@ -3070,7 +3071,7 @@ type(codata_constant_type), parameter, public :: HERTZ_JOULE_RELATIONSHIP = &
 codata_constant_type("hertz-joule relationship", &
 6.62607015e-34_dp, 0.0_dp, &
 "J") !! hertz-joule relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_JOULE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_JOULE_RELATIONSHIP") ::&!capi
 capi_153 = capi_codata_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "j", "o", "u", "l", &!capi
 "e", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
@@ -3090,7 +3091,7 @@ type(codata_constant_type), parameter, public :: HERTZ_KELVIN_RELATIONSHIP = &
 codata_constant_type("hertz-kelvin relationship", &
 4.799243073e-11_dp, 0.0_dp, &
 "K") !! hertz-kelvin relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_KELVIN_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_KELVIN_RELATIONSHIP") ::&!capi
 capi_154 = capi_codata_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "k", "e", "l", "v", &!capi
 "i", "n", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -3110,7 +3111,7 @@ type(codata_constant_type), parameter, public :: HERTZ_KILOGRAM_RELATIONSHIP = &
 codata_constant_type("hertz-kilogram relationship", &
 7.372497323e-51_dp, 0.0_dp, &
 "kg") !! hertz-kilogram relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_KILOGRAM_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HERTZ_KILOGRAM_RELATIONSHIP") ::&!capi
 capi_155 = capi_codata_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "k", "i", "l", "o", &!capi
 "g", "r", "a", "m", " ", "r", "e", "l", "a", "t", &!capi
@@ -3130,7 +3131,7 @@ type(codata_constant_type), parameter, public :: HYPERFINE_TRANSITION_FREQUENCY_
 codata_constant_type("hyperfine transition frequency of Cs-133", &
 9192631770_dp, 0.0_dp, &
 "Hz") !! hyperfine transition frequency of Cs-133
-type(capi_codata_constant_type), protected, public, bind(C, name="HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133") ::&!capi
 capi_156 = capi_codata_constant_type([ &!capi
 "h", "y", "p", "e", "r", "f", "i", "n", "e", " ", &!capi
 "t", "r", "a", "n", "s", "i", "t", "i", "o", "n", &!capi
@@ -3150,7 +3151,7 @@ type(codata_constant_type), parameter, public :: INVERSE_FINE_STRUCTURE_CONSTANT
 codata_constant_type("inverse fine-structure constant", &
 137.035999177_dp, 0.000000021_dp, &
 "") !! inverse fine-structure constant
-type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_FINE_STRUCTURE_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_FINE_STRUCTURE_CONSTANT") ::&!capi
 capi_157 = capi_codata_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "f", "i", &!capi
 "n", "e", "-", "s", "t", "r", "u", "c", "t", "u", &!capi
@@ -3170,7 +3171,7 @@ type(codata_constant_type), parameter, public :: INVERSE_METER_ATOMIC_MASS_UNIT_
 codata_constant_type("inverse meter-atomic mass unit relationship", &
 1.33102504824e-15_dp, 0.00000000041e-15_dp, &
 "u") !! inverse meter-atomic mass unit relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
 capi_158 = capi_codata_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "a", "t", "o", "m", "i", "c", &!capi
@@ -3190,7 +3191,7 @@ type(codata_constant_type), parameter, public :: INVERSE_METER_ELECTRON_VOLT_REL
 codata_constant_type("inverse meter-electron volt relationship", &
 1.239841984e-6_dp, 0.0_dp, &
 "eV") !! inverse meter-electron volt relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
 capi_159 = capi_codata_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "e", "l", "e", "c", "t", "r", &!capi
@@ -3210,7 +3211,7 @@ type(codata_constant_type), parameter, public :: INVERSE_METER_HARTREE_RELATIONS
 codata_constant_type("inverse meter-hartree relationship", &
 4.5563352529132e-8_dp, 0.0000000000050e-8_dp, &
 "E_h") !! inverse meter-hartree relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_HARTREE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_HARTREE_RELATIONSHIP") ::&!capi
 capi_160 = capi_codata_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "h", "a", "r", "t", "r", "e", &!capi
@@ -3230,7 +3231,7 @@ type(codata_constant_type), parameter, public :: INVERSE_METER_HERTZ_RELATIONSHI
 codata_constant_type("inverse meter-hertz relationship", &
 299792458_dp, 0.0_dp, &
 "Hz") !! inverse meter-hertz relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_HERTZ_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_HERTZ_RELATIONSHIP") ::&!capi
 capi_161 = capi_codata_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "h", "e", "r", "t", "z", " ", &!capi
@@ -3250,7 +3251,7 @@ type(codata_constant_type), parameter, public :: INVERSE_METER_JOULE_RELATIONSHI
 codata_constant_type("inverse meter-joule relationship", &
 1.986445857e-25_dp, 0.0_dp, &
 "J") !! inverse meter-joule relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_JOULE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_JOULE_RELATIONSHIP") ::&!capi
 capi_162 = capi_codata_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "j", "o", "u", "l", "e", " ", &!capi
@@ -3270,7 +3271,7 @@ type(codata_constant_type), parameter, public :: INVERSE_METER_KELVIN_RELATIONSH
 codata_constant_type("inverse meter-kelvin relationship", &
 1.438776877e-2_dp, 0.0_dp, &
 "K") !! inverse meter-kelvin relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_KELVIN_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_KELVIN_RELATIONSHIP") ::&!capi
 capi_163 = capi_codata_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "k", "e", "l", "v", "i", "n", &!capi
@@ -3290,7 +3291,7 @@ type(codata_constant_type), parameter, public :: INVERSE_METER_KILOGRAM_RELATION
 codata_constant_type("inverse meter-kilogram relationship", &
 2.210219094e-42_dp, 0.0_dp, &
 "kg") !! inverse meter-kilogram relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_KILOGRAM_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_METER_KILOGRAM_RELATIONSHIP") ::&!capi
 capi_164 = capi_codata_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "k", "i", "l", "o", "g", "r", &!capi
@@ -3310,7 +3311,7 @@ type(codata_constant_type), parameter, public :: INVERSE_OF_CONDUCTANCE_QUANTUM 
 codata_constant_type("inverse of conductance quantum", &
 12906.40372_dp, 0.0_dp, &
 "ohm") !! inverse of conductance quantum
-type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_OF_CONDUCTANCE_QUANTUM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="INVERSE_OF_CONDUCTANCE_QUANTUM") ::&!capi
 capi_165 = capi_codata_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "o", "f", &!capi
 " ", "c", "o", "n", "d", "u", "c", "t", "a", "n", &!capi
@@ -3330,7 +3331,7 @@ type(codata_constant_type), parameter, public :: JOSEPHSON_CONSTANT = &
 codata_constant_type("Josephson constant", &
 483597.8484e9_dp, 0.0_dp, &
 "Hz V^-1") !! Josephson constant
-type(capi_codata_constant_type), protected, public, bind(C, name="JOSEPHSON_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="JOSEPHSON_CONSTANT") ::&!capi
 capi_166 = capi_codata_constant_type([ &!capi
 "J", "o", "s", "e", "p", "h", "s", "o", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", &!capi
@@ -3350,7 +3351,7 @@ type(codata_constant_type), parameter, public :: JOULE_ATOMIC_MASS_UNIT_RELATION
 codata_constant_type("joule-atomic mass unit relationship", &
 6.7005352471e9_dp, 0.0000000021e9_dp, &
 "u") !! joule-atomic mass unit relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
 capi_167 = capi_codata_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "a", "t", "o", "m", &!capi
 "i", "c", " ", "m", "a", "s", "s", " ", "u", "n", &!capi
@@ -3370,7 +3371,7 @@ type(codata_constant_type), parameter, public :: JOULE_ELECTRON_VOLT_RELATIONSHI
 codata_constant_type("joule-electron volt relationship", &
 6.241509074e18_dp, 0.0_dp, &
 "eV") !! joule-electron volt relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_ELECTRON_VOLT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
 capi_168 = capi_codata_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "e", "l", "e", "c", &!capi
 "t", "r", "o", "n", " ", "v", "o", "l", "t", " ", &!capi
@@ -3390,7 +3391,7 @@ type(codata_constant_type), parameter, public :: JOULE_HARTREE_RELATIONSHIP = &
 codata_constant_type("joule-hartree relationship", &
 2.2937122783969e17_dp, 0.0000000000025e17_dp, &
 "E_h") !! joule-hartree relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_HARTREE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_HARTREE_RELATIONSHIP") ::&!capi
 capi_169 = capi_codata_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "h", "a", "r", "t", &!capi
 "r", "e", "e", " ", "r", "e", "l", "a", "t", "i", &!capi
@@ -3410,7 +3411,7 @@ type(codata_constant_type), parameter, public :: JOULE_HERTZ_RELATIONSHIP = &
 codata_constant_type("joule-hertz relationship", &
 1.509190179e33_dp, 0.0_dp, &
 "Hz") !! joule-hertz relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_HERTZ_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_HERTZ_RELATIONSHIP") ::&!capi
 capi_170 = capi_codata_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "h", "e", "r", "t", &!capi
 "z", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
@@ -3430,7 +3431,7 @@ type(codata_constant_type), parameter, public :: JOULE_INVERSE_METER_RELATIONSHI
 codata_constant_type("joule-inverse meter relationship", &
 5.034116567e24_dp, 0.0_dp, &
 "m^-1") !! joule-inverse meter relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_INVERSE_METER_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_INVERSE_METER_RELATIONSHIP") ::&!capi
 capi_171 = capi_codata_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "i", "n", "v", "e", &!capi
 "r", "s", "e", " ", "m", "e", "t", "e", "r", " ", &!capi
@@ -3450,7 +3451,7 @@ type(codata_constant_type), parameter, public :: JOULE_KELVIN_RELATIONSHIP = &
 codata_constant_type("joule-kelvin relationship", &
 7.242970516e22_dp, 0.0_dp, &
 "K") !! joule-kelvin relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_KELVIN_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_KELVIN_RELATIONSHIP") ::&!capi
 capi_172 = capi_codata_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "k", "e", "l", "v", &!capi
 "i", "n", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -3470,7 +3471,7 @@ type(codata_constant_type), parameter, public :: JOULE_KILOGRAM_RELATIONSHIP = &
 codata_constant_type("joule-kilogram relationship", &
 1.112650056e-17_dp, 0.0_dp, &
 "kg") !! joule-kilogram relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_KILOGRAM_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="JOULE_KILOGRAM_RELATIONSHIP") ::&!capi
 capi_173 = capi_codata_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "k", "i", "l", "o", &!capi
 "g", "r", "a", "m", " ", "r", "e", "l", "a", "t", &!capi
@@ -3490,7 +3491,7 @@ type(codata_constant_type), parameter, public :: KELVIN_ATOMIC_MASS_UNIT_RELATIO
 codata_constant_type("kelvin-atomic mass unit relationship", &
 9.2510872884e-14_dp, 0.0000000029e-14_dp, &
 "u") !! kelvin-atomic mass unit relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
 capi_174 = capi_codata_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "a", "t", "o", &!capi
 "m", "i", "c", " ", "m", "a", "s", "s", " ", "u", &!capi
@@ -3510,7 +3511,7 @@ type(codata_constant_type), parameter, public :: KELVIN_ELECTRON_VOLT_RELATIONSH
 codata_constant_type("kelvin-electron volt relationship", &
 8.617333262e-5_dp, 0.0_dp, &
 "eV") !! kelvin-electron volt relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_ELECTRON_VOLT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
 capi_175 = capi_codata_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "e", "l", "e", &!capi
 "c", "t", "r", "o", "n", " ", "v", "o", "l", "t", &!capi
@@ -3530,7 +3531,7 @@ type(codata_constant_type), parameter, public :: KELVIN_HARTREE_RELATIONSHIP = &
 codata_constant_type("kelvin-hartree relationship", &
 3.1668115634564e-6_dp, 0.0000000000035e-6_dp, &
 "E_h") !! kelvin-hartree relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_HARTREE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_HARTREE_RELATIONSHIP") ::&!capi
 capi_176 = capi_codata_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "h", "a", "r", &!capi
 "t", "r", "e", "e", " ", "r", "e", "l", "a", "t", &!capi
@@ -3550,7 +3551,7 @@ type(codata_constant_type), parameter, public :: KELVIN_HERTZ_RELATIONSHIP = &
 codata_constant_type("kelvin-hertz relationship", &
 2.083661912e10_dp, 0.0_dp, &
 "Hz") !! kelvin-hertz relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_HERTZ_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_HERTZ_RELATIONSHIP") ::&!capi
 capi_177 = capi_codata_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "h", "e", "r", &!capi
 "t", "z", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -3570,7 +3571,7 @@ type(codata_constant_type), parameter, public :: KELVIN_INVERSE_METER_RELATIONSH
 codata_constant_type("kelvin-inverse meter relationship", &
 69.50348004_dp, 0.0_dp, &
 "m^-1") !! kelvin-inverse meter relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_INVERSE_METER_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_INVERSE_METER_RELATIONSHIP") ::&!capi
 capi_178 = capi_codata_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "i", "n", "v", &!capi
 "e", "r", "s", "e", " ", "m", "e", "t", "e", "r", &!capi
@@ -3590,7 +3591,7 @@ type(codata_constant_type), parameter, public :: KELVIN_JOULE_RELATIONSHIP = &
 codata_constant_type("kelvin-joule relationship", &
 1.380649e-23_dp, 0.0_dp, &
 "J") !! kelvin-joule relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_JOULE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_JOULE_RELATIONSHIP") ::&!capi
 capi_179 = capi_codata_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "j", "o", "u", &!capi
 "l", "e", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -3610,7 +3611,7 @@ type(codata_constant_type), parameter, public :: KELVIN_KILOGRAM_RELATIONSHIP = 
 codata_constant_type("kelvin-kilogram relationship", &
 1.536179187e-40_dp, 0.0_dp, &
 "kg") !! kelvin-kilogram relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_KILOGRAM_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KELVIN_KILOGRAM_RELATIONSHIP") ::&!capi
 capi_180 = capi_codata_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "k", "i", "l", &!capi
 "o", "g", "r", "a", "m", " ", "r", "e", "l", "a", &!capi
@@ -3630,7 +3631,7 @@ type(codata_constant_type), parameter, public :: KILOGRAM_ATOMIC_MASS_UNIT_RELAT
 codata_constant_type("kilogram-atomic mass unit relationship", &
 6.0221407537e26_dp, 0.0000000019e26_dp, &
 "u") !! kilogram-atomic mass unit relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
 capi_181 = capi_codata_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "a", &!capi
 "t", "o", "m", "i", "c", " ", "m", "a", "s", "s", &!capi
@@ -3650,7 +3651,7 @@ type(codata_constant_type), parameter, public :: KILOGRAM_ELECTRON_VOLT_RELATION
 codata_constant_type("kilogram-electron volt relationship", &
 5.609588603e35_dp, 0.0_dp, &
 "eV") !! kilogram-electron volt relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_ELECTRON_VOLT_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
 capi_182 = capi_codata_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "e", &!capi
 "l", "e", "c", "t", "r", "o", "n", " ", "v", "o", &!capi
@@ -3670,7 +3671,7 @@ type(codata_constant_type), parameter, public :: KILOGRAM_HARTREE_RELATIONSHIP =
 codata_constant_type("kilogram-hartree relationship", &
 2.0614857887415e34_dp, 0.0000000000022e34_dp, &
 "E_h") !! kilogram-hartree relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_HARTREE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_HARTREE_RELATIONSHIP") ::&!capi
 capi_183 = capi_codata_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "h", &!capi
 "a", "r", "t", "r", "e", "e", " ", "r", "e", "l", &!capi
@@ -3690,7 +3691,7 @@ type(codata_constant_type), parameter, public :: KILOGRAM_HERTZ_RELATIONSHIP = &
 codata_constant_type("kilogram-hertz relationship", &
 1.356392489e50_dp, 0.0_dp, &
 "Hz") !! kilogram-hertz relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_HERTZ_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_HERTZ_RELATIONSHIP") ::&!capi
 capi_184 = capi_codata_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "h", &!capi
 "e", "r", "t", "z", " ", "r", "e", "l", "a", "t", &!capi
@@ -3710,7 +3711,7 @@ type(codata_constant_type), parameter, public :: KILOGRAM_INVERSE_METER_RELATION
 codata_constant_type("kilogram-inverse meter relationship", &
 4.524438335e41_dp, 0.0_dp, &
 "m^-1") !! kilogram-inverse meter relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_INVERSE_METER_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_INVERSE_METER_RELATIONSHIP") ::&!capi
 capi_185 = capi_codata_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "i", &!capi
 "n", "v", "e", "r", "s", "e", " ", "m", "e", "t", &!capi
@@ -3730,7 +3731,7 @@ type(codata_constant_type), parameter, public :: KILOGRAM_JOULE_RELATIONSHIP = &
 codata_constant_type("kilogram-joule relationship", &
 8.987551787e16_dp, 0.0_dp, &
 "J") !! kilogram-joule relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_JOULE_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_JOULE_RELATIONSHIP") ::&!capi
 capi_186 = capi_codata_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "j", &!capi
 "o", "u", "l", "e", " ", "r", "e", "l", "a", "t", &!capi
@@ -3750,7 +3751,7 @@ type(codata_constant_type), parameter, public :: KILOGRAM_KELVIN_RELATIONSHIP = 
 codata_constant_type("kilogram-kelvin relationship", &
 6.509657260e39_dp, 0.0_dp, &
 "K") !! kilogram-kelvin relationship
-type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_KELVIN_RELATIONSHIP") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="KILOGRAM_KELVIN_RELATIONSHIP") ::&!capi
 capi_187 = capi_codata_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "k", &!capi
 "e", "l", "v", "i", "n", " ", "r", "e", "l", "a", &!capi
@@ -3770,7 +3771,7 @@ type(codata_constant_type), parameter, public :: LATTICE_PARAMETER_OF_SILICON = 
 codata_constant_type("lattice parameter of silicon", &
 5.431020511e-10_dp, 0.000000089e-10_dp, &
 "m") !! lattice parameter of silicon
-type(capi_codata_constant_type), protected, public, bind(C, name="LATTICE_PARAMETER_OF_SILICON") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="LATTICE_PARAMETER_OF_SILICON") ::&!capi
 capi_188 = capi_codata_constant_type([ &!capi
 "l", "a", "t", "t", "i", "c", "e", " ", "p", "a", &!capi
 "r", "a", "m", "e", "t", "e", "r", " ", "o", "f", &!capi
@@ -3790,7 +3791,7 @@ type(codata_constant_type), parameter, public :: LATTICE_SPACING_OF_IDEAL_SI_220
 codata_constant_type("lattice spacing of ideal Si (220)", &
 1.920155716e-10_dp, 0.000000032e-10_dp, &
 "m") !! lattice spacing of ideal Si (220)
-type(capi_codata_constant_type), protected, public, bind(C, name="LATTICE_SPACING_OF_IDEAL_SI_220") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="LATTICE_SPACING_OF_IDEAL_SI_220") ::&!capi
 capi_189 = capi_codata_constant_type([ &!capi
 "l", "a", "t", "t", "i", "c", "e", " ", "s", "p", &!capi
 "a", "c", "i", "n", "g", " ", "o", "f", " ", "i", &!capi
@@ -3810,7 +3811,7 @@ type(codata_constant_type), parameter, public :: LOSCHMIDT_CONSTANT_273_15_K_100
 codata_constant_type("Loschmidt constant (273.15 K, 100 kPa)", &
 2.651645804e25_dp, 0.0_dp, &
 "m^-3") !! Loschmidt constant (273.15 K, 100 kPa)
-type(capi_codata_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_100_KPA") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_100_KPA") ::&!capi
 capi_190 = capi_codata_constant_type([ &!capi
 "L", "o", "s", "c", "h", "m", "i", "d", "t", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "(", &!capi
@@ -3830,7 +3831,7 @@ type(codata_constant_type), parameter, public :: LOSCHMIDT_CONSTANT_273_15_K_101
 codata_constant_type("Loschmidt constant (273.15 K, 101.325 kPa)", &
 2.686780111e25_dp, 0.0_dp, &
 "m^-3") !! Loschmidt constant (273.15 K, 101.325 kPa)
-type(capi_codata_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA") ::&!capi
 capi_191 = capi_codata_constant_type([ &!capi
 "L", "o", "s", "c", "h", "m", "i", "d", "t", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "(", &!capi
@@ -3850,7 +3851,7 @@ type(codata_constant_type), parameter, public :: LUMINOUS_EFFICACY = &
 codata_constant_type("luminous efficacy", &
 683_dp, 0.0_dp, &
 "lm W^-1") !! luminous efficacy
-type(capi_codata_constant_type), protected, public, bind(C, name="LUMINOUS_EFFICACY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="LUMINOUS_EFFICACY") ::&!capi
 capi_192 = capi_codata_constant_type([ &!capi
 "l", "u", "m", "i", "n", "o", "u", "s", " ", "e", &!capi
 "f", "f", "i", "c", "a", "c", "y", c_null_char, " ", " ", &!capi
@@ -3870,7 +3871,7 @@ type(codata_constant_type), parameter, public :: MAG_FLUX_QUANTUM = &
 codata_constant_type("mag. flux quantum", &
 2.067833848e-15_dp, 0.0_dp, &
 "Wb") !! mag. flux quantum
-type(capi_codata_constant_type), protected, public, bind(C, name="MAG_FLUX_QUANTUM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MAG_FLUX_QUANTUM") ::&!capi
 capi_193 = capi_codata_constant_type([ &!capi
 "m", "a", "g", ".", " ", "f", "l", "u", "x", " ", &!capi
 "q", "u", "a", "n", "t", "u", "m", c_null_char, " ", " ", &!capi
@@ -3890,7 +3891,7 @@ type(codata_constant_type), parameter, public :: MOLAR_GAS_CONSTANT = &
 codata_constant_type("molar gas constant", &
 8.314462618_dp, 0.0_dp, &
 "J mol^-1 K^-1") !! molar gas constant
-type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_GAS_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_GAS_CONSTANT") ::&!capi
 capi_194 = capi_codata_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "g", "a", "s", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", &!capi
@@ -3910,7 +3911,7 @@ type(codata_constant_type), parameter, public :: MOLAR_MASS_CONSTANT = &
 codata_constant_type("molar mass constant", &
 1.00000000105e-3_dp, 0.00000000031e-3_dp, &
 "kg mol^-1") !! molar mass constant
-type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_MASS_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_MASS_CONSTANT") ::&!capi
 capi_195 = capi_codata_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "m", "a", "s", "s", &!capi
 " ", "c", "o", "n", "s", "t", "a", "n", "t", c_null_char, &!capi
@@ -3930,7 +3931,7 @@ type(codata_constant_type), parameter, public :: MOLAR_MASS_OF_CARBON_12 = &
 codata_constant_type("molar mass of carbon-12", &
 12.0000000126e-3_dp, 0.0000000037e-3_dp, &
 "kg mol^-1") !! molar mass of carbon-12
-type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_MASS_OF_CARBON_12") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_MASS_OF_CARBON_12") ::&!capi
 capi_196 = capi_codata_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "m", "a", "s", "s", &!capi
 " ", "o", "f", " ", "c", "a", "r", "b", "o", "n", &!capi
@@ -3950,7 +3951,7 @@ type(codata_constant_type), parameter, public :: MOLAR_PLANCK_CONSTANT = &
 codata_constant_type("molar Planck constant", &
 3.990312712e-10_dp, 0.0_dp, &
 "J Hz^-1 mol^-1") !! molar Planck constant
-type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_PLANCK_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_PLANCK_CONSTANT") ::&!capi
 capi_197 = capi_codata_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "P", "l", "a", "n", &!capi
 "c", "k", " ", "c", "o", "n", "s", "t", "a", "n", &!capi
@@ -3970,7 +3971,7 @@ type(codata_constant_type), parameter, public :: MOLAR_VOLUME_OF_IDEAL_GAS_273_1
 codata_constant_type("molar volume of ideal gas (273.15 K, 100 kPa)", &
 22.71095464e-3_dp, 0.0_dp, &
 "m^3 mol^-1") !! molar volume of ideal gas (273.15 K, 100 kPa)
-type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA") ::&!capi
 capi_198 = capi_codata_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "v", "o", "l", "u", &!capi
 "m", "e", " ", "o", "f", " ", "i", "d", "e", "a", &!capi
@@ -3990,7 +3991,7 @@ type(codata_constant_type), parameter, public :: MOLAR_VOLUME_OF_IDEAL_GAS_273_1
 codata_constant_type("molar volume of ideal gas (273.15 K, 101.325 kPa)", &
 22.41396954e-3_dp, 0.0_dp, &
 "m^3 mol^-1") !! molar volume of ideal gas (273.15 K, 101.325 kPa)
-type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA") ::&!capi
 capi_199 = capi_codata_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "v", "o", "l", "u", &!capi
 "m", "e", " ", "o", "f", " ", "i", "d", "e", "a", &!capi
@@ -4010,7 +4011,7 @@ type(codata_constant_type), parameter, public :: MOLAR_VOLUME_OF_SILICON = &
 codata_constant_type("molar volume of silicon", &
 1.205883199e-5_dp, 0.000000060e-5_dp, &
 "m^3 mol^-1") !! molar volume of silicon
-type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_SILICON") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_SILICON") ::&!capi
 capi_200 = capi_codata_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "v", "o", "l", "u", &!capi
 "m", "e", " ", "o", "f", " ", "s", "i", "l", "i", &!capi
@@ -4030,7 +4031,7 @@ type(codata_constant_type), parameter, public :: MOLYBDENUM_X_UNIT = &
 codata_constant_type("Molybdenum x unit", &
 1.00209952e-13_dp, 0.00000053e-13_dp, &
 "m") !! Molybdenum x unit
-type(capi_codata_constant_type), protected, public, bind(C, name="MOLYBDENUM_X_UNIT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MOLYBDENUM_X_UNIT") ::&!capi
 capi_201 = capi_codata_constant_type([ &!capi
 "M", "o", "l", "y", "b", "d", "e", "n", "u", "m", &!capi
 " ", "x", " ", "u", "n", "i", "t", c_null_char, " ", " ", &!capi
@@ -4050,7 +4051,7 @@ type(codata_constant_type), parameter, public :: MUON_COMPTON_WAVELENGTH = &
 codata_constant_type("muon Compton wavelength", &
 1.173444110e-14_dp, 0.000000026e-14_dp, &
 "m") !! muon Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_COMPTON_WAVELENGTH") ::&!capi
 capi_202 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "C", "o", "m", "p", "t", &!capi
 "o", "n", " ", "w", "a", "v", "e", "l", "e", "n", &!capi
@@ -4070,7 +4071,7 @@ type(codata_constant_type), parameter, public :: MUON_ELECTRON_MASS_RATIO = &
 codata_constant_type("muon-electron mass ratio", &
 206.7682827_dp, 0.0000046_dp, &
 "") !! muon-electron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_ELECTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_ELECTRON_MASS_RATIO") ::&!capi
 capi_203 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", "-", "e", "l", "e", "c", "t", &!capi
 "r", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
@@ -4090,7 +4091,7 @@ type(codata_constant_type), parameter, public :: MUON_G_FACTOR = &
 codata_constant_type("muon g factor", &
 -2.00233184123_dp, 0.00000000082_dp, &
 "") !! muon g factor
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_G_FACTOR") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_G_FACTOR") ::&!capi
 capi_204 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "g", " ", "f", "a", "c", &!capi
 "t", "o", "r", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -4110,7 +4111,7 @@ type(codata_constant_type), parameter, public :: MUON_MAG_MOM = &
 codata_constant_type("muon mag. mom.", &
 -4.49044830e-26_dp, 0.00000010e-26_dp, &
 "J T^-1") !! muon mag. mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM") ::&!capi
 capi_205 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -4130,7 +4131,7 @@ type(codata_constant_type), parameter, public :: MUON_MAG_MOM_ANOMALY = &
 codata_constant_type("muon mag. mom. anomaly", &
 1.16592062e-3_dp, 0.00000041e-3_dp, &
 "") !! muon mag. mom. anomaly
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_ANOMALY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_ANOMALY") ::&!capi
 capi_206 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", " ", "a", "n", "o", "m", "a", &!capi
@@ -4150,7 +4151,7 @@ type(codata_constant_type), parameter, public :: MUON_MAG_MOM_TO_BOHR_MAGNETON_R
 codata_constant_type("muon mag. mom. to Bohr magneton ratio", &
 -4.84197048e-3_dp, 0.00000011e-3_dp, &
 "") !! muon mag. mom. to Bohr magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
 capi_207 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", " ", "t", "o", " ", "B", "o", &!capi
@@ -4170,7 +4171,7 @@ type(codata_constant_type), parameter, public :: MUON_MAG_MOM_TO_NUCLEAR_MAGNETO
 codata_constant_type("muon mag. mom. to nuclear magneton ratio", &
 -8.89059704_dp, 0.00000020_dp, &
 "") !! muon mag. mom. to nuclear magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
 capi_208 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", " ", "t", "o", " ", "n", "u", &!capi
@@ -4190,7 +4191,7 @@ type(codata_constant_type), parameter, public :: MUON_MASS = &
 codata_constant_type("muon mass", &
 1.883531627e-28_dp, 0.000000042e-28_dp, &
 "kg") !! muon mass
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS") ::&!capi
 capi_209 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "s", "s", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4210,7 +4211,7 @@ type(codata_constant_type), parameter, public :: MUON_MASS_ENERGY_EQUIVALENT = &
 codata_constant_type("muon mass energy equivalent", &
 1.692833804e-11_dp, 0.000000038e-11_dp, &
 "J") !! muon mass energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT") ::&!capi
 capi_210 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
@@ -4230,7 +4231,7 @@ type(codata_constant_type), parameter, public :: MUON_MASS_ENERGY_EQUIVALENT_IN_
 codata_constant_type("muon mass energy equivalent in MeV", &
 105.6583755_dp, 0.0000023_dp, &
 "MeV") !! muon mass energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_211 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
@@ -4250,7 +4251,7 @@ type(codata_constant_type), parameter, public :: MUON_MASS_IN_U = &
 codata_constant_type("muon mass in u", &
 0.1134289257_dp, 0.0000000025_dp, &
 "u") !! muon mass in u
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MASS_IN_U") ::&!capi
 capi_212 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "i", "n", " ", "u", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -4270,7 +4271,7 @@ type(codata_constant_type), parameter, public :: MUON_MOLAR_MASS = &
 codata_constant_type("muon molar mass", &
 1.134289258e-4_dp, 0.000000025e-4_dp, &
 "kg mol^-1") !! muon molar mass
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MOLAR_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_MOLAR_MASS") ::&!capi
 capi_213 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "o", "l", "a", "r", &!capi
 " ", "m", "a", "s", "s", c_null_char, " ", " ", " ", " ", &!capi
@@ -4290,7 +4291,7 @@ type(codata_constant_type), parameter, public :: MUON_NEUTRON_MASS_RATIO = &
 codata_constant_type("muon-neutron mass ratio", &
 0.1124545168_dp, 0.0000000025_dp, &
 "") !! muon-neutron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_NEUTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_NEUTRON_MASS_RATIO") ::&!capi
 capi_214 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", "-", "n", "e", "u", "t", "r", &!capi
 "o", "n", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
@@ -4310,7 +4311,7 @@ type(codata_constant_type), parameter, public :: MUON_PROTON_MAG_MOM_RATIO = &
 codata_constant_type("muon-proton mag. mom. ratio", &
 -3.183345146_dp, 0.000000071_dp, &
 "") !! muon-proton mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_PROTON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_PROTON_MAG_MOM_RATIO") ::&!capi
 capi_215 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", "-", "p", "r", "o", "t", "o", &!capi
 "n", " ", "m", "a", "g", ".", " ", "m", "o", "m", &!capi
@@ -4330,7 +4331,7 @@ type(codata_constant_type), parameter, public :: MUON_PROTON_MASS_RATIO = &
 codata_constant_type("muon-proton mass ratio", &
 0.1126095262_dp, 0.0000000025_dp, &
 "") !! muon-proton mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_PROTON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_PROTON_MASS_RATIO") ::&!capi
 capi_216 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", "-", "p", "r", "o", "t", "o", &!capi
 "n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
@@ -4350,7 +4351,7 @@ type(codata_constant_type), parameter, public :: MUON_TAU_MASS_RATIO = &
 codata_constant_type("muon-tau mass ratio", &
 5.94635e-2_dp, 0.00040e-2_dp, &
 "") !! muon-tau mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="MUON_TAU_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="MUON_TAU_MASS_RATIO") ::&!capi
 capi_217 = capi_codata_constant_type([ &!capi
 "m", "u", "o", "n", "-", "t", "a", "u", " ", "m", &!capi
 "a", "s", "s", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
@@ -4370,7 +4371,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ACTION = &
 codata_constant_type("natural unit of action", &
 1.054571817e-34_dp, 0.0_dp, &
 "J s") !! natural unit of action
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION") ::&!capi
 capi_218 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "a", "c", "t", "i", &!capi
@@ -4390,7 +4391,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ACTION_IN_EV_S 
 codata_constant_type("natural unit of action in eV s", &
 6.582119569e-16_dp, 0.0_dp, &
 "eV s") !! natural unit of action in eV s
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION_IN_EV_S") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION_IN_EV_S") ::&!capi
 capi_219 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "a", "c", "t", "i", &!capi
@@ -4410,7 +4411,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ENERGY = &
 codata_constant_type("natural unit of energy", &
 8.1871057880e-14_dp, 0.0000000026e-14_dp, &
 "J") !! natural unit of energy
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY") ::&!capi
 capi_220 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "e", "n", "e", "r", &!capi
@@ -4430,7 +4431,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ENERGY_IN_MEV =
 codata_constant_type("natural unit of energy in MeV", &
 0.51099895069_dp, 0.00000000016_dp, &
 "MeV") !! natural unit of energy in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY_IN_MEV") ::&!capi
 capi_221 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "e", "n", "e", "r", &!capi
@@ -4450,7 +4451,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_LENGTH = &
 codata_constant_type("natural unit of length", &
 3.8615926744e-13_dp, 0.0000000012e-13_dp, &
 "m") !! natural unit of length
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_LENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_LENGTH") ::&!capi
 capi_222 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "l", "e", "n", "g", &!capi
@@ -4470,7 +4471,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MASS = &
 codata_constant_type("natural unit of mass", &
 9.1093837139e-31_dp, 0.0000000028e-31_dp, &
 "kg") !! natural unit of mass
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MASS") ::&!capi
 capi_223 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "m", "a", "s", "s", &!capi
@@ -4490,7 +4491,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMENTUM = &
 codata_constant_type("natural unit of momentum", &
 2.73092453446e-22_dp, 0.00000000085e-22_dp, &
 "kg m s^-1") !! natural unit of momentum
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM") ::&!capi
 capi_224 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "m", "o", "m", "e", &!capi
@@ -4510,7 +4511,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMENTUM_IN_MEV
 codata_constant_type("natural unit of momentum in MeV/c", &
 0.51099895069_dp, 0.00000000016_dp, &
 "MeV/c") !! natural unit of momentum in MeV/c
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C") ::&!capi
 capi_225 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "m", "o", "m", "e", &!capi
@@ -4530,7 +4531,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_TIME = &
 codata_constant_type("natural unit of time", &
 1.28808866644e-21_dp, 0.00000000040e-21_dp, &
 "s") !! natural unit of time
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_TIME") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_TIME") ::&!capi
 capi_226 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "t", "i", "m", "e", &!capi
@@ -4550,7 +4551,7 @@ type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_VELOCITY = &
 codata_constant_type("natural unit of velocity", &
 299792458_dp, 0.0_dp, &
 "m s^-1") !! natural unit of velocity
-type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_VELOCITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_VELOCITY") ::&!capi
 capi_227 = capi_codata_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "v", "e", "l", "o", &!capi
@@ -4570,7 +4571,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_COMPTON_WAVELENGTH = &
 codata_constant_type("neutron Compton wavelength", &
 1.31959090382e-15_dp, 0.00000000067e-15_dp, &
 "m") !! neutron Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_COMPTON_WAVELENGTH") ::&!capi
 capi_228 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "C", "o", &!capi
 "m", "p", "t", "o", "n", " ", "w", "a", "v", "e", &!capi
@@ -4590,7 +4591,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_ELECTRON_MAG_MOM_RATIO 
 codata_constant_type("neutron-electron mag. mom. ratio", &
 1.04066884e-3_dp, 0.00000024e-3_dp, &
 "") !! neutron-electron mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MAG_MOM_RATIO") ::&!capi
 capi_229 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "e", "l", &!capi
 "e", "c", "t", "r", "o", "n", " ", "m", "a", "g", &!capi
@@ -4610,7 +4611,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_ELECTRON_MASS_RATIO = &
 codata_constant_type("neutron-electron mass ratio", &
 1838.68366200_dp, 0.00000074_dp, &
 "") !! neutron-electron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MASS_RATIO") ::&!capi
 capi_230 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "e", "l", &!capi
 "e", "c", "t", "r", "o", "n", " ", "m", "a", "s", &!capi
@@ -4630,7 +4631,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_G_FACTOR = &
 codata_constant_type("neutron g factor", &
 -3.82608552_dp, 0.00000090_dp, &
 "") !! neutron g factor
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_G_FACTOR") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_G_FACTOR") ::&!capi
 capi_231 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "g", " ", &!capi
 "f", "a", "c", "t", "o", "r", c_null_char, " ", " ", " ", &!capi
@@ -4650,7 +4651,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO = &
 codata_constant_type("neutron gyromag. ratio", &
 1.83247174e8_dp, 0.00000043e8_dp, &
 "s^-1 T^-1") !! neutron gyromag. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO") ::&!capi
 capi_232 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "g", "y", &!capi
 "r", "o", "m", "a", "g", ".", " ", "r", "a", "t", &!capi
@@ -4670,7 +4671,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO_IN_MHZ_T 
 codata_constant_type("neutron gyromag. ratio in MHz/T", &
 29.1646935_dp, 0.0000069_dp, &
 "MHz T^-1") !! neutron gyromag. ratio in MHz/T
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO_IN_MHZ_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
 capi_233 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "g", "y", &!capi
 "r", "o", "m", "a", "g", ".", " ", "r", "a", "t", &!capi
@@ -4690,7 +4691,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_MAG_MOM = &
 codata_constant_type("neutron mag. mom.", &
 -9.6623653e-27_dp, 0.0000023e-27_dp, &
 "J T^-1") !! neutron mag. mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM") ::&!capi
 capi_234 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "g", ".", " ", "m", "o", "m", ".", c_null_char, " ", " ", &!capi
@@ -4710,7 +4711,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_MAG_MOM_TO_BOHR_MAGNETO
 codata_constant_type("neutron mag. mom. to Bohr magneton ratio", &
 -1.04187565e-3_dp, 0.00000025e-3_dp, &
 "") !! neutron mag. mom. to Bohr magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
 capi_235 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "g", ".", " ", "m", "o", "m", ".", " ", "t", "o", &!capi
@@ -4730,7 +4731,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_MAG_MOM_TO_NUCLEAR_MAGN
 codata_constant_type("neutron mag. mom. to nuclear magneton ratio", &
 -1.91304276_dp, 0.00000045_dp, &
 "") !! neutron mag. mom. to nuclear magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
 capi_236 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "g", ".", " ", "m", "o", "m", ".", " ", "t", "o", &!capi
@@ -4750,7 +4751,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_MASS = &
 codata_constant_type("neutron mass", &
 1.67492750056e-27_dp, 0.00000000085e-27_dp, &
 "kg") !! neutron mass
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS") ::&!capi
 capi_237 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4770,7 +4771,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT 
 codata_constant_type("neutron mass energy equivalent", &
 1.50534976514e-10_dp, 0.00000000076e-10_dp, &
 "J") !! neutron mass energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT") ::&!capi
 capi_238 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", " ", "e", "n", "e", "r", "g", "y", " ", &!capi
@@ -4790,7 +4791,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT_
 codata_constant_type("neutron mass energy equivalent in MeV", &
 939.56542194_dp, 0.00000048_dp, &
 "MeV") !! neutron mass energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_239 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", " ", "e", "n", "e", "r", "g", "y", " ", &!capi
@@ -4810,7 +4811,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_MASS_IN_U = &
 codata_constant_type("neutron mass in u", &
 1.00866491606_dp, 0.00000000040_dp, &
 "u") !! neutron mass in u
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MASS_IN_U") ::&!capi
 capi_240 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", " ", "i", "n", " ", "u", c_null_char, " ", " ", &!capi
@@ -4830,7 +4831,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_MOLAR_MASS = &
 codata_constant_type("neutron molar mass", &
 1.00866491712e-3_dp, 0.00000000051e-3_dp, &
 "kg mol^-1") !! neutron molar mass
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MOLAR_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MOLAR_MASS") ::&!capi
 capi_241 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "o", &!capi
 "l", "a", "r", " ", "m", "a", "s", "s", c_null_char, " ", &!capi
@@ -4850,7 +4851,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_MUON_MASS_RATIO = &
 codata_constant_type("neutron-muon mass ratio", &
 8.89248408_dp, 0.00000020_dp, &
 "") !! neutron-muon mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MUON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_MUON_MASS_RATIO") ::&!capi
 capi_242 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "m", "u", &!capi
 "o", "n", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
@@ -4870,7 +4871,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MAG_MOM_RATIO = 
 codata_constant_type("neutron-proton mag. mom. ratio", &
 -0.68497935_dp, 0.00000016_dp, &
 "") !! neutron-proton mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MAG_MOM_RATIO") ::&!capi
 capi_243 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
@@ -4890,7 +4891,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE 
 codata_constant_type("neutron-proton mass difference", &
 2.30557461e-30_dp, 0.00000067e-30_dp, &
 "kg") !! neutron-proton mass difference
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE") ::&!capi
 capi_244 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
@@ -4910,7 +4911,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_
 codata_constant_type("neutron-proton mass difference energy equivalent", &
 2.07214712e-13_dp, 0.00000060e-13_dp, &
 "J") !! neutron-proton mass difference energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT") ::&!capi
 capi_245 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
@@ -4930,7 +4931,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_
 codata_constant_type("neutron-proton mass difference energy equivalent in MeV", &
 1.29333251_dp, 0.00000038_dp, &
 "MeV") !! neutron-proton mass difference energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_246 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
@@ -4950,7 +4951,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_
 codata_constant_type("neutron-proton mass difference in u", &
 1.38844948e-3_dp, 0.00000040e-3_dp, &
 "u") !! neutron-proton mass difference in u
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_IN_U") ::&!capi
 capi_247 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
@@ -4970,7 +4971,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_RATIO = &
 codata_constant_type("neutron-proton mass ratio", &
 1.00137841946_dp, 0.00000000040_dp, &
 "") !! neutron-proton mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_RATIO") ::&!capi
 capi_248 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
@@ -4990,7 +4991,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_RELATIVE_ATOMIC_MASS = 
 codata_constant_type("neutron relative atomic mass", &
 1.00866491606_dp, 0.00000000040_dp, &
 "") !! neutron relative atomic mass
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_RELATIVE_ATOMIC_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_RELATIVE_ATOMIC_MASS") ::&!capi
 capi_249 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "r", "e", &!capi
 "l", "a", "t", "i", "v", "e", " ", "a", "t", "o", &!capi
@@ -5010,7 +5011,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_TAU_MASS_RATIO = &
 codata_constant_type("neutron-tau mass ratio", &
 0.528779_dp, 0.000036_dp, &
 "") !! neutron-tau mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_TAU_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_TAU_MASS_RATIO") ::&!capi
 capi_250 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "t", "a", &!capi
 "u", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
@@ -5030,7 +5031,7 @@ type(codata_constant_type), parameter, public :: NEUTRON_TO_SHIELDED_PROTON_MAG_
 codata_constant_type("neutron to shielded proton mag. mom. ratio", &
 -0.68499694_dp, 0.00000016_dp, &
 "") !! neutron to shielded proton mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&!capi
 capi_251 = capi_codata_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "t", "o", &!capi
 " ", "s", "h", "i", "e", "l", "d", "e", "d", " ", &!capi
@@ -5050,7 +5051,7 @@ type(codata_constant_type), parameter, public :: NEWTONIAN_CONSTANT_OF_GRAVITATI
 codata_constant_type("Newtonian constant of gravitation", &
 6.67430e-11_dp, 0.00015e-11_dp, &
 "m^3 kg^-1 s^-2") !! Newtonian constant of gravitation
-type(capi_codata_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION") ::&!capi
 capi_252 = capi_codata_constant_type([ &!capi
 "N", "e", "w", "t", "o", "n", "i", "a", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "o", &!capi
@@ -5070,7 +5071,7 @@ type(codata_constant_type), parameter, public :: NEWTONIAN_CONSTANT_OF_GRAVITATI
 codata_constant_type("Newtonian constant of gravitation over h-bar c", &
 6.70883e-39_dp, 0.00015e-39_dp, &
 "(GeV/c^2)^-2") !! Newtonian constant of gravitation over h-bar c
-type(capi_codata_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C") ::&!capi
 capi_253 = capi_codata_constant_type([ &!capi
 "N", "e", "w", "t", "o", "n", "i", "a", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "o", &!capi
@@ -5090,7 +5091,7 @@ type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON = &
 codata_constant_type("nuclear magneton", &
 5.0507837393e-27_dp, 0.0000000016e-27_dp, &
 "J T^-1") !! nuclear magneton
-type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON") ::&!capi
 capi_254 = capi_codata_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", c_null_char, " ", " ", " ", &!capi
@@ -5110,7 +5111,7 @@ type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_EV_T = &
 codata_constant_type("nuclear magneton in eV/T", &
 3.15245125417e-8_dp, 0.00000000098e-8_dp, &
 "eV T^-1") !! nuclear magneton in eV/T
-type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_EV_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_EV_T") ::&!capi
 capi_255 = capi_codata_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
@@ -5130,7 +5131,7 @@ type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_INVERSE_MET
 codata_constant_type("nuclear magneton in inverse meter per tesla", &
 2.54262341009e-2_dp, 0.00000000079e-2_dp, &
 "m^-1 T^-1") !! nuclear magneton in inverse meter per tesla
-type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA") ::&!capi
 capi_256 = capi_codata_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
@@ -5150,7 +5151,7 @@ type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_K_T = &
 codata_constant_type("nuclear magneton in K/T", &
 3.6582677706e-4_dp, 0.0000000011e-4_dp, &
 "K T^-1") !! nuclear magneton in K/T
-type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_K_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_K_T") ::&!capi
 capi_257 = capi_codata_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
@@ -5170,7 +5171,7 @@ type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_MHZ_T = &
 codata_constant_type("nuclear magneton in MHz/T", &
 7.6225932188_dp, 0.0000000024_dp, &
 "MHz T^-1") !! nuclear magneton in MHz/T
-type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_MHZ_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_MHZ_T") ::&!capi
 capi_258 = capi_codata_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
@@ -5190,7 +5191,7 @@ type(codata_constant_type), parameter, public :: PLANCK_CONSTANT = &
 codata_constant_type("Planck constant", &
 6.62607015e-34_dp, 0.0_dp, &
 "J Hz^-1") !! Planck constant
-type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT") ::&!capi
 capi_259 = capi_codata_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "c", "o", "n", &!capi
 "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", " ", &!capi
@@ -5210,7 +5211,7 @@ type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_IN_EV_HZ = &
 codata_constant_type("Planck constant in eV/Hz", &
 4.135667696e-15_dp, 0.0_dp, &
 "eV Hz^-1") !! Planck constant in eV/Hz
-type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT_IN_EV_HZ") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT_IN_EV_HZ") ::&!capi
 capi_260 = capi_codata_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "c", "o", "n", &!capi
 "s", "t", "a", "n", "t", " ", "i", "n", " ", "e", &!capi
@@ -5230,7 +5231,7 @@ type(codata_constant_type), parameter, public :: PLANCK_LENGTH = &
 codata_constant_type("Planck length", &
 1.616255e-35_dp, 0.000018e-35_dp, &
 "m") !! Planck length
-type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_LENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_LENGTH") ::&!capi
 capi_261 = capi_codata_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "l", "e", "n", &!capi
 "g", "t", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -5250,7 +5251,7 @@ type(codata_constant_type), parameter, public :: PLANCK_MASS = &
 codata_constant_type("Planck mass", &
 2.176434e-8_dp, 0.000024e-8_dp, &
 "kg") !! Planck mass
-type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_MASS") ::&!capi
 capi_262 = capi_codata_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "m", "a", "s", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5270,7 +5271,7 @@ type(codata_constant_type), parameter, public :: PLANCK_MASS_ENERGY_EQUIVALENT_I
 codata_constant_type("Planck mass energy equivalent in GeV", &
 1.220890e19_dp, 0.000014e19_dp, &
 "GeV") !! Planck mass energy equivalent in GeV
-type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV") ::&!capi
 capi_263 = capi_codata_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
@@ -5290,7 +5291,7 @@ type(codata_constant_type), parameter, public :: PLANCK_TEMPERATURE = &
 codata_constant_type("Planck temperature", &
 1.416784e32_dp, 0.000016e32_dp, &
 "K") !! Planck temperature
-type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_TEMPERATURE") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_TEMPERATURE") ::&!capi
 capi_264 = capi_codata_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "t", "e", "m", &!capi
 "p", "e", "r", "a", "t", "u", "r", "e", c_null_char, " ", &!capi
@@ -5310,7 +5311,7 @@ type(codata_constant_type), parameter, public :: PLANCK_TIME = &
 codata_constant_type("Planck time", &
 5.391247e-44_dp, 0.000060e-44_dp, &
 "s") !! Planck time
-type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_TIME") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PLANCK_TIME") ::&!capi
 capi_265 = capi_codata_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "t", "i", "m", &!capi
 "e", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5330,7 +5331,7 @@ type(codata_constant_type), parameter, public :: PROTON_CHARGE_TO_MASS_QUOTIENT 
 codata_constant_type("proton charge to mass quotient", &
 9.5788331430e7_dp, 0.0000000030e7_dp, &
 "C kg^-1") !! proton charge to mass quotient
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_CHARGE_TO_MASS_QUOTIENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_CHARGE_TO_MASS_QUOTIENT") ::&!capi
 capi_266 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "c", "h", "a", &!capi
 "r", "g", "e", " ", "t", "o", " ", "m", "a", "s", &!capi
@@ -5350,7 +5351,7 @@ type(codata_constant_type), parameter, public :: PROTON_COMPTON_WAVELENGTH = &
 codata_constant_type("proton Compton wavelength", &
 1.32140985360e-15_dp, 0.00000000041e-15_dp, &
 "m") !! proton Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_COMPTON_WAVELENGTH") ::&!capi
 capi_267 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "C", "o", "m", &!capi
 "p", "t", "o", "n", " ", "w", "a", "v", "e", "l", &!capi
@@ -5370,7 +5371,7 @@ type(codata_constant_type), parameter, public :: PROTON_ELECTRON_MASS_RATIO = &
 codata_constant_type("proton-electron mass ratio", &
 1836.152673426_dp, 0.000000032_dp, &
 "") !! proton-electron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_ELECTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_ELECTRON_MASS_RATIO") ::&!capi
 capi_268 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "e", "l", "e", &!capi
 "c", "t", "r", "o", "n", " ", "m", "a", "s", "s", &!capi
@@ -5390,7 +5391,7 @@ type(codata_constant_type), parameter, public :: PROTON_G_FACTOR = &
 codata_constant_type("proton g factor", &
 5.5856946893_dp, 0.0000000016_dp, &
 "") !! proton g factor
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_G_FACTOR") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_G_FACTOR") ::&!capi
 capi_269 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "g", " ", "f", &!capi
 "a", "c", "t", "o", "r", c_null_char, " ", " ", " ", " ", &!capi
@@ -5410,7 +5411,7 @@ type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO = &
 codata_constant_type("proton gyromag. ratio", &
 2.6752218708e8_dp, 0.0000000011e8_dp, &
 "s^-1 T^-1") !! proton gyromag. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO") ::&!capi
 capi_270 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "g", "y", "r", &!capi
 "o", "m", "a", "g", ".", " ", "r", "a", "t", "i", &!capi
@@ -5430,7 +5431,7 @@ type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO_IN_MHZ_T =
 codata_constant_type("proton gyromag. ratio in MHz/T", &
 42.577478461_dp, 0.000000018_dp, &
 "MHz T^-1") !! proton gyromag. ratio in MHz/T
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO_IN_MHZ_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
 capi_271 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "g", "y", "r", &!capi
 "o", "m", "a", "g", ".", " ", "r", "a", "t", "i", &!capi
@@ -5450,7 +5451,7 @@ type(codata_constant_type), parameter, public :: PROTON_MAG_MOM = &
 codata_constant_type("proton mag. mom.", &
 1.41060679545e-26_dp, 0.00000000060e-26_dp, &
 "J T^-1") !! proton mag. mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM") ::&!capi
 capi_272 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", &!capi
@@ -5470,7 +5471,7 @@ type(codata_constant_type), parameter, public :: PROTON_MAG_MOM_TO_BOHR_MAGNETON
 codata_constant_type("proton mag. mom. to Bohr magneton ratio", &
 1.52103220230e-3_dp, 0.00000000045e-3_dp, &
 "") !! proton mag. mom. to Bohr magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
 capi_273 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
@@ -5490,7 +5491,7 @@ type(codata_constant_type), parameter, public :: PROTON_MAG_MOM_TO_NUCLEAR_MAGNE
 codata_constant_type("proton mag. mom. to nuclear magneton ratio", &
 2.79284734463_dp, 0.00000000082_dp, &
 "") !! proton mag. mom. to nuclear magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
 capi_274 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
@@ -5510,7 +5511,7 @@ type(codata_constant_type), parameter, public :: PROTON_MAG_SHIELDING_CORRECTION
 codata_constant_type("proton mag. shielding correction", &
 2.56715e-5_dp, 0.00041e-5_dp, &
 "") !! proton mag. shielding correction
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_SHIELDING_CORRECTION") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MAG_SHIELDING_CORRECTION") ::&!capi
 capi_275 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "s", "h", "i", "e", "l", "d", "i", "n", &!capi
@@ -5530,7 +5531,7 @@ type(codata_constant_type), parameter, public :: PROTON_MASS = &
 codata_constant_type("proton mass", &
 1.67262192595e-27_dp, 0.00000000052e-27_dp, &
 "kg") !! proton mass
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS") ::&!capi
 capi_276 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5550,7 +5551,7 @@ type(codata_constant_type), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT =
 codata_constant_type("proton mass energy equivalent", &
 1.50327761802e-10_dp, 0.00000000047e-10_dp, &
 "J") !! proton mass energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT") ::&!capi
 capi_277 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
@@ -5570,7 +5571,7 @@ type(codata_constant_type), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT_I
 codata_constant_type("proton mass energy equivalent in MeV", &
 938.27208943_dp, 0.00000029_dp, &
 "MeV") !! proton mass energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_278 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
@@ -5590,7 +5591,7 @@ type(codata_constant_type), parameter, public :: PROTON_MASS_IN_U = &
 codata_constant_type("proton mass in u", &
 1.0072764665789_dp, 0.0000000000083_dp, &
 "u") !! proton mass in u
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MASS_IN_U") ::&!capi
 capi_279 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "i", "n", " ", "u", c_null_char, " ", " ", " ", &!capi
@@ -5610,7 +5611,7 @@ type(codata_constant_type), parameter, public :: PROTON_MOLAR_MASS = &
 codata_constant_type("proton molar mass", &
 1.00727646764e-3_dp, 0.00000000031e-3_dp, &
 "kg mol^-1") !! proton molar mass
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MOLAR_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MOLAR_MASS") ::&!capi
 capi_280 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "o", "l", &!capi
 "a", "r", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
@@ -5630,7 +5631,7 @@ type(codata_constant_type), parameter, public :: PROTON_MUON_MASS_RATIO = &
 codata_constant_type("proton-muon mass ratio", &
 8.88024338_dp, 0.00000020_dp, &
 "") !! proton-muon mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MUON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_MUON_MASS_RATIO") ::&!capi
 capi_281 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "m", "u", "o", &!capi
 "n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
@@ -5650,7 +5651,7 @@ type(codata_constant_type), parameter, public :: PROTON_NEUTRON_MAG_MOM_RATIO = 
 codata_constant_type("proton-neutron mag. mom. ratio", &
 -1.45989802_dp, 0.00000034_dp, &
 "") !! proton-neutron mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MAG_MOM_RATIO") ::&!capi
 capi_282 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "n", "e", "u", &!capi
 "t", "r", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
@@ -5670,7 +5671,7 @@ type(codata_constant_type), parameter, public :: PROTON_NEUTRON_MASS_RATIO = &
 codata_constant_type("proton-neutron mass ratio", &
 0.99862347797_dp, 0.00000000040_dp, &
 "") !! proton-neutron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MASS_RATIO") ::&!capi
 capi_283 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "n", "e", "u", &!capi
 "t", "r", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
@@ -5690,7 +5691,7 @@ type(codata_constant_type), parameter, public :: PROTON_RELATIVE_ATOMIC_MASS = &
 codata_constant_type("proton relative atomic mass", &
 1.0072764665789_dp, 0.0000000000083_dp, &
 "") !! proton relative atomic mass
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_RELATIVE_ATOMIC_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_RELATIVE_ATOMIC_MASS") ::&!capi
 capi_284 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "r", "e", "l", &!capi
 "a", "t", "i", "v", "e", " ", "a", "t", "o", "m", &!capi
@@ -5710,7 +5711,7 @@ type(codata_constant_type), parameter, public :: PROTON_RMS_CHARGE_RADIUS = &
 codata_constant_type("proton rms charge radius", &
 8.4075e-16_dp, 0.0064e-16_dp, &
 "m") !! proton rms charge radius
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_RMS_CHARGE_RADIUS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_RMS_CHARGE_RADIUS") ::&!capi
 capi_285 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "r", "m", "s", &!capi
 " ", "c", "h", "a", "r", "g", "e", " ", "r", "a", &!capi
@@ -5730,7 +5731,7 @@ type(codata_constant_type), parameter, public :: PROTON_TAU_MASS_RATIO = &
 codata_constant_type("proton-tau mass ratio", &
 0.528051_dp, 0.000036_dp, &
 "") !! proton-tau mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_TAU_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="PROTON_TAU_MASS_RATIO") ::&!capi
 capi_286 = capi_codata_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "t", "a", "u", &!capi
 " ", "m", "a", "s", "s", " ", "r", "a", "t", "i", &!capi
@@ -5750,7 +5751,7 @@ type(codata_constant_type), parameter, public :: QUANTUM_OF_CIRCULATION = &
 codata_constant_type("quantum of circulation", &
 3.6369475467e-4_dp, 0.0000000011e-4_dp, &
 "m^2 s^-1") !! quantum of circulation
-type(capi_codata_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION") ::&!capi
 capi_287 = capi_codata_constant_type([ &!capi
 "q", "u", "a", "n", "t", "u", "m", " ", "o", "f", &!capi
 " ", "c", "i", "r", "c", "u", "l", "a", "t", "i", &!capi
@@ -5770,7 +5771,7 @@ type(codata_constant_type), parameter, public :: QUANTUM_OF_CIRCULATION_TIMES_2 
 codata_constant_type("quantum of circulation times 2", &
 7.2738950934e-4_dp, 0.0000000023e-4_dp, &
 "m^2 s^-1") !! quantum of circulation times 2
-type(capi_codata_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION_TIMES_2") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION_TIMES_2") ::&!capi
 capi_288 = capi_codata_constant_type([ &!capi
 "q", "u", "a", "n", "t", "u", "m", " ", "o", "f", &!capi
 " ", "c", "i", "r", "c", "u", "l", "a", "t", "i", &!capi
@@ -5790,7 +5791,7 @@ type(codata_constant_type), parameter, public :: REDUCED_COMPTON_WAVELENGTH = &
 codata_constant_type("reduced Compton wavelength", &
 3.8615926744e-13_dp, 0.0000000012e-13_dp, &
 "m") !! reduced Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_COMPTON_WAVELENGTH") ::&!capi
 capi_289 = capi_codata_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "C", "o", &!capi
 "m", "p", "t", "o", "n", " ", "w", "a", "v", "e", &!capi
@@ -5810,7 +5811,7 @@ type(codata_constant_type), parameter, public :: REDUCED_MUON_COMPTON_WAVELENGTH
 codata_constant_type("reduced muon Compton wavelength", &
 1.867594306e-15_dp, 0.000000042e-15_dp, &
 "m") !! reduced muon Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_MUON_COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_MUON_COMPTON_WAVELENGTH") ::&!capi
 capi_290 = capi_codata_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "m", "u", &!capi
 "o", "n", " ", "C", "o", "m", "p", "t", "o", "n", &!capi
@@ -5830,7 +5831,7 @@ type(codata_constant_type), parameter, public :: REDUCED_NEUTRON_COMPTON_WAVELEN
 codata_constant_type("reduced neutron Compton wavelength", &
 2.1001941520e-16_dp, 0.0000000011e-16_dp, &
 "m") !! reduced neutron Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_NEUTRON_COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_NEUTRON_COMPTON_WAVELENGTH") ::&!capi
 capi_291 = capi_codata_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "n", "e", &!capi
 "u", "t", "r", "o", "n", " ", "C", "o", "m", "p", &!capi
@@ -5850,7 +5851,7 @@ type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT = &
 codata_constant_type("reduced Planck constant", &
 1.054571817e-34_dp, 0.0_dp, &
 "J s") !! reduced Planck constant
-type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT") ::&!capi
 capi_292 = capi_codata_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "P", "l", &!capi
 "a", "n", "c", "k", " ", "c", "o", "n", "s", "t", &!capi
@@ -5870,7 +5871,7 @@ type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_IN_EV_S
 codata_constant_type("reduced Planck constant in eV s", &
 6.582119569e-16_dp, 0.0_dp, &
 "eV s") !! reduced Planck constant in eV s
-type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_IN_EV_S") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_IN_EV_S") ::&!capi
 capi_293 = capi_codata_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "P", "l", &!capi
 "a", "n", "c", "k", " ", "c", "o", "n", "s", "t", &!capi
@@ -5890,7 +5891,7 @@ type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_TIMES_C
 codata_constant_type("reduced Planck constant times c in MeV fm", &
 197.3269804_dp, 0.0_dp, &
 "MeV fm") !! reduced Planck constant times c in MeV fm
-type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM") ::&!capi
 capi_294 = capi_codata_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "P", "l", &!capi
 "a", "n", "c", "k", " ", "c", "o", "n", "s", "t", &!capi
@@ -5910,7 +5911,7 @@ type(codata_constant_type), parameter, public :: REDUCED_PROTON_COMPTON_WAVELENG
 codata_constant_type("reduced proton Compton wavelength", &
 2.10308910051e-16_dp, 0.00000000066e-16_dp, &
 "m") !! reduced proton Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PROTON_COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_PROTON_COMPTON_WAVELENGTH") ::&!capi
 capi_295 = capi_codata_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "p", "r", &!capi
 "o", "t", "o", "n", " ", "C", "o", "m", "p", "t", &!capi
@@ -5930,7 +5931,7 @@ type(codata_constant_type), parameter, public :: REDUCED_TAU_COMPTON_WAVELENGTH 
 codata_constant_type("reduced tau Compton wavelength", &
 1.110538e-16_dp, 0.000075e-16_dp, &
 "m") !! reduced tau Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_TAU_COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="REDUCED_TAU_COMPTON_WAVELENGTH") ::&!capi
 capi_296 = capi_codata_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "t", "a", &!capi
 "u", " ", "C", "o", "m", "p", "t", "o", "n", " ", &!capi
@@ -5950,7 +5951,7 @@ type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT = &
 codata_constant_type("Rydberg constant", &
 10973731.568157_dp, 0.000012_dp, &
 "m^-1") !! Rydberg constant
-type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT") ::&!capi
 capi_297 = capi_codata_constant_type([ &!capi
 "R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", &!capi
@@ -5970,7 +5971,7 @@ type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_TIMES_C_IN_HZ 
 codata_constant_type("Rydberg constant times c in Hz", &
 3.2898419602500e15_dp, 0.0000000000036e15_dp, &
 "Hz") !! Rydberg constant times c in Hz
-type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_C_IN_HZ") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_C_IN_HZ") ::&!capi
 capi_298 = capi_codata_constant_type([ &!capi
 "R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", " ", "t", "i", "m", &!capi
@@ -5990,7 +5991,7 @@ type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_EV
 codata_constant_type("Rydberg constant times hc in eV", &
 13.605693122990_dp, 0.000000000015_dp, &
 "eV") !! Rydberg constant times hc in eV
-type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_EV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_EV") ::&!capi
 capi_299 = capi_codata_constant_type([ &!capi
 "R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", " ", "t", "i", "m", &!capi
@@ -6010,7 +6011,7 @@ type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_J 
 codata_constant_type("Rydberg constant times hc in J", &
 2.1798723611030e-18_dp, 0.0000000000024e-18_dp, &
 "J") !! Rydberg constant times hc in J
-type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_J") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_J") ::&!capi
 capi_300 = capi_codata_constant_type([ &!capi
 "R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", " ", "t", "i", "m", &!capi
@@ -6030,7 +6031,7 @@ type(codata_constant_type), parameter, public :: SACKUR_TETRODE_CONSTANT_1_K_100
 codata_constant_type("Sackur-Tetrode constant (1 K, 100 kPa)", &
 -1.15170753496_dp, 0.00000000047_dp, &
 "") !! Sackur-Tetrode constant (1 K, 100 kPa)
-type(capi_codata_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_100_KPA") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_100_KPA") ::&!capi
 capi_301 = capi_codata_constant_type([ &!capi
 "S", "a", "c", "k", "u", "r", "-", "T", "e", "t", &!capi
 "r", "o", "d", "e", " ", "c", "o", "n", "s", "t", &!capi
@@ -6050,7 +6051,7 @@ type(codata_constant_type), parameter, public :: SACKUR_TETRODE_CONSTANT_1_K_101
 codata_constant_type("Sackur-Tetrode constant (1 K, 101.325 kPa)", &
 -1.16487052149_dp, 0.00000000047_dp, &
 "") !! Sackur-Tetrode constant (1 K, 101.325 kPa)
-type(capi_codata_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA") ::&!capi
 capi_302 = capi_codata_constant_type([ &!capi
 "S", "a", "c", "k", "u", "r", "-", "T", "e", "t", &!capi
 "r", "o", "d", "e", " ", "c", "o", "n", "s", "t", &!capi
@@ -6070,7 +6071,7 @@ type(codata_constant_type), parameter, public :: SECOND_RADIATION_CONSTANT = &
 codata_constant_type("second radiation constant", &
 1.438776877e-2_dp, 0.0_dp, &
 "m K") !! second radiation constant
-type(capi_codata_constant_type), protected, public, bind(C, name="SECOND_RADIATION_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SECOND_RADIATION_CONSTANT") ::&!capi
 capi_303 = capi_codata_constant_type([ &!capi
 "s", "e", "c", "o", "n", "d", " ", "r", "a", "d", &!capi
 "i", "a", "t", "i", "o", "n", " ", "c", "o", "n", &!capi
@@ -6090,7 +6091,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO =
 codata_constant_type("shielded helion gyromag. ratio", &
 2.0378946078e8_dp, 0.0000000018e8_dp, &
 "s^-1 T^-1") !! shielded helion gyromag. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO") ::&!capi
 capi_304 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "g", "y", "r", "o", &!capi
@@ -6110,7 +6111,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO_I
 codata_constant_type("shielded helion gyromag. ratio in MHz/T", &
 32.434100033_dp, 0.000000028_dp, &
 "MHz T^-1") !! shielded helion gyromag. ratio in MHz/T
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
 capi_305 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "g", "y", "r", "o", &!capi
@@ -6130,7 +6131,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_HELION_MAG_MOM = &
 codata_constant_type("shielded helion mag. mom.", &
 -1.07455311035e-26_dp, 0.00000000093e-26_dp, &
 "J T^-1") !! shielded helion mag. mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM") ::&!capi
 capi_306 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "m", "a", "g", ".", &!capi
@@ -6150,7 +6151,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_HELION_MAG_MOM_TO_BOHR
 codata_constant_type("shielded helion mag. mom. to Bohr magneton ratio", &
 -1.15867149457e-3_dp, 0.00000000094e-3_dp, &
 "") !! shielded helion mag. mom. to Bohr magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
 capi_307 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "m", "a", "g", ".", &!capi
@@ -6170,7 +6171,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_HELION_MAG_MOM_TO_NUCL
 codata_constant_type("shielded helion mag. mom. to nuclear magneton ratio", &
 -2.1274977624_dp, 0.0000000017_dp, &
 "") !! shielded helion mag. mom. to nuclear magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
 capi_308 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "m", "a", "g", ".", &!capi
@@ -6190,7 +6191,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_HELION_TO_PROTON_MAG_M
 codata_constant_type("shielded helion to proton mag. mom. ratio", &
 -0.76176657721_dp, 0.00000000066_dp, &
 "") !! shielded helion to proton mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO") ::&!capi
 capi_309 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "t", "o", " ", "p", &!capi
@@ -6210,7 +6211,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_HELION_TO_SHIELDED_PRO
 codata_constant_type("shielded helion to shielded proton mag. mom. ratio", &
 -0.7617861334_dp, 0.0000000031_dp, &
 "") !! shielded helion to shielded proton mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&!capi
 capi_310 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "t", "o", " ", "s", &!capi
@@ -6230,7 +6231,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO =
 codata_constant_type("shielded proton gyromag. ratio", &
 2.675153194e8_dp, 0.000000011e8_dp, &
 "s^-1 T^-1") !! shielded proton gyromag. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO") ::&!capi
 capi_311 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "g", "y", "r", "o", &!capi
@@ -6250,7 +6251,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO_I
 codata_constant_type("shielded proton gyromag. ratio in MHz/T", &
 42.57638543_dp, 0.00000017_dp, &
 "MHz T^-1") !! shielded proton gyromag. ratio in MHz/T
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
 capi_312 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "g", "y", "r", "o", &!capi
@@ -6270,7 +6271,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_PROTON_MAG_MOM = &
 codata_constant_type("shielded proton mag. mom.", &
 1.4105705830e-26_dp, 0.0000000058e-26_dp, &
 "J T^-1") !! shielded proton mag. mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM") ::&!capi
 capi_313 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
@@ -6290,7 +6291,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_PROTON_MAG_MOM_TO_BOHR
 codata_constant_type("shielded proton mag. mom. to Bohr magneton ratio", &
 1.5209931551e-3_dp, 0.0000000062e-3_dp, &
 "") !! shielded proton mag. mom. to Bohr magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
 capi_314 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
@@ -6310,7 +6311,7 @@ type(codata_constant_type), parameter, public :: SHIELDED_PROTON_MAG_MOM_TO_NUCL
 codata_constant_type("shielded proton mag. mom. to nuclear magneton ratio", &
 2.792775648_dp, 0.000000011_dp, &
 "") !! shielded proton mag. mom. to nuclear magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
 capi_315 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
@@ -6330,7 +6331,7 @@ type(codata_constant_type), parameter, public :: SHIELDING_DIFFERENCE_OF_D_AND_P
 codata_constant_type("shielding difference of d and p in HD", &
 1.98770e-8_dp, 0.00010e-8_dp, &
 "") !! shielding difference of d and p in HD
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD") ::&!capi
 capi_316 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "i", "n", "g", " ", &!capi
 "d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
@@ -6350,7 +6351,7 @@ type(codata_constant_type), parameter, public :: SHIELDING_DIFFERENCE_OF_T_AND_P
 codata_constant_type("shielding difference of t and p in HT", &
 2.39450e-8_dp, 0.00020e-8_dp, &
 "") !! shielding difference of t and p in HT
-type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT") ::&!capi
 capi_317 = capi_codata_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "i", "n", "g", " ", &!capi
 "d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
@@ -6370,7 +6371,7 @@ type(codata_constant_type), parameter, public :: SPEED_OF_LIGHT_IN_VACUUM = &
 codata_constant_type("speed of light in vacuum", &
 299792458_dp, 0.0_dp, &
 "m s^-1") !! speed of light in vacuum
-type(capi_codata_constant_type), protected, public, bind(C, name="SPEED_OF_LIGHT_IN_VACUUM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="SPEED_OF_LIGHT_IN_VACUUM") ::&!capi
 capi_318 = capi_codata_constant_type([ &!capi
 "s", "p", "e", "e", "d", " ", "o", "f", " ", "l", &!capi
 "i", "g", "h", "t", " ", "i", "n", " ", "v", "a", &!capi
@@ -6390,7 +6391,7 @@ type(codata_constant_type), parameter, public :: STANDARD_ACCELERATION_OF_GRAVIT
 codata_constant_type("standard acceleration of gravity", &
 9.80665_dp, 0.0_dp, &
 "m s^-2") !! standard acceleration of gravity
-type(capi_codata_constant_type), protected, public, bind(C, name="STANDARD_ACCELERATION_OF_GRAVITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="STANDARD_ACCELERATION_OF_GRAVITY") ::&!capi
 capi_319 = capi_codata_constant_type([ &!capi
 "s", "t", "a", "n", "d", "a", "r", "d", " ", "a", &!capi
 "c", "c", "e", "l", "e", "r", "a", "t", "i", "o", &!capi
@@ -6410,7 +6411,7 @@ type(codata_constant_type), parameter, public :: STANDARD_ATMOSPHERE = &
 codata_constant_type("standard atmosphere", &
 101325_dp, 0.0_dp, &
 "Pa") !! standard atmosphere
-type(capi_codata_constant_type), protected, public, bind(C, name="STANDARD_ATMOSPHERE") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="STANDARD_ATMOSPHERE") ::&!capi
 capi_320 = capi_codata_constant_type([ &!capi
 "s", "t", "a", "n", "d", "a", "r", "d", " ", "a", &!capi
 "t", "m", "o", "s", "p", "h", "e", "r", "e", c_null_char, &!capi
@@ -6430,7 +6431,7 @@ type(codata_constant_type), parameter, public :: STANDARD_STATE_PRESSURE = &
 codata_constant_type("standard-state pressure", &
 100000_dp, 0.0_dp, &
 "Pa") !! standard-state pressure
-type(capi_codata_constant_type), protected, public, bind(C, name="STANDARD_STATE_PRESSURE") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="STANDARD_STATE_PRESSURE") ::&!capi
 capi_321 = capi_codata_constant_type([ &!capi
 "s", "t", "a", "n", "d", "a", "r", "d", "-", "s", &!capi
 "t", "a", "t", "e", " ", "p", "r", "e", "s", "s", &!capi
@@ -6450,7 +6451,7 @@ type(codata_constant_type), parameter, public :: STEFAN_BOLTZMANN_CONSTANT = &
 codata_constant_type("Stefan-Boltzmann constant", &
 5.670374419e-8_dp, 0.0_dp, &
 "W m^-2 K^-4") !! Stefan-Boltzmann constant
-type(capi_codata_constant_type), protected, public, bind(C, name="STEFAN_BOLTZMANN_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="STEFAN_BOLTZMANN_CONSTANT") ::&!capi
 capi_322 = capi_codata_constant_type([ &!capi
 "S", "t", "e", "f", "a", "n", "-", "B", "o", "l", &!capi
 "t", "z", "m", "a", "n", "n", " ", "c", "o", "n", &!capi
@@ -6470,7 +6471,7 @@ type(codata_constant_type), parameter, public :: TAU_COMPTON_WAVELENGTH = &
 codata_constant_type("tau Compton wavelength", &
 6.97771e-16_dp, 0.00047e-16_dp, &
 "m") !! tau Compton wavelength
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_COMPTON_WAVELENGTH") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_COMPTON_WAVELENGTH") ::&!capi
 capi_323 = capi_codata_constant_type([ &!capi
 "t", "a", "u", " ", "C", "o", "m", "p", "t", "o", &!capi
 "n", " ", "w", "a", "v", "e", "l", "e", "n", "g", &!capi
@@ -6490,7 +6491,7 @@ type(codata_constant_type), parameter, public :: TAU_ELECTRON_MASS_RATIO = &
 codata_constant_type("tau-electron mass ratio", &
 3477.23_dp, 0.23_dp, &
 "") !! tau-electron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_ELECTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_ELECTRON_MASS_RATIO") ::&!capi
 capi_324 = capi_codata_constant_type([ &!capi
 "t", "a", "u", "-", "e", "l", "e", "c", "t", "r", &!capi
 "o", "n", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
@@ -6510,7 +6511,7 @@ type(codata_constant_type), parameter, public :: TAU_ENERGY_EQUIVALENT = &
 codata_constant_type("tau energy equivalent", &
 1776.86_dp, 0.12_dp, &
 "MeV") !! tau energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_ENERGY_EQUIVALENT") ::&!capi
 capi_325 = capi_codata_constant_type([ &!capi
 "t", "a", "u", " ", "e", "n", "e", "r", "g", "y", &!capi
 " ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
@@ -6530,7 +6531,7 @@ type(codata_constant_type), parameter, public :: TAU_MASS = &
 codata_constant_type("tau mass", &
 3.16754e-27_dp, 0.00021e-27_dp, &
 "kg") !! tau mass
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MASS") ::&!capi
 capi_326 = capi_codata_constant_type([ &!capi
 "t", "a", "u", " ", "m", "a", "s", "s", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -6550,7 +6551,7 @@ type(codata_constant_type), parameter, public :: TAU_MASS_ENERGY_EQUIVALENT = &
 codata_constant_type("tau mass energy equivalent", &
 2.84684e-10_dp, 0.00019e-10_dp, &
 "J") !! tau mass energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MASS_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MASS_ENERGY_EQUIVALENT") ::&!capi
 capi_327 = capi_codata_constant_type([ &!capi
 "t", "a", "u", " ", "m", "a", "s", "s", " ", "e", &!capi
 "n", "e", "r", "g", "y", " ", "e", "q", "u", "i", &!capi
@@ -6570,7 +6571,7 @@ type(codata_constant_type), parameter, public :: TAU_MASS_IN_U = &
 codata_constant_type("tau mass in u", &
 1.90754_dp, 0.00013_dp, &
 "u") !! tau mass in u
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MASS_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MASS_IN_U") ::&!capi
 capi_328 = capi_codata_constant_type([ &!capi
 "t", "a", "u", " ", "m", "a", "s", "s", " ", "i", &!capi
 "n", " ", "u", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -6590,7 +6591,7 @@ type(codata_constant_type), parameter, public :: TAU_MOLAR_MASS = &
 codata_constant_type("tau molar mass", &
 1.90754e-3_dp, 0.00013e-3_dp, &
 "kg mol^-1") !! tau molar mass
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MOLAR_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MOLAR_MASS") ::&!capi
 capi_329 = capi_codata_constant_type([ &!capi
 "t", "a", "u", " ", "m", "o", "l", "a", "r", " ", &!capi
 "m", "a", "s", "s", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -6610,7 +6611,7 @@ type(codata_constant_type), parameter, public :: TAU_MUON_MASS_RATIO = &
 codata_constant_type("tau-muon mass ratio", &
 16.8170_dp, 0.0011_dp, &
 "") !! tau-muon mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MUON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_MUON_MASS_RATIO") ::&!capi
 capi_330 = capi_codata_constant_type([ &!capi
 "t", "a", "u", "-", "m", "u", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
@@ -6630,7 +6631,7 @@ type(codata_constant_type), parameter, public :: TAU_NEUTRON_MASS_RATIO = &
 codata_constant_type("tau-neutron mass ratio", &
 1.89115_dp, 0.00013_dp, &
 "") !! tau-neutron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_NEUTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_NEUTRON_MASS_RATIO") ::&!capi
 capi_331 = capi_codata_constant_type([ &!capi
 "t", "a", "u", "-", "n", "e", "u", "t", "r", "o", &!capi
 "n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
@@ -6650,7 +6651,7 @@ type(codata_constant_type), parameter, public :: TAU_PROTON_MASS_RATIO = &
 codata_constant_type("tau-proton mass ratio", &
 1.89376_dp, 0.00013_dp, &
 "") !! tau-proton mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="TAU_PROTON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TAU_PROTON_MASS_RATIO") ::&!capi
 capi_332 = capi_codata_constant_type([ &!capi
 "t", "a", "u", "-", "p", "r", "o", "t", "o", "n", &!capi
 " ", "m", "a", "s", "s", " ", "r", "a", "t", "i", &!capi
@@ -6670,7 +6671,7 @@ type(codata_constant_type), parameter, public :: THOMSON_CROSS_SECTION = &
 codata_constant_type("Thomson cross section", &
 6.6524587051e-29_dp, 0.0000000062e-29_dp, &
 "m^2") !! Thomson cross section
-type(capi_codata_constant_type), protected, public, bind(C, name="THOMSON_CROSS_SECTION") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="THOMSON_CROSS_SECTION") ::&!capi
 capi_333 = capi_codata_constant_type([ &!capi
 "T", "h", "o", "m", "s", "o", "n", " ", "c", "r", &!capi
 "o", "s", "s", " ", "s", "e", "c", "t", "i", "o", &!capi
@@ -6690,7 +6691,7 @@ type(codata_constant_type), parameter, public :: TRITON_ELECTRON_MASS_RATIO = &
 codata_constant_type("triton-electron mass ratio", &
 5496.92153551_dp, 0.00000021_dp, &
 "") !! triton-electron mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_ELECTRON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_ELECTRON_MASS_RATIO") ::&!capi
 capi_334 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", "-", "e", "l", "e", &!capi
 "c", "t", "r", "o", "n", " ", "m", "a", "s", "s", &!capi
@@ -6710,7 +6711,7 @@ type(codata_constant_type), parameter, public :: TRITON_G_FACTOR = &
 codata_constant_type("triton g factor", &
 5.957924930_dp, 0.000000012_dp, &
 "") !! triton g factor
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_G_FACTOR") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_G_FACTOR") ::&!capi
 capi_335 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "g", " ", "f", &!capi
 "a", "c", "t", "o", "r", c_null_char, " ", " ", " ", " ", &!capi
@@ -6730,7 +6731,7 @@ type(codata_constant_type), parameter, public :: TRITON_MAG_MOM = &
 codata_constant_type("triton mag. mom.", &
 1.5046095178e-26_dp, 0.0000000030e-26_dp, &
 "J T^-1") !! triton mag. mom.
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM") ::&!capi
 capi_336 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", &!capi
@@ -6750,7 +6751,7 @@ type(codata_constant_type), parameter, public :: TRITON_MAG_MOM_TO_BOHR_MAGNETON
 codata_constant_type("triton mag. mom. to Bohr magneton ratio", &
 1.6223936648e-3_dp, 0.0000000032e-3_dp, &
 "") !! triton mag. mom. to Bohr magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
 capi_337 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
@@ -6770,7 +6771,7 @@ type(codata_constant_type), parameter, public :: TRITON_MAG_MOM_TO_NUCLEAR_MAGNE
 codata_constant_type("triton mag. mom. to nuclear magneton ratio", &
 2.9789624650_dp, 0.0000000059_dp, &
 "") !! triton mag. mom. to nuclear magneton ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
 capi_338 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
@@ -6790,7 +6791,7 @@ type(codata_constant_type), parameter, public :: TRITON_MASS = &
 codata_constant_type("triton mass", &
 5.0073567512e-27_dp, 0.0000000016e-27_dp, &
 "kg") !! triton mass
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS") ::&!capi
 capi_339 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -6810,7 +6811,7 @@ type(codata_constant_type), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT =
 codata_constant_type("triton mass energy equivalent", &
 4.5003878119e-10_dp, 0.0000000014e-10_dp, &
 "J") !! triton mass energy equivalent
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT") ::&!capi
 capi_340 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
@@ -6830,7 +6831,7 @@ type(codata_constant_type), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT_I
 codata_constant_type("triton mass energy equivalent in MeV", &
 2808.92113668_dp, 0.00000088_dp, &
 "MeV") !! triton mass energy equivalent in MeV
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
 capi_341 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
@@ -6850,7 +6851,7 @@ type(codata_constant_type), parameter, public :: TRITON_MASS_IN_U = &
 codata_constant_type("triton mass in u", &
 3.01550071597_dp, 0.00000000010_dp, &
 "u") !! triton mass in u
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_IN_U") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MASS_IN_U") ::&!capi
 capi_342 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "i", "n", " ", "u", c_null_char, " ", " ", " ", &!capi
@@ -6870,7 +6871,7 @@ type(codata_constant_type), parameter, public :: TRITON_MOLAR_MASS = &
 codata_constant_type("triton molar mass", &
 3.01550071913e-3_dp, 0.00000000094e-3_dp, &
 "kg mol^-1") !! triton molar mass
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MOLAR_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_MOLAR_MASS") ::&!capi
 capi_343 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "o", "l", &!capi
 "a", "r", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
@@ -6890,7 +6891,7 @@ type(codata_constant_type), parameter, public :: TRITON_PROTON_MASS_RATIO = &
 codata_constant_type("triton-proton mass ratio", &
 2.99371703403_dp, 0.00000000010_dp, &
 "") !! triton-proton mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_PROTON_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_PROTON_MASS_RATIO") ::&!capi
 capi_344 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", "-", "p", "r", "o", &!capi
 "t", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
@@ -6910,7 +6911,7 @@ type(codata_constant_type), parameter, public :: TRITON_RELATIVE_ATOMIC_MASS = &
 codata_constant_type("triton relative atomic mass", &
 3.01550071597_dp, 0.00000000010_dp, &
 "") !! triton relative atomic mass
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_RELATIVE_ATOMIC_MASS") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_RELATIVE_ATOMIC_MASS") ::&!capi
 capi_345 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "r", "e", "l", &!capi
 "a", "t", "i", "v", "e", " ", "a", "t", "o", "m", &!capi
@@ -6930,7 +6931,7 @@ type(codata_constant_type), parameter, public :: TRITON_TO_PROTON_MAG_MOM_RATIO 
 codata_constant_type("triton to proton mag. mom. ratio", &
 1.0666399189_dp, 0.0000000021_dp, &
 "") !! triton to proton mag. mom. ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_TO_PROTON_MAG_MOM_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="TRITON_TO_PROTON_MAG_MOM_RATIO") ::&!capi
 capi_346 = capi_codata_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "t", "o", " ", &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
@@ -6950,7 +6951,7 @@ type(codata_constant_type), parameter, public :: UNIFIED_ATOMIC_MASS_UNIT = &
 codata_constant_type("unified atomic mass unit", &
 1.66053906892e-27_dp, 0.00000000052e-27_dp, &
 "kg") !! unified atomic mass unit
-type(capi_codata_constant_type), protected, public, bind(C, name="UNIFIED_ATOMIC_MASS_UNIT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="UNIFIED_ATOMIC_MASS_UNIT") ::&!capi
 capi_347 = capi_codata_constant_type([ &!capi
 "u", "n", "i", "f", "i", "e", "d", " ", "a", "t", &!capi
 "o", "m", "i", "c", " ", "m", "a", "s", "s", " ", &!capi
@@ -6970,7 +6971,7 @@ type(codata_constant_type), parameter, public :: VACUUM_ELECTRIC_PERMITTIVITY = 
 codata_constant_type("vacuum electric permittivity", &
 8.8541878188e-12_dp, 0.0000000014e-12_dp, &
 "F m^-1") !! vacuum electric permittivity
-type(capi_codata_constant_type), protected, public, bind(C, name="VACUUM_ELECTRIC_PERMITTIVITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="VACUUM_ELECTRIC_PERMITTIVITY") ::&!capi
 capi_348 = capi_codata_constant_type([ &!capi
 "v", "a", "c", "u", "u", "m", " ", "e", "l", "e", &!capi
 "c", "t", "r", "i", "c", " ", "p", "e", "r", "m", &!capi
@@ -6990,7 +6991,7 @@ type(codata_constant_type), parameter, public :: VACUUM_MAG_PERMEABILITY = &
 codata_constant_type("vacuum mag. permeability", &
 1.25663706127e-6_dp, 0.00000000020e-6_dp, &
 "N A^-2") !! vacuum mag. permeability
-type(capi_codata_constant_type), protected, public, bind(C, name="VACUUM_MAG_PERMEABILITY") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="VACUUM_MAG_PERMEABILITY") ::&!capi
 capi_349 = capi_codata_constant_type([ &!capi
 "v", "a", "c", "u", "u", "m", " ", "m", "a", "g", &!capi
 ".", " ", "p", "e", "r", "m", "e", "a", "b", "i", &!capi
@@ -7010,7 +7011,7 @@ type(codata_constant_type), parameter, public :: VON_KLITZING_CONSTANT = &
 codata_constant_type("von Klitzing constant", &
 25812.80745_dp, 0.0_dp, &
 "ohm") !! von Klitzing constant
-type(capi_codata_constant_type), protected, public, bind(C, name="VON_KLITZING_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="VON_KLITZING_CONSTANT") ::&!capi
 capi_350 = capi_codata_constant_type([ &!capi
 "v", "o", "n", " ", "K", "l", "i", "t", "z", "i", &!capi
 "n", "g", " ", "c", "o", "n", "s", "t", "a", "n", &!capi
@@ -7030,7 +7031,7 @@ type(codata_constant_type), parameter, public :: WEAK_MIXING_ANGLE = &
 codata_constant_type("weak mixing angle", &
 0.22305_dp, 0.00023_dp, &
 "") !! weak mixing angle
-type(capi_codata_constant_type), protected, public, bind(C, name="WEAK_MIXING_ANGLE") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="WEAK_MIXING_ANGLE") ::&!capi
 capi_351 = capi_codata_constant_type([ &!capi
 "w", "e", "a", "k", " ", "m", "i", "x", "i", "n", &!capi
 "g", " ", "a", "n", "g", "l", "e", c_null_char, " ", " ", &!capi
@@ -7050,7 +7051,7 @@ type(codata_constant_type), parameter, public :: WIEN_FREQUENCY_DISPLACEMENT_LAW
 codata_constant_type("Wien frequency displacement law constant", &
 5.878925757e10_dp, 0.0_dp, &
 "Hz K^-1") !! Wien frequency displacement law constant
-type(capi_codata_constant_type), protected, public, bind(C, name="WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT") ::&!capi
 capi_352 = capi_codata_constant_type([ &!capi
 "W", "i", "e", "n", " ", "f", "r", "e", "q", "u", &!capi
 "e", "n", "c", "y", " ", "d", "i", "s", "p", "l", &!capi
@@ -7070,7 +7071,7 @@ type(codata_constant_type), parameter, public :: WIEN_WAVELENGTH_DISPLACEMENT_LA
 codata_constant_type("Wien wavelength displacement law constant", &
 2.897771955e-3_dp, 0.0_dp, &
 "m K") !! Wien wavelength displacement law constant
-type(capi_codata_constant_type), protected, public, bind(C, name="WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT") ::&!capi
 capi_353 = capi_codata_constant_type([ &!capi
 "W", "i", "e", "n", " ", "w", "a", "v", "e", "l", &!capi
 "e", "n", "g", "t", "h", " ", "d", "i", "s", "p", &!capi
@@ -7090,7 +7091,7 @@ type(codata_constant_type), parameter, public :: W_TO_Z_MASS_RATIO = &
 codata_constant_type("W to Z mass ratio", &
 0.88145_dp, 0.00013_dp, &
 "") !! W to Z mass ratio
-type(capi_codata_constant_type), protected, public, bind(C, name="W_TO_Z_MASS_RATIO") ::&
+type(capi_codata_constant_type), protected, public, bind(C, name="W_TO_Z_MASS_RATIO") ::&!capi
 capi_354 = capi_codata_constant_type([ &!capi
 "W", " ", "t", "o", " ", "Z", " ", "m", "a", "s", &!capi
 "s", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
