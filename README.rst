@@ -25,6 +25,8 @@ add the following to your `fpm.toml` file:
     [dependencies]
     codata = { git="https://github.com/MilanSkocic/codata.git" }
 
+**Warning**: The release 1.0 will intoduce an API break where the constants will be implemented as derived type like in the [stdlib](https://github.com/fortran-lang/stdlib/pull/800).
+
 Installation
 ================
 
