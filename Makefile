@@ -80,7 +80,7 @@ capi: nist
 	make -C include
 
 cpython: nist
-	make -C pywrapper/src/pycodata
+	make -C pywrapper sources
 
 stdlib: nist sources
 	make -C stdlib
@@ -100,6 +100,6 @@ clean:
 	make -C src clean
 	make -C include clean
 	make -C stdlib clean
-	make -C pywrapper/src/pycodata clean
-	rm -rf API-doc/*
 	fpm clean --all
+	make -C pywrapper clean
+	rm -rf API-doc/*
