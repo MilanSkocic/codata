@@ -13,6 +13,9 @@ SETUP=setup.py pyproject.toml
 
 all: python3.8 python3.9 python3.10 python3.11 python3.12
 
+sources:
+	make -C src/pycodata
+
 python3.12: $(SETUP)
 	@echo "########### PYTHON 3.12 ##########"
 	$(PY)3.12 setup.py build_ext --inplace
@@ -57,9 +60,6 @@ clean:
 	rm -rf __pycache__ 
 	rm -rf wheelhouse 
 	rm -rf $(PYW_SRC)/__pycache__
-	
-cleanall: clean
-	
 	rm -f $(PYW_SRC)/$(HEADER_PREFIX)*.h 
 	rm -f $(PYW_SRC)/*.a 
 	rm -f $(PYW_SRC)/*.so 
@@ -67,3 +67,4 @@ cleanall: clean
 	rm -f $(PYW_SRC)/*.dll 
 	rm -f $(PYW_SRC)/*.dll.a 
 	rm -f $(PYW_SRC)/*.pyd
+	make -C $(PYW_SRC) clean
