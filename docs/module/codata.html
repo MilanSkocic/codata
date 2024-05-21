@@ -1,0 +1,534 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Fortran library providing the codata constants.">
+    <meta name="author" content="Milan Skocic" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>codata &ndash; codata</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">codata </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Contributing and specs</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>codata
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.2% of total for modules and submodules.">5 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/codata.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/codata.f90.html'>codata.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">codata</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+    <em>None</em>
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>@file
+@brief Main module for the Codata library.
+@brief Main module for the Codata library.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='codata__version.html'>codata__version</a></li>
+                  <li class="list-inline-item"><a href='codata__constants.html'>codata__constants</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 11.0.0 (20240428.1522)
+ -->
+<!-- Title: module~~codata~~UsesGraph Pages: 1 -->
+<svg id="modulecodataUsesGraph" width="641pt" height="253pt"
+ viewBox="0.00 0.00 641.00 252.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~codata~~UsesGraph" class="graph" transform="scale(0.995991 0.995991) rotate(0) translate(4 249.77)">
+<title>module~~codata~~UsesGraph</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-249.77 639.58,-249.77 639.58,4 -4,4"/>
+<!-- module~codata -->
+<g id="module~~codata~~UsesGraph_node1" class="node">
+<title>module~codata</title>
+<polygon fill="none" stroke="black" points="635.58,-164.77 581.58,-164.77 581.58,-142 635.58,-142 635.58,-164.77"/>
+<text text-anchor="middle" x="608.58" y="-149.03" font-family="Helvetica,sans-Serif" font-size="10.50">codata</text>
+</g>
+<!-- module~codata__constants -->
+<g id="module~~codata~~UsesGraph_node2" class="node">
+<title>module~codata__constants</title>
+<g id="a_module~~codata~~UsesGraph_node2"><a xlink:href="../module/codata__constants.html" xlink:title="codata__constants">
+<polygon fill="#337ab7" stroke="#337ab7" points="545.58,-125.77 444.06,-125.77 444.06,-103 545.58,-103 545.58,-125.77"/>
+<text text-anchor="middle" x="494.82" y="-110.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants</text>
+</a>
+</g>
+</g>
+<!-- module~codata&#45;&gt;module~codata__constants -->
+<g id="module~~codata~~UsesGraph_edge1" class="edge">
+<title>module~codata&#45;&gt;module~codata__constants</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M581.09,-144.14C568.97,-139.91 554.27,-134.78 540.51,-129.98"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="541.77,-126.71 531.18,-126.72 539.46,-133.32 541.77,-126.71"/>
+</g>
+<!-- module~codata__version -->
+<g id="module~~codata~~UsesGraph_node3" class="node">
+<title>module~codata__version</title>
+<g id="a_module~~codata~~UsesGraph_node3"><a xlink:href="../module/codata__version.html" xlink:title="codata__version">
+<polygon fill="#337ab7" stroke="#337ab7" points="539.95,-223.77 449.68,-223.77 449.68,-201 539.95,-201 539.95,-223.77"/>
+<text text-anchor="middle" x="494.82" y="-208.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__version</text>
+</a>
+</g>
+</g>
+<!-- module~codata&#45;&gt;module~codata__version -->
+<g id="module~~codata~~UsesGraph_edge2" class="edge">
+<title>module~codata&#45;&gt;module~codata__version</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M585.23,-165.18C568.86,-173.82 546.4,-185.68 528.08,-195.35"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="526.68,-192.14 519.47,-199.9 529.94,-198.33 526.68,-192.14"/>
+</g>
+<!-- module~codata__constants_2010 -->
+<g id="module~~codata~~UsesGraph_node6" class="node">
+<title>module~codata__constants_2010</title>
+<g id="a_module~~codata~~UsesGraph_node6"><a xlink:href="../module/codata__constants_2010.html" xlink:title="codata__constants_2010">
+<polygon fill="#337ab7" stroke="#337ab7" points="408.06,-22.77 276.54,-22.77 276.54,0 408.06,0 408.06,-22.77"/>
+<text text-anchor="middle" x="342.3" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_2010</text>
+</a>
+</g>
+</g>
+<!-- module~codata__constants&#45;&gt;module~codata__constants_2010 -->
+<g id="module~~codata~~UsesGraph_edge3" class="edge">
+<title>module~codata__constants&#45;&gt;module~codata__constants_2010</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M484.53,-102.61C470.02,-84.94 440.25,-51.61 408.06,-32.39 405.25,-30.71 402.3,-29.15 399.26,-27.7"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="400.65,-24.49 390.08,-23.79 397.91,-30.93 400.65,-24.49"/>
+</g>
+<!-- module~codata__constants_2014 -->
+<g id="module~~codata~~UsesGraph_node7" class="node">
+<title>module~codata__constants_2014</title>
+<g id="a_module~~codata~~UsesGraph_node7"><a xlink:href="../module/codata__constants_2014.html" xlink:title="codata__constants_2014">
+<polygon fill="#337ab7" stroke="#337ab7" points="408.06,-145.77 276.54,-145.77 276.54,-123 408.06,-123 408.06,-145.77"/>
+<text text-anchor="middle" x="342.3" y="-130.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_2014</text>
+</a>
+</g>
+</g>
+<!-- module~codata__constants&#45;&gt;module~codata__constants_2014 -->
+<g id="module~~codata~~UsesGraph_edge4" class="edge">
+<title>module~codata__constants&#45;&gt;module~codata__constants_2014</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M443.7,-121.04C436.03,-122.06 427.96,-123.14 419.87,-124.21"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="419.42,-120.74 409.97,-125.53 420.34,-127.68 419.42,-120.74"/>
+</g>
+<!-- module~codata__constants_2018 -->
+<g id="module~~codata~~UsesGraph_node8" class="node">
+<title>module~codata__constants_2018</title>
+<g id="a_module~~codata~~UsesGraph_node8"><a xlink:href="../module/codata__constants_2018.html" xlink:title="codata__constants_2018">
+<polygon fill="#337ab7" stroke="#337ab7" points="408.06,-63.77 276.54,-63.77 276.54,-41 408.06,-41 408.06,-63.77"/>
+<text text-anchor="middle" x="342.3" y="-48.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_2018</text>
+</a>
+</g>
+</g>
+<!-- module~codata__constants&#45;&gt;module~codata__constants_2018 -->
+<g id="module~~codata~~UsesGraph_edge5" class="edge">
+<title>module~codata__constants&#45;&gt;module~codata__constants_2018</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M471.25,-102.59C454.17,-93.9 429.98,-82.13 408.06,-73.39 403.36,-71.51 398.43,-69.68 393.47,-67.92"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="394.66,-64.63 384.07,-64.71 392.4,-71.26 394.66,-64.63"/>
+</g>
+<!-- module~codata__constants_2022 -->
+<g id="module~~codata~~UsesGraph_node9" class="node">
+<title>module~codata__constants_2022</title>
+<g id="a_module~~codata~~UsesGraph_node9"><a xlink:href="../module/codata__constants_2022.html" xlink:title="codata__constants_2022">
+<polygon fill="#337ab7" stroke="#337ab7" points="408.06,-104.77 276.54,-104.77 276.54,-82 408.06,-82 408.06,-104.77"/>
+<text text-anchor="middle" x="342.3" y="-89.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_2022</text>
+</a>
+</g>
+</g>
+<!-- module~codata__constants&#45;&gt;module~codata__constants_2022 -->
+<g id="module~~codata~~UsesGraph_edge6" class="edge">
+<title>module~codata__constants&#45;&gt;module~codata__constants_2022</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M443.7,-107.39C435.94,-106.31 427.77,-105.17 419.59,-104.03"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="420.35,-100.6 409.96,-102.69 419.38,-107.53 420.35,-100.6"/>
+</g>
+<!-- module~codata__constants_type~2 -->
+<g id="module~~codata~~UsesGraph_node10" class="node">
+<title>module~codata__constants_type~2</title>
+<g id="a_module~~codata~~UsesGraph_node10"><a xlink:href="../module/codata__constants_type~2.html" xlink:title="codata__constants_type">
+<polygon fill="#337ab7" stroke="#337ab7" points="240.54,-145.77 112.77,-145.77 112.77,-123 240.54,-123 240.54,-145.77"/>
+<text text-anchor="middle" x="176.65" y="-130.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_type</text>
+</a>
+</g>
+</g>
+<!-- module~codata__constants&#45;&gt;module~codata__constants_type~2 -->
+<g id="module~~codata~~UsesGraph_edge7" class="edge">
+<title>module~codata__constants&#45;&gt;module~codata__constants_type~2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M474.93,-126.15C458.1,-135.89 432.44,-148.98 408.06,-154.38 349.39,-167.39 280.58,-158.36 233.53,-148.6"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="234.34,-145.2 223.83,-146.51 232.87,-152.04 234.34,-145.2"/>
+</g>
+<!-- iso_c_binding -->
+<g id="module~~codata~~UsesGraph_node4" class="node">
+<title>iso_c_binding</title>
+<g id="a_module~~codata~~UsesGraph_node4"><a xlink:href="http://fortranwiki.org/fortran/show/iso_c_binding" xlink:title="iso_c_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="76.77,-245.77 0,-245.77 0,-223 76.77,-223 76.77,-245.77"/>
+<text text-anchor="middle" x="38.38" y="-230.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_c_binding</text>
+</a>
+</g>
+</g>
+<!-- module~codata__version&#45;&gt;iso_c_binding -->
+<g id="module~~codata~~UsesGraph_edge8" class="edge">
+<title>module~codata__version&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M451.4,-224.26C437.69,-227.56 422.33,-230.7 408.06,-232.38 294.25,-245.79 159.31,-241.43 88.46,-237.59"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="88.93,-234.11 78.75,-237.04 88.54,-241.1 88.93,-234.11"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="module~~codata~~UsesGraph_node5" class="node">
+<title>iso_fortran_env</title>
+<g id="a_module~~codata~~UsesGraph_node5"><a xlink:href="http://fortranwiki.org/fortran/show/iso_fortran_env" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="385.18,-223.77 299.41,-223.77 299.41,-201 385.18,-201 385.18,-223.77"/>
+<text text-anchor="middle" x="342.3" y="-208.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- module~codata__version&#45;&gt;iso_fortran_env -->
+<g id="module~~codata~~UsesGraph_edge9" class="edge">
+<title>module~codata__version&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M449.47,-212.38C432.9,-212.38 413.9,-212.38 396.6,-212.38"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="397.04,-208.89 387.04,-212.39 397.04,-215.89 397.04,-208.89"/>
+</g>
+<!-- module~codata__constants_2010&#45;&gt;module~codata__constants_type~2 -->
+<g id="module~~codata~~UsesGraph_edge10" class="edge">
+<title>module~codata__constants_2010&#45;&gt;module~codata__constants_type~2</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M290.65,-23.21C285.55,-25.71 280.72,-28.73 276.54,-32.39 248.7,-56.72 267.23,-81.79 240.54,-107.39 236.62,-111.14 232.09,-114.42 227.3,-117.27"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="225.8,-114.11 218.55,-121.83 229.04,-120.31 225.8,-114.11"/>
+</g>
+<!-- stdlib_kinds -->
+<g id="module~~codata~~UsesGraph_node12" class="node">
+<title>stdlib_kinds</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="71.89,-104.77 4.88,-104.77 4.88,-82 71.89,-82 71.89,-104.77"/>
+<text text-anchor="middle" x="38.38" y="-89.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stdlib_kinds</text>
+</g>
+<!-- module~codata__constants_2010&#45;&gt;stdlib_kinds -->
+<g id="module~~codata~~UsesGraph_edge11" class="edge">
+<title>module~codata__constants_2010&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M175.65,-93.39C144.9,-95.28 110.18,-95.25 83.47,-94.76"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="83.77,-91.26 73.7,-94.55 83.62,-98.26 83.77,-91.26"/>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M299.62,-23.27C291.82,-25.95 283.83,-29.01 276.54,-32.39 229.67,-54.06 229.2,-90.21 177.65,-93.39"/>
+</g>
+<!-- module~codata__constants_2014&#45;&gt;module~codata__constants_type~2 -->
+<g id="module~~codata~~UsesGraph_edge12" class="edge">
+<title>module~codata__constants_2014&#45;&gt;module~codata__constants_type~2</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M276.15,-134.38C268.37,-134.38 260.37,-134.38 252.47,-134.38"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="252.49,-130.89 242.49,-134.39 252.49,-137.89 252.49,-130.89"/>
+</g>
+<!-- module~codata__constants_2014&#45;&gt;stdlib_kinds -->
+<g id="module~~codata~~UsesGraph_edge13" class="edge">
+<title>module~codata__constants_2014&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M304.93,-122.53C264.64,-109.89 202.14,-91.88 177.65,-93.39"/>
+</g>
+<!-- module~codata__constants_2018&#45;&gt;module~codata__constants_type~2 -->
+<g id="module~~codata~~UsesGraph_edge14" class="edge">
+<title>module~codata__constants_2018&#45;&gt;module~codata__constants_type~2</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M295.93,-64.23C289.21,-66.8 282.54,-69.83 276.54,-73.39 257.61,-84.61 258.93,-95.3 240.54,-107.39 234.61,-111.28 228.02,-114.83 221.41,-117.98"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="220.17,-114.7 212.47,-121.97 223.03,-121.09 220.17,-114.7"/>
+</g>
+<!-- module~codata__constants_2018&#45;&gt;stdlib_kinds -->
+<g id="module~~codata~~UsesGraph_edge15" class="edge">
+<title>module~codata__constants_2018&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M301.26,-64.21C260.94,-75.8 201.41,-91.92 177.65,-93.39"/>
+</g>
+<!-- module~codata__constants_2022&#45;&gt;module~codata__constants_type~2 -->
+<g id="module~~codata~~UsesGraph_edge16" class="edge">
+<title>module~codata__constants_2022&#45;&gt;module~codata__constants_type~2</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M293.97,-105.24C275.82,-109.79 254.9,-115.03 235.85,-119.81"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="235.2,-116.36 226.35,-122.18 236.9,-123.15 235.2,-116.36"/>
+</g>
+<!-- module~codata__constants_2022&#45;&gt;stdlib_kinds -->
+<g id="module~~codata~~UsesGraph_edge17" class="edge">
+<title>module~codata__constants_2022&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M276.34,-91.55C246.28,-91.17 210.12,-91.38 177.65,-93.39"/>
+</g>
+<!-- module~codata__constants_type~2&#45;&gt;iso_c_binding -->
+<g id="module~~codata~~UsesGraph_edge18" class="edge">
+<title>module~codata__constants_type~2&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#ff00da" stroke-dasharray="5,2" d="M159.49,-146.25C136.03,-163.47 92.33,-195.53 64.61,-215.87"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="62.74,-212.9 56.75,-221.64 66.88,-218.55 62.74,-212.9"/>
+</g>
+<!-- stdlib_io -->
+<g id="module~~codata~~UsesGraph_node11" class="node">
+<title>stdlib_io</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="65.38,-145.77 11.38,-145.77 11.38,-123 65.38,-123 65.38,-145.77"/>
+<text text-anchor="middle" x="38.38" y="-130.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stdlib_io</text>
+</g>
+<!-- module~codata__constants_type~2&#45;&gt;stdlib_io -->
+<g id="module~~codata~~UsesGraph_edge19" class="edge">
+<title>module~codata__constants_type~2&#45;&gt;stdlib_io</title>
+<path fill="none" stroke="#ff00da" stroke-dasharray="5,2" d="M112.31,-134.38C100.26,-134.38 88.01,-134.38 77.08,-134.38"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="77.32,-130.89 67.32,-134.39 77.32,-137.89 77.32,-130.89"/>
+</g>
+<!-- module~codata__constants_type~2&#45;&gt;stdlib_kinds -->
+<g id="module~~codata~~UsesGraph_edge20" class="edge">
+<title>module~codata__constants_type~2&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#ff00da" stroke-dasharray="5,2" d="M136.24,-122.53C119.6,-117.52 100.17,-111.67 83.1,-106.54"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="84.31,-103.25 73.72,-103.72 82.29,-109.95 84.31,-103.25"/>
+</g>
+<!-- stdlib_optval -->
+<g id="module~~codata~~UsesGraph_node13" class="node">
+<title>stdlib_optval</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="73.77,-186.77 3,-186.77 3,-164 73.77,-164 73.77,-186.77"/>
+<text text-anchor="middle" x="38.38" y="-171.03" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stdlib_optval</text>
+</g>
+<!-- module~codata__constants_type~2&#45;&gt;stdlib_optval -->
+<g id="module~~codata~~UsesGraph_edge21" class="edge">
+<title>module~codata__constants_type~2&#45;&gt;stdlib_optval</title>
+<path fill="none" stroke="#ff00da" stroke-dasharray="5,2" d="M136.24,-146.24C120.12,-151.09 101.37,-156.73 84.69,-161.75"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="84.09,-158.28 75.53,-164.51 86.11,-164.98 84.09,-158.28"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var panmodulecodataUsesGraph = svgPanZoom('#modulecodataUsesGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 11.0.0 (20240428.1522)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="485pt" height="31pt"
+ viewBox="0.00 0.00 485.13 30.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 26.77)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-26.77 481.13,-26.77 481.13,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-22.77 0,-22.77 0,0 54,0 54,-22.77"/>
+<text text-anchor="middle" x="27" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="137.76,-22.77 72.24,-22.77 72.24,0 137.76,0 137.76,-22.77"/>
+<text text-anchor="middle" x="105" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="218.63,-22.77 155.37,-22.77 155.37,0 218.63,0 218.63,-22.77"/>
+<text text-anchor="middle" x="187" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="291,-22.77 237,-22.77 237,0 291,0 291,-22.77"/>
+<text text-anchor="middle" x="264" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363,-22.77 309,-22.77 309,0 363,0 363,-22.77"/>
+<text text-anchor="middle" x="336" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="477.13,-22.77 380.87,-22.77 380.87,0 477.13,0 477.13,-22.77"/>
+<text text-anchor="middle" x="429" y="-7.04" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              codata
+ was developed by Milan Skocic<br>              &copy; 2024 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-05-21T23:41:48.292220             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
