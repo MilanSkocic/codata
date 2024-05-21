@@ -15,15 +15,18 @@
 *.o
 *.obj
 *.exe
-*.dll
 *.out
-*.so
-*.a
 *.lib
 *.cmake
 *.mod
 *.egg-info
 *.pyd
+*.dylib
+*.dll
+*.dll.a
+*.so
+*.a
+*.log
 
 .idea
 .vscode
@@ -31,16 +34,17 @@
 build/
 __pycache__/
 dist/
+API-doc/
 
 .DS_Store
 
 *generator*
 
-pywrapper/pycodata/*.h
-pywrapper/pycodata/*.a
-pywrapper/pycodata/*.dll
-pywrapper/pycodata/*.dll.a
-pywrapper/pycodata/*.so
-pywrapper/pycodata/*.dylib
-pywrapper/pycodata/*.pyd
+pywrapper/src/pycodata/*.h
+pywrapper/src/pycodata/*.a
+pywrapper/src/pycodata/*.dll
+pywrapper/src/pycodata/*.dll.a
+pywrapper/src/pycodata/*.so
+pywrapper/src/pycodata/*.dylib
+pywrapper/src/pycodata/*.pyd
 pywrapper/wheelhouse/

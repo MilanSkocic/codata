@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pycodata"
-version = "0.10.0"
+version = "1.0.0"
 authors = [{name = "Milan Skocic", email = "milan.skocic@icloud.com"}]
 description = "pycodata: CODATA constants for python."
-readme = "README.rst"
+readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "GNU General Public License v3 (GPLv3)"}
 classifiers=["Development Status :: 5 - Production/Stable",
@@ -18,8 +18,11 @@ classifiers=["Development Status :: 5 - Production/Stable",
 Documentation = "https://milanskocic.github.io/codata/index.html"
 Source = "https://github.com/MilanSkocic/codata"
 
+[tool.setuptools]
+include-package-data = false
+
 [tool.setuptools.packages.find]
-where = ["."]
+where = ["src"]
 
 [tool.setuptools.package-data]
-pycodata = ["libcodata.*"]
+pycodata = ["libcodata.*", "libgfortran*", "libquadmath*", "libgcc_s*", "libwinpthread*"]

@@ -30,11 +30,11 @@ jobs:
         make
 
   macos: 
-    runs-on: macos-latest
+    runs-on: macos-12
     steps:
     - name: Gfortran
       run: |
-        brew reinstall gcc@10 gcc@13
+        brew reinstall gcc@10 gfortran
     - name: Set FPM
       uses: fortran-lang/setup-fpm@v5
       with: 

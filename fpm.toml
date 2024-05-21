@@ -1,12 +1,13 @@
 name = "codata"
-version = "0.10.0"
-license = "GNU General Public License v3 (GPLv3)"
+version = "1.0.0"
+license = "GPL-3.0-or-later"
 author = "Milan Skocic"
 maintainer = "milan.skocic@icloud.com"
-copyright = "Copyright 2023, Milan Skocic"
+copyright = "Copyright 2022-2024, Milan Skocic"
 description = "CODATA physical constants."
 categories  =["Science"]
-keywords = ["constants", "physics", "chemistry"]
+keywords = ["codata", "constants", "physics", "chemistry"]
+homepage = "https://milanskocic.github.io/codata/index.html"
 
 [fortran]
 implicit-typing = false
@@ -19,8 +20,15 @@ auto-tests = true
 auto-examples = true
 module-naming = false 
 
+[preprocess]
+[preprocess.fypp]
+suffixes = ["fypp"]
+
 [install]
 library = true
+
+[dependencies]
+stdlib="*"
 
 [[example]]
 name = "example_in_f"
@@ -32,6 +40,7 @@ main = "example_in_c.c"
 
 [[test]]
 name = "tester"
-main = "tester.f90"
+main = "test_constants.f90"
+
 [test.dependencies]
 test-drive = {git="https://github.com/fortran-lang/test-drive", tag="v0.4.0"}

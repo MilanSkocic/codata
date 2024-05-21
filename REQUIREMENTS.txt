@@ -1,2 +1,0 @@
-gcc>=10
-gfortran>=10
