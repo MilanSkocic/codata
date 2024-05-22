@@ -33,6 +33,8 @@ license: by-sa
 favicon: media/ico/logo-codata.ico
 ---
 
+![Codata](./media/logo-codata.png)
+
 [TOC]
 
 {!README.md!}
