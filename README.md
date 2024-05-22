@@ -1,6 +1,3 @@
-![logo](media/logo-codata.png)
-
-
 # Introduction
 
 `codata` is a Fortran library providing the latest codata constants (2022) and 
