@@ -1,6 +1,6 @@
 name = "codata"
 version = "1.0.0"
-license = "GPL-3.0-or-later"
+license = "MIT"
 author = "Milan Skocic"
 maintainer = "milan.skocic@icloud.com"
 copyright = "Copyright 2022-2024, Milan Skocic"
