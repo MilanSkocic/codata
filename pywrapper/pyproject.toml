@@ -15,7 +15,7 @@ classifiers=["Development Status :: 5 - Production/Stable",
              "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"]
 
 [project.urls]
-Documentation = "https://milanskocic.github.io/codata/index.html"
+Documentation = "https://milanskocic.github.io/codata-docs/index.html"
 Source = "https://github.com/MilanSkocic/codata"
 
 [tool.setuptools]
