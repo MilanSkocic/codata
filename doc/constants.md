@@ -87,5 +87,5 @@ Returns a scalar of `real` type which is either the value or the uncertainty of 
 ### Python
 
 ```python
-{!./example/example_in_c.c!}
+{!./example/example_in_c.py!}
 ```
