@@ -47,7 +47,7 @@ install_dirs:
 	mkdir -p $(install_dir)/bin
 	mkdir -p $(install_dir)/include
 	mkdir -p $(install_dir)/lib
-	fpm install --prefix=$(install_dir)
+	fpm install --prefix=$(install_dir) --profile=$(btype)
 
 install_linux: 
 	cp -f $(BUILD_DIR)/$(LIBNAME).so $(install_dir)/lib
