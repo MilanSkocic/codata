@@ -26,7 +26,6 @@ test: build
 
 example: build
 	fpm run --profile=$(btype) --example example_in_f
-	fpm run --profile=$(btype) --example example_in_c
 
 copy_a: 
 	cp -f $(shell find ./build/gfortran* -type f -name $(LIBNAME).a) $(BUILD_DIR)
@@ -76,12 +75,6 @@ nist:
 sources: nist 
 	make -C src 
 
-capi: nist
-	make -C include
-
-cpython: nist
-	make -C pywrapper sources
-
 stdlib: nist sources
 	make -C stdlib
 
@@ -98,8 +91,6 @@ clean:
 	make -C media clean
 	make -C nist clean
 	make -C src clean
-	make -C include clean
 	make -C stdlib clean
 	fpm clean --all
-	make -C pywrapper clean
 	rm -rf API-doc/*
