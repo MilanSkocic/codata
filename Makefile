@@ -12,7 +12,7 @@ endif
 
 SRC_FYPP=$(wildcard ./src/*.fypp)
 
-.PHONY: build nist stdlib sources capi cpython doc upload_doc
+.PHONY: build nist stdlib sources doc upload_doc
 
 all: $(LIBNAME)
 
