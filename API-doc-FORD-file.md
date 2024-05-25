@@ -10,7 +10,7 @@ github: https://github.com/MilanSkocic
 src_dir: ./src
 include: ./include
 media_dir: ./media/png
-page_dir: ./documentation
+page_dir: ./doc
 output_dir: API-doc
 exclude_dir: ./example
              ./test
