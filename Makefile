@@ -48,7 +48,6 @@ install_dirs:
 	mkdir -p $(install_dir)/include
 	mkdir -p $(install_dir)/lib
 	fpm install --prefix=$(install_dir)
-	cp -f ./include/$(HEADER_PREFIX)*.h $(install_dir)/include
 
 install_linux: 
 	cp -f $(BUILD_DIR)/$(LIBNAME).so $(install_dir)/lib
