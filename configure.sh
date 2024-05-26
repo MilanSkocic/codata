@@ -1,5 +1,5 @@
 LIBNAME="libcodata"
-HEADER_PREFIX="codata"
+NAME="codata"
 
 # environment variables
 FC=gfortran
@@ -23,8 +23,8 @@ fi
 export LIBNAME
 echo "LIBNAME=" $LIBNAME
 
-export HEADER_PREFIX
-echo "HEADER_PREFIX=" $HEADER_PREFIX
+export NAME
+echo "NAME=" $NAME
 
 export PLATFORM
 echo "PLATFORM=" $PLATFORM
