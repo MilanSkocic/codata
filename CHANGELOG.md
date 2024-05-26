@@ -1,3 +1,14 @@
+# Version 1.1.0
+
+* C API and Python wrapper moved to their own repositories.
+    * [C wrapper](https://github.com/MilanSkocic/codata-capi)
+    * [Python wrapper](https://github.com/MilanSkocic/codata-py)
+* Code cleanup
+* Documentation update
+
+Full changelog available at [github](https://github.com/MilanSkocic/codata/releases)
+
+
 # Version 1.0.0
 
 * Add codata values for 2010, 2014 and 2018.

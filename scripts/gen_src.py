@@ -30,7 +30,7 @@ def write_module_start(f, year):
 def write_year(f, year):
     suffix = get_suffix(year)
     f.write(f"integer(int32), parameter, public :: YEAR{suffix:s} = {year:s} !! Year of release." + newline)
-    f.write(f"integer(int32), protected, public, bind(C, name=\"YEAR{suffix}\") :: capi_YEAR{suffix:s} = YEAR{suffix:s} !capi" + newline)
+    # f.write(f"integer(int32), protected, public, bind(C, name=\"YEAR{suffix}\") :: capi_YEAR{suffix:s} = YEAR{suffix:s} !capi" + newline)
     f.write(newline)
 
 def write_constant(f, var, name, value, uncertainty, unit, year, count):
@@ -43,54 +43,54 @@ def write_constant(f, var, name, value, uncertainty, unit, year, count):
                 f"\"{unit:s}\") !! {name:s}" + newline)
     
 
-    ctag = "!capi"
-
-    # NAMES
-    name_list = list(map(lambda s: '"' + s + '"', name))
-    cname = ['\" \"'] * cname_len
-    cname[0:len(name)] = name_list[:]
-    cname[len(name)] = "c_null_char"
+#    ctag = "!capi"
+#
+#    # NAMES
+#    name_list = list(map(lambda s: '"' + s + '"', name))
+#    cname = ['\" \"'] * cname_len
+#    cname[0:len(name)] = name_list[:]
+#    cname[len(name)] = "c_null_char"
     
-    indexes = (0, 10, 20, 30, 40, 50)
-    cnames = []
-    for i in range(0, len(indexes)-1):
-        cnames.append(", ".join(cname[indexes[i]: indexes[i+1]]))
-    cnames.append(", ".join(cname[indexes[-1]:]))
-    
-    f.write(f"type(capi_codata_constant_type), protected, public, bind(C, name=\"{var:s}{suffix}\") ::&" + ctag + newline)
-    f.write(f"capi_{count:d}{suffix} = capi_codata_constant_type([ &" + ctag + newline)
-
-    # last not comma at the end
-    for _cname in cnames[:-1]:
-        f.write(f"{_cname:s}, &" + ctag + newline)
-    _cname = cnames[-1]
-    f.write(f"{_cname:s} &" + ctag + newline)
-
-    # VALUES AND UNCERTAINTY
-    f.write("], &" + ctag + newline +\
-           f"{value:s}_dp, {uncertainty:s}_dp, &" + ctag + newline)
-   
-    
-    # UNITS
-    unit_list = list(map(lambda s: '"' + s + '"', unit))
-    cname = ['\" \"'] * cunit_len
-    cname[0:len(unit)] = unit_list[:]
-    cname[len(unit)] = "c_null_char"
-    
-    indexes = (0, 10, 20)
-    cnames = []
-    for i in range(0, len(indexes)-1):
-        cnames.append(", ".join(cname[indexes[i]: indexes[i+1]]))
-    cnames.append(", ".join(cname[indexes[-1]:]))
-    
-    # last not comma at the end
-    f.write("[ &" + ctag + newline)
-    for _cname in cnames[:-1]:
-        f.write(f"{_cname:s}, &" + ctag + newline)
-    _cname = cnames[-1]
-    f.write(f"{_cname:s} &" + ctag + newline)
-    f.write("])" + ctag + newline)
-
+#    indexes = (0, 10, 20, 30, 40, 50)
+#    cnames = []
+#    for i in range(0, len(indexes)-1):
+#        cnames.append(", ".join(cname[indexes[i]: indexes[i+1]]))
+#    cnames.append(", ".join(cname[indexes[-1]:]))
+#    
+#    f.write(f"type(capi_codata_constant_type), protected, public, bind(C, name=\"{var:s}{suffix}\") ::&" + ctag + newline)
+#    f.write(f"capi_{count:d}{suffix} = capi_codata_constant_type([ &" + ctag + newline)
+#
+#    # last not comma at the end
+#    for _cname in cnames[:-1]:
+#        f.write(f"{_cname:s}, &" + ctag + newline)
+#    _cname = cnames[-1]
+#    f.write(f"{_cname:s} &" + ctag + newline)
+#
+#    # VALUES AND UNCERTAINTY
+#    f.write("], &" + ctag + newline +\
+#           f"{value:s}_dp, {uncertainty:s}_dp, &" + ctag + newline)
+#   
+#    
+#    # UNITS
+#    unit_list = list(map(lambda s: '"' + s + '"', unit))
+#    cname = ['\" \"'] * cunit_len
+#    cname[0:len(unit)] = unit_list[:]
+#    cname[len(unit)] = "c_null_char"
+#    
+#    indexes = (0, 10, 20)
+#    cnames = []
+#    for i in range(0, len(indexes)-1):
+#        cnames.append(", ".join(cname[indexes[i]: indexes[i+1]]))
+#    cnames.append(", ".join(cname[indexes[-1]:]))
+#    
+#    # last not comma at the end
+#    f.write("[ &" + ctag + newline)
+#    for _cname in cnames[:-1]:
+#        f.write(f"{_cname:s}, &" + ctag + newline)
+#    _cname = cnames[-1]
+#    f.write(f"{_cname:s} &" + ctag + newline)
+#    f.write("])" + ctag + newline)
+#
 
     f.write(newline)
 

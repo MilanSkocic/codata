@@ -1,13 +1,13 @@
 name = "codata"
-version = "1.0.0"
-license = "GPL-3.0-or-later"
+version = "1.1.0"
+license = "MIT"
 author = "Milan Skocic"
 maintainer = "milan.skocic@icloud.com"
 copyright = "Copyright 2022-2024, Milan Skocic"
 description = "CODATA physical constants."
 categories  =["Science"]
 keywords = ["codata", "constants", "physics", "chemistry"]
-homepage = "https://milanskocic.github.io/codata/index.html"
+homepage = "https://milanskocic.github.io/codata-docs/index.html"
 
 [fortran]
 implicit-typing = false
@@ -33,10 +33,6 @@ stdlib="*"
 [[example]]
 name = "example_in_f"
 main = "example_in_f.f90"
-
-[[example]]
-name = "example_in_c"
-main = "example_in_c.c"
 
 [[test]]
 name = "tester"

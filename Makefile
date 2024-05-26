@@ -12,7 +12,7 @@ endif
 
 SRC_FYPP=$(wildcard ./src/*.fypp)
 
-.PHONY: build nist stdlib sources capi cpython doc upload_doc
+.PHONY: build nist stdlib sources doc upload_doc
 
 all: $(LIBNAME)
 
@@ -26,7 +26,6 @@ test: build
 
 example: build
 	fpm run --profile=$(btype) --example example_in_f
-	fpm run --profile=$(btype) --example example_in_c
 
 copy_a: 
 	cp -f $(shell find ./build/gfortran* -type f -name $(LIBNAME).a) $(BUILD_DIR)
@@ -48,8 +47,7 @@ install_dirs:
 	mkdir -p $(install_dir)/bin
 	mkdir -p $(install_dir)/include
 	mkdir -p $(install_dir)/lib
-	fpm install --prefix=$(install_dir)
-	cp -f ./include/$(HEADER_PREFIX)*.h $(install_dir)/include
+	fpm install --prefix=$(install_dir) --profile=$(btype)
 
 install_linux: 
 	cp -f $(BUILD_DIR)/$(LIBNAME).so $(install_dir)/lib
@@ -76,20 +74,11 @@ nist:
 sources: nist 
 	make -C src 
 
-capi: nist
-	make -C include
-
-cpython: nist
-	make -C pywrapper sources
-
 stdlib: nist sources
 	make -C stdlib
 
 doc:
 	ford API-doc-FORD-file.md
-
-upload_doc:
-	cp -rf API-doc/* docs/
 
 logo:
 	make -C media
@@ -98,8 +87,6 @@ clean:
 	make -C media clean
 	make -C nist clean
 	make -C src clean
-	make -C include clean
 	make -C stdlib clean
 	fpm clean --all
-	make -C pywrapper clean
 	rm -rf API-doc/*

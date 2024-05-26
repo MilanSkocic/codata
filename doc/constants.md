@@ -70,22 +70,5 @@ Returns a scalar of `real` type which is either the value or the uncertainty of 
 ## Example
 
 ```fortran
-{!example/constants/example_constants.f90!}
-```
-### Fortran
-
-```fortran
 {!./example/example_in_f.f90!}
-```
-
-### C
-
-```C
-{!./example/example_in_c.c!}
-```
-
-### Python
-
-```python
-{!./example/example_in_c.c!}
 ```

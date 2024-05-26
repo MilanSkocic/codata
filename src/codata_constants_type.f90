@@ -19,14 +19,6 @@ module codata__constants_type
         generic :: to_real => to_real_sp, to_real_dp
     end type
     
-    type, public, bind(C) :: capi_codata_constant_type
-        !! Derived type for representing a Codata constant in C.
-        character(kind=c_char) :: name(65)
-        real(c_double) :: value
-        real(c_double) :: uncertainty
-        character(kind=c_char) :: unit(33)
-    end type
-
     interface to_real
         !! Get the constant value or uncertainty.
         module procedure to_real_sp

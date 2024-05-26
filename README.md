@@ -1,10 +1,8 @@
 # Introduction
 
 `codata` is a Fortran library providing the latest codata constants (2022) and 
-older values (2018, 2014 and 2010).
-It also provides an API for the C language and a [python wrapper](https://pypi.org/project/pycodata).
+older values (2018, 2014 and 2010). 
 The raw codata are taken from http://physics.nist.gov/constants.
-
 The constants (values and uncertainties) are implemented as double precision reals.
 
 The names are quite long and can be aliased with shorter names.
@@ -16,6 +14,12 @@ add the following to your `fpm.toml` file:
     [dependencies]
     codata = { git="https://github.com/MilanSkocic/codata.git" }
 ```
+
+Optional thin wrappers allow usage of the library from other languages, e.g.:
+
+* [C wrapper](https://github.com/MilanSkocic/codata-capi)
+* [Python wrapper](https://github.com/MilanSkocic/codata-py)
+
 
 **Notes**: 
 
@@ -86,4 +90,4 @@ If building the python wrapper is needed:
 
 # License
 
-GPL-3.0-or-later
+MIT
