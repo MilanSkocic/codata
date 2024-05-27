@@ -4,4 +4,4 @@ use codata__version
 use codata__constants
 implicit none
 
-end module
+end module codata
