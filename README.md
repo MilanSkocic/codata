@@ -23,7 +23,7 @@ Optional thin wrappers allow usage of the library from other languages, e.g.:
 
 **Notes**: 
 
-* The latest codata constants will be soon integrated in the [stdlib](https://github.com/fortran-lang/stdlib/pull/800). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants.  
+* The latest codata constants were integrated in the [stdlib](https://github.com/fortran-lang/stdlib/pull/800). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants.  
 
 * If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. 
 
@@ -44,11 +44,9 @@ stdlib>=0.5
 
 A Makefile is provided, which uses [fpm](https://fpm.fortran-lang.org), for building the library.
 
-On windows, [msys2](https://www.msys2.org) needs to be installed. The MSVC compiler is only necessary
-for compiling the python wrapper. 
-Add the msys2 binary (usually C:\\msys64\\usr\\bin) to the path in order to be able to use make.
-
-On Darwin, the [gcc](https://formulae.brew.sh/formula/gcc) toolchain needs to be installed.
+* On windows, [msys2](https://www.msys2.org) needs to be installed. 
+  Add the msys2 binary (usually C:\\msys64\\usr\\bin) to the path in order to be able to use make.
+* On Darwin, the [gcc](https://formulae.brew.sh/formula/gcc) toolchain needs to be installed.
 
 Build: the configuration file will set all the environment variables necessary for the compilation
 
@@ -66,8 +64,8 @@ Run tests
 
 
 Install
-    
-``` 
+
+```
     make install
 ```
 
@@ -75,15 +73,6 @@ Uninstall
 
 ```
     make uninstall
-```
-
-If building the python wrapper is needed:
-
-```
-    cd pywrapper
-    chmod +x configure.sh
-    . ./configure.sh
-    make
 ```
 
 

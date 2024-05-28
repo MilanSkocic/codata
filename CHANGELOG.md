@@ -3,6 +3,7 @@
 * C API and Python wrapper moved to their own repositories.
     * [C wrapper](https://github.com/MilanSkocic/codata-capi)
     * [Python wrapper](https://github.com/MilanSkocic/codata-py)
+* API break: C API is no more provided by default.
 * Code cleanup
 * Documentation update
 
