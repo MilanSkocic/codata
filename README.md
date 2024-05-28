@@ -44,11 +44,9 @@ stdlib>=0.5
 
 A Makefile is provided, which uses [fpm](https://fpm.fortran-lang.org), for building the library.
 
-On windows, [msys2](https://www.msys2.org) needs to be installed. The MSVC compiler is only necessary
-for compiling the python wrapper. 
-Add the msys2 binary (usually C:\\msys64\\usr\\bin) to the path in order to be able to use make.
-
-On Darwin, the [gcc](https://formulae.brew.sh/formula/gcc) toolchain needs to be installed.
+* On windows, [msys2](https://www.msys2.org) needs to be installed. 
+  Add the msys2 binary (usually C:\\msys64\\usr\\bin) to the path in order to be able to use make.
+* On Darwin, the [gcc](https://formulae.brew.sh/formula/gcc) toolchain needs to be installed.
 
 Build: the configuration file will set all the environment variables necessary for the compilation
 
@@ -66,8 +64,8 @@ Run tests
 
 
 Install
-    
-``` 
+
+```
     make install
 ```
 
