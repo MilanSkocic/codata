@@ -3,7 +3,7 @@ project: codata
 summary: Fortran library providing the codata constants.
 project_github: https://github.com/MilanSkocic/codata
 project_download: https://github.com/MilanSkocic/codata/releases
-project_website: https://milanskocic.github.io/codata/index.html
+project_website: https://milanskocic.github.io/codata-docs/index.html
 author: Milan Skocic
 email: milan.skocic@icloud.com
 github: https://github.com/MilanSkocic
