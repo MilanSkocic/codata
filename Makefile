@@ -86,7 +86,6 @@ logo:
 	make -C media
 
 clean:
-	make -C media clean
 	make -C nist clean
 	make -C src clean
 	make -C stdlib clean
