@@ -20,10 +20,6 @@ auto-tests = true
 auto-examples = true
 module-naming = false 
 
-[preprocess]
-[preprocess.fypp]
-suffixes = ["fypp"]
-
 [install]
 library = true
 
