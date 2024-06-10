@@ -35,8 +35,7 @@ Optional thin wrappers allow usage of the library from other languages, e.g.:
 gcc>=10
 gfortran>=10
 fpm>=0.7
-fypp
-stdlib>=0.5
+fypp>=3.0
 ```
 
 
