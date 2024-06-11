@@ -34,9 +34,6 @@ The derived type [[codata__constants_type(module):codata_constant_type(type)]] d
 A module level interface [[codata__constants_type(module):to_real(interface)]] is 
 available for getting the constant value or uncertainty of a constant. 
 
-The CAPI provides only the 4 members and the type-bound procedures are not available.
-
-
 
 
 # `to_real` - Get the constant value or uncertainty.
