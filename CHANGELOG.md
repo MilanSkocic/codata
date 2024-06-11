@@ -1,3 +1,11 @@
+# Version 1.2.0
+
+* Refractoring
+* Documentation update.
+
+Full changelog available at [github](https://github.com/MilanSkocic/codata/releases)
+
+
 # Version 1.1.0
 
 * C API and Python wrapper moved to their own repositories.
