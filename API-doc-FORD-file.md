@@ -33,7 +33,7 @@ license: by-sa
 favicon: media/logo.ico
 ---
 
-![Codata](./media/logo-codata.png)
+![Codata](./media/logo.png)
 
 [TOC]
 
