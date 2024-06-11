@@ -1,3 +1,5 @@
+#!/bin/bash
+
 LIBNAME="libcodata"
 NAME="codata"
 

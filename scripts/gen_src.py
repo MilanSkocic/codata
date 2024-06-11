@@ -32,7 +32,7 @@ def write_year(f, year):
     f.write(f"integer(int32), parameter, public :: YEAR{suffix:s} = {year:s} !! Year of release." + newline)
     f.write(newline)
 
-def write_constant(f, var, name, value, uncertainty, unit, year, count):
+def write_constant(f, var, name, value, uncertainty, unit, year):
     suffix = get_suffix(year)
     
     f.write(f"type(codata_constant_type), parameter, public :: "+\
@@ -59,13 +59,13 @@ def run(fpath_ast: str, fpath_code: str)->None:
     write_year(fcode, year)
 
     ast = tomlkit.load(fast)
-    for i, var in enumerate(ast.keys()):
+    for var in ast.keys():
         name = ast[var]["name"]
         value = ast[var]["value"]
         uncertainty = ast[var]["uncertainty"]
         unit = ast[var]["unit"]
         
-        write_constant(fcode, var, name, value, uncertainty, unit, year, i)
+        write_constant(fcode, var, name, value, uncertainty, unit, year)
     
     write_module_end(fcode, year)
 

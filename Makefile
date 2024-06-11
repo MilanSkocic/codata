@@ -12,7 +12,7 @@ endif
 
 SRC_FYPP=$(wildcard ./src/*.fypp)
 
-.PHONY: build nist stdlib sources doc upload_doc
+.PHONY: build nist stdlib sources doc
 
 all: $(LIBNAME)
 
@@ -57,6 +57,7 @@ install_darwin:
 
 install_windows:
 	cp -f $(BUILD_DIR)/$(LIBNAME).dll.a $(install_dir)/lib
+	cp -f $(BUILD_DIR)/$(LIBNAME).dll $(install_dir)/lib
 	cp -f $(BUILD_DIR)/$(LIBNAME).dll $(install_dir)/bin
 
 uninstall:
@@ -66,6 +67,7 @@ uninstall:
 	rm -f $(install_dir)/lib/$(LIBNAME).so
 	rm -f $(install_dir)/lib/$(LIBNAME).dylib
 	rm -f $(install_dir)/lib/$(LIBNAME).dll.a
+	rm -f $(install_dir)/lib/$(LIBNAME).dll
 	rm -f $(install_dir)/bin/$(LIBNAME).dll
 
 nist:
@@ -84,7 +86,6 @@ logo:
 	make -C media
 
 clean:
-	make -C media clean
 	make -C nist clean
 	make -C src clean
 	make -C stdlib clean
