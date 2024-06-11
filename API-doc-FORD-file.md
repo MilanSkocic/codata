@@ -9,7 +9,7 @@ email: milan.skocic@icloud.com
 github: https://github.com/MilanSkocic
 src_dir: ./src
 include: ./include
-media_dir: ./media/png
+media_dir: ./media
 page_dir: ./doc
 output_dir: API-doc
 exclude_dir: ./example
@@ -30,7 +30,7 @@ graph_maxnodes: 250
 graph_maxdepth: 5
 coloured_edges: true
 license: by-sa
-favicon: media/ico/logo-codata.ico
+favicon: media/logo.ico
 ---
 
 ![Codata](./media/logo-codata.png)

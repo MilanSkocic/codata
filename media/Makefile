@@ -1,6 +1,6 @@
 include ./make.in
 
-all: $(OUTPUTS) $(ICO_FOLDER)/logo-codata.ico
+all: $(OUTPUTS) 
 
 $(BUILD_FOLDER)/%.pdf: $(SRC_FOLDER)/%.tex
 	$(TEX) $(TEX_OPTIONS) $<
@@ -13,7 +13,3 @@ $(ICO_FOLDER)/%.ico: $(PNG_FOLDER)/%.png
 
 clean:
 	rm -rf $(BUILD_FOLDER)/*
-
-cleanall: clean
-	rm -rf $(PNG_FOLDER)/*
-	rm -rf $(ICO_FOLDER)/*
