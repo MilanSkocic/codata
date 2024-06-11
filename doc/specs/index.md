@@ -2,9 +2,9 @@
 title: Specifications (specs)
 ---
 
-# Features and modules
+This is an index/directory of the specifications (specs) for each module.
 
-[constants](constants.html)
-[version](version.html)
+- [constants](constants.html)
+- [version](version.html)
 
 
