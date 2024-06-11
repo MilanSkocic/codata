@@ -2,6 +2,8 @@
 title: Codata constants
 ---
 
+# Introduction
+
 The modules: 
 
 * [[codata__constants_2022(module)]] 
@@ -37,18 +39,18 @@ The CAPI provides only the 4 members and the type-bound procedures are not avail
 
 
 
-## `to_real` - Get the constant value or uncertainty.
+# `to_real` - Get the constant value or uncertainty.
 
-### Description
+## Description
 
 Convert a [[codata__constants_type(module):codata_constant_type(type)]] to a real. 
 **Warning**: Some constants cannot be converted to simple precision reals due to the values of the exponents.
 
-### Syntax
+## Syntax
 
 `r = ` [[codata__constants_type:to_real(interface)]] `(c, mold [, uncertainty])`
 
-### Arguments
+## Arguments
 
 `c`: argument has `intent(in) ` and shall be of type [[codata__constants_type:codata_constant_type(type)]].
 
@@ -58,7 +60,7 @@ Convert a [[codata__constants_type(module):codata_constant_type(type)]] to a rea
 `uncertainty` (optional): argument has `intent(in)` and shall be of `logical` type. 
 It specifies if the uncertainty needs to be returned instead of the value. Default to `.false.`.
 
-### Return value
+## Return value
 
 Returns a scalar of `real` type which is either the value or the uncertainty of a codata constant.
 
@@ -67,7 +69,7 @@ Returns a scalar of `real` type which is either the value or the uncertainty of 
 
 
 
-## Example
+# Example
 
 ```fortran
 {!./example/example_in_f.f90!}
