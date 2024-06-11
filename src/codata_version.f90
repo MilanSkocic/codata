@@ -12,7 +12,7 @@ public :: get_version
 contains
 
 function get_version()result(fptr)
-    ! Get the version.
+    !! Get the version.
     implicit none
     character(len=:), pointer :: fptr 
         !! Fortran pointer to a string indicating the version.
