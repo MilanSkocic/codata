@@ -9,4 +9,5 @@ capi/** linguist-vendored
 media/** linguist-vendored
 pywrapper/** linguist-vendored
 py/** linguist-vendored
+scripts/** linguist-vendored
 
