@@ -1,9 +1,17 @@
+# Version 1.2.1
+
+* Refractoring
+* Merge back C API and python wrapper.
+
+Full changelog available at [github](https://github.com/milanskocic/codata/releases)
+
+
 # Version 1.2.0
 
 * Refractoring
 * Documentation update.
 
-Full changelog available at [github](https://github.com/MilanSkocic/codata/releases)
+Full changelog available at [github](https://github.com/milanskocic/codata/releases)
 
 
 # Version 1.1.0
