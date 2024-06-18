@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="IAPWS - Water properties">
+      <meta name="description" content="Fortran library providing the codata constants.">
     <meta name="author" content="Milan Skocic" >
     <link rel="icon" href="../favicon.png">
 
-    <title>Changelog &ndash; iapws</title>
+    <title>Changelog &ndash; codata</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -29,7 +29,7 @@
     <div class="container-fluid mb-sm-4 mb-xl-2">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="../index.html">iapws </a>
+          <a class="navbar-brand" href="../index.html">codata </a>
           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
                   aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon">
@@ -93,15 +93,12 @@
           <hr>
           <nav class="nav nav-pills flex-column">
               <a class="nav-link active disabled" href="changelog.html">Changelog</a>
-              <a class="nav-link" href="examples.html">Examples</a>
               <a class="nav-link" href="license.html">License</a>
               <a class="nav-link" href="references.html">References</a>
               <a class="nav-link" href="specs/index.html">Specifications (specs)</a>
                 <nav class="nav nav-pills flex-column">
                                 <a class="nav-link" href="specs/capi.html">C API</a>
-              <a class="nav-link" href="specs/iapws_g704.html">IPAWS G7-04</a>
-              <a class="nav-link" href="specs/iapws_r283.html">IAPWS R2-83</a>
-              <a class="nav-link" href="specs/iapws_r797.html">IAPWS R7-97</a>
+              <a class="nav-link" href="specs/codata_constants.html">Codata constants</a>
 
                 </nav>
           </nav>
@@ -109,79 +106,161 @@
       </div>
 
     <div class="col-9" id='text'>
-      <div class="toc">
+      <h1 id="version-121">Version 1.2.1</h1>
 <ul>
-<li><a href="#version-030">Version 0.3.0</a></li>
-<li><a href="#version-022">Version 0.2.2</a></li>
-<li><a href="#version-021">Version 0.2.1</a></li>
-<li><a href="#version-020">Version 0.2.0</a></li>
-<li><a href="#version-011">Version 0.1.1</a></li>
-<li><a href="#version-010">Version 0.1.0</a></li>
+<li>Refractoring</li>
+<li>Merge back C API and python wrapper.</li>
 </ul>
-</div>
+<p>Full changelog available at <a href="https://github.com/milanskocic/codata/releases">github</a></p>
+<h1 id="version-120">Version 1.2.0</h1>
+<ul>
+<li>Refractoring</li>
+<li>Documentation update.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/milanskocic/codata/releases">github</a></p>
+<h1 id="version-110">Version 1.1.0</h1>
+<ul>
+<li>C API and Python wrapper moved to their own repositories.<ul>
+<li><a href="https://github.com/MilanSkocic/codata-capi">C wrapper</a></li>
+<li><a href="https://github.com/MilanSkocic/codata-py">Python wrapper</a></li>
+</ul>
+</li>
+<li>API break: C API is no more provided by default. Use the optional C wrapper.</li>
+<li>Code cleanup</li>
+<li>Documentation update</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<h1 id="version-100">Version 1.0.0</h1>
+<ul>
+<li>Add codata values for 2010, 2014 and 2018.</li>
+<li>Code refractoring and code cleaning.</li>
+<li>Documentation update and switch to only FORD documentation.</li>
+<li>Rewrite code generators in python.</li>
+<li>Generate source code for stdlib.</li>
+<li>API break: constants are defined as DT like in stdlib.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-0100">Version 0.10.0</h1>
+<ul>
+<li>Remove remove generation of the version module.</li>
+<li>Add tests using the test-drive framework.</li>
+<li>Explicit parameter constants for Fortran and protected constants for C API.</li>
+<li>Minor fixes in documentation.</li>
+<li>Code cleanup.</li>
+<li>Merge of all code for autogeneration in one file.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-090">Version 0.9.0</h1>
+<ul>
+<li>No API changes.</li>
+<li>Automatic generation of the version module.</li>
+<li>Generic Makefiles for automatic the building process of the library and the pywrapper.</li>
+<li>Add targets: build, build_debug, test, test_debug.</li>
+<li>Minor fixes in documentation.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-082">Version 0.8.2</h1>
+<ul>
+<li>No API changes.</li>
+<li>Improve Makefile for generating the source code at each compilation.</li>
+<li>Source generator rewritten in Fortran. </li>
+<li>Switch to pyproject.toml for the Python wrapper.</li>
+<li>Minor fixes in documentation.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-081">Version 0.8.1</h1>
+<ul>
+<li>Use shared library in python wrapper.</li>
+<li>Minor fixes in documentation.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-080">Version 0.8.0</h1>
+<ul>
+<li>Back to the approach with a library.</li>
+<li>Compatible with fpm.</li>
+<li>Configuration file for setting all the environmental variables.</li>
+<li>Global makefile for building a static library (through fpm) and a shared library.</li>
+<li>Automatic copy of the necessary sources for the python wrapper.</li>
+<li>Python wrapper built with the static library</li>
+<li>no dependency on a shared library.</li>
+<li>sources and static library embeded in the python wrapper.</li>
+<li>FORD for documenting the Fortran code.</li>
+<li>Integration of the FORD documentation into the main documentation with sphinx.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-071">Version 0.7.1</h1>
+<ul>
+<li>Minor fixes in generator code</li>
+<li>Add automatic copy of c sources for the python wrapper.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-070">Version 0.7.0</h1>
+<ul>
+<li>Migrate documentation from doxygen to sphinx+breathe.</li>
+<li>Add YEAR constant indicating the year of the codata constants.</li>
+<li>Refractoring</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-060">Version 0.6.0</h1>
+<ul>
+<li>Created documentation.</li>
+<li>Fixed missing uncertainties for Cpython.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-050">Version 0.5.0</h1>
+<ul>
+<li>Changed the complete approach by not generating a library but only source files for different languages.</li>
+<li>Available languages: Fortran, C, python, CPython</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
+<h1 id="version-040">Version 0.4.0</h1>
+<ul>
+<li>Bring back pywrapper in the codata repository to sync versions.</li>
+<li>Improvements of the documentation.</li>
+</ul>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
 <h1 id="version-030">Version 0.3.0</h1>
 <ul>
-<li>API break: functions for the Fortran code were renamed: </li>
-<li>They do not contain the package+module in the name for the sake of simplicity </li>
-<li>The package is only added in the functions for the C API in order to have a namespace-like behavior.</li>
-<li>If needed for solving conflicts with other packages, the functions can be aliased.</li>
-<li>Remove separate sources files for the C API code for each module.
-  Each module now contains the code for the C API.</li>
-<li>Implement tests with the test-drive framework.</li>
-<li>Add version extension in the pywrapper.</li>
-<li>Implement version module with its getter.</li>
-<li>Documentation update.</li>
+<li>Only last codata constants. </li>
 </ul>
-<h1 id="version-022">Version 0.2.2</h1>
-<ul>
-<li>Implementation of report R283 for critical constants of water.</li>
-<li>Switch to pyproject.toml for python wrapper.</li>
-<li>Code refractoring and clean up.</li>
-<li>Documentation update.</li>
-</ul>
-<p>Full changelog available at <a href="https://github.com/MilanSkocic/iapws/releases">github</a></p>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
 <h1 id="version-021">Version 0.2.1</h1>
 <ul>
-<li>Comlete missing documentation of private functions.</li>
-<li>Minor fixes in C API code as well in python wrapper.</li>
-<li>Remove unecessary dependency in Makefile.</li>
+<li>Integration of Intel Fortran compiler and MSVC in cmake scripts.</li>
+<li>Add specifications and instructions for compiling on Windows </li>
 </ul>
-<p>Full changelog available at <a href="https://github.com/MilanSkocic/iapws/releases">github</a></p>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
 <h1 id="version-020">Version 0.2.0</h1>
 <ul>
-<li>New structure with modules corresponding to the IAPWS papers.</li>
-<li>Compatible with fpm.</li>
-<li>fpm module naming convention.</li>
-<li>API break for iapws_g704_kh and iapws_g704_kd functions:</li>
-<li>only 1d-arrays as inputs in Fortran and C API.</li>
-<li>only objects with buffer protocol as inputs in python wrapper.</li>
-<li>python wrappers return memoryviews.</li>
-<li>New functions:</li>
-<li>providing the number of gases in H2O and D2O.</li>
-<li>providing the available of gases in H2O and D2O as list of strings.</li>
-<li>providing the available of gases in H2O and D2O as a unique string.</li>
-<li>Cleanup old app code not needed anymore.</li>
-<li>Fix memory allocation in pywrapper.</li>
-<li>Completed tests.</li>
-<li>Documentation improvements:</li>
-<li>Add conversion equations from molar fractions to solubilities.</li>
-<li>Add plots for visualizing kh and kd.</li>
+<li>Bug fixes for the codata 2010.</li>
+<li>Bug fixes in the tests linked to the codata 2010.</li>
+<li>Add python wrapper for the number of constants method. </li>
 </ul>
-<p>Full changelog available at <a href="https://github.com/MilanSkocic/iapws/releases">github</a></p>
-<h1 id="version-011">Version 0.1.1</h1>
-<ul>
-<li>Logo creation</li>
-<li>Error handling in python wrapper for arrays with rank greater than 1</li>
-<li>Tests in python wrapper for expected failures with rank-n arrays</li>
-</ul>
-<p>Full changelog available at <a href="https://github.com/MilanSkocic/iapws/releases">github</a></p>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
 <h1 id="version-010">Version 0.1.0</h1>
+<p>Implementation of:</p>
 <ul>
-<li>Implementation of kH and kD from IAPWS G7-04 in fortran + C API</li>
-<li>Python wrapper for kH and kD.</li>
-<li>Documentation with sphinx.</li>
+<li>the parser of the codata raw data</li>
+<li>the generator of the Fortran modules</li>
+<li>the C API and C header</li>
+<li>the python wrapper (will be moved to its repository next release).</li>
 </ul>
-<p>Full changelog available at <a href="https://github.com/MilanSkocic/iapws/releases">github</a></p>
+<p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
+<p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
     </div>
   </div>
       <hr>
@@ -191,7 +270,7 @@
         <div class="row justify-content-between">
           <div class="col">
             <p>
-              iapws
+              codata
  was developed by Milan Skocic<br>              &copy; 2024 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
 </p>
           </div>
@@ -199,7 +278,7 @@
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-06-18T09:13:36.594223             </p>
+ on 2024-06-18T09:40:22.411591             </p>
           </div>
         </div>
         <br>

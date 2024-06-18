@@ -88,7 +88,7 @@ doc:
 
 docs:
 	rm -rf docs/*
-	cp -rf ../iapws/API-doc/* ./docs/
+	cp -rf API-doc/* ./docs/
 
 logo:
 	make -C media

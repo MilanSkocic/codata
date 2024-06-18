@@ -1,0 +1,662 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Fortran library providing the codata constants.">
+    <meta name="author" content="Milan Skocic" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>capi__constants_type &ndash; codata</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">codata </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Contributing and specs</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>capi__constants_type
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.3% of total for modules and submodules.">10 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/capi_constants_type.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/capi_constants_type.f90.html'>capi_constants_type.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">capi__constants_type</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#types-0"
+         aria-expanded="false" aria-controls="types-0">
+         <h4 class="card-header bg-primary text-white">Derived Types</h4>
+      </a>
+      <div id="types-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/capi__constants_type.html#type-capi_constant_type">capi_constant_type</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>Codata constant type: C API.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_c_binding'>iso_c_binding</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~capi__constants_type~~UsesGraph Pages: 1 -->
+<svg id="modulecapi__constants_typeUsesGraph" width="253pt" height="32pt"
+ viewBox="0.00 0.00 253.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~capi__constants_type~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~capi__constants_type~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 249,-28 249,4 -4,4"/>
+<!-- module~capi__constants_type -->
+<g id="module~~capi__constants_type~~UsesGraph_node1" class="node">
+<title>module~capi__constants_type</title>
+<polygon fill="none" stroke="black" points="245,-24 120,-24 120,0 245,0 245,-24"/>
+<text text-anchor="middle" x="182.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">capi__constants_type</text>
+</g>
+<!-- iso_c_binding -->
+<g id="module~~capi__constants_type~~UsesGraph_node2" class="node">
+<title>iso_c_binding</title>
+<g id="a_module~~capi__constants_type~~UsesGraph_node2"><a xlink:href="http://fortranwiki.org/fortran/show/iso_c_binding" xlink:title="iso_c_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-24 0,-24 0,0 84,0 84,-24"/>
+<text text-anchor="middle" x="42" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_c_binding</text>
+</a>
+</g>
+</g>
+<!-- module~capi__constants_type&#45;&gt;iso_c_binding -->
+<g id="module~~capi__constants_type~~UsesGraph_edge1" class="edge">
+<title>module~capi__constants_type&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M119.95,-12C111.32,-12 102.53,-12 94.12,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="94.09,-8.5 84.09,-12 94.09,-15.5 94.09,-8.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+          <div class="card">
+      <h3 class="card-header card-title bg-light">Used by</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: module~~capi__constants_type~~UsedByGraph Pages: 1 -->
+<svg id="modulecapi__constants_typeUsedByGraph" width="611pt" height="180pt"
+ viewBox="0.00 0.00 611.00 180.04" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~capi__constants_type~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 176.04)">
+<title>module~~capi__constants_type~~UsedByGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-176.04 607,-176.04 607,4 -4,4"/>
+<!-- module~capi__constants_type -->
+<g id="module~~capi__constants_type~~UsedByGraph_node1" class="node">
+<title>module~capi__constants_type</title>
+<polygon fill="none" stroke="black" points="125,-108 0,-108 0,-84 125,-84 125,-108"/>
+<text text-anchor="middle" x="62.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50">capi__constants_type</text>
+</g>
+<!-- module~capi__constants -->
+<g id="module~~capi__constants_type~~UsedByGraph_node2" class="node">
+<title>module~capi__constants</title>
+<g id="a_module~~capi__constants_type~~UsedByGraph_node2"><a xlink:href="../module/capi__constants.html" xlink:title="capi__constants">
+<polygon fill="#337ab7" stroke="#337ab7" points="423,-108 326,-108 326,-84 423,-84 423,-108"/>
+<text text-anchor="middle" x="374.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi__constants</text>
+</a>
+</g>
+</g>
+<!-- module~capi__constants&#45;&gt;module~capi__constants_type -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge1" class="edge">
+<title>module~capi__constants&#45;&gt;module~capi__constants_type</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M362.51,-108.16C347.77,-123.47 319.96,-148.96 290,-159 235.63,-177.21 215.99,-175.22 161,-159 131.83,-150.4 103.18,-130.05 84.56,-114.79"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="86.65,-111.97 76.75,-108.2 82.13,-117.32 86.65,-111.97"/>
+</g>
+<!-- module~capi__constants_2010 -->
+<g id="module~~capi__constants_type~~UsedByGraph_node3" class="node">
+<title>module~capi__constants_2010</title>
+<g id="a_module~~capi__constants_type~~UsedByGraph_node3"><a xlink:href="../module/capi__constants_2010.html" xlink:title="capi__constants_2010">
+<polygon fill="#337ab7" stroke="#337ab7" points="290,-150 161,-150 161,-126 290,-126 290,-150"/>
+<text text-anchor="middle" x="225.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi__constants_2010</text>
+</a>
+</g>
+</g>
+<!-- module~capi__constants&#45;&gt;module~capi__constants_2010 -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge7" class="edge">
+<title>module~capi__constants&#45;&gt;module~capi__constants_2010</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M331.38,-108.04C314.92,-112.74 295.89,-118.18 278.58,-123.12"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="277.28,-119.85 268.63,-125.96 279.21,-126.58 277.28,-119.85"/>
+</g>
+<!-- module~capi__constants_2014 -->
+<g id="module~~capi__constants_type~~UsedByGraph_node4" class="node">
+<title>module~capi__constants_2014</title>
+<g id="a_module~~capi__constants_type~~UsedByGraph_node4"><a xlink:href="../module/capi__constants_2014.html" xlink:title="capi__constants_2014">
+<polygon fill="#337ab7" stroke="#337ab7" points="290,-108 161,-108 161,-84 290,-84 290,-108"/>
+<text text-anchor="middle" x="225.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi__constants_2014</text>
+</a>
+</g>
+</g>
+<!-- module~capi__constants&#45;&gt;module~capi__constants_2014 -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge8" class="edge">
+<title>module~capi__constants&#45;&gt;module~capi__constants_2014</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M325.77,-96C317.58,-96 308.89,-96 300.21,-96"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="300.03,-92.5 290.03,-96 300.03,-99.5 300.03,-92.5"/>
+</g>
+<!-- module~capi__constants_2018 -->
+<g id="module~~capi__constants_type~~UsedByGraph_node5" class="node">
+<title>module~capi__constants_2018</title>
+<g id="a_module~~capi__constants_type~~UsedByGraph_node5"><a xlink:href="../module/capi__constants_2018.html" xlink:title="capi__constants_2018">
+<polygon fill="#337ab7" stroke="#337ab7" points="290,-66 161,-66 161,-42 290,-42 290,-66"/>
+<text text-anchor="middle" x="225.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi__constants_2018</text>
+</a>
+</g>
+</g>
+<!-- module~capi__constants&#45;&gt;module~capi__constants_2018 -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge9" class="edge">
+<title>module~capi__constants&#45;&gt;module~capi__constants_2018</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M331.38,-83.96C314.92,-79.26 295.89,-73.82 278.58,-68.88"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="279.21,-65.42 268.63,-66.04 277.28,-72.15 279.21,-65.42"/>
+</g>
+<!-- module~capi__constants_2022 -->
+<g id="module~~capi__constants_type~~UsedByGraph_node6" class="node">
+<title>module~capi__constants_2022</title>
+<g id="a_module~~capi__constants_type~~UsedByGraph_node6"><a xlink:href="../module/capi__constants_2022.html" xlink:title="capi__constants_2022">
+<polygon fill="#337ab7" stroke="#337ab7" points="290,-24 161,-24 161,0 290,0 290,-24"/>
+<text text-anchor="middle" x="225.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi__constants_2022</text>
+</a>
+</g>
+</g>
+<!-- module~capi__constants&#45;&gt;module~capi__constants_2022 -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge10" class="edge">
+<title>module~capi__constants&#45;&gt;module~capi__constants_2022</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M360.26,-83.81C344.54,-69.87 317.02,-47.17 290,-33 286.46,-31.14 282.72,-29.4 278.9,-27.79"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="279.9,-24.42 269.31,-24.02 277.34,-30.93 279.9,-24.42"/>
+</g>
+<!-- module~capi__constants_2010&#45;&gt;module~capi__constants_type -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge2" class="edge">
+<title>module~capi__constants_2010&#45;&gt;module~capi__constants_type</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M178.36,-125.96C160.01,-121.18 138.71,-115.62 119.48,-110.6"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="120.2,-107.17 109.64,-108.04 118.44,-113.95 120.2,-107.17"/>
+</g>
+<!-- module~capi__constants_2014&#45;&gt;module~capi__constants_type -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge3" class="edge">
+<title>module~capi__constants_2014&#45;&gt;module~capi__constants_type</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M160.87,-96C152.5,-96 143.87,-96 135.37,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="135.09,-92.5 125.09,-96 135.09,-99.5 135.09,-92.5"/>
+</g>
+<!-- module~capi__constants_2018&#45;&gt;module~capi__constants_type -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge4" class="edge">
+<title>module~capi__constants_2018&#45;&gt;module~capi__constants_type</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M178.36,-66.04C160.01,-70.82 138.71,-76.38 119.48,-81.4"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="118.44,-78.05 109.64,-83.96 120.2,-84.83 118.44,-78.05"/>
+</g>
+<!-- module~capi__constants_2022&#45;&gt;module~capi__constants_type -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge5" class="edge">
+<title>module~capi__constants_2022&#45;&gt;module~capi__constants_type</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M182.91,-24.06C175.48,-26.69 167.91,-29.69 161,-33 134.52,-45.68 106.6,-64.33 87.46,-78.05"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="85.35,-75.26 79.32,-83.97 89.46,-80.92 85.35,-75.26"/>
+</g>
+<!-- module~capi -->
+<g id="module~~capi__constants_type~~UsedByGraph_node7" class="node">
+<title>module~capi</title>
+<g id="a_module~~capi__constants_type~~UsedByGraph_node7"><a xlink:href="../module/capi.html" xlink:title="capi">
+<polygon fill="#337ab7" stroke="#337ab7" points="513,-108 459,-108 459,-84 513,-84 513,-108"/>
+<text text-anchor="middle" x="486" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi</text>
+</a>
+</g>
+</g>
+<!-- module~capi&#45;&gt;module~capi__constants -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge6" class="edge">
+<title>module~capi&#45;&gt;module~capi__constants</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M458.77,-96C451.05,-96 442.28,-96 433.39,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="433.36,-92.5 423.36,-96 433.36,-99.5 433.36,-92.5"/>
+</g>
+<!-- module~codata -->
+<g id="module~~capi__constants_type~~UsedByGraph_node8" class="node">
+<title>module~codata</title>
+<g id="a_module~~capi__constants_type~~UsedByGraph_node8"><a xlink:href="../module/codata.html" xlink:title="codata">
+<polygon fill="#337ab7" stroke="#337ab7" points="603,-108 549,-108 549,-84 603,-84 603,-108"/>
+<text text-anchor="middle" x="576" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata</text>
+</a>
+</g>
+</g>
+<!-- module~codata&#45;&gt;module~capi -->
+<g id="module~~capi__constants_type~~UsedByGraph_edge11" class="edge">
+<title>module~codata&#45;&gt;module~capi</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M548.6,-96C540.61,-96 531.69,-96 523.18,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="523.08,-92.5 513.08,-96 523.08,-99.5 523.08,-92.5"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsedByGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsedByGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="518pt" height="32pt"
+ viewBox="0.00 0.00 517.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 513.5,-28 513.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 164,-24 164,0 234,0 234,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="310,-24 252,-24 252,0 310,0 310,-24"/>
+<text text-anchor="middle" x="281" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="386,-24 328,-24 328,0 386,0 386,-24"/>
+<text text-anchor="middle" x="357" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="509.5,-24 404.5,-24 404.5,0 509.5,0 509.5,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      <br>
+
+
+
+
+
+
+        <section>
+          <h2>Derived Types</h2>
+              <div class="card">
+    <div class="card-header codesum">
+      <span class="anchor" id="type-capi_constant_type"></span>
+      <h3>
+        type, public, bind(C)&nbsp;::&nbsp;
+        <a href='../type/capi_constant_type.html'>capi_constant_type</a>
+        
+      </h3>
+    </div>
+    <div class="card-body">
+      <p>Derived type for representing a Codata constant in C.</p>
+
+        <h4>Components</h4>
+          <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name"></span>
+              character(kind=c_char, len=1),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>name</strong>(65)</td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-uncertainty"></span>
+              real(kind=c_double),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>uncertainty</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-unit"></span>
+              character(kind=c_char, len=1),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>unit</strong>(33)</td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-value"></span>
+              real(kind=c_double),
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>value</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              codata
+ was developed by Milan Skocic<br>              &copy; 2024 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-06-18T09:40:22.411591             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

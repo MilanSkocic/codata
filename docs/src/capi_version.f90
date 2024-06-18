@@ -1,25 +1,25 @@
 module capi__version
-    !! Version: C API.
-    use iso_c_binding, only: c_null_char, c_ptr, c_loc
-    use iapws__version
-    implicit none
-    private
+    !! Version
+use iso_c_binding, only: c_ptr, c_null_char, c_loc
+use codata__version, only: get_version
+implicit none
+private
 
-    character(len=:), allocatable, target :: version_c
+character(len=:), allocatable, target :: version_c
 
-    public :: capi_get_version
+public :: capi_get_version
 
 contains
 
-function capi_get_version()bind(c,name="iapws_get_version")result(cptr)
-    !! Get the version.
-    implicit none
-    
-    ! Returns   
-    type(c_ptr) :: cptr
-        !! Pointer to version string.
 
-    character(len=:), pointer :: fptr
+function capi_get_version()bind(C, name="codata_get_version")result(cptr)
+    !! Get the version
+    implicit none
+    type(c_ptr) :: cptr
+        !! C pointer to a string indicating the version.
+
+    character(len=:), pointer :: fptr 
+
     fptr => get_version() 
 
     if(allocated(version_c))then

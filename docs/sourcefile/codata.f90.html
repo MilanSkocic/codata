@@ -1,0 +1,594 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Fortran library providing the codata constants.">
+    <meta name="author" content="Milan Skocic" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>codata.f90 &ndash; codata</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">codata </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Contributing and specs</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>codata.f90
+      <small>Source File</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 0.2% of total for source files.">6 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/codata.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+            <li class="breadcrumb-item active" aria-current="page">codata.f90</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#mods-0"
+         aria-expanded="false" aria-controls="mods-0">
+         <h4 class="card-header bg-primary text-white">Modules</h4>
+      </a>
+      <div id="mods-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/codata.html">codata</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../sourcefile/codata.f90.html#src">codata.f90</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">This file depends on</h3>
+          </div>
+          <div class="card-body">
+            <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: sourcefile~~codata.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefilecodataf90EfferentGraph" width="641pt" height="216pt"
+ viewBox="0.00 0.00 641.00 215.84" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~codata.f90~~EfferentGraph" class="graph" transform="scale(1.38 1.38) rotate(0) translate(4 294.68)">
+<title>sourcefile~~codata.f90~~EfferentGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-294.68 883,-294.68 883,4 -4,4"/>
+<!-- sourcefile~codata.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~codata.f90</title>
+<polygon fill="none" stroke="black" points="879,-100 809,-100 809,-76 879,-76 879,-100"/>
+<text text-anchor="middle" x="844" y="-85.6" font-family="Helvetica,sans-Serif" font-size="10.50">codata.f90</text>
+</g>
+<!-- sourcefile~capi.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~capi.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node2"><a xlink:href="../sourcefile/capi.f90.html" xlink:title="capi.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="773,-100 718,-100 718,-76 773,-76 773,-100"/>
+<text text-anchor="middle" x="745.5" y="-85.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~codata.f90&#45;&gt;sourcefile~capi.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~codata.f90&#45;&gt;sourcefile~capi.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M808.98,-88C800.74,-88 791.89,-88 783.52,-88"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="783.25,-84.5 773.25,-88 783.25,-91.5 783.25,-84.5"/>
+</g>
+<!-- sourcefile~codata_constants.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node3" class="node">
+<title>sourcefile~codata_constants.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node3"><a xlink:href="../sourcefile/codata_constants.f90.html" xlink:title="codata_constants.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="525,-272 399,-272 399,-248 525,-248 525,-272"/>
+<text text-anchor="middle" x="462" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata_constants.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~codata.f90&#45;&gt;sourcefile~codata_constants.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge2" class="edge">
+<title>sourcefile~codata.f90&#45;&gt;sourcefile~codata_constants.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M821.46,-100.09C771.92,-127.55 645.57,-195.59 534,-239 528.83,-241.01 523.39,-242.94 517.92,-244.76"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="516.53,-241.52 508.08,-247.9 518.67,-248.19 516.53,-241.52"/>
+</g>
+<!-- sourcefile~codata_version.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node4" class="node">
+<title>sourcefile~codata_version.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node4"><a xlink:href="../sourcefile/codata_version.f90.html" xlink:title="codata_version.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="519,-24 405,-24 405,0 519,0 519,-24"/>
+<text text-anchor="middle" x="462" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata_version.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~codata.f90&#45;&gt;sourcefile~codata_version.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge3" class="edge">
+<title>sourcefile~codata.f90&#45;&gt;sourcefile~codata_version.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M808.68,-76.84C797.39,-73.4 784.73,-69.79 773,-67 689.76,-47.2 592.41,-31.05 529.33,-21.49"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="529.53,-17.98 519.12,-19.95 528.49,-24.9 529.53,-17.98"/>
+</g>
+<!-- sourcefile~capi_constants.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node5" class="node">
+<title>sourcefile~capi_constants.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node5"><a xlink:href="../sourcefile/capi_constants.f90.html" xlink:title="capi_constants.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="682,-138 570,-138 570,-114 682,-114 682,-138"/>
+<text text-anchor="middle" x="626" y="-123.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi_constants.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~capi.f90&#45;&gt;sourcefile~capi_constants.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge4" class="edge">
+<title>sourcefile~capi.f90&#45;&gt;sourcefile~capi_constants.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M717.84,-96.62C704.84,-100.83 688.82,-106.01 673.87,-110.84"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="672.68,-107.55 664.25,-113.95 674.84,-114.21 672.68,-107.55"/>
+</g>
+<!-- sourcefile~capi_version.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node6" class="node">
+<title>sourcefile~capi_version.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node6"><a xlink:href="../sourcefile/capi_version.f90.html" xlink:title="capi_version.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="676,-89 576,-89 576,-65 676,-65 676,-89"/>
+<text text-anchor="middle" x="626" y="-74.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi_version.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~capi.f90&#45;&gt;sourcefile~capi_version.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge5" class="edge">
+<title>sourcefile~capi.f90&#45;&gt;sourcefile~capi_version.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M717.84,-85.5C708.4,-84.62 697.37,-83.59 686.32,-82.55"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="686.49,-79.05 676.21,-81.61 685.84,-86.02 686.49,-79.05"/>
+</g>
+<!-- sourcefile~codata_constants_2010.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node7" class="node">
+<title>sourcefile~codata_constants_2010.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node7"><a xlink:href="../sourcefile/codata_constants_2010.f90.html" xlink:title="codata_constants_2010.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="354,-188 196,-188 196,-164 354,-164 354,-188"/>
+<text text-anchor="middle" x="275" y="-173.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata_constants_2010.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_2010.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge6" class="edge">
+<title>sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_2010.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M407.55,-247.88C401.39,-245.43 395.39,-242.49 390,-239 369.37,-225.63 374.8,-210.11 354,-197 351.21,-195.24 348.28,-193.63 345.25,-192.15"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="346.5,-188.88 335.93,-188.11 343.71,-195.3 346.5,-188.88"/>
+</g>
+<!-- sourcefile~codata_constants_2014.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node8" class="node">
+<title>sourcefile~codata_constants_2014.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node8"><a xlink:href="../sourcefile/codata_constants_2014.f90.html" xlink:title="codata_constants_2014.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="354,-146 196,-146 196,-122 354,-122 354,-146"/>
+<text text-anchor="middle" x="275" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata_constants_2014.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_2014.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge7" class="edge">
+<title>sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_2014.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M403.21,-247.85C398.44,-245.42 393.94,-242.5 390,-239 359.64,-212.01 384.68,-181.61 354,-155 352.49,-153.69 350.91,-152.46 349.26,-151.31"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="350.98,-148.26 340.6,-146.15 347.4,-154.27 350.98,-148.26"/>
+</g>
+<!-- sourcefile~codata_constants_2018.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node9" class="node">
+<title>sourcefile~codata_constants_2018.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node9"><a xlink:href="../sourcefile/codata_constants_2018.f90.html" xlink:title="codata_constants_2018.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="354,-272 196,-272 196,-248 354,-248 354,-272"/>
+<text text-anchor="middle" x="275" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata_constants_2018.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_2018.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge8" class="edge">
+<title>sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_2018.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M398.88,-260C387.76,-260 375.98,-260 364.29,-260"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="364.05,-256.5 354.05,-260 364.05,-263.5 364.05,-256.5"/>
+</g>
+<!-- sourcefile~codata_constants_2022.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node10" class="node">
+<title>sourcefile~codata_constants_2022.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node10"><a xlink:href="../sourcefile/codata_constants_2022.f90.html" xlink:title="codata_constants_2022.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="354,-230 196,-230 196,-206 354,-206 354,-230"/>
+<text text-anchor="middle" x="275" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata_constants_2022.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_2022.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge9" class="edge">
+<title>sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_2022.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M407.99,-247.96C386.41,-243.07 361.3,-237.37 338.81,-232.26"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="339.55,-228.84 329.02,-230.04 338,-235.66 339.55,-228.84"/>
+</g>
+<!-- sourcefile~codata_constants_type.fypp -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node11" class="node">
+<title>sourcefile~codata_constants_type.fypp</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node11"><a xlink:href="../sourcefile/codata_constants_type.fypp.html" xlink:title="codata_constants_type.fypp">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="160,-230 0,-230 0,-206 160,-206 160,-230"/>
+<text text-anchor="middle" x="80" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata_constants_type.fypp</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_type.fypp -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge10" class="edge">
+<title>sourcefile~codata_constants.f90&#45;&gt;sourcefile~codata_constants_type.fypp</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M417.11,-272.1C363.93,-284.81 272.01,-300.46 196,-281 162.12,-272.33 127.5,-251.38 105.22,-236.01"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="107.21,-233.14 97.03,-230.23 103.18,-238.86 107.21,-233.14"/>
+</g>
+<!-- sourcefile~capi_constants_2010.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node12" class="node">
+<title>sourcefile~capi_constants_2010.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node12"><a xlink:href="../sourcefile/capi_constants_2010.f90.html" xlink:title="capi_constants_2010.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="534,-146 390,-146 390,-122 534,-122 534,-146"/>
+<text text-anchor="middle" x="462" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi_constants_2010.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_2010.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge11" class="edge">
+<title>sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_2010.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M569.7,-128.73C561.47,-129.14 552.84,-129.56 544.2,-129.99"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="543.9,-126.5 534.09,-130.49 544.25,-133.49 543.9,-126.5"/>
+</g>
+<!-- sourcefile~capi_constants_2014.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node13" class="node">
+<title>sourcefile~capi_constants_2014.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node13"><a xlink:href="../sourcefile/capi_constants_2014.f90.html" xlink:title="capi_constants_2014.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="534,-104 390,-104 390,-80 534,-80 534,-104"/>
+<text text-anchor="middle" x="462" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi_constants_2014.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_2014.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge12" class="edge">
+<title>sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_2014.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M569.7,-114.39C556.99,-111.73 543.34,-108.86 530.19,-106.1"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="530.76,-102.65 520.26,-104.02 529.32,-109.5 530.76,-102.65"/>
+</g>
+<!-- sourcefile~capi_constants_2018.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node14" class="node">
+<title>sourcefile~capi_constants_2018.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node14"><a xlink:href="../sourcefile/capi_constants_2018.f90.html" xlink:title="capi_constants_2018.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="534,-230 390,-230 390,-206 534,-206 534,-230"/>
+<text text-anchor="middle" x="462" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi_constants_2018.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_2018.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge13" class="edge">
+<title>sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_2018.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M612.8,-138.01C596.26,-153.67 565.18,-180.96 534,-197 530.21,-198.95 526.2,-200.75 522.11,-202.4"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="520.6,-199.23 512.44,-205.99 523.04,-205.79 520.6,-199.23"/>
+</g>
+<!-- sourcefile~capi_constants_2022.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node15" class="node">
+<title>sourcefile~capi_constants_2022.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node15"><a xlink:href="../sourcefile/capi_constants_2022.f90.html" xlink:title="capi_constants_2022.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="534,-188 390,-188 390,-164 534,-164 534,-188"/>
+<text text-anchor="middle" x="462" y="-173.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi_constants_2022.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_2022.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge14" class="edge">
+<title>sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_2022.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M587.86,-138.03C571.39,-143.31 551.75,-149.55 534,-155 527.56,-156.98 520.78,-159.03 514.07,-161.03"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="512.93,-157.72 504.34,-163.93 514.92,-164.43 512.93,-157.72"/>
+</g>
+<!-- sourcefile~capi_constants_type.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_node16" class="node">
+<title>sourcefile~capi_constants_type.f90</title>
+<g id="a_sourcefile~~codata.f90~~EfferentGraph_node16"><a xlink:href="../sourcefile/capi_constants_type.f90.html" xlink:title="capi_constants_type.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="345,-104 205,-104 205,-80 345,-80 345,-104"/>
+<text text-anchor="middle" x="275" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">capi_constants_type.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_type.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge15" class="edge">
+<title>sourcefile~capi_constants.f90&#45;&gt;sourcefile~capi_constants_type.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M599.03,-113.93C589.68,-109.29 579.19,-103.72 570,-98 553.03,-87.42 552.97,-77.32 534,-71 463.31,-47.44 375.95,-63.21 323.18,-77.24"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="322.14,-73.9 313.42,-79.93 323.99,-80.65 322.14,-73.9"/>
+</g>
+<!-- sourcefile~capi_version.f90&#45;&gt;sourcefile~codata_version.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge16" class="edge">
+<title>sourcefile~capi_version.f90&#45;&gt;sourcefile~codata_version.f90</title>
+<path fill="none" stroke="#ffda00" stroke-dasharray="5,2" d="M597.68,-64.84C579.69,-56.94 555.57,-46.56 534,-38 525.22,-34.51 515.76,-30.93 506.71,-27.59"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="507.68,-24.22 497.09,-24.06 505.27,-30.79 507.68,-24.22"/>
+</g>
+<!-- sourcefile~codata_constants_2010.f90&#45;&gt;sourcefile~codata_constants_type.fypp -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge17" class="edge">
+<title>sourcefile~codata_constants_2010.f90&#45;&gt;sourcefile~codata_constants_type.fypp</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M218.69,-188.04C196.08,-192.96 169.76,-198.69 146.21,-203.81"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="145.34,-200.42 136.31,-205.96 146.83,-207.26 145.34,-200.42"/>
+</g>
+<!-- sourcefile~codata_constants_2014.f90&#45;&gt;sourcefile~codata_constants_type.fypp -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge18" class="edge">
+<title>sourcefile~codata_constants_2014.f90&#45;&gt;sourcefile~codata_constants_type.fypp</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M222.24,-146.07C213.37,-148.67 204.33,-151.65 196,-155 164.81,-167.53 131.34,-186.57 108.6,-200.43"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="106.51,-197.61 99.84,-205.84 110.19,-203.56 106.51,-197.61"/>
+</g>
+<!-- sourcefile~codata_constants_2018.f90&#45;&gt;sourcefile~codata_constants_type.fypp -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge19" class="edge">
+<title>sourcefile~codata_constants_2018.f90&#45;&gt;sourcefile~codata_constants_type.fypp</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M218.69,-247.96C196.08,-243.04 169.76,-237.31 146.21,-232.19"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="146.83,-228.74 136.31,-230.04 145.34,-235.58 146.83,-228.74"/>
+</g>
+<!-- sourcefile~codata_constants_2022.f90&#45;&gt;sourcefile~codata_constants_type.fypp -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge20" class="edge">
+<title>sourcefile~codata_constants_2022.f90&#45;&gt;sourcefile~codata_constants_type.fypp</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M195.78,-218C187.46,-218 178.95,-218 170.51,-218"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="170.28,-214.5 160.28,-218 170.27,-221.5 170.28,-214.5"/>
+</g>
+<!-- sourcefile~capi_constants_2010.f90&#45;&gt;sourcefile~codata_constants_2010.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge22" class="edge">
+<title>sourcefile~capi_constants_2010.f90&#45;&gt;sourcefile~codata_constants_2010.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M407.99,-146.04C386.41,-150.93 361.3,-156.63 338.81,-161.74"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="338,-158.34 329.02,-163.96 339.55,-165.16 338,-158.34"/>
+</g>
+<!-- sourcefile~capi_constants_2010.f90&#45;&gt;sourcefile~capi_constants_type.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge21" class="edge">
+<title>sourcefile~capi_constants_2010.f90&#45;&gt;sourcefile~capi_constants_type.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M407.99,-121.96C386.41,-117.07 361.3,-111.37 338.81,-106.26"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="339.55,-102.84 329.02,-104.04 338,-109.66 339.55,-102.84"/>
+</g>
+<!-- sourcefile~capi_constants_2014.f90&#45;&gt;sourcefile~codata_constants_2014.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge24" class="edge">
+<title>sourcefile~capi_constants_2014.f90&#45;&gt;sourcefile~codata_constants_2014.f90</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M407.99,-104.04C386.41,-108.93 361.3,-114.63 338.81,-119.74"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="338,-116.34 329.02,-121.96 339.55,-123.16 338,-116.34"/>
+</g>
+<!-- sourcefile~capi_constants_2014.f90&#45;&gt;sourcefile~capi_constants_type.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge23" class="edge">
+<title>sourcefile~capi_constants_2014.f90&#45;&gt;sourcefile~capi_constants_type.f90</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M389.74,-92C378.4,-92 366.62,-92 355.11,-92"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="355.09,-88.5 345.09,-92 355.09,-95.5 355.09,-88.5"/>
+</g>
+<!-- sourcefile~capi_constants_2018.f90&#45;&gt;sourcefile~codata_constants_2018.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge26" class="edge">
+<title>sourcefile~capi_constants_2018.f90&#45;&gt;sourcefile~codata_constants_2018.f90</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M407.99,-230.04C386.41,-234.93 361.3,-240.63 338.81,-245.74"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="338,-242.34 329.02,-247.96 339.55,-249.16 338,-242.34"/>
+</g>
+<!-- sourcefile~capi_constants_2018.f90&#45;&gt;sourcefile~capi_constants_type.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge25" class="edge">
+<title>sourcefile~capi_constants_2018.f90&#45;&gt;sourcefile~capi_constants_type.f90</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M403.21,-205.85C398.44,-203.42 393.94,-200.5 390,-197 359.64,-170.01 384.68,-139.61 354,-113 352.49,-111.69 350.91,-110.46 349.26,-109.31"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="350.98,-106.26 340.6,-104.15 347.4,-112.27 350.98,-106.26"/>
+</g>
+<!-- sourcefile~capi_constants_2022.f90&#45;&gt;sourcefile~codata_constants_2022.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge28" class="edge">
+<title>sourcefile~capi_constants_2022.f90&#45;&gt;sourcefile~codata_constants_2022.f90</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M407.99,-188.04C386.41,-192.93 361.3,-198.63 338.81,-203.74"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="338,-200.34 329.02,-205.96 339.55,-207.16 338,-200.34"/>
+</g>
+<!-- sourcefile~capi_constants_2022.f90&#45;&gt;sourcefile~capi_constants_type.f90 -->
+<g id="sourcefile~~codata.f90~~EfferentGraph_edge27" class="edge">
+<title>sourcefile~capi_constants_2022.f90&#45;&gt;sourcefile~capi_constants_type.f90</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M407.55,-163.88C401.39,-161.43 395.39,-158.49 390,-155 369.37,-141.63 374.8,-126.11 354,-113 351.21,-111.24 348.28,-109.63 345.25,-108.15"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="346.5,-104.88 335.93,-104.11 343.71,-111.3 346.5,-104.88"/>
+</g>
+</g>
+</svg>
+</div>                <script>
+                  var pansourcefilecodataf90EfferentGraph = svgPanZoom('#sourcefilecodataf90EfferentGraph',
+                    {zoomEnabled: true, controlIconsEnabled: true, fit: true, center: true,}
+                  );
+                </script>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#EfferentGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="EfferentGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="70,-24 0,-24 0,0 70,0 70,-24"/>
+<text text-anchor="middle" x="35" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="193.5,-24 88.5,-24 88.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a file to a file which it depends on. A file
+is dependent upon another if the latter must be compiled before the former
+can be.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+<br>
+      <section>
+        <h2><span class="anchor" id="src"></span>Source Code</h2>
+        <div class="hl codehilite"><pre><span></span><a id="ln-1" name="ln-1" href="#ln-1"></a><span class="k">module </span><span class="n">codata</span>
+<a id="ln-2" name="ln-2" href="#ln-2"></a><span class="w">    </span><span class="c">!! Main module for the Codata library.</span>
+<a id="ln-3" name="ln-3" href="#ln-3"></a><span class="k">use </span><span class="n">codata__version</span>
+<a id="ln-4" name="ln-4" href="#ln-4"></a><span class="k">use </span><span class="n">codata__constants</span>
+<a id="ln-5" name="ln-5" href="#ln-5"></a><span class="k">use </span><span class="n">capi</span>
+<a id="ln-6" name="ln-6" href="#ln-6"></a><span class="k">implicit none</span>
+<a id="ln-7" name="ln-7" href="#ln-7"></a>
+<a id="ln-8" name="ln-8" href="#ln-8"></a><span class="k">end module </span><span class="n">codata</span>
+</pre></div>
+
+      </section>
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              codata
+ was developed by Milan Skocic<br>              &copy; 2024 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-06-18T09:40:22.411591             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
