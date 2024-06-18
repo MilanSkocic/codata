@@ -21,7 +21,7 @@ def write_module_start(f, year):
 
     f.write("#define PY_SSIZE_T_CLEAN" + newline)
     f.write("#include <Python.h>" + newline)
-    f.write(f"#include \"codata_constants{suffix:s}.h\"" + newline)
+    f.write(f"#include \"codata.h\"" + newline)
     f.write(newline)
     f.write(f"PyDoc_STRVAR(module_docstring, \"C extension for constants {year:s}.\");" + newline)
     f.write(newline)

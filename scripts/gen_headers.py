@@ -31,7 +31,6 @@ def write_module_start(f, year):
 def write_year(f, year):
     suffix = get_suffix(year)
     f.write(f"ADD_IMPORT extern const int YEAR{suffix:s};" + newline)
-    f.write(newline)
 
 def write_constant(f, var, name, value, uncertainty, unit, year):
     suffix = get_suffix(year)
@@ -49,7 +48,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
     fcode = open(fpath_code, "w")
     fast = open(fpath_ast, "r")
 
-    write_module_start(fcode, year)
+    #write_module_start(fcode, year)
     write_year(fcode, year)
 
     ast = tomlkit.load(fast)
@@ -60,14 +59,14 @@ def run(fpath_ast: str, fpath_code: str)->None:
         unit = ast[var]["unit"]
         write_constant(fcode, var, name, value, uncertainty, unit, year)
     
-    write_module_end(fcode, year)
+    #write_module_end(fcode, year)
 
     fast.close()
     fcode.close()
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(prog='gencheader', description='Generate C headers.')
+    parser = argparse.ArgumentParser(prog='gencheaders', description='Generate C headers.')
     parser.add_argument("ast", help="File path to the Toml file for ast input.")
     parser.add_argument("code", help="File path to the source file for output.")
     args = parser.parse_args() 

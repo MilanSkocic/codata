@@ -48,7 +48,7 @@ if platform.system() == "Darwin":
 # Headers
 root_src = pathlib.Path(f"./src/py{name:s}/include/")
 root_dest = pathlib.Path(f"./src/py{name:s}/")
-files = [f"{name:s}.h"] + [f"{name:s}_constants.h", f"{name:s}_constants_type.h"] + [f"{name:s}_constants_{y:s}.h" for y in ("2022", "2018", "2014", "2010")]
+files = [f"{name:s}.h"]
 for file in files:
     src = root_src / file
     dest = root_dest / file

@@ -1,6 +1,6 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
-#include "codata_constants_2022.h"
+#include "codata.h"
 
 PyDoc_STRVAR(module_docstring, "C extension for constants 2022.");
 

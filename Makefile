@@ -78,7 +78,7 @@ nist:
 sources: nist 
 	make -C src 
 
-headers: sources
+capi: sources
 	make -C include
 
 cpython: sources
