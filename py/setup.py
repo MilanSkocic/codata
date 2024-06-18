@@ -136,5 +136,6 @@ if __name__ == "__main__":
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,
                         extra_objects=extra_objects)
-    setup(ext_modules=[mod_constants_latest, mod_constants_2018, mod_constants_2014, mod_constants_2010, mod_version])
+    setup(version=version,
+          ext_modules=[mod_constants_latest, mod_constants_2018, mod_constants_2014, mod_constants_2010, mod_version])
 

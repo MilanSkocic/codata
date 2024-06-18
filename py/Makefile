@@ -57,9 +57,6 @@ clean:
 	rm -rf __pycache__ 
 	rm -rf wheelhouse 
 	rm -rf $(PY_SRC)/__pycache__
-	
-cleanall: clean
-	
 	rm -f $(PY_SRC)/$(NAME)*.h 
 	rm -f $(PY_SRC)/*.a 
 	rm -f $(PY_SRC)/*.so 

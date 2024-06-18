@@ -102,6 +102,6 @@ clean:
 	make -C src clean
 	make -C include clean
 	make -C stdlib clean
-	make -C py/src/pycodata clean
+	make -C py clean
 	fpm clean --all
 	rm -rf API-doc/*
