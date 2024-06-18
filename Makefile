@@ -12,7 +12,7 @@ endif
 
 SRC_FYPP=$(wildcard ./src/*.fypp)
 
-.PHONY: build nist stdlib sources doc
+.PHONY: build nist stdlib sources doc docs
 
 all: $(LIBNAME)
 
