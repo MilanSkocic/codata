@@ -24,5 +24,5 @@ available for getting the constant value or uncertainty of a constant.
 # Example
 
 ```fortran
-{!./example/example_in_f.f90!}
+{!./example/example.f90!}
 ```
