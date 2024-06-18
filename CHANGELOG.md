@@ -3,8 +3,7 @@
 * Refractoring
 * Merge back C API and python wrapper.
 
-Full changelog available at [github](https://github.com/milanskocic/codata/releases)
-
+**Not released yet**
 
 # Version 1.2.0
 

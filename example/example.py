@@ -1,6 +1,6 @@
 r"""Example in python."""
 import sys
-sys.path.insert(0, "../src/")
+sys.path.insert(0, "../py/src/")
 import pycodata
 
 print("########## VERSION ##########")

@@ -32,6 +32,7 @@ if [[ "$OSTYPE" == "darwin"* ]];then
 fi
 
 cp -f VERSION ./py/VERSION
+cp -f LICENSE ./py/LICENSE
 
 export LIBNAME
 echo "LIBNAME=" $LIBNAME

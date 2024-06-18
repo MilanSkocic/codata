@@ -4,7 +4,7 @@ use iso_fortran_env
 implicit none
 private
 
-character(len=*), parameter :: version = "1.2.0"
+character(len=*), parameter :: version = "1.2.1"
 character(len=:), allocatable, target :: version_f
 
 public :: get_version

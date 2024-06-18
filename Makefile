@@ -49,6 +49,7 @@ install_dirs:
 	mkdir -p $(install_dir)/include
 	mkdir -p $(install_dir)/lib
 	fpm install --prefix=$(install_dir) --profile=$(btype)
+	cp -f $(INCLUDE_DIR)/$(NAME)*.h $(install_dir)/include
 
 install_linux: 
 	cp -f $(BUILD_DIR)/$(LIBNAME).so $(install_dir)/lib
@@ -77,10 +78,13 @@ nist:
 sources: nist 
 	make -C src 
 
-headers: nist
+headers: sources
 	make -C include
 
-stdlib: nist sources
+cpython: sources
+	make -C py/src/pycodata
+
+stdlib: sources
 	make -C stdlib
 
 doc:
@@ -98,5 +102,6 @@ clean:
 	make -C src clean
 	make -C include clean
 	make -C stdlib clean
+	make -C py/src/pycodata clean
 	fpm clean --all
 	rm -rf API-doc/*
