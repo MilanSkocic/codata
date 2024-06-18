@@ -1,0 +1,387 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="IAPWS - Water properties">
+    <meta name="author" content="Milan Skocic" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>Examples &ndash; iapws</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">iapws </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="index.html">Contributing and specs</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>Examples</h1>
+    <div class="container p-2 mb-4 bg-light border rounded-3">
+      <div class="row align-items-center justify-content-between">
+        <div class="col">
+          <ul class="list-inline" style="margin-bottom:0px; display:inline">
+          </ul>
+        </div>
+        <div class="col">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='index.html'>Contributing and specs</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Examples</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-3">
+        <div class="card card-body bg-light" id="sidebar-toc">
+          <ul class="nav flex-column align-items">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Contributing and specs</a>
+            </li>
+          </ul>
+          <hr>
+          <nav class="nav nav-pills flex-column">
+              <a class="nav-link" href="changelog.html">Changelog</a>
+              <a class="nav-link active disabled" href="examples.html">Examples</a>
+              <a class="nav-link" href="license.html">License</a>
+              <a class="nav-link" href="references.html">References</a>
+              <a class="nav-link" href="specs/index.html">Specifications (specs)</a>
+                <nav class="nav nav-pills flex-column">
+                                <a class="nav-link" href="specs/capi.html">C API</a>
+              <a class="nav-link" href="specs/iapws_g704.html">IPAWS G7-04</a>
+              <a class="nav-link" href="specs/iapws_r283.html">IAPWS R2-83</a>
+              <a class="nav-link" href="specs/iapws_r797.html">IAPWS R7-97</a>
+
+                </nav>
+          </nav>
+        </div>
+      </div>
+
+    <div class="col-9" id='text'>
+      <div class="toc">
+<ul>
+<li><a href="#fortran">Fortran</a></li>
+<li><a href="#c">C</a></li>
+<li><a href="#python">Python</a></li>
+</ul>
+</div>
+<h1 id="fortran">Fortran</h1>
+<div class="codehilite"><pre><span></span><code><span class="k">program </span><span class="n">example_in_f</span>
+<span class="w">    </span><span class="k">use </span><span class="n">iso_fortran_env</span>
+<span class="w">    </span><span class="k">use </span><span class="n">iapws</span>
+<span class="w">    </span><span class="k">implicit none</span>
+<span class="k">    </span><span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">ngas</span>
+<span class="w">    </span><span class="kt">real</span><span class="p">(</span><span class="n">real64</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">T</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">kh_res</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">kd_res</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">gas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;O2&quot;</span>
+<span class="w">    </span><span class="kt">integer</span><span class="p">(</span><span class="n">int32</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">heavywater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">gas_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">gases_list</span><span class="p">(:)</span>
+<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">gases_str</span>
+
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########################## IAPWS VERSION ##########################&#39;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;version &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">get_version</span><span class="p">()</span><span class="w">  </span>
+
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########################## IAPWS R2-83 ##########################&#39;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s2">&quot;(a, f10.3, a)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tc in h2o=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Tc_H2O</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; k&quot;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s2">&quot;(a, f10.3, a)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pc in h2o=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pc_H2O</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; mpa&quot;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s2">&quot;(a, f10.3, a)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;rhoc in h2o=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rhoc_H2O</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; kg/m3&quot;</span>
+
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s2">&quot;(a, f10.3, a)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tc in D2O=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Tc_D2O</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; k&quot;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s2">&quot;(a, f10.3, a)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pc in D2O=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pc_D2O</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; mpa&quot;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s2">&quot;(a, f10.3, a)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;rhoc in D2O=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">rhoc_D2O</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; kg/m3&quot;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########################## IAPWS G7-04 ##########################&#39;</span>
+<span class="w">    </span><span class="c">! Compute kh and kd in H2O</span>
+<span class="w">    </span><span class="n">T</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="mf">5.0d0</span>
+<span class="w">    </span><span class="k">call </span><span class="n">kh</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">gas</span><span class="p">,</span><span class="w"> </span><span class="n">heavywater</span><span class="p">,</span><span class="w"> </span><span class="n">kh_res</span><span class="p">)</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s2">&quot;(A10, 1X, A10, 1X, A2, F10.1, A, 4X, A3, SP, F10.4)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Gas=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">gas</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;T=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;kh=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">kh_res</span>
+
+<span class="w">    </span><span class="k">call </span><span class="n">kd</span><span class="p">(</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">gas</span><span class="p">,</span><span class="w"> </span><span class="n">heavywater</span><span class="p">,</span><span class="w"> </span><span class="n">kd_res</span><span class="p">)</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s2">&quot;(A10, 1X, A10, 1X, A2, F10.1, A, 4X, A3, SP, F15.4)&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Gas=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">gas</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;T=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;kh=&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">kd_res</span>
+
+<span class="w">    </span><span class="c">! Get and print available gases</span>
+<span class="w">    </span><span class="n">heavywater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="n">ngas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ngases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="w">    </span><span class="n">gases_list</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">null</span><span class="p">()</span>
+<span class="w">    </span><span class="n">gases_list</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">gases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="w">    </span><span class="n">gases_str</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">gases2</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Gases in H2O: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ngas</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">gases_str</span>
+<span class="w">    </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ngas</span>
+<span class="w">        </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">gases_list</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">gas</span>
+<span class="w">    </span><span class="k">enddo</span>
+
+<span class="k">    </span><span class="n">heavywater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="n">ngas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ngases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="w">    </span><span class="n">gases_list</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">null</span><span class="p">()</span>
+<span class="w">    </span><span class="n">gases_list</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">gases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="w">    </span><span class="n">gases_str</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">gases2</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Gases in D2O: &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ngas</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">gases_str</span>
+<span class="w">    </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ngas</span>
+<span class="w">        </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">gases_list</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">gas</span>
+<span class="w">    </span><span class="k">enddo</span>
+
+<span class="k">end program</span>
+</code></pre></div>
+
+<h1 id="c">C</h1>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;iapws.h&quot;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25.0</span><span class="p">;</span><span class="w"> </span><span class="cm">/* in C*/</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">gas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;O2&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">kh</span><span class="p">,</span><span class="w"> </span><span class="n">kd</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">gases_list</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">gases_str</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ngas</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">heavywater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;########################## IAPWS VERSION ##########################&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;version %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">iapws_get_version</span><span class="p">());</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;########################## IAPWS R2-83 ##########################&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s %10.3f %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tc in H2O&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">iapws_r283_Tc_H2O</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;K&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s %10.3f %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pc in H2O&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">iapws_r283_pc_H2O</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MPa&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s %10.3f %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rhoc in H2O&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">iapws_r283_rhoc_H2O</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;kg/m3&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s %10.3f %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tc in D2O&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">iapws_r283_Tc_D2O</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;K&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s %10.3f %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;pc in D2O&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">iapws_r283_pc_D2O</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MPa&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s %10.3f %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rhoc in D2O&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">iapws_r283_rhoc_D2O</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;kg/m3&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;########################## IAPWS G7-04 ##########################&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="cm">/* Compute kh and kd in H2O*/</span>
+<span class="w">    </span><span class="n">iapws_g704_kh</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">gas</span><span class="p">,</span><span class="w"> </span><span class="n">heavywater</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">kh</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">gas</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Gas=%s</span><span class="se">\t</span><span class="s">T=%fC</span><span class="se">\t</span><span class="s">kh=%+10.4f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">gas</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">kh</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">iapws_g704_kd</span><span class="p">(</span><span class="o">&amp;</span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">gas</span><span class="p">,</span><span class="w"> </span><span class="n">heavywater</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">kd</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">gas</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Gas=%s</span><span class="se">\t</span><span class="s">T=%fC</span><span class="se">\t</span><span class="s">kd=%+15.4f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">gas</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="p">,</span><span class="w"> </span><span class="n">kd</span><span class="p">);</span>
+
+<span class="w">    </span><span class="cm">/* Get and print the available gases */</span>
+<span class="w">    </span><span class="n">ngas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iapws_g704_ngases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">);</span>
+<span class="w">    </span><span class="n">gases_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iapws_g704_gases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">);</span>
+<span class="w">    </span><span class="n">gases_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iapws_g704_gases2</span><span class="p">(</span><span class="n">heavywater</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Gases in H2O: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ngas</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">gases_str</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">ngas</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">gases_list</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="n">heavywater</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ngas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iapws_g704_ngases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">);</span>
+<span class="w">    </span><span class="n">gases_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iapws_g704_gases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">);</span>
+<span class="w">    </span><span class="n">gases_str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">iapws_g704_gases2</span><span class="p">(</span><span class="n">heavywater</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Gases in D2O: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ngas</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">gases_str</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">ngas</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">gases_list</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h1 id="python">Python</h1>
+<div class="codehilite"><pre><span></span><code><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Example in python&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;../py/src/&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">array</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pyiapws</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########################## IAPWS VERSION ##########################&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pyiapws</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########################## IAPWS R2-83 ##########################&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tc in H2O&quot;</span><span class="p">,</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">r283</span><span class="o">.</span><span class="n">Tc_H2O</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pc in H2O&quot;</span><span class="p">,</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">r283</span><span class="o">.</span><span class="n">pc_H2O</span><span class="p">,</span> <span class="s2">&quot;MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;rhoc in H2O&quot;</span><span class="p">,</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">r283</span><span class="o">.</span><span class="n">rhoc_H2O</span><span class="p">,</span> <span class="s2">&quot;kg/m3&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tc in D2O&quot;</span><span class="p">,</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">r283</span><span class="o">.</span><span class="n">Tc_D2O</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pc in D2O&quot;</span><span class="p">,</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">r283</span><span class="o">.</span><span class="n">pc_D2O</span><span class="p">,</span> <span class="s2">&quot;MPa&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;rhoc in D2O&quot;</span><span class="p">,</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">r283</span><span class="o">.</span><span class="n">rhoc_D2O</span><span class="p">,</span> <span class="s2">&quot;kg/m3&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########################## IAPWS G7-04 ##########################&quot;</span><span class="p">)</span>
+<span class="n">gas</span>  <span class="o">=</span> <span class="s2">&quot;O2&quot;</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mf">25.0</span><span class="p">,))</span>
+
+<span class="c1"># Compute kh and kd in H2O</span>
+<span class="n">heavywater</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">kh</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s2">&quot;O2&quot;</span><span class="p">,</span> <span class="n">heavywater</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gas=</span><span class="si">{</span><span class="n">gas</span><span class="si">}</span><span class="se">\t</span><span class="s2">T=</span><span class="si">{</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">C</span><span class="se">\t</span><span class="s2">kh=</span><span class="si">{</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">+10.4f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">kd</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="s2">&quot;O2&quot;</span><span class="p">,</span> <span class="n">heavywater</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="n">array</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gas=</span><span class="si">{</span><span class="n">gas</span><span class="si">}</span><span class="se">\t</span><span class="s2">T=</span><span class="si">{</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">C</span><span class="se">\t</span><span class="s2">kh=</span><span class="si">{</span><span class="n">k</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">+10.4f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get and print the available gases</span>
+<span class="n">heavywater</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">gases_list</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">gases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="n">gases_str</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">gases2</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="n">ngas</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">ngases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gases in H2O: </span><span class="si">{</span><span class="n">ngas</span><span class="si">:}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gases_str</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">gas</span> <span class="ow">in</span> <span class="n">gases_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">gas</span><span class="p">)</span>
+
+<span class="n">heavywater</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">gases_list</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">gases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="n">gases_str</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">gases2</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="n">ngas</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">ngases</span><span class="p">(</span><span class="n">heavywater</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Gases in D2O: </span><span class="si">{</span><span class="n">ngas</span><span class="si">:}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gases_str</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">gas</span> <span class="ow">in</span> <span class="n">gases_list</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">gas</span><span class="p">)</span>
+
+<span class="n">style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;marker&quot;</span><span class="p">:</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="s2">&quot;ls&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;ms&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="n">T_KELVIN</span> <span class="o">=</span> <span class="mf">273.15</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">360.0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">solvent</span> <span class="o">=</span> <span class="p">{</span><span class="kc">True</span><span class="p">:</span> <span class="s2">&quot;D2O&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">:</span> <span class="s2">&quot;H2O&quot;</span><span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Generating plot for kh&quot;</span><span class="p">)</span>
+<span class="n">kname</span> <span class="o">=</span> <span class="s2">&quot;kh&quot;</span>
+<span class="k">for</span> <span class="n">HEAVYWATER</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">solvent</span><span class="p">[</span><span class="n">HEAVYWATER</span><span class="p">])</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;T /°C&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;ln (kh/1GPa)&quot;</span><span class="p">)</span>
+    <span class="n">gases</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">gases</span><span class="p">(</span><span class="n">HEAVYWATER</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">gas</span> <span class="ow">in</span> <span class="n">gases</span><span class="p">:</span>
+        <span class="n">k_m</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">kh</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">gas</span><span class="p">,</span> <span class="n">HEAVYWATER</span><span class="p">)</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">k_m</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1000.0</span>
+        <span class="n">ln_k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">ln_k</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">gas</span><span class="p">,</span> <span class="o">**</span><span class="n">style</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">ncol</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Generating plot for kd&quot;</span><span class="p">)</span>
+<span class="n">kname</span> <span class="o">=</span> <span class="s2">&quot;kd&quot;</span>
+<span class="k">for</span> <span class="n">HEAVYWATER</span> <span class="ow">in</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">solvent</span><span class="p">[</span><span class="n">HEAVYWATER</span><span class="p">])</span>
+    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;T /°C&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;ln kd&quot;</span><span class="p">)</span>
+    <span class="n">gases</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">gases</span><span class="p">(</span><span class="n">HEAVYWATER</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">gas</span> <span class="ow">in</span> <span class="n">gases</span><span class="p">:</span>
+        <span class="n">k_m</span> <span class="o">=</span> <span class="n">pyiapws</span><span class="o">.</span><span class="n">g704</span><span class="o">.</span><span class="n">kd</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">gas</span><span class="p">,</span> <span class="n">HEAVYWATER</span><span class="p">)</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">k_m</span><span class="p">)</span>
+        <span class="n">ln_k</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">ln_k</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">gas</span><span class="p">,</span> <span class="o">**</span><span class="n">style</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">ncol</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+    </div>
+  </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              iapws
+ was developed by Milan Skocic<br>              &copy; 2024 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-06-18T09:13:36.594223             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>

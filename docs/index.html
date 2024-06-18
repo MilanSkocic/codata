@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="IAPWS - Water properties">
+    <meta name="author" content="Milan Skocic" >
+    <link rel="icon" href="./favicon.png">
+
+    <title> iapws </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="./css/pygments.css" rel="stylesheet">
+    <link href="./css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+      <link  href="./tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html">iapws </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="page/index.html">Contributing and specs</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./lists/types.html">Derived Types</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="./search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <!-- Main component for a primary marketing message or call to action -->
+    <div class="p-5 mb-4 bg-light border rounded-3" id="jumbotron">
+      <p>IAPWS - Water properties</p>
+        <p> Find us on&hellip;</p>
+      <p>
+        <a class="btn btn-lg btn-primary" href="https://github.com/MilanSkocic/iapws" role="button">GitHub</a>
+        
+        
+        
+        <a class="btn btn-lg btn-primary" href="https://milanskocic.github.io/iapws/index.html" role="button">The Web</a>
+        <a class="btn btn-lg btn-danger" style="float:right" href="https://github.com/MilanSkocic/iapws/releases" role="button">Download the Source</a>
+      </p>
+    </div>
+
+      <div class="row" id='text'>
+        <div class=col-md-8>
+          <h1>iapws</h1>
+          <p><img alt="iapws" src="./media/logo.png"></p>
+<div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+</div>
+<h1 id="introduction">Introduction</h1>
+<p><code>ipaws</code> is a  Fortran library providing the formulas for computing light and heavy water properties.
+The formulas are taken from http://iapws.org. 
+C API allows usage from C, or can be used as a basis for other wrappers.
+Python wrapper allows easy usage from Python.</p>
+<p>For now, I have implemented the technical report G7-04 for gas solubility. I plan to implement the 
+technical report R7-97. </p>
+<p>To use <code>iapws</code> within your <code>fpm &lt;https://github.com/fortran-lang/fpm&gt;</code>_ project,
+add the following to your <code>fpm.toml</code> file:</p>
+<p>.. code-block::</p>
+<div class="codehilite"><pre><span></span><code><span class="k">[dependencies]</span>
+<span class="na">iapws</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">{ git=&quot;https://github.com/MilanSkocic/iapws.git&quot; }</span>
+</code></pre></div>
+
+<h1 id="dependencies">Dependencies</h1>
+<div class="codehilite"><pre><span></span><code>gcc&gt;=10.0
+gfortran&gt;=10.0
+fpm&gt;=0.7
+</code></pre></div>
+
+<h1 id="installation">Installation</h1>
+<p>A Makefile is provided, which uses <a href="https://fpm.fortran-lang.org">fpm</a>, for building the library.</p>
+<ul>
+<li>On windows, <a href="https://www.msys2.org">msys2</a> needs to be installed. 
+  Add the msys2 binary (usually C:\msys64\usr\bin) to the path in order to be able to use make.</li>
+<li>On Darwin, the <a href="https://formulae.brew.sh/formula/gcc">gcc</a> toolchain needs to be installed.</li>
+</ul>
+<p>Build: the configuration file will set all the environment variables necessary for the compilation</p>
+<div class="codehilite"><pre><span></span><code>    chmod +x configure.sh
+    . ./configure.sh
+    make
+</code></pre></div>
+
+<p>Run tests</p>
+<div class="codehilite"><pre><span></span><code>    make test
+</code></pre></div>
+
+<p>Install</p>
+<div class="codehilite"><pre><span></span><code>    make install
+</code></pre></div>
+
+<p>Uninstall</p>
+<div class="codehilite"><pre><span></span><code>    make uninstall
+</code></pre></div>
+
+<h1 id="license">License</h1>
+<p>MIT</p>
+        </div>
+          <div class="col-md-4">
+            <div class="card card-body bg-light">
+              <h2 class="card-title">Developer Info</h2>
+              <h4 class="card-text">Milan Skocic</h4>
+              <p class="card-text"></p>
+                <div class="text-center"><div class="btn-group" role="group">
+                      <a class="btn btn-lg btn-primary" href="mailto:milan.skocic@icloud.com"><i class="fa fa-envelope fa-lg"></i></a>
+                    
+                    <a class="btn btn-lg btn-primary" href="https://github.com/MilanSkocic"><i class="fa fa-github fa-lg"></i></a>
+                    
+                    
+                    
+                    
+                    
+                    
+                </div></div>
+            </div>
+          </div>
+      </div>
+        <div class="row">
+          <hr>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Source Files</h3>
+              <ul><li><a href='sourcefile/capi.f90.html'>capi.f90</a></li><li><a href='sourcefile/capi_g704.f90.html'>capi_g704.f90</a></li><li><a href='sourcefile/capi_r283.f90.html'>capi_r283.f90</a></li><li><a href='sourcefile/capi_version.f90.html'>capi_version.f90</a></li><li><a href='sourcefile/iapws.f90.html'>iapws.f90</a></li><li><a href='sourcefile/iapws_g704.f90.html'>iapws_g704.f90</a></li><li><a href='sourcefile/iapws_r283.f90.html'>iapws_r283.f90</a></li><li><a href='sourcefile/iapws_r797.f90.html'>iapws_r797.f90</a></li><li><a href='sourcefile/iapws_version.f90.html'>iapws_version.f90</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Modules</h3>
+              <ul><li><a href='module/capi.html'>capi</a></li><li><a href='module/capi__g704.html'>capi__g704</a></li><li><a href='module/capi__r783.html'>capi__r783</a></li><li><a href='module/capi__version.html'>capi__version</a></li><li><a href='module/iapws.html'>iapws</a></li><li><a href='module/iapws__g704.html'>iapws__g704</a></li><li><a href='module/iapws__r283.html'>iapws__r283</a></li><li><a href='module/iapws__r797.html'>iapws__r797</a></li><li><a href='module/iapws__version.html'>iapws__version</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/modules.html"><em>All modules&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Procedures</h3>
+              <ul><li><a href='proc/capi_gases.html'>capi_gases</a></li><li><a href='proc/capi_get_version.html'>capi_get_version</a></li><li><a href='proc/capi_kd.html'>capi_kd</a></li><li><a href='proc/capi_kh.html'>capi_kh</a></li><li><a href='proc/capi_ngases.html'>capi_ngases</a></li><li><a href='proc/gases.html'>gases</a></li><li><a href='proc/gases2.html'>gases2</a></li><li><a href='proc/get_version.html'>get_version</a></li><li><a href='proc/iapws_r797_v.html'>iapws_r797_v</a></li><li><a href='proc/kd.html'>kd</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <div>
+              <h3>Derived Types</h3>
+              <ul><li><a href='type/gas_type.html'>gas_type</a></li></ul>
+            </div>
+            <div>
+              <ul>
+                <li><a href="./lists/types.html"><em>All derived types&hellip;</em></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              iapws
+ was developed by Milan Skocic<br>              &copy; 2024 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2024-06-18T09:13:36.594223             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+
+    <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="./tipuesearch/tipuesearch_content.js"></script>
+          <script src="./tipuesearch/tipuesearch_set.js"></script>
+          <script src="./tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
