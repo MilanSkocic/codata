@@ -76,11 +76,18 @@ nist:
 sources: nist 
 	make -C src 
 
+headers: nist
+	make -C include
+
 stdlib: nist sources
 	make -C stdlib
 
 doc:
 	ford API-doc-FORD-file.md
+
+docs:
+	rm -rf docs/*
+	cp -rf ../iapws/API-doc/* ./docs/
 
 logo:
 	make -C media
@@ -88,6 +95,7 @@ logo:
 clean:
 	make -C nist clean
 	make -C src clean
+	make -C include clean
 	make -C stdlib clean
 	fpm clean --all
 	rm -rf API-doc/*
