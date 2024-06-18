@@ -3,7 +3,7 @@ module capi__constants_type
     use iso_c_binding, only: c_char, c_double
     private
 
-    type, public, bind(C, name="codata_constant_type") :: capi_constant_type
+    type, bind(C), public :: capi_constant_type
         !! Derived type for representing a Codata constant in C.
         character(kind=c_char) :: name(65)
         real(c_double) :: value
