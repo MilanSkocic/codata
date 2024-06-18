@@ -12,39 +12,31 @@
 #TST: addition or modification of tests
 #REL: related to releasing
 
-*.o
-*.obj
-*.exe
-*.out
-*.lib
-*.cmake
-*.mod
-*.egg-info
-*.pyd
-*.dylib
-*.dll
-*.dll.a
-*.so
-*.a
-*.log
-
-.idea
-.vscode
-
+.idea/
+bin/
 build/
-__pycache__/
+docs/build/
 dist/
+local/
 API-doc/
+.vscode/
+*.obj
+*.o
+*.mod
+*.pyd
+*.dll.a
+*.a
+*.dll
+*.so
+*.dylib
+
+*.egg-info
+__pycache__
+*.so
 
 .DS_Store
 
-*generator*
-
-pywrapper/src/pycodata/*.h
-pywrapper/src/pycodata/*.a
-pywrapper/src/pycodata/*.dll
-pywrapper/src/pycodata/*.dll.a
-pywrapper/src/pycodata/*.so
-pywrapper/src/pycodata/*.dylib
-pywrapper/src/pycodata/*.pyd
-pywrapper/wheelhouse/
+py/wheelhouse/
+py/src/pycodata/bin/
+py/src/pycodata/include/
+py/src/pycodata/lib/
