@@ -5,4 +5,8 @@ include pyproject.toml
 include setup.py
 include src/pycodata/*.c
 include src/pycodata/*.h
+include src/pycodata/*.so
+include src/pycodata/*.dylib
+include src/pycodata/*.dll
+include src/pycodata/*.dll.a
 
