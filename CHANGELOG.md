@@ -3,8 +3,6 @@
 * Refractoring
 * Merge back C API and python wrapper.
 
-**Not released yet**
-
 
 # Version 1.2.0
 
