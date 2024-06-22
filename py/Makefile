@@ -67,3 +67,4 @@ clean:
 	rm -rf $(PY_SRC)/bin
 	rm -rf $(PY_SRC)/include
 	rm -rf $(PY_SRC)/lib
+	make -C $(PY_SRC) clean
