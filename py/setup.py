@@ -24,26 +24,24 @@ ext = [".so"]
 
 if platform.system() == "Linux":
     libraries = [name]
-    library_dirs = [f"./src/py{name:s}/lib/"]
+    library_dirs = [f"./src/py{name:s}"]
     runtime_library_dirs = ["$ORIGIN"]
     ext = [".so"]
+    ROOT = ROOTLINUX
+    LIBS = LIBSLINUX
 if platform.system() == "Windows":
-    extra_objects = [f"./src/py{name:s}/lib/lib{name:s}.dll.a"]
-    src = pathlib.Path(f"./src/py{name:s}/lib/lib{name:s}.dll") 
-    dest = pathlib.Path(f"./src/py{name:s}/lib{name:s}.dll") 
-    if not src.exists():
-        raise ValueError(f"The library {name} was not installed. Run in the root folder: make install prefix=./py/src/py{name:s}")
-    shutil.copy(src, dest)
+    extra_objects = [f"./src/py{name:s}/lib{name:s}.dll.a"]
     ext = [".dll", ".dll.a"]
     ROOT = ROOTWINDOWS
     LIBS = LIBSWINDOWS
 if platform.system() == "Darwin":
     libraries = [name]
-    library_dirs = [f"./src/py{name:s}/lib/"]
+    library_dirs = [f"./src/py{name:s}"]
     runtime_library_dirs = ["@loader_path"]
     ext = [".dylib"]
     ROOT = ROOTDARWIN
     LIBS = LIBSDARWIN
+
 
 # Headers
 root_src = pathlib.Path(f"./src/py{name:s}/include/")
@@ -52,11 +50,13 @@ files = [f"{name:s}.h"]
 for file in files:
     src = root_src / file
     dest = root_dest / file
+    if not src.exists():
+        raise ValueError(f"The library {name:s} was not installed. Run in the root folder: make install prefix=./py/src/py{name:s}")
     try:
         print(f"copying {str(src):s} -> {str(dest.parent):s}.")
         shutil.copy(src, dest)
     except:
-        print(f"{file:s} was not found.")
+        print(f"{file:s} was not copied.")
 
 # Libs
 root_src = pathlib.Path(f"./src/py{name:s}/lib/")
@@ -65,11 +65,13 @@ files = list(map(lambda s: f"lib{name:s}"+s, ext))
 for file in files:
     src = root_src / file
     dest = root_dest / file
+    if not src.exists():
+        raise ValueError(f"The library {name:s} was not installed. Run in the root folder: make install prefix=./py/src/py{name:s}")
     try:
         print(f"copying {str(src):s} -> {str(dest.parent):s}.")
         shutil.copy(src, dest)
     except:
-        print(f"{file:s} was not found.")
+        print(f"{file:s} was not copied.")
 
 # gfortran libs
 root_src = pathlib.Path(ROOT)
@@ -88,7 +90,7 @@ for file in files:
     except subprocess.CalledProcessError:
         print(" ".join(cmd) + " was not successful.")
     except:
-        print(f"{file:s} was not found.")
+        print(f"{file:s} was not copied.")
 
 # check rpaths for Darwin
 if platform.system() == "Darwin":
