@@ -3,7 +3,7 @@ ifeq ($(PLATFORM), windows)
 endif
 ifeq ($(PLATFORM), linux)
 	PY=python
-	AW=auditwheel repair --plat manylinux_2_34_x86_64 ./dist/*.whl
+	AW=auditwheel repair --plat manylinux_2_31_x86_64 ./dist/*.whl
 endif
 ifeq ($(PLATFORM), darwin)
 	PY=python
