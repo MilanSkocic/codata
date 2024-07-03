@@ -7,8 +7,8 @@ module codata__capi_constants_2022
 
 integer(c_int), protected, public, bind(C, name="YEAR") :: capi_YEAR = YEAR !capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_ELECTRON_MASS_RATIO") ::&!capi
-codata_capi_0 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_ELECTRON_MASS_RATIO") ::&!capi
+capi_0 = capi_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", "-", "e", "l", "e", "c", "t", &!capi
 "r", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
@@ -24,8 +24,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS") ::&!capi
-codata_capi_1 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS") ::&!capi
+capi_1 = capi_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "a", "s", "s", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -41,8 +41,8 @@ ALPHA_PARTICLE_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_2 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT") ::&!capi
+capi_2 = capi_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "a", "s", "s", " ", &!capi
 "e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
@@ -58,8 +58,8 @@ ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_3 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_3 = capi_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "a", "s", "s", " ", &!capi
 "e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
@@ -75,8 +75,8 @@ ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_IN_U") ::&!capi
-codata_capi_4 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MASS_IN_U") ::&!capi
+capi_4 = capi_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "a", "s", "s", " ", &!capi
 "i", "n", " ", "u", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -92,8 +92,8 @@ ALPHA_PARTICLE_MASS_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MOLAR_MASS") ::&!capi
-codata_capi_5 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_MOLAR_MASS") ::&!capi
+capi_5 = capi_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "m", "o", "l", "a", "r", &!capi
 " ", "m", "a", "s", "s", c_null_char, " ", " ", " ", " ", &!capi
@@ -109,8 +109,8 @@ ALPHA_PARTICLE_MOLAR_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_PROTON_MASS_RATIO") ::&!capi
-codata_capi_6 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_PROTON_MASS_RATIO") ::&!capi
+capi_6 = capi_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", "-", "p", "r", "o", "t", "o", &!capi
 "n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
@@ -126,8 +126,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS") ::&!capi
-codata_capi_7 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS") ::&!capi
+capi_7 = capi_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "r", "e", "l", "a", "t", &!capi
 "i", "v", "e", " ", "a", "t", "o", "m", "i", "c", &!capi
@@ -143,8 +143,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_RMS_CHARGE_RADIUS") ::&!capi
-codata_capi_8 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ALPHA_PARTICLE_RMS_CHARGE_RADIUS") ::&!capi
+capi_8 = capi_constant_type([ &!capi
 "a", "l", "p", "h", "a", " ", "p", "a", "r", "t", &!capi
 "i", "c", "l", "e", " ", "r", "m", "s", " ", "c", &!capi
 "h", "a", "r", "g", "e", " ", "r", "a", "d", "i", &!capi
@@ -160,8 +160,8 @@ ALPHA_PARTICLE_RMS_CHARGE_RADIUS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ANGSTROM_STAR") ::&!capi
-codata_capi_9 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ANGSTROM_STAR") ::&!capi
+capi_9 = capi_constant_type([ &!capi
 "A", "n", "g", "s", "t", "r", "o", "m", " ", "s", &!capi
 "t", "a", "r", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -177,8 +177,8 @@ ANGSTROM_STAR%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT") ::&!capi
-codata_capi_10 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT") ::&!capi
+capi_10 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
 c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -194,8 +194,8 @@ ATOMIC_MASS_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_11 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT") ::&!capi
+capi_11 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
 " ", "e", "n", "e", "r", "g", "y", " ", "e", "q", &!capi
@@ -211,8 +211,8 @@ ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_12 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_12 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "c", "o", "n", "s", "t", "a", "n", "t", &!capi
 " ", "e", "n", "e", "r", "g", "y", " ", "e", "q", &!capi
@@ -228,8 +228,8 @@ ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
-codata_capi_13 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
+capi_13 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "e", "l", "e", &!capi
 "c", "t", "r", "o", "n", " ", "v", "o", "l", "t", &!capi
@@ -245,8 +245,8 @@ ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP") ::&!capi
-codata_capi_14 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP") ::&!capi
+capi_14 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "h", "a", "r", &!capi
 "t", "r", "e", "e", " ", "r", "e", "l", "a", "t", &!capi
@@ -262,8 +262,8 @@ ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP") ::&!capi
-codata_capi_15 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP") ::&!capi
+capi_15 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "h", "e", "r", &!capi
 "t", "z", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -279,8 +279,8 @@ ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP") ::&!capi
-codata_capi_16 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP") ::&!capi
+capi_16 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "i", "n", "v", &!capi
 "e", "r", "s", "e", " ", "m", "e", "t", "e", "r", &!capi
@@ -296,8 +296,8 @@ ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP") ::&!capi
-codata_capi_17 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP") ::&!capi
+capi_17 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "j", "o", "u", &!capi
 "l", "e", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -313,8 +313,8 @@ ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP") ::&!capi
-codata_capi_18 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP") ::&!capi
+capi_18 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "k", "e", "l", &!capi
 "v", "i", "n", " ", "r", "e", "l", "a", "t", "i", &!capi
@@ -330,8 +330,8 @@ ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP") ::&!capi
-codata_capi_19 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP") ::&!capi
+capi_19 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "m", "a", "s", &!capi
 "s", " ", "u", "n", "i", "t", "-", "k", "i", "l", &!capi
 "o", "g", "r", "a", "m", " ", "r", "e", "l", "a", &!capi
@@ -347,8 +347,8 @@ ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY") ::&!capi
-codata_capi_20 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY") ::&!capi
+capi_20 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "1", "s", "t", " ", "h", &!capi
 "y", "p", "e", "r", "p", "o", "l", "a", "r", "i", &!capi
@@ -364,8 +364,8 @@ ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY") ::&!capi
-codata_capi_21 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY") ::&!capi
+capi_21 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "2", "n", "d", " ", "h", &!capi
 "y", "p", "e", "r", "p", "o", "l", "a", "r", "i", &!capi
@@ -381,8 +381,8 @@ ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ACTION") ::&!capi
-codata_capi_22 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ACTION") ::&!capi
+capi_22 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "a", "c", "t", "i", "o", &!capi
 "n", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -398,8 +398,8 @@ ATOMIC_UNIT_OF_ACTION%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE") ::&!capi
-codata_capi_23 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE") ::&!capi
+capi_23 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "c", "h", "a", "r", "g", &!capi
 "e", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -415,8 +415,8 @@ ATOMIC_UNIT_OF_CHARGE%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE_DENSITY") ::&!capi
-codata_capi_24 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CHARGE_DENSITY") ::&!capi
+capi_24 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "c", "h", "a", "r", "g", &!capi
 "e", " ", "d", "e", "n", "s", "i", "t", "y", c_null_char, &!capi
@@ -432,8 +432,8 @@ ATOMIC_UNIT_OF_CHARGE_DENSITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CURRENT") ::&!capi
-codata_capi_25 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_CURRENT") ::&!capi
+capi_25 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "c", "u", "r", "r", "e", &!capi
 "n", "t", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -449,8 +449,8 @@ ATOMIC_UNIT_OF_CURRENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM") ::&!capi
-codata_capi_26 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM") ::&!capi
+capi_26 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
 "r", "i", "c", " ", "d", "i", "p", "o", "l", "e", &!capi
@@ -466,8 +466,8 @@ ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD") ::&!capi
-codata_capi_27 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD") ::&!capi
+capi_27 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
 "r", "i", "c", " ", "f", "i", "e", "l", "d", c_null_char, &!capi
@@ -483,8 +483,8 @@ ATOMIC_UNIT_OF_ELECTRIC_FIELD%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT") ::&!capi
-codata_capi_28 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT") ::&!capi
+capi_28 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
 "r", "i", "c", " ", "f", "i", "e", "l", "d", " ", &!capi
@@ -500,8 +500,8 @@ ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY") ::&!capi
-codata_capi_29 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY") ::&!capi
+capi_29 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
 "r", "i", "c", " ", "p", "o", "l", "a", "r", "i", &!capi
@@ -517,8 +517,8 @@ ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL") ::&!capi
-codata_capi_30 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL") ::&!capi
+capi_30 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
 "r", "i", "c", " ", "p", "o", "t", "e", "n", "t", &!capi
@@ -534,8 +534,8 @@ ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM") ::&!capi
-codata_capi_31 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM") ::&!capi
+capi_31 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "l", "e", "c", "t", &!capi
 "r", "i", "c", " ", "q", "u", "a", "d", "r", "u", &!capi
@@ -551,8 +551,8 @@ ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ENERGY") ::&!capi
-codata_capi_32 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_ENERGY") ::&!capi
+capi_32 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "e", "n", "e", "r", "g", &!capi
 "y", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -568,8 +568,8 @@ ATOMIC_UNIT_OF_ENERGY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_FORCE") ::&!capi
-codata_capi_33 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_FORCE") ::&!capi
+capi_33 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "f", "o", "r", "c", "e", &!capi
 c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -585,8 +585,8 @@ ATOMIC_UNIT_OF_FORCE%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_LENGTH") ::&!capi
-codata_capi_34 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_LENGTH") ::&!capi
+capi_34 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "l", "e", "n", "g", "t", &!capi
 "h", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -602,8 +602,8 @@ ATOMIC_UNIT_OF_LENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_DIPOLE_MOM") ::&!capi
-codata_capi_35 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_DIPOLE_MOM") ::&!capi
+capi_35 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "a", "g", ".", " ", &!capi
 "d", "i", "p", "o", "l", "e", " ", "m", "o", "m", &!capi
@@ -619,8 +619,8 @@ ATOMIC_UNIT_OF_MAG_DIPOLE_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_FLUX_DENSITY") ::&!capi
-codata_capi_36 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAG_FLUX_DENSITY") ::&!capi
+capi_36 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "a", "g", ".", " ", &!capi
 "f", "l", "u", "x", " ", "d", "e", "n", "s", "i", &!capi
@@ -636,8 +636,8 @@ ATOMIC_UNIT_OF_MAG_FLUX_DENSITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAGNETIZABILITY") ::&!capi
-codata_capi_37 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MAGNETIZABILITY") ::&!capi
+capi_37 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "a", "g", "n", "e", &!capi
 "t", "i", "z", "a", "b", "i", "l", "i", "t", "y", &!capi
@@ -653,8 +653,8 @@ ATOMIC_UNIT_OF_MAGNETIZABILITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MASS") ::&!capi
-codata_capi_38 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MASS") ::&!capi
+capi_38 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "a", "s", "s", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -670,8 +670,8 @@ ATOMIC_UNIT_OF_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MOMENTUM") ::&!capi
-codata_capi_39 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_MOMENTUM") ::&!capi
+capi_39 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "m", "o", "m", "e", "n", &!capi
 "t", "u", "m", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -687,8 +687,8 @@ ATOMIC_UNIT_OF_MOMENTUM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_PERMITTIVITY") ::&!capi
-codata_capi_40 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_PERMITTIVITY") ::&!capi
+capi_40 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "p", "e", "r", "m", "i", &!capi
 "t", "t", "i", "v", "i", "t", "y", c_null_char, " ", " ", &!capi
@@ -704,8 +704,8 @@ ATOMIC_UNIT_OF_PERMITTIVITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_TIME") ::&!capi
-codata_capi_41 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_TIME") ::&!capi
+capi_41 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "t", "i", "m", "e", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -721,8 +721,8 @@ ATOMIC_UNIT_OF_TIME%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_VELOCITY") ::&!capi
-codata_capi_42 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ATOMIC_UNIT_OF_VELOCITY") ::&!capi
+capi_42 = capi_constant_type([ &!capi
 "a", "t", "o", "m", "i", "c", " ", "u", "n", "i", &!capi
 "t", " ", "o", "f", " ", "v", "e", "l", "o", "c", &!capi
 "i", "t", "y", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -738,8 +738,8 @@ ATOMIC_UNIT_OF_VELOCITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="AVOGADRO_CONSTANT") ::&!capi
-codata_capi_43 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="AVOGADRO_CONSTANT") ::&!capi
+capi_43 = capi_constant_type([ &!capi
 "A", "v", "o", "g", "a", "d", "r", "o", " ", "c", &!capi
 "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -755,8 +755,8 @@ AVOGADRO_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON") ::&!capi
-codata_capi_44 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON") ::&!capi
+capi_44 = capi_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -772,8 +772,8 @@ BOHR_MAGNETON%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_EV_T") ::&!capi
-codata_capi_45 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_EV_T") ::&!capi
+capi_45 = capi_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", " ", "i", "n", " ", "e", "V", "/", &!capi
 "T", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -789,8 +789,8 @@ BOHR_MAGNETON_IN_EV_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_HZ_T") ::&!capi
-codata_capi_46 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_HZ_T") ::&!capi
+capi_46 = capi_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", " ", "i", "n", " ", "H", "z", "/", &!capi
 "T", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -806,8 +806,8 @@ BOHR_MAGNETON_IN_HZ_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA") ::&!capi
-codata_capi_47 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA") ::&!capi
+capi_47 = capi_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", " ", "i", "n", " ", "i", "n", "v", &!capi
 "e", "r", "s", "e", " ", "m", "e", "t", "e", "r", &!capi
@@ -823,8 +823,8 @@ BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_K_T") ::&!capi
-codata_capi_48 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOHR_MAGNETON_IN_K_T") ::&!capi
+capi_48 = capi_constant_type([ &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
 "t", "o", "n", " ", "i", "n", " ", "K", "/", "T", &!capi
 c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -840,8 +840,8 @@ BOHR_MAGNETON_IN_K_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOHR_RADIUS") ::&!capi
-codata_capi_49 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOHR_RADIUS") ::&!capi
+capi_49 = capi_constant_type([ &!capi
 "B", "o", "h", "r", " ", "r", "a", "d", "i", "u", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -857,8 +857,8 @@ BOHR_RADIUS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT") ::&!capi
-codata_capi_50 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT") ::&!capi
+capi_50 = capi_constant_type([ &!capi
 "B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -874,8 +874,8 @@ BOLTZMANN_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_EV_K") ::&!capi
-codata_capi_51 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_EV_K") ::&!capi
+capi_51 = capi_constant_type([ &!capi
 "B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "i", &!capi
 "n", " ", "e", "V", "/", "K", c_null_char, " ", " ", " ", &!capi
@@ -891,8 +891,8 @@ BOLTZMANN_CONSTANT_IN_EV_K%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_HZ_K") ::&!capi
-codata_capi_52 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_HZ_K") ::&!capi
+capi_52 = capi_constant_type([ &!capi
 "B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "i", &!capi
 "n", " ", "H", "z", "/", "K", c_null_char, " ", " ", " ", &!capi
@@ -908,8 +908,8 @@ BOLTZMANN_CONSTANT_IN_HZ_K%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN") ::&!capi
-codata_capi_53 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN") ::&!capi
+capi_53 = capi_constant_type([ &!capi
 "B", "o", "l", "t", "z", "m", "a", "n", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "i", &!capi
 "n", " ", "i", "n", "v", "e", "r", "s", "e", " ", &!capi
@@ -925,8 +925,8 @@ BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CHARACTERISTIC_IMPEDANCE_OF_VACUUM") ::&!capi
-codata_capi_54 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CHARACTERISTIC_IMPEDANCE_OF_VACUUM") ::&!capi
+capi_54 = capi_constant_type([ &!capi
 "c", "h", "a", "r", "a", "c", "t", "e", "r", "i", &!capi
 "s", "t", "i", "c", " ", "i", "m", "p", "e", "d", &!capi
 "a", "n", "c", "e", " ", "o", "f", " ", "v", "a", &!capi
@@ -942,8 +942,8 @@ CHARACTERISTIC_IMPEDANCE_OF_VACUUM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CLASSICAL_ELECTRON_RADIUS") ::&!capi
-codata_capi_55 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CLASSICAL_ELECTRON_RADIUS") ::&!capi
+capi_55 = capi_constant_type([ &!capi
 "c", "l", "a", "s", "s", "i", "c", "a", "l", " ", &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "r", &!capi
 "a", "d", "i", "u", "s", c_null_char, " ", " ", " ", " ", &!capi
@@ -959,8 +959,8 @@ CLASSICAL_ELECTRON_RADIUS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="COMPTON_WAVELENGTH") ::&!capi
-codata_capi_56 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="COMPTON_WAVELENGTH") ::&!capi
+capi_56 = capi_constant_type([ &!capi
 "C", "o", "m", "p", "t", "o", "n", " ", "w", "a", &!capi
 "v", "e", "l", "e", "n", "g", "t", "h", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -976,8 +976,8 @@ COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONDUCTANCE_QUANTUM") ::&!capi
-codata_capi_57 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONDUCTANCE_QUANTUM") ::&!capi
+capi_57 = capi_constant_type([ &!capi
 "c", "o", "n", "d", "u", "c", "t", "a", "n", "c", &!capi
 "e", " ", "q", "u", "a", "n", "t", "u", "m", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -993,8 +993,8 @@ CONDUCTANCE_QUANTUM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_AMPERE_90") ::&!capi
-codata_capi_58 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_AMPERE_90") ::&!capi
+capi_58 = capi_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
 "f", " ", "a", "m", "p", "e", "r", "e", "-", "9", &!capi
@@ -1010,8 +1010,8 @@ CONVENTIONAL_VALUE_OF_AMPERE_90%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_COULOMB_90") ::&!capi
-codata_capi_59 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_COULOMB_90") ::&!capi
+capi_59 = capi_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
 "f", " ", "c", "o", "u", "l", "o", "m", "b", "-", &!capi
@@ -1027,8 +1027,8 @@ CONVENTIONAL_VALUE_OF_COULOMB_90%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_FARAD_90") ::&!capi
-codata_capi_60 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_FARAD_90") ::&!capi
+capi_60 = capi_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
 "f", " ", "f", "a", "r", "a", "d", "-", "9", "0", &!capi
@@ -1044,8 +1044,8 @@ CONVENTIONAL_VALUE_OF_FARAD_90%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_HENRY_90") ::&!capi
-codata_capi_61 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_HENRY_90") ::&!capi
+capi_61 = capi_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
 "f", " ", "h", "e", "n", "r", "y", "-", "9", "0", &!capi
@@ -1061,8 +1061,8 @@ CONVENTIONAL_VALUE_OF_HENRY_90%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT") ::&!capi
-codata_capi_62 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT") ::&!capi
+capi_62 = capi_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
 "f", " ", "J", "o", "s", "e", "p", "h", "s", "o", &!capi
@@ -1078,8 +1078,8 @@ CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_OHM_90") ::&!capi
-codata_capi_63 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_OHM_90") ::&!capi
+capi_63 = capi_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
 "f", " ", "o", "h", "m", "-", "9", "0", c_null_char, " ", &!capi
@@ -1095,8 +1095,8 @@ CONVENTIONAL_VALUE_OF_OHM_90%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VOLT_90") ::&!capi
-codata_capi_64 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VOLT_90") ::&!capi
+capi_64 = capi_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
 "f", " ", "v", "o", "l", "t", "-", "9", "0", c_null_char, &!capi
@@ -1112,8 +1112,8 @@ CONVENTIONAL_VALUE_OF_VOLT_90%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT") ::&!capi
-codata_capi_65 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT") ::&!capi
+capi_65 = capi_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
 "f", " ", "v", "o", "n", " ", "K", "l", "i", "t", &!capi
@@ -1129,8 +1129,8 @@ CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_WATT_90") ::&!capi
-codata_capi_66 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="CONVENTIONAL_VALUE_OF_WATT_90") ::&!capi
+capi_66 = capi_constant_type([ &!capi
 "c", "o", "n", "v", "e", "n", "t", "i", "o", "n", &!capi
 "a", "l", " ", "v", "a", "l", "u", "e", " ", "o", &!capi
 "f", " ", "w", "a", "t", "t", "-", "9", "0", c_null_char, &!capi
@@ -1146,8 +1146,8 @@ CONVENTIONAL_VALUE_OF_WATT_90%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="COPPER_X_UNIT") ::&!capi
-codata_capi_67 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="COPPER_X_UNIT") ::&!capi
+capi_67 = capi_constant_type([ &!capi
 "C", "o", "p", "p", "e", "r", " ", "x", " ", "u", &!capi
 "n", "i", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1163,8 +1163,8 @@ COPPER_X_UNIT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MAG_MOM_RATIO") ::&!capi
-codata_capi_68 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MAG_MOM_RATIO") ::&!capi
+capi_68 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "e", &!capi
 "l", "e", "c", "t", "r", "o", "n", " ", "m", "a", &!capi
 "g", ".", " ", "m", "o", "m", ".", " ", "r", "a", &!capi
@@ -1180,8 +1180,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MASS_RATIO") ::&!capi
-codata_capi_69 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_ELECTRON_MASS_RATIO") ::&!capi
+capi_69 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "e", &!capi
 "l", "e", "c", "t", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", " ", "r", "a", "t", "i", "o", c_null_char, " ", &!capi
@@ -1197,8 +1197,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_G_FACTOR") ::&!capi
-codata_capi_70 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_G_FACTOR") ::&!capi
+capi_70 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "g", &!capi
 " ", "f", "a", "c", "t", "o", "r", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1214,8 +1214,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM") ::&!capi
-codata_capi_71 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM") ::&!capi
+capi_71 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1231,8 +1231,8 @@ DEUTERON_MAG_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
-codata_capi_72 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
+capi_72 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
 "o", " ", "B", "o", "h", "r", " ", "m", "a", "g", &!capi
@@ -1248,8 +1248,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
-codata_capi_73 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
+capi_73 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
 "o", " ", "n", "u", "c", "l", "e", "a", "r", " ", &!capi
@@ -1265,8 +1265,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_MASS") ::&!capi
-codata_capi_74 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_MASS") ::&!capi
+capi_74 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1282,8 +1282,8 @@ DEUTERON_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_75 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT") ::&!capi
+capi_75 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
 " ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
@@ -1299,8 +1299,8 @@ DEUTERON_MASS_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_76 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_76 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
 " ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
@@ -1316,8 +1316,8 @@ DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_MASS_IN_U") ::&!capi
-codata_capi_77 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_MASS_IN_U") ::&!capi
+capi_77 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "i", "n", " ", "u", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1333,8 +1333,8 @@ DEUTERON_MASS_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_MOLAR_MASS") ::&!capi
-codata_capi_78 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_MOLAR_MASS") ::&!capi
+capi_78 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "m", &!capi
 "o", "l", "a", "r", " ", "m", "a", "s", "s", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1350,8 +1350,8 @@ DEUTERON_MOLAR_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_NEUTRON_MAG_MOM_RATIO") ::&!capi
-codata_capi_79 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_NEUTRON_MAG_MOM_RATIO") ::&!capi
+capi_79 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "n", &!capi
 "e", "u", "t", "r", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "r", "a", "t", &!capi
@@ -1367,8 +1367,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MAG_MOM_RATIO") ::&!capi
-codata_capi_80 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MAG_MOM_RATIO") ::&!capi
+capi_80 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
 " ", "m", "o", "m", ".", " ", "r", "a", "t", "i", &!capi
@@ -1384,8 +1384,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MASS_RATIO") ::&!capi
-codata_capi_81 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_PROTON_MASS_RATIO") ::&!capi
+capi_81 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", "-", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "s", "s", &!capi
 " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
@@ -1401,8 +1401,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_RELATIVE_ATOMIC_MASS") ::&!capi
-codata_capi_82 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_RELATIVE_ATOMIC_MASS") ::&!capi
+capi_82 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "r", &!capi
 "e", "l", "a", "t", "i", "v", "e", " ", "a", "t", &!capi
 "o", "m", "i", "c", " ", "m", "a", "s", "s", c_null_char, &!capi
@@ -1418,8 +1418,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="DEUTERON_RMS_CHARGE_RADIUS") ::&!capi
-codata_capi_83 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="DEUTERON_RMS_CHARGE_RADIUS") ::&!capi
+capi_83 = capi_constant_type([ &!capi
 "d", "e", "u", "t", "e", "r", "o", "n", " ", "r", &!capi
 "m", "s", " ", "c", "h", "a", "r", "g", "e", " ", &!capi
 "r", "a", "d", "i", "u", "s", c_null_char, " ", " ", " ", &!capi
@@ -1435,8 +1435,8 @@ DEUTERON_RMS_CHARGE_RADIUS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_CHARGE_TO_MASS_QUOTIENT") ::&!capi
-codata_capi_84 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_CHARGE_TO_MASS_QUOTIENT") ::&!capi
+capi_84 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "c", &!capi
 "h", "a", "r", "g", "e", " ", "t", "o", " ", "m", &!capi
 "a", "s", "s", " ", "q", "u", "o", "t", "i", "e", &!capi
@@ -1452,8 +1452,8 @@ ELECTRON_CHARGE_TO_MASS_QUOTIENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MAG_MOM_RATIO") ::&!capi
-codata_capi_85 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MAG_MOM_RATIO") ::&!capi
+capi_85 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "d", &!capi
 "e", "u", "t", "e", "r", "o", "n", " ", "m", "a", &!capi
 "g", ".", " ", "m", "o", "m", ".", " ", "r", "a", &!capi
@@ -1469,8 +1469,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MASS_RATIO") ::&!capi
-codata_capi_86 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_DEUTERON_MASS_RATIO") ::&!capi
+capi_86 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "d", &!capi
 "e", "u", "t", "e", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", " ", "r", "a", "t", "i", "o", c_null_char, " ", &!capi
@@ -1486,8 +1486,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_G_FACTOR") ::&!capi
-codata_capi_87 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_G_FACTOR") ::&!capi
+capi_87 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "g", &!capi
 " ", "f", "a", "c", "t", "o", "r", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1503,8 +1503,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO") ::&!capi
-codata_capi_88 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO") ::&!capi
+capi_88 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "g", &!capi
 "y", "r", "o", "m", "a", "g", ".", " ", "r", "a", &!capi
 "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -1520,8 +1520,8 @@ ELECTRON_GYROMAG_RATIO%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
-codata_capi_89 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
+capi_89 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "g", &!capi
 "y", "r", "o", "m", "a", "g", ".", " ", "r", "a", &!capi
 "t", "i", "o", " ", "i", "n", " ", "M", "H", "z", &!capi
@@ -1537,8 +1537,8 @@ ELECTRON_GYROMAG_RATIO_IN_MHZ_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_HELION_MASS_RATIO") ::&!capi
-codata_capi_90 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_HELION_MASS_RATIO") ::&!capi
+capi_90 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "h", &!capi
 "e", "l", "i", "o", "n", " ", "m", "a", "s", "s", &!capi
 " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
@@ -1554,8 +1554,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM") ::&!capi
-codata_capi_91 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM") ::&!capi
+capi_91 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1571,8 +1571,8 @@ ELECTRON_MAG_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_ANOMALY") ::&!capi
-codata_capi_92 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_ANOMALY") ::&!capi
+capi_92 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "a", &!capi
 "n", "o", "m", "a", "l", "y", c_null_char, " ", " ", " ", &!capi
@@ -1588,8 +1588,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
-codata_capi_93 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
+capi_93 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
 "o", " ", "B", "o", "h", "r", " ", "m", "a", "g", &!capi
@@ -1605,8 +1605,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
-codata_capi_94 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
+capi_94 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "g", ".", " ", "m", "o", "m", ".", " ", "t", &!capi
 "o", " ", "n", "u", "c", "l", "e", "a", "r", " ", &!capi
@@ -1622,8 +1622,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MASS") ::&!capi
-codata_capi_95 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MASS") ::&!capi
+capi_95 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1639,8 +1639,8 @@ ELECTRON_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_96 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT") ::&!capi
+capi_96 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
 " ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
@@ -1656,8 +1656,8 @@ ELECTRON_MASS_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_97 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_97 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "e", "n", "e", "r", "g", "y", &!capi
 " ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
@@ -1673,8 +1673,8 @@ ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MASS_IN_U") ::&!capi
-codata_capi_98 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MASS_IN_U") ::&!capi
+capi_98 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "i", "n", " ", "u", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1690,8 +1690,8 @@ ELECTRON_MASS_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MOLAR_MASS") ::&!capi
-codata_capi_99 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MOLAR_MASS") ::&!capi
+capi_99 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "m", &!capi
 "o", "l", "a", "r", " ", "m", "a", "s", "s", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1707,8 +1707,8 @@ ELECTRON_MOLAR_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MAG_MOM_RATIO") ::&!capi
-codata_capi_100 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MAG_MOM_RATIO") ::&!capi
+capi_100 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "m", &!capi
 "u", "o", "n", " ", "m", "a", "g", ".", " ", "m", &!capi
 "o", "m", ".", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
@@ -1724,8 +1724,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MASS_RATIO") ::&!capi
-codata_capi_101 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_MUON_MASS_RATIO") ::&!capi
+capi_101 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "m", &!capi
 "u", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
 "a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -1741,8 +1741,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MAG_MOM_RATIO") ::&!capi
-codata_capi_102 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MAG_MOM_RATIO") ::&!capi
+capi_102 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "n", &!capi
 "e", "u", "t", "r", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "r", "a", "t", &!capi
@@ -1758,8 +1758,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MASS_RATIO") ::&!capi
-codata_capi_103 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_NEUTRON_MASS_RATIO") ::&!capi
+capi_103 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "n", &!capi
 "e", "u", "t", "r", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
@@ -1775,8 +1775,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MAG_MOM_RATIO") ::&!capi
-codata_capi_104 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MAG_MOM_RATIO") ::&!capi
+capi_104 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
 " ", "m", "o", "m", ".", " ", "r", "a", "t", "i", &!capi
@@ -1792,8 +1792,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MASS_RATIO") ::&!capi
-codata_capi_105 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_PROTON_MASS_RATIO") ::&!capi
+capi_105 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "s", "s", &!capi
 " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
@@ -1809,8 +1809,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_RELATIVE_ATOMIC_MASS") ::&!capi
-codata_capi_106 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_RELATIVE_ATOMIC_MASS") ::&!capi
+capi_106 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "r", &!capi
 "e", "l", "a", "t", "i", "v", "e", " ", "a", "t", &!capi
 "o", "m", "i", "c", " ", "m", "a", "s", "s", c_null_char, &!capi
@@ -1826,8 +1826,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_TAU_MASS_RATIO") ::&!capi
-codata_capi_107 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_TAU_MASS_RATIO") ::&!capi
+capi_107 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "t", &!capi
 "a", "u", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
 "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -1843,8 +1843,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO") ::&!capi
-codata_capi_108 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO") ::&!capi
+capi_108 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "t", &!capi
 "o", " ", "a", "l", "p", "h", "a", " ", "p", "a", &!capi
 "r", "t", "i", "c", "l", "e", " ", "m", "a", "s", &!capi
@@ -1860,8 +1860,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO") ::&!capi
-codata_capi_109 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO") ::&!capi
+capi_109 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "t", &!capi
 "o", " ", "s", "h", "i", "e", "l", "d", "e", "d", &!capi
 " ", "h", "e", "l", "i", "o", "n", " ", "m", "a", &!capi
@@ -1877,8 +1877,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&!capi
-codata_capi_110 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&!capi
+capi_110 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "t", &!capi
 "o", " ", "s", "h", "i", "e", "l", "d", "e", "d", &!capi
 " ", "p", "r", "o", "t", "o", "n", " ", "m", "a", &!capi
@@ -1894,8 +1894,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_TRITON_MASS_RATIO") ::&!capi
-codata_capi_111 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_TRITON_MASS_RATIO") ::&!capi
+capi_111 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", "-", "t", &!capi
 "r", "i", "t", "o", "n", " ", "m", "a", "s", "s", &!capi
 " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
@@ -1911,8 +1911,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT") ::&!capi
-codata_capi_112 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT") ::&!capi
+capi_112 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -1928,8 +1928,8 @@ ELECTRON_VOLT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
-codata_capi_113 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
+capi_113 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "a", "t", "o", "m", "i", "c", &!capi
 " ", "m", "a", "s", "s", " ", "u", "n", "i", "t", &!capi
@@ -1945,8 +1945,8 @@ ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HARTREE_RELATIONSHIP") ::&!capi
-codata_capi_114 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HARTREE_RELATIONSHIP") ::&!capi
+capi_114 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "h", "a", "r", "t", "r", "e", &!capi
 "e", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
@@ -1962,8 +1962,8 @@ ELECTRON_VOLT_HARTREE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HERTZ_RELATIONSHIP") ::&!capi
-codata_capi_115 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_HERTZ_RELATIONSHIP") ::&!capi
+capi_115 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "h", "e", "r", "t", "z", " ", &!capi
 "r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
@@ -1979,8 +1979,8 @@ ELECTRON_VOLT_HERTZ_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP") ::&!capi
-codata_capi_116 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP") ::&!capi
+capi_116 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "i", "n", "v", "e", "r", "s", &!capi
 "e", " ", "m", "e", "t", "e", "r", " ", "r", "e", &!capi
@@ -1996,8 +1996,8 @@ ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_JOULE_RELATIONSHIP") ::&!capi
-codata_capi_117 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_JOULE_RELATIONSHIP") ::&!capi
+capi_117 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "j", "o", "u", "l", "e", " ", &!capi
 "r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
@@ -2013,8 +2013,8 @@ ELECTRON_VOLT_JOULE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KELVIN_RELATIONSHIP") ::&!capi
-codata_capi_118 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KELVIN_RELATIONSHIP") ::&!capi
+capi_118 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "k", "e", "l", "v", "i", "n", &!capi
 " ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
@@ -2030,8 +2030,8 @@ ELECTRON_VOLT_KELVIN_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KILOGRAM_RELATIONSHIP") ::&!capi
-codata_capi_119 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELECTRON_VOLT_KILOGRAM_RELATIONSHIP") ::&!capi
+capi_119 = capi_constant_type([ &!capi
 "e", "l", "e", "c", "t", "r", "o", "n", " ", "v", &!capi
 "o", "l", "t", "-", "k", "i", "l", "o", "g", "r", &!capi
 "a", "m", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -2047,8 +2047,8 @@ ELECTRON_VOLT_KILOGRAM_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE") ::&!capi
-codata_capi_120 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE") ::&!capi
+capi_120 = capi_constant_type([ &!capi
 "e", "l", "e", "m", "e", "n", "t", "a", "r", "y", &!capi
 " ", "c", "h", "a", "r", "g", "e", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2064,8 +2064,8 @@ ELEMENTARY_CHARGE%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE_OVER_H_BAR") ::&!capi
-codata_capi_121 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="ELEMENTARY_CHARGE_OVER_H_BAR") ::&!capi
+capi_121 = capi_constant_type([ &!capi
 "e", "l", "e", "m", "e", "n", "t", "a", "r", "y", &!capi
 " ", "c", "h", "a", "r", "g", "e", " ", "o", "v", &!capi
 "e", "r", " ", "h", "-", "b", "a", "r", c_null_char, " ", &!capi
@@ -2081,8 +2081,8 @@ ELEMENTARY_CHARGE_OVER_H_BAR%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="FARADAY_CONSTANT") ::&!capi
-codata_capi_122 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="FARADAY_CONSTANT") ::&!capi
+capi_122 = capi_constant_type([ &!capi
 "F", "a", "r", "a", "d", "a", "y", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2098,8 +2098,8 @@ FARADAY_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="FERMI_COUPLING_CONSTANT") ::&!capi
-codata_capi_123 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="FERMI_COUPLING_CONSTANT") ::&!capi
+capi_123 = capi_constant_type([ &!capi
 "F", "e", "r", "m", "i", " ", "c", "o", "u", "p", &!capi
 "l", "i", "n", "g", " ", "c", "o", "n", "s", "t", &!capi
 "a", "n", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -2115,8 +2115,8 @@ FERMI_COUPLING_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="FINE_STRUCTURE_CONSTANT") ::&!capi
-codata_capi_124 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="FINE_STRUCTURE_CONSTANT") ::&!capi
+capi_124 = capi_constant_type([ &!capi
 "f", "i", "n", "e", "-", "s", "t", "r", "u", "c", &!capi
 "t", "u", "r", "e", " ", "c", "o", "n", "s", "t", &!capi
 "a", "n", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -2132,8 +2132,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT") ::&!capi
-codata_capi_125 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT") ::&!capi
+capi_125 = capi_constant_type([ &!capi
 "f", "i", "r", "s", "t", " ", "r", "a", "d", "i", &!capi
 "a", "t", "i", "o", "n", " ", "c", "o", "n", "s", &!capi
 "t", "a", "n", "t", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -2149,8 +2149,8 @@ FIRST_RADIATION_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE") ::&!capi
-codata_capi_126 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE") ::&!capi
+capi_126 = capi_constant_type([ &!capi
 "f", "i", "r", "s", "t", " ", "r", "a", "d", "i", &!capi
 "a", "t", "i", "o", "n", " ", "c", "o", "n", "s", &!capi
 "t", "a", "n", "t", " ", "f", "o", "r", " ", "s", &!capi
@@ -2166,8 +2166,8 @@ FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
-codata_capi_127 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
+capi_127 = capi_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "a", "t", &!capi
 "o", "m", "i", "c", " ", "m", "a", "s", "s", " ", &!capi
 "u", "n", "i", "t", " ", "r", "e", "l", "a", "t", &!capi
@@ -2183,8 +2183,8 @@ HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HARTREE_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
-codata_capi_128 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HARTREE_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
+capi_128 = capi_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "e", "l", &!capi
 "e", "c", "t", "r", "o", "n", " ", "v", "o", "l", &!capi
 "t", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
@@ -2200,8 +2200,8 @@ HARTREE_ELECTRON_VOLT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HARTREE_ENERGY") ::&!capi
-codata_capi_129 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HARTREE_ENERGY") ::&!capi
+capi_129 = capi_constant_type([ &!capi
 "H", "a", "r", "t", "r", "e", "e", " ", "e", "n", &!capi
 "e", "r", "g", "y", c_null_char, " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2217,8 +2217,8 @@ HARTREE_ENERGY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HARTREE_ENERGY_IN_EV") ::&!capi
-codata_capi_130 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HARTREE_ENERGY_IN_EV") ::&!capi
+capi_130 = capi_constant_type([ &!capi
 "H", "a", "r", "t", "r", "e", "e", " ", "e", "n", &!capi
 "e", "r", "g", "y", " ", "i", "n", " ", "e", "V", &!capi
 c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2234,8 +2234,8 @@ HARTREE_ENERGY_IN_EV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HARTREE_HERTZ_RELATIONSHIP") ::&!capi
-codata_capi_131 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HARTREE_HERTZ_RELATIONSHIP") ::&!capi
+capi_131 = capi_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "h", "e", &!capi
 "r", "t", "z", " ", "r", "e", "l", "a", "t", "i", &!capi
 "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
@@ -2251,8 +2251,8 @@ HARTREE_HERTZ_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HARTREE_INVERSE_METER_RELATIONSHIP") ::&!capi
-codata_capi_132 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HARTREE_INVERSE_METER_RELATIONSHIP") ::&!capi
+capi_132 = capi_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "i", "n", &!capi
 "v", "e", "r", "s", "e", " ", "m", "e", "t", "e", &!capi
 "r", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
@@ -2268,8 +2268,8 @@ HARTREE_INVERSE_METER_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HARTREE_JOULE_RELATIONSHIP") ::&!capi
-codata_capi_133 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HARTREE_JOULE_RELATIONSHIP") ::&!capi
+capi_133 = capi_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "j", "o", &!capi
 "u", "l", "e", " ", "r", "e", "l", "a", "t", "i", &!capi
 "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
@@ -2285,8 +2285,8 @@ HARTREE_JOULE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HARTREE_KELVIN_RELATIONSHIP") ::&!capi
-codata_capi_134 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HARTREE_KELVIN_RELATIONSHIP") ::&!capi
+capi_134 = capi_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "k", "e", &!capi
 "l", "v", "i", "n", " ", "r", "e", "l", "a", "t", &!capi
 "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
@@ -2302,8 +2302,8 @@ HARTREE_KELVIN_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HARTREE_KILOGRAM_RELATIONSHIP") ::&!capi
-codata_capi_135 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HARTREE_KILOGRAM_RELATIONSHIP") ::&!capi
+capi_135 = capi_constant_type([ &!capi
 "h", "a", "r", "t", "r", "e", "e", "-", "k", "i", &!capi
 "l", "o", "g", "r", "a", "m", " ", "r", "e", "l", &!capi
 "a", "t", "i", "o", "n", "s", "h", "i", "p", c_null_char, &!capi
@@ -2319,8 +2319,8 @@ HARTREE_KILOGRAM_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_ELECTRON_MASS_RATIO") ::&!capi
-codata_capi_136 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_ELECTRON_MASS_RATIO") ::&!capi
+capi_136 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", "-", "e", "l", "e", &!capi
 "c", "t", "r", "o", "n", " ", "m", "a", "s", "s", &!capi
 " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
@@ -2336,8 +2336,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_G_FACTOR") ::&!capi
-codata_capi_137 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_G_FACTOR") ::&!capi
+capi_137 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "g", " ", "f", &!capi
 "a", "c", "t", "o", "r", c_null_char, " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2353,8 +2353,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_MAG_MOM") ::&!capi
-codata_capi_138 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_MAG_MOM") ::&!capi
+capi_138 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2370,8 +2370,8 @@ HELION_MAG_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
-codata_capi_139 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
+capi_139 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
@@ -2387,8 +2387,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
-codata_capi_140 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
+capi_140 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
@@ -2404,8 +2404,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_MASS") ::&!capi
-codata_capi_141 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_MASS") ::&!capi
+capi_141 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2421,8 +2421,8 @@ HELION_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_142 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT") ::&!capi
+capi_142 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
 "q", "u", "i", "v", "a", "l", "e", "n", "t", c_null_char, &!capi
@@ -2438,8 +2438,8 @@ HELION_MASS_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_143 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_143 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
 "q", "u", "i", "v", "a", "l", "e", "n", "t", " ", &!capi
@@ -2455,8 +2455,8 @@ HELION_MASS_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_MASS_IN_U") ::&!capi
-codata_capi_144 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_MASS_IN_U") ::&!capi
+capi_144 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "i", "n", " ", "u", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2472,8 +2472,8 @@ HELION_MASS_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_MOLAR_MASS") ::&!capi
-codata_capi_145 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_MOLAR_MASS") ::&!capi
+capi_145 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "m", "o", "l", &!capi
 "a", "r", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2489,8 +2489,8 @@ HELION_MOLAR_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_PROTON_MASS_RATIO") ::&!capi
-codata_capi_146 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_PROTON_MASS_RATIO") ::&!capi
+capi_146 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", "-", "p", "r", "o", &!capi
 "t", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
 "a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -2506,8 +2506,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_RELATIVE_ATOMIC_MASS") ::&!capi
-codata_capi_147 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_RELATIVE_ATOMIC_MASS") ::&!capi
+capi_147 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "r", "e", "l", &!capi
 "a", "t", "i", "v", "e", " ", "a", "t", "o", "m", &!capi
 "i", "c", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
@@ -2523,8 +2523,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HELION_SHIELDING_SHIFT") ::&!capi
-codata_capi_148 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HELION_SHIELDING_SHIFT") ::&!capi
+capi_148 = capi_constant_type([ &!capi
 "h", "e", "l", "i", "o", "n", " ", "s", "h", "i", &!capi
 "e", "l", "d", "i", "n", "g", " ", "s", "h", "i", &!capi
 "f", "t", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2540,8 +2540,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
-codata_capi_149 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
+capi_149 = capi_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "a", "t", "o", "m", &!capi
 "i", "c", " ", "m", "a", "s", "s", " ", "u", "n", &!capi
 "i", "t", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -2557,8 +2557,8 @@ HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HERTZ_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
-codata_capi_150 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HERTZ_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
+capi_150 = capi_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "e", "l", "e", "c", &!capi
 "t", "r", "o", "n", " ", "v", "o", "l", "t", " ", &!capi
 "r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
@@ -2574,8 +2574,8 @@ HERTZ_ELECTRON_VOLT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HERTZ_HARTREE_RELATIONSHIP") ::&!capi
-codata_capi_151 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HERTZ_HARTREE_RELATIONSHIP") ::&!capi
+capi_151 = capi_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "h", "a", "r", "t", &!capi
 "r", "e", "e", " ", "r", "e", "l", "a", "t", "i", &!capi
 "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
@@ -2591,8 +2591,8 @@ HERTZ_HARTREE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HERTZ_INVERSE_METER_RELATIONSHIP") ::&!capi
-codata_capi_152 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HERTZ_INVERSE_METER_RELATIONSHIP") ::&!capi
+capi_152 = capi_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "i", "n", "v", "e", &!capi
 "r", "s", "e", " ", "m", "e", "t", "e", "r", " ", &!capi
 "r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
@@ -2608,8 +2608,8 @@ HERTZ_INVERSE_METER_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HERTZ_JOULE_RELATIONSHIP") ::&!capi
-codata_capi_153 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HERTZ_JOULE_RELATIONSHIP") ::&!capi
+capi_153 = capi_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "j", "o", "u", "l", &!capi
 "e", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
 "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -2625,8 +2625,8 @@ HERTZ_JOULE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HERTZ_KELVIN_RELATIONSHIP") ::&!capi
-codata_capi_154 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HERTZ_KELVIN_RELATIONSHIP") ::&!capi
+capi_154 = capi_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "k", "e", "l", "v", &!capi
 "i", "n", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
 "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
@@ -2642,8 +2642,8 @@ HERTZ_KELVIN_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HERTZ_KILOGRAM_RELATIONSHIP") ::&!capi
-codata_capi_155 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HERTZ_KILOGRAM_RELATIONSHIP") ::&!capi
+capi_155 = capi_constant_type([ &!capi
 "h", "e", "r", "t", "z", "-", "k", "i", "l", "o", &!capi
 "g", "r", "a", "m", " ", "r", "e", "l", "a", "t", &!capi
 "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
@@ -2659,8 +2659,8 @@ HERTZ_KILOGRAM_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133") ::&!capi
-codata_capi_156 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133") ::&!capi
+capi_156 = capi_constant_type([ &!capi
 "h", "y", "p", "e", "r", "f", "i", "n", "e", " ", &!capi
 "t", "r", "a", "n", "s", "i", "t", "i", "o", "n", &!capi
 " ", "f", "r", "e", "q", "u", "e", "n", "c", "y", &!capi
@@ -2676,8 +2676,8 @@ HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="INVERSE_FINE_STRUCTURE_CONSTANT") ::&!capi
-codata_capi_157 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="INVERSE_FINE_STRUCTURE_CONSTANT") ::&!capi
+capi_157 = capi_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "f", "i", &!capi
 "n", "e", "-", "s", "t", "r", "u", "c", "t", "u", &!capi
 "r", "e", " ", "c", "o", "n", "s", "t", "a", "n", &!capi
@@ -2693,8 +2693,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
-codata_capi_158 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
+capi_158 = capi_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "a", "t", "o", "m", "i", "c", &!capi
 " ", "m", "a", "s", "s", " ", "u", "n", "i", "t", &!capi
@@ -2710,8 +2710,8 @@ INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
-codata_capi_159 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
+capi_159 = capi_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "e", "l", "e", "c", "t", "r", &!capi
 "o", "n", " ", "v", "o", "l", "t", " ", "r", "e", &!capi
@@ -2727,8 +2727,8 @@ INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="INVERSE_METER_HARTREE_RELATIONSHIP") ::&!capi
-codata_capi_160 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="INVERSE_METER_HARTREE_RELATIONSHIP") ::&!capi
+capi_160 = capi_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "h", "a", "r", "t", "r", "e", &!capi
 "e", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
@@ -2744,8 +2744,8 @@ INVERSE_METER_HARTREE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="INVERSE_METER_HERTZ_RELATIONSHIP") ::&!capi
-codata_capi_161 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="INVERSE_METER_HERTZ_RELATIONSHIP") ::&!capi
+capi_161 = capi_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "h", "e", "r", "t", "z", " ", &!capi
 "r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
@@ -2761,8 +2761,8 @@ INVERSE_METER_HERTZ_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="INVERSE_METER_JOULE_RELATIONSHIP") ::&!capi
-codata_capi_162 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="INVERSE_METER_JOULE_RELATIONSHIP") ::&!capi
+capi_162 = capi_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "j", "o", "u", "l", "e", " ", &!capi
 "r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
@@ -2778,8 +2778,8 @@ INVERSE_METER_JOULE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="INVERSE_METER_KELVIN_RELATIONSHIP") ::&!capi
-codata_capi_163 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="INVERSE_METER_KELVIN_RELATIONSHIP") ::&!capi
+capi_163 = capi_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "k", "e", "l", "v", "i", "n", &!capi
 " ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
@@ -2795,8 +2795,8 @@ INVERSE_METER_KELVIN_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="INVERSE_METER_KILOGRAM_RELATIONSHIP") ::&!capi
-codata_capi_164 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="INVERSE_METER_KILOGRAM_RELATIONSHIP") ::&!capi
+capi_164 = capi_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
 "t", "e", "r", "-", "k", "i", "l", "o", "g", "r", &!capi
 "a", "m", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -2812,8 +2812,8 @@ INVERSE_METER_KILOGRAM_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="INVERSE_OF_CONDUCTANCE_QUANTUM") ::&!capi
-codata_capi_165 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="INVERSE_OF_CONDUCTANCE_QUANTUM") ::&!capi
+capi_165 = capi_constant_type([ &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "o", "f", &!capi
 " ", "c", "o", "n", "d", "u", "c", "t", "a", "n", &!capi
 "c", "e", " ", "q", "u", "a", "n", "t", "u", "m", &!capi
@@ -2829,8 +2829,8 @@ INVERSE_OF_CONDUCTANCE_QUANTUM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="JOSEPHSON_CONSTANT") ::&!capi
-codata_capi_166 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="JOSEPHSON_CONSTANT") ::&!capi
+capi_166 = capi_constant_type([ &!capi
 "J", "o", "s", "e", "p", "h", "s", "o", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -2846,8 +2846,8 @@ JOSEPHSON_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
-codata_capi_167 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
+capi_167 = capi_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "a", "t", "o", "m", &!capi
 "i", "c", " ", "m", "a", "s", "s", " ", "u", "n", &!capi
 "i", "t", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -2863,8 +2863,8 @@ JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="JOULE_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
-codata_capi_168 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="JOULE_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
+capi_168 = capi_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "e", "l", "e", "c", &!capi
 "t", "r", "o", "n", " ", "v", "o", "l", "t", " ", &!capi
 "r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
@@ -2880,8 +2880,8 @@ JOULE_ELECTRON_VOLT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="JOULE_HARTREE_RELATIONSHIP") ::&!capi
-codata_capi_169 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="JOULE_HARTREE_RELATIONSHIP") ::&!capi
+capi_169 = capi_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "h", "a", "r", "t", &!capi
 "r", "e", "e", " ", "r", "e", "l", "a", "t", "i", &!capi
 "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", &!capi
@@ -2897,8 +2897,8 @@ JOULE_HARTREE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="JOULE_HERTZ_RELATIONSHIP") ::&!capi
-codata_capi_170 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="JOULE_HERTZ_RELATIONSHIP") ::&!capi
+capi_170 = capi_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "h", "e", "r", "t", &!capi
 "z", " ", "r", "e", "l", "a", "t", "i", "o", "n", &!capi
 "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -2914,8 +2914,8 @@ JOULE_HERTZ_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="JOULE_INVERSE_METER_RELATIONSHIP") ::&!capi
-codata_capi_171 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="JOULE_INVERSE_METER_RELATIONSHIP") ::&!capi
+capi_171 = capi_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "i", "n", "v", "e", &!capi
 "r", "s", "e", " ", "m", "e", "t", "e", "r", " ", &!capi
 "r", "e", "l", "a", "t", "i", "o", "n", "s", "h", &!capi
@@ -2931,8 +2931,8 @@ JOULE_INVERSE_METER_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="JOULE_KELVIN_RELATIONSHIP") ::&!capi
-codata_capi_172 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="JOULE_KELVIN_RELATIONSHIP") ::&!capi
+capi_172 = capi_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "k", "e", "l", "v", &!capi
 "i", "n", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
 "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
@@ -2948,8 +2948,8 @@ JOULE_KELVIN_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="JOULE_KILOGRAM_RELATIONSHIP") ::&!capi
-codata_capi_173 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="JOULE_KILOGRAM_RELATIONSHIP") ::&!capi
+capi_173 = capi_constant_type([ &!capi
 "j", "o", "u", "l", "e", "-", "k", "i", "l", "o", &!capi
 "g", "r", "a", "m", " ", "r", "e", "l", "a", "t", &!capi
 "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
@@ -2965,8 +2965,8 @@ JOULE_KILOGRAM_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
-codata_capi_174 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
+capi_174 = capi_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "a", "t", "o", &!capi
 "m", "i", "c", " ", "m", "a", "s", "s", " ", "u", &!capi
 "n", "i", "t", " ", "r", "e", "l", "a", "t", "i", &!capi
@@ -2982,8 +2982,8 @@ KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KELVIN_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
-codata_capi_175 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KELVIN_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
+capi_175 = capi_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "e", "l", "e", &!capi
 "c", "t", "r", "o", "n", " ", "v", "o", "l", "t", &!capi
 " ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
@@ -2999,8 +2999,8 @@ KELVIN_ELECTRON_VOLT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KELVIN_HARTREE_RELATIONSHIP") ::&!capi
-codata_capi_176 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KELVIN_HARTREE_RELATIONSHIP") ::&!capi
+capi_176 = capi_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "h", "a", "r", &!capi
 "t", "r", "e", "e", " ", "r", "e", "l", "a", "t", &!capi
 "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
@@ -3016,8 +3016,8 @@ KELVIN_HARTREE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KELVIN_HERTZ_RELATIONSHIP") ::&!capi
-codata_capi_177 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KELVIN_HERTZ_RELATIONSHIP") ::&!capi
+capi_177 = capi_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "h", "e", "r", &!capi
 "t", "z", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
 "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
@@ -3033,8 +3033,8 @@ KELVIN_HERTZ_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KELVIN_INVERSE_METER_RELATIONSHIP") ::&!capi
-codata_capi_178 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KELVIN_INVERSE_METER_RELATIONSHIP") ::&!capi
+capi_178 = capi_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "i", "n", "v", &!capi
 "e", "r", "s", "e", " ", "m", "e", "t", "e", "r", &!capi
 " ", "r", "e", "l", "a", "t", "i", "o", "n", "s", &!capi
@@ -3050,8 +3050,8 @@ KELVIN_INVERSE_METER_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KELVIN_JOULE_RELATIONSHIP") ::&!capi
-codata_capi_179 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KELVIN_JOULE_RELATIONSHIP") ::&!capi
+capi_179 = capi_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "j", "o", "u", &!capi
 "l", "e", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
 "n", "s", "h", "i", "p", c_null_char, " ", " ", " ", " ", &!capi
@@ -3067,8 +3067,8 @@ KELVIN_JOULE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KELVIN_KILOGRAM_RELATIONSHIP") ::&!capi
-codata_capi_180 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KELVIN_KILOGRAM_RELATIONSHIP") ::&!capi
+capi_180 = capi_constant_type([ &!capi
 "k", "e", "l", "v", "i", "n", "-", "k", "i", "l", &!capi
 "o", "g", "r", "a", "m", " ", "r", "e", "l", "a", &!capi
 "t", "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", &!capi
@@ -3084,8 +3084,8 @@ KELVIN_KILOGRAM_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
-codata_capi_181 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP") ::&!capi
+capi_181 = capi_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "a", &!capi
 "t", "o", "m", "i", "c", " ", "m", "a", "s", "s", &!capi
 " ", "u", "n", "i", "t", " ", "r", "e", "l", "a", &!capi
@@ -3101,8 +3101,8 @@ KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KILOGRAM_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
-codata_capi_182 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KILOGRAM_ELECTRON_VOLT_RELATIONSHIP") ::&!capi
+capi_182 = capi_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "e", &!capi
 "l", "e", "c", "t", "r", "o", "n", " ", "v", "o", &!capi
 "l", "t", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -3118,8 +3118,8 @@ KILOGRAM_ELECTRON_VOLT_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KILOGRAM_HARTREE_RELATIONSHIP") ::&!capi
-codata_capi_183 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KILOGRAM_HARTREE_RELATIONSHIP") ::&!capi
+capi_183 = capi_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "h", &!capi
 "a", "r", "t", "r", "e", "e", " ", "r", "e", "l", &!capi
 "a", "t", "i", "o", "n", "s", "h", "i", "p", c_null_char, &!capi
@@ -3135,8 +3135,8 @@ KILOGRAM_HARTREE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KILOGRAM_HERTZ_RELATIONSHIP") ::&!capi
-codata_capi_184 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KILOGRAM_HERTZ_RELATIONSHIP") ::&!capi
+capi_184 = capi_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "h", &!capi
 "e", "r", "t", "z", " ", "r", "e", "l", "a", "t", &!capi
 "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
@@ -3152,8 +3152,8 @@ KILOGRAM_HERTZ_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KILOGRAM_INVERSE_METER_RELATIONSHIP") ::&!capi
-codata_capi_185 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KILOGRAM_INVERSE_METER_RELATIONSHIP") ::&!capi
+capi_185 = capi_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "i", &!capi
 "n", "v", "e", "r", "s", "e", " ", "m", "e", "t", &!capi
 "e", "r", " ", "r", "e", "l", "a", "t", "i", "o", &!capi
@@ -3169,8 +3169,8 @@ KILOGRAM_INVERSE_METER_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KILOGRAM_JOULE_RELATIONSHIP") ::&!capi
-codata_capi_186 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KILOGRAM_JOULE_RELATIONSHIP") ::&!capi
+capi_186 = capi_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "j", &!capi
 "o", "u", "l", "e", " ", "r", "e", "l", "a", "t", &!capi
 "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", " ", &!capi
@@ -3186,8 +3186,8 @@ KILOGRAM_JOULE_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="KILOGRAM_KELVIN_RELATIONSHIP") ::&!capi
-codata_capi_187 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="KILOGRAM_KELVIN_RELATIONSHIP") ::&!capi
+capi_187 = capi_constant_type([ &!capi
 "k", "i", "l", "o", "g", "r", "a", "m", "-", "k", &!capi
 "e", "l", "v", "i", "n", " ", "r", "e", "l", "a", &!capi
 "t", "i", "o", "n", "s", "h", "i", "p", c_null_char, " ", &!capi
@@ -3203,8 +3203,8 @@ KILOGRAM_KELVIN_RELATIONSHIP%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="LATTICE_PARAMETER_OF_SILICON") ::&!capi
-codata_capi_188 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="LATTICE_PARAMETER_OF_SILICON") ::&!capi
+capi_188 = capi_constant_type([ &!capi
 "l", "a", "t", "t", "i", "c", "e", " ", "p", "a", &!capi
 "r", "a", "m", "e", "t", "e", "r", " ", "o", "f", &!capi
 " ", "s", "i", "l", "i", "c", "o", "n", c_null_char, " ", &!capi
@@ -3220,8 +3220,8 @@ LATTICE_PARAMETER_OF_SILICON%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="LATTICE_SPACING_OF_IDEAL_SI_220") ::&!capi
-codata_capi_189 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="LATTICE_SPACING_OF_IDEAL_SI_220") ::&!capi
+capi_189 = capi_constant_type([ &!capi
 "l", "a", "t", "t", "i", "c", "e", " ", "s", "p", &!capi
 "a", "c", "i", "n", "g", " ", "o", "f", " ", "i", &!capi
 "d", "e", "a", "l", " ", "S", "i", " ", "(", "2", &!capi
@@ -3237,8 +3237,8 @@ LATTICE_SPACING_OF_IDEAL_SI_220%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_100_KPA") ::&!capi
-codata_capi_190 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_100_KPA") ::&!capi
+capi_190 = capi_constant_type([ &!capi
 "L", "o", "s", "c", "h", "m", "i", "d", "t", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "(", &!capi
 "2", "7", "3", ".", "1", "5", " ", "K", ",", " ", &!capi
@@ -3254,8 +3254,8 @@ LOSCHMIDT_CONSTANT_273_15_K_100_KPA%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA") ::&!capi
-codata_capi_191 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA") ::&!capi
+capi_191 = capi_constant_type([ &!capi
 "L", "o", "s", "c", "h", "m", "i", "d", "t", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "(", &!capi
 "2", "7", "3", ".", "1", "5", " ", "K", ",", " ", &!capi
@@ -3271,8 +3271,8 @@ LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="LUMINOUS_EFFICACY") ::&!capi
-codata_capi_192 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="LUMINOUS_EFFICACY") ::&!capi
+capi_192 = capi_constant_type([ &!capi
 "l", "u", "m", "i", "n", "o", "u", "s", " ", "e", &!capi
 "f", "f", "i", "c", "a", "c", "y", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3288,8 +3288,8 @@ LUMINOUS_EFFICACY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MAG_FLUX_QUANTUM") ::&!capi
-codata_capi_193 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MAG_FLUX_QUANTUM") ::&!capi
+capi_193 = capi_constant_type([ &!capi
 "m", "a", "g", ".", " ", "f", "l", "u", "x", " ", &!capi
 "q", "u", "a", "n", "t", "u", "m", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3305,8 +3305,8 @@ MAG_FLUX_QUANTUM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MOLAR_GAS_CONSTANT") ::&!capi
-codata_capi_194 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MOLAR_GAS_CONSTANT") ::&!capi
+capi_194 = capi_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "g", "a", "s", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3322,8 +3322,8 @@ MOLAR_GAS_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MOLAR_MASS_CONSTANT") ::&!capi
-codata_capi_195 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MOLAR_MASS_CONSTANT") ::&!capi
+capi_195 = capi_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "m", "a", "s", "s", &!capi
 " ", "c", "o", "n", "s", "t", "a", "n", "t", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3339,8 +3339,8 @@ MOLAR_MASS_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MOLAR_MASS_OF_CARBON_12") ::&!capi
-codata_capi_196 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MOLAR_MASS_OF_CARBON_12") ::&!capi
+capi_196 = capi_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "m", "a", "s", "s", &!capi
 " ", "o", "f", " ", "c", "a", "r", "b", "o", "n", &!capi
 "-", "1", "2", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -3356,8 +3356,8 @@ MOLAR_MASS_OF_CARBON_12%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MOLAR_PLANCK_CONSTANT") ::&!capi
-codata_capi_197 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MOLAR_PLANCK_CONSTANT") ::&!capi
+capi_197 = capi_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "P", "l", "a", "n", &!capi
 "c", "k", " ", "c", "o", "n", "s", "t", "a", "n", &!capi
 "t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3373,8 +3373,8 @@ MOLAR_PLANCK_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA") ::&!capi
-codata_capi_198 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA") ::&!capi
+capi_198 = capi_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "v", "o", "l", "u", &!capi
 "m", "e", " ", "o", "f", " ", "i", "d", "e", "a", &!capi
 "l", " ", "g", "a", "s", " ", "(", "2", "7", "3", &!capi
@@ -3390,8 +3390,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA") ::&!capi
-codata_capi_199 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA") ::&!capi
+capi_199 = capi_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "v", "o", "l", "u", &!capi
 "m", "e", " ", "o", "f", " ", "i", "d", "e", "a", &!capi
 "l", " ", "g", "a", "s", " ", "(", "2", "7", "3", &!capi
@@ -3407,8 +3407,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_SILICON") ::&!capi
-codata_capi_200 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MOLAR_VOLUME_OF_SILICON") ::&!capi
+capi_200 = capi_constant_type([ &!capi
 "m", "o", "l", "a", "r", " ", "v", "o", "l", "u", &!capi
 "m", "e", " ", "o", "f", " ", "s", "i", "l", "i", &!capi
 "c", "o", "n", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -3424,8 +3424,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MOLYBDENUM_X_UNIT") ::&!capi
-codata_capi_201 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MOLYBDENUM_X_UNIT") ::&!capi
+capi_201 = capi_constant_type([ &!capi
 "M", "o", "l", "y", "b", "d", "e", "n", "u", "m", &!capi
 " ", "x", " ", "u", "n", "i", "t", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3441,8 +3441,8 @@ MOLYBDENUM_X_UNIT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_COMPTON_WAVELENGTH") ::&!capi
-codata_capi_202 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_COMPTON_WAVELENGTH") ::&!capi
+capi_202 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "C", "o", "m", "p", "t", &!capi
 "o", "n", " ", "w", "a", "v", "e", "l", "e", "n", &!capi
 "g", "t", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -3458,8 +3458,8 @@ MUON_COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_ELECTRON_MASS_RATIO") ::&!capi
-codata_capi_203 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_ELECTRON_MASS_RATIO") ::&!capi
+capi_203 = capi_constant_type([ &!capi
 "m", "u", "o", "n", "-", "e", "l", "e", "c", "t", &!capi
 "r", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
 "a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -3475,8 +3475,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_G_FACTOR") ::&!capi
-codata_capi_204 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_G_FACTOR") ::&!capi
+capi_204 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "g", " ", "f", "a", "c", &!capi
 "t", "o", "r", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3492,8 +3492,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_MAG_MOM") ::&!capi
-codata_capi_205 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_MAG_MOM") ::&!capi
+capi_205 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", c_null_char, " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3509,8 +3509,8 @@ MUON_MAG_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_ANOMALY") ::&!capi
-codata_capi_206 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_ANOMALY") ::&!capi
+capi_206 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", " ", "a", "n", "o", "m", "a", &!capi
 "l", "y", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3526,8 +3526,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
-codata_capi_207 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
+capi_207 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", " ", "t", "o", " ", "B", "o", &!capi
 "h", "r", " ", "m", "a", "g", "n", "e", "t", "o", &!capi
@@ -3543,8 +3543,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
-codata_capi_208 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
+capi_208 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", " ", "t", "o", " ", "n", "u", &!capi
 "c", "l", "e", "a", "r", " ", "m", "a", "g", "n", &!capi
@@ -3560,8 +3560,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_MASS") ::&!capi
-codata_capi_209 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_MASS") ::&!capi
+capi_209 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "s", "s", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3577,8 +3577,8 @@ MUON_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_210 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT") ::&!capi
+capi_210 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
 "i", "v", "a", "l", "e", "n", "t", c_null_char, " ", " ", &!capi
@@ -3594,8 +3594,8 @@ MUON_MASS_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_211 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_211 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "e", "n", "e", "r", "g", "y", " ", "e", "q", "u", &!capi
 "i", "v", "a", "l", "e", "n", "t", " ", "i", "n", &!capi
@@ -3611,8 +3611,8 @@ MUON_MASS_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_MASS_IN_U") ::&!capi
-codata_capi_212 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_MASS_IN_U") ::&!capi
+capi_212 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "i", "n", " ", "u", c_null_char, " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3628,8 +3628,8 @@ MUON_MASS_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_MOLAR_MASS") ::&!capi
-codata_capi_213 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_MOLAR_MASS") ::&!capi
+capi_213 = capi_constant_type([ &!capi
 "m", "u", "o", "n", " ", "m", "o", "l", "a", "r", &!capi
 " ", "m", "a", "s", "s", c_null_char, " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3645,8 +3645,8 @@ MUON_MOLAR_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_NEUTRON_MASS_RATIO") ::&!capi
-codata_capi_214 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_NEUTRON_MASS_RATIO") ::&!capi
+capi_214 = capi_constant_type([ &!capi
 "m", "u", "o", "n", "-", "n", "e", "u", "t", "r", &!capi
 "o", "n", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
 "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -3662,8 +3662,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_PROTON_MAG_MOM_RATIO") ::&!capi
-codata_capi_215 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_PROTON_MAG_MOM_RATIO") ::&!capi
+capi_215 = capi_constant_type([ &!capi
 "m", "u", "o", "n", "-", "p", "r", "o", "t", "o", &!capi
 "n", " ", "m", "a", "g", ".", " ", "m", "o", "m", &!capi
 ".", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
@@ -3679,8 +3679,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_PROTON_MASS_RATIO") ::&!capi
-codata_capi_216 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_PROTON_MASS_RATIO") ::&!capi
+capi_216 = capi_constant_type([ &!capi
 "m", "u", "o", "n", "-", "p", "r", "o", "t", "o", &!capi
 "n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
 "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3696,8 +3696,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="MUON_TAU_MASS_RATIO") ::&!capi
-codata_capi_217 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="MUON_TAU_MASS_RATIO") ::&!capi
+capi_217 = capi_constant_type([ &!capi
 "m", "u", "o", "n", "-", "t", "a", "u", " ", "m", &!capi
 "a", "s", "s", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3713,8 +3713,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION") ::&!capi
-codata_capi_218 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION") ::&!capi
+capi_218 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "a", "c", "t", "i", &!capi
 "o", "n", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3730,8 +3730,8 @@ NATURAL_UNIT_OF_ACTION%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION_IN_EV_S") ::&!capi
-codata_capi_219 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ACTION_IN_EV_S") ::&!capi
+capi_219 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "a", "c", "t", "i", &!capi
 "o", "n", " ", "i", "n", " ", "e", "V", " ", "s", &!capi
@@ -3747,8 +3747,8 @@ NATURAL_UNIT_OF_ACTION_IN_EV_S%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY") ::&!capi
-codata_capi_220 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY") ::&!capi
+capi_220 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "e", "n", "e", "r", &!capi
 "g", "y", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3764,8 +3764,8 @@ NATURAL_UNIT_OF_ENERGY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY_IN_MEV") ::&!capi
-codata_capi_221 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_ENERGY_IN_MEV") ::&!capi
+capi_221 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "e", "n", "e", "r", &!capi
 "g", "y", " ", "i", "n", " ", "M", "e", "V", c_null_char, &!capi
@@ -3781,8 +3781,8 @@ NATURAL_UNIT_OF_ENERGY_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_LENGTH") ::&!capi
-codata_capi_222 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_LENGTH") ::&!capi
+capi_222 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "l", "e", "n", "g", &!capi
 "t", "h", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3798,8 +3798,8 @@ NATURAL_UNIT_OF_LENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MASS") ::&!capi
-codata_capi_223 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MASS") ::&!capi
+capi_223 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "m", "a", "s", "s", &!capi
 c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3815,8 +3815,8 @@ NATURAL_UNIT_OF_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM") ::&!capi
-codata_capi_224 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM") ::&!capi
+capi_224 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "m", "o", "m", "e", &!capi
 "n", "t", "u", "m", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -3832,8 +3832,8 @@ NATURAL_UNIT_OF_MOMENTUM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C") ::&!capi
-codata_capi_225 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C") ::&!capi
+capi_225 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "m", "o", "m", "e", &!capi
 "n", "t", "u", "m", " ", "i", "n", " ", "M", "e", &!capi
@@ -3849,8 +3849,8 @@ NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_TIME") ::&!capi
-codata_capi_226 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_TIME") ::&!capi
+capi_226 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "t", "i", "m", "e", &!capi
 c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3866,8 +3866,8 @@ NATURAL_UNIT_OF_TIME%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_VELOCITY") ::&!capi
-codata_capi_227 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NATURAL_UNIT_OF_VELOCITY") ::&!capi
+capi_227 = capi_constant_type([ &!capi
 "n", "a", "t", "u", "r", "a", "l", " ", "u", "n", &!capi
 "i", "t", " ", "o", "f", " ", "v", "e", "l", "o", &!capi
 "c", "i", "t", "y", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -3883,8 +3883,8 @@ NATURAL_UNIT_OF_VELOCITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_COMPTON_WAVELENGTH") ::&!capi
-codata_capi_228 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_COMPTON_WAVELENGTH") ::&!capi
+capi_228 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "C", "o", &!capi
 "m", "p", "t", "o", "n", " ", "w", "a", "v", "e", &!capi
 "l", "e", "n", "g", "t", "h", c_null_char, " ", " ", " ", &!capi
@@ -3900,8 +3900,8 @@ NEUTRON_COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MAG_MOM_RATIO") ::&!capi
-codata_capi_229 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MAG_MOM_RATIO") ::&!capi
+capi_229 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "e", "l", &!capi
 "e", "c", "t", "r", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "r", "a", "t", &!capi
@@ -3917,8 +3917,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MASS_RATIO") ::&!capi
-codata_capi_230 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_ELECTRON_MASS_RATIO") ::&!capi
+capi_230 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "e", "l", &!capi
 "e", "c", "t", "r", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
@@ -3934,8 +3934,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_G_FACTOR") ::&!capi
-codata_capi_231 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_G_FACTOR") ::&!capi
+capi_231 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "g", " ", &!capi
 "f", "a", "c", "t", "o", "r", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3951,8 +3951,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO") ::&!capi
-codata_capi_232 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO") ::&!capi
+capi_232 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "g", "y", &!capi
 "r", "o", "m", "a", "g", ".", " ", "r", "a", "t", &!capi
 "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -3968,8 +3968,8 @@ NEUTRON_GYROMAG_RATIO%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
-codata_capi_233 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
+capi_233 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "g", "y", &!capi
 "r", "o", "m", "a", "g", ".", " ", "r", "a", "t", &!capi
 "i", "o", " ", "i", "n", " ", "M", "H", "z", "/", &!capi
@@ -3985,8 +3985,8 @@ NEUTRON_GYROMAG_RATIO_IN_MHZ_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM") ::&!capi
-codata_capi_234 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM") ::&!capi
+capi_234 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "g", ".", " ", "m", "o", "m", ".", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4002,8 +4002,8 @@ NEUTRON_MAG_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
-codata_capi_235 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
+capi_235 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "g", ".", " ", "m", "o", "m", ".", " ", "t", "o", &!capi
 " ", "B", "o", "h", "r", " ", "m", "a", "g", "n", &!capi
@@ -4019,8 +4019,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
-codata_capi_236 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
+capi_236 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "g", ".", " ", "m", "o", "m", ".", " ", "t", "o", &!capi
 " ", "n", "u", "c", "l", "e", "a", "r", " ", "m", &!capi
@@ -4036,8 +4036,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_MASS") ::&!capi
-codata_capi_237 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_MASS") ::&!capi
+capi_237 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4053,8 +4053,8 @@ NEUTRON_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_238 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT") ::&!capi
+capi_238 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", " ", "e", "n", "e", "r", "g", "y", " ", &!capi
 "e", "q", "u", "i", "v", "a", "l", "e", "n", "t", &!capi
@@ -4070,8 +4070,8 @@ NEUTRON_MASS_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_239 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_239 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", " ", "e", "n", "e", "r", "g", "y", " ", &!capi
 "e", "q", "u", "i", "v", "a", "l", "e", "n", "t", &!capi
@@ -4087,8 +4087,8 @@ NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_MASS_IN_U") ::&!capi
-codata_capi_240 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_MASS_IN_U") ::&!capi
+capi_240 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "a", &!capi
 "s", "s", " ", "i", "n", " ", "u", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4104,8 +4104,8 @@ NEUTRON_MASS_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_MOLAR_MASS") ::&!capi
-codata_capi_241 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_MOLAR_MASS") ::&!capi
+capi_241 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "m", "o", &!capi
 "l", "a", "r", " ", "m", "a", "s", "s", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4121,8 +4121,8 @@ NEUTRON_MOLAR_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_MUON_MASS_RATIO") ::&!capi
-codata_capi_242 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_MUON_MASS_RATIO") ::&!capi
+capi_242 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "m", "u", &!capi
 "o", "n", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
 "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -4138,8 +4138,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MAG_MOM_RATIO") ::&!capi
-codata_capi_243 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MAG_MOM_RATIO") ::&!capi
+capi_243 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", " ", "r", "a", "t", "i", "o", &!capi
@@ -4155,8 +4155,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE") ::&!capi
-codata_capi_244 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE") ::&!capi
+capi_244 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
@@ -4172,8 +4172,8 @@ NEUTRON_PROTON_MASS_DIFFERENCE%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_245 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT") ::&!capi
+capi_245 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
@@ -4189,8 +4189,8 @@ NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_246 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_246 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
@@ -4206,8 +4206,8 @@ NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_IN_U") ::&!capi
-codata_capi_247 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_DIFFERENCE_IN_U") ::&!capi
+capi_247 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
@@ -4223,8 +4223,8 @@ NEUTRON_PROTON_MASS_DIFFERENCE_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_RATIO") ::&!capi
-codata_capi_248 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_PROTON_MASS_RATIO") ::&!capi
+capi_248 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "p", "r", &!capi
 "o", "t", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", " ", &!capi
@@ -4240,8 +4240,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_RELATIVE_ATOMIC_MASS") ::&!capi
-codata_capi_249 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_RELATIVE_ATOMIC_MASS") ::&!capi
+capi_249 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "r", "e", &!capi
 "l", "a", "t", "i", "v", "e", " ", "a", "t", "o", &!capi
 "m", "i", "c", " ", "m", "a", "s", "s", c_null_char, " ", &!capi
@@ -4257,8 +4257,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_TAU_MASS_RATIO") ::&!capi
-codata_capi_250 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_TAU_MASS_RATIO") ::&!capi
+capi_250 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", "-", "t", "a", &!capi
 "u", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
 "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4274,8 +4274,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&!capi
-codata_capi_251 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&!capi
+capi_251 = capi_constant_type([ &!capi
 "n", "e", "u", "t", "r", "o", "n", " ", "t", "o", &!capi
 " ", "s", "h", "i", "e", "l", "d", "e", "d", " ", &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
@@ -4291,8 +4291,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION") ::&!capi
-codata_capi_252 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION") ::&!capi
+capi_252 = capi_constant_type([ &!capi
 "N", "e", "w", "t", "o", "n", "i", "a", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "o", &!capi
 "f", " ", "g", "r", "a", "v", "i", "t", "a", "t", &!capi
@@ -4308,8 +4308,8 @@ NEWTONIAN_CONSTANT_OF_GRAVITATION%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C") ::&!capi
-codata_capi_253 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C") ::&!capi
+capi_253 = capi_constant_type([ &!capi
 "N", "e", "w", "t", "o", "n", "i", "a", "n", " ", &!capi
 "c", "o", "n", "s", "t", "a", "n", "t", " ", "o", &!capi
 "f", " ", "g", "r", "a", "v", "i", "t", "a", "t", &!capi
@@ -4325,8 +4325,8 @@ NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON") ::&!capi
-codata_capi_254 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON") ::&!capi
+capi_254 = capi_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4342,8 +4342,8 @@ NUCLEAR_MAGNETON%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_EV_T") ::&!capi
-codata_capi_255 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_EV_T") ::&!capi
+capi_255 = capi_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
 "e", "V", "/", "T", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -4359,8 +4359,8 @@ NUCLEAR_MAGNETON_IN_EV_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA") ::&!capi
-codata_capi_256 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA") ::&!capi
+capi_256 = capi_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
 "i", "n", "v", "e", "r", "s", "e", " ", "m", "e", &!capi
@@ -4376,8 +4376,8 @@ NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_K_T") ::&!capi
-codata_capi_257 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_K_T") ::&!capi
+capi_257 = capi_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
 "K", "/", "T", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -4393,8 +4393,8 @@ NUCLEAR_MAGNETON_IN_K_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_MHZ_T") ::&!capi
-codata_capi_258 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="NUCLEAR_MAGNETON_IN_MHZ_T") ::&!capi
+capi_258 = capi_constant_type([ &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
 "g", "n", "e", "t", "o", "n", " ", "i", "n", " ", &!capi
 "M", "H", "z", "/", "T", c_null_char, " ", " ", " ", " ", &!capi
@@ -4410,8 +4410,8 @@ NUCLEAR_MAGNETON_IN_MHZ_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT") ::&!capi
-codata_capi_259 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT") ::&!capi
+capi_259 = capi_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "c", "o", "n", &!capi
 "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4427,8 +4427,8 @@ PLANCK_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT_IN_EV_HZ") ::&!capi
-codata_capi_260 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PLANCK_CONSTANT_IN_EV_HZ") ::&!capi
+capi_260 = capi_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "c", "o", "n", &!capi
 "s", "t", "a", "n", "t", " ", "i", "n", " ", "e", &!capi
 "V", "/", "H", "z", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -4444,8 +4444,8 @@ PLANCK_CONSTANT_IN_EV_HZ%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PLANCK_LENGTH") ::&!capi
-codata_capi_261 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PLANCK_LENGTH") ::&!capi
+capi_261 = capi_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "l", "e", "n", &!capi
 "g", "t", "h", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4461,8 +4461,8 @@ PLANCK_LENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PLANCK_MASS") ::&!capi
-codata_capi_262 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PLANCK_MASS") ::&!capi
+capi_262 = capi_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "m", "a", "s", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4478,8 +4478,8 @@ PLANCK_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV") ::&!capi
-codata_capi_263 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV") ::&!capi
+capi_263 = capi_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
 "q", "u", "i", "v", "a", "l", "e", "n", "t", " ", &!capi
@@ -4495,8 +4495,8 @@ PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PLANCK_TEMPERATURE") ::&!capi
-codata_capi_264 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PLANCK_TEMPERATURE") ::&!capi
+capi_264 = capi_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "t", "e", "m", &!capi
 "p", "e", "r", "a", "t", "u", "r", "e", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4512,8 +4512,8 @@ PLANCK_TEMPERATURE%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PLANCK_TIME") ::&!capi
-codata_capi_265 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PLANCK_TIME") ::&!capi
+capi_265 = capi_constant_type([ &!capi
 "P", "l", "a", "n", "c", "k", " ", "t", "i", "m", &!capi
 "e", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4529,8 +4529,8 @@ PLANCK_TIME%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_CHARGE_TO_MASS_QUOTIENT") ::&!capi
-codata_capi_266 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_CHARGE_TO_MASS_QUOTIENT") ::&!capi
+capi_266 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "c", "h", "a", &!capi
 "r", "g", "e", " ", "t", "o", " ", "m", "a", "s", &!capi
 "s", " ", "q", "u", "o", "t", "i", "e", "n", "t", &!capi
@@ -4546,8 +4546,8 @@ PROTON_CHARGE_TO_MASS_QUOTIENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_COMPTON_WAVELENGTH") ::&!capi
-codata_capi_267 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_COMPTON_WAVELENGTH") ::&!capi
+capi_267 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "C", "o", "m", &!capi
 "p", "t", "o", "n", " ", "w", "a", "v", "e", "l", &!capi
 "e", "n", "g", "t", "h", c_null_char, " ", " ", " ", " ", &!capi
@@ -4563,8 +4563,8 @@ PROTON_COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_ELECTRON_MASS_RATIO") ::&!capi
-codata_capi_268 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_ELECTRON_MASS_RATIO") ::&!capi
+capi_268 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "e", "l", "e", &!capi
 "c", "t", "r", "o", "n", " ", "m", "a", "s", "s", &!capi
 " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
@@ -4580,8 +4580,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_G_FACTOR") ::&!capi
-codata_capi_269 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_G_FACTOR") ::&!capi
+capi_269 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "g", " ", "f", &!capi
 "a", "c", "t", "o", "r", c_null_char, " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4597,8 +4597,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO") ::&!capi
-codata_capi_270 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO") ::&!capi
+capi_270 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "g", "y", "r", &!capi
 "o", "m", "a", "g", ".", " ", "r", "a", "t", "i", &!capi
 "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4614,8 +4614,8 @@ PROTON_GYROMAG_RATIO%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
-codata_capi_271 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
+capi_271 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "g", "y", "r", &!capi
 "o", "m", "a", "g", ".", " ", "r", "a", "t", "i", &!capi
 "o", " ", "i", "n", " ", "M", "H", "z", "/", "T", &!capi
@@ -4631,8 +4631,8 @@ PROTON_GYROMAG_RATIO_IN_MHZ_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM") ::&!capi
-codata_capi_272 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM") ::&!capi
+capi_272 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4648,8 +4648,8 @@ PROTON_MAG_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
-codata_capi_273 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
+capi_273 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
@@ -4665,8 +4665,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
-codata_capi_274 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
+capi_274 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
@@ -4682,8 +4682,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MAG_SHIELDING_CORRECTION") ::&!capi
-codata_capi_275 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MAG_SHIELDING_CORRECTION") ::&!capi
+capi_275 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "s", "h", "i", "e", "l", "d", "i", "n", &!capi
 "g", " ", "c", "o", "r", "r", "e", "c", "t", "i", &!capi
@@ -4699,8 +4699,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MASS") ::&!capi
-codata_capi_276 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MASS") ::&!capi
+capi_276 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4716,8 +4716,8 @@ PROTON_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_277 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT") ::&!capi
+capi_277 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
 "q", "u", "i", "v", "a", "l", "e", "n", "t", c_null_char, &!capi
@@ -4733,8 +4733,8 @@ PROTON_MASS_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_278 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_278 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
 "q", "u", "i", "v", "a", "l", "e", "n", "t", " ", &!capi
@@ -4750,8 +4750,8 @@ PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MASS_IN_U") ::&!capi
-codata_capi_279 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MASS_IN_U") ::&!capi
+capi_279 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "i", "n", " ", "u", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4767,8 +4767,8 @@ PROTON_MASS_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MOLAR_MASS") ::&!capi
-codata_capi_280 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MOLAR_MASS") ::&!capi
+capi_280 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "o", "l", &!capi
 "a", "r", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4784,8 +4784,8 @@ PROTON_MOLAR_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_MUON_MASS_RATIO") ::&!capi
-codata_capi_281 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_MUON_MASS_RATIO") ::&!capi
+capi_281 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "m", "u", "o", &!capi
 "n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
 "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4801,8 +4801,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MAG_MOM_RATIO") ::&!capi
-codata_capi_282 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MAG_MOM_RATIO") ::&!capi
+capi_282 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "n", "e", "u", &!capi
 "t", "r", "o", "n", " ", "m", "a", "g", ".", " ", &!capi
 "m", "o", "m", ".", " ", "r", "a", "t", "i", "o", &!capi
@@ -4818,8 +4818,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MASS_RATIO") ::&!capi
-codata_capi_283 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_NEUTRON_MASS_RATIO") ::&!capi
+capi_283 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "n", "e", "u", &!capi
 "t", "r", "o", "n", " ", "m", "a", "s", "s", " ", &!capi
 "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", " ", &!capi
@@ -4835,8 +4835,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_RELATIVE_ATOMIC_MASS") ::&!capi
-codata_capi_284 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_RELATIVE_ATOMIC_MASS") ::&!capi
+capi_284 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "r", "e", "l", &!capi
 "a", "t", "i", "v", "e", " ", "a", "t", "o", "m", &!capi
 "i", "c", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
@@ -4852,8 +4852,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_RMS_CHARGE_RADIUS") ::&!capi
-codata_capi_285 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_RMS_CHARGE_RADIUS") ::&!capi
+capi_285 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", " ", "r", "m", "s", &!capi
 " ", "c", "h", "a", "r", "g", "e", " ", "r", "a", &!capi
 "d", "i", "u", "s", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -4869,8 +4869,8 @@ PROTON_RMS_CHARGE_RADIUS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="PROTON_TAU_MASS_RATIO") ::&!capi
-codata_capi_286 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="PROTON_TAU_MASS_RATIO") ::&!capi
+capi_286 = capi_constant_type([ &!capi
 "p", "r", "o", "t", "o", "n", "-", "t", "a", "u", &!capi
 " ", "m", "a", "s", "s", " ", "r", "a", "t", "i", &!capi
 "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4886,8 +4886,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION") ::&!capi
-codata_capi_287 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION") ::&!capi
+capi_287 = capi_constant_type([ &!capi
 "q", "u", "a", "n", "t", "u", "m", " ", "o", "f", &!capi
 " ", "c", "i", "r", "c", "u", "l", "a", "t", "i", &!capi
 "o", "n", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -4903,8 +4903,8 @@ QUANTUM_OF_CIRCULATION%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION_TIMES_2") ::&!capi
-codata_capi_288 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="QUANTUM_OF_CIRCULATION_TIMES_2") ::&!capi
+capi_288 = capi_constant_type([ &!capi
 "q", "u", "a", "n", "t", "u", "m", " ", "o", "f", &!capi
 " ", "c", "i", "r", "c", "u", "l", "a", "t", "i", &!capi
 "o", "n", " ", "t", "i", "m", "e", "s", " ", "2", &!capi
@@ -4920,8 +4920,8 @@ QUANTUM_OF_CIRCULATION_TIMES_2%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="REDUCED_COMPTON_WAVELENGTH") ::&!capi
-codata_capi_289 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="REDUCED_COMPTON_WAVELENGTH") ::&!capi
+capi_289 = capi_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "C", "o", &!capi
 "m", "p", "t", "o", "n", " ", "w", "a", "v", "e", &!capi
 "l", "e", "n", "g", "t", "h", c_null_char, " ", " ", " ", &!capi
@@ -4937,8 +4937,8 @@ REDUCED_COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="REDUCED_MUON_COMPTON_WAVELENGTH") ::&!capi
-codata_capi_290 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="REDUCED_MUON_COMPTON_WAVELENGTH") ::&!capi
+capi_290 = capi_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "m", "u", &!capi
 "o", "n", " ", "C", "o", "m", "p", "t", "o", "n", &!capi
 " ", "w", "a", "v", "e", "l", "e", "n", "g", "t", &!capi
@@ -4954,8 +4954,8 @@ REDUCED_MUON_COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="REDUCED_NEUTRON_COMPTON_WAVELENGTH") ::&!capi
-codata_capi_291 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="REDUCED_NEUTRON_COMPTON_WAVELENGTH") ::&!capi
+capi_291 = capi_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "n", "e", &!capi
 "u", "t", "r", "o", "n", " ", "C", "o", "m", "p", &!capi
 "t", "o", "n", " ", "w", "a", "v", "e", "l", "e", &!capi
@@ -4971,8 +4971,8 @@ REDUCED_NEUTRON_COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT") ::&!capi
-codata_capi_292 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT") ::&!capi
+capi_292 = capi_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "P", "l", &!capi
 "a", "n", "c", "k", " ", "c", "o", "n", "s", "t", &!capi
 "a", "n", "t", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -4988,8 +4988,8 @@ REDUCED_PLANCK_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_IN_EV_S") ::&!capi
-codata_capi_293 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_IN_EV_S") ::&!capi
+capi_293 = capi_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "P", "l", &!capi
 "a", "n", "c", "k", " ", "c", "o", "n", "s", "t", &!capi
 "a", "n", "t", " ", "i", "n", " ", "e", "V", " ", &!capi
@@ -5005,8 +5005,8 @@ REDUCED_PLANCK_CONSTANT_IN_EV_S%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM") ::&!capi
-codata_capi_294 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM") ::&!capi
+capi_294 = capi_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "P", "l", &!capi
 "a", "n", "c", "k", " ", "c", "o", "n", "s", "t", &!capi
 "a", "n", "t", " ", "t", "i", "m", "e", "s", " ", &!capi
@@ -5022,8 +5022,8 @@ REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="REDUCED_PROTON_COMPTON_WAVELENGTH") ::&!capi
-codata_capi_295 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="REDUCED_PROTON_COMPTON_WAVELENGTH") ::&!capi
+capi_295 = capi_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "p", "r", &!capi
 "o", "t", "o", "n", " ", "C", "o", "m", "p", "t", &!capi
 "o", "n", " ", "w", "a", "v", "e", "l", "e", "n", &!capi
@@ -5039,8 +5039,8 @@ REDUCED_PROTON_COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="REDUCED_TAU_COMPTON_WAVELENGTH") ::&!capi
-codata_capi_296 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="REDUCED_TAU_COMPTON_WAVELENGTH") ::&!capi
+capi_296 = capi_constant_type([ &!capi
 "r", "e", "d", "u", "c", "e", "d", " ", "t", "a", &!capi
 "u", " ", "C", "o", "m", "p", "t", "o", "n", " ", &!capi
 "w", "a", "v", "e", "l", "e", "n", "g", "t", "h", &!capi
@@ -5056,8 +5056,8 @@ REDUCED_TAU_COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT") ::&!capi
-codata_capi_297 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT") ::&!capi
+capi_297 = capi_constant_type([ &!capi
 "R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5073,8 +5073,8 @@ RYDBERG_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_C_IN_HZ") ::&!capi
-codata_capi_298 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_C_IN_HZ") ::&!capi
+capi_298 = capi_constant_type([ &!capi
 "R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", " ", "t", "i", "m", &!capi
 "e", "s", " ", "c", " ", "i", "n", " ", "H", "z", &!capi
@@ -5090,8 +5090,8 @@ RYDBERG_CONSTANT_TIMES_C_IN_HZ%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_EV") ::&!capi
-codata_capi_299 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_EV") ::&!capi
+capi_299 = capi_constant_type([ &!capi
 "R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", " ", "t", "i", "m", &!capi
 "e", "s", " ", "h", "c", " ", "i", "n", " ", "e", &!capi
@@ -5107,8 +5107,8 @@ RYDBERG_CONSTANT_TIMES_HC_IN_EV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_J") ::&!capi
-codata_capi_300 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="RYDBERG_CONSTANT_TIMES_HC_IN_J") ::&!capi
+capi_300 = capi_constant_type([ &!capi
 "R", "y", "d", "b", "e", "r", "g", " ", "c", "o", &!capi
 "n", "s", "t", "a", "n", "t", " ", "t", "i", "m", &!capi
 "e", "s", " ", "h", "c", " ", "i", "n", " ", "J", &!capi
@@ -5124,8 +5124,8 @@ RYDBERG_CONSTANT_TIMES_HC_IN_J%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_100_KPA") ::&!capi
-codata_capi_301 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_100_KPA") ::&!capi
+capi_301 = capi_constant_type([ &!capi
 "S", "a", "c", "k", "u", "r", "-", "T", "e", "t", &!capi
 "r", "o", "d", "e", " ", "c", "o", "n", "s", "t", &!capi
 "a", "n", "t", " ", "(", "1", " ", "K", ",", " ", &!capi
@@ -5141,8 +5141,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA") ::&!capi
-codata_capi_302 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA") ::&!capi
+capi_302 = capi_constant_type([ &!capi
 "S", "a", "c", "k", "u", "r", "-", "T", "e", "t", &!capi
 "r", "o", "d", "e", " ", "c", "o", "n", "s", "t", &!capi
 "a", "n", "t", " ", "(", "1", " ", "K", ",", " ", &!capi
@@ -5158,8 +5158,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SECOND_RADIATION_CONSTANT") ::&!capi
-codata_capi_303 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SECOND_RADIATION_CONSTANT") ::&!capi
+capi_303 = capi_constant_type([ &!capi
 "s", "e", "c", "o", "n", "d", " ", "r", "a", "d", &!capi
 "i", "a", "t", "i", "o", "n", " ", "c", "o", "n", &!capi
 "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", " ", &!capi
@@ -5175,8 +5175,8 @@ SECOND_RADIATION_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO") ::&!capi
-codata_capi_304 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO") ::&!capi
+capi_304 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "g", "y", "r", "o", &!capi
 "m", "a", "g", ".", " ", "r", "a", "t", "i", "o", &!capi
@@ -5192,8 +5192,8 @@ SHIELDED_HELION_GYROMAG_RATIO%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
-codata_capi_305 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
+capi_305 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "g", "y", "r", "o", &!capi
 "m", "a", "g", ".", " ", "r", "a", "t", "i", "o", &!capi
@@ -5209,8 +5209,8 @@ SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM") ::&!capi
-codata_capi_306 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM") ::&!capi
+capi_306 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "m", "a", "g", ".", &!capi
 " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", " ", &!capi
@@ -5226,8 +5226,8 @@ SHIELDED_HELION_MAG_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
-codata_capi_307 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
+capi_307 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "m", "a", "g", ".", &!capi
 " ", "m", "o", "m", ".", " ", "t", "o", " ", "B", &!capi
@@ -5243,8 +5243,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
-codata_capi_308 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
+capi_308 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "m", "a", "g", ".", &!capi
 " ", "m", "o", "m", ".", " ", "t", "o", " ", "n", &!capi
@@ -5260,8 +5260,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO") ::&!capi
-codata_capi_309 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO") ::&!capi
+capi_309 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "t", "o", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
@@ -5277,8 +5277,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&!capi
-codata_capi_310 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO") ::&!capi
+capi_310 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "h", &!capi
 "e", "l", "i", "o", "n", " ", "t", "o", " ", "s", &!capi
 "h", "i", "e", "l", "d", "e", "d", " ", "p", "r", &!capi
@@ -5294,8 +5294,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO") ::&!capi
-codata_capi_311 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO") ::&!capi
+capi_311 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "g", "y", "r", "o", &!capi
 "m", "a", "g", ".", " ", "r", "a", "t", "i", "o", &!capi
@@ -5311,8 +5311,8 @@ SHIELDED_PROTON_GYROMAG_RATIO%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
-codata_capi_312 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T") ::&!capi
+capi_312 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "g", "y", "r", "o", &!capi
 "m", "a", "g", ".", " ", "r", "a", "t", "i", "o", &!capi
@@ -5328,8 +5328,8 @@ SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM") ::&!capi
-codata_capi_313 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM") ::&!capi
+capi_313 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
 " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", " ", &!capi
@@ -5345,8 +5345,8 @@ SHIELDED_PROTON_MAG_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
-codata_capi_314 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
+capi_314 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
 " ", "m", "o", "m", ".", " ", "t", "o", " ", "B", &!capi
@@ -5362,8 +5362,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
-codata_capi_315 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
+capi_315 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "e", "d", " ", "p", &!capi
 "r", "o", "t", "o", "n", " ", "m", "a", "g", ".", &!capi
 " ", "m", "o", "m", ".", " ", "t", "o", " ", "n", &!capi
@@ -5379,8 +5379,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD") ::&!capi
-codata_capi_316 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD") ::&!capi
+capi_316 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "i", "n", "g", " ", &!capi
 "d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
 " ", "o", "f", " ", "d", " ", "a", "n", "d", " ", &!capi
@@ -5396,8 +5396,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT") ::&!capi
-codata_capi_317 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT") ::&!capi
+capi_317 = capi_constant_type([ &!capi
 "s", "h", "i", "e", "l", "d", "i", "n", "g", " ", &!capi
 "d", "i", "f", "f", "e", "r", "e", "n", "c", "e", &!capi
 " ", "o", "f", " ", "t", " ", "a", "n", "d", " ", &!capi
@@ -5413,8 +5413,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="SPEED_OF_LIGHT_IN_VACUUM") ::&!capi
-codata_capi_318 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="SPEED_OF_LIGHT_IN_VACUUM") ::&!capi
+capi_318 = capi_constant_type([ &!capi
 "s", "p", "e", "e", "d", " ", "o", "f", " ", "l", &!capi
 "i", "g", "h", "t", " ", "i", "n", " ", "v", "a", &!capi
 "c", "u", "u", "m", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -5430,8 +5430,8 @@ SPEED_OF_LIGHT_IN_VACUUM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="STANDARD_ACCELERATION_OF_GRAVITY") ::&!capi
-codata_capi_319 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="STANDARD_ACCELERATION_OF_GRAVITY") ::&!capi
+capi_319 = capi_constant_type([ &!capi
 "s", "t", "a", "n", "d", "a", "r", "d", " ", "a", &!capi
 "c", "c", "e", "l", "e", "r", "a", "t", "i", "o", &!capi
 "n", " ", "o", "f", " ", "g", "r", "a", "v", "i", &!capi
@@ -5447,8 +5447,8 @@ STANDARD_ACCELERATION_OF_GRAVITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="STANDARD_ATMOSPHERE") ::&!capi
-codata_capi_320 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="STANDARD_ATMOSPHERE") ::&!capi
+capi_320 = capi_constant_type([ &!capi
 "s", "t", "a", "n", "d", "a", "r", "d", " ", "a", &!capi
 "t", "m", "o", "s", "p", "h", "e", "r", "e", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5464,8 +5464,8 @@ STANDARD_ATMOSPHERE%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="STANDARD_STATE_PRESSURE") ::&!capi
-codata_capi_321 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="STANDARD_STATE_PRESSURE") ::&!capi
+capi_321 = capi_constant_type([ &!capi
 "s", "t", "a", "n", "d", "a", "r", "d", "-", "s", &!capi
 "t", "a", "t", "e", " ", "p", "r", "e", "s", "s", &!capi
 "u", "r", "e", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -5481,8 +5481,8 @@ STANDARD_STATE_PRESSURE%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="STEFAN_BOLTZMANN_CONSTANT") ::&!capi
-codata_capi_322 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="STEFAN_BOLTZMANN_CONSTANT") ::&!capi
+capi_322 = capi_constant_type([ &!capi
 "S", "t", "e", "f", "a", "n", "-", "B", "o", "l", &!capi
 "t", "z", "m", "a", "n", "n", " ", "c", "o", "n", &!capi
 "s", "t", "a", "n", "t", c_null_char, " ", " ", " ", " ", &!capi
@@ -5498,8 +5498,8 @@ STEFAN_BOLTZMANN_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_COMPTON_WAVELENGTH") ::&!capi
-codata_capi_323 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_COMPTON_WAVELENGTH") ::&!capi
+capi_323 = capi_constant_type([ &!capi
 "t", "a", "u", " ", "C", "o", "m", "p", "t", "o", &!capi
 "n", " ", "w", "a", "v", "e", "l", "e", "n", "g", &!capi
 "t", "h", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5515,8 +5515,8 @@ TAU_COMPTON_WAVELENGTH%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_ELECTRON_MASS_RATIO") ::&!capi
-codata_capi_324 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_ELECTRON_MASS_RATIO") ::&!capi
+capi_324 = capi_constant_type([ &!capi
 "t", "a", "u", "-", "e", "l", "e", "c", "t", "r", &!capi
 "o", "n", " ", "m", "a", "s", "s", " ", "r", "a", &!capi
 "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
@@ -5532,8 +5532,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_325 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_ENERGY_EQUIVALENT") ::&!capi
+capi_325 = capi_constant_type([ &!capi
 "t", "a", "u", " ", "e", "n", "e", "r", "g", "y", &!capi
 " ", "e", "q", "u", "i", "v", "a", "l", "e", "n", &!capi
 "t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5549,8 +5549,8 @@ TAU_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_MASS") ::&!capi
-codata_capi_326 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_MASS") ::&!capi
+capi_326 = capi_constant_type([ &!capi
 "t", "a", "u", " ", "m", "a", "s", "s", c_null_char, " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5566,8 +5566,8 @@ TAU_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_MASS_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_327 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_MASS_ENERGY_EQUIVALENT") ::&!capi
+capi_327 = capi_constant_type([ &!capi
 "t", "a", "u", " ", "m", "a", "s", "s", " ", "e", &!capi
 "n", "e", "r", "g", "y", " ", "e", "q", "u", "i", &!capi
 "v", "a", "l", "e", "n", "t", c_null_char, " ", " ", " ", &!capi
@@ -5583,8 +5583,8 @@ TAU_MASS_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_MASS_IN_U") ::&!capi
-codata_capi_328 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_MASS_IN_U") ::&!capi
+capi_328 = capi_constant_type([ &!capi
 "t", "a", "u", " ", "m", "a", "s", "s", " ", "i", &!capi
 "n", " ", "u", c_null_char, " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5600,8 +5600,8 @@ TAU_MASS_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_MOLAR_MASS") ::&!capi
-codata_capi_329 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_MOLAR_MASS") ::&!capi
+capi_329 = capi_constant_type([ &!capi
 "t", "a", "u", " ", "m", "o", "l", "a", "r", " ", &!capi
 "m", "a", "s", "s", c_null_char, " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5617,8 +5617,8 @@ TAU_MOLAR_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_MUON_MASS_RATIO") ::&!capi
-codata_capi_330 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_MUON_MASS_RATIO") ::&!capi
+capi_330 = capi_constant_type([ &!capi
 "t", "a", "u", "-", "m", "u", "o", "n", " ", "m", &!capi
 "a", "s", "s", " ", "r", "a", "t", "i", "o", c_null_char, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5634,8 +5634,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_NEUTRON_MASS_RATIO") ::&!capi
-codata_capi_331 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_NEUTRON_MASS_RATIO") ::&!capi
+capi_331 = capi_constant_type([ &!capi
 "t", "a", "u", "-", "n", "e", "u", "t", "r", "o", &!capi
 "n", " ", "m", "a", "s", "s", " ", "r", "a", "t", &!capi
 "i", "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5651,8 +5651,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TAU_PROTON_MASS_RATIO") ::&!capi
-codata_capi_332 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TAU_PROTON_MASS_RATIO") ::&!capi
+capi_332 = capi_constant_type([ &!capi
 "t", "a", "u", "-", "p", "r", "o", "t", "o", "n", &!capi
 " ", "m", "a", "s", "s", " ", "r", "a", "t", "i", &!capi
 "o", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5668,8 +5668,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="THOMSON_CROSS_SECTION") ::&!capi
-codata_capi_333 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="THOMSON_CROSS_SECTION") ::&!capi
+capi_333 = capi_constant_type([ &!capi
 "T", "h", "o", "m", "s", "o", "n", " ", "c", "r", &!capi
 "o", "s", "s", " ", "s", "e", "c", "t", "i", "o", &!capi
 "n", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5685,8 +5685,8 @@ THOMSON_CROSS_SECTION%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_ELECTRON_MASS_RATIO") ::&!capi
-codata_capi_334 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_ELECTRON_MASS_RATIO") ::&!capi
+capi_334 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", "-", "e", "l", "e", &!capi
 "c", "t", "r", "o", "n", " ", "m", "a", "s", "s", &!capi
 " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", " ", &!capi
@@ -5702,8 +5702,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_G_FACTOR") ::&!capi
-codata_capi_335 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_G_FACTOR") ::&!capi
+capi_335 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "g", " ", "f", &!capi
 "a", "c", "t", "o", "r", c_null_char, " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5719,8 +5719,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM") ::&!capi
-codata_capi_336 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM") ::&!capi
+capi_336 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5736,8 +5736,8 @@ TRITON_MAG_MOM%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
-codata_capi_337 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO") ::&!capi
+capi_337 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
 "B", "o", "h", "r", " ", "m", "a", "g", "n", "e", &!capi
@@ -5753,8 +5753,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
-codata_capi_338 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO") ::&!capi
+capi_338 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "t", "o", " ", &!capi
 "n", "u", "c", "l", "e", "a", "r", " ", "m", "a", &!capi
@@ -5770,8 +5770,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_MASS") ::&!capi
-codata_capi_339 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_MASS") ::&!capi
+capi_339 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5787,8 +5787,8 @@ TRITON_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT") ::&!capi
-codata_capi_340 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT") ::&!capi
+capi_340 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
 "q", "u", "i", "v", "a", "l", "e", "n", "t", c_null_char, &!capi
@@ -5804,8 +5804,8 @@ TRITON_MASS_ENERGY_EQUIVALENT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
-codata_capi_341 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV") ::&!capi
+capi_341 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "e", "n", "e", "r", "g", "y", " ", "e", &!capi
 "q", "u", "i", "v", "a", "l", "e", "n", "t", " ", &!capi
@@ -5821,8 +5821,8 @@ TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_MASS_IN_U") ::&!capi
-codata_capi_342 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_MASS_IN_U") ::&!capi
+capi_342 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "a", "s", &!capi
 "s", " ", "i", "n", " ", "u", c_null_char, " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5838,8 +5838,8 @@ TRITON_MASS_IN_U%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_MOLAR_MASS") ::&!capi
-codata_capi_343 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_MOLAR_MASS") ::&!capi
+capi_343 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "m", "o", "l", &!capi
 "a", "r", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5855,8 +5855,8 @@ TRITON_MOLAR_MASS%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_PROTON_MASS_RATIO") ::&!capi
-codata_capi_344 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_PROTON_MASS_RATIO") ::&!capi
+capi_344 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", "-", "p", "r", "o", &!capi
 "t", "o", "n", " ", "m", "a", "s", "s", " ", "r", &!capi
 "a", "t", "i", "o", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -5872,8 +5872,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_RELATIVE_ATOMIC_MASS") ::&!capi
-codata_capi_345 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_RELATIVE_ATOMIC_MASS") ::&!capi
+capi_345 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "r", "e", "l", &!capi
 "a", "t", "i", "v", "e", " ", "a", "t", "o", "m", &!capi
 "i", "c", " ", "m", "a", "s", "s", c_null_char, " ", " ", &!capi
@@ -5889,8 +5889,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="TRITON_TO_PROTON_MAG_MOM_RATIO") ::&!capi
-codata_capi_346 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="TRITON_TO_PROTON_MAG_MOM_RATIO") ::&!capi
+capi_346 = capi_constant_type([ &!capi
 "t", "r", "i", "t", "o", "n", " ", "t", "o", " ", &!capi
 "p", "r", "o", "t", "o", "n", " ", "m", "a", "g", &!capi
 ".", " ", "m", "o", "m", ".", " ", "r", "a", "t", &!capi
@@ -5906,8 +5906,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="UNIFIED_ATOMIC_MASS_UNIT") ::&!capi
-codata_capi_347 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="UNIFIED_ATOMIC_MASS_UNIT") ::&!capi
+capi_347 = capi_constant_type([ &!capi
 "u", "n", "i", "f", "i", "e", "d", " ", "a", "t", &!capi
 "o", "m", "i", "c", " ", "m", "a", "s", "s", " ", &!capi
 "u", "n", "i", "t", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -5923,8 +5923,8 @@ UNIFIED_ATOMIC_MASS_UNIT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="VACUUM_ELECTRIC_PERMITTIVITY") ::&!capi
-codata_capi_348 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="VACUUM_ELECTRIC_PERMITTIVITY") ::&!capi
+capi_348 = capi_constant_type([ &!capi
 "v", "a", "c", "u", "u", "m", " ", "e", "l", "e", &!capi
 "c", "t", "r", "i", "c", " ", "p", "e", "r", "m", &!capi
 "i", "t", "t", "i", "v", "i", "t", "y", c_null_char, " ", &!capi
@@ -5940,8 +5940,8 @@ VACUUM_ELECTRIC_PERMITTIVITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="VACUUM_MAG_PERMEABILITY") ::&!capi
-codata_capi_349 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="VACUUM_MAG_PERMEABILITY") ::&!capi
+capi_349 = capi_constant_type([ &!capi
 "v", "a", "c", "u", "u", "m", " ", "m", "a", "g", &!capi
 ".", " ", "p", "e", "r", "m", "e", "a", "b", "i", &!capi
 "l", "i", "t", "y", c_null_char, " ", " ", " ", " ", " ", &!capi
@@ -5957,8 +5957,8 @@ VACUUM_MAG_PERMEABILITY%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="VON_KLITZING_CONSTANT") ::&!capi
-codata_capi_350 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="VON_KLITZING_CONSTANT") ::&!capi
+capi_350 = capi_constant_type([ &!capi
 "v", "o", "n", " ", "K", "l", "i", "t", "z", "i", &!capi
 "n", "g", " ", "c", "o", "n", "s", "t", "a", "n", &!capi
 "t", c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5974,8 +5974,8 @@ VON_KLITZING_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="WEAK_MIXING_ANGLE") ::&!capi
-codata_capi_351 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="WEAK_MIXING_ANGLE") ::&!capi
+capi_351 = capi_constant_type([ &!capi
 "w", "e", "a", "k", " ", "m", "i", "x", "i", "n", &!capi
 "g", " ", "a", "n", "g", "l", "e", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
@@ -5991,8 +5991,8 @@ c_null_char, " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT") ::&!capi
-codata_capi_352 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT") ::&!capi
+capi_352 = capi_constant_type([ &!capi
 "W", "i", "e", "n", " ", "f", "r", "e", "q", "u", &!capi
 "e", "n", "c", "y", " ", "d", "i", "s", "p", "l", &!capi
 "a", "c", "e", "m", "e", "n", "t", " ", "l", "a", &!capi
@@ -6008,8 +6008,8 @@ WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT") ::&!capi
-codata_capi_353 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT") ::&!capi
+capi_353 = capi_constant_type([ &!capi
 "W", "i", "e", "n", " ", "w", "a", "v", "e", "l", &!capi
 "e", "n", "g", "t", "h", " ", "d", "i", "s", "p", &!capi
 "l", "a", "c", "e", "m", "e", "n", "t", " ", "l", &!capi
@@ -6025,8 +6025,8 @@ WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT%uncertainty, &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " " &!capi
 ])!capi
 
-type(codata_capi_constant_type), protected, public, bind(C, name="W_TO_Z_MASS_RATIO") ::&!capi
-codata_capi_354 = codata_capi_constant_type([ &!capi
+type(capi_constant_type), protected, public, bind(C, name="W_TO_Z_MASS_RATIO") ::&!capi
+capi_354 = capi_constant_type([ &!capi
 "W", " ", "t", "o", " ", "Z", " ", "m", "a", "s", &!capi
 "s", " ", "r", "a", "t", "i", "o", c_null_char, " ", " ", &!capi
 " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", &!capi

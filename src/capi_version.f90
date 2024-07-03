@@ -7,12 +7,12 @@ private
 
 character(len=:), allocatable, target :: version_c
 
-public :: codata_capi_get_version
+public :: capi_get_version
 
 contains
 
 
-function codata_capi_get_version()bind(C, name="codata_get_version")result(cptr)
+function capi_get_version()bind(C, name="codata_get_version")result(cptr)
     !! Get the version
     implicit none
     type(c_ptr) :: cptr

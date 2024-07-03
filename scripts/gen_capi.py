@@ -50,8 +50,8 @@ def write_constant(f, var, name, value, uncertainty, unit, year, count):
         cnames.append(", ".join(cname[indexes[i]: indexes[i+1]]))
     cnames.append(", ".join(cname[indexes[-1]:]))
     
-    f.write(f"type(codata_capi_constant_type), protected, public, bind(C, name=\"{var:s}{suffix}\") ::&" + ctag + newline)
-    f.write(f"codata_capi_{count:d}{suffix} = codata_capi_constant_type([ &" + ctag + newline)
+    f.write(f"type(capi_constant_type), protected, public, bind(C, name=\"{var:s}{suffix}\") ::&" + ctag + newline)
+    f.write(f"capi_{count:d}{suffix} = capi_constant_type([ &" + ctag + newline)
 
     # last not comma at the end
     for _cname in cnames[:-1]:
