@@ -1,4 +1,4 @@
-module capi__version
+module codata__capi_version
     !! Version
 use iso_c_binding, only: c_ptr, c_null_char, c_loc
 use codata__version, only: get_version
@@ -7,12 +7,12 @@ private
 
 character(len=:), allocatable, target :: version_c
 
-public :: capi_get_version
+public :: codata_capi_get_version
 
 contains
 
 
-function capi_get_version()bind(C, name="codata_get_version")result(cptr)
+function codata_capi_get_version()bind(C, name="codata_get_version")result(cptr)
     !! Get the version
     implicit none
     type(c_ptr) :: cptr
@@ -31,4 +31,4 @@ function capi_get_version()bind(C, name="codata_get_version")result(cptr)
     cptr = c_loc(version_c)
 end function
 
-end module capi__version
+end module codata__capi_version
