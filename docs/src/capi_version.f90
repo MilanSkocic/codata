@@ -1,4 +1,4 @@
-module capi__version
+module codata__capi_version
     !! Version
 use iso_c_binding, only: c_ptr, c_null_char, c_loc
 use codata__version, only: get_version
@@ -31,4 +31,4 @@ function capi_get_version()bind(C, name="codata_get_version")result(cptr)
     cptr = c_loc(version_c)
 end function
 
-end module capi__version
+end module codata__capi_version

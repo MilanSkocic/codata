@@ -1,6 +1,6 @@
-module capi
+module codata__capi
     !! Main module for the Codata library.
-use capi__version
-use capi__constants
+use codata__capi_version
+use codata__capi_constants
 implicit none
-end module capi
+end module codata__capi
