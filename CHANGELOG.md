@@ -1,3 +1,10 @@
+# Version 1.3.0 - Not released
+
+* Fix conflict that could occur with C API modules. Add prefix in module names.
+* Cleanup and refractoring.
+* Documentation update.
+
+
 # Version 1.2.1
 
 * Refractoring
