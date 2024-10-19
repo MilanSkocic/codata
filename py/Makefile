@@ -11,15 +11,22 @@ endif
 
 SETUP=setup.py pyproject.toml
 
-all: python3.8 python3.9 python3.10 python3.11 python3.12
+all: python3.9 python3.10 python3.11 python3.12 python3.13
+
+python3.13: $(SETUP)
+	@echo "########### PYTHON 3.13 ##########"
+	$(PY)3.13 setup.py build_ext --inplace
+	$(PY)3.13 -m build --no-isolation --sdist
+	$(PY)3.13 -m build --no-isolation --wheel
+	$(PY)3.13 -m unittest -v
+	$(AW)
+	@echo "#################################"
 
 python3.12: $(SETUP)
 	@echo "########### PYTHON 3.12 ##########"
 	$(PY)3.12 setup.py build_ext --inplace
-	$(PY)3.12 -m build --no-isolation --sdist
 	$(PY)3.12 -m build --no-isolation --wheel
 	$(PY)3.12 -m unittest -v
-	$(AW)
 	@echo "#################################"
 
 python3.11: $(SETUP)
@@ -41,13 +48,6 @@ python3.9: $(SETUP)
 	$(PY)3.9 setup.py build_ext --inplace
 	$(PY)3.9 -m build --no-isolation --wheel
 	$(PY)3.9 -m unittest -v
-	@echo "#################################"
-
-python3.8: $(SETUP)
-	@echo "########### PYTHON 3.8 ##########"
-	$(PY)3.8 setup.py build_ext --inplace
-	$(PY)3.8 -m build --no-isolation --wheel
-	$(PY)3.8 -m unittest -v
 	@echo "#################################"
 
 clean: 
