@@ -1,17 +1,24 @@
-# Version 1.2.2
+# 1.3.0
+
+* Drop support for Python 3.8 and support for Python 3.13. 
+
+**Not released**
+
+
+# 1.2.2
 
 * Fix conflict that could occur with C API modules. Add prefix in module names.
 * Cleanup and refractoring.
 * Documentation update.
 
 
-# Version 1.2.1
+# 1.2.1
 
 * Refractoring
 * Merge back C API and python wrapper.
 
 
-# Version 1.2.0
+# 1.2.0
 
 * Refractoring
 * Documentation update.
@@ -19,7 +26,7 @@
 Full changelog available at [github](https://github.com/milanskocic/codata/releases)
 
 
-# Version 1.1.0
+# 1.1.0
 
 * C API and Python wrapper moved to their own repositories.
     * [C wrapper](https://github.com/MilanSkocic/codata-capi)
@@ -31,7 +38,7 @@ Full changelog available at [github](https://github.com/milanskocic/codata/relea
 Full changelog available at [github](https://github.com/MilanSkocic/codata/releases)
 
 
-# Version 1.0.0
+# 1.0.0
 
 * Add codata values for 2010, 2014 and 2018.
 * Code refractoring and code cleaning.
@@ -46,7 +53,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.10.0 
+# 0.10.0 
 
 * Remove remove generation of the version module.
 * Add tests using the test-drive framework.
@@ -61,7 +68,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.9.0
+# 0.9.0
 
 * No API changes.
 * Automatic generation of the version module.
@@ -75,7 +82,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.8.2
+# 0.8.2
 
 * No API changes.
 * Improve Makefile for generating the source code at each compilation.
@@ -89,7 +96,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.8.1
+# 0.8.1
 
 * Use shared library in python wrapper.
 * Minor fixes in documentation.
@@ -100,7 +107,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.8.0
+# 0.8.0
 
 * Back to the approach with a library.
 * Compatible with fpm.
@@ -119,7 +126,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.7.1
+# 0.7.1
 
 * Minor fixes in generator code
 * Add automatic copy of c sources for the python wrapper.
@@ -130,7 +137,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.7.0
+# 0.7.0
 
 * Migrate documentation from doxygen to sphinx+breathe.
 * Add YEAR constant indicating the year of the codata constants.
@@ -142,7 +149,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.6.0
+# 0.6.0
 
 * Created documentation.
 * Fixed missing uncertainties for Cpython.
@@ -153,7 +160,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.5.0
+# 0.5.0
 
 * Changed the complete approach by not generating a library but only source files for different languages.
 * Available languages: Fortran, C, python, CPython
@@ -164,7 +171,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.4.0
+# 0.4.0
 
 * Bring back pywrapper in the codata repository to sync versions.
 * Improvements of the documentation.
@@ -175,7 +182,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.3.0
+# 0.3.0
 
 * Only last codata constants. 
 
@@ -185,7 +192,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.2.1
+# 0.2.1
 
 * Integration of Intel Fortran compiler and MSVC in cmake scripts.
 * Add specifications and instructions for compiling on Windows 
@@ -196,7 +203,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.2.0
+# 0.2.0
 
 * Bug fixes for the codata 2010.
 * Bug fixes in the tests linked to the codata 2010.
@@ -208,7 +215,7 @@ Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
 
 
-# Version 0.1.0
+# 0.1.0
 
 Implementation of:
 
