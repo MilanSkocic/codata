@@ -84,6 +84,9 @@ headers: sources
 cpython: sources
 	make -C py/src/pycodata
 
+python: nist
+	make -C py/src/pycodata
+
 stdlib: sources
 	make -C stdlib
 
