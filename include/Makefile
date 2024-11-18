@@ -2,7 +2,7 @@ PY=python
 GEN=../scripts/gen_headers.py
 CONC=../scripts/gen_header.py
 
-AST_DIR=../nist
+AST_DIR=../data
 
 AST_SRC=$(wildcard $(AST_DIR)/*.toml)
 C_HEADER = codata_constants_2010.h codata_constants_2014.h codata_constants_2018.h codata_constants_2022.h

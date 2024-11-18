@@ -2,7 +2,7 @@ PY=python
 GEN_FORTRAN=../scripts/gen_fortran.py
 GEN_CAPI=../scripts/gen_capi.py
 
-AST_DIR=../nist
+AST_DIR=../data
 SRC_DIR=.
 
 AST_SRC=$(wildcard $(AST_DIR)/*.toml)

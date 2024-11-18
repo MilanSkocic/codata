@@ -12,7 +12,7 @@ endif
 
 SRC_FYPP=$(wildcard ./src/*.fypp)
 
-.PHONY: build nist stdlib sources doc docs clean logo
+.PHONY: build data stdlib sources doc docs clean logo
 
 all: $(LIBNAME)
 
@@ -72,10 +72,10 @@ uninstall:
 	rm -f $(install_dir)/lib/$(LIBNAME).dll
 	rm -f $(install_dir)/bin/$(LIBNAME).dll
 
-nist:
-	make -C nist
+data:
+	make -C data
 
-sources: nist 
+sources: data
 	make -C src 
 
 headers: sources
@@ -84,7 +84,7 @@ headers: sources
 cpython: sources
 	make -C py/src/pycodata
 
-python: nist
+python: data
 	make -C py/src/pycodata
 
 stdlib: sources
@@ -101,7 +101,7 @@ logo:
 	make -C media
 
 clean:
-	make -C nist clean
+	make -C data clean
 	make -C src clean
 	make -C include clean
 	make -C stdlib clean

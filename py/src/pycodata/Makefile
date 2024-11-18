@@ -2,7 +2,7 @@ PY=python
 GEN=../../../scripts/gen_cpython.py
 GENPY=../../../scripts/gen_python.py
 
-AST_DIR=../../../nist
+AST_DIR=../../../data
 
 AST_SRC=$(wildcard $(AST_DIR)/*.toml)
 CPYTHON = cpy_codata_constants_2010.c cpy_codata_constants_2014.c cpy_codata_constants_2018.c cpy_codata_constants_2022.c
@@ -10,7 +10,8 @@ PYTHON = constants_2010.py constants_2014.py constants_2018.py constants_2022.py
 
 .PHONY: clean
 
-all: $(CPYTHON) $(PYTHON)
+# all: $(CPYTHON) $(PYTHON)
+all: $(PYTHON)
 
 cpy_codata_constants_2010.c: $(AST_DIR)/codata_2010.toml
 	$(PY) $(GEN) $< $@
