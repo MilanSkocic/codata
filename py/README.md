@@ -1,10 +1,9 @@
 # Introduction
 
-Python wrapper around the
-[Fortran codata library](https://milanskocic.github.io/codata/index.html).
-The Fortran library does not need to be installed, the python wrapper embeds all needed fortran dependencies
-for Windows and MacOS.
-On linux, you might have to install `libgfortran` if it is not distributed with your linux distribution. 
+`pycodata` is a library providing the latest codata constants (2022) and 
+older values (2018, 2014 and 2010). 
+The raw codata are taken from http://physics.nist.gov/constants.
+The constants (values and uncertainties) are implemented as dictionnaries.
 
 # Installation
 
