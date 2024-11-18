@@ -1,46 +1,46 @@
 r"""Setup."""
-import platform
-import shutil
-import pathlib
-import subprocess
+# import platform
+# import shutil
+# import pathlib
+# import subprocess
 from setuptools import setup, Extension
 
-LIBSDARWIN = ("libgfortran.5", "libquadmath.0", "libgcc_s.1.1")
-LIBSWINDOWS = ("libgfortran-5", "libquadmath-0", "libgcc_s_seh-1", "libwinpthread-1")
-LIBSLINUX = []
-ROOTLINUX = "/usr/lib/"
-ROOTDARWIN = "/usr/local/opt/gcc/lib/gcc/current"
-ROOTWINDOWS = "C:/msys64/mingw64/bin"
-ROOT = ROOTLINUX
-LIBS = LIBSLINUX
+# LIBSDARWIN = ("libgfortran.5", "libquadmath.0", "libgcc_s.1.1")
+# LIBSWINDOWS = ("libgfortran-5", "libquadmath-0", "libgcc_s_seh-1", "libwinpthread-1")
+# LIBSLINUX = []
+# ROOTLINUX = "/usr/lib/"
+# ROOTDARWIN = "/usr/local/opt/gcc/lib/gcc/current"
+# ROOTWINDOWS = "C:/msys64/mingw64/bin"
+# ROOT = ROOTLINUX
+# LIBS = LIBSLINUX
+# 
+# name = "codata"
+# libraries = None
+# library_dirs = None
+# runtime_library_dirs = None
+# extra_objects = None
+# ext = [".so"]
 
-name = "codata"
-libraries = None
-library_dirs = None
-runtime_library_dirs = None
-extra_objects = None
-ext = [".so"]
 
-
-if platform.system() == "Linux":
-    libraries = [name]
-    library_dirs = [f"./src/py{name:s}"]
-    runtime_library_dirs = ["$ORIGIN"]
-    ext = [".so"]
-    ROOT = ROOTLINUX
-    LIBS = LIBSLINUX
-if platform.system() == "Windows":
-    extra_objects = [f"./src/py{name:s}/lib{name:s}.dll.a"]
-    ext = [".dll", ".dll.a"]
-    ROOT = ROOTWINDOWS
-    LIBS = LIBSWINDOWS
-if platform.system() == "Darwin":
-    libraries = [name]
-    library_dirs = [f"./src/py{name:s}"]
-    runtime_library_dirs = ["@loader_path"]
-    ext = [".dylib"]
-    ROOT = ROOTDARWIN
-    LIBS = LIBSDARWIN
+# if platform.system() == "Linux":
+#     libraries = [name]
+#     library_dirs = [f"./src/py{name:s}"]
+#     runtime_library_dirs = ["$ORIGIN"]
+#     ext = [".so"]
+#     ROOT = ROOTLINUX
+#     LIBS = LIBSLINUX
+# if platform.system() == "Windows":
+#     extra_objects = [f"./src/py{name:s}/lib{name:s}.dll.a"]
+#     ext = [".dll", ".dll.a"]
+#     ROOT = ROOTWINDOWS
+#     LIBS = LIBSWINDOWS
+# if platform.system() == "Darwin":
+#     libraries = [name]
+#     library_dirs = [f"./src/py{name:s}"]
+#     runtime_library_dirs = ["@loader_path"]
+#     ext = [".dylib"]
+#     ROOT = ROOTDARWIN
+#     LIBS = LIBSDARWIN
 
 
 # Headers
@@ -112,36 +112,36 @@ fobj.close
 
 if __name__ == "__main__":
 
-    mod_constants_latest = Extension(name="pycodata.constants_2022",
-                        sources=["./src/pycodata/cpy_codata_constants_2022.c"],
-                        libraries=libraries,
-                        library_dirs=library_dirs,
-                        runtime_library_dirs=runtime_library_dirs,
-                        extra_objects=extra_objects)
-    mod_constants_2018 = Extension(name="pycodata.constants_2018",
-                        sources=["./src/pycodata/cpy_codata_constants_2018.c"],
-                        libraries=libraries,
-                        library_dirs=library_dirs,
-                        runtime_library_dirs=runtime_library_dirs,
-                        extra_objects=extra_objects)
-    mod_constants_2014 = Extension(name="pycodata.constants_2014",
-                        sources=["./src/pycodata/cpy_codata_constants_2014.c"],
-                        libraries=libraries,
-                        library_dirs=library_dirs,
-                        runtime_library_dirs=runtime_library_dirs,
-                        extra_objects=extra_objects)
-    mod_constants_2010 = Extension(name="pycodata.constants_2010",
-                        sources=["./src/pycodata/cpy_codata_constants_2010.c"],
-                        libraries=libraries,
-                        library_dirs=library_dirs,
-                        runtime_library_dirs=runtime_library_dirs,
-                        extra_objects=extra_objects)
-    mod_version = Extension(name="pycodata.version",
-                        sources=["./src/pycodata/cpy_codata_version.c"],
-                        libraries=libraries,
-                        library_dirs=library_dirs,
-                        runtime_library_dirs=runtime_library_dirs,
-                        extra_objects=extra_objects)
+#     mod_constants_latest = Extension(name="pycodata.constants_2022",
+#                         sources=["./src/pycodata/cpy_codata_constants_2022.c"],
+#                         libraries=libraries,
+#                         library_dirs=library_dirs,
+#                         runtime_library_dirs=runtime_library_dirs,
+#                         extra_objects=extra_objects)
+#     mod_constants_2018 = Extension(name="pycodata.constants_2018",
+#                         sources=["./src/pycodata/cpy_codata_constants_2018.c"],
+#                         libraries=libraries,
+#                         library_dirs=library_dirs,
+#                         runtime_library_dirs=runtime_library_dirs,
+#                         extra_objects=extra_objects)
+#     mod_constants_2014 = Extension(name="pycodata.constants_2014",
+#                         sources=["./src/pycodata/cpy_codata_constants_2014.c"],
+#                         libraries=libraries,
+#                         library_dirs=library_dirs,
+#                         runtime_library_dirs=runtime_library_dirs,
+#                         extra_objects=extra_objects)
+#     mod_constants_2010 = Extension(name="pycodata.constants_2010",
+#                         sources=["./src/pycodata/cpy_codata_constants_2010.c"],
+#                         libraries=libraries,
+#                         library_dirs=library_dirs,
+#                         runtime_library_dirs=runtime_library_dirs,
+#                         extra_objects=extra_objects)
+#     mod_version = Extension(name="pycodata.version",
+#                         sources=["./src/pycodata/cpy_codata_version.c"],
+#                         libraries=libraries,
+#                         library_dirs=library_dirs,
+#                         runtime_library_dirs=runtime_library_dirs,
+#                         extra_objects=extra_objects)
     setup(version=version,
          # ext_modules=[mod_constants_latest, mod_constants_2018, mod_constants_2014, mod_constants_2010, mod_version]
          )
