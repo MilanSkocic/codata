@@ -78,8 +78,8 @@ data:
 sources: data
 	make -C src 
 
-headers: sources
-	make -C include
+C: data
+	make -C C
 
 cpython: sources
 	make -C py/src/pycodata
@@ -105,6 +105,7 @@ clean:
 	make -C src clean
 	make -C include clean
 	make -C stdlib clean
+	make -C C clean
 	make -C py clean
 	fpm clean --all
 	rm -rf API-doc/*
