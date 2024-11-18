@@ -1,6 +1,7 @@
-# 1.3.0
+# 2.0.0
 
-* Drop support for Python 3.8 and support for Python 3.13. 
+* Drop compiled extensions for Python.
+* Pure Python code for constants auto-generated as it is the case for the Fortran code.
 
 **Not released**
 
