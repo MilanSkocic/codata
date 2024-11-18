@@ -40,3 +40,6 @@ py/wheelhouse/
 py/src/pycodata/bin/
 py/src/pycodata/include/
 py/src/pycodata/lib/
+
+C/build/
+C/bin/
