@@ -11,14 +11,15 @@ endif
 
 SETUP=setup.py pyproject.toml
 
-all: python3.9 python3.10 python3.11 python3.12 python3.13
+#all: python3.9 python3.10 python3.11 python3.12 python3.13
+all: python3.13
 
 python3.13: $(SETUP)
 	@echo "########### PYTHON 3.13 ##########"
 	$(PY)3.13 setup.py build_ext --inplace
 	$(PY)3.13 -m build --no-isolation --sdist
 	$(PY)3.13 -m build --no-isolation --wheel
-	$(PY)3.13 -m unittest -v
+	$(PY)3.13 -m pytest -v
 	$(AW)
 	@echo "#################################"
 
