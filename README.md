@@ -5,7 +5,6 @@ older values (2018, 2014 and 2010).
 The raw codata are taken from http://physics.nist.gov/constants.
 The constants (values and uncertainties) are implemented as double precision reals.
 C API allows usage from C, or can be used as a basis for other wrappers.
-Python wrapper allows easy usage from Python.
 
 The names are quite long and can be aliased with shorter names.
 
@@ -23,6 +22,7 @@ add the following to your `fpm.toml` file:
 
 * If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. 
 
+* A python package is provided in the `py` folder.
 
 # Dependencies
 
