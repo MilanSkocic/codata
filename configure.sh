@@ -33,6 +33,8 @@ fi
 
 cp -f VERSION ./py/VERSION
 cp -f LICENSE ./py/LICENSE
+cp -f VERSION ./C/VERSION
+cp -f LICENSE ./C/LICENSE
 
 export LIBNAME
 echo "LIBNAME=" $LIBNAME
