@@ -13,12 +13,12 @@ title: Examples
 # C
 
 ```C
-{!example/example.c!}
+{!C/example/example.c!}
 ```
 
 
 # Python
 
 ```python
-{!example/example.py!}
+{!py/example/example.py!}
 ```
