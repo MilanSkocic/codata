@@ -2,6 +2,10 @@
 
 * Drop compiled extensions for Python.
 * Pure Python code for constants auto-generated as it is the case for the Fortran code.
+* Pure C code for constants auto-generated as it is the case for the Fortran code.
+* API break:
+    * No more C API in the Fortran code. 
+    * Use the pure C code to build a C library.
 
 **Not released**
 
