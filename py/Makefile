@@ -11,6 +11,8 @@ endif
 
 SETUP=setup.py pyproject.toml
 
+.PHONY: sources package clean
+
 all: sources package
 
 sources: 

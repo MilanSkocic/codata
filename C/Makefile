@@ -1,7 +1,7 @@
 
 
 
-.PHONY: headers sources clean
+.PHONY: headers sources build clean
 
 all: headers sources
 
