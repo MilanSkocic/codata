@@ -48,7 +48,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
     fcode = open(fpath_code, "w")
     fast = open(fpath_ast, "r")
 
-    #write_module_start(fcode, year)
+    write_module_start(fcode, year)
     write_year(fcode, year)
 
     ast = tomlkit.load(fast)
@@ -59,10 +59,20 @@ def run(fpath_ast: str, fpath_code: str)->None:
         unit = ast[var]["unit"]
         write_constant(fcode, var, name, value, uncertainty, unit, year)
     
-    #write_module_end(fcode, year)
+    write_module_end(fcode, year)
 
     fast.close()
     fcode.close()
+    
+    f = open("../VERSION", "r")
+    version = f.read().strip()
+    f.close()
+    f = open("codata_version.h", "w")
+    f.write("#ifndef CODATA_VERSION_H" + newline)
+    f.write("#define CODATA_VERSION_H" + newline)
+    f.write(f"const char version[32] = {version:s}" + newline)
+    f.write("#endif")
+    f.close()
 
 
 if __name__ == "__main__":

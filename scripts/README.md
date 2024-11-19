@@ -8,6 +8,7 @@ The main Makefile at the root of the repository allows to trigger the automatic 
 
 ```bash
 make fortran
+make stdlib
 make C
 make py
 ```

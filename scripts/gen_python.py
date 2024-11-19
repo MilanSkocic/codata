@@ -66,6 +66,14 @@ def run(fpath_ast: str, fpath_code: str)->None:
     fast.close()
     fcode.close()
 
+    version = None
+    with open("../../VERSION", "r") as f:
+        version = f.read().strip()
+
+    fobj = open('version.py', "w")
+    fobj.write(f"__version__ = \"{version:s}\"")
+    fobj.close
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog='genpython', description='Generate python sources.')
