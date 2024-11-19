@@ -1,4 +1,4 @@
-r"""Generate CPython sources."""
+r"""Generate Python sources."""
 import argparse
 import tomlkit
 
