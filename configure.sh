@@ -61,6 +61,7 @@ export PY_SRC
 export C_SRC
 export FC
 export CC
+export EXT
 
 echo "##### COMMON SETTINGS #####"
 echo "* LIBNAME=" $LIBNAME

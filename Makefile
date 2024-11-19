@@ -78,7 +78,7 @@ fortran: data
 	make -C src 
 
 C: data
-	make -C C headers
+	make -C C sources
 
 cpython: data
 	make -C py sources

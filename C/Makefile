@@ -9,11 +9,12 @@ all: headers sources
 headers: 
 	make -C include
 
-sources:
+sources: headers
 	make -C src sources
 
 build:
 	mkdir -p $(BUILD_DIR)
+	make -C src build
 
 clean:
 	make -C include clean
