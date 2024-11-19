@@ -12,7 +12,7 @@ endif
 
 SRC_FYPP=$(wildcard ./src/*.fypp)
 
-.PHONY: build data stdlib sources doc docs clean logo
+.PHONY: build data stdlib fortran python cpython doc docs clean logo
 
 all: $(LIBNAME)
 
@@ -26,7 +26,6 @@ test: build
 
 example: build
 	fpm run --profile=$(btype) --example example_in_f
-	fpm run --profile=$(btype) --example example_in_c
 
 copy_a: 
 	cp -f $(shell find ./build/gfortran* -type f -name $(LIBNAME).a) $(BUILD_DIR)
@@ -75,19 +74,19 @@ uninstall:
 data:
 	make -C data
 
-sources: data
+fortran: data
 	make -C src 
 
 C: data
-	make -C C
+	make -C C headers
 
-cpython: sources
-	make -C py/src/pycodata
+cpython: data
+	make -C py sources
 
 python: data
-	make -C py/src/pycodata
+	make -C py sources
 
-stdlib: sources
+stdlib: fortran
 	make -C stdlib
 
 doc:
@@ -109,7 +108,3 @@ clean:
 	make -C py clean
 	fpm clean --all
 	rm -rf API-doc/*
-
-py: $(LIBNAME)
-	make install prefix=py/$(PY_SRC)
-	make -C py
