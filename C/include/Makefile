@@ -1,7 +1,6 @@
 PY=python
 GEN=../../scripts/gen_headers.py
 CONC=../../scripts/gen_header.py
-GEN_VERSION = ../../gen_version.py
 
 AST_DIR=../../data
 
@@ -9,7 +8,7 @@ AST_SRC=$(wildcard $(AST_DIR)/*.toml)
 C_HEADER = codata_constants_2010.h codata_constants_2014.h codata_constants_2018.h codata_constants_2022.h 
 MAIN_HEADER = codata.h
 
-.PHONY: clean version
+.PHONY: clean
 
 all: $(C_HEADER) $(C_VERSION)
 
@@ -24,10 +23,6 @@ codata_constants_2018.h: $(AST_DIR)/codata_2018.toml
 
 codata_constants_2022.h: $(AST_DIR)/codata_2022.toml
 	$(PY) $(GEN) $< $@
-
-codata_version.h: ../VERSION
-	$(PY) $(GEN_VERSION) $@
-
 
 $(MAIN_HEADER): $(C_HEADER)
 	$(PY) $(CONC) $^ -o $@
