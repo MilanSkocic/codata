@@ -30,10 +30,10 @@ codata_constants_2022.c: $(AST_DIR)/codata_2022.toml
 	$(PY) $(GEN) $< $@
 
 $(CBUILD_DIR)/%.o: %.c
-	gcc -c -I ../include $(CFLAGS_RELEASE) $(FPM_CFLAGS) $< -o $@
+	gcc -c -I../include $(CFLAGS_RELEASE) $(FPM_CFLAGS) $< -o $@
 
 $(CBUILD_DIR)/$(LIBNAME).a: $(C_OBJ)
-	ar -rs $@ $^
+	ar -crs $@ $^
 
 shared: build shared_$(PLATFORM)
 
