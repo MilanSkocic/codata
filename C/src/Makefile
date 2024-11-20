@@ -5,7 +5,7 @@ AST_DIR=../../data
 CBUILD_DIR = ../build
 
 AST_SRC=$(wildcard $(AST_DIR)/*.toml)
-C_SRC = codata_constants_2010.c codata_constants_2014.c codata_constants_2018.c codata_constants_2022.c 
+C_SRC = codata_constants_2010.c codata_constants_2014.c codata_constants_2018.c codata_constants_2022.c codata_version.c
 C_OBJ=$(patsubst %.c, $(CBUILD_DIR)/%.o, $(C_SRC))
 DLIB=$(CBUILD_DIR)/$(LIBNAME).a
 
