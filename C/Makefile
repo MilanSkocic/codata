@@ -12,7 +12,7 @@ headers:
 sources: headers
 	make -C src sources
 
-build:
+build: headers sources
 	mkdir -p $(BUILD_DIR)
 	make -C src
 
@@ -22,3 +22,4 @@ example: sources headers build
 clean:
 	make -C include clean
 	make -C src clean
+	make -C example clean
