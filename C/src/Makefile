@@ -7,11 +7,11 @@ CBUILD_DIR = ../build
 AST_SRC=$(wildcard $(AST_DIR)/*.toml)
 C_SRC = codata_constants_2010.c codata_constants_2014.c codata_constants_2018.c codata_constants_2022.c 
 C_OBJ=$(patsubst %.c, $(CBUILD_DIR)/%.o, $(C_SRC))
-DLIB=$(CBUILD_DIR)/$(LIBNAME)$(EXT)
+DLIB=$(CBUILD_DIR)/$(LIBNAME).a
 
 .PHONY: clean
 
-all: sources
+all: sources build shared
 
 sources: $(C_SRC)
 
@@ -32,8 +32,19 @@ codata_constants_2022.c: $(AST_DIR)/codata_2022.toml
 $(CBUILD_DIR)/%.o: %.c
 	gcc -c -I ../include $(CFLAGS_RELEASE) $(FPM_CFLAGS) $< -o $@
 
-$(CBUILD_DIR)/$(LIBNAME)$(EXT): $(C_OBJ)
-	gcc -shared $(C_OBJ) -o $@
+$(CBUILD_DIR)/$(LIBNAME).a: $(C_OBJ)
+	ar -rs $@ $^
+
+shared: build shared_$(PLATFORM)
+
+shared_linux: 
+	$(CC) -shared -o $(CBUILD_DIR)/$(LIBNAME).so -Wl,--whole-archive $(CBUILD_DIR)/$(LIBNAME).a -Wl,--no-whole-archive
+
+shared_darwin: 
+	$(CC) -dynamiclib -install_name @rpath/$(LIBNAME).dylib $(FPM_LDFLAGS) -o $(CBUILD_DIR)/$(LIBNAME).dylib -Wl,-all_load $(CBUILD_DIR)/$(LIBNAME).a
+
+shared_windows: 
+	$(CC) -shared $(FPM_LDFLAGS) -o $(CBUILD_DIR)/$(LIBNAME).dll -Wl,--out-implib=$(CBUILD_DIR)/$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(CBUILD_DIR)/$(LIBNAME).a -Wl,--no-whole-archive
 
 clean:
 	rm -rf $(C_SRC)

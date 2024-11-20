@@ -3,7 +3,7 @@
 
 .PHONY: headers sources build clean
 
-all: headers sources
+all: headers sources build
 
 
 headers: 
@@ -14,7 +14,7 @@ sources: headers
 
 build:
 	mkdir -p $(BUILD_DIR)
-	make -C src build
+	make -C src
 
 clean:
 	make -C include clean
