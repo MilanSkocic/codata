@@ -66,11 +66,14 @@ def run(fpath_ast: str, fpath_code: str)->None:
     fast.close()
     fcode.close()
 
+def write_version()->None:
+    
     version = None
     with open("../../VERSION", "r") as f:
         version = f.read().strip()
 
     fobj = open('version.py', "w")
+    fobj.write("\"\"\"Version\"\"\"" + newline)
     fobj.write(f"__version__ = \"{version:s}\"")
     fobj.close
 
@@ -82,3 +85,4 @@ if __name__ == "__main__":
     args = parser.parse_args() 
 
     run(args.ast, args.code)
+    write_version()

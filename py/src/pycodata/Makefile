@@ -37,8 +37,6 @@ constants_2018.py: $(AST_DIR)/codata_2018.toml
 constants_2022.py: $(AST_DIR)/codata_2022.toml
 	$(PY) $(GENPY) $< $@
 
-version.py: ../../VERSION
-
 clean:
 	rm -rf $(CPYTHON)
 	rm -rf $(PYTHON)

@@ -1,5 +1,5 @@
 ifeq ($(PLATFORM), windows)
-	PY=py -
+	PY=py
 endif
 ifeq ($(PLATFORM), linux)
 	PY=python
