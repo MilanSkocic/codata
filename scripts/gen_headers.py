@@ -70,7 +70,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
     f = open("codata_version.h", "w")
     f.write("#ifndef CODATA_VERSION_H" + newline)
     f.write("#define CODATA_VERSION_H" + newline)
-    f.write(f"extern const char *version;" + newline)
+    f.write(f"extern const char version[32];" + newline)
     f.write("#endif" + newline)
     f.close()
 
