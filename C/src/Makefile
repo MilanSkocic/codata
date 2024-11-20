@@ -48,4 +48,3 @@ shared_windows:
 
 clean:
 	rm -rf $(C_SRC)
-	rm -rf $(CBUILD_DIR)/*

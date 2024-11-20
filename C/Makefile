@@ -20,6 +20,6 @@ example: sources headers build
 	make -C example
 
 clean:
+	rm -rf ./build/*
 	make -C include clean
 	make -C src clean
-	make -C example clean
