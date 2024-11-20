@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include "codata_version.h"
-#include "codata_constants_2022.h"
+#include "codata.h"
 
 int main(void){
     
@@ -17,9 +16,9 @@ int main(void){
     
     printf("%s\n","########## OLDER VALUES ##########");
     printf("Mu_2022(latest) = %23.16f\n", MOLAR_MASS_CONSTANT.value);
-    //printf("Mu_2018 = %23.16f\n", MOLAR_MASS_CONSTANT_2018.value);
-    //printf("Mu_2014 = %23.16f\n", MOLAR_MASS_CONSTANT_2014.value);
-    //printf("Mu_2010 = %23.16f\n", MOLAR_MASS_CONSTANT_2010.value);
+    printf("Mu_2018 = %23.16f\n", MOLAR_MASS_CONSTANT_2018.value);
+    printf("Mu_2014 = %23.16f\n", MOLAR_MASS_CONSTANT_2014.value);
+    printf("Mu_2010 = %23.16f\n", MOLAR_MASS_CONSTANT_2010.value);
 
     return 0;
 }
