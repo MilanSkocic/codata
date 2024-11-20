@@ -30,11 +30,11 @@ def write_module_start(f, year):
 
 def write_year(f, year):
     suffix = get_suffix(year)
-    f.write(f"ADD_IMPORT const int YEAR{suffix:s};" + newline)
+    f.write(f"ADD_IMPORT extern const int YEAR{suffix:s};" + newline)
 
 def write_constant(f, var, name, value, uncertainty, unit, year):
     suffix = get_suffix(year)
-    f.write(f"ADD_IMPORT const struct codata_constant_type {var:s}{suffix:s};")
+    f.write(f"ADD_IMPORT extern const struct codata_constant_type {var:s}{suffix:s};")
     f.write(newline)
 
 def write_module_end(f, year):
@@ -70,8 +70,8 @@ def run(fpath_ast: str, fpath_code: str)->None:
     f = open("codata_version.h", "w")
     f.write("#ifndef CODATA_VERSION_H" + newline)
     f.write("#define CODATA_VERSION_H" + newline)
-    f.write(f"const char version[32] = {version:s}" + newline)
-    f.write("#endif")
+    f.write(f"extern const char *version;" + newline)
+    f.write("#endif" + newline)
     f.close()
 
 

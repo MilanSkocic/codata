@@ -68,6 +68,14 @@ def run(fpath_ast: str, fpath_code: str)->None:
 
     fast.close()
     fcode.close()
+    
+    f = open("../VERSION", "r")
+    version = f.read().strip()
+    f.close()
+    f = open("codata_version.c", "w")
+    f.write("#include \"codata_version.h\"" + newline)
+    f.write(f"const char version[32] = \"{version:s}\";" + newline)
+    f.close()
 
 
 if __name__ == "__main__":
