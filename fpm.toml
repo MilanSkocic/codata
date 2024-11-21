@@ -30,10 +30,6 @@ stdlib="*"
 name = "example_in_f"
 main = "example.f90"
 
-[[example]]
-name = "example_in_c"
-main = "example.c"
-
 [[test]]
 name = "tester"
 main = "test_constants.f90"
