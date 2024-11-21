@@ -43,6 +43,8 @@ src/pycodata/%.py: ../data/%.toml
 package: $(SETUP)
 	$(PY) -m build --no-isolation --sdist
 	$(PY) -m build --no-isolation --wheel
+
+test: sources
 	$(PY) -m pytest -v
 # ---------------------------------------------------------------------
 
