@@ -69,10 +69,10 @@ def run(fpath_ast: str, fpath_code: str)->None:
 def write_version()->None:
     
     version = None
-    with open("../../VERSION", "r") as f:
+    with open("VERSION", "r") as f:
         version = f.read().strip()
 
-    fobj = open('version.py', "w")
+    fobj = open('./src/pycodata/version.py', "w")
     fobj.write("\"\"\"Version\"\"\"" + newline)
     fobj.write(f"__version__ = \"{version:s}\"")
     fobj.close

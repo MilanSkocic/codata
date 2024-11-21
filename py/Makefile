@@ -11,6 +11,12 @@ ifeq ($(PLATFORM), darwin)
 	PY=python
 endif
 
+PY=python
+GENPY=../scripts/gen_python.py
+
+AST_SRC=$(wildcard ../data/*.toml)
+PYTHON_SRC=$(patsubst ../data/%.toml, ./src/pycodata/%.py, $(AST_SRC))
+
 SETUP=setup.py pyproject.toml
 # ---------------------------------------------------------------------
 
@@ -25,8 +31,10 @@ all: sources package
 
 # ---------------------------------------------------------------------
 # SOURCES
-sources: 
-	make -C src/pycodata 
+sources: $(PYTHON_SRC)
+
+src/pycodata/%.py: ../data/%.toml
+	$(PY) $(GENPY) $< $@
 # ---------------------------------------------------------------------
 
 
@@ -45,7 +53,9 @@ clean:
 	rm -rf build 
 	rm -rf dist 
 	rm -rf *.egg-info 
-	rm -rf __pycache__ 
+	rm -rf src/*.egg-info
+	rm -rf src/pycodata/__pycache__ 
 	rm -rf wheelhouse 
-	make -C src/pycodata clean
+	rm -rf src/pycodata/codata*.py
+	rm -rf src/pycodata/version.py
 # ---------------------------------------------------------------------
