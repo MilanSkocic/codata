@@ -12,7 +12,9 @@ SLIB=$(BUILD_DIR)/$(LIBNAME).a
 
 .PHONY: clean example
 
-all: build static shared
+all: $(LIBNAME)
+
+$(LIBNAME): build static shared
 
 
 # ---------------------------------------------------------------------
