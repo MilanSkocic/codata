@@ -4,11 +4,20 @@ Python scripts are used for generating automatically the source code for Fortran
 
 # How to use
 
-The main Makefile at the root of the repository allows to trigger the automatic code generation.
+## Fortran
 
 ```bash
-make fortran
-make stdlib
-make C
-make py
+make sources
+```
+## C
+```bash
+cd C
+make sources
+```
+
+## Python
+
+```bash
+cd py
+make sources
 ```
