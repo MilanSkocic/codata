@@ -127,7 +127,7 @@ logo:
 	make -C media
 
 clean:
-	rm -rf $(F_SRC) $(SRC_FYPP_F90) $(STDLIB)
+	rm -rf $(F_SRC) ./src/codata_version.f90 $(SRC_FYPP_F90) $(STDLIB)
 	fpm clean --all
 	rm -rf API-doc/*
 # ---------------------------------------------------------------------
