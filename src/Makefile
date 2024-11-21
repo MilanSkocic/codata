@@ -15,29 +15,8 @@ SRC_FYPP_F90=$(patsubst %.fypp, %.f90, $(SRC_FYPP))
 
 all: $(F_MODULE) $(CAPI_MODULE) $(SRC_FYPP_F90)
 
-codata_constants_2010.f90: $(AST_DIR)/codata_2010.toml
+%.f90: $(AST_DIR)/%.toml
 	$(PY) $(GEN_FORTRAN) $< $@
-
-codata_constants_2014.f90: $(AST_DIR)/codata_2014.toml
-	$(PY) $(GEN_FORTRAN) $< $@
-
-codata_constants_2018.f90: $(AST_DIR)/codata_2018.toml
-	$(PY) $(GEN_FORTRAN) $< $@
-
-codata_constants_2022.f90: $(AST_DIR)/codata_2022.toml
-	$(PY) $(GEN_FORTRAN) $< $@
-
-capi_constants_2010.f90: $(AST_DIR)/codata_2010.toml
-	$(PY) $(GEN_CAPI) $< $@
-
-capi_constants_2014.f90: $(AST_DIR)/codata_2014.toml
-	$(PY) $(GEN_CAPI) $< $@
-
-capi_constants_2018.f90: $(AST_DIR)/codata_2018.toml
-	$(PY) $(GEN_CAPI) $< $@
-
-capi_constants_2022.f90: $(AST_DIR)/codata_2022.toml
-	$(PY) $(GEN_CAPI) $< $@
 
 %.f90: %.fypp
 	fypp -I ../include $< $@
