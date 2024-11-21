@@ -29,9 +29,5 @@ codata_constants_2018.c: $(AST_DIR)/codata_2018.toml
 codata_constants_2022.c: $(AST_DIR)/codata_2022.toml
 	$(PY) $(GEN) $< $@
 
-$(CBUILD_DIR)/%.o: %.c
-	gcc -c -I../include $(CFLAGS_RELEASE) $(FPM_CFLAGS) $< -o $@
-
-
 clean:
 	rm -rf $(C_SRC)
