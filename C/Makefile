@@ -6,6 +6,7 @@ AST_SRC=$(wildcard ../data/*.toml)
 C_HEADERS=$(patsubst ../data/%.toml, ./include/%.h, $(AST_SRC))
 C_SRC=$(patsubst ../data/%.toml, ./src/%.c, $(AST_SRC))
 C_OBJ=$(patsubst ./src/%.c, ./build/%.o, $(C_SRC))
+C_OBJ+=./build/codata_version.o
 
 SLIB=$(BUILD_DIR)/$(LIBNAME).a
 
@@ -26,15 +27,12 @@ sources: headers $(C_SRC)
 
 include/%.h: ../data/%.toml
 	$(PY) $(GEN_H) $< $@
-
-src/%.c: ../data/%.toml
-	$(PY) $(GEN_C) $< $@
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # COMPILATION
-build: sources $(C_OBJ) ./build/codata_version.o
+build: sources $(C_OBJ)
 
 example: ./example/example.c build static shared
 	gcc $< -I./include -L./build/ -lcodata $(CFLAGS_RELEASE) $(FPM_CFLAGS) -o ./build/$@ -Wl,-rpath=.
@@ -47,7 +45,7 @@ build/%.o: src/%.c
 # ---------------------------------------------------------------------
 # LINKING - STATIC and DYNAMIC LIBS
 static: build
-	ar -crs $(SLIB) $(C_OBJ) ./build/codata_version.o
+	ar -crs $(SLIB) $(C_OBJ)
 
 shared: build static shared_$(PLATFORM)
 
