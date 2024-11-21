@@ -120,5 +120,5 @@ clean:
 	rm -rf ./build/*
 	rm -rf $(C_HEADERS)
 	rm -rf codata_version.h
-	rm -rf $(C_SRC)
+	rm -rf $(C_SRC) ./src/codata_version.c
 # ---------------------------------------------------------------------
