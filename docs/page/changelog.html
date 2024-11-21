@@ -98,8 +98,7 @@
               <a class="nav-link" href="references.html">References</a>
               <a class="nav-link" href="specs/index.html">Specifications (specs)</a>
                 <nav class="nav nav-pills flex-column">
-                                <a class="nav-link" href="specs/capi.html">C API</a>
-              <a class="nav-link" href="specs/codata_constants.html">Codata constants</a>
+                                <a class="nav-link" href="specs/codata_constants.html">Codata constants</a>
 
                 </nav>
           </nav>
@@ -107,24 +106,36 @@
       </div>
 
     <div class="col-9" id='text'>
-      <h1 id="version-122">Version 1.2.2</h1>
+      <h1 id="200">2.0.0</h1>
+<ul>
+<li>Drop compiled extensions for Python.</li>
+<li>Pure Python code for constants auto-generated as it is the case for the Fortran code.</li>
+<li>Pure C code for constants auto-generated as it is the case for the Fortran code.</li>
+<li>API break:<ul>
+<li>No more C API in the Fortran code. </li>
+<li>Use the pure C code to build a C library.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Not released</strong></p>
+<h1 id="122">1.2.2</h1>
 <ul>
 <li>Fix conflict that could occur with C API modules. Add prefix in module names.</li>
 <li>Cleanup and refractoring.</li>
 <li>Documentation update.</li>
 </ul>
-<h1 id="version-121">Version 1.2.1</h1>
+<h1 id="121">1.2.1</h1>
 <ul>
 <li>Refractoring</li>
 <li>Merge back C API and python wrapper.</li>
 </ul>
-<h1 id="version-120">Version 1.2.0</h1>
+<h1 id="120">1.2.0</h1>
 <ul>
 <li>Refractoring</li>
 <li>Documentation update.</li>
 </ul>
 <p>Full changelog available at <a href="https://github.com/milanskocic/codata/releases">github</a></p>
-<h1 id="version-110">Version 1.1.0</h1>
+<h1 id="110">1.1.0</h1>
 <ul>
 <li>C API and Python wrapper moved to their own repositories.<ul>
 <li><a href="https://github.com/MilanSkocic/codata-capi">C wrapper</a></li>
@@ -136,7 +147,7 @@
 <li>Documentation update</li>
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
-<h1 id="version-100">Version 1.0.0</h1>
+<h1 id="100">1.0.0</h1>
 <ul>
 <li>Add codata values for 2010, 2014 and 2018.</li>
 <li>Code refractoring and code cleaning.</li>
@@ -147,7 +158,7 @@
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-0100">Version 0.10.0</h1>
+<h1 id="0100">0.10.0</h1>
 <ul>
 <li>Remove remove generation of the version module.</li>
 <li>Add tests using the test-drive framework.</li>
@@ -158,7 +169,7 @@
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-090">Version 0.9.0</h1>
+<h1 id="090">0.9.0</h1>
 <ul>
 <li>No API changes.</li>
 <li>Automatic generation of the version module.</li>
@@ -168,7 +179,7 @@
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-082">Version 0.8.2</h1>
+<h1 id="082">0.8.2</h1>
 <ul>
 <li>No API changes.</li>
 <li>Improve Makefile for generating the source code at each compilation.</li>
@@ -178,14 +189,14 @@
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-081">Version 0.8.1</h1>
+<h1 id="081">0.8.1</h1>
 <ul>
 <li>Use shared library in python wrapper.</li>
 <li>Minor fixes in documentation.</li>
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-080">Version 0.8.0</h1>
+<h1 id="080">0.8.0</h1>
 <ul>
 <li>Back to the approach with a library.</li>
 <li>Compatible with fpm.</li>
@@ -200,14 +211,14 @@
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-071">Version 0.7.1</h1>
+<h1 id="071">0.7.1</h1>
 <ul>
 <li>Minor fixes in generator code</li>
 <li>Add automatic copy of c sources for the python wrapper.</li>
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-070">Version 0.7.0</h1>
+<h1 id="070">0.7.0</h1>
 <ul>
 <li>Migrate documentation from doxygen to sphinx+breathe.</li>
 <li>Add YEAR constant indicating the year of the codata constants.</li>
@@ -215,41 +226,41 @@
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-060">Version 0.6.0</h1>
+<h1 id="060">0.6.0</h1>
 <ul>
 <li>Created documentation.</li>
 <li>Fixed missing uncertainties for Cpython.</li>
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-050">Version 0.5.0</h1>
+<h1 id="050">0.5.0</h1>
 <ul>
 <li>Changed the complete approach by not generating a library but only source files for different languages.</li>
 <li>Available languages: Fortran, C, python, CPython</li>
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-040">Version 0.4.0</h1>
+<h1 id="040">0.4.0</h1>
 <ul>
 <li>Bring back pywrapper in the codata repository to sync versions.</li>
 <li>Improvements of the documentation.</li>
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-030">Version 0.3.0</h1>
+<h1 id="030">0.3.0</h1>
 <ul>
 <li>Only last codata constants. </li>
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-021">Version 0.2.1</h1>
+<h1 id="021">0.2.1</h1>
 <ul>
 <li>Integration of Intel Fortran compiler and MSVC in cmake scripts.</li>
 <li>Add specifications and instructions for compiling on Windows </li>
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-020">Version 0.2.0</h1>
+<h1 id="020">0.2.0</h1>
 <ul>
 <li>Bug fixes for the codata 2010.</li>
 <li>Bug fixes in the tests linked to the codata 2010.</li>
@@ -257,7 +268,7 @@
 </ul>
 <p>Full changelog available at <a href="https://github.com/MilanSkocic/codata/releases">github</a></p>
 <p>Python wrapper available at <a href="https://pypi.org/project/pycodata">pypi</a>.</p>
-<h1 id="version-010">Version 0.1.0</h1>
+<h1 id="010">0.1.0</h1>
 <p>Implementation of:</p>
 <ul>
 <li>the parser of the codata raw data</li>
@@ -284,7 +295,7 @@
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-07-17T00:40:25.670218             </p>
+ on 2024-11-21T21:18:40.795351             </p>
           </div>
         </div>
         <br>
