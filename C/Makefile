@@ -5,6 +5,11 @@ ifeq ($(profile), debug)
 else
 	CFLAGS=$(CFLAGS_RELEASE)
 endif
+ifneq ($(prefix), )
+	install_dir=$(prefix)
+else
+	install_dir=$(DEFAULT_INSTALL_DIR)
+endif
 
 PY=python
 GEN_C=../scripts/gen_c.py
@@ -72,6 +77,40 @@ shared_darwin:
 
 shared_windows: 
 	$(CC) -shared $(FPM_LDFLAGS) -o $(BUILD_DIR)/$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/$(LIBNAME).a -Wl,--no-whole-archive
+# ---------------------------------------------------------------------
+
+
+# ---------------------------------------------------------------------
+# INSTALLATION 
+install: install_dirs install_$(PLATFORM)
+
+install_dirs: build static shared
+	mkdir -p $(install_dir)/bin
+	mkdir -p $(install_dir)/include
+	mkdir -p $(install_dir)/lib
+	cp -f $(INCLUDE_DIR)/$(NAME)*.h $(install_dir)/include
+	cp -f $(BUILD_DIR)/$(LIBNAME).a $(install_dir)/lib
+
+install_linux: 
+	cp -f $(BUILD_DIR)/$(LIBNAME).so $(install_dir)/lib
+
+install_darwin: 
+	cp -f $(BUILD_DIR)/$(LIBNAME).dylib $(install_dir)/lib
+
+install_windows:
+	cp -f $(BUILD_DIR)/$(LIBNAME).dll.a $(install_dir)/lib
+	cp -f $(BUILD_DIR)/$(LIBNAME).dll $(install_dir)/lib
+	cp -f $(BUILD_DIR)/$(LIBNAME).dll $(install_dir)/bin
+
+uninstall:
+	rm -f $(install_dir)/include/$(NAME)*.h
+	rm -f $(install_dir)/include/$(NAME)*.mod
+	rm -f $(install_dir)/lib/$(LIBNAME).a
+	rm -f $(install_dir)/lib/$(LIBNAME).so
+	rm -f $(install_dir)/lib/$(LIBNAME).dylib
+	rm -f $(install_dir)/lib/$(LIBNAME).dll.a
+	rm -f $(install_dir)/lib/$(LIBNAME).dll
+	rm -f $(install_dir)/bin/$(LIBNAME).dll
 # ---------------------------------------------------------------------
 
 
