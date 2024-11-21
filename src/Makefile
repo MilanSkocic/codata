@@ -13,7 +13,7 @@ SRC_FYPP_F90=$(patsubst %.fypp, %.f90, $(SRC_FYPP))
 
 .PHONY: clean
 
-all: $(F_MODULE) $(CAPI_MODULE) $(SRC_FYPP_F90)
+all: $(F_MODULE) $(SRC_FYPP_F90)
 
 %.f90: $(AST_DIR)/%.toml
 	$(PY) $(GEN_FORTRAN) $< $@
