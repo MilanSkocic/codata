@@ -6,7 +6,7 @@ newline = "\n"
 latest_year = "2022"
 
 def get_year(fpath: str)->str:
-    return fpath.split("/")[-1].split("_")[1].split(".")[0]
+    return fpath.split("/")[-1].split("_")[2].split(".")[0]
 
 def get_suffix(year):
     if year == latest_year:
@@ -64,10 +64,10 @@ def run(fpath_ast: str, fpath_code: str)->None:
     fast.close()
     fcode.close()
     
-    f = open("../VERSION", "r")
+    f = open("VERSION", "r")
     version = f.read().strip()
     f.close()
-    f = open("codata_version.h", "w")
+    f = open("./include/codata_version.h", "w")
     f.write("#ifndef CODATA_VERSION_H" + newline)
     f.write("#define CODATA_VERSION_H" + newline)
     f.write(f"extern const char version[32];" + newline)

@@ -8,7 +8,7 @@ cname_len = 65
 cunit_len = 33
 
 def get_year(fpath: str)->str:
-    return fpath.split("/")[-1].split("_")[1].split(".")[0]
+    return fpath.split("/")[-1].split("_")[2].split(".")[0]
 
 def get_suffix(year):
     if year == latest_year:

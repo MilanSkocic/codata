@@ -10,7 +10,7 @@ UNITS_LENGTH = 25
 
 
 def get_year(fpath: str)->str:
-    return fpath.split("/")[-1].split("_")[1].split(".")[0]
+    return fpath.split("/")[-1].split("_")[2].split(".")[0]
 
 def get_skiprows(fpath: str)->int:
     with open(fpath, "r") as f:
