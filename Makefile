@@ -12,7 +12,15 @@ else
 	btype=release
 endif
 
+PY=python
+GEN_F=./scripts/gen_fortran.py
+GEN_STDLIB=./scripts/gen_stdlib.py
+
+AST_SRC=$(wildcard ./data/*.toml)
+F_SRC=$(patsubst ./data/%.toml, ./src/%.f90, $(AST_SRC))
 SRC_FYPP=$(wildcard ./src/*.fypp)
+SRC_FYPP_F90=$(patsubst ./src/%.fypp, ./src/%.f90, $(SRC_FYPP))
+STDLIB=./stdlib/stdlib_codata.f90
 # ---------------------------------------------------------------------
 
 
@@ -28,15 +36,22 @@ $(LIBNAME): sources build copy_a shared
 
 # ---------------------------------------------------------------------
 # SOURCES
-sources: 
-	make -C src
-	make -C stdlib
+sources: $(SRC_FYPP_F90) $(F_SRC) $(STDLIB)
+
+./src/%.f90: ./data/%.toml
+	$(PY) $(GEN_F) $< $@
+
+./src/%.f90: ./src/%.fypp
+	fypp -I ./include $< $@
+
+./stdlib/stdlib_codata.f90: ./src/codata_constants_2022.f90
+	$(PY) $(GEN_STDLIB) $< $@
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # COMPILATION
-build: 
+build: sources 
 	fpm build --profile=$(btype)
 
 test: build
@@ -112,8 +127,7 @@ logo:
 	make -C media
 
 clean:
-	make -C src clean
-	make -C stdlib clean
+	rm -rf $(F_SRC) $(SRC_FYPP_F90) $(STDLIB)
 	fpm clean --all
 	rm -rf API-doc/*
 # ---------------------------------------------------------------------
