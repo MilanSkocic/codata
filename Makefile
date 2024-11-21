@@ -12,12 +12,22 @@ endif
 
 SRC_FYPP=$(wildcard ./src/*.fypp)
 
-.PHONY: build data stdlib fortran python cpython doc docs clean logo
+.PHONY: build sources stdlib doc docs clean logo
 
 all: $(LIBNAME)
 
 $(LIBNAME): sources build copy_a shared
 
+# ---------------------------------------------------------------------
+# SOURCES
+sources: 
+	make -C src
+	make -C stdlib
+# ---------------------------------------------------------------------
+
+
+# ---------------------------------------------------------------------
+# COMPILATION
 build: 
 	fpm build --profile=$(btype)
 
@@ -26,7 +36,11 @@ test: build
 
 example: build
 	fpm run --profile=$(btype) --example example_in_f
+# ---------------------------------------------------------------------
 
+
+# ---------------------------------------------------------------------
+# LINKING - STATIC and DYNAMIC LIBS
 copy_a: 
 	cp -f $(shell find ./build/gfortran* -type f -name $(LIBNAME).a) $(BUILD_DIR)
 
@@ -40,7 +54,11 @@ shared_darwin:
 
 shared_windows: 
 	$(FC) -shared $(FPM_LDFLAGS) -o $(BUILD_DIR)/$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/$(LIBNAME).a -Wl,--no-whole-archive
+# ---------------------------------------------------------------------
 
+
+# ---------------------------------------------------------------------
+# INSTALLATION 
 install: install_dirs install_$(PLATFORM)
 
 install_dirs: 
@@ -70,14 +88,11 @@ uninstall:
 	rm -f $(install_dir)/lib/$(LIBNAME).dll.a
 	rm -f $(install_dir)/lib/$(LIBNAME).dll
 	rm -f $(install_dir)/bin/$(LIBNAME).dll
+# ---------------------------------------------------------------------
 
-data:
-	make -C data
 
-sources: data
-	make -C src
-	make -C stdlib
-
+# ---------------------------------------------------------------------
+# OTHERS
 doc:
 	ford API-doc-FORD-file.md
 
@@ -89,11 +104,8 @@ logo:
 	make -C media
 
 clean:
-	make -C data clean
 	make -C src clean
-	make -C include clean
 	make -C stdlib clean
-	make -C C clean
-	make -C py clean
 	fpm clean --all
 	rm -rf API-doc/*
+# ---------------------------------------------------------------------
