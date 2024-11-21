@@ -4,6 +4,13 @@ Python scripts are used for generating automatically the source code for Fortran
 
 # How to use
 
+From the root folder:
+
+```bash
+chmod +x configure.sh
+. ./configure.sh
+```
+
 ## Fortran
 
 ```bash
