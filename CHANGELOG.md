@@ -7,8 +7,7 @@
     * No more C API in the Fortran code. 
     * Use the pure C code to build a C library.
 
-**Not released**
-
+Full changelog available at [github](https://github.com/milanskocic/codata/releases)
 
 # 1.2.2
 
@@ -21,6 +20,8 @@
 
 * Refractoring
 * Merge back C API and python wrapper.
+
+Full changelog available at [github](https://github.com/milanskocic/codata/releases)
 
 
 # 1.2.0
