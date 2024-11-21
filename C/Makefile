@@ -9,7 +9,7 @@ C_OBJ=$(patsubst ./src/%.c, ./build/%.o, $(C_SRC))
 
 SLIB=$(BUILD_DIR)/$(LIBNAME).a
 
-.PHONY: headers sources clean
+.PHONY: clean example
 
 all: build static shared
 
@@ -19,6 +19,7 @@ all: build static shared
 headers: $(C_HEADERS)
 
 sources: headers $(C_SRC)
+	mkdir -p  ./build
 
 ./src/%.c: ../data/%.toml
 	$(PY) $(GEN_C) $< $@
@@ -33,21 +34,20 @@ src/%.c: ../data/%.toml
 
 # ---------------------------------------------------------------------
 # COMPILATION
-build: $(C_OBJ)
-	mkdir -p $(BUILD_DIR)
+build: sources $(C_OBJ) ./build/codata_version.o
 
-example: sources headers build
-	make -C example
+example: ./example/example.c build static shared
+	gcc $< -I./include -L./build/ -lcodata $(CFLAGS_RELEASE) $(FPM_CFLAGS) -o ./build/$@ -Wl,-rpath=.
 
 build/%.o: src/%.c
-	gcc -c -I./include $(CFLAGS_RELEASE) $(FPM_CFLAGS) $< -o $@
+	gcc -c -I./include -fPIC $(CFLAGS_RELEASE) $(FPM_CFLAGS) $< -o $@
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # LINKING - STATIC and DYNAMIC LIBS
 static: build
-	ar -crs $(SLIB) $(C_OBJ)
+	ar -crs $(SLIB) $(C_OBJ) ./build/codata_version.o
 
 shared: build static shared_$(PLATFORM)
 
