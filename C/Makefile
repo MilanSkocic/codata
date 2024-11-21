@@ -1,20 +1,33 @@
-C_SRC=$(wildcard src/*.c)
-C_OBJ=$(patsubst src/%.c, build/%.o, $(C_SRC))
+PY=python
+GEN_C=../scripts/gen_c.py
+GEN_H=../scripts/gen_headers.py
+
+AST_SRC=$(wildcard ../data/*.toml)
+C_HEADERS=$(patsubst ../data/%.toml, ./include/%.h, $(AST_SRC))
+C_SRC=$(patsubst ../data/%.toml, ./src/%.c, $(AST_SRC))
+C_OBJ=$(patsubst ./src/%.c, ./build/%.o, $(C_SRC))
 
 SLIB=$(BUILD_DIR)/$(LIBNAME).a
 
-.PHONY: headers sources build static shared clean ostype
+.PHONY: headers sources clean
 
 all: build static shared
 
 
 # ---------------------------------------------------------------------
 # SOURCES
-headers: 
-	make -C include
+headers: $(C_HEADERS)
 
-sources: headers
-	make -C src sources
+sources: headers $(C_SRC)
+
+./src/%.c: ../data/%.toml
+	$(PY) $(GEN_C) $< $@
+
+include/%.h: ../data/%.toml
+	$(PY) $(GEN_H) $< $@
+
+src/%.c: ../data/%.toml
+	$(PY) $(GEN_C) $< $@
 # ---------------------------------------------------------------------
 
 
@@ -52,5 +65,6 @@ shared_windows:
 
 clean:
 	rm -rf ./build/*
-	make -C include clean
-	make -C src clean
+	rm -rf $(C_HEADERS)
+	rm -rf codata_version.h
+	rm -rf $(C_SRC)
