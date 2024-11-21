@@ -30,7 +30,6 @@ add the following to your `fpm.toml` file:
 # Dependencies
 
 ```
-gcc>=10
 gfortran>=10
 fpm>=0.7
 stdlib>=0.5
