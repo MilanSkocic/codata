@@ -101,14 +101,6 @@ from setuptools import setup, Extension
 #     except subprocess.CalledProcessError:
 #         print(" ".join(cmd) + " was not successful.")
 
-version = None
-with open("./VERSION", "r") as f:
-    version = f.read().strip()
-
-fobj = open('./src/pycodata/version.py', "w")
-fobj.write(f"__version__ = \"{version:s}\"")
-fobj.close
-
 
 if __name__ == "__main__":
 
