@@ -16,7 +16,7 @@ SRC_FYPP=$(wildcard ./src/*.fypp)
 
 all: $(LIBNAME)
 
-$(LIBNAME): build copy_a shared
+$(LIBNAME): sources build copy_a shared
 
 build: 
 	fpm build --profile=$(btype)
@@ -74,19 +74,8 @@ uninstall:
 data:
 	make -C data
 
-fortran: data
-	make -C src 
-
-C: data
-	make -C C sources
-
-cpython: data
-	make -C py sources
-
-python: data
-	make -C py sources
-
-stdlib: fortran
+sources: data
+	make -C src
 	make -C stdlib
 
 doc:
