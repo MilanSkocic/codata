@@ -1,3 +1,9 @@
+ifeq ($(profile), debug)
+	CFLAGS = $(CFLAGS_DEBUG)
+else
+	CFLAGS=$(CFLAGS_RELEASE)
+endif
+
 PY=python
 GEN_C=../scripts/gen_c.py
 GEN_H=../scripts/gen_headers.py
@@ -37,10 +43,10 @@ include/%.h: ../data/%.toml
 build: sources $(C_OBJ)
 
 example: ./example/example.c build static shared
-	gcc $< -I./include -L./build/ -lcodata $(CFLAGS_RELEASE) $(FPM_CFLAGS) -o ./build/$@ -Wl,-rpath=.
+	gcc $< -I./include -L./build/ -lcodata $(CFLAGS) $(FPM_CFLAGS) -o ./build/$@ -Wl,-rpath=.
 
 build/%.o: src/%.c
-	gcc -c -I./include -fPIC $(CFLAGS_RELEASE) $(FPM_CFLAGS) $< -o $@
+	gcc -c -I./include -fPIC $(CFLAGS) $(FPM_CFLAGS) $< -o $@
 # ---------------------------------------------------------------------
 
 
