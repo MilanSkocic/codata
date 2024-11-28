@@ -1,3 +1,10 @@
+# 2.0.1
+
+* Fix bug in version for Fortran code.
+
+Full changelog available at [github](https://github.com/milanskocic/codata/releases)
+
+
 # 2.0.0
 
 * Drop compiled extensions for Python.
