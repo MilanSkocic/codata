@@ -25,23 +25,13 @@ Add the msys2 binary (usually C:\msys64\usr\bin) to the path in order to be able
 Build: the configuration file will set all the environment variables necessary for the compilation
 
 ```
-. ../configure.sh
+cd ..
+. configure.sh
+cd C
 make
-```
-
-
-Install
-
-```
 make install
-```
-
-Uninstall
-
-```
 make uninstall
 ```
-
 
 
 # License
