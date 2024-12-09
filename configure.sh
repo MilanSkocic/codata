@@ -10,7 +10,9 @@ function prepare_readme () {
     echo "" > $fpath_readme
     while read line
     do
+        set -f
         echo $line >> $fpath_readme
+        set +f
     done < $fpath_readme_tpl
 
     echo "\`\`\`$lang" >> $fpath_readme

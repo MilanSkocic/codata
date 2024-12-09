@@ -18,14 +18,14 @@ codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 **Notes**:
 
-API-doc API-doc-FORD-file.md build C CHANGELOG.md configure.sh data doc docs example fpm.toml include LICENSE Makefile media py README.md README_TEMPLATE.txt REFERENCES.bib scripts src stdlib test VERSION The latest codata constants were integrated in the [stdlib](https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants.
+* The latest codata constants were integrated in the [stdlib](https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants.
 
-API-doc API-doc-FORD-file.md build C CHANGELOG.md configure.sh data doc docs example fpm.toml include LICENSE Makefile media py README.md README_TEMPLATE.txt REFERENCES.bib scripts src stdlib test VERSION If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants.
+* If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants.
 
 **Extra:**
 
-API-doc API-doc-FORD-file.md build C CHANGELOG.md configure.sh data doc docs example fpm.toml include LICENSE Makefile media py README.md README_TEMPLATE.txt REFERENCES.bib scripts src stdlib test VERSION Pure python code is provided in the `py` folder. See `py/README.md`.
-API-doc API-doc-FORD-file.md build C CHANGELOG.md configure.sh data doc docs example fpm.toml include LICENSE Makefile media py README.md README_TEMPLATE.txt REFERENCES.bib scripts src stdlib test VERSION Pure C code is provided in the `C` folder. See `C/README.md`
+* Pure python code is provided in the `py` folder. See `py/README.md`.
+* Pure C code is provided in the `C` folder. See `C/README.md`
 
 
 # Dependencies
@@ -42,9 +42,9 @@ fypp>=3.0
 
 A Makefile is provided, which uses [fpm](https://fpm.fortran-lang.org), for building the library.
 
-API-doc API-doc-FORD-file.md build C CHANGELOG.md configure.sh data doc docs example fpm.toml include LICENSE Makefile media py README.md README_TEMPLATE.txt REFERENCES.bib scripts src stdlib test VERSION On windows, [msys2](https://www.msys2.org) needs to be installed.
+* On windows, [msys2](https://www.msys2.org) needs to be installed.
 Add the msys2 binary (usually C:\msys64\usr\bin) to the path in order to be able to use make.
-API-doc API-doc-FORD-file.md build C CHANGELOG.md configure.sh data doc docs example fpm.toml include LICENSE Makefile media py README.md README_TEMPLATE.txt REFERENCES.bib scripts src stdlib test VERSION On Darwin, the [gcc](https://formulae.brew.sh/formula/gcc) toolchain needs to be installed.
+* On Darwin, the [gcc](https://formulae.brew.sh/formula/gcc) toolchain needs to be installed.
 
 Build: the configuration file will set all the environment variables necessary for the compilation
 
@@ -78,6 +78,11 @@ make uninstall
 # License
 
 MIT
+
+
+# Usage
+
+
 ```Fortran
 program example_in_f
 use iso_fortran_env
