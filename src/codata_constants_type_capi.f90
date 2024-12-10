@@ -1,4 +1,4 @@
-module codata__capi_constants_type
+module codata__constants_type_capi
     !! Codata constant type: C API.
     use iso_c_binding, only: c_char, c_double
     private
@@ -11,4 +11,4 @@ module codata__capi_constants_type
         character(kind=c_char) :: unit(33)
     end type
 
-end module codata__capi_constants_type
+end module codata__constants_type_capi
