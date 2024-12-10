@@ -1,9 +1,10 @@
 # Introduction
 
-`codata` is a Fortran library providing the latest codata constants (2022) and 
-older values (2018, 2014 and 2010). 
-The raw codata are taken from http://physics.nist.gov/constants.
-The constants (values and uncertainties) are implemented as double precision reals.
+`codata` is a  Fortran library providing the standard and abridged atomic weights, 
+the isotopic abundance and the isotopes' standard atomic weights.
+The data are taken from http://ciaaw.org. 
+C API allows usage from C, or can be used as a basis for other wrappers.
+Python wrapper allows easy usage from Python.
 
 The names are quite long and can be aliased with shorter names.
 
@@ -20,11 +21,6 @@ add the following to your `fpm.toml` file:
 * The latest codata constants were integrated in the [stdlib](https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants. 
 
 * If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. 
-
-**Extra:**
-
-* Pure python code is provided in the `py` folder. See `py/README.md`.
-* Pure C code is provided in the `C` folder. See `C/README.md`
 
 
 # Dependencies

@@ -38,14 +38,15 @@ function prepare_readme () {
     echo "\`\`\`" >> $fpath_readme
 }
 
-LIBNAME="libcodata"
 NAME="codata"
+LIBNAME="lib$NAME"
 PYNAME="py$NAME"
 PY_SRC="./src/$PYNAME"
 
 # environment variables
 FC=gfortran
 CC=gcc
+PY=python
 BUILD_DIR="./build"
 INCLUDE_DIR="./include"
 FPM_FFLAGS="-std=f2008 -pedantic -Wall -Wextra"
@@ -58,6 +59,7 @@ EXT=".so"
 
 echo -n "Detecting platform..."
 if [[ "$OSTYPE" == "msys" ]]; then
+    PY=py -
     DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
     PLATFORM="windows"
     ROOT=$ROOTWINDOWS
@@ -84,9 +86,9 @@ export DEFAULT_INSTALL_DIR
 export BUILD_DIR
 export INCLUDE_DIR
 export PY_SRC
-export C_SRC
 export FC
 export CC
+export PY
 export EXT
 echo "OK"
 
@@ -111,12 +113,8 @@ echo "* PY_SRC=" $PY_SRC
 echo "##### COMPILERS #####"
 echo "* FC=" $FC
 echo "* CC=" $CC
+echo "* PY=" $PY
 
-
-echo -n "Copying version and license for C..."
-cp -f VERSION ./C/VERSION
-cp -f LICENSE ./C/LICENSE
-echo "OK"
 
 echo -n "Copying version and license for python..."
 cp -f VERSION ./py/VERSION
