@@ -1,2 +1,2 @@
 #include "codata_version.h"
-const char version[32] = "2.0.0";
+const char version[32] = "2.0.1";

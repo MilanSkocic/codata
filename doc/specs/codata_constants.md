@@ -2,8 +2,6 @@
 title: Codata constants
 ---
 
-# Description 
-
 The modules: 
 
 * [[codata__constants_2022(module)]] 
@@ -20,9 +18,3 @@ The names are quite long and can be aliased with shorter names.
 A module level interface [[codata__constants_type(module):to_real(interface)]] is 
 available for getting the constant value or uncertainty of a constant. 
 
-
-# Example
-
-```fortran
-{!./example/example.f90!}
-```

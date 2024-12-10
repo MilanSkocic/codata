@@ -1,5 +1,28 @@
 #!/bin/bash
 
+function prepare_readme () {
+
+    local fpath_readme_tpl="$1"
+    local fpath_readme="$2"
+    local fpath_example="$3"
+    local lang="$4"
+
+    echo "" > $fpath_readme
+    while read line
+    do
+        set -f
+        echo $line >> $fpath_readme
+        set +f
+    done < $fpath_readme_tpl
+
+    echo "\`\`\`$lang" >> $fpath_readme
+    while read line
+    do
+        echo $line >> $fpath_readme
+    done < $fpath_example
+    echo "\`\`\`" >> $fpath_readme
+}
+
 LIBNAME="libcodata"
 NAME="codata"
 PYNAME="py$NAME"
@@ -21,7 +44,7 @@ PLATFORM="linux"
 EXT=".so"
 
 
-echo "Detecting platform..."
+echo -n "Detecting platform..."
 if [[ "$OSTYPE" == "msys" ]]; then
     DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
     PLATFORM="windows"
@@ -36,16 +59,9 @@ if [[ "$OSTYPE" == "darwin"* ]];then
     EXT=".dylib"
     LIBS=( "${LIBSDARWIN[@]}" )
 fi
+echo "OK"
 
-
-echo "Copying version and license..."
-cp -f VERSION ./py/VERSION
-cp -f LICENSE ./py/LICENSE
-cp -f VERSION ./C/VERSION
-cp -f LICENSE ./C/LICENSE
-
-
-echo "Exporting env variables..."
+echo -n "Exporting env variables..."
 export LIBNAME
 export NAME
 export PLATFORM
@@ -62,6 +78,7 @@ export C_SRC
 export FC
 export CC
 export EXT
+echo "OK"
 
 echo "##### COMMON SETTINGS #####"
 echo "* LIBNAME=" $LIBNAME
@@ -87,3 +104,37 @@ echo "##### COMPILERS #####"
 echo "* FC=" $FC
 echo "* CC=" $CC
 
+
+echo -n "Copying version and license for C..."
+cp -f VERSION ./C/VERSION
+cp -f LICENSE ./C/LICENSE
+echo "OK"
+
+echo -n "Copying version and license for python..."
+cp -f VERSION ./py/VERSION
+cp -f LICENSE ./py/LICENSE
+echo "OK"
+
+echo -n "Generating README for fortran..."
+fpath_example="./example/example.f90"
+fpath_readme_tpl="./README_TEMPLATE.txt"
+fpath_readme="./README.md"
+lang="Fortran"
+prepare_readme $fpath_readme_tpl $fpath_readme $fpath_example $lang
+echo "OK"
+
+echo -n "Generating README for C..."
+fpath_example="./C/example/example.c"
+fpath_readme_tpl="./C/README_TEMPLATE.txt"
+fpath_readme="./C/README.md"
+lang="C"
+prepare_readme $fpath_readme_tpl $fpath_readme $fpath_example $lang
+echo "OK"
+
+echo -n "Generating README for python..."
+fpath_example="./py/example/example.py"
+fpath_readme_tpl="./py/README_TEMPLATE.txt"
+fpath_readme="./py/README.md"
+lang="python"
+prepare_readme $fpath_readme_tpl $fpath_readme $fpath_example $lang
+echo "OK"
