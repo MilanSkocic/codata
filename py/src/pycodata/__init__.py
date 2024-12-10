@@ -7,8 +7,8 @@ The latest values are available at the top level and
 older values are available in dedicated modules.
 """
 from .version import __version__
-from .codata_constants_2022 import *
-from . import codata_constants_2022
-from . import codata_constants_2018
-from . import codata_constants_2014
-from . import codata_constants_2010
+from .constants_2022 import *
+from . import constants_2022
+from . import constants_2018
+from . import constants_2014
+from . import constants_2010
