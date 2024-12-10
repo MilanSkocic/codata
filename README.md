@@ -74,7 +74,7 @@ implicit none
 print '(A)', '########## EXAMPLE IN FORTRAN ##########'
 
 print '(A)', '########## VERSION ##########'
-print *, "version = ", version
+print *, "version = ", get_version()
 
 print '(A)', '########## CONSTANTS ##########'
 print *, "c = ", SPEED_OF_LIGHT_IN_VACUUM%value
@@ -100,7 +100,7 @@ int main(void){
 printf("########## EXAMPLE IN C ##########n");
 
 printf("%sn","########## VERSION ##########");
-printf("version = %sn", version);
+printf("version = %sn", codata_get_version());
 
 printf("%sn","########## CONSTANTS ##########");
 printf("c = %fn", SPEED_OF_LIGHT_IN_VACUUM.value);
