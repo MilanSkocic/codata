@@ -90,10 +90,11 @@
 </ul>
 </div>
 <h1 id="introduction">Introduction</h1>
-<p><code>codata</code> is a Fortran library providing the latest codata constants (2022) and
-older values (2018, 2014 and 2010).
-The raw codata are taken from http://physics.nist.gov/constants.
-The constants (values and uncertainties) are implemented as double precision reals.</p>
+<p><code>codata</code> is a Fortran library providing the standard and abridged atomic weights,
+the isotopic abundance and the isotopes&rsquo; standard atomic weights.
+The data are taken from http://ciaaw.org.
+C API allows usage from C, or can be used as a basis for other wrappers.
+Python wrapper allows easy usage from Python.</p>
 <p>The names are quite long and can be aliased with shorter names.</p>
 <p>To use <code>codata</code> within your <a href="https://github.com/fortran-lang/fpm">fpm</a> project,
 add the following to your <code>fpm.toml</code> file:</p>
@@ -109,11 +110,6 @@ add the following to your <code>fpm.toml</code> file:</p>
 <li>
 <p>If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants.</p>
 </li>
-</ul>
-<p><strong>Extra:</strong></p>
-<ul>
-<li>Pure python code is provided in the <code>py</code> folder. See <code>py/README.md</code>.</li>
-<li>Pure C code is provided in the <code>C</code> folder. See <code>C/README.md</code></li>
 </ul>
 <h1 id="dependencies">Dependencies</h1>
 <div class="codehilite"><pre><span></span><code>gfortran&gt;=10
@@ -147,16 +143,16 @@ make uninstall
 
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## EXAMPLE IN FORTRAN ##########&#39;</span>
 
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## VERSION ##########&#39;</span>
-<span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;version = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">version</span>
+<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# VERSION&#39;</span>
+<span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;version = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">get_version</span><span class="p">()</span>
 
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## CONSTANTS ##########&#39;</span>
+<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# CONSTANTS&#39;</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;c = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">%</span><span class="k">value</span>
 
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## UNCERTAINTY ##########&#39;</span>
+<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# UNCERTAINTY&#39;</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">%</span><span class="n">uncertainty</span>
 
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## OLDER VALUES ##########&#39;</span>
+<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# OLDER VALUES&#39;</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2022(latest) = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">%</span><span class="k">value</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">%</span><span class="k">value</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">%</span><span class="k">value</span>
@@ -164,6 +160,54 @@ make uninstall
 
 
 <span class="k">end program</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codata.h&quot;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;########## EXAMPLE IN C ##########n&quot;</span><span class="p">);</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%sn&quot;</span><span class="p">,</span><span class="s">&quot;# VERSION&quot;</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;version = %sn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">codata_get_version</span><span class="p">());</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%sn&quot;</span><span class="p">,</span><span class="s">&quot;# CONSTANTS&quot;</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;c = %fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%sn&quot;</span><span class="p">,</span><span class="s">&quot;# UNCERTAINTY&quot;</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;u(c) = %fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">.</span><span class="n">uncertainty</span><span class="p">);</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%sn&quot;</span><span class="p">,</span><span class="s">&quot;# OLDER VALUES&quot;</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2022(latest) = %23.16fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2018 = %23.16fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2014 = %23.16fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2010 = %23.16fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+
+<span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Example in python.&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;../src/&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">pycodata</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########## EXAMPLE IN PYTHON ##########&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# VERSION&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;version = </span><span class="si">{</span><span class="n">pycodata</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# Constants&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;c =&quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# UNCERTAINTY&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;uncertainty&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# OLDER VALUES&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2022 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">codata_constants_2018</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">codata_constants_2014</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">codata_constants_2010</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
 </code></pre></div>
         </div>
           <div class="col-md-4">
@@ -190,7 +234,7 @@ make uninstall
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Source Files</h3>
-              <ul><li><a href='sourcefile/codata.f90.html'>codata.f90</a></li><li><a href='sourcefile/codata_constants.f90.html'>codata_constants.f90</a></li><li><a href='sourcefile/codata_constants_2010.f90.html'>codata_constants_2010.f90</a></li><li><a href='sourcefile/codata_constants_2014.f90.html'>codata_constants_2014.f90</a></li><li><a href='sourcefile/codata_constants_2018.f90.html'>codata_constants_2018.f90</a></li><li><a href='sourcefile/codata_constants_2022.f90.html'>codata_constants_2022.f90</a></li><li><a href='sourcefile/codata_constants_type.f90.html'>codata_constants_type.f90</a></li><li><a href='sourcefile/codata_constants_type.fypp.html'>codata_constants_type.fypp</a></li><li><a href='sourcefile/codata_version.f90.html'>codata_version.f90</a></li></ul>
+              <ul><li><a href='sourcefile/codata.f90.html'>codata.f90</a></li><li><a href='sourcefile/codata_api.f90.html'>codata_api.f90</a></li><li><a href='sourcefile/codata_capi.f90.html'>codata_capi.f90</a></li><li><a href='sourcefile/codata_constants_2010.f90.html'>codata_constants_2010.f90</a></li><li><a href='sourcefile/codata_constants_2010_capi.f90.html'>codata_constants_2010_capi.f90</a></li><li><a href='sourcefile/codata_constants_2014.f90.html'>codata_constants_2014.f90</a></li><li><a href='sourcefile/codata_constants_2014_capi.f90.html'>codata_constants_2014_capi.f90</a></li><li><a href='sourcefile/codata_constants_2018.f90.html'>codata_constants_2018.f90</a></li><li><a href='sourcefile/codata_constants_2018_capi.f90.html'>codata_constants_2018_capi.f90</a></li><li><a href='sourcefile/codata_constants_2022.f90.html'>codata_constants_2022.f90</a></li></ul>
             </div>
             <div>
               <ul>
@@ -201,7 +245,7 @@ make uninstall
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Modules</h3>
-              <ul><li><a href='module/codata.html'>codata</a></li><li><a href='module/codata__constants.html'>codata__constants</a></li><li><a href='module/codata__constants_2010.html'>codata__constants_2010</a></li><li><a href='module/codata__constants_2014.html'>codata__constants_2014</a></li><li><a href='module/codata__constants_2018.html'>codata__constants_2018</a></li><li><a href='module/codata__constants_2022.html'>codata__constants_2022</a></li><li><a href='module/codata__constants_type~2.html'>codata__constants_type</a></li><li><a href='module/codata__constants_type.html'>codata__constants_type</a></li><li><a href='module/codata__version.html'>codata__version</a></li></ul>
+              <ul><li><a href='module/codata.html'>codata</a></li><li><a href='module/codata__api.html'>codata__api</a></li><li><a href='module/codata__capi.html'>codata__capi</a></li><li><a href='module/codata__constants_2010.html'>codata__constants_2010</a></li><li><a href='module/codata__constants_2010_capi.html'>codata__constants_2010_capi</a></li><li><a href='module/codata__constants_2014.html'>codata__constants_2014</a></li><li><a href='module/codata__constants_2014_capi.html'>codata__constants_2014_capi</a></li><li><a href='module/codata__constants_2018.html'>codata__constants_2018</a></li><li><a href='module/codata__constants_2018_capi.html'>codata__constants_2018_capi</a></li><li><a href='module/codata__constants_2022.html'>codata__constants_2022</a></li></ul>
             </div>
             <div>
               <ul>
@@ -212,7 +256,7 @@ make uninstall
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Procedures</h3>
-              <ul><li><a href='interface/to_real.html'>to_real</a></li><li><a href='interface/to_real~2.html'>to_real</a></li></ul>
+              <ul><li><a href='proc/capi_get_version.html'>capi_get_version</a></li><li><a href='proc/get_version.html'>get_version</a></li><li><a href='interface/to_real.html'>to_real</a></li><li><a href='interface/to_real~2.html'>to_real</a></li></ul>
             </div>
             <div>
               <ul>
@@ -223,7 +267,7 @@ make uninstall
           <div class="col-xs-6 col-sm-3">
             <div>
               <h3>Derived Types</h3>
-              <ul><li><a href='type/codata_constant_type.html'>codata_constant_type</a></li><li><a href='type/codata_constant_type~2.html'>codata_constant_type</a></li></ul>
+              <ul><li><a href='type/capi_constant_type.html'>capi_constant_type</a></li><li><a href='type/codata_constant_type.html'>codata_constant_type</a></li><li><a href='type/codata_constant_type~2.html'>codata_constant_type</a></li></ul>
             </div>
             <div>
               <ul>
@@ -247,7 +291,7 @@ make uninstall
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-10T06:23:23.482464             </p>
+ on 2024-12-11T00:48:28.468962             </p>
           </div>
         </div>
         <br>

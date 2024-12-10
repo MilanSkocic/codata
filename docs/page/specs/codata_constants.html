@@ -99,7 +99,8 @@
               <a class="nav-link" href="../references.html">References</a>
               <a class="nav-link" href="index.html">Specifications (specs)</a>
                 <nav class="nav nav-pills flex-column">
-                                <a class="nav-link active disabled" href="codata_constants.html">Codata constants</a>
+                                <a class="nav-link" href="capi.html">C API</a>
+              <a class="nav-link active disabled" href="codata_constants.html">Codata constants</a>
 
                 </nav>
           </nav>
@@ -107,8 +108,7 @@
       </div>
 
     <div class="col-9" id='text'>
-      <h1 id="description">Description</h1>
-<p>The modules: </p>
+      <p>The modules: </p>
 <ul>
 <li><a href="../../module/codata__constants_2022.html">codata__constants_2022</a> </li>
 <li><a href="../../module/codata__constants_2018.html">codata__constants_2018</a> </li>
@@ -122,32 +122,6 @@ All values for the codata constants are provided as double precision reals in a 
 The names are quite long and can be aliased with shorter names.
 A module level interface <a href="../../interface/to_real.html">to_real</a> is 
 available for getting the constant value or uncertainty of a constant. </p>
-<h1 id="example">Example</h1>
-<div class="codehilite"><pre><span></span><code><span class="k">program </span><span class="n">example_in_f</span>
-<span class="w">    </span><span class="k">use </span><span class="n">iso_fortran_env</span>
-<span class="w">    </span><span class="k">use </span><span class="n">codata</span>
-<span class="w">    </span><span class="k">implicit none</span>
-
-<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## EXAMPLE IN FORTRAN ##########&#39;</span>
-
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## VERSION ##########&#39;</span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;version = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">version</span>
-
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## CONSTANTS ##########&#39;</span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;c = &quot;</span><span class="p">,</span><span class="w">  </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">%</span><span class="k">value</span>
-
-<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## UNCERTAINTY ##########&#39;</span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">%</span><span class="n">uncertainty</span>
-
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## OLDER VALUES ##########&#39;</span>
-<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2022(latest) = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">%</span><span class="k">value</span>
-<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">%</span><span class="k">value</span>
-<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span><span class="w">  </span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">%</span><span class="k">value</span>
-<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span><span class="w">  </span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">%</span><span class="k">value</span>
-
-
-<span class="k">end program</span>
-</code></pre></div>
     </div>
   </div>
       <hr>
@@ -165,7 +139,7 @@ available for getting the constant value or uncertainty of a constant. </p>
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-10T06:23:23.482464             </p>
+ on 2024-12-11T00:48:28.468962             </p>
           </div>
         </div>
         <br>
