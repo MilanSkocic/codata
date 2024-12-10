@@ -12,12 +12,29 @@ else
 	btype=release
 endif
 
-PY=python
+ifeq ($(PLATFORM), windows)
+	PY=py
+endif
+ifeq ($(PLATFORM), linux)
+	PY=python
+	AW=auditwheel repair --plat manylinux_2_31_x86_64 ./dist/*.whl
+endif
+ifeq ($(PLATFORM), darwin)
+	PY=python
+endif
+
+
 GEN_F=./scripts/gen_fortran.py
+GEN_C=./scripts/gen_capi.py
+GEN_HEADERS=./scripts/gen_headers.py
+GEN_HEADER=./scripts/gen_header.py
 GEN_STDLIB=./scripts/gen_stdlib.py
 
 AST_SRC=$(wildcard ./data/*.toml)
 F_SRC=$(patsubst ./data/%.toml, ./src/%.f90, $(AST_SRC))
+C_SRC=$(patsubst ./data/%.toml, ./src/capi_%.f90, $(AST_SRC))
+C_HEADERS=$(patsubst ./data/%.toml, ./include/%.h, $(AST_SRC))
+C_HEADER=./include/$(NAME).h
 SRC_FYPP=$(wildcard ./src/*.fypp)
 SRC_FYPP_F90=$(patsubst ./src/%.fypp, ./src/%.f90, $(SRC_FYPP))
 STDLIB=./stdlib/stdlib_codata.f90
@@ -36,10 +53,19 @@ $(LIBNAME): sources build copy_a shared
 
 # ---------------------------------------------------------------------
 # SOURCES
-sources: $(SRC_FYPP_F90) $(F_SRC) $(STDLIB)
+sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADER) $(STDLIB)
 
 ./src/%.f90: ./data/%.toml
 	$(PY) $(GEN_F) $< $@
+
+./src/capi_%.f90: ./data/%.toml
+	$(PY) $(GEN_C) $< $@
+
+./include/%.h: ./data/%.toml
+	$(PY) $(GEN_HEADERS) $< $@
+
+$(C_HEADER): $(C_HEADERS)
+	$(PY) $(GEN_HEADER) $^ -o $@
 
 ./src/%.f90: ./src/%.fypp
 	fypp -I ./include $< $@
@@ -59,6 +85,7 @@ test: build
 
 example: build
 	fpm run --profile=$(btype) --example example_in_f
+	fpm run --profile=$(btype) --example example_in_c
 # ---------------------------------------------------------------------
 
 
@@ -127,7 +154,7 @@ logo:
 	make -C media
 
 clean:
-	rm -rf $(F_SRC) ./src/codata_version.f90 $(SRC_FYPP_F90) $(STDLIB)
+	rm -rf $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) ./src/codata_version.f90 $(SRC_FYPP_F90) $(STDLIB)
 	fpm clean --all
 	rm -rf API-doc/*
 # ---------------------------------------------------------------------

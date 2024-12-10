@@ -3,7 +3,6 @@ module codata__constants_type
     use stdlib_kinds, only: sp, dp
     use stdlib_io, only: FMT_REAL_DP
     use stdlib_optval, only: optval 
-    use iso_c_binding, only: c_char, c_double, c_null_char
     private
 
     type, public :: codata_constant_type
@@ -25,7 +24,7 @@ module codata__constants_type
         module procedure to_real_dp
     end interface
 
-    public :: to_real, c_char, c_double, c_null_char
+    public :: to_real
     
 contains
 

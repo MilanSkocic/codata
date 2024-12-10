@@ -11,7 +11,6 @@ ifeq ($(PLATFORM), darwin)
 	PY=python
 endif
 
-PY=python
 GENPY=../scripts/gen_python.py
 
 AST_SRC=$(wildcard ../data/*.toml)

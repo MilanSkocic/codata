@@ -3,10 +3,8 @@
 
 `codata` is a Fortran library providing the latest codata constants (2022) and
 older values (2018, 2014 and 2010).
-The constants (values and uncertainties) are implemented as double precision reals
-in derived types.
-The sources are automatically generated from the raw codata values taken 
-from http://physics.nist.gov/constants.
+The raw codata are taken from http://physics.nist.gov/constants.
+The constants (values and uncertainties) are implemented as double precision reals.
 
 The names are quite long and can be aliased with shorter names.
 
@@ -18,23 +16,16 @@ add the following to your `fpm.toml` file:
 codata = { git="https://github.com/MilanSkocic/codata.git" }
 ```
 
-**Important**:
+**Notes**:
 
-* The latest codata constants were integrated in the [stdlib](https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0).
-  The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit.
-  This library will be complementary to the constants defined in the stdlib by providing older values for the constants.
+* The latest codata constants were integrated in the [stdlib](https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0). The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants.
 
 * If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants.
 
-**Extra: C and Python**
-
-`codata` is primarily a Fortran library but sources for C and Python are also
-generated:
+**Extra:**
 
 * Pure python code is provided in the `py` folder. See `py/README.md`.
-  A python package is available [pypi](https://pypi.org/project/pycodata).
 * Pure C code is provided in the `C` folder. See `C/README.md`
-  A Makefile is provided for building the C library.
 
 
 # Dependencies
@@ -99,4 +90,51 @@ print '(A, F23.16)', "Mu_2010 = ", MOLAR_MASS_CONSTANT_2010%value
 
 
 end program
+```
+```C
+#include <stdio.h>
+#include "codata.h"
+
+int main(void){
+
+printf("########## EXAMPLE IN C ##########n");
+
+printf("%sn","########## VERSION ##########");
+printf("version = %sn", version);
+
+printf("%sn","########## CONSTANTS ##########");
+printf("c = %fn", SPEED_OF_LIGHT_IN_VACUUM.value);
+
+printf("%sn","########## UNCERTAINTY ##########");
+printf("u(c) = %fn", SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
+
+printf("%sn","########## OLDER VALUES ##########");
+printf("Mu_2022(latest) = %23.16fn", MOLAR_MASS_CONSTANT.value);
+printf("Mu_2018 = %23.16fn", MOLAR_MASS_CONSTANT_2018.value);
+printf("Mu_2014 = %23.16fn", MOLAR_MASS_CONSTANT_2014.value);
+printf("Mu_2010 = %23.16fn", MOLAR_MASS_CONSTANT_2010.value);
+
+return 0;
+}
+```
+```Python
+r"""Example in python."""
+import sys
+sys.path.insert(0, "../src/")
+import pycodata
+
+print("########## VERSION ##########")
+print(f"version = {pycodata.__version__}")
+
+print("########## constants ##########")
+print(f"c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
+
+print("########## UNCERTAINTY ##########")
+print(f"u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
+
+print("########## OLDER VALUES ##########")
+print(f"Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
+print(f"Mu_2018 = ", pycodata.codata_constants_2018.MOLAR_MASS_CONSTANT_2018["value"])
+print(f"Mu_2014 = ", pycodata.codata_constants_2014.MOLAR_MASS_CONSTANT_2014["value"])
+print(f"Mu_2010 = ", pycodata.codata_constants_2010.MOLAR_MASS_CONSTANT_2010["value"])
 ```

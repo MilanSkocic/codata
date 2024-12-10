@@ -4,12 +4,12 @@ import argparse
 newline = "\n"
 
 def write_module_start(f):
-    ftpl = open("codata.h.start", "r")
+    ftpl = open("./include/codata.h.start", "r")
     f.write( ftpl.read() )
     ftpl.close()
     
 def write_module_end(f):
-    ftpl = open("codata.h.end", "r")
+    ftpl = open("./include/codata.h.end", "r")
     f.write( ftpl.read() )
     ftpl.close()
 
