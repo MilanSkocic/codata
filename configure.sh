@@ -59,7 +59,7 @@ EXT=".so"
 
 echo -n "Detecting platform..."
 if [[ "$OSTYPE" == "msys" ]]; then
-    PY=py -
+    PY="py -"
     DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
     PLATFORM="windows"
     ROOT=$ROOTWINDOWS
