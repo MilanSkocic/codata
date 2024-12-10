@@ -84,6 +84,7 @@ def write_version()->None:
     fobj.write("implicit none" + newline)
     fobj.write("private" + newline)
     fobj.write(f"character(len=*), parameter :: version = \"{version:s}\"" + newline)
+    fobj.write("public :: version" + newline)
     fobj.write("end module codata__version")
     fobj.close
 
