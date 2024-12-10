@@ -22,7 +22,7 @@ GEN_STDLIB=./scripts/gen_stdlib.py
 AST_SRC=$(wildcard ./data/*.toml)
 F_SRC=$(patsubst ./data/%.toml, ./src/%.f90, $(AST_SRC))
 C_SRC=$(patsubst ./data/%.toml, ./src/%_capi.f90, $(AST_SRC))
-C_HEADERS=$(patsubst ./data/%.toml, ./include/%.h, $(AST_SRC))
+C_HEADERS=$(patsubst ./data/%.toml, ./include/%.txt, $(AST_SRC))
 C_HEADER=./include/$(NAME).h
 SRC_FYPP=$(wildcard ./src/*.fypp)
 SRC_FYPP_F90=$(patsubst ./src/%.fypp, ./src/%.f90, $(SRC_FYPP))
@@ -42,7 +42,7 @@ $(LIBNAME): sources build copy_a shared
 
 # ---------------------------------------------------------------------
 # SOURCES
-sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADER) $(STDLIB)
+sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
 
 ./src/%.f90: ./data/%.toml
 	$(PY) $(GEN_F) $< $@
@@ -50,12 +50,11 @@ sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADER) $(STDLIB)
 ./src/%_capi.f90: ./data/%.toml
 	$(PY) $(GEN_C) $< $@
 
-./include/%.h: ./data/%.toml
+./include/%.txt: ./data/%.toml
 	$(PY) $(GEN_HEADERS) $< $@
 
-$(C_HEADER): $(C_HEADERS)
-	$(PY) $(GEN_HEADER) $^ -o $@
-	rm -rf $(C_HEADERS)
+$(C_HEADER):
+	$(PY) $(GEN_HEADER) $(C_HEADERS) -o $@
 
 ./src/%.f90: ./src/%.fypp
 	fypp -I ./include $< $@
@@ -67,7 +66,7 @@ $(C_HEADER): $(C_HEADERS)
 
 # ---------------------------------------------------------------------
 # COMPILATION
-build: sources 
+build:
 	fpm build --profile=$(btype)
 
 test: build
