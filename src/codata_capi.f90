@@ -1,5 +1,5 @@
 module codata__capi
-    !! C API
+    !! C API.
     !! See [specs](../page/specs/capi.html).
 use codata__api, only: get_version
 use iso_c_binding, only: c_ptr, c_null_char, c_loc
