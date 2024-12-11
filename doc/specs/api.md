@@ -1,5 +1,5 @@
 ---
-title: Codata constants
+title: API
 ---
 
 The modules: 
