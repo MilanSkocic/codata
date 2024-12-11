@@ -1,16 +1,5 @@
 # ---------------------------------------------------------------------
 # CONFIGURATION
-ifeq ($(PLATFORM), windows)
-	PY=py
-endif
-ifeq ($(PLATFORM), linux)
-	PY=python
-	AW=auditwheel repair --plat manylinux_2_31_x86_64 ./dist/*.whl
-endif
-ifeq ($(PLATFORM), darwin)
-	PY=python
-endif
-
 GENPY=../scripts/gen_cpython.py
 
 AST_SRC=$(wildcard ../data/*.toml)
