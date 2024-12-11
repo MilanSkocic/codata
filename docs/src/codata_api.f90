@@ -1,7 +1,6 @@
 module codata__api
-    !! Constants module.
-    !! The latest values (2022) do not have the year as a suffix in their name.
-    !! Older values can be used and they feature the year as a suffix in their name.
+    !! API.
+    !! See [specs](../page/specs/api.html).
 use codata__version, only: version
 implicit none
 private

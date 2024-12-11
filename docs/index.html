@@ -86,29 +86,28 @@
 <li><a href="#dependencies">Dependencies</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#license">License</a></li>
-<li><a href="#usage">Usage</a></li>
 </ul>
 </div>
 <h1 id="introduction">Introduction</h1>
-<p><code>codata</code> is a Fortran library providing the standard and abridged atomic weights,
+<p><code>codata</code> is a  Fortran library providing the standard and abridged atomic weights, 
 the isotopic abundance and the isotopes&rsquo; standard atomic weights.
-The data are taken from http://ciaaw.org.
+The data are taken from http://ciaaw.org. 
 C API allows usage from C, or can be used as a basis for other wrappers.
 Python wrapper allows easy usage from Python.</p>
 <p>The names are quite long and can be aliased with shorter names.</p>
 <p>To use <code>codata</code> within your <a href="https://github.com/fortran-lang/fpm">fpm</a> project,
 add the following to your <code>fpm.toml</code> file:</p>
-<div class="codehilite"><pre><span></span><code><span class="k">[dependencies]</span>
-<span class="na">codata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">{ git=&quot;https://github.com/MilanSkocic/codata.git&quot; }</span>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="o">[</span><span class="n">dependencies</span><span class="o">]</span>
+<span class="w">    </span><span class="n">codata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="n">git</span><span class="o">=</span><span class="ss">&quot;https://github.com/MilanSkocic/codata.git&quot;</span><span class="w"> </span><span class="err">}</span>
 </code></pre></div>
 
-<p><strong>Notes</strong>:</p>
+<p><strong>Notes</strong>: </p>
 <ul>
 <li>
-<p>The latest codata constants were integrated in the <a href="https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0">stdlib</a>. The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants.</p>
+<p>The latest codata constants were integrated in the <a href="https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0">stdlib</a>. The constants are implemented as derived type which carries the name, the value, the uncertainty and the unit. This library will be complementary to the constants defined in the stdlib by providing older values for the constants. </p>
 </li>
 <li>
-<p>If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants.</p>
+<p>If you only need sources for the codata constants that you can integrate directly in your sources you may be interested by https://github.com/vmagnin/fundamental_constants. </p>
 </li>
 </ul>
 <h1 id="dependencies">Dependencies</h1>
@@ -121,94 +120,20 @@ fypp&gt;=3.0
 <h1 id="installation">Installation</h1>
 <p>A Makefile is provided, which uses <a href="https://fpm.fortran-lang.org">fpm</a>, for building the library.</p>
 <ul>
-<li>On windows, <a href="https://www.msys2.org">msys2</a> needs to be installed.
-Add the msys2 binary (usually C:\msys64\usr\bin) to the path in order to be able to use make.</li>
+<li>On windows, <a href="https://www.msys2.org">msys2</a> needs to be installed. 
+  Add the msys2 binary (usually C:\msys64\usr\bin) to the path in order to be able to use make.</li>
 <li>On Darwin, the <a href="https://formulae.brew.sh/formula/gcc">gcc</a> toolchain needs to be installed.</li>
 </ul>
 <p>Build: the configuration file will set all the environment variables necessary for the compilation</p>
-<div class="codehilite"><pre><span></span><code>chmod +x configure.sh
-. ./configure.sh
-make
-make install
-make uninstall
+<div class="codehilite"><pre><span></span><code>    chmod +x configure.sh
+    . ./configure.sh
+    make
+    make install
+    make uninstall
 </code></pre></div>
 
 <h1 id="license">License</h1>
 <p>MIT</p>
-<h1 id="usage">Usage</h1>
-<div class="codehilite"><pre><span></span><code><span class="k">program </span><span class="n">example_in_f</span>
-<span class="k">use </span><span class="n">iso_fortran_env</span>
-<span class="k">use </span><span class="n">codata</span>
-<span class="k">implicit none</span>
-
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## EXAMPLE IN FORTRAN ##########&#39;</span>
-
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# VERSION&#39;</span>
-<span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;version = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">get_version</span><span class="p">()</span>
-
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# CONSTANTS&#39;</span>
-<span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;c = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">%</span><span class="k">value</span>
-
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# UNCERTAINTY&#39;</span>
-<span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">%</span><span class="n">uncertainty</span>
-
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# OLDER VALUES&#39;</span>
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2022(latest) = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">%</span><span class="k">value</span>
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">%</span><span class="k">value</span>
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">%</span><span class="k">value</span>
-<span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">%</span><span class="k">value</span>
-
-
-<span class="k">end program</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codata.h&quot;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
-
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;########## EXAMPLE IN C ##########n&quot;</span><span class="p">);</span>
-
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%sn&quot;</span><span class="p">,</span><span class="s">&quot;# VERSION&quot;</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;version = %sn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">codata_get_version</span><span class="p">());</span>
-
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%sn&quot;</span><span class="p">,</span><span class="s">&quot;# CONSTANTS&quot;</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;c = %fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
-
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%sn&quot;</span><span class="p">,</span><span class="s">&quot;# UNCERTAINTY&quot;</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;u(c) = %fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">.</span><span class="n">uncertainty</span><span class="p">);</span>
-
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;%sn&quot;</span><span class="p">,</span><span class="s">&quot;# OLDER VALUES&quot;</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2022(latest) = %23.16fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2018 = %23.16fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2014 = %23.16fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2010 = %23.16fn&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
-
-<span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Example in python.&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;../src/&quot;</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">pycodata</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########## EXAMPLE IN PYTHON ##########&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# VERSION&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;version = </span><span class="si">{</span><span class="n">pycodata</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# Constants&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;c =&quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# UNCERTAINTY&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;uncertainty&quot;</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# OLDER VALUES&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2022 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">codata_constants_2018</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">codata_constants_2014</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">codata_constants_2010</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
-</code></pre></div>
         </div>
           <div class="col-md-4">
             <div class="card card-body bg-light">
@@ -291,7 +216,7 @@ make uninstall
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2024-12-11T00:48:28.468962             </p>
+ on 2024-12-11T07:26:30.309192+0100             </p>
           </div>
         </div>
         <br>
