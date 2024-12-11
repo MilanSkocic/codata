@@ -1,43 +1,5 @@
 #!/bin/bash
 
-function prepare_readme () {
-
-    local fpath_readme_tpl="$1"
-    local fpath_readme="$2"
-    local fpath_example_in_f="$3"
-    local fpath_example_in_c="$4"
-    local fpath_example_in_py="$5"
-
-    echo "" > $fpath_readme
-    while read line
-    do
-        set -f
-        echo $line >> $fpath_readme
-        set +f
-    done < $fpath_readme_tpl
-
-    echo "\`\`\`Fortran" >> $fpath_readme
-    while read line
-    do
-        echo $line >> $fpath_readme
-    done < $fpath_example_in_f
-    echo "\`\`\`" >> $fpath_readme
-    
-    echo "\`\`\`C" >> $fpath_readme
-    while read line
-    do
-        echo $line >> $fpath_readme
-    done < $fpath_example_in_c
-    echo "\`\`\`" >> $fpath_readme
-    
-    echo "\`\`\`Python" >> $fpath_readme
-    while read line
-    do
-        echo $line >> $fpath_readme
-    done < $fpath_example_in_py
-    echo "\`\`\`" >> $fpath_readme
-}
-
 NAME="codata"
 LIBNAME="lib$NAME"
 PYNAME="py$NAME"
@@ -120,13 +82,3 @@ echo -n "Copying version and license for python..."
 cp -f VERSION ./py/VERSION
 cp -f LICENSE ./py/LICENSE
 echo "OK"
-
-echo -n "Generating examples in README..."
-fpath_readme_tpl="./README_TEMPLATE.txt"
-fpath_readme="./README.md"
-fpath_example_in_f="./example/example.f90"
-fpath_example_in_c="./example/example.c"
-fpath_example_in_py="./example/example.py"
-prepare_readme $fpath_readme_tpl $fpath_readme $fpath_example_in_f $fpath_example_in_c $fpath_example_in_py
-echo "OK"
-
