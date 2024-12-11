@@ -80,7 +80,7 @@ test3.9:
 	$(PY)3.9 -m pytest -v
 
 example: 
-	$(PY) ../example/example.py
+	$(PY)3.13 ../example/example.py
 
 # ---------------------------------------------------------------------
 
@@ -97,7 +97,7 @@ clean:
 	rm -rf $(PYTHON_SRC)
 	rm -f $(PY_SRC)/$(NAME)*.h 
 	rm -f $(PY_SRC)/*.a 
-	rm -f $(PY_SRC)/*.so 
+	rm -f(PY_SRC)/*.so 
 	rm -f $(PY_SRC)/*.dylib 
 	rm -f $(PY_SRC)/*.dll 
 	rm -f $(PY_SRC)/*.dll.a 
