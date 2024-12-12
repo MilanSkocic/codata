@@ -1,11 +1,9 @@
 # 2.1.0
 
 * Roll back to C API in Fortran code: easier maintenance.
-* Roll back to compiled C extension: easier maintenance.
+* Roll back to compiled C extension for python: easier maintenance.
 
 Full changelog available at [github](https://github.com/milanskocic/codata/releases)
-
-**Not released**
 
 
 # 2.0.1
