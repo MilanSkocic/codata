@@ -97,7 +97,7 @@ clean:
 	rm -rf $(PYTHON_SRC)
 	rm -f $(PY_SRC)/$(NAME)*.h 
 	rm -f $(PY_SRC)/*.a 
-	rm -f(PY_SRC)/*.so 
+	rm -f $(PY_SRC)/*.so 
 	rm -f $(PY_SRC)/*.dylib 
 	rm -f $(PY_SRC)/*.dll 
 	rm -f $(PY_SRC)/*.dll.a 
