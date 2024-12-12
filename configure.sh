@@ -9,6 +9,7 @@ PY_SRC="./src/$PYNAME"
 FC=gfortran
 CC=gcc
 PY=python
+AW="auditwheel repair --plat manylinux_2_31_x86_64 ./dist/*.whl"
 BUILD_DIR="./build"
 INCLUDE_DIR="./include"
 FPM_FFLAGS="-std=f2008 -pedantic -Wall -Wextra"
@@ -22,6 +23,7 @@ EXT=".so"
 echo -n "Detecting platform..."
 if [[ "$OSTYPE" == "msys" ]]; then
     PY="py -"
+    AW=""
     DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
     PLATFORM="windows"
     ROOT=$ROOTWINDOWS
@@ -51,6 +53,7 @@ export PY_SRC
 export FC
 export CC
 export PY
+export AW
 export EXT
 echo "OK"
 
