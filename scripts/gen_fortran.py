@@ -72,22 +72,6 @@ def run(fpath_ast: str, fpath_code: str)->None:
     fast.close()
     fcode.close()
 
-def write_version()->None:
-    
-    version = None
-    with open("VERSION", "r") as f:
-        version = f.read().strip()
-
-    fobj = open('./src/codata_version.f90', "w")
-    fobj.write("module codata__version" + newline)
-    fobj.write("    !! Version" + newline)
-    fobj.write("implicit none" + newline)
-    fobj.write("private" + newline)
-    fobj.write(f"character(len=*), parameter :: version = \"{version:s}\"" + newline)
-    fobj.write("public :: version" + newline)
-    fobj.write("end module codata__version")
-    fobj.close
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog='genfortran', description='Generate source code.')
@@ -96,4 +80,3 @@ if __name__ == "__main__":
     args = parser.parse_args() 
 
     run(args.ast, args.code)
-    write_version()
