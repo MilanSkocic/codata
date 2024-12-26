@@ -5,6 +5,7 @@ export VERSION=$(tr -d '\r' < VERSION | tr -d '\n')
 export LIBNAME="lib$NAME"
 export PYNAME="py$NAME"
 export PY_SRC="./src/$PYNAME"
+export AW="auditwheel repair --plat manylinux_2_35_x86_64 ./dist/*.whl"
 
 echo -n $VERSION > ./py/VERSION
 
@@ -51,6 +52,7 @@ if [[ "$OSTYPE" == "msys" ]]; then
     PY="py -"
     PYGEN="py"
     FPM_LDFLAGS="-static"
+    AW=""
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]];then
@@ -59,6 +61,7 @@ if [[ "$OSTYPE" == "darwin"* ]];then
     EXT=".dylib"
     LIBS=( "${LIBSDARWIN[@]}" )
     FPM_LDFLAGS="-static-libgfortran -static-libquadmath -static-libgcc"
+    AW=""
 fi
 
 if [[ "$VERSION" == *"dev"* ]]; then
@@ -85,6 +88,7 @@ echo "PYNAME=" $PYNAME
 echo "FC=" $FC
 echo "CC=" $CC
 echo "PY=" $PY
+echo "AW=" $AW
 
 echo "LIBS=" ${LIBS[@]}
 echo "ROOT=" $ROOT
