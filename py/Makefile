@@ -11,9 +11,9 @@ SETUP=setup.py pyproject.toml
 
 # ---------------------------------------------------------------------
 # TARGETS
-.PHONY: sources package clean
+.PHONY: sources package clean test
 
-all: sources package
+all: package
 # ---------------------------------------------------------------------
 
 
@@ -22,7 +22,7 @@ all: sources package
 sources: $(PYTHON_SRC)
 
 src/pycodata/cpy_%.c: ../data/%.toml
-	$(PY) $(GENPY) $< $@
+	$(PYGEN) $(GENPY) $< $@
 # ---------------------------------------------------------------------
 
 
@@ -102,7 +102,4 @@ clean:
 	rm -f $(PY_SRC)/*.dll 
 	rm -f $(PY_SRC)/*.dll.a 
 	rm -f $(PY_SRC)/*.pyd
-	rm -rf $(PY_SRC)/bin
-	rm -rf $(PY_SRC)/include
-	rm -rf $(PY_SRC)/lib
 # ---------------------------------------------------------------------

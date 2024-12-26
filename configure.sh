@@ -1,87 +1,92 @@
 #!/bin/bash
 
-NAME="codata"
-LIBNAME="lib$NAME"
-PYNAME="py$NAME"
-PY_SRC="./src/$PYNAME"
+export NAME=$(cat fpm.toml | grep -m 1 "name =" | awk -F '=' '{print $2}' | sed -E 's/[ "]//g')
+export VERSION=$(tr -d '\r' < VERSION | tr -d '\n')
+export LIBNAME="lib$NAME"
+export PYNAME="py$NAME"
+export PY_SRC="./src/$PYNAME"
+
+echo -n $VERSION > ./py/VERSION
+
+mod=$NAME
+f="./src/"$mod"_version.f90"
+echo "module "$mod"__version"           > $f
+echo "    !! Version"                   >> $f
+echo "    implicit none"                >> $f
+echo "    private"                      >> $f
+echo "    character(len=*), parameter, public :: version = \"$VERSION\"" >> $f
+echo "end module "$mod"__version" >> $f
 
 # environment variables
-FC=gfortran
-CC=gcc
-PY=python
-AW="auditwheel repair --plat manylinux_2_31_x86_64 ./dist/*.whl"
-BUILD_DIR="./build"
-INCLUDE_DIR="./include"
-FPM_FFLAGS="-std=f2008 -pedantic -Wall -Wextra"
-FPM_CFLAGS="-std=c11 -pedantic -Wall -Wextra"
-FPM_LDFLAGS=""
-DEFAULT_INSTALL_DIR="$HOME/.local"
-PLATFORM="linux"
-EXT=".so"
+export FC=gfortran
+export CC=gcc
+export PY=python
+export PYGEN=python
+export BUILD_DIR="./build"
+export INCLUDE_DIR="./include"
+export FPM_FFLAGS="-std=f2008 -pedantic -Wall -Wextra"
+export FPM_CFLAGS="-std=c11 -pedantic -Wall -Wextra"
+export FPM_LDFLAGS=""
+export DEFAULT_INSTALL_DIR="$HOME/.local"
+export PLATFORM="linux"
+export ARCH=$(uname -m)
+export EXT=".so"
 
+# libs
+# export LIBSLINUX=("libgfortran.so.5" "libquadmath.so.0")
+export LIBSLINUX=""
+export LIBSDARWIN=("libgfortran.5" "libquadmath.0" "libgcc_s.1.1")
+export LIBSWINDOWS=("libgfortran-5" "libquadmath-0" "libgcc_s_seh-1" "libwinpthread-1")
 
-echo -n "Detecting platform..."
+export ROOT="/usr/lib/x86_64-linux-gnu/"
+export LIBS="${LIBSLINUX[@]}"
+
 if [[ "$OSTYPE" == "msys" ]]; then
-    PY="py -"
-    AW=""
     DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
     PLATFORM="windows"
-    ROOT=$ROOTWINDOWS
+    ARCH=$MSYSTEM_CARCH
+    ROOT=$(dirname $(where gfortran))"\\"
     EXT=".dll"
     LIBS=( "${LIBSWINDOWS[@]}" )
+    PY="py -"
+    PYGEN="py"
+    FPM_LDFLAGS="-static"
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]];then
     PLATFORM="darwin"
-    ROOT=$ROOTDARWIN
+    ROOT="/usr/local/opt/gcc/lib/gcc/current/"
     EXT=".dylib"
     LIBS=( "${LIBSDARWIN[@]}" )
+    FPM_LDFLAGS="-static-libgfortran -static-libquadmath -static-libgcc"
 fi
-echo "OK"
 
-echo -n "Exporting env variables..."
-export LIBNAME
-export NAME
-export PLATFORM
-export FPM_FFLAGS
-export FPM_CFLAGS
-export FPM_LDFLAGS
-export DEFAULT_INSTALL_DIR
-export BUILD_DIR
-export INCLUDE_DIR
-export PY_SRC
-export FC
-export CC
-export PY
-export AW
-export EXT
-echo "OK"
+if [[ "$VERSION" == *"dev"* ]]; then
+    export VERSION=$(git rev-parse --short HEAD)
+fi
 
-echo "##### COMMON SETTINGS #####"
-echo "* LIBNAME=" $LIBNAME
-echo "* NAME=" $NAME
-echo "* PLATFORM=" $PLATFORM
+echo "NAME=" $NAME
+echo "LIBNAME=" $LIBNAME
+echo "VERSION=" $VERSION
 
-echo "##### FPM SETTINGS #####"
-echo "* FPM_FFLAGS=" $FPM_FFLAGS
-echo "* FPM_CFLAGS=" $FPM_CFLAGS
-echo "* FPM_LDFLAGS=" $FPM_LDFLAGS
+echo "PLATFORM=" $PLATFORM
+echo "ARCH=" $ARCH
+echo "FPM_FFLAGS=" $FPM_FFLAGS
+echo "FPM_CFLAGS=" $FPM_CFLAGS
+echo "FPM_LDFLAGS=" $FPM_LDFLAGS
 
-echo "##### INSTALLATION SETTINGS #####"
-echo "* DEFAULT INSTALL DIR=" $DEFAULT_INSTALL_DIR
-echo "* BUILD DIR=" $BUILD_DIR
-echo "* INCLUDE_DIR=" $INCLUDE_DIR
+echo "DEFAULT INSTALL DIR=" $DEFAULT_INSTALL_DIR
+echo "BUILD DIR=" $BUILD_DIR
+echo "INCLUDE_DIR=" $INCLUDE_DIR
 
-echo "##### PYTHON SETTINGS #####"
-echo "* PY_SRC=" $PY_SRC
+echo "PYTHON SRC=" $PY_SRC
+echo "PYNAME=" $PYNAME
 
-echo "##### COMPILERS #####"
-echo "* FC=" $FC
-echo "* CC=" $CC
-echo "* PY=" $PY
+echo "FC=" $FC
+echo "CC=" $CC
+echo "PY=" $PY
 
+echo "LIBS=" ${LIBS[@]}
+echo "ROOT=" $ROOT
 
-echo -n "Copying version and license for python..."
-cp -f VERSION ./py/VERSION
-cp -f LICENSE ./py/LICENSE
-echo "OK"
+cp -vf LICENSE ./py/LICENSE

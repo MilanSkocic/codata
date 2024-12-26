@@ -45,22 +45,22 @@ $(LIBNAME): sources build copy_a shared
 sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
 
 ./src/%.f90: ./data/%.toml
-	$(PY) $(GEN_F) $< $@
+	$(PYGEN) $(GEN_F) $< $@
 
 ./src/%_capi.f90: ./data/%.toml
-	$(PY) $(GEN_C) $< $@
+	$(PYGEN) $(GEN_C) $< $@
 
 ./include/%.txt: ./data/%.toml
-	$(PY) $(GEN_HEADERS) $< $@
+	$(PYGEN) $(GEN_HEADERS) $< $@
 
 $(C_HEADER):
-	$(PY) $(GEN_HEADER) $(C_HEADERS) -o $@
+	$(PYGEN) $(GEN_HEADER) $(C_HEADERS) -o $@
 
 ./src/%.f90: ./src/%.fypp
 	fypp -I ./include $< $@
 
 ./stdlib/stdlib_codata.f90: ./src/codata_constants_2022.f90
-	$(PY) $(GEN_STDLIB) $< $@
+	$(PYGEN) $(GEN_STDLIB) $< $@
 # ---------------------------------------------------------------------
 
 
@@ -146,8 +146,4 @@ clean:
 	rm -rf $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) ./src/codata_version.f90 $(SRC_FYPP_F90) $(STDLIB)
 	fpm clean --all
 	rm -rf API-doc/*
-
-py: $(LIBNAME)
-	make install prefix=py/src/py$(NAME)
-	make -C py
 # ---------------------------------------------------------------------
