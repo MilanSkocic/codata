@@ -1,0 +1,83 @@
+name: linux
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main", "dev" ]
+  release:
+    types: [published]
+
+jobs:
+  linux:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Gfortran  
+      run: |
+        sudo update-alternatives \
+          --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 \
+          --slave /usr/bin/gfortran gfortran /usr/bin/gfortran-10 \
+          --slave /usr/bin/gcov gcov /usr/bin/gcov-10
+    - name: Set FPM
+      uses: fortran-lang/setup-fpm@v5
+      with: 
+        fpm-version: "v0.10.0"
+    - name: Gfortran version
+      run : gfortran --version
+    - uses: actions/setup-python@v5
+      with:
+        python-version: |
+          3.9
+          3.10
+          3.11
+          3.12
+          3.13
+    - name: Update python packages
+      run: |
+        python3.9  -m pip install -U --user pip setuptools wheel build auditwheel
+        python3.10 -m pip install -U --user pip setuptools wheel build auditwheel
+        python3.11 -m pip install -U --user pip setuptools wheel build auditwheel
+        python3.12 -m pip install -U --user pip setuptools wheel build auditwheel
+        python3.13 -m pip install -U --user pip setuptools wheel build auditwheel
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Configure
+      run: |
+        . ./configure.sh
+        echo "NAME=$NAME" >> $GITHUB_ENV
+        echo "PYNAME=$PYNAME" >> $GITHUB_ENV
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+        echo "PLATFORM=$PLATFORM" >> $GITHUB_ENV
+        echo "ARCH=$ARCH" >> $GITHUB_ENV
+    - name: Compile
+      run: |
+        chmod u+x build.sh
+        ./build.sh
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ env.NAME }}-${{ env.PLATFORM }}-${{ env.ARCH }}-${{ env.VERSION }}
+        path: ./build/install/
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ env.PYNAME }}-${{ env.PLATFORM }}-${{ env.ARCH }}-${{ env.VERSION }}
+        path: ./py/dist/*.whl
+    - name: Release libs
+      if: ${{ github.event_name == 'release' }}
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./build/*.zip
+        file_glob: true
+        tag: ${{ github.ref }}
+        overwrite: true
+    - name: Release pywrapper
+      if: ${{ github.event_name == 'release' }}
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./py/dist/*.zip
+        file_glob: true
+        tag: ${{ github.ref }}
+        overwrite: true
