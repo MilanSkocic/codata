@@ -3,5 +3,8 @@
 
 doc/** linguist-documentation
 docs/** linguist-documentation
+example/** linguist-documentation
+include/** linguist-documentation
 media/** linguist-vendored
+py/** linguist-vendored
 scripts/** linguist-vendored
