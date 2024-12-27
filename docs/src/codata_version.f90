@@ -1,7 +1,6 @@
 module codata__version
     !! Version
-implicit none
-private
-character(len=*), parameter :: version = "2.1.0"
-public :: version
+    implicit none
+    private
+    character(len=*), parameter, public :: version = "2.1.1"
 end module codata__version
