@@ -4,6 +4,9 @@
 * Code refractoring and cleaning
 * Update CI/CD workflows.
 
+[Full changelog](https://github.com/MilanSkocic/codata/releases)
+
+
 # 2.1.0
 
 * Roll back to C API in Fortran code: easier maintenance.
