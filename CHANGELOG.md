@@ -1,3 +1,9 @@
+# 2.1.1
+
+* No code change.
+* Code refractoring and cleaning
+* Update CI/CD workflows.
+
 # 2.1.0
 
 * Roll back to C API in Fortran code: easier maintenance.
