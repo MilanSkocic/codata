@@ -1,0 +1,4 @@
+---
+bibliography: REFERENCES.bib
+nocite: '@*'
+...
