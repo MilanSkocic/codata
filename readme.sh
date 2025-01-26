@@ -1,3 +1,4 @@
+# README 
 FOLDER=.
 
 cp $FOLDER/_README.md $FOLDER/README.md
@@ -20,8 +21,13 @@ echo "" >> $FOLDER/README.md && echo "" >> $FOLDER/README.md
 echo "# References" >> $FOLDER/README.md
 cat $FOLDER/REFERENCES.md >> $FOLDER/README.md
 
+echo "" >> $FOLDER/README.md && echo "" >> $FOLDER/README.md
+echo "# Changelog" >> $FOLDER/README.md
+cat $FOLDER/CHANGELOG.md | sed 's/# /## /g' >> README.md
 
 
+
+# README PYTHON
 FOLDER=py
 
 cp $FOLDER/_README.md $FOLDER/README.md
@@ -33,3 +39,6 @@ echo "" >> $FOLDER/README.md && echo "" >> $FOLDER/README.md
 echo "# Examples" >> $FOLDER/README.md
 
 echo "\`\`\`Python" >> $FOLDER/README.md && cat ./example/example.py >> $FOLDER/README.md && echo "\`\`\`" >> $FOLDER/README.md
+
+
+

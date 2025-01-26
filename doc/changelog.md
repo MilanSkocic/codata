@@ -1,7 +1,0 @@
----
-title: Changelog
----
-
-{!CHANGELOG.md!}
-
-
