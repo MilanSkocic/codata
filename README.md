@@ -85,7 +85,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Examples
 ## Fortran
-```Fortan
+```Fortran
 program example_in_f
     use iso_fortran_env
     use codata
