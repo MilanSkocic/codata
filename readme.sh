@@ -23,7 +23,7 @@ cat $FOLDER/REFERENCES.md >> $FOLDER/README.md
 
 echo "" >> $FOLDER/README.md && echo "" >> $FOLDER/README.md
 echo "# Changelog" >> $FOLDER/README.md
-cat $FOLDER/CHANGELOG.md | sed 's/# /## /g' >> README.md
+cat $FOLDER/CHANGELOG.md | sed 's/# /## /g' >> $FOLDER/README.md
 
 
 
@@ -40,5 +40,7 @@ echo "# Examples" >> $FOLDER/README.md
 
 echo "\`\`\`Python" >> $FOLDER/README.md && cat ./example/example.py >> $FOLDER/README.md && echo "\`\`\`" >> $FOLDER/README.md
 
-
+echo "" >> $FOLDER/README.md && echo "" >> $FOLDER/README.md
+echo "# Changelog" >> $FOLDER/README.md
+cat CHANGELOG.md | sed 's/# /## /g' >> $FOLDER/README.md
 
