@@ -1,20 +1,35 @@
-cp _README.md README.md
+FOLDER=.
+
+cp $FOLDER/_README.md $FOLDER/README.md
 echo "" >> README.md
 
-echo "\`\`\`" >> README.md && cat LICENSE >> README.md && echo "\`\`\`" >> README.md
+echo "\`\`\`" >> $FOLDER/README.md && cat $FOLDER/LICENSE >> $FOLDER/README.md && echo "\`\`\`" >> $FOLDER/README.md
 
-echo "" >> README.md && echo "" >> README.md
-echo "# Examples" >> README.md
-echo "## Fortran" >> README.md
-echo "\`\`\`Fortran" >> README.md && cat ./example/example.f90 >> README.md && echo "\`\`\`" >> README.md
+echo "" >> $FOLDER/README.md && echo "" >> $FOLDER/README.md
+echo "# Examples" >> $FOLDER/README.md
+echo "## Fortran" >> $FOLDER/README.md
+echo "\`\`\`Fortran" >> $FOLDER/README.md && cat ./example/example.f90 >> $FOLDER/README.md && echo "\`\`\`" >> $FOLDER/README.md
 
-echo "## C" >> README.md
-echo "\`\`\`C" >> README.md && cat ./example/example.c >> README.md && echo "\`\`\`" >> README.md
+echo "## C" >> $FOLDER/README.md
+echo "\`\`\`C" >> $FOLDER/README.md && cat ./example/example.c >> $FOLDER/README.md && echo "\`\`\`" >> $FOLDER/README.md
 
-echo "## Python" >> README.md
-echo "\`\`\`Python" >> README.md && cat ./example/example.py >> README.md && echo "\`\`\`" >> README.md
+echo "## Python" >> $FOLDER/README.md
+echo "\`\`\`Python" >> $FOLDER/README.md && cat ./example/example.py >> $FOLDER/README.md && echo "\`\`\`" >> $FOLDER/README.md
 
-echo "" >> README.md && echo "" >> README.md
-echo "# References" >> README.md
-cat REFERENCES.md >> README.md
+echo "" >> $FOLDER/README.md && echo "" >> $FOLDER/README.md
+echo "# References" >> $FOLDER/README.md
+cat $FOLDER/REFERENCES.md >> $FOLDER/README.md
 
+
+
+FOLDER=py
+
+cp $FOLDER/_README.md $FOLDER/README.md
+echo "" >> README.md
+
+echo "\`\`\`" >> $FOLDER/README.md && cat $FOLDER/LICENSE >> $FOLDER/README.md && echo "\`\`\`" >> $FOLDER/README.md
+
+echo "" >> $FOLDER/README.md && echo "" >> $FOLDER/README.md
+echo "# Examples" >> $FOLDER/README.md
+
+echo "\`\`\`Python" >> $FOLDER/README.md && cat ./example/example.py >> $FOLDER/README.md && echo "\`\`\`" >> $FOLDER/README.md

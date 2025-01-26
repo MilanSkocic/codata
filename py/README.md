@@ -19,11 +19,52 @@ pip install pycodata
 
 MIT
 
+```
+MIT License
 
-# Usage
+Copyright (c) Milan Skocic
 
-The latest values (2022) do not have the year as a suffix in their name. Older values can be used and they feature the year as a suffix in their name.
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
 
-The latest values are available at the top level and older values are available in dedicated modules.
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
 
-[Example in python](https://milanskocic.github.io/codata/page/examples.html#python).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+
+# Examples
+```Python
+r"""Example in python."""
+import sys
+sys.path.insert(0, "../src/")
+import pycodata
+
+print("########## EXAMPLE IN PYTHON ##########")
+print("# VERSION")
+print(f"version = {pycodata.__version__}")
+
+print("# Constants")
+print(f"c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
+
+print("# UNCERTAINTY")
+print(f"u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
+
+print("# OLDER VALUES")
+print(f"Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
+print(f"Mu_2018 = ", pycodata.codata_constants_2018.MOLAR_MASS_CONSTANT_2018["value"])
+print(f"Mu_2014 = ", pycodata.codata_constants_2014.MOLAR_MASS_CONSTANT_2014["value"])
+print(f"Mu_2010 = ", pycodata.codata_constants_2010.MOLAR_MASS_CONSTANT_2010["value"])
+```
