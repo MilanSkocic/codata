@@ -1,4 +1,4 @@
-r"""Example in python."""
+r"""EXAMPLE in PYTHON"""
 import sys
 sys.path.insert(0, "../src/")
 import pycodata

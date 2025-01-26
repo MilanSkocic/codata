@@ -1,3 +1,4 @@
+/* EXAMPLE IN C */
 #include <stdio.h>
 #include "codata.h"
 
