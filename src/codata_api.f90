@@ -1,6 +1,5 @@
 module codata__api
     !! API.
-    !! See [specs](../page/specs/api.html).
 use codata__version, only: version
 implicit none
 private
