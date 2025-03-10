@@ -42,7 +42,7 @@ export LIBSWINDOWS=("libgfortran-5" "libquadmath-0" "libgcc_s_seh-1" "libwinpthr
 export ROOT="/usr/lib/x86_64-linux-gnu/"
 export LIBS="${LIBSLINUX[@]}"
 
-if [[ "$OSTYPE" == "msys" ]]; then
+if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
     DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
     PLATFORM="windows"
     ARCH=$MSYSTEM_CARCH
