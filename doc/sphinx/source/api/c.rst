@@ -1,6 +1,6 @@
-*****
-C API
-*****
+***
+C
+***
 
 .. literalinclude:: ../../../../include/codata.h
    :language: C
