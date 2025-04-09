@@ -132,15 +132,12 @@ uninstall:
 
 # ---------------------------------------------------------------------
 # OTHERS
-references:
-	pandoc -t markdown_strict --citeproc --csl ase.csl _REFERENCES.md -o REFERENCES.md
-
-doc: references
-	ford API-doc-FORD-file.md
+doc:
+	make -C doc/sphinx html
 
 docs:
 	rm -rf docs/*
-	cp -rf API-doc/* ./docs/
+	cp -rf doc/sphinx/build/html/* ./docs/
 
 logo:
 	make -C media
@@ -148,5 +145,5 @@ logo:
 clean:
 	rm -rf $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) ./src/codata_version.f90 $(SRC_FYPP_F90) $(STDLIB)
 	fpm clean --all
-	rm -rf API-doc/*
+	rm -rf doc/sphinx/build/
 # ---------------------------------------------------------------------
