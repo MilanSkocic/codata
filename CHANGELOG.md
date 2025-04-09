@@ -1,3 +1,11 @@
+# 2.1.2
+
+* Switch to UCRT for Windows binaries.
+* Switch to sphinx documentation using [fspx](https://github.com/jalvesz/fspx).
+
+**Not released.**
+
+
 # 2.1.1
 
 * No code change.
