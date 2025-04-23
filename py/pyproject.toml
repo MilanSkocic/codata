@@ -9,10 +9,9 @@ authors = [{name = "Milan Skocic", email = "milan.skocic@icloud.com"}]
 description = "pycodata: CODATA constants for python."
 readme = "README.md"
 requires-python = ">=3.9"
-license = {text = "License :: OSI Approved :: MIT License"}
+license = "MIT"
 classifiers=["Development Status :: 5 - Production/Stable",
-             "Intended Audience :: Science/Research",
-             "License :: OSI Approved :: MIT License"]
+             "Intended Audience :: Science/Research"]
 
 [project.urls]
 Documentation = "https://milanskocic.github.io/codata/index.html"
