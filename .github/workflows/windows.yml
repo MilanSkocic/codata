@@ -18,10 +18,10 @@ jobs:
     - name: MSYS2, Gfortran, fpm
       uses: msys2/setup-msys2@v2
       with:
-        msystem: MINGW64
+        msystem: UCRT64
         install: >-
-          mingw-w64-x86_64-gcc-fortran
-          mingw-w64-x86_64-fpm
+          mingw-w64-ucrt-x86_64-gcc-fortran
+          mingw-w64-ucrt-x86_64-fpm
           git
           make
           zip
