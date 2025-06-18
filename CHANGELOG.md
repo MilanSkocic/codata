@@ -1,4 +1,4 @@
-# 2.1.2
+# 2.2.0
 
 * Switch to UCRT64 for Windows binaries.
 * Switch to sphinx documentation using [fspx](https://github.com/jalvesz/fspx).
