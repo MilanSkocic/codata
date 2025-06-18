@@ -31,31 +31,31 @@ with open("./VERSION", "r") as f:
 if __name__ == "__main__":
 
     mod_constants_2022 = Extension(name="pycodata.constants_2022",
-                        sources=["./src/pycodata/cpy_codata_constants_2022.c"],
+                        sources=["./src/pycodata/_codata_constants_2022.c"],
                         libraries=libraries,
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,
                         extra_objects=extra_objects)
     mod_constants_2018 = Extension(name="pycodata.constants_2018",
-                        sources=["./src/pycodata/cpy_codata_constants_2018.c"],
+                        sources=["./src/pycodata/_codata_constants_2018.c"],
                         libraries=libraries,
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,
                         extra_objects=extra_objects)
     mod_constants_2014 = Extension(name="pycodata.constants_2014",
-                        sources=["./src/pycodata/cpy_codata_constants_2014.c"],
+                        sources=["./src/pycodata/_codata_constants_2014.c"],
                         libraries=libraries,
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,
                         extra_objects=extra_objects)
     mod_constants_2010 = Extension(name="pycodata.constants_2010",
-                        sources=["./src/pycodata/cpy_codata_constants_2010.c"],
+                        sources=["./src/pycodata/_codata_constants_2010.c"],
                         libraries=libraries,
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,
                         extra_objects=extra_objects)
     mod_version = Extension(name="pycodata.version",
-                        sources=["./src/pycodata/cpy_codata_version.c"],
+                        sources=["./src/pycodata/_codata_version.c"],
                         libraries=libraries,
                         library_dirs=library_dirs,
                         runtime_library_dirs=runtime_library_dirs,

@@ -3,7 +3,7 @@
 GENPY=../scripts/gen_cpython.py
 
 AST_SRC=$(wildcard ../data/*.toml)
-PYTHON_SRC=$(patsubst ../data/%.toml, ./src/pycodata/cpy_%.c, $(AST_SRC))
+PYTHON_SRC=$(patsubst ../data/%.toml, ./src/pycodata/_%.c, $(AST_SRC))
 
 SETUP=setup.py pyproject.toml
 # ---------------------------------------------------------------------
@@ -21,7 +21,7 @@ all: package
 # SOURCES
 sources: $(PYTHON_SRC)
 
-src/pycodata/cpy_%.c: ../data/%.toml
+src/pycodata/_%.c: ../data/%.toml
 	$(PYGEN) $(GENPY) $< $@
 # ---------------------------------------------------------------------
 
