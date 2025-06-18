@@ -2,9 +2,10 @@
 
 * Switch to UCRT64 for Windows binaries.
 * Switch to sphinx documentation using [fspx](https://github.com/jalvesz/fspx).
+* Update references with publication for codata 2022.
 * Update compilation flags for compatibility with `stdlib`.
 
-**Not released.**
+[Full changelog](https://github.com/MilanSkocic/codata/releases)
 
 
 # 2.1.1
