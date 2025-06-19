@@ -5,6 +5,7 @@ export VERSION=$(tr -d '\r' < VERSION | tr -d '\n')
 export LIBNAME="lib$NAME"
 export PYNAME="py$NAME"
 export PY_SRC="./src/$PYNAME"
+export AW="auditwheel repair --plat manylinux_2_35_x86_64 ./dist/*.whl"
 
 echo -n $VERSION > ./py/VERSION
 
