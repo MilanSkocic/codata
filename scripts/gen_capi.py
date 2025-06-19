@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 r"""Generate sources for Fortran."""
 import argparse
 import tomlkit

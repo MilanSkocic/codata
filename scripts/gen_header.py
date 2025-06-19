@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 r"""Concatenate all constants prototypes."""
 import argparse
 

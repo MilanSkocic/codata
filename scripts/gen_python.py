@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 r"""Generate Python sources."""
 import argparse
 import tomlkit

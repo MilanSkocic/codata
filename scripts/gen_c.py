@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 r"""Generate sources for C."""
 import argparse
 import tomlkit

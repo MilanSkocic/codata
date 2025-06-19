@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 r"""Generate language independant representation of Codata constants."""
 import argparse
 import tomlkit

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 r"""Generate C headers."""
 import argparse
 import tomlkit

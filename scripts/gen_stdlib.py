@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 r"""Generate sources for stdlib."""
 import argparse
 
