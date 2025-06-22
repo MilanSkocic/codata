@@ -145,5 +145,5 @@ logo:
 clean:
 	rm -rf $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) ./src/codata_version.f90 $(SRC_FYPP_F90) $(STDLIB)
 	fpm clean --all
-	rm -rf doc/sphinx/build/
+	make -C doc clean
 # ---------------------------------------------------------------------
