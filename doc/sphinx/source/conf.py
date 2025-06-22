@@ -4,16 +4,20 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 import os
 import sys
+import tomllib
 sys.path.insert(0, os.path.abspath('../../../py/src/'))
 import pycodata
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-
+fpath="../../../fpm.toml"
+f = open(fpath, "rb")
+fpm = tomllib.load(f)
+f.close()
 
 project = 'codata'
-copyright = '2025, M. Skocic'
-author = 'Milan Skocic'
+copyright = fpm["copyright"].replace("Copyright ","")
+author = fpm["author"]
 release = pycodata.__version__
 
 # -- General configuration ---------------------------------------------------
