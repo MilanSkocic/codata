@@ -21,9 +21,9 @@ make install prefix=$d
 
 echo ""
 echo "DEPLOY LIBS TO PYTHON"
-cp -vf $d/bin/* py/$PY_SRC/
-cp -vf $d/include/$NAME*.h py/$PY_SRC/
-cp -vf $d/lib/* py/$PY_SRC/
+cp -vf $d/bin/* py/$FPM_PY_SRC/
+cp -vf $d/include/$FPM_NAME*.h py/$FPM_PY_SRC/
+cp -vf $d/lib/* py/$FPM_PY_SRC/
 
 
 # if [[ $PLATFORM == "darwin" ]]; then
@@ -40,18 +40,18 @@ cp -vf $d/lib/* py/$PY_SRC/
 echo ""
 echo "ZIP LIBS"
 cd $d/
-zip -r $NAME-$PLATFORM-$ARCH-$VERSION.zip .
+zip -r $FPM_NAME-$FPM_PLATFORM-$FPM_ARCH-$FPM_VERSION.zip .
 cd ../../
-mv $d/$NAME-$PLATFORM-$ARCH-$VERSION.zip ./build/
+mv $d/$FPM_NAME-$FPM_PLATFORM-$FPM_ARCH-$FPM_VERSION.zip ./build/
 
 echo ""
 echo "BUILD PYTHON WRAPPER"
 make -C py
 cd ./py
-if [[ $PLATFORM == "linux" ]]; then
+if [[ $FPM_PLATFORM == "linux" ]]; then
     cp ./wheelhouse/*.whl ./dist/
 fi
 cd ./dist
-zip $PYNAME-$PLATFORM-$ARCH-$VERSION.zip *.*
+zip $FPM_PYNAME-$FPM_PLATFORM-$FPM_ARCH-$FPM_VERSION.zip *.*
 cd ..
 cd ..

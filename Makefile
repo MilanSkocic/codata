@@ -3,7 +3,7 @@
 ifneq ($(prefix), )
 	install_dir=$(prefix)
 else
-	install_dir=$(DEFAULT_INSTALL_DIR)
+	install_dir=$(FPM_DEFAULT_INSTALL_DIR)
 endif
 
 ifneq ($(type), )
@@ -34,9 +34,9 @@ STDLIB=./stdlib/stdlib_codata.f90
 # TARGETS
 .PHONY: build sources stdlib references doc docs clean logo
 
-all: $(LIBNAME)
+all: $(FPM_LIBNAME)
 
-$(LIBNAME): sources build copy_a shared
+$(FPM_LIBNAME): sources build copy_a shared
 # ---------------------------------------------------------------------
 
 
@@ -45,22 +45,22 @@ $(LIBNAME): sources build copy_a shared
 sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
 
 ./src/%.f90: ./data/%.toml
-	$(PYGEN) $(GEN_F) $< $@
+	$(FPM_PYGEN) $(GEN_F) $< $@
 
 ./src/%_capi.f90: ./data/%.toml
-	$(PYGEN) $(GEN_C) $< $@
+	$(FPM_PYGEN) $(GEN_C) $< $@
 
 ./include/%.txt: ./data/%.toml
-	$(PYGEN) $(GEN_HEADERS) $< $@
+	$(FPM_PYGEN) $(GEN_HEADERS) $< $@
 
 $(C_HEADER):
-	$(PYGEN) $(GEN_HEADER) $(C_HEADERS) -o $@
+	$(FPM_PYGEN) $(GEN_HEADER) $(C_HEADERS) -o $@
 
 ./src/%.f90: ./src/%.fypp
 	fypp -I ./include $< $@
 
 ./stdlib/stdlib_codata.f90: ./src/codata_constants_2022.f90
-	$(PYGEN) $(GEN_STDLIB) $< $@
+	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
 # ---------------------------------------------------------------------
 
 
@@ -81,52 +81,52 @@ example: build
 # ---------------------------------------------------------------------
 # LINKING - STATIC and DYNAMIC LIBS
 copy_a: 
-	cp -f $(shell find ./build/gfortran* -type f -name $(LIBNAME).a) $(BUILD_DIR)
+	cp -f $(shell find ./build/gfortran* -type f -name $(FPM_LIBNAME).a) $(FPM_BUILD_DIR)
 
-shared: shared_$(PLATFORM)
+shared: shared_$(FPM_PLATFORM)
 
 shared_linux: 
-	$(FC) -shared -o $(BUILD_DIR)/$(LIBNAME).so -Wl,--whole-archive $(BUILD_DIR)/$(LIBNAME).a -Wl,--no-whole-archive
+	$(FPM_FC) -shared -o $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so -Wl,--whole-archive $(FPM_BUILD_DIR)/$(FPM_LIBNAME).a -Wl,--no-whole-archive
 
 shared_darwin: 
-	$(FC) -dynamiclib -install_name @rpath/$(LIBNAME).dylib $(FPM_LDFLAGS) -o $(BUILD_DIR)/$(LIBNAME).dylib -Wl,-all_load $(BUILD_DIR)/$(LIBNAME).a
+	$(FPM_FC) -dynamiclib -install_name @rpath/$(FPM_LIBNAME).dylib $(FPM_LDFLAGS) -o $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dylib -Wl,-all_load $(FPM_BUILD_DIR)/$(FPM_LIBNAME).a
 
 shared_windows: 
-	$(FC) -shared $(FPM_LDFLAGS) -o $(BUILD_DIR)/$(LIBNAME).dll -Wl,--out-implib=$(BUILD_DIR)/$(LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(BUILD_DIR)/$(LIBNAME).a -Wl,--no-whole-archive
+	$(FPM_FC) -shared $(FPM_LDFLAGS) -o $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll -Wl,--out-implib=$(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(FPM_BUILD_DIR)/$(FPM_LIBNAME).a -Wl,--no-whole-archive
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # INSTALLATION 
-install: install_dirs install_$(PLATFORM)
+install: install_dirs install_$(FPM_PLATFORM)
 
 install_dirs: 
 	mkdir -p $(install_dir)/bin
 	mkdir -p $(install_dir)/include
 	mkdir -p $(install_dir)/lib
 	fpm install --prefix=$(install_dir) --profile=$(btype)
-	cp -f $(INCLUDE_DIR)/$(NAME)*.h $(install_dir)/include
+	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(install_dir)/include
 
 install_linux: 
-	cp -f $(BUILD_DIR)/$(LIBNAME).so $(install_dir)/lib
+	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so $(install_dir)/lib
 
 install_darwin: 
-	cp -f $(BUILD_DIR)/$(LIBNAME).dylib $(install_dir)/lib
+	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dylib $(install_dir)/lib
 
 install_windows:
-	cp -f $(BUILD_DIR)/$(LIBNAME).dll.a $(install_dir)/lib
-	cp -f $(BUILD_DIR)/$(LIBNAME).dll $(install_dir)/lib
-	cp -f $(BUILD_DIR)/$(LIBNAME).dll $(install_dir)/bin
+	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll.a $(install_dir)/lib
+	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll $(install_dir)/lib
+	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll $(install_dir)/bin
 
 uninstall:
-	rm -f $(install_dir)/include/$(NAME)*.h
-	rm -f $(install_dir)/include/$(NAME)*.mod
-	rm -f $(install_dir)/lib/$(LIBNAME).a
-	rm -f $(install_dir)/lib/$(LIBNAME).so
-	rm -f $(install_dir)/lib/$(LIBNAME).dylib
-	rm -f $(install_dir)/lib/$(LIBNAME).dll.a
-	rm -f $(install_dir)/lib/$(LIBNAME).dll
-	rm -f $(install_dir)/bin/$(LIBNAME).dll
+	rm -f $(install_dir)/include/$(FPM_NAME)*.h
+	rm -f $(install_dir)/include/$(FPM_NAME)*.mod
+	rm -f $(install_dir)/lib/$(FPM_LIBNAME).a
+	rm -f $(install_dir)/lib/$(FPM_LIBNAME).so
+	rm -f $(install_dir)/lib/$(FPM_LIBNAME).dylib
+	rm -f $(install_dir)/lib/$(FPM_LIBNAME).dll.a
+	rm -f $(install_dir)/lib/$(FPM_LIBNAME).dll
+	rm -f $(install_dir)/bin/$(FPM_LIBNAME).dll
 # ---------------------------------------------------------------------
 
 

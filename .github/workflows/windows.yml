@@ -18,10 +18,10 @@ jobs:
     - name: MSYS2, Gfortran, fpm
       uses: msys2/setup-msys2@v2
       with:
-        msystem: UCRT64
+        msystem: MINGW64
         install: >-
-          mingw-w64-ucrt-x86_64-gcc-fortran
-          mingw-w64-ucrt-x86_64-fpm
+          mingw-w64-x86_64-gcc-fortran
+          mingw-w64-x86_64-fpm
           git
           make
           zip
@@ -47,11 +47,11 @@ jobs:
     - name: Configure
       run: |
         . ./configure.sh
-        echo "NAME=$NAME" >> $GITHUB_ENV
-        echo "PYNAME=$PYNAME" >> $GITHUB_ENV
-        echo "VERSION=$VERSION" >> $GITHUB_ENV
-        echo "PLATFORM=$PLATFORM" >> $GITHUB_ENV
-        echo "ARCH=$ARCH" >> $GITHUB_ENV
+        echo "FPM_NAME=$FPM_NAME" >> $GITHUB_ENV
+        echo "FPM_PYNAME=$FPM_PYNAME" >> $GITHUB_ENV
+        echo "FPM_VERSION=$FPM_VERSION" >> $GITHUB_ENV
+        echo "FPM_PLATFORM=$FPM_PLATFORM" >> $GITHUB_ENV
+        echo "FPM_ARCH=$FPM_ARCH" >> $GITHUB_ENV
     - name: Compile
       run: |
         chmod u+x build.sh
@@ -59,12 +59,12 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: ${{ env.NAME }}-${{ env.PLATFORM }}-${{ env.ARCH }}-${{ env.VERSION }}
+        name: ${{ env.FPM_NAME }}-${{ env.FPM_PLATFORM }}-${{ env.FPM_ARCH }}-${{ env.FPM_VERSION }}
         path: ./build/install/
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: ${{ env.PYNAME }}-${{ env.PLATFORM }}-${{ env.ARCH }}-${{ env.VERSION }}
+        name: ${{ env.FPM_PYNAME }}-${{ env.FPM_PLATFORM }}-${{ env.FPM_ARCH }}-${{ env.FPM_VERSION }}
         path: ./py/dist/*.whl
     - name: Release libs
       if: ${{ github.event_name == 'release' }}
