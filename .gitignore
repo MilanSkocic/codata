@@ -12,6 +12,7 @@
 #TST: addition or modification of tests
 #REL: related to releasing
 
+.cache
 .idea/
 bin/
 build/
