@@ -1,3 +1,10 @@
+# 2.3.0
+
+* Remove support for Python 3.9 and add support for Python 3.14.
+
+[Full changelog](https://github.com/MilanSkocic/codata/releases)
+
+
 # 2.2.0
 
 * Switch to UCRT64 for Windows binaries.
