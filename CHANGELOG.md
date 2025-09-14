@@ -1,4 +1,4 @@
-# 2.3.0
+# 2.3.0dev0
 
 * Remove support for Python 3.9 and add support for Python 3.14.
 
