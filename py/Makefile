@@ -28,14 +28,22 @@ src/pycodata/_%.c: ../data/%.toml
 
 # ---------------------------------------------------------------------
 # COMPILATION
-package: python3.9 python3.10 python3.11 python3.12 python3.13
+package: python3.9 python3.10 python3.11 python3.12 python3.13 python3.14
+
+python3.14: $(SETUP)
+	@echo "########### PYTHON 3.14 ##########"
+	$(FPM_PY)3.14 setup.py build_ext --inplace
+	$(FPM_PY)3.14 -m build --no-isolation --sdist
+	$(FPM_PY)3.14 -m build --no-isolation --wheel
+	$(FPM_AW)
+	@echo "#################################"
 
 python3.13: $(SETUP)
 	@echo "########### PYTHON 3.13 ##########"
 	$(FPM_PY)3.13 setup.py build_ext --inplace
-	$(FPM_PY)3.13 -m build --no-isolation --sdist
+	#$(FPM_PY)3.13 -m build --no-isolation --sdist
 	$(FPM_PY)3.13 -m build --no-isolation --wheel
-	$(FPM_AW)
+	#$(FPM_AW)
 	@echo "#################################"
 
 python3.12: $(SETUP)
