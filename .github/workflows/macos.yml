@@ -28,6 +28,7 @@ jobs:
           3.11
           3.12
           3.13
+          3.14t
           3.14
     - name: Update python packages 
       run: |
@@ -35,6 +36,7 @@ jobs:
         python3.11 -m pip install -U --user pip setuptools wheel build
         python3.12 -m pip install -U --user pip setuptools wheel build
         python3.13 -m pip install -U --user pip setuptools wheel build
+        python3.14t -m pip install -U --user pip setuptools wheel build
         python3.14 -m pip install -U --user pip setuptools wheel build
     - name: Checkout
       uses: actions/checkout@v4
