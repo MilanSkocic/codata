@@ -1,4 +1,3 @@
-include ./Makefile.in
 # ---------------------------------------------------------------------
 # CONFIGURATION
 GENPY=../scripts/gen_cpython.py
