@@ -49,25 +49,25 @@ export FPM_ROOT="/usr/lib/x86_64-linux-gnu/"
 export FPM_LIBS="${LIBSLINUX[@]}"
 
 if [[ "$OSTYPE" == "msys" ]]; then
-    FPM_DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
-    FPM_PLATFORM="windows"
-    FPM_ARCH=$MSYSTEM_CARCH
-    FPM_ROOT=$(dirname $(where gfortran))"\\"
-    FPM_EXT=".dll"
-    FPM_LIBS=( "${LIBSWINDOWS[@]}" )
-    FPM_PY="py -"
-    FPM_PYGEN="py"
-    FPM_LDFLAGS="-static"
-    FPM_AW=""
+    export FPM_DEFAULT_INSTALL_DIR="${APPDATA//\\//}/local"
+    export FPM_PLATFORM="windows"
+    export FPM_ARCH=$MSYSTEM_CARCH
+    export FPM_ROOT=$(dirname $(where gfortran))"\\"
+    export FPM_EXT=".dll"
+    export FPM_LIBS=( "${LIBSWINDOWS[@]}" )
+    export FPM_PY="py -"
+    export FPM_PYGEN="py"
+    export FPM_LDFLAGS="-static"
+    export FPM_AW=""
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]];then
-    FPM_PLATFORM="darwin"
-    FPM_ROOT="/usr/local/opt/gcc/lib/gcc/current/"
-    FPM_EXT=".dylib"
-    FPM_LIBS=( "${LIBSDARWIN[@]}" )
-    FPM_LDFLAGS="-static-libgfortran -static-libquadmath -static-libgcc"
-    FPM_AW=""
+    export FPM_PLATFORM="darwin"
+    export FPM_ROOT="/usr/local/opt/gcc/lib/gcc/current/"
+    export FPM_EXT=".dylib"
+    export FPM_LIBS=( "${LIBSDARWIN[@]}" )
+    export FPM_LDFLAGS="-static-libgfortran -static-libquadmath -static-libgcc"
+    export FPM_AW=""
 fi
 
 if [[ "$FPM_VERSION" == *"dev"* ]]; then
@@ -75,7 +75,7 @@ if [[ "$FPM_VERSION" == *"dev"* ]]; then
 fi
 
 for i in "$(printenv | grep ^FPM_)"; do
-    echo $i
+    echo "$i"
 done
 
-cp -vf LICENSE ./py/LICENSE
+cp -f LICENSE ./py/LICENSE

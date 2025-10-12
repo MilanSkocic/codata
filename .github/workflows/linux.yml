@@ -21,17 +21,17 @@ jobs:
     - name: Set FPM
       uses: fortran-lang/setup-fpm@v5
       with: 
-        fpm-version: "v0.10.0"
+        fpm-version: "v0.12.0"
     - name: Gfortran version
       run : gfortran --version
     - uses: actions/setup-python@v5
       with:
         python-version: |
-          3.9
           3.10
           3.11
           3.12
           3.13
+          3.14
     - name: Update python packages
       run: |
         python3.9  -m pip install -U --user pip setuptools wheel build auditwheel

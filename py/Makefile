@@ -1,3 +1,4 @@
+include ./Makefile.in
 # ---------------------------------------------------------------------
 # CONFIGURATION
 GENPY=../scripts/gen_cpython.py
@@ -28,7 +29,7 @@ src/pycodata/_%.c: ../data/%.toml
 
 # ---------------------------------------------------------------------
 # COMPILATION
-package: python3.9 python3.10 python3.11 python3.12 python3.13 python3.14
+package: python3.10 python3.11 python3.12 python3.13 python3.14
 
 python3.14: $(SETUP)
 	@echo "########### PYTHON 3.14 ##########"
@@ -41,9 +42,7 @@ python3.14: $(SETUP)
 python3.13: $(SETUP)
 	@echo "########### PYTHON 3.13 ##########"
 	$(FPM_PY)3.13 setup.py build_ext --inplace
-	#$(FPM_PY)3.13 -m build --no-isolation --sdist
 	$(FPM_PY)3.13 -m build --no-isolation --wheel
-	#$(FPM_AW)
 	@echo "#################################"
 
 python3.12: $(SETUP)
@@ -64,13 +63,10 @@ python3.10: $(SETUP)
 	$(FPM_PY)3.10 -m build --no-isolation --wheel
 	@echo "#################################"
 
-python3.9: $(SETUP)
-	@echo "########### PYTHON 3.9 ##########"
-	$(FPM_PY)3.9 setup.py build_ext --inplace
-	$(FPM_PY)3.9 -m build --no-isolation --wheel
-	@echo "#################################"
+test: test3.10 test3.11 test3.12 test3.13 test3.14
 
-test: test3.9 test3.10 test3.11 test3.12 test3.13
+test3.14: 
+	$(FPM_PY)3.14 -m pytest -v
 
 test3.13: 
 	$(FPM_PY)3.13 -m pytest -v
@@ -84,11 +80,8 @@ test3.11:
 test3.10: 
 	$(FPM_PY)3.10 -m pytest -v
 
-test3.9: 
-	$(FPM_PY)3.9 -m pytest -v
-
 example: 
-	$(FPM_PY)3.13 ../example/example.py
+	$(FPM_PY)3.14 ../example/example.py
 
 # ---------------------------------------------------------------------
 
