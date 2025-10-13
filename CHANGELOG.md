@@ -1,6 +1,5 @@
 # 2.3.0dev0
 
-* Add support for autotools
 * Remove support for Python 3.9 and add support for Python 3.14.
 
 [Full changelog](https://github.com/MilanSkocic/codata/releases)
