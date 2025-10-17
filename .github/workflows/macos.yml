@@ -12,9 +12,12 @@ jobs:
   macos: 
     runs-on: macos-14
     steps:
-    - name: Gfortran
-      run: |
-        brew reinstall gcc@11 gfortran@12
+    - name: Setup Fortran compiler
+      uses: fortran-lang/setup-fortran@v1.6.2
+      id: setup-fortran
+      with:
+        compiler: gcc 
+        version: 12 
     - name: Set FPM
       uses: fortran-lang/setup-fpm@v7
       with: 
