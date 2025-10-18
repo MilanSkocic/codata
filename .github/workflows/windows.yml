@@ -21,10 +21,16 @@ jobs:
         msystem: MINGW64
         install: >-
           mingw-w64-x86_64-gcc-fortran
-          mingw-w64-x86_64-fpm
+          # mingw-w64-x86_64-fpm
           git
           make
           zip
+    - name: Set fpm
+      run: |
+        git clone https://github.com/fortran-lang/fpm.git
+        cd fpm
+        chmod +x install.sh
+        ./install.sh
     - name: Gfortran version
       run : gfortran --version
     - uses: actions/setup-python@v5
