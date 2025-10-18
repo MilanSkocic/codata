@@ -26,10 +26,12 @@ jobs:
           zip
     - name: Set fpm
       run: |
-        git clone https://github.com/fortran-lang/fpm.git
-        cd fpm
-        chmod +x install.sh
-        ./install.sh
+        wget https://github.com/fortran-lang/fpm/releases/download/v0.12.0/fpm-0.12.0-linux-x86_64-gcc-12
+        mv fpm-0.12.0-linux-x86_64-gcc-12 fpm
+        chmod +x fpm
+        mv fpm $HOME/.local/bin
+        which fpm
+        fpm --version
     - name: Gfortran version
       run : gfortran --version
     - uses: actions/setup-python@v5
