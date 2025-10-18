@@ -30,7 +30,6 @@ jobs:
       with: 
         fpm-version: "v0.12.0"
     - name: MacOS patch libgfortran
-      if: contains(matrix.os, 'macos')
       run: |
         which gfortran
         BREW_PREFIX=$(brew --prefix)
