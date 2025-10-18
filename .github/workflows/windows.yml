@@ -29,11 +29,13 @@ jobs:
         wget https://github.com/fortran-lang/fpm/releases/download/v0.12.0/fpm-0.12.0-windows-x86_64-gcc-12.exe
         mv fpm-0.12.0-windows-x86_64-gcc-12.exe fpm.exe
         chmod +x fpm.exe
-        cp -fv fpm.exe /usr/local/bin
+        cp -fv fpm.exe /ucrt64/bin/
         which gfortran
-        fpm --version
+        which fpm
     - name: Gfortran version
-      run : gfortran --version
+      run : |
+        gfortran --version
+        fpm --version
     - uses: actions/setup-python@v5
       with:
         python-version: |
