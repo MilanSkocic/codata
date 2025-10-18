@@ -7,8 +7,8 @@ on:
     branches: [ "main", "dev" ]
   release:
     types: [published]
-
-build:
+jobs:
+  build:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
