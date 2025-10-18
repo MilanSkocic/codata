@@ -12,15 +12,17 @@ jobs:
   macos: 
     runs-on: macos-13
     steps:
-    - name: Gfortran
+    - name: Set gfortran
       run: |
         brew reinstall gcc@13 gfortran
-    - name: Set FPM
+    - name: Set fpm
       uses: fortran-lang/setup-fpm@v8
       with: 
         fpm-version: "v0.12.0"
-    - name: Gfortran version
-      run : gfortran --version
+    - name: versions
+      run : |
+        gfortran --version
+        fpm --version
     - uses: actions/setup-python@v5
       with:
         python-version: |

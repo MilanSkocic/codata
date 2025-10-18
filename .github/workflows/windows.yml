@@ -15,7 +15,7 @@ jobs:
       run:
         shell: msys2 {0}
     steps: 
-    - name: MSYS2, Gfortran, fpm
+    - name: set gfortran 
       uses: msys2/setup-msys2@v2
       with:
         msystem: MINGW64
@@ -24,10 +24,13 @@ jobs:
           git
           make
           zip
-    - name: Set FPM
-      uses: fortran-lang/setup-fpm@v8
-      with: 
-        fpm-version: "v0.12.0"
+    - name: Set fpm
+      run: |
+        wget https://github.com/fortran-lang/fpm/releases/download/v0.12.0/fpm-0.12.0-windows-x86_64-gcc-12.exe
+        mv fpm-0.12.0-windows-x86_64-gcc-12.exe fpm.exe
+        chmod +x fpm.exe
+        which fpm
+        fpm --version
     - name: Gfortran version
       run : gfortran --version
     - uses: actions/setup-python@v5
