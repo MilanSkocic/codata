@@ -15,7 +15,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-14, windows-latest]
         toolchain:
-          - {compiler: gcc, version: 12}
+          - {compiler: gcc, version: 13}
     steps:
     - name: Setup Fortran compiler
       uses: fortran-lang/setup-fortran@v1.7.0
@@ -104,6 +104,17 @@ jobs:
         fi
     - name: Gfortran version
       run : gfortran --version
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Configure
+      run: |
+        . ./configure.sh
+        echo "FPM_NAME=$FPM_NAME" >> $GITHUB_ENV
+        echo "FPM_PYNAME=$FPM_PYNAME" >> $GITHUB_ENV
+        echo "FPM_VERSION=$FPM_VERSION" >> $GITHUB_ENV
+        echo "FPM_PLATFORM=$FPM_PLATFORM" >> $GITHUB_ENV
+        echo "FPM_ARCH=$FPM_ARCH" >> $GITHUB_ENV
+        echo "FPM_PY=$FPM_PY" >> $GITHUB_ENV
     - uses: actions/setup-python@v6
       with:
         python-version: |
@@ -115,12 +126,12 @@ jobs:
           3.14
     - name: Update python packages
       run: |
-        python3.10 -m pip install -U --user pip setuptools wheel build auditwheel
-        python3.11 -m pip install -U --user pip setuptools wheel build auditwheel
-        python3.12 -m pip install -U --user pip setuptools wheel build auditwheel
-        python3.13 -m pip install -U --user pip setuptools wheel build auditwheel
-        python3.14t -m pip install -U --user pip setuptools wheel build auditwheel
-        python3.14 -m pip install -U --user pip setuptools wheel build auditwheel
+        ${{ env.FPM_PY }}3.10 -m pip install -U --user pip setuptools wheel build auditwheel
+        ${{ env.FPM_PY }}3.11 -m pip install -U --user pip setuptools wheel build auditwheel
+        ${{ env.FPM_PY }}3.12 -m pip install -U --user pip setuptools wheel build auditwheel
+        ${{ env.FPM_PY }}3.13 -m pip install -U --user pip setuptools wheel build auditwheel
+        ${{ env.FPM_PY }}3.14t -m pip install -U --user pip setuptools wheel build auditwheel
+        ${{ env.FPM_PY }}3.14 -m pip install -U --user pip setuptools wheel build auditwheel
     - name: Checkout
       uses: actions/checkout@v4
     - name: Configure
