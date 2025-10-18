@@ -15,7 +15,7 @@ jobs:
       run:
         shell: msys2 {0}
     steps: 
-    - name: set gfortran 
+    - name: Set gfortran 
       uses: msys2/setup-msys2@v2
       with:
         msystem: UCRT64
@@ -32,7 +32,7 @@ jobs:
         cp -fv fpm.exe /ucrt64/bin/
         which gfortran
         which fpm
-    - name: Gfortran version
+    - name: Versions
       run : |
         gfortran --version
         fpm --version
