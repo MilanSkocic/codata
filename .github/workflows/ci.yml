@@ -1,0 +1,165 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main", "dev" ]
+  pull_request:
+    branches: [ "main", "dev" ]
+  release:
+    types: [published]
+
+build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-14, windows-latest]
+        toolchain:
+          - {compiler: gcc, version: 12}
+    steps:
+    - name: Setup Fortran compiler
+      uses: fortran-lang/setup-fortran@v1.7.0
+      id: setup-fortran 
+      with:
+        compiler: ${{ matrix.toolchain.compiler }}
+        version: ${{ matrix.toolchain.version }}
+    - name: Set FPM
+      uses: fortran-lang/setup-fpm@v8
+      with: 
+        fpm-version: "v0.12.0"
+    - name: MacOS patch libgfortran
+      if: contains(matrix.os, 'macos')
+      run: |
+        which gfortran-${{ matrix.toolchain.version }}
+        which gfortran
+        BREW_PREFIX=$(brew --prefix)
+
+        # Query the actual library paths that fpm expects
+        echo "Checking library dependencies of fpm bootstrap binary..."
+        otool -L $(which fpm)
+
+        # Extract the gcc version from the bootstrap binary's library paths
+        BOOTSTRAP_GCC_VERSION=$(otool -L $(which fpm) | grep -o 'gcc@[0-9]\+' | head -n 1 | cut -d@ -f2)
+        if [ -z "$BOOTSTRAP_GCC_VERSION" ]; then
+          # Try alternative pattern: /lib/gcc/13/ -> extract 13
+          BOOTSTRAP_GCC_VERSION=$(otool -L $(which fpm) | grep libgfortran | grep -o '/lib/gcc/[0-9]\+/' | grep -o '[0-9]\+' | head -n 1)
+        fi
+
+        echo "Bootstrap fpm built with gcc@$BOOTSTRAP_GCC_VERSION"
+        echo "Current toolchain: gcc@${{ matrix.toolchain.version }}"
+
+        if [ "$BOOTSTRAP_GCC_VERSION" == "${{ matrix.toolchain.version }}" ]; then
+          echo "✓ Bootstrap gcc version matches current toolchain - no patching needed"
+          exit 0
+        fi
+
+        echo "⚠ Version mismatch detected - creating compatibility symlinks..."
+
+        # Find the actual Cellar path by following the symlink
+        if [ -L "${BREW_PREFIX}/opt/gcc@${{ matrix.toolchain.version }}" ]; then
+          GCC_CELLAR_PATH=$(cd -P "${BREW_PREFIX}/opt/gcc@${{ matrix.toolchain.version }}" && pwd)
+        else
+          GCC_CELLAR_PATH="${BREW_PREFIX}/Cellar/gcc@${{ matrix.toolchain.version }}"/*
+        fi
+        echo "GCC Cellar path: $GCC_CELLAR_PATH"
+
+        # Find the actual library files
+        CURRENT_GFORTRAN=$(find "$GCC_CELLAR_PATH"/lib/gcc/${{ matrix.toolchain.version }} -name "libgfortran.*.dylib" 2>/dev/null | head -n 1)
+        CURRENT_QUADMATH=$(find "$GCC_CELLAR_PATH"/lib/gcc/${{ matrix.toolchain.version }} -name "libquadmath.*.dylib" 2>/dev/null | head -n 1)
+        CURRENT_GCC_S=$(find "$GCC_CELLAR_PATH"/lib/gcc/${{ matrix.toolchain.version }} -name "libgcc_s.*.dylib" 2>/dev/null | head -n 1)
+
+        echo "Current gcc@${{ matrix.toolchain.version }} libraries:"
+        echo "  libgfortran: $CURRENT_GFORTRAN"
+        echo "  libquadmath: $CURRENT_QUADMATH"
+        echo "  libgcc_s: $CURRENT_GCC_S"
+
+        # Extract the expected libgfortran path and create symlink
+        LIBGFORTRAN_PATH=$(otool -L $(which fpm) | grep libgfortran | awk '{print $1}' | head -n 1)
+        if [ -n "$LIBGFORTRAN_PATH" ] && [ -n "$CURRENT_GFORTRAN" ]; then
+          TARGET_DIR=$(dirname "$LIBGFORTRAN_PATH")
+          echo "Creating directory: $TARGET_DIR"
+          sudo mkdir -p "$TARGET_DIR"
+          echo "Linking $CURRENT_GFORTRAN to $LIBGFORTRAN_PATH"
+          sudo ln -fs "$CURRENT_GFORTRAN" "$LIBGFORTRAN_PATH"
+        fi
+
+        # Extract the expected libquadmath path and create symlink
+        LIBQUADMATH_PATH=$(otool -L $(which fpm) | grep libquadmath | awk '{print $1}' | head -n 1)
+        if [ -n "$LIBQUADMATH_PATH" ] && [ -n "$CURRENT_QUADMATH" ]; then
+          TARGET_DIR=$(dirname "$LIBQUADMATH_PATH")
+          echo "Creating directory: $TARGET_DIR"
+          sudo mkdir -p "$TARGET_DIR"
+          echo "Linking $CURRENT_QUADMATH to $LIBQUADMATH_PATH"
+          sudo ln -fs "$CURRENT_QUADMATH" "$LIBQUADMATH_PATH"
+        fi
+
+        # Extract the expected libgcc_s path and create symlink
+        LIBGCC_PATH=$(otool -L $(which fpm) | grep libgcc_s | awk '{print $1}' | head -n 1)
+        if [ -n "$LIBGCC_PATH" ] && [ -n "$CURRENT_GCC_S" ]; then
+          TARGET_DIR=$(dirname "$LIBGCC_PATH")
+          echo "Creating directory: $TARGET_DIR"
+          sudo mkdir -p "$TARGET_DIR"
+          echo "Linking $CURRENT_GCC_S to $LIBGCC_PATH"
+          sudo ln -fs "$CURRENT_GCC_S" "$LIBGCC_PATH"
+        fi
+    - name: Gfortran version
+      run : gfortran --version
+    - uses: actions/setup-python@v6
+      with:
+        python-version: |
+          3.10
+          3.11
+          3.12
+          3.13
+          3.14t
+          3.14
+    - name: Update python packages
+      run: |
+        python3.10 -m pip install -U --user pip setuptools wheel build auditwheel
+        python3.11 -m pip install -U --user pip setuptools wheel build auditwheel
+        python3.12 -m pip install -U --user pip setuptools wheel build auditwheel
+        python3.13 -m pip install -U --user pip setuptools wheel build auditwheel
+        python3.14t -m pip install -U --user pip setuptools wheel build auditwheel
+        python3.14 -m pip install -U --user pip setuptools wheel build auditwheel
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Configure
+      run: |
+        . ./configure.sh
+        echo "FPM_NAME=$FPM_NAME" >> $GITHUB_ENV
+        echo "FPM_PYNAME=$FPM_PYNAME" >> $GITHUB_ENV
+        echo "FPM_VERSION=$FPM_VERSION" >> $GITHUB_ENV
+        echo "FPM_PLATFORM=$FPM_PLATFORM" >> $GITHUB_ENV
+        echo "FPM_ARCH=$FPM_ARCH" >> $GITHUB_ENV
+    - name: Compile
+      run: |
+        chmod u+x build.sh
+        ./build.sh
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ env.FPM_NAME }}-${{ env.FPM_PLATFORM }}-${{ env.FPM_ARCH }}-${{ env.FPM_VERSION }}
+        path: ./build/install/
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ env.FPM_PYNAME }}-${{ env.FPM_PLATFORM }}-${{ env.FPM_ARCH }}-${{ env.FPM_VERSION }}
+        path: ./py/dist/*.whl
+    - name: Release libs
+      if: ${{ github.event_name == 'release' }}
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./build/*.zip
+        file_glob: true
+        tag: ${{ github.ref }}
+        overwrite: true
+    - name: Release pywrapper
+      if: ${{ github.event_name == 'release' }}
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: ./py/dist/*.zip
+        file_glob: true
+        tag: ${{ github.ref }}
+        overwrite: true
