@@ -20,7 +20,7 @@ jobs:
       with:
         msystem: UCRT64
         install: >-
-          mingw-w64-x86_64-gcc-fortran
+          mingw-w64-ucrt64-x86_64-gcc-fortran
           git
           make
           zip
@@ -30,7 +30,6 @@ jobs:
         mv fpm-0.12.0-windows-x86_64-gcc-12.exe fpm.exe
         chmod +x fpm.exe
         cp -fv fpm.exe /usr/local/bin
-        which fpm
         fpm --version
     - name: Gfortran version
       run : gfortran --version
