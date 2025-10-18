@@ -8,12 +8,12 @@ on:
   release:
     types: [published]
   
-  env:
-    HOMEBREW_NO_ANALYTICS: "ON" # Make Homebrew installation a little quicker
-    HOMEBREW_NO_AUTO_UPDATE: "ON"
-    HOMEBREW_NO_BOTTLE_SOURCE_FALLBACK: "ON"
-    HOMEBREW_NO_GITHUB_API: "ON"
-    HOMEBREW_NO_INSTALL_CLEANUP: "ON"
+env:
+  HOMEBREW_NO_ANALYTICS: "ON" # Make Homebrew installation a little quicker
+  HOMEBREW_NO_AUTO_UPDATE: "ON"
+  HOMEBREW_NO_BOTTLE_SOURCE_FALLBACK: "ON"
+  HOMEBREW_NO_GITHUB_API: "ON"
+  HOMEBREW_NO_INSTALL_CLEANUP: "ON"
 
 jobs:
   macos: 
