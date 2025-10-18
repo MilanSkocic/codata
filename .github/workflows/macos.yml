@@ -7,6 +7,13 @@ on:
     branches: [ "main", "dev" ]
   release:
     types: [published]
+  
+  env:
+    HOMEBREW_NO_ANALYTICS: "ON" # Make Homebrew installation a little quicker
+    HOMEBREW_NO_AUTO_UPDATE: "ON"
+    HOMEBREW_NO_BOTTLE_SOURCE_FALLBACK: "ON"
+    HOMEBREW_NO_GITHUB_API: "ON"
+    HOMEBREW_NO_INSTALL_CLEANUP: "ON"
 
 jobs:
   macos: 
@@ -22,6 +29,30 @@ jobs:
       uses: fortran-lang/setup-fpm@v7
       with: 
         fpm-version: "v0.12.0"
+    - name: MacOS patch libgfortran
+      if: contains(matrix.os, 'macos')
+      run: |
+        which gfortran
+        BREW_PREFIX=$(brew --prefix)
+
+        # Query the actual library paths that fpm expects
+        echo "Checking library dependencies of fpm bootstrap binary..."
+        otool -L $(which fpm)
+
+        # Extract the gcc version from the bootstrap binary's library paths
+        BOOTSTRAP_GCC_VERSION=$(otool -L $(which fpm) | grep -o 'gcc@[0-9]\+' | head -n 1 | cut -d@ -f2)
+        if [ -z "$BOOTSTRAP_GCC_VERSION" ]; then
+          # Try alternative pattern: /lib/gcc/13/ -> extract 13
+          BOOTSTRAP_GCC_VERSION=$(otool -L $(which fpm) | grep libgfortran | grep -o '/lib/gcc/[0-9]\+/' | grep -o '[0-9]\+' | head -n 1)
+        fi
+
+        echo "Bootstrap fpm built with gcc@$BOOTSTRAP_GCC_VERSION"
+        echo "Current toolchain: gcc@${{ matrix.toolchain.version }}"
+
+        if [ "$BOOTSTRAP_GCC_VERSION" == "${{ matrix.toolchain.version }}" ]; then
+          echo "✓ Bootstrap gcc version matches current toolchain - no patching needed"
+          exit 0
+        fi    
     - name: Gfortran version
       run : gfortran --version
     - uses: actions/setup-python@v6
