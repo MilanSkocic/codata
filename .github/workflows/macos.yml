@@ -24,7 +24,7 @@ jobs:
       id: setup-fortran
       with:
         compiler: gcc 
-        version: 11 
+        version: 12 
     - name: Set FPM
       uses: fortran-lang/setup-fpm@v7
       with: 
