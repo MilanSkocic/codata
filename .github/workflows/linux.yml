@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
     - name: Setup Fortran compiler
-    uses: fortran-lang/setup-fortran@v1.7.0
-    id: setup-fortran 
-    with:
-      compiler: gcc
-      version: 10
+      uses: fortran-lang/setup-fortran@v1.7.0
+      id: setup-fortran 
+      with:
+        compiler: gcc
+        version: 10
     - name: Set FPM
       uses: fortran-lang/setup-fpm@v8
       with: 
