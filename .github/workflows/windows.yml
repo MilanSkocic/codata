@@ -29,7 +29,7 @@ jobs:
         wget https://github.com/fortran-lang/fpm/releases/download/v0.12.0/fpm-0.12.0-windows-x86_64-gcc-12.exe
         mv fpm-0.12.0-windows-x86_64-gcc-12.exe fpm.exe
         chmod +x fpm.exe
-        cp fpm.exe /usr/local/bin
+        cp -fv fpm.exe /usr/local/bin
         which fpm
         fpm --version
     - name: Gfortran version
