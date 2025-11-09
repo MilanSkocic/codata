@@ -1,3 +1,7 @@
+# 2.3.1-dev
+
+* Refactoring the `configure.sh` script.
+
 # 2.3.0
 
 * Remove support for Python 3.9 and add support for Python 3.14(t).
