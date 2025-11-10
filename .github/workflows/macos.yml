@@ -10,11 +10,11 @@ on:
 
 jobs:
   macos: 
-    runs-on: macos-13
+    runs-on: macos-latest
     steps:
     - name: Set gfortran
       run: |
-        brew reinstall gcc@13 gfortran
+        brew install gfortran
     - name: Set fpm
       uses: fortran-lang/setup-fpm@v8
       with: 
