@@ -46,6 +46,8 @@ py/src/pycodata/lib/
 C/build/
 C/bin/
 
+make.in
+
 Makefile.in
 /ar-lib
 /mdate-sh
