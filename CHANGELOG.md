@@ -1,6 +1,7 @@
 # 2.3.1-dev
 
 * Refactoring the `configure.sh` script.
+* Fix `Makefile` for free-threaded Python.
 
 # 2.3.0
 
