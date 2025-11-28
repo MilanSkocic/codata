@@ -43,8 +43,8 @@ jobs:
           3.11
           3.12
           3.13
-          3.14
           3.14t
+          3.14
     - name: Update python packages 
       run: |
         py -3.10 -m pip install -U --user pip setuptools wheel build 
