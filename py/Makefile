@@ -35,7 +35,7 @@ auditwheel: $(SETUP)
 	$(FPM_AW)
 
 python3.14t: $(SETUP)
-	@echo "########### PYTHON 3.14 ##########"
+	@echo "########### PYTHON 3.14t ##########"
 	$(FPM_PY)3.14t setup.py build_ext --inplace
 	$(FPM_PY)3.14t -m build --no-isolation --sdist
 	$(FPM_PY)3.14t -m build --no-isolation --wheel
