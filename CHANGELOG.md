@@ -1,4 +1,4 @@
-# 2.3.1-dev
+# 2.3.1
 
 * Refactoring the `configure.sh` script.
 * Remove support for 3.14t. No official release on python.org.
