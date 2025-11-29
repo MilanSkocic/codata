@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 r"""EXAMPLE in PYTHON"""
 import sys
-sys.path.insert(0, "../src/")
+sys.path.insert(0, "../py/src/")
 import pycodata
 
 print("########## EXAMPLE IN PYTHON ##########")
@@ -16,6 +16,6 @@ print(f"u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
 
 print("# OLDER VALUES")
 print(f"Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
-print(f"Mu_2018 = ", pycodata.codata_constants_2018.MOLAR_MASS_CONSTANT_2018["value"])
-print(f"Mu_2014 = ", pycodata.codata_constants_2014.MOLAR_MASS_CONSTANT_2014["value"])
-print(f"Mu_2010 = ", pycodata.codata_constants_2010.MOLAR_MASS_CONSTANT_2010["value"])
+print(f"Mu_2018 = ", pycodata.constants_2018.MOLAR_MASS_CONSTANT_2018["value"])
+print(f"Mu_2014 = ", pycodata.constants_2014.MOLAR_MASS_CONSTANT_2014["value"])
+print(f"Mu_2010 = ", pycodata.constants_2010.MOLAR_MASS_CONSTANT_2010["value"])
