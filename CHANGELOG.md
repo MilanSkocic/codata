@@ -1,7 +1,8 @@
 # 2.3.1-dev
 
 * Refactoring the `configure.sh` script.
-* Fix `Makefile` for free-threaded Python.
+* Remove support for 3.14t. No official release on python.org.
+* If binaries for Python 3.14t are needed you need to compile them by yourself.
 
 # 2.3.0
 
