@@ -29,17 +29,13 @@ src/pycodata/_%.c: ../data/%.toml
 
 # ---------------------------------------------------------------------
 # COMPILATION
-package: python3.10 python3.11 python3.12 python3.13 python3.14 python3.14t auditwheel
+package: python3.10 python3.11 python3.12 python3.13 python3.14 sdist auditwheel
 
 auditwheel: $(SETUP)
 	$(FPM_AW)
 
-python3.14t: $(SETUP)
-	@echo "########### PYTHON 3.14t ##########"
-	$(FPM_PY)3.14t setup.py build_ext --inplace
-	$(FPM_PY)3.14t -m build --no-isolation --sdist
-	$(FPM_PY)3.14t -m build --no-isolation --wheel
-	@echo "#################################"
+sdist: $(SETUP)
+	$(FPM_PY)3.14 -m build --no-isolation --sdist
 
 python3.14: $(SETUP)
 	@echo "########### PYTHON 3.14 ##########"
@@ -75,9 +71,6 @@ test: test3.10 test3.11 test3.12 test3.13 test3.14
 
 test3.14: python3.14
 	$(FPM_PY)3.14 -m pytest -v
-
-test3.14t: python3.14t
-	$(FPM_PY)3.14t -m pytest -v
 
 test3.13: python3.13 
 	$(FPM_PY)3.13 -m pytest -v
