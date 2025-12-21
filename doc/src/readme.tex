@@ -1,3 +1,4 @@
+%-------------------------------------------------------------------------------
 \section{Introduction}\label{introduction}
     \texttt{codata} is a Fortran library providing the fundamental physical constants
     according to 
@@ -36,9 +37,7 @@
           https://github.com/vmagnin/fundamental\_constants.
     \end{itemize}
 
-
-
-
+%-------------------------------------------------------------------------------
 \section{Dependencies}\label{dependencies}
     \begin{verbatim}
         gfortran>=10
@@ -47,8 +46,7 @@
         fypp>=3.0
     \end{verbatim}
 
-
-
+%-------------------------------------------------------------------------------
 \section{Installation}\label{installation}
     A Makefile is provided, which uses
     \href{https://fpm.fortran-lang.org}{fpm}, for building the library.
@@ -67,11 +65,12 @@
 
     \begin{verbatim}
         chmod +x configure.sh
-        . ./configure.sh
+        ./configure.sh
         make
         make install
         make uninstall
     \end{verbatim}
 
+%-------------------------------------------------------------------------------
 \section{License}\label{license}
 MIT

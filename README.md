@@ -56,7 +56,7 @@ Build: the configuration file will set all the environment variables
 necessary for the compilation
 
             chmod +x configure.sh
-            . ./configure.sh
+            ./configure.sh
             make
             make install
             make uninstall
