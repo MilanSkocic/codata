@@ -1,0 +1,319 @@
+%-------------------------------------------------------------------------------
+\section*{2.3.1}
+    \begin{itemize}
+        \item Refactoring the \texttt{configure.sh} script.
+        \item Remove support for 3.14t. No official release on python.org.
+        \item If binaries for Python 3.14t are needed you need to compile them by yourself.
+    \end{itemize}
+
+%-------------------------------------------------------------------------------
+\section*{2.3.0}
+    \begin{itemize}
+        \item Remove support for Python 3.9 and add support for Python 3.14(t).
+    \end{itemize}
+
+    \href{https://github.com/MilanSkocic/codata/releases}{Full changelog}
+
+
+%-------------------------------------------------------------------------------
+\section*{2.2.0}
+    \begin{itemize}
+        \item Switch to UCRT64 for Windows binaries.
+        \item Switch to sphinx documentation using \href{https://github.com/jalvesz/fspx}{fspx}.
+        \item Update references with publication for codata 2022.
+        \item Update compilation flags for compatibility with \texttt{stdlib}.
+    \end{itemize}
+    \href{https://github.com/MilanSkocic/codata/releases}{Full changelog}
+
+
+%-------------------------------------------------------------------------------
+\section*{2.1.1}\label{section*-3}
+    \begin{itemize}
+        \item No code change.
+        \item Code refractoring and cleaning
+        \item Update CI/CD workflows.
+    \end{itemize}
+    \href{https://github.com/MilanSkocic/codata/releases}{Full changelog}
+
+
+%-------------------------------------------------------------------------------
+\section*{2.1.0}
+    \begin{itemize}
+        \item Roll back to C API in Fortran code: easier maintenance.
+        \item Roll back to compiled C extension for python: easier maintenance.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/milanskocic/codata/releases}{github}
+
+
+%-------------------------------------------------------------------------------
+\section*{2.0.1}
+    \begin{itemize}
+        \item Fix bug in version for Fortran code.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/milanskocic/codata/releases}{github}
+
+
+%-------------------------------------------------------------------------------
+\section*{2.0.0}
+    \begin{itemize}
+        \item Drop compiled extensions for Python.
+        \item Pure Python code for constants auto-generated as it is the case for the Fortran code.
+        \item Pure C code for constants auto-generated as it is the case for the Fortran code.
+        \item API break:
+        \begin{itemize}
+            \item No more C API in the Fortran code.
+            \item Use the pure C code to build a C library.
+        \end{itemize}
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/milanskocic/codata/releases}{github}
+
+
+%-------------------------------------------------------------------------------
+\section*{1.2.2}
+    \begin{itemize}
+        \item Fix conflict that could occur with C API modules. Add prefix in module names.
+        \item Cleanup and refractoring.
+        \item Documentation update.
+    \end{itemize}
+
+
+%-------------------------------------------------------------------------------
+\section*{1.2.1}
+    \begin{itemize}
+        \item Refractoring
+        \item Merge back C API and python wrapper.
+    \end{itemize}
+    Full changelog available at \href{https://github.com/milanskocic/codata/releases}{github}
+
+
+%-------------------------------------------------------------------------------
+\section*{1.2.0}
+    \begin{itemize}
+        \item Refractoring
+        \item Documentation update.
+    \end{itemize}
+    Full changelog available at \href{https://github.com/milanskocic/codata/releases}{github}
+
+
+%-------------------------------------------------------------------------------
+\section*{1.1.0}
+    \begin{itemize}
+        \item C API and Python wrapper moved to their own repositories.
+        \begin{itemize}
+            \item \href{https://github.com/MilanSkocic/codata-capi}{C wrapper}
+            \item \href{https://github.com/MilanSkocic/codata-py}{Python wrapper}
+        \end{itemize}
+        \item API break: C API is no more provided by default. Use the optional C wrapper.
+        \item Code cleanup
+        \item Documentation update
+    \end{itemize}
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+
+%-------------------------------------------------------------------------------
+\section*{1.0.0}
+    \begin{itemize}
+        \item Add codata values for 2010, 2014 and 2018.
+        \item Code refractoring and code cleaning.
+        \item Documentation update and switch to only FORD documentation.
+        \item Rewrite code generators in python.
+        \item Generate source code for stdlib.
+        \item API break: constants are defined as DT like in stdlib.
+    \end{itemize}
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.10.0}
+    \begin{itemize}
+        \item Remove remove generation of the version module.
+        \item Add tests using the test-drive framework.
+        \item Explicit parameter constants for Fortran and protected constants for C API.
+        \item Minor fixes in documentation.
+        \item Code cleanup.
+        \item Merge of all code for autogeneration in one file.
+    \end{itemize}
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.9.0}
+    \begin{itemize}
+        \item No API changes.
+        \item Automatic generation of the version module.
+        \item Generic Makefiles for automatic the building process of the library and the pywrapper.
+        \item Add targets: build, build\_debug, test, test\_debug.
+        \item Minor fixes in documentation.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.8.2}
+    \begin{itemize}
+        \item No API changes.
+        \item Improve Makefile for generating the source code at each compilation.
+        \item Source generator rewritten in Fortran.
+        \item Switch to pyproject.toml for the Python wrapper.
+        \item Minor fixes in documentation.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.8.1}
+    \begin{itemize}
+        \item Use shared library in python wrapper.
+        \item Minor fixes in documentation.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.8.0}
+    \begin{itemize}
+        \item Back to the approach with a library.
+        \item Compatible with fpm.
+        \item Configuration file for setting all the environmental variables.
+        \item Global makefile for building a static library (through fpm) and a shared library.
+        \item Automatic copy of the necessary sources for the python wrapper.
+        \item Python wrapper built with the static library
+            \begin{itemize}
+                \item no dependency on a shared library.
+                \item sources and static library embeded in the python wrapper.
+            \end{itemize}
+        \item FORD for documenting the Fortran code.
+        \item Integration of the FORD documentation into the main documentation with sphinx.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.7.1}
+    \begin{itemize}
+        \item Minor fixes in generator code
+        \item Add automatic copy of c sources for the python wrapper.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.7.0}
+    \begin{itemize}
+        \item Migrate documentation from doxygen to sphinx+breathe.
+        \item Add YEAR constant indicating the year of the codata constants.
+        \item Refractoring
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.6.0}
+    \begin{itemize}
+        \item Created documentation.
+        \item Fixed missing uncertainties for Cpython.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.5.0}
+    \begin{itemize}
+        \item Changed the complete approach by not generating a library but only source files for different languages.
+        \item Available languages: Fortran, C, python, CPython
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.4.0}
+    \begin{itemize}
+        \item Bring back pywrapper in the codata repository to sync versions.
+        \item Improvements of the documentation.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.3.0}
+    \begin{itemize}
+        \item Only last codata constants.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.2.1}
+    \begin{itemize}
+        \item Integration of Intel Fortran compiler and MSVC in cmake scripts.
+        \item Add specifications and instructions for compiling on Windows
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.2.0}
+    \begin{itemize}
+        \item Bug fixes for the codata 2010.
+        \item Bug fixes in the tests linked to the codata 2010.
+        \item Add python wrapper for the number of constants method.
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.
+
+
+%-------------------------------------------------------------------------------
+\section*{0.1.0}
+    Implementation of:
+    \begin{itemize}
+        \item the parser of the codata raw data
+        \item the generator of the Fortran modules
+        \item the C API and C header
+        \item the python wrapper (will be moved to its repository next release).
+    \end{itemize}
+
+    Full changelog available at \href{https://github.com/MilanSkocic/codata/releases}{github}
+
+    Python wrapper available at \href{https://pypi.org/project/pycodata}{pypi}.

@@ -1,0 +1,47 @@
+ \input texinfo
+@include make.in.texi
+@settitle @value{TITLE}
+
+
+@copying
+Copyright @copyright{} @value{AUTHOR}.
+@end copying
+
+
+@titlepage
+@vskip 50pt
+@title @value{TITLE}
+@subtitle @value{VERSION}
+@subtitle Powered by Texinfo
+@author @value{AUTHOR} --- PhD, Electrochemistry
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+
+@contents
+
+
+@node Top
+@top @value{TITLE}
+
+
+@menu
+* Getting Ready::    Quick start.
+* Man Pages::        Man Pages
+* Index::            Complete index.
+@end menu
+
+@include getting_ready.texi
+
+@include manpages.texi
+
+@c @part Part II:@* Man Pages
+
+@node Index
+@unnumbered Index
+@printindex cp
+
+
+@bye

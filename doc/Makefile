@@ -1,12 +1,17 @@
-.PHONY: html pdf clean
+include ../make.in
 
-all: pdf html
-	
+all: 
+	./build.sh pdf html
+
+none:
+	./build.sh
+
 pdf:
-	make -C sphinx latexpdf
+	./build.sh pdf
 
 html:
-	make -C sphinx html
+	./build.sh html
 
 clean:
-	make -C sphinx clean
+	rm -rf build/*
+	rm -f *.ilg 
