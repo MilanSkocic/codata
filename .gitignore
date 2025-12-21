@@ -47,6 +47,7 @@ C/build/
 C/bin/
 
 make.in
+make.in.tex
 
 Makefile.in
 /ar-lib
