@@ -70,14 +70,6 @@ dowload_dependencies () {
                 fi
             fi
         done
-        url=$DOC_DEP_DIR/drawings/figures/png
-        target=PEC-*.png
-        cp -fv $url/$target ./src/figures/
-
-        url=$DOC_DEP_DIR/drawings/figures/png
-        target=EIS-*.png
-        cp -fv $url/$target ./src/figures/
-
         url=$DOC_DEP_DIR/bibfiles
         target=codata.bib
         cp -fv $url/$target ./src/references.bib
