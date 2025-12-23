@@ -7,13 +7,6 @@
     A C API allows usage from C, or can be used as a basis for other wrappers. 
     Python wrapper allows easy usage from Python.
 
-    The latest codata constants were released in 2022 by the \href{https://pml.nist.gov/cuu/Constants/}{NIST}. 
-    All values for the codata constants are provided as double precision reals in 
-    a derived type \texttt{codata\_constant\_type}. 
-    The names are quite long and can be aliased with shorter names. 
-    A module level interface to\_real is available for getting the constant value 
-    or uncertainty of a constant.
-
     To use \texttt{codata} within your
     \href{https://github.com/fortran-lang/fpm}{fpm} project, add the
     following to your \texttt{fpm.toml} file:
@@ -23,19 +16,17 @@
         codata = { git="https://github.com/MilanSkocic/codata.git" }
     \end{verbatim}
 
-    \textbf{Notes}:
-
-    \begin{itemize}
-        \item The latest codata constants were integrated in the
-          \href{https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0}{stdlib}.
-          The constants are implemented as derived type which carries the name,
-          the value, the uncertainty and the unit. This library will be
-          complementary to the constants defined in the stdlib by providing
-          older values for the constants.
-        \item If you only need sources for the codata constants that you can
-          integrate directly in your sources you may be interested by
-          https://github.com/vmagnin/fundamental\_constants.
-    \end{itemize}
+    The latest codata constants (\href{https://pml.nist.gov/cuu/Constants/}{2022}) 
+    were integrated in the
+    \href{https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0}{stdlib}.
+    The constants are implemented as derived type which carries the name,
+    the value, the uncertainty and the unit. This library will be
+    complementary to the constants defined in the stdlib by providing
+    older values for the constants.
+    
+    If you only need sources for the codata constants that you can
+    integrate directly in your sources you may be interested by
+    \href{https://github.com/vmagnin/fundamental\_constants}{https://github.com/vmagnin/fundamental\_constants}.
 
 %-------------------------------------------------------------------------------
 \section{Dependencies}\label{dependencies}
