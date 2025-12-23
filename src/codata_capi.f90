@@ -13,9 +13,8 @@ contains
 
 
 function capi_get_version()bind(C, name="codata_get_version")result(cptr)
-    !! C API for [[codata__api(module):get_version(function)]].
 
-    type(c_ptr) :: cptr !! C pointer to a string indicating the version.
+    type(c_ptr) :: cptr 
 
     character(len=:), pointer :: fptr 
 
