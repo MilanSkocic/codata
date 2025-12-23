@@ -10,16 +10,14 @@ DOC_BIB=biber
 DOC_NCL=makeindex
 DOC_MK4CFG=make4ht.cfg
 DOC_MK4BUILD=make4ht.mk4
-DOC_TEXINFO=makeinfo
 PREP_DOC_DIR=../prep/doc
 DOC_NAME="${FPM_NAME:-codata}"
 
-GIT="bibfiles drawings"
+GIT="bibfiles"
 
 FLAGS_RM=-rfv
 FLAGS_MV=-fv
 
-FLAG_INFO=0
 FLAG_PDF=0
 FLAG_HTML=0
 FLAG_DEPS=1
@@ -30,9 +28,6 @@ VERBOSE=0
 args=($*)
 for arg in ${args[@]}; do
     case $arg in
-        "info")
-            FLAG_INFO=1
-            ;;
         "pdf")
             FLAG_PDF=1
             ;;
@@ -201,14 +196,7 @@ make_latex
 make_markdown
 
 
-if [[ $FLAG_INFO == 1 ]]; then
-    echo "[INFO]: Generating Texinfo."
-    $DOC_TEXINFO $DOC_SRC_DIR/$DOC_MAIN.texi -o $DOC_BUILD_DIR/info/$DOC_NAME.info
-    echo "[INFO]: Texinfo done."
-fi
-
 if [[ $FLAG_PDF == 1 ]]; then 
-
     if [[ $FLAG_FAST == 1 ]];then
         $DOC_TEX -output-directory=./$DOC_BUILD_DIR -synctex=1 $DOC_SRC_DIR/$DOC_MAIN.tex
     else
@@ -239,5 +227,4 @@ fi
 if [[ $FLAG_HTML == 1 ]]; then
     make4ht -c $DOC_MK4CFG -d $DOC_BUILD_DIR/html -B $DOC_BUILD_DIR -e $DOC_MK4BUILD $DOC_SRC_DIR/$DOC_MAIN.tex -a info
     # $DOC_TEXINFO --html $DOC_SRC_DIR/$DOC_MAIN.texi -o $DOC_BUILD_DIR/html/
-
 fi
