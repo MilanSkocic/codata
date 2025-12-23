@@ -1,0 +1,1442 @@
+<!DOCTYPE html> 
+<html lang='en' xml:lang='en'> 
+<head> <title></title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='00-main.css' rel='stylesheet' type='text/css' /> 
+<meta content='00-main.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+</head><body>                                                                                         
+                                                                                            
+<!-- l. 1 --><p class='indent'>
+                                                                                            
+                                                                                            
+</p><!-- l. 1 --><p class='indent'>
+                                                                                            
+                                                                                            
+</p><!-- l. 3 --><p class='noindent'>  
+</p><!-- l. 5 --><p class='noindent'><span class='eccc2488-'><span class='small-caps'>codata</span></span>
+</p><!-- l. 6 --><p class='noindent'>____________________________________________________________________________________________
+</p><!-- l. 7 --><p class='noindent'>                                                                              Documentation
+</p><!-- l. 8 --><p class='noindent'>                                                                    Version: 2.3.2dev0+ff0bc52
+</p><!-- l. 10 --><p class='noindent'><span class='ecrm-1200'>Milan Skocic, PhD.</span>
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+</p><!-- l. 17 --><p class='indent'>
+                                                                                            
+                                                                                            
+</p>
+   <h2 class='likechapterHead' id='contents'><a id='x1-1000'></a>Contents</h2>
+   <div class='tableofcontents'>
+   <span class='chapterToc'>1 <a href='#getting-starter' id='QQ2-1-2'>Getting Starter</a></span>
+<br />   <span class='sectionToc'>1.1 <a href='#introduction' id='QQ2-1-3'>Introduction</a></span>
+<br />   <span class='sectionToc'>1.2 <a href='#dependencies' id='QQ2-1-4'>Dependencies</a></span>
+<br />   <span class='sectionToc'>1.3 <a href='#installation' id='QQ2-1-5'>Installation</a></span>
+<br />   <span class='sectionToc'>1.4 <a href='#license' id='QQ2-1-6'>License</a></span>
+<br />   <span class='chapterToc'>2 <a href='#examples' id='QQ2-1-7'>Examples</a></span>
+<br />   <span class='sectionToc'>2.1 <a href='#fortran' id='QQ2-1-8'>Fortran</a></span>
+<br />   <span class='sectionToc'>2.2 <a href='#c' id='QQ2-1-9'>C</a></span>
+<br />   <span class='sectionToc'>2.3 <a href='#python' id='QQ2-1-10'>Python</a></span>
+<br />   <span class='chapterToc'>3 <a href='#man-pages' id='QQ2-1-11'>Man Pages</a></span>
+<br />   <span class='sectionToc'>3.1 <a href='#codata' id='QQ2-1-12'>codata</a></span>
+<br />   <span class='sectionToc'>3.2 <a href='#getversion' id='QQ2-1-13'>get_version</a></span>
+<br />   <span class='appendixToc'>A <a href='#changelog' id='QQ2-1-14'>Changelog</a></span>
+<br />   <span class='chapterToc'> <a href='#bibliography1'>Bibliography</a></span>
+   </div>
+                                                                                            
+                                                                                            
+<!-- l. 24 --><p class='indent'>
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+</p><!-- l. 2 --><p class='indent'>
+                                                                                            
+                                                                                            
+</p>
+   <h2 class='chapterHead' id='getting-starter'><span class='titlemark'>Chapter 1</span><br /><a id='x1-20001'></a>Getting Starter</h2>
+   
+   <h3 class='sectionHead' id='introduction'><span class='titlemark'>1.1   </span> <a id='x1-30001.1'></a>Introduction</h3>
+<!-- l. 3 --><p class='noindent'><span class='ectt-1095'>codata </span>is a Fortran library providing the fundamental physical constants according to <a href='https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants'>CODATA</a>. [<a id='x1-3001'></a><a id='page.3'></a><a href='00-main.html#X0-mohr2012'>1</a><a id='x1-3002'></a><a id='x1-3003'></a><a id='x1-3004'></a><a id='x1-3005'></a>–<a href='00-main.html#X0-mohr2025'>5</a>]. A C
+API allows usage from C, or can be used as a basis for other wrappers. Python wrapper allows easy usage
+from Python.
+</p><!-- l. 10 --><p class='indent'>   The latest codata constants were released in 2022 by the <a href='https://pml.nist.gov/cuu/Constants/'>NIST</a>. All values for the codata constants are
+provided as double precision reals in a derived type <span class='ectt-1095'>codata_constant_type</span>. The names are quite long and
+can be aliased with shorter names. A module level interface to_real is available for getting the constant value
+or uncertainty of a constant.
+</p><!-- l. 17 --><p class='indent'>   To use <span class='ectt-1095'>codata </span>within your <a href='https://github.com/fortran-lang/fpm'>fpm</a> project, add the following to your <span class='ectt-1095'>fpm.toml </span>file:
+                                                                                            
+                                                                                            
+</p>
+   <pre class='verbatim' id='verbatim-1'>
+        [dependencies]
+        codata = { git="https://github.com/MilanSkocic/codata.git" }
+    
+</pre>
+<!-- l. 24 --><p class='nopar'>
+</p><!-- l. 26 --><p class='indent'>   <span class='ecbx-1095'>Notes</span>:
+</p>
+     <ul class='itemize1'>
+     <li class='itemize'>The latest codata constants were integrated in the <a href='https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0'>stdlib</a>. The constants are implemented as
+     derived type which carries the name, the value, the uncertainty and the unit. This library will be
+     complementary to the constants defined in the stdlib by providing older values for the constants.
+     </li>
+     <li class='itemize'>If you only need sources for the codata constants that you can integrate directly in your sources
+     you may be interested by https://github.com/vmagnin/fundamental_constants.</li></ul>
+   
+   <h3 class='sectionHead' id='dependencies'><span class='titlemark'>1.2   </span> <a id='x1-40001.2'></a>Dependencies</h3>
+                                                                                            
+                                                                                            
+   <pre class='verbatim' id='verbatim-2'>
+        gfortran&gt;=10
+        fpm&gt;=0.8
+        stdlib&gt;=0.5
+        fypp&gt;=3.0
+    
+</pre>
+<!-- l. 47 --><p class='nopar'>
+   
+</p>
+   <h3 class='sectionHead' id='installation'><span class='titlemark'>1.3   </span> <a id='x1-50001.3'></a>Installation</h3>
+<!-- l. 51 --><p class='noindent'>A Makefile is provided, which uses <a href='https://fpm.fortran-lang.org'>fpm</a>, for building the library.
+</p>
+     <ul class='itemize1'>
+     <li class='itemize'>On windows, <a href='https://www.msys2.org'>msys2</a> needs to be installed. Add the msys2 binary (usually C:\msys64\usr\bin) to
+     the path in order to be able to use make.
+     </li>
+     <li class='itemize'>On Darwin, the <a href='https://formulae.brew.sh/formula/gcc'>gcc</a> toolchain needs to be installed.</li></ul>
+<!-- l. 63 --><p class='indent'>   Build: the configuration file will set all the environment variables necessary for the compilation
+                                                                                            
+                                                                                            
+</p>
+   <pre class='verbatim' id='verbatim-3'>
+        chmod +x configure.sh
+        ./configure.sh
+        make
+        make install
+        make uninstall
+    
+</pre>
+<!-- l. 72 --><p class='nopar'>
+   
+</p>
+   <h3 class='sectionHead' id='license'><span class='titlemark'>1.4   </span> <a id='x1-60001.4'></a>License</h3>
+<!-- l. 76 --><p class='noindent'>MIT
+                                                                                            
+                                                                                            
+</p>
+   <h2 class='chapterHead' id='examples'><span class='titlemark'>Chapter 2</span><br /><a id='x1-70002'></a>Examples</h2>
+   
+   <h3 class='sectionHead' id='fortran'><span class='titlemark'>2.1   </span> <a id='x1-80002.1'></a>Fortran</h3>
+<!-- l. 1 --><p class='noindent'>
+</p>
+   <pre class='fancyvrb' id='fancyvrb1'><a id='x1-8002r1'></a><span style='color:#3D7A7A;'><span class='ecit-1095'>! EXAMPLE IN FORTRAN</span></span> 
+<a id='x1-8004r2'></a><span style='color:#008000;'><span class='ectt-1095'>program </span></span><span class='ectt-1095'>example_in_f</span> 
+<a id='x1-8006r3'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>use </span></span><span class='ectt-1095'>iso_fortran_env</span> 
+<a id='x1-8008r4'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>use </span></span><span class='ectt-1095'>codata</span> 
+<a id='x1-8010r5'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>implicit none</span></span> 
+<a id='x1-8012r6'></a><span style='color:#008000;'>    </span> 
+<a id='x1-8014r7'></a><span style='color:#008000;'>    <span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>########## EXAMPLE IN FORTRAN ##########</span><span class='tctt-1095'>'</span></span> 
+<a id='x1-8016r8'></a><span style='color:#BABABA;'>    </span> 
+<a id='x1-8018r9'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'># VERSION</span><span class='tctt-1095'>'</span></span> 
+<a id='x1-8020r10'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#666666;'><span class='ectt-1095'>*</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='ectt-1095'>"version = "</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>get_version()</span> 
+<a id='x1-8022r11'></a><span style='color:#BABABA;'>    </span> 
+<a id='x1-8024r12'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'># CONSTANTS</span><span class='tctt-1095'>'</span></span> 
+<a id='x1-8026r13'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#666666;'><span class='ectt-1095'>*</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='ectt-1095'>"c = "</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'>  </span><span class='ectt-1095'>SPEED_OF_LIGHT_IN_VACUUM%</span><span style='color:#008000;'><span class='ectt-1095'>value</span></span> 
+<a id='x1-8028r14'></a><span style='color:#008000;'>    </span> 
+<a id='x1-8030r15'></a><span style='color:#008000;'>    <span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'># UNCERTAINTY</span><span class='tctt-1095'>'</span></span> 
+<a id='x1-8032r16'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#666666;'><span class='ectt-1095'>*</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='ectt-1095'>"u(c) = "</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>SPEED_OF_LIGHT_IN_VACUUM%uncertainty</span> 
+<a id='x1-8034r17'></a> 
+<a id='x1-8036r18'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'># OLDER VALUES</span><span class='tctt-1095'>'</span></span> 
+<a id='x1-8038r19'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>(A, F23.16)</span><span class='tctt-1095'>'</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2022(latest) = "</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>MOLAR_MASS_CONSTANT%</span><span style='color:#008000;'><span class='ectt-1095'>value</span></span> 
+<a id='x1-8040r20'></a><span style='color:#008000;'>    <span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>(A, F23.16)</span><span class='tctt-1095'>'</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2018 = "</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>MOLAR_MASS_CONSTANT_2018%</span><span style='color:#008000;'><span class='ectt-1095'>value</span></span> 
+<a id='x1-8042r21'></a><span style='color:#008000;'>    <span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>(A, F23.16)</span><span class='tctt-1095'>'</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2014 = "</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'>  </span><span class='ectt-1095'>MOLAR_MASS_CONSTANT_2014%</span><span style='color:#008000;'><span class='ectt-1095'>value</span></span> 
+<a id='x1-8044r22'></a><span style='color:#008000;'>    <span class='ectt-1095'>print</span></span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='tctt-1095'>'</span><span class='ectt-1095'>(A, F23.16)</span><span class='tctt-1095'>'</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2010 = "</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'>  </span><span class='ectt-1095'>MOLAR_MASS_CONSTANT_2010%</span><span style='color:#008000;'><span class='ectt-1095'>value</span></span> 
+<a id='x1-8046r23'></a> 
+<a id='x1-8048r24'></a> 
+<a id='x1-8050r25'></a><span style='color:#008000;'><span class='ectt-1095'>end program</span></span></pre>
+   
+   <h3 class='sectionHead' id='c'><span class='titlemark'>2.2   </span> <a id='x1-90002.2'></a>C</h3>
+<!-- l. 1 --><p class='noindent'>
+</p>
+   <pre class='fancyvrb' id='fancyvrb2'><a id='x1-9002r1'></a><span style='color:#3D7A7A;'><span class='ecit-1095'>/* EXAMPLE IN C */</span></span> 
+<a id='x1-9004r2'></a><span style='color:#9C6600;'><span class='ecit-1095'>#include</span></span><span style='color:#BABABA;'> </span><span style='color:#3D7A7A;'><span class='ecit-1095'>&lt;stdio.h&gt;</span></span> 
+<a id='x1-9006r3'></a><span style='color:#9C6600;'><span class='ecit-1095'>#include</span></span><span style='color:#BABABA;'> </span><span style='color:#3D7A7A;'><span class='ecit-1095'>"codata.h"</span></span> 
+<a id='x1-9008r4'></a> 
+<a id='x1-9010r5'></a><span style='color:#B00040;'><span class='ectt-1095'>int</span></span><span style='color:#BABABA;'> </span><span style='color:#0000FF;'><span class='ectt-1095'>main</span></span><span class='ectt-1095'>(</span><span style='color:#B00040;'><span class='ectt-1095'>void</span></span><span class='ectt-1095'>){</span> 
+<a id='x1-9012r6'></a><span style='color:#BABABA;'>    </span> 
+<a id='x1-9014r7'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"########## EXAMPLE IN C ##########</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>);</span> 
+<a id='x1-9016r8'></a> 
+<a id='x1-9018r9'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"%s</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BA2121;'><span class='ectt-1095'>"# VERSION"</span></span><span class='ectt-1095'>);</span> 
+<a id='x1-9020r10'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"version = %s</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>codata_get_version());</span> 
+<a id='x1-9022r11'></a><span style='color:#BABABA;'>    </span> 
+<a id='x1-9024r12'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"%s</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BA2121;'><span class='ectt-1095'>"# CONSTANTS"</span></span><span class='ectt-1095'>);</span> 
+<a id='x1-9026r13'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"c = %f</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>SPEED_OF_LIGHT_IN_VACUUM.value);</span> 
+<a id='x1-9028r14'></a><span style='color:#BABABA;'>    </span> 
+<a id='x1-9030r15'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"%s</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BA2121;'><span class='ectt-1095'>"# UNCERTAINTY"</span></span><span class='ectt-1095'>);</span> 
+<a id='x1-9032r16'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"u(c) = %f</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>SPEED_OF_LIGHT_IN_VACUUM.uncertainty);</span> 
+<a id='x1-9034r17'></a><span style='color:#BABABA;'>    </span> 
+<a id='x1-9036r18'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"%s</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BA2121;'><span class='ectt-1095'>"# OLDER VALUES"</span></span><span class='ectt-1095'>);</span> 
+<a id='x1-9038r19'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2022(latest) = %23.16f</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>MOLAR_MASS_CONSTANT.value);</span> 
+<a id='x1-9040r20'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2018 = %23.16f</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>MOLAR_MASS_CONSTANT_2018.value);</span> 
+<a id='x1-9042r21'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2014 = %23.16f</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>MOLAR_MASS_CONSTANT_2014.value);</span> 
+<a id='x1-9044r22'></a><span style='color:#BABABA;'>    </span><span class='ectt-1095'>printf(</span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2010 = %23.16f</span></span><span style='color:#AB5C1F;'><span class='ectt-1095'>\n</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>,</span><span style='color:#BABABA;'> </span><span class='ectt-1095'>MOLAR_MASS_CONSTANT_2010.value);</span> 
+<a id='x1-9046r23'></a> 
+<a id='x1-9048r24'></a><span style='color:#BABABA;'>    </span><span style='color:#008000;'><span class='ectt-1095'>return</span></span><span style='color:#BABABA;'> </span><span style='color:#666666;'><span class='ectt-1095'>0</span></span><span class='ectt-1095'>;</span> 
+<a id='x1-9050r25'></a><span class='ectt-1095'>}</span></pre>
+   
+   <h3 class='sectionHead' id='python'><span class='titlemark'>2.3   </span> <a id='x1-100002.3'></a>Python</h3>
+<!-- l. 1 --><p class='noindent'>
+</p>
+   <pre class='fancyvrb' id='fancyvrb3'><a id='x1-10002r1'></a><span style='color:#3D7A7A;'><span class='ecit-1095'>#!/usr/bin/env python</span></span> 
+<a id='x1-10004r2'></a><span style='color:#BA2121;'><span class='ectt-1095'>r</span></span><span style='color:#BA2121;'><span class='ecit-1095'>"""EXAMPLE in PYTHON"""</span></span> 
+<a id='x1-10006r3'></a><span style='color:#008000;'><span class='ectt-1095'>import</span></span><span style='color:#BABABA;'> </span><span style='color:#0000FF;'><span class='ectt-1095'>sys</span></span> 
+<a id='x1-10008r4'></a><span class='ectt-1095'>sys</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>path</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>insert(</span><span style='color:#666666;'><span class='ectt-1095'>0</span></span><span class='ectt-1095'>, </span><span style='color:#BA2121;'><span class='ectt-1095'>"../py/src/"</span></span><span class='ectt-1095'>)</span> 
+<a id='x1-10010r5'></a><span style='color:#008000;'><span class='ectt-1095'>import</span></span><span style='color:#BABABA;'> </span><span style='color:#0000FF;'><span class='ectt-1095'>pycodata</span></span> 
+<a id='x1-10012r6'></a> 
+<a id='x1-10014r7'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>"########## EXAMPLE IN PYTHON ##########"</span></span><span class='ectt-1095'>)</span> 
+<a id='x1-10016r8'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>"# VERSION"</span></span><span class='ectt-1095'>)</span> 
+<a id='x1-10018r9'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>f</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"version = </span></span><span style='color:#A35978;'><span class='ectt-1095'>{</span></span><span class='ectt-1095'>pycodata</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>__version__</span><span style='color:#A35978;'><span class='ectt-1095'>}</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"</span></span><span class='ectt-1095'>)</span> 
+<a id='x1-10020r10'></a> 
+<a id='x1-10022r11'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>"# Constants"</span></span><span class='ectt-1095'>)</span> 
+<a id='x1-10024r12'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>f</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"c ="</span></span><span class='ectt-1095'>, pycodata</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>SPEED_OF_LIGHT_IN_VACUUM[</span><span style='color:#BA2121;'><span class='ectt-1095'>"value"</span></span><span class='ectt-1095'>])</span> 
+<a id='x1-10026r13'></a> 
+<a id='x1-10028r14'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>"# UNCERTAINTY"</span></span><span class='ectt-1095'>)</span> 
+<a id='x1-10030r15'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>f</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"u(c) = "</span></span><span class='ectt-1095'>, pycodata</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>SPEED_OF_LIGHT_IN_VACUUM[</span><span style='color:#BA2121;'><span class='ectt-1095'>"uncertainty"</span></span><span class='ectt-1095'>])</span> 
+<a id='x1-10032r16'></a> 
+<a id='x1-10034r17'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>"# OLDER VALUES"</span></span><span class='ectt-1095'>)</span> 
+<a id='x1-10036r18'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>f</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2022 = "</span></span><span class='ectt-1095'>, pycodata</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>MOLAR_MASS_CONSTANT[</span><span style='color:#BA2121;'><span class='ectt-1095'>"value"</span></span><span class='ectt-1095'>])</span> 
+<a id='x1-10038r19'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>f</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2018 = "</span></span><span class='ectt-1095'>, pycodata</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>constants_2018</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>MOLAR_MASS_CONSTANT_2018[</span><span style='color:#BA2121;'><span class='ectt-1095'>"value"</span></span><span class='ectt-1095'>])</span> 
+<a id='x1-10040r20'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>f</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2014 = "</span></span><span class='ectt-1095'>, pycodata</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>constants_2014</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>MOLAR_MASS_CONSTANT_2014[</span><span style='color:#BA2121;'><span class='ectt-1095'>"value"</span></span><span class='ectt-1095'>])</span> 
+<a id='x1-10042r21'></a><span style='color:#008000;'><span class='ectt-1095'>print</span></span><span class='ectt-1095'>(</span><span style='color:#BA2121;'><span class='ectt-1095'>f</span></span><span style='color:#BA2121;'><span class='ectt-1095'>"Mu_2010 = "</span></span><span class='ectt-1095'>, pycodata</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>constants_2010</span><span style='color:#666666;'><span class='ectt-1095'>.</span></span><span class='ectt-1095'>MOLAR_MASS_CONSTANT_2010[</span><span style='color:#BA2121;'><span class='ectt-1095'>"value"</span></span><span class='ectt-1095'>])</span></pre>
+                                                                                            
+                                                                                            
+<!-- l. 28 --><p class='indent'>
+                                                                                            
+                                                                                            
+</p>
+   <h2 class='chapterHead' id='man-pages'><span class='titlemark'>Chapter 3</span><br /><a id='x1-110003'></a>Man Pages</h2>
+   
+   <h3 class='sectionHead' id='codata'><span class='titlemark'>3.1   </span> <a id='x1-120003.1'></a>codata</h3>
+<p><a id='dx1-12001'></a>
+<!-- l. 2 --></p><p class='noindent'>
+</p>
+   <pre class='fancyvrb' id='fancyvrb4'><a id='x1-12003r1'></a><span class='ectt-1095'>codata(3)                                          Library Functions Manual                                         codata(3)</span> 
+<a id='x1-12005r2'></a> 
+<a id='x1-12007r3'></a><span class='ectt-1095'>NAME</span> 
+<a id='x1-12009r4'></a>       <span class='ectt-1095'>codata - Fundamental physical constants.</span> 
+<a id='x1-12011r5'></a> 
+<a id='x1-12013r6'></a><span class='ectt-1095'>SYNOPSIS</span> 
+<a id='x1-12015r7'></a>         <span class='ectt-1095'>use codata (Fortran)</span> 
+<a id='x1-12017r8'></a>         <span class='ectt-1095'>#include "codata.h" (C)</span> 
+<a id='x1-12019r9'></a>         <span class='ectt-1095'>import pycodata (Python)</span> 
+<a id='x1-12021r10'></a> 
+<a id='x1-12023r11'></a><span class='ectt-1095'>DESCRIPTION</span> 
+<a id='x1-12025r12'></a>       <span class='ectt-1095'>codata  is  a  Fortran library providing the fundamental physical constants according to CODATA.  A C API allows usage</span> 
+<a id='x1-12027r13'></a>       <span class='ectt-1095'>from C, or can be used as a basis for other wrappers.  Python wrapper allows easy usage from Python.</span> 
+<a id='x1-12029r14'></a> 
+<a id='x1-12031r15'></a>       <span class='ectt-1095'>The latest codata constants were released in 2022.  All values for the codata constants are provided as double  preci-</span> 
+<a id='x1-12033r16'></a>       <span class='ectt-1095'>sion reals in a derived type codata_constant_type.  The names are quite long and can be aliased with shorter names.  A</span> 
+<a id='x1-12035r17'></a>       <span class='ectt-1095'>module level interface to_real is available for getting the constant value or uncertainty of a constant.</span> 
+<a id='x1-12037r18'></a> 
+<a id='x1-12039r19'></a>       <span class='ectt-1095'>The  latest  values  (2022) do not have the year as a suffix in their name.  Older values can be used and they feature</span> 
+<a id='x1-12041r20'></a>       <span class='ectt-1095'>the year as a suffix in their name.</span> 
+<a id='x1-12043r21'></a> 
+<a id='x1-12045r22'></a><span class='ectt-1095'>EXAMPLE</span> 
+<a id='x1-12047r23'></a>       <span class='ectt-1095'>Minimal example in Fortran.</span> 
+<a id='x1-12049r24'></a> 
+<a id='x1-12051r25'></a>               <span class='ectt-1095'>program example_in_f</span> 
+<a id='x1-12053r26'></a>               <span class='ectt-1095'>use iso_fortran_env</span> 
+<a id='x1-12055r27'></a>               <span class='ectt-1095'>use codata</span> 
+<a id='x1-12057r28'></a>               <span class='ectt-1095'>implicit none</span> 
+<a id='x1-12059r29'></a> 
+<a id='x1-12061r30'></a>               <span class='ectt-1095'>print </span><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span><span class='ectt-1095'>, </span><span class='tctt-1095'>'</span><span class='ectt-1095'>########## EXAMPLE IN FORTRAN ##########</span><span class='tctt-1095'>'</span> 
+<a id='x1-12063r31'></a> 
+<a id='x1-12065r32'></a>               <span class='ectt-1095'>print </span><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span><span class='ectt-1095'>, </span><span class='tctt-1095'>'</span><span class='ectt-1095'># VERSION</span><span class='tctt-1095'>'</span> 
+<a id='x1-12067r33'></a>               <span class='ectt-1095'>print *, "version = ", get_version()</span> 
+<a id='x1-12069r34'></a> 
+<a id='x1-12071r35'></a>               <span class='ectt-1095'>print </span><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span><span class='ectt-1095'>, </span><span class='tctt-1095'>'</span><span class='ectt-1095'># CONSTANTS</span><span class='tctt-1095'>'</span> 
+<a id='x1-12073r36'></a>               <span class='ectt-1095'>print *, "c = ",  SPEED_OF_LIGHT_IN_VACUUM%value</span> 
+<a id='x1-12075r37'></a> 
+<a id='x1-12077r38'></a>               <span class='ectt-1095'>print </span><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span><span class='ectt-1095'>, </span><span class='tctt-1095'>'</span><span class='ectt-1095'># UNCERTAINTY</span><span class='tctt-1095'>'</span> 
+<a id='x1-12079r39'></a>               <span class='ectt-1095'>print *, "u(c) = ", SPEED_OF_LIGHT_IN_VACUUM%uncertainty</span> 
+<a id='x1-12081r40'></a> 
+<a id='x1-12083r41'></a>               <span class='ectt-1095'>print </span><span class='tctt-1095'>'</span><span class='ectt-1095'>(A)</span><span class='tctt-1095'>'</span><span class='ectt-1095'>, </span><span class='tctt-1095'>'</span><span class='ectt-1095'># OLDER VALUES</span><span class='tctt-1095'>'</span> 
+<a id='x1-12085r42'></a>               <span class='ectt-1095'>print </span><span class='tctt-1095'>'</span><span class='ectt-1095'>(A, F23.16)</span><span class='tctt-1095'>'</span><span class='ectt-1095'>, "Mu_2022(latest) = ", MOLAR_MASS_CONSTANT%value</span> 
+<a id='x1-12087r43'></a>               <span class='ectt-1095'>print </span><span class='tctt-1095'>'</span><span class='ectt-1095'>(A, F23.16)</span><span class='tctt-1095'>'</span><span class='ectt-1095'>, "Mu_2018 = ", MOLAR_MASS_CONSTANT_2018%value</span> 
+<a id='x1-12089r44'></a>               <span class='ectt-1095'>print </span><span class='tctt-1095'>'</span><span class='ectt-1095'>(A, F23.16)</span><span class='tctt-1095'>'</span><span class='ectt-1095'>, "Mu_2014 = ",  MOLAR_MASS_CONSTANT_2014%value</span> 
+<a id='x1-12091r45'></a>               <span class='ectt-1095'>print </span><span class='tctt-1095'>'</span><span class='ectt-1095'>(A, F23.16)</span><span class='tctt-1095'>'</span><span class='ectt-1095'>, "Mu_2010 = ",  MOLAR_MASS_CONSTANT_2010%value</span> 
+<a id='x1-12093r46'></a>               <span class='ectt-1095'>end program</span> 
+<a id='x1-12095r47'></a> 
+<a id='x1-12097r48'></a>       <span class='ectt-1095'>Minimal example in C.</span> 
+<a id='x1-12099r49'></a> 
+<a id='x1-12101r50'></a>               <span class='ectt-1095'>#include &lt;stdio.h&gt;</span> 
+<a id='x1-12103r51'></a>               <span class='ectt-1095'>#include "codata.h"</span> 
+<a id='x1-12105r52'></a> 
+<a id='x1-12107r53'></a>               <span class='ectt-1095'>int main(void){</span> 
+<a id='x1-12109r54'></a> 
+<a id='x1-12111r55'></a>               <span class='ectt-1095'>printf("########## EXAMPLE IN C ##########0);</span> 
+<a id='x1-12113r56'></a> 
+<a id='x1-12115r57'></a>               <span class='ectt-1095'>printf("%s0,"# VERSION");</span> 
+<a id='x1-12117r58'></a>               <span class='ectt-1095'>printf("version = %s0, codata_get_version());</span> 
+<a id='x1-12119r59'></a> 
+<a id='x1-12121r60'></a>               <span class='ectt-1095'>printf("%s0,"# CONSTANTS");</span> 
+<a id='x1-12123r61'></a>               <span class='ectt-1095'>printf("c = %f0, SPEED_OF_LIGHT_IN_VACUUM.value);</span> 
+<a id='x1-12125r62'></a> 
+<a id='x1-12127r63'></a>               <span class='ectt-1095'>printf("%s0,"# UNCERTAINTY");</span> 
+<a id='x1-12129r64'></a>               <span class='ectt-1095'>printf("u(c) = %f0, SPEED_OF_LIGHT_IN_VACUUM.uncertainty);</span> 
+<a id='x1-12131r65'></a> 
+<a id='x1-12133r66'></a>               <span class='ectt-1095'>printf("%s0,"# OLDER VALUES");</span> 
+<a id='x1-12135r67'></a>               <span class='ectt-1095'>printf("Mu_2022(latest) = %23.16f0, MOLAR_MASS_CONSTANT.value);</span> 
+<a id='x1-12137r68'></a>               <span class='ectt-1095'>printf("Mu_2018 = %23.16f0, MOLAR_MASS_CONSTANT_2018.value);</span> 
+<a id='x1-12139r69'></a>               <span class='ectt-1095'>printf("Mu_2014 = %23.16f0, MOLAR_MASS_CONSTANT_2014.value);</span> 
+<a id='x1-12141r70'></a>               <span class='ectt-1095'>printf("Mu_2010 = %23.16f0, MOLAR_MASS_CONSTANT_2010.value);</span> 
+<a id='x1-12143r71'></a> 
+<a id='x1-12145r72'></a>               <span class='ectt-1095'>return 0;</span> 
+<a id='x1-12147r73'></a>               <span class='ectt-1095'>}</span> 
+<a id='x1-12149r74'></a> 
+<a id='x1-12151r75'></a>       <span class='ectt-1095'>Minimal example in Python</span> 
+<a id='x1-12153r76'></a> 
+<a id='x1-12155r77'></a>               <span class='ectt-1095'>r"""EXAMPLE in PYTHON"""</span> 
+<a id='x1-12157r78'></a>               <span class='ectt-1095'>import sys</span> 
+<a id='x1-12159r79'></a>               <span class='ectt-1095'>sys.path.insert(0, "../py/src/")</span> 
+<a id='x1-12161r80'></a>               <span class='ectt-1095'>import pycodata</span> 
+<a id='x1-12163r81'></a> 
+<a id='x1-12165r82'></a>               <span class='ectt-1095'>print("########## EXAMPLE IN PYTHON ##########")</span> 
+<a id='x1-12167r83'></a>               <span class='ectt-1095'>print("# VERSION")</span> 
+<a id='x1-12169r84'></a>               <span class='ectt-1095'>print(f"version = {pycodata.__version__}")</span> 
+<a id='x1-12171r85'></a> 
+<a id='x1-12173r86'></a>               <span class='ectt-1095'>print("# Constants")</span> 
+<a id='x1-12175r87'></a>               <span class='ectt-1095'>print(f"c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])</span> 
+<a id='x1-12177r88'></a> 
+<a id='x1-12179r89'></a>               <span class='ectt-1095'>print("# UNCERTAINTY")</span> 
+<a id='x1-12181r90'></a>               <span class='ectt-1095'>print(f"u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])</span> 
+<a id='x1-12183r91'></a> 
+<a id='x1-12185r92'></a>               <span class='ectt-1095'>print("# OLDER VALUES")</span> 
+<a id='x1-12187r93'></a>               <span class='ectt-1095'>print(f"Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])</span> 
+<a id='x1-12189r94'></a>               <span class='ectt-1095'>print(f"Mu_2018 = ", pycodata.constants_2018.MOLAR_MASS_CONSTANT_2018["value"])</span> 
+<a id='x1-12191r95'></a>               <span class='ectt-1095'>print(f"Mu_2014 = ", pycodata.constants_2014.MOLAR_MASS_CONSTANT_2014["value"])</span> 
+<a id='x1-12193r96'></a>               <span class='ectt-1095'>print(f"Mu_2010 = ", pycodata.constants_2010.MOLAR_MASS_CONSTANT_2010["value"])</span> 
+<a id='x1-12195r97'></a> 
+<a id='x1-12197r98'></a><span class='ectt-1095'>SEE ALSO</span> 
+<a id='x1-12199r99'></a>       <span class='ectt-1095'>List of constants:</span> 
+<a id='x1-12201r100'></a> 
+<a id='x1-12203r101'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ALPHA_PARTICLE_ELECTRON_MASS_RATIO</span> 
+<a id='x1-12205r102'></a> 
+<a id='x1-12207r103'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ALPHA_PARTICLE_MASS</span> 
+<a id='x1-12209r104'></a> 
+<a id='x1-12211r105'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT</span> 
+<a id='x1-12213r106'></a> 
+<a id='x1-12215r107'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-12217r108'></a> 
+<a id='x1-12219r109'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ALPHA_PARTICLE_MASS_IN_U</span> 
+<a id='x1-12221r110'></a> 
+<a id='x1-12223r111'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ALPHA_PARTICLE_MOLAR_MASS</span> 
+<a id='x1-12225r112'></a> 
+<a id='x1-12227r113'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ALPHA_PARTICLE_PROTON_MASS_RATIO</span> 
+<a id='x1-12229r114'></a> 
+<a id='x1-12231r115'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS</span> 
+<a id='x1-12233r116'></a> 
+<a id='x1-12235r117'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ALPHA_PARTICLE_RMS_CHARGE_RADIUS</span> 
+<a id='x1-12237r118'></a> 
+<a id='x1-12239r119'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ANGSTROM_STAR</span> 
+<a id='x1-12241r120'></a> 
+<a id='x1-12243r121'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_CONSTANT</span> 
+<a id='x1-12245r122'></a> 
+<a id='x1-12247r123'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT</span> 
+<a id='x1-12249r124'></a> 
+<a id='x1-12251r125'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-12253r126'></a> 
+<a id='x1-12255r127'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP</span> 
+<a id='x1-12257r128'></a> 
+<a id='x1-12259r129'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP</span> 
+<a id='x1-12261r130'></a> 
+<a id='x1-12263r131'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP</span> 
+<a id='x1-12265r132'></a> 
+<a id='x1-12267r133'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP</span> 
+<a id='x1-12269r134'></a> 
+<a id='x1-12271r135'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP</span> 
+<a id='x1-12273r136'></a> 
+<a id='x1-12275r137'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP</span> 
+<a id='x1-12277r138'></a> 
+<a id='x1-12279r139'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP</span> 
+<a id='x1-12281r140'></a> 
+<a id='x1-12283r141'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY</span> 
+<a id='x1-12285r142'></a> 
+<a id='x1-12287r143'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY</span> 
+<a id='x1-12289r144'></a> 
+<a id='x1-12291r145'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_ACTION</span> 
+<a id='x1-12293r146'></a> 
+<a id='x1-12295r147'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_CHARGE</span> 
+<a id='x1-12297r148'></a> 
+<a id='x1-12299r149'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_CHARGE_DENSITY</span> 
+<a id='x1-12301r150'></a> 
+<a id='x1-12303r151'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_CURRENT</span> 
+<a id='x1-12305r152'></a> 
+<a id='x1-12307r153'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM</span> 
+<a id='x1-12309r154'></a> 
+<a id='x1-12311r155'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_ELECTRIC_FIELD</span> 
+<a id='x1-12313r156'></a> 
+<a id='x1-12315r157'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT</span> 
+<a id='x1-12317r158'></a> 
+<a id='x1-12319r159'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY</span> 
+<a id='x1-12321r160'></a> 
+<a id='x1-12323r161'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL</span> 
+<a id='x1-12325r162'></a> 
+<a id='x1-12327r163'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM</span> 
+<a id='x1-12329r164'></a> 
+<a id='x1-12331r165'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_ENERGY</span> 
+<a id='x1-12333r166'></a> 
+<a id='x1-12335r167'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_FORCE</span> 
+<a id='x1-12337r168'></a> 
+<a id='x1-12339r169'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_LENGTH</span> 
+<a id='x1-12341r170'></a> 
+<a id='x1-12343r171'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_MAG_DIPOLE_MOM</span> 
+<a id='x1-12345r172'></a> 
+<a id='x1-12347r173'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_MAG_FLUX_DENSITY</span> 
+<a id='x1-12349r174'></a> 
+<a id='x1-12351r175'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_MAGNETIZABILITY</span> 
+<a id='x1-12353r176'></a> 
+<a id='x1-12355r177'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_MASS</span> 
+<a id='x1-12357r178'></a> 
+<a id='x1-12359r179'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_MOMENTUM</span> 
+<a id='x1-12361r180'></a> 
+<a id='x1-12363r181'></a>              <span class='tctt-1095'>•  </span><span class='ectt-1095'>ATOMIC_UNIT_OF_PERMITTIVITY</span> 
+<a id='x1-12365r182'></a> 
+<a id='x1-12367r183'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ATOMIC_UNIT_OF_TIME</span> 
+<a id='x1-12369r184'></a> 
+<a id='x1-12371r185'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ATOMIC_UNIT_OF_VELOCITY</span> 
+<a id='x1-12373r186'></a> 
+<a id='x1-12375r187'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>AVOGADRO_CONSTANT</span> 
+<a id='x1-12377r188'></a> 
+<a id='x1-12379r189'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOHR_MAGNETON</span> 
+<a id='x1-12381r190'></a> 
+<a id='x1-12383r191'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOHR_MAGNETON_IN_EV_T</span> 
+<a id='x1-12385r192'></a> 
+<a id='x1-12387r193'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOHR_MAGNETON_IN_HZ_T</span> 
+<a id='x1-12389r194'></a> 
+<a id='x1-12391r195'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA</span> 
+<a id='x1-12393r196'></a> 
+<a id='x1-12395r197'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOHR_MAGNETON_IN_K_T</span> 
+<a id='x1-12397r198'></a> 
+<a id='x1-12399r199'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOHR_RADIUS</span> 
+<a id='x1-12401r200'></a> 
+<a id='x1-12403r201'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOLTZMANN_CONSTANT</span> 
+<a id='x1-12405r202'></a> 
+<a id='x1-12407r203'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOLTZMANN_CONSTANT_IN_EV_K</span> 
+<a id='x1-12409r204'></a> 
+<a id='x1-12411r205'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOLTZMANN_CONSTANT_IN_HZ_K</span> 
+<a id='x1-12413r206'></a> 
+<a id='x1-12415r207'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN</span> 
+<a id='x1-12417r208'></a> 
+<a id='x1-12419r209'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CHARACTERISTIC_IMPEDANCE_OF_VACUUM</span> 
+<a id='x1-12421r210'></a> 
+<a id='x1-12423r211'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CLASSICAL_ELECTRON_RADIUS</span> 
+<a id='x1-12425r212'></a> 
+<a id='x1-12427r213'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>COMPTON_WAVELENGTH</span> 
+<a id='x1-12429r214'></a> 
+<a id='x1-12431r215'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONDUCTANCE_QUANTUM</span> 
+<a id='x1-12433r216'></a> 
+<a id='x1-12435r217'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONVENTIONAL_VALUE_OF_AMPERE_90</span> 
+<a id='x1-12437r218'></a> 
+<a id='x1-12439r219'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONVENTIONAL_VALUE_OF_COULOMB_90</span> 
+<a id='x1-12441r220'></a> 
+<a id='x1-12443r221'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONVENTIONAL_VALUE_OF_FARAD_90</span> 
+<a id='x1-12445r222'></a> 
+<a id='x1-12447r223'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONVENTIONAL_VALUE_OF_HENRY_90</span> 
+<a id='x1-12449r224'></a> 
+<a id='x1-12451r225'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT</span> 
+<a id='x1-12453r226'></a> 
+<a id='x1-12455r227'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONVENTIONAL_VALUE_OF_OHM_90</span> 
+<a id='x1-12457r228'></a> 
+<a id='x1-12459r229'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONVENTIONAL_VALUE_OF_VOLT_90</span> 
+<a id='x1-12461r230'></a> 
+<a id='x1-12463r231'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT</span> 
+<a id='x1-12465r232'></a> 
+<a id='x1-12467r233'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>CONVENTIONAL_VALUE_OF_WATT_90</span> 
+<a id='x1-12469r234'></a> 
+<a id='x1-12471r235'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>COPPER_X_UNIT</span> 
+<a id='x1-12473r236'></a> 
+<a id='x1-12475r237'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_ELECTRON_MAG_MOM_RATIO</span> 
+<a id='x1-12477r238'></a> 
+<a id='x1-12479r239'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_ELECTRON_MASS_RATIO</span> 
+<a id='x1-12481r240'></a> 
+<a id='x1-12483r241'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_G_FACTOR</span> 
+<a id='x1-12485r242'></a> 
+<a id='x1-12487r243'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_MAG_MOM</span> 
+<a id='x1-12489r244'></a> 
+<a id='x1-12491r245'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</span> 
+<a id='x1-12493r246'></a> 
+<a id='x1-12495r247'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</span> 
+<a id='x1-12497r248'></a> 
+<a id='x1-12499r249'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_MASS</span> 
+<a id='x1-12501r250'></a> 
+<a id='x1-12503r251'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_MASS_ENERGY_EQUIVALENT</span> 
+<a id='x1-12505r252'></a> 
+<a id='x1-12507r253'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-12509r254'></a> 
+<a id='x1-12511r255'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_MASS_IN_U</span> 
+<a id='x1-12513r256'></a> 
+<a id='x1-12515r257'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_MOLAR_MASS</span> 
+<a id='x1-12517r258'></a> 
+<a id='x1-12519r259'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_NEUTRON_MAG_MOM_RATIO</span> 
+<a id='x1-12521r260'></a> 
+<a id='x1-12523r261'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_PROTON_MAG_MOM_RATIO</span> 
+<a id='x1-12525r262'></a> 
+<a id='x1-12527r263'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_PROTON_MASS_RATIO</span> 
+<a id='x1-12529r264'></a> 
+<a id='x1-12531r265'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_RELATIVE_ATOMIC_MASS</span> 
+<a id='x1-12533r266'></a> 
+<a id='x1-12535r267'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>DEUTERON_RMS_CHARGE_RADIUS</span> 
+<a id='x1-12537r268'></a> 
+<a id='x1-12539r269'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_CHARGE_TO_MASS_QUOTIENT</span> 
+<a id='x1-12541r270'></a> 
+<a id='x1-12543r271'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_DEUTERON_MAG_MOM_RATIO</span> 
+<a id='x1-12545r272'></a> 
+<a id='x1-12547r273'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_DEUTERON_MASS_RATIO</span> 
+<a id='x1-12549r274'></a> 
+<a id='x1-12551r275'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_G_FACTOR</span> 
+<a id='x1-12553r276'></a> 
+<a id='x1-12555r277'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_GYROMAG_RATIO</span> 
+<a id='x1-12557r278'></a> 
+<a id='x1-12559r279'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_GYROMAG_RATIO_IN_MHZ_T</span> 
+<a id='x1-12561r280'></a> 
+<a id='x1-12563r281'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_HELION_MASS_RATIO</span> 
+<a id='x1-12565r282'></a> 
+<a id='x1-12567r283'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MAG_MOM</span> 
+<a id='x1-12569r284'></a> 
+<a id='x1-12571r285'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MAG_MOM_ANOMALY</span> 
+<a id='x1-12573r286'></a> 
+<a id='x1-12575r287'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</span> 
+<a id='x1-12577r288'></a> 
+<a id='x1-12579r289'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</span> 
+<a id='x1-12581r290'></a> 
+<a id='x1-12583r291'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MASS</span> 
+<a id='x1-12585r292'></a> 
+<a id='x1-12587r293'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MASS_ENERGY_EQUIVALENT</span> 
+<a id='x1-12589r294'></a> 
+<a id='x1-12591r295'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-12593r296'></a> 
+<a id='x1-12595r297'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MASS_IN_U</span> 
+<a id='x1-12597r298'></a> 
+<a id='x1-12599r299'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MOLAR_MASS</span> 
+<a id='x1-12601r300'></a> 
+<a id='x1-12603r301'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MUON_MAG_MOM_RATIO</span> 
+<a id='x1-12605r302'></a> 
+<a id='x1-12607r303'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_MUON_MASS_RATIO</span> 
+<a id='x1-12609r304'></a> 
+<a id='x1-12611r305'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_NEUTRON_MAG_MOM_RATIO</span> 
+<a id='x1-12613r306'></a> 
+<a id='x1-12615r307'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_NEUTRON_MASS_RATIO</span> 
+<a id='x1-12617r308'></a> 
+<a id='x1-12619r309'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_PROTON_MAG_MOM_RATIO</span> 
+<a id='x1-12621r310'></a> 
+<a id='x1-12623r311'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_PROTON_MASS_RATIO</span> 
+<a id='x1-12625r312'></a> 
+<a id='x1-12627r313'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_RELATIVE_ATOMIC_MASS</span> 
+<a id='x1-12629r314'></a> 
+<a id='x1-12631r315'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_TAU_MASS_RATIO</span> 
+<a id='x1-12633r316'></a> 
+<a id='x1-12635r317'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO</span> 
+<a id='x1-12637r318'></a> 
+<a id='x1-12639r319'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO</span> 
+<a id='x1-12641r320'></a> 
+<a id='x1-12643r321'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO</span> 
+<a id='x1-12645r322'></a> 
+<a id='x1-12647r323'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_TRITON_MASS_RATIO</span> 
+<a id='x1-12649r324'></a> 
+<a id='x1-12651r325'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_VOLT</span> 
+<a id='x1-12653r326'></a> 
+<a id='x1-12655r327'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP</span> 
+<a id='x1-12657r328'></a> 
+<a id='x1-12659r329'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_VOLT_HARTREE_RELATIONSHIP</span> 
+<a id='x1-12661r330'></a> 
+<a id='x1-12663r331'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_VOLT_HERTZ_RELATIONSHIP</span> 
+<a id='x1-12665r332'></a> 
+<a id='x1-12667r333'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP</span> 
+<a id='x1-12669r334'></a> 
+<a id='x1-12671r335'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_VOLT_JOULE_RELATIONSHIP</span> 
+<a id='x1-12673r336'></a> 
+<a id='x1-12675r337'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_VOLT_KELVIN_RELATIONSHIP</span> 
+<a id='x1-12677r338'></a> 
+<a id='x1-12679r339'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELECTRON_VOLT_KILOGRAM_RELATIONSHIP</span> 
+<a id='x1-12681r340'></a> 
+<a id='x1-12683r341'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELEMENTARY_CHARGE</span> 
+<a id='x1-12685r342'></a> 
+<a id='x1-12687r343'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>ELEMENTARY_CHARGE_OVER_H_BAR</span> 
+<a id='x1-12689r344'></a> 
+<a id='x1-12691r345'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>FARADAY_CONSTANT</span> 
+<a id='x1-12693r346'></a> 
+<a id='x1-12695r347'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>FERMI_COUPLING_CONSTANT</span> 
+<a id='x1-12697r348'></a> 
+<a id='x1-12699r349'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>FINE_STRUCTURE_CONSTANT</span> 
+<a id='x1-12701r350'></a> 
+<a id='x1-12703r351'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>FIRST_RADIATION_CONSTANT</span> 
+<a id='x1-12705r352'></a> 
+<a id='x1-12707r353'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE</span> 
+<a id='x1-12709r354'></a> 
+<a id='x1-12711r355'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP</span> 
+<a id='x1-12713r356'></a> 
+<a id='x1-12715r357'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HARTREE_ELECTRON_VOLT_RELATIONSHIP</span> 
+<a id='x1-12717r358'></a> 
+<a id='x1-12719r359'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HARTREE_ENERGY</span> 
+<a id='x1-12721r360'></a> 
+<a id='x1-12723r361'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HARTREE_ENERGY_IN_EV</span> 
+<a id='x1-12725r362'></a> 
+<a id='x1-12727r363'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HARTREE_HERTZ_RELATIONSHIP</span> 
+<a id='x1-12729r364'></a> 
+<a id='x1-12731r365'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HARTREE_INVERSE_METER_RELATIONSHIP</span> 
+<a id='x1-12733r366'></a> 
+<a id='x1-12735r367'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HARTREE_JOULE_RELATIONSHIP</span> 
+<a id='x1-12737r368'></a> 
+<a id='x1-12739r369'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HARTREE_KELVIN_RELATIONSHIP</span> 
+<a id='x1-12741r370'></a> 
+<a id='x1-12743r371'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HARTREE_KILOGRAM_RELATIONSHIP</span> 
+<a id='x1-12745r372'></a> 
+<a id='x1-12747r373'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_ELECTRON_MASS_RATIO</span> 
+<a id='x1-12749r374'></a> 
+<a id='x1-12751r375'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_G_FACTOR</span> 
+<a id='x1-12753r376'></a> 
+<a id='x1-12755r377'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_MAG_MOM</span> 
+<a id='x1-12757r378'></a> 
+<a id='x1-12759r379'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO</span> 
+<a id='x1-12761r380'></a> 
+<a id='x1-12763r381'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</span> 
+<a id='x1-12765r382'></a> 
+<a id='x1-12767r383'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_MASS</span> 
+<a id='x1-12769r384'></a> 
+<a id='x1-12771r385'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_MASS_ENERGY_EQUIVALENT</span> 
+<a id='x1-12773r386'></a> 
+<a id='x1-12775r387'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_MASS_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-12777r388'></a> 
+<a id='x1-12779r389'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_MASS_IN_U</span> 
+<a id='x1-12781r390'></a> 
+<a id='x1-12783r391'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_MOLAR_MASS</span> 
+<a id='x1-12785r392'></a> 
+<a id='x1-12787r393'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_PROTON_MASS_RATIO</span> 
+<a id='x1-12789r394'></a> 
+<a id='x1-12791r395'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_RELATIVE_ATOMIC_MASS</span> 
+<a id='x1-12793r396'></a> 
+<a id='x1-12795r397'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HELION_SHIELDING_SHIFT</span> 
+<a id='x1-12797r398'></a> 
+<a id='x1-12799r399'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP</span> 
+<a id='x1-12801r400'></a> 
+<a id='x1-12803r401'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HERTZ_ELECTRON_VOLT_RELATIONSHIP</span> 
+<a id='x1-12805r402'></a> 
+<a id='x1-12807r403'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HERTZ_HARTREE_RELATIONSHIP</span> 
+<a id='x1-12809r404'></a> 
+<a id='x1-12811r405'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HERTZ_INVERSE_METER_RELATIONSHIP</span> 
+<a id='x1-12813r406'></a> 
+<a id='x1-12815r407'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HERTZ_JOULE_RELATIONSHIP</span> 
+<a id='x1-12817r408'></a> 
+<a id='x1-12819r409'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HERTZ_KELVIN_RELATIONSHIP</span> 
+<a id='x1-12821r410'></a> 
+<a id='x1-12823r411'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HERTZ_KILOGRAM_RELATIONSHIP</span> 
+<a id='x1-12825r412'></a> 
+<a id='x1-12827r413'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133</span> 
+<a id='x1-12829r414'></a> 
+<a id='x1-12831r415'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>INVERSE_FINE_STRUCTURE_CONSTANT</span> 
+<a id='x1-12833r416'></a> 
+<a id='x1-12835r417'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP</span> 
+<a id='x1-12837r418'></a> 
+<a id='x1-12839r419'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP</span> 
+<a id='x1-12841r420'></a> 
+<a id='x1-12843r421'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>INVERSE_METER_HARTREE_RELATIONSHIP</span> 
+<a id='x1-12845r422'></a> 
+<a id='x1-12847r423'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>INVERSE_METER_HERTZ_RELATIONSHIP</span> 
+<a id='x1-12849r424'></a> 
+<a id='x1-12851r425'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>INVERSE_METER_JOULE_RELATIONSHIP</span> 
+<a id='x1-12853r426'></a> 
+<a id='x1-12855r427'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>INVERSE_METER_KELVIN_RELATIONSHIP</span> 
+<a id='x1-12857r428'></a> 
+<a id='x1-12859r429'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>INVERSE_METER_KILOGRAM_RELATIONSHIP</span> 
+<a id='x1-12861r430'></a> 
+<a id='x1-12863r431'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>INVERSE_OF_CONDUCTANCE_QUANTUM</span> 
+<a id='x1-12865r432'></a> 
+<a id='x1-12867r433'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>JOSEPHSON_CONSTANT</span> 
+<a id='x1-12869r434'></a> 
+<a id='x1-12871r435'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP</span> 
+<a id='x1-12873r436'></a> 
+<a id='x1-12875r437'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>JOULE_ELECTRON_VOLT_RELATIONSHIP</span> 
+<a id='x1-12877r438'></a> 
+<a id='x1-12879r439'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>JOULE_HARTREE_RELATIONSHIP</span> 
+<a id='x1-12881r440'></a> 
+<a id='x1-12883r441'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>JOULE_HERTZ_RELATIONSHIP</span> 
+<a id='x1-12885r442'></a> 
+<a id='x1-12887r443'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>JOULE_INVERSE_METER_RELATIONSHIP</span> 
+<a id='x1-12889r444'></a> 
+<a id='x1-12891r445'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>JOULE_KELVIN_RELATIONSHIP</span> 
+<a id='x1-12893r446'></a> 
+<a id='x1-12895r447'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>JOULE_KILOGRAM_RELATIONSHIP</span> 
+<a id='x1-12897r448'></a> 
+<a id='x1-12899r449'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP</span> 
+<a id='x1-12901r450'></a> 
+<a id='x1-12903r451'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KELVIN_ELECTRON_VOLT_RELATIONSHIP</span> 
+<a id='x1-12905r452'></a> 
+<a id='x1-12907r453'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KELVIN_HARTREE_RELATIONSHIP</span> 
+<a id='x1-12909r454'></a> 
+<a id='x1-12911r455'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KELVIN_HERTZ_RELATIONSHIP</span> 
+<a id='x1-12913r456'></a> 
+<a id='x1-12915r457'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KELVIN_INVERSE_METER_RELATIONSHIP</span> 
+<a id='x1-12917r458'></a> 
+<a id='x1-12919r459'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KELVIN_JOULE_RELATIONSHIP</span> 
+<a id='x1-12921r460'></a> 
+<a id='x1-12923r461'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KELVIN_KILOGRAM_RELATIONSHIP</span> 
+<a id='x1-12925r462'></a> 
+<a id='x1-12927r463'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP</span> 
+<a id='x1-12929r464'></a> 
+<a id='x1-12931r465'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KILOGRAM_ELECTRON_VOLT_RELATIONSHIP</span> 
+<a id='x1-12933r466'></a> 
+<a id='x1-12935r467'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KILOGRAM_HARTREE_RELATIONSHIP</span> 
+<a id='x1-12937r468'></a> 
+<a id='x1-12939r469'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KILOGRAM_HERTZ_RELATIONSHIP</span> 
+<a id='x1-12941r470'></a> 
+<a id='x1-12943r471'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KILOGRAM_INVERSE_METER_RELATIONSHIP</span> 
+<a id='x1-12945r472'></a> 
+<a id='x1-12947r473'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KILOGRAM_JOULE_RELATIONSHIP</span> 
+<a id='x1-12949r474'></a> 
+<a id='x1-12951r475'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>KILOGRAM_KELVIN_RELATIONSHIP</span> 
+<a id='x1-12953r476'></a> 
+<a id='x1-12955r477'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>LATTICE_PARAMETER_OF_SILICON</span> 
+<a id='x1-12957r478'></a> 
+<a id='x1-12959r479'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>LATTICE_SPACING_OF_IDEAL_SI_220</span> 
+<a id='x1-12961r480'></a> 
+<a id='x1-12963r481'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>LOSCHMIDT_CONSTANT_273_15_K_100_KPA</span> 
+<a id='x1-12965r482'></a> 
+<a id='x1-12967r483'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA</span> 
+<a id='x1-12969r484'></a> 
+<a id='x1-12971r485'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>LUMINOUS_EFFICACY</span> 
+<a id='x1-12973r486'></a> 
+<a id='x1-12975r487'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MAG_FLUX_QUANTUM</span> 
+<a id='x1-12977r488'></a> 
+<a id='x1-12979r489'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MOLAR_GAS_CONSTANT</span> 
+<a id='x1-12981r490'></a> 
+<a id='x1-12983r491'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MOLAR_MASS_CONSTANT</span> 
+<a id='x1-12985r492'></a> 
+<a id='x1-12987r493'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MOLAR_MASS_OF_CARBON_12</span> 
+<a id='x1-12989r494'></a> 
+<a id='x1-12991r495'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MOLAR_PLANCK_CONSTANT</span> 
+<a id='x1-12993r496'></a> 
+<a id='x1-12995r497'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA</span> 
+<a id='x1-12997r498'></a> 
+<a id='x1-12999r499'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA</span> 
+<a id='x1-13001r500'></a> 
+<a id='x1-13003r501'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MOLAR_VOLUME_OF_SILICON</span> 
+<a id='x1-13005r502'></a> 
+<a id='x1-13007r503'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MOLYBDENUM_X_UNIT</span> 
+<a id='x1-13009r504'></a> 
+<a id='x1-13011r505'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_COMPTON_WAVELENGTH</span> 
+<a id='x1-13013r506'></a> 
+<a id='x1-13015r507'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_ELECTRON_MASS_RATIO</span> 
+<a id='x1-13017r508'></a> 
+<a id='x1-13019r509'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_G_FACTOR</span> 
+<a id='x1-13021r510'></a> 
+<a id='x1-13023r511'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_MAG_MOM</span> 
+<a id='x1-13025r512'></a> 
+<a id='x1-13027r513'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_MAG_MOM_ANOMALY</span> 
+<a id='x1-13029r514'></a> 
+<a id='x1-13031r515'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</span> 
+<a id='x1-13033r516'></a> 
+<a id='x1-13035r517'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</span> 
+<a id='x1-13037r518'></a> 
+<a id='x1-13039r519'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_MASS</span> 
+<a id='x1-13041r520'></a> 
+<a id='x1-13043r521'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_MASS_ENERGY_EQUIVALENT</span> 
+<a id='x1-13045r522'></a> 
+<a id='x1-13047r523'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_MASS_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-13049r524'></a> 
+<a id='x1-13051r525'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_MASS_IN_U</span> 
+<a id='x1-13053r526'></a> 
+<a id='x1-13055r527'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_MOLAR_MASS</span> 
+<a id='x1-13057r528'></a> 
+<a id='x1-13059r529'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_NEUTRON_MASS_RATIO</span> 
+<a id='x1-13061r530'></a> 
+<a id='x1-13063r531'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_PROTON_MAG_MOM_RATIO</span> 
+<a id='x1-13065r532'></a> 
+<a id='x1-13067r533'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_PROTON_MASS_RATIO</span> 
+<a id='x1-13069r534'></a> 
+<a id='x1-13071r535'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>MUON_TAU_MASS_RATIO</span> 
+<a id='x1-13073r536'></a> 
+<a id='x1-13075r537'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_ACTION</span> 
+<a id='x1-13077r538'></a> 
+<a id='x1-13079r539'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_ACTION_IN_EV_S</span> 
+<a id='x1-13081r540'></a> 
+<a id='x1-13083r541'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_ENERGY</span> 
+<a id='x1-13085r542'></a> 
+<a id='x1-13087r543'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_ENERGY_IN_MEV</span> 
+<a id='x1-13089r544'></a> 
+<a id='x1-13091r545'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_LENGTH</span> 
+<a id='x1-13093r546'></a> 
+<a id='x1-13095r547'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_MASS</span> 
+<a id='x1-13097r548'></a> 
+<a id='x1-13099r549'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_MOMENTUM</span> 
+<a id='x1-13101r550'></a> 
+<a id='x1-13103r551'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C</span> 
+<a id='x1-13105r552'></a> 
+<a id='x1-13107r553'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_TIME</span> 
+<a id='x1-13109r554'></a> 
+<a id='x1-13111r555'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NATURAL_UNIT_OF_VELOCITY</span> 
+<a id='x1-13113r556'></a> 
+<a id='x1-13115r557'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_COMPTON_WAVELENGTH</span> 
+<a id='x1-13117r558'></a> 
+<a id='x1-13119r559'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_ELECTRON_MAG_MOM_RATIO</span> 
+<a id='x1-13121r560'></a> 
+<a id='x1-13123r561'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_ELECTRON_MASS_RATIO</span> 
+<a id='x1-13125r562'></a> 
+<a id='x1-13127r563'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_G_FACTOR</span> 
+<a id='x1-13129r564'></a> 
+<a id='x1-13131r565'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_GYROMAG_RATIO</span> 
+<a id='x1-13133r566'></a> 
+<a id='x1-13135r567'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_GYROMAG_RATIO_IN_MHZ_T</span> 
+<a id='x1-13137r568'></a> 
+<a id='x1-13139r569'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_MAG_MOM</span> 
+<a id='x1-13141r570'></a> 
+<a id='x1-13143r571'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</span> 
+<a id='x1-13145r572'></a> 
+<a id='x1-13147r573'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</span> 
+<a id='x1-13149r574'></a> 
+<a id='x1-13151r575'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_MASS</span> 
+<a id='x1-13153r576'></a> 
+<a id='x1-13155r577'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_MASS_ENERGY_EQUIVALENT</span> 
+<a id='x1-13157r578'></a> 
+<a id='x1-13159r579'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-13161r580'></a> 
+<a id='x1-13163r581'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_MASS_IN_U</span> 
+<a id='x1-13165r582'></a> 
+<a id='x1-13167r583'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_MOLAR_MASS</span> 
+<a id='x1-13169r584'></a> 
+<a id='x1-13171r585'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_MUON_MASS_RATIO</span> 
+<a id='x1-13173r586'></a> 
+<a id='x1-13175r587'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_PROTON_MAG_MOM_RATIO</span> 
+<a id='x1-13177r588'></a> 
+<a id='x1-13179r589'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_PROTON_MASS_DIFFERENCE</span> 
+<a id='x1-13181r590'></a> 
+<a id='x1-13183r591'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT</span> 
+<a id='x1-13185r592'></a> 
+<a id='x1-13187r593'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-13189r594'></a> 
+<a id='x1-13191r595'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_PROTON_MASS_DIFFERENCE_IN_U</span> 
+<a id='x1-13193r596'></a> 
+<a id='x1-13195r597'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_PROTON_MASS_RATIO</span> 
+<a id='x1-13197r598'></a> 
+<a id='x1-13199r599'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_RELATIVE_ATOMIC_MASS</span> 
+<a id='x1-13201r600'></a> 
+<a id='x1-13203r601'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_TAU_MASS_RATIO</span> 
+<a id='x1-13205r602'></a> 
+<a id='x1-13207r603'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO</span> 
+<a id='x1-13209r604'></a> 
+<a id='x1-13211r605'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEWTONIAN_CONSTANT_OF_GRAVITATION</span> 
+<a id='x1-13213r606'></a> 
+<a id='x1-13215r607'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C</span> 
+<a id='x1-13217r608'></a> 
+<a id='x1-13219r609'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NUCLEAR_MAGNETON</span> 
+<a id='x1-13221r610'></a> 
+<a id='x1-13223r611'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NUCLEAR_MAGNETON_IN_EV_T</span> 
+<a id='x1-13225r612'></a> 
+<a id='x1-13227r613'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA</span> 
+<a id='x1-13229r614'></a> 
+<a id='x1-13231r615'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NUCLEAR_MAGNETON_IN_K_T</span> 
+<a id='x1-13233r616'></a> 
+<a id='x1-13235r617'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>NUCLEAR_MAGNETON_IN_MHZ_T</span> 
+<a id='x1-13237r618'></a> 
+<a id='x1-13239r619'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PLANCK_CONSTANT</span> 
+<a id='x1-13241r620'></a> 
+<a id='x1-13243r621'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PLANCK_CONSTANT_IN_EV_HZ</span> 
+<a id='x1-13245r622'></a> 
+<a id='x1-13247r623'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PLANCK_LENGTH</span> 
+<a id='x1-13249r624'></a> 
+<a id='x1-13251r625'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PLANCK_MASS</span> 
+<a id='x1-13253r626'></a> 
+<a id='x1-13255r627'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV</span> 
+<a id='x1-13257r628'></a> 
+<a id='x1-13259r629'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PLANCK_TEMPERATURE</span> 
+<a id='x1-13261r630'></a> 
+<a id='x1-13263r631'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PLANCK_TIME</span> 
+<a id='x1-13265r632'></a> 
+<a id='x1-13267r633'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_CHARGE_TO_MASS_QUOTIENT</span> 
+<a id='x1-13269r634'></a> 
+<a id='x1-13271r635'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_COMPTON_WAVELENGTH</span> 
+<a id='x1-13273r636'></a> 
+<a id='x1-13275r637'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_ELECTRON_MASS_RATIO</span> 
+<a id='x1-13277r638'></a> 
+<a id='x1-13279r639'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_G_FACTOR</span> 
+<a id='x1-13281r640'></a> 
+<a id='x1-13283r641'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_GYROMAG_RATIO</span> 
+<a id='x1-13285r642'></a> 
+<a id='x1-13287r643'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_GYROMAG_RATIO_IN_MHZ_T</span> 
+<a id='x1-13289r644'></a> 
+<a id='x1-13291r645'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MAG_MOM</span> 
+<a id='x1-13293r646'></a> 
+<a id='x1-13295r647'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</span> 
+<a id='x1-13297r648'></a> 
+<a id='x1-13299r649'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</span> 
+<a id='x1-13301r650'></a> 
+<a id='x1-13303r651'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MAG_SHIELDING_CORRECTION</span> 
+<a id='x1-13305r652'></a> 
+<a id='x1-13307r653'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MASS</span> 
+<a id='x1-13309r654'></a> 
+<a id='x1-13311r655'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MASS_ENERGY_EQUIVALENT</span> 
+<a id='x1-13313r656'></a> 
+<a id='x1-13315r657'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-13317r658'></a> 
+<a id='x1-13319r659'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MASS_IN_U</span> 
+<a id='x1-13321r660'></a> 
+<a id='x1-13323r661'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MOLAR_MASS</span> 
+<a id='x1-13325r662'></a> 
+<a id='x1-13327r663'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_MUON_MASS_RATIO</span> 
+<a id='x1-13329r664'></a> 
+<a id='x1-13331r665'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_NEUTRON_MAG_MOM_RATIO</span> 
+<a id='x1-13333r666'></a> 
+<a id='x1-13335r667'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_NEUTRON_MASS_RATIO</span> 
+<a id='x1-13337r668'></a> 
+<a id='x1-13339r669'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_RELATIVE_ATOMIC_MASS</span> 
+<a id='x1-13341r670'></a> 
+<a id='x1-13343r671'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_RMS_CHARGE_RADIUS</span> 
+<a id='x1-13345r672'></a> 
+<a id='x1-13347r673'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>PROTON_TAU_MASS_RATIO</span> 
+<a id='x1-13349r674'></a> 
+<a id='x1-13351r675'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>QUANTUM_OF_CIRCULATION</span> 
+<a id='x1-13353r676'></a> 
+<a id='x1-13355r677'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>QUANTUM_OF_CIRCULATION_TIMES_2</span> 
+<a id='x1-13357r678'></a> 
+<a id='x1-13359r679'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>REDUCED_COMPTON_WAVELENGTH</span> 
+<a id='x1-13361r680'></a> 
+<a id='x1-13363r681'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>REDUCED_MUON_COMPTON_WAVELENGTH</span> 
+<a id='x1-13365r682'></a> 
+<a id='x1-13367r683'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>REDUCED_NEUTRON_COMPTON_WAVELENGTH</span> 
+<a id='x1-13369r684'></a> 
+<a id='x1-13371r685'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>REDUCED_PLANCK_CONSTANT</span> 
+<a id='x1-13373r686'></a> 
+<a id='x1-13375r687'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>REDUCED_PLANCK_CONSTANT_IN_EV_S</span> 
+<a id='x1-13377r688'></a> 
+<a id='x1-13379r689'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM</span> 
+<a id='x1-13381r690'></a> 
+<a id='x1-13383r691'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>REDUCED_PROTON_COMPTON_WAVELENGTH</span> 
+<a id='x1-13385r692'></a> 
+<a id='x1-13387r693'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>REDUCED_TAU_COMPTON_WAVELENGTH</span> 
+<a id='x1-13389r694'></a> 
+<a id='x1-13391r695'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>RYDBERG_CONSTANT</span> 
+<a id='x1-13393r696'></a> 
+<a id='x1-13395r697'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>RYDBERG_CONSTANT_TIMES_C_IN_HZ</span> 
+<a id='x1-13397r698'></a> 
+<a id='x1-13399r699'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>RYDBERG_CONSTANT_TIMES_HC_IN_EV</span> 
+<a id='x1-13401r700'></a> 
+<a id='x1-13403r701'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>RYDBERG_CONSTANT_TIMES_HC_IN_J</span> 
+<a id='x1-13405r702'></a> 
+<a id='x1-13407r703'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SACKUR_TETRODE_CONSTANT_1_K_100_KPA</span> 
+<a id='x1-13409r704'></a> 
+<a id='x1-13411r705'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA</span> 
+<a id='x1-13413r706'></a> 
+<a id='x1-13415r707'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SECOND_RADIATION_CONSTANT</span> 
+<a id='x1-13417r708'></a> 
+<a id='x1-13419r709'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_HELION_GYROMAG_RATIO</span> 
+<a id='x1-13421r710'></a> 
+<a id='x1-13423r711'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T</span> 
+<a id='x1-13425r712'></a> 
+<a id='x1-13427r713'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_HELION_MAG_MOM</span> 
+<a id='x1-13429r714'></a> 
+<a id='x1-13431r715'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO</span> 
+<a id='x1-13433r716'></a> 
+<a id='x1-13435r717'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</span> 
+<a id='x1-13437r718'></a> 
+<a id='x1-13439r719'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO</span> 
+<a id='x1-13441r720'></a> 
+<a id='x1-13443r721'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO</span> 
+<a id='x1-13445r722'></a> 
+<a id='x1-13447r723'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_PROTON_GYROMAG_RATIO</span> 
+<a id='x1-13449r724'></a> 
+<a id='x1-13451r725'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T</span> 
+<a id='x1-13453r726'></a> 
+<a id='x1-13455r727'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_PROTON_MAG_MOM</span> 
+<a id='x1-13457r728'></a> 
+<a id='x1-13459r729'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</span> 
+<a id='x1-13461r730'></a> 
+<a id='x1-13463r731'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</span> 
+<a id='x1-13465r732'></a> 
+<a id='x1-13467r733'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD</span> 
+<a id='x1-13469r734'></a> 
+<a id='x1-13471r735'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT</span> 
+<a id='x1-13473r736'></a> 
+<a id='x1-13475r737'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>SPEED_OF_LIGHT_IN_VACUUM</span> 
+<a id='x1-13477r738'></a> 
+<a id='x1-13479r739'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>STANDARD_ACCELERATION_OF_GRAVITY</span> 
+<a id='x1-13481r740'></a> 
+<a id='x1-13483r741'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>STANDARD_ATMOSPHERE</span> 
+<a id='x1-13485r742'></a> 
+<a id='x1-13487r743'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>STANDARD_STATE_PRESSURE</span> 
+<a id='x1-13489r744'></a> 
+<a id='x1-13491r745'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>STEFAN_BOLTZMANN_CONSTANT</span> 
+<a id='x1-13493r746'></a> 
+<a id='x1-13495r747'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_COMPTON_WAVELENGTH</span> 
+<a id='x1-13497r748'></a> 
+<a id='x1-13499r749'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_ELECTRON_MASS_RATIO</span> 
+<a id='x1-13501r750'></a> 
+<a id='x1-13503r751'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_ENERGY_EQUIVALENT</span> 
+<a id='x1-13505r752'></a> 
+<a id='x1-13507r753'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_MASS</span> 
+<a id='x1-13509r754'></a> 
+<a id='x1-13511r755'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_MASS_ENERGY_EQUIVALENT</span> 
+<a id='x1-13513r756'></a> 
+<a id='x1-13515r757'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_MASS_IN_U</span> 
+<a id='x1-13517r758'></a> 
+<a id='x1-13519r759'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_MOLAR_MASS</span> 
+<a id='x1-13521r760'></a> 
+<a id='x1-13523r761'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_MUON_MASS_RATIO</span> 
+<a id='x1-13525r762'></a> 
+<a id='x1-13527r763'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_NEUTRON_MASS_RATIO</span> 
+<a id='x1-13529r764'></a> 
+<a id='x1-13531r765'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TAU_PROTON_MASS_RATIO</span> 
+<a id='x1-13533r766'></a> 
+<a id='x1-13535r767'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>THOMSON_CROSS_SECTION</span> 
+<a id='x1-13537r768'></a> 
+<a id='x1-13539r769'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_ELECTRON_MASS_RATIO</span> 
+<a id='x1-13541r770'></a> 
+<a id='x1-13543r771'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_G_FACTOR</span> 
+<a id='x1-13545r772'></a> 
+<a id='x1-13547r773'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_MAG_MOM</span> 
+<a id='x1-13549r774'></a> 
+<a id='x1-13551r775'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</span> 
+<a id='x1-13553r776'></a> 
+<a id='x1-13555r777'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</span> 
+<a id='x1-13557r778'></a> 
+<a id='x1-13559r779'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_MASS</span> 
+<a id='x1-13561r780'></a> 
+<a id='x1-13563r781'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_MASS_ENERGY_EQUIVALENT</span> 
+<a id='x1-13565r782'></a> 
+<a id='x1-13567r783'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV</span> 
+<a id='x1-13569r784'></a> 
+<a id='x1-13571r785'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_MASS_IN_U</span> 
+<a id='x1-13573r786'></a> 
+<a id='x1-13575r787'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_MOLAR_MASS</span> 
+<a id='x1-13577r788'></a> 
+<a id='x1-13579r789'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_PROTON_MASS_RATIO</span> 
+<a id='x1-13581r790'></a> 
+<a id='x1-13583r791'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_RELATIVE_ATOMIC_MASS</span> 
+<a id='x1-13585r792'></a> 
+<a id='x1-13587r793'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>TRITON_TO_PROTON_MAG_MOM_RATIO</span> 
+<a id='x1-13589r794'></a> 
+<a id='x1-13591r795'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>UNIFIED_ATOMIC_MASS_UNIT</span> 
+<a id='x1-13593r796'></a> 
+<a id='x1-13595r797'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>VACUUM_ELECTRIC_PERMITTIVITY</span> 
+<a id='x1-13597r798'></a> 
+<a id='x1-13599r799'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>VACUUM_MAG_PERMEABILITY</span> 
+<a id='x1-13601r800'></a> 
+<a id='x1-13603r801'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>VON_KLITZING_CONSTANT</span> 
+<a id='x1-13605r802'></a> 
+<a id='x1-13607r803'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>WEAK_MIXING_ANGLE</span> 
+<a id='x1-13609r804'></a> 
+<a id='x1-13611r805'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT</span> 
+<a id='x1-13613r806'></a> 
+<a id='x1-13615r807'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT</span> 
+<a id='x1-13617r808'></a> 
+<a id='x1-13619r809'></a> <span class='tctt-1095'>• </span><span class='ectt-1095'>W_TO_Z_MASS_RATIO</span> 
+<a id='x1-13621r810'></a> 
+<a id='x1-13623r811'></a><span class='ectt-1095'>codata 23 December 2025 codata(3)</span></pre>
+   
+   <h3 class='sectionHead' id='getversion'><span class='titlemark'>3.2   </span> <a id='x1-140003.2'></a>get_version</h3>
+<p><a id='dx1-14001'></a>
+<!-- l. 2 --></p><p class='noindent'>
+</p>
+   <pre class='fancyvrb' id='fancyvrb5'><a id='x1-14003r1'></a><span class='ectt-1095'>get_version(3)                                     Library Functions Manual                                    get_version(3)</span> 
+<a id='x1-14005r2'></a> 
+<a id='x1-14007r3'></a><span class='ectt-1095'>NAME</span> 
+<a id='x1-14009r4'></a>       <span class='ectt-1095'>get_version - Get the version.</span> 
+<a id='x1-14011r5'></a> 
+<a id='x1-14013r6'></a><span class='ectt-1095'>LIBRARY</span> 
+<a id='x1-14015r7'></a>       <span class='ectt-1095'>codata (libcodata, -lcodata)</span> 
+<a id='x1-14017r8'></a> 
+<a id='x1-14019r9'></a><span class='ectt-1095'>SYNOPSIS</span> 
+<a id='x1-14021r10'></a>         <span class='ectt-1095'>function get_version()result(fptr)</span> 
+<a id='x1-14023r11'></a> 
+<a id='x1-14025r12'></a><span class='ectt-1095'>DESCRIPTION</span> 
+<a id='x1-14027r13'></a>       <span class='ectt-1095'>Get the version of library.</span> 
+<a id='x1-14029r14'></a> 
+<a id='x1-14031r15'></a><span class='ectt-1095'>RETURN VALUE</span> 
+<a id='x1-14033r16'></a>       <span class='ectt-1095'>o character(len=:), pointer :: fptr</span> 
+<a id='x1-14035r17'></a>              <span class='ectt-1095'>Version as a deferred-length pointer.</span> 
+<a id='x1-14037r18'></a> 
+<a id='x1-14039r19'></a><span class='ectt-1095'>EXAMPLE</span> 
+<a id='x1-14041r20'></a>       <span class='ectt-1095'>Minimal example</span> 
+<a id='x1-14043r21'></a> 
+<a id='x1-14045r22'></a>               <span class='ectt-1095'>print *, get_version()</span> 
+<a id='x1-14047r23'></a> 
+<a id='x1-14049r24'></a><span class='ectt-1095'>codata                                                 23 December 2025                                        get_version(3)</span></pre>
+                                                                                            
+                                                                                            
+<!-- l. 33 --><p class='indent'>
+                                                                                            
+                                                                                            
+<a id='x1-14050r11'></a>
+</p>
+   <h2 class='appendixHead' id='changelog'><span class='titlemark'>Appendix A</span><br /><a id='x1-15000A'></a>Changelog</h2>
+   
+   <h3 class='likesectionHead' id='_'><a id='x1-16000'></a>2.3.1</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Refactoring the <span class='ectt-1095'>configure.sh </span>script.
+     </li>
+     <li class='itemize'>Remove support for 3.14t. No official release on python.org.
+     </li>
+     <li class='itemize'>If binaries for Python 3.14t are needed you need to compile them by yourself.</li></ul>
+   
+   <h3 class='likesectionHead' id='_1'><a id='x1-17000'></a>2.3.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Remove support for Python 3.9 and add support for Python 3.14(t).</li></ul>
+<!-- l. 19 --><p class='noindent'><a href='https://github.com/MilanSkocic/codata/releases'>Full changelog</a>
+   
+</p>
+   <h3 class='likesectionHead' id='_2'><a id='x1-18000'></a>2.2.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Switch to UCRT64 for Windows binaries.
+     </li>
+     <li class='itemize'>Switch to sphinx documentation using <a href='https://github.com/jalvesz/fspx'>fspx</a>.
+     </li>
+     <li class='itemize'>Update references with publication for codata 2022.
+     </li>
+     <li class='itemize'>Update compilation flags for compatibility with <span class='ectt-1095'>stdlib</span>.</li></ul>
+<!-- l. 30 --><p class='noindent'><a href='https://github.com/MilanSkocic/codata/releases'>Full changelog</a>
+   
+                                                                                            
+                                                                                            
+</p>
+   <h3 class='likesectionHead' id='_3'><a id='x1-19000'></a>2.1.1</h3>
+<p><a id='x1-19000doc'></a>
+     </p><ul class='itemize1'>
+     <li class='itemize'>No code change.
+     </li>
+     <li class='itemize'>Code refractoring and cleaning
+     </li>
+     <li class='itemize'>Update CI/CD workflows.</li></ul>
+<!-- l. 40 --><p class='noindent'><a href='https://github.com/MilanSkocic/codata/releases'>Full changelog</a>
+   
+</p>
+   <h3 class='likesectionHead' id='_4'><a id='x1-20000'></a>2.1.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Roll back to C API in Fortran code: easier maintenance.
+     </li>
+     <li class='itemize'>Roll back to compiled C extension for python: easier maintenance.</li></ul>
+<!-- l. 50 --><p class='noindent'>Full changelog available at <a href='https://github.com/milanskocic/codata/releases'>github</a>
+   
+</p>
+   <h3 class='likesectionHead' id='_5'><a id='x1-21000'></a>2.0.1</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Fix bug in version for Fortran code.</li></ul>
+<!-- l. 59 --><p class='noindent'>Full changelog available at <a href='https://github.com/milanskocic/codata/releases'>github</a>
+   
+                                                                                            
+                                                                                            
+</p>
+   <h3 class='likesectionHead' id='_6'><a id='x1-22000'></a>2.0.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Drop compiled extensions for Python.
+     </li>
+     <li class='itemize'>Pure Python code for constants auto-generated as it is the case for the Fortran code.
+     </li>
+     <li class='itemize'>Pure C code for constants auto-generated as it is the case for the Fortran code.
+     </li>
+     <li class='itemize'>
+     <!-- l. 68 --><p class='noindent'>API break: </p>
+          <ul class='itemize2'>
+          <li class='itemize'>No more C API in the Fortran code.
+          </li>
+          <li class='itemize'>Use the pure C code to build a C library.</li></ul>
+     </li></ul>
+<!-- l. 75 --><p class='noindent'>Full changelog available at <a href='https://github.com/milanskocic/codata/releases'>github</a>
+   
+</p>
+   <h3 class='likesectionHead' id='_7'><a id='x1-23000'></a>1.2.2</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Fix conflict that could occur with C API modules. Add prefix in module names.
+     </li>
+     <li class='itemize'>Cleanup and refractoring.
+     </li>
+     <li class='itemize'>Documentation update.</li></ul>
+   
+                                                                                            
+                                                                                            
+   <h3 class='likesectionHead' id='_8'><a id='x1-24000'></a>1.2.1</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Refractoring
+     </li>
+     <li class='itemize'>Merge back C API and python wrapper.</li></ul>
+<!-- l. 93 --><p class='noindent'>Full changelog available at <a href='https://github.com/milanskocic/codata/releases'>github</a>
+   
+</p>
+   <h3 class='likesectionHead' id='_9'><a id='x1-25000'></a>1.2.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Refractoring
+     </li>
+     <li class='itemize'>Documentation update.</li></ul>
+<!-- l. 102 --><p class='noindent'>Full changelog available at <a href='https://github.com/milanskocic/codata/releases'>github</a>
+   
+</p>
+   <h3 class='likesectionHead' id='_10'><a id='x1-26000'></a>1.1.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>
+     <!-- l. 108 --><p class='noindent'>C API and Python wrapper moved to their own repositories. </p>
+          <ul class='itemize2'>
+          <li class='itemize'><a href='https://github.com/MilanSkocic/codata-capi'>C wrapper</a>
+          </li>
+          <li class='itemize'><a href='https://github.com/MilanSkocic/codata-py'>Python wrapper</a></li></ul>
+     </li>
+     <li class='itemize'>API break: C API is no more provided by default. Use the optional C wrapper.
+     </li>
+     <li class='itemize'>Code cleanup
+                                                                                            
+                                                                                            
+     </li>
+     <li class='itemize'>Documentation update</li></ul>
+<!-- l. 117 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+   
+</p>
+   <h3 class='likesectionHead' id='_11'><a id='x1-27000'></a>1.0.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Add codata values for 2010, 2014 and 2018.
+     </li>
+     <li class='itemize'>Code refractoring and code cleaning.
+     </li>
+     <li class='itemize'>Documentation update and switch to only FORD documentation.
+     </li>
+     <li class='itemize'>Rewrite code generators in python.
+     </li>
+     <li class='itemize'>Generate source code for stdlib.
+     </li>
+     <li class='itemize'>API break: constants are defined as DT like in stdlib.</li></ul>
+<!-- l. 130 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 132 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_12'><a id='x1-28000'></a>0.10.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Remove remove generation of the version module.
+     </li>
+     <li class='itemize'>Add tests using the test-drive framework.
+                                                                                            
+                                                                                            
+     </li>
+     <li class='itemize'>Explicit parameter constants for Fortran and protected constants for C API.
+     </li>
+     <li class='itemize'>Minor fixes in documentation.
+     </li>
+     <li class='itemize'>Code cleanup.
+     </li>
+     <li class='itemize'>Merge of all code for autogeneration in one file.</li></ul>
+<!-- l. 145 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 147 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_13'><a id='x1-29000'></a>0.9.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>No API changes.
+     </li>
+     <li class='itemize'>Automatic generation of the version module.
+     </li>
+     <li class='itemize'>Generic Makefiles for automatic the building process of the library and the pywrapper.
+     </li>
+     <li class='itemize'>Add targets: build, build_debug, test, test_debug.
+     </li>
+     <li class='itemize'>Minor fixes in documentation.</li></ul>
+<!-- l. 160 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 162 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+                                                                                            
+                                                                                            
+</p>
+   <h3 class='likesectionHead' id='_14'><a id='x1-30000'></a>0.8.2</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>No API changes.
+     </li>
+     <li class='itemize'>Improve Makefile for generating the source code at each compilation.
+     </li>
+     <li class='itemize'>Source generator rewritten in Fortran.
+     </li>
+     <li class='itemize'>Switch to pyproject.toml for the Python wrapper.
+     </li>
+     <li class='itemize'>Minor fixes in documentation.</li></ul>
+<!-- l. 175 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 177 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_15'><a id='x1-31000'></a>0.8.1</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Use shared library in python wrapper.
+     </li>
+     <li class='itemize'>Minor fixes in documentation.</li></ul>
+<!-- l. 187 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 189 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_16'><a id='x1-32000'></a>0.8.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Back to the approach with a library.
+                                                                                            
+                                                                                            
+     </li>
+     <li class='itemize'>Compatible with fpm.
+     </li>
+     <li class='itemize'>Configuration file for setting all the environmental variables.
+     </li>
+     <li class='itemize'>Global makefile for building a static library (through fpm) and a shared library.
+     </li>
+     <li class='itemize'>Automatic copy of the necessary sources for the python wrapper.
+     </li>
+     <li class='itemize'>
+     <!-- l. 200 --><p class='noindent'>Python wrapper built with the static library </p>
+          <ul class='itemize2'>
+          <li class='itemize'>no dependency on a shared library.
+          </li>
+          <li class='itemize'>sources and static library embeded in the python wrapper.</li></ul>
+     </li>
+     <li class='itemize'>FORD for documenting the Fortran code.
+     </li>
+     <li class='itemize'>Integration of the FORD documentation into the main documentation with sphinx.</li></ul>
+<!-- l. 209 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 211 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_17'><a id='x1-33000'></a>0.7.1</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Minor fixes in generator code
+     </li>
+     <li class='itemize'>Add automatic copy of c sources for the python wrapper.</li></ul>
+<!-- l. 221 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 223 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+                                                                                            
+                                                                                            
+</p>
+   <h3 class='likesectionHead' id='_18'><a id='x1-34000'></a>0.7.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Migrate documentation from doxygen to sphinx+breathe.
+     </li>
+     <li class='itemize'>Add YEAR constant indicating the year of the codata constants.
+     </li>
+     <li class='itemize'>Refractoring</li></ul>
+<!-- l. 234 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 236 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_19'><a id='x1-35000'></a>0.6.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Created documentation.
+     </li>
+     <li class='itemize'>Fixed missing uncertainties for Cpython.</li></ul>
+<!-- l. 246 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 248 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_20'><a id='x1-36000'></a>0.5.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Changed the complete approach by not generating a library but only source files for different
+     languages.
+     </li>
+     <li class='itemize'>Available languages: Fortran, C, python, CPython</li></ul>
+<!-- l. 258 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 260 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+                                                                                            
+                                                                                            
+</p>
+   <h3 class='likesectionHead' id='_21'><a id='x1-37000'></a>0.4.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Bring back pywrapper in the codata repository to sync versions.
+     </li>
+     <li class='itemize'>Improvements of the documentation.</li></ul>
+<!-- l. 270 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 272 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_22'><a id='x1-38000'></a>0.3.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Only last codata constants.</li></ul>
+<!-- l. 281 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 283 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_23'><a id='x1-39000'></a>0.2.1</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Integration of Intel Fortran compiler and MSVC in cmake scripts.
+     </li>
+     <li class='itemize'>Add specifications and instructions for compiling on Windows</li></ul>
+<!-- l. 293 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 295 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_24'><a id='x1-40000'></a>0.2.0</h3>
+     <ul class='itemize1'>
+     <li class='itemize'>Bug fixes for the codata 2010.
+                                                                                            
+                                                                                            
+     </li>
+     <li class='itemize'>Bug fixes in the tests linked to the codata 2010.
+     </li>
+     <li class='itemize'>Add python wrapper for the number of constants method.</li></ul>
+<!-- l. 306 --><p class='noindent'>Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 308 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+   
+</p>
+   <h3 class='likesectionHead' id='_25'><a id='x1-41000'></a>0.1.0</h3>
+<!-- l. 313 --><p class='noindent'>Implementation of: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>the parser of the codata raw data
+     </li>
+     <li class='itemize'>the generator of the Fortran modules
+     </li>
+     <li class='itemize'>the C API and C header
+     </li>
+     <li class='itemize'>the python wrapper (will be moved to its repository next release).</li></ul>
+<!-- l. 321 --><p class='indent'>   Full changelog available at <a href='https://github.com/MilanSkocic/codata/releases'>github</a>
+</p><!-- l. 323 --><p class='indent'>   Python wrapper available at <a href='https://pypi.org/project/pycodata'>pypi</a>.
+                                                                                            
+                                                                                            
+</p><!-- l. 29 --><p class='indent'>
+                                                                                            
+                                                                                            
+                                                                                            
+                                                                                            
+</p><!-- l. 2 --><p class='indent'>
+                                                                                            
+                                                                                            
+</p>
+   <h2 class='likechapterHead' id='bibliography'><a id='x1-42000'></a>Bibliography</h2>
+<p id='bibliography1'><a id='Q1-1-42'></a>
+    </p><dl class='thebibliography'><dt class='thebibliography' id='X0-mohr2012'>
+[1]  </dt><dd class='thebibliography' id='bib-1'>
+    <!-- l. 2 --><p class='noindent'><a id='page.25'></a><a href='00-main.html' id='X0-'></a>P. J. Mohr, B. N. Taylor, and D. B. Newell, “CODATA recommended values of the fundamental
+    physical constants: 2010,” <span class='ecti-1095'>Review of Modern Physics</span>, vol. 84, 2012 (cit. on p.  <a href='#x1-3001'>3</a>).
+    </p></dd><dt class='thebibliography' id='X0-mohr2016'>
+[2]  </dt><dd class='thebibliography' id='bib-2'>
+    <!-- l. 2 --><p class='noindent'>P. J. Mohr, B. N. Taylor, and D. B. Newell, “CODATA recommended values of the fundamental
+    physical constants: 2014,” <span class='ecti-1095'>Journal of Physical and Chemical Reference Data</span>, vol. 45, 2016 (cit. on
+    p.  <a href='#x1-3002'>3</a>).
+    </p></dd><dt class='thebibliography' id='X0-mohr2021'>
+[3]  </dt><dd class='thebibliography' id='bib-3'>
+    <!-- l. 2 --><p class='noindent'>P. J. Mohr, B. N. Taylor, and D. B. Newell, “CODATA recommended values of the fundamental
+    physical constants: 2018,” <span class='ecti-1095'>Review of Modern Physics</span>, vol. 93, 2021 (cit. on p.  <a href='#x1-3003'>3</a>).
+    </p></dd><dt class='thebibliography' id='X0-mohr2024'>
+[4]  </dt><dd class='thebibliography' id='bib-4'>
+    <!-- l. 2 --><p class='noindent'>P.  Mohr,  D.  Newell,  B.  Taylor,  and  E.  Tiesinga.  “CODATA  Recommended  Values  of  the
+    Fundamental Physical Constants: 2022.” version 1, Accessed: May 5, 2025. [Online]. Available:
+    <a class='url' href='https://arxiv.org/abs/2409.03787'><span class='ectt-1095'>https://arxiv.org/abs/2409.03787</span></a> pre-published (cit. on p.  <a href='#x1-3004'>3</a>).
+    </p></dd><dt class='thebibliography' id='X0-mohr2025'>
+[5]  </dt><dd class='thebibliography' id='bib-5'>
+    <!-- l. 2 --><p class='noindent'>P. J. Mohr, D. B. Newell, B. N. Taylor, and E. Tiesinga, “CODATA recommended values of the
+    fundamental physical constants: 2022,”  <span class='ecti-1095'>Reviews of Modern Physics</span>, vol. 97, no. 2, p. 025002,
+    Apr. 30, 2025 (cit. on p.  <a href='#x1-3005'>3</a>).</p></dd></dl>
+                                                                                            
+                                                                                            
+<!-- l. 1 --><p class='indent'>
+                                                                                            
+                                                                                            
+</p>
+   <h2 class='likechapterHead' id='index'><a id='x1-43000'></a>Index</h2>
+   <div class='theindex'><div class='theindex-letter'> <div class='index-item'>codata, <a href='#dx1-12001'>1</a> </div>
+</div><div class='theindex-letter'><div class='index-item'>get_version, <a href='#dx1-14001'>2</a> </div>
+</div></div>
+    
+</body> 
+</html>
