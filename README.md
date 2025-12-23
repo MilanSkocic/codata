@@ -7,31 +7,23 @@ constants according to
 usage from C, or can be used as a basis for other wrappers. Python
 wrapper allows easy usage from Python.
 
-The latest codata constants were released in 2022 by the
-[NIST](https://pml.nist.gov/cuu/Constants/). All values for the codata
-constants are provided as double precision reals in a derived type
-`codata_constant_type`. The names are quite long and can be aliased with
-shorter names. A module level interface to_real is available for getting
-the constant value or uncertainty of a constant.
-
 To use `codata` within your [fpm](https://github.com/fortran-lang/fpm)
 project, add the following to your `fpm.toml` file:
 
             [dependencies]
             codata = { git="https://github.com/MilanSkocic/codata.git" }
 
-**Notes**:
+The latest codata constants
+([2022](https://pml.nist.gov/cuu/Constants/)) were integrated in the
+[stdlib](https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0).
+The constants are implemented as derived type which carries the name,
+the value, the uncertainty and the unit. This library will be
+complementary to the constants defined in the stdlib by providing older
+values for the constants.
 
--   The latest codata constants were integrated in the
-    [stdlib](https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0).
-    The constants are implemented as derived type which carries the
-    name, the value, the uncertainty and the unit. This library will be
-    complementary to the constants defined in the stdlib by providing
-    older values for the constants.
-
--   If you only need sources for the codata constants that you can
-    integrate directly in your sources you may be interested by
-    https://github.com/vmagnin/fundamental_constants.
+If you only need sources for the codata constants that you can integrate
+directly in your sources you may be interested by
+<https://github.com/vmagnin/fundamental_constants>.
 
 # Dependencies
 
