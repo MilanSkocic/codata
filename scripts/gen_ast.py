@@ -3,6 +3,8 @@ r"""Generate language independant representation of Codata constants."""
 import argparse
 import tomlkit
 
+newline = "\n"
+latest_year = "2022"
 
 NAMES_LENGTH = 60 
 VALUES_LENGTH = 25
@@ -12,6 +14,14 @@ UNITS_LENGTH = 25
 
 def get_year(fpath: str)->str:
     return fpath.split("/")[-1].split("_")[2].split(".")[0]
+
+def get_suffix(year):
+    if year == latest_year:
+        suffix = ""
+    else:
+        suffix = "_" + year
+
+    return suffix
 
 def get_skiprows(fpath: str)->int:
     with open(fpath, "r") as f:
@@ -72,8 +82,12 @@ def format_unit(line: str)->str:
 
 def run(fpath_raw: str, fpath_ast:str)->None:
     year = get_year(fpath_raw)
+    suffix = get_suffix(year)
     skiprows = get_skiprows(fpath_raw)
     
+    fpath_mantxt = fpath_raw.replace(".txt", ".mantxt")
+    fpath_tex = fpath_raw.replace(".txt", ".tex")
+
     toml = tomlkit.document()
     
     k = 0
@@ -99,7 +113,20 @@ def run(fpath_raw: str, fpath_ast:str)->None:
     fpath = fpath_ast
     with open(fpath, "w") as f:
         f.write(tomlkit.dumps(toml))
-
+    
+    fpath = fpath_mantxt
+    with open(fpath, "w") as f:
+        for var in toml.keys():
+            f.write("".join([" "]*8) + "o " + var + suffix + "\n")
+    
+#    fpath = fpath_tex
+#    with open(fpath, "w") as f:
+#        f.write(r"    \begin{itemize}" + newline)
+#        f.write(r"     {\footnotesize " + newline)
+#        for var in toml.keys():
+#            f.write("".join([" "]*8) + r"\item " + toml[var]["name"] +  newline)
+#        f.write(r"    }" + newline)
+#        f.write(r"    \end{itemize}" + newline)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog='genast', description='Generate toml files from raw codata data.')
