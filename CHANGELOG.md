@@ -1,4 +1,4 @@
-# 2.3.1 {#section .unnumbered}
+# 2.3.1
 
 -   Refactoring the `configure.sh` script.
 
@@ -7,13 +7,13 @@
 -   If binaries for Python 3.14t are needed you need to compile them by
     yourself.
 
-# 2.3.0 {#section-1 .unnumbered}
+# 2.3.0
 
 -   Remove support for Python 3.9 and add support for Python 3.14(t).
 
 [Full changelog](https://github.com/MilanSkocic/codata/releases)
 
-# 2.2.0 {#section-2 .unnumbered}
+# 2.2.0
 
 -   Switch to UCRT64 for Windows binaries.
 
@@ -26,7 +26,7 @@
 
 [Full changelog](https://github.com/MilanSkocic/codata/releases)
 
-# 2.1.1 {#section*-3 .unnumbered}
+# 2.1.1
 
 -   No code change.
 
@@ -36,7 +36,7 @@
 
 [Full changelog](https://github.com/MilanSkocic/codata/releases)
 
-# 2.1.0 {#section-3 .unnumbered}
+# 2.1.0
 
 -   Roll back to C API in Fortran code: easier maintenance.
 
@@ -45,14 +45,14 @@
 Full changelog available at
 [github](https://github.com/milanskocic/codata/releases)
 
-# 2.0.1 {#section-4 .unnumbered}
+# 2.0.1
 
 -   Fix bug in version for Fortran code.
 
 Full changelog available at
 [github](https://github.com/milanskocic/codata/releases)
 
-# 2.0.0 {#section-5 .unnumbered}
+# 2.0.0
 
 -   Drop compiled extensions for Python.
 
@@ -71,7 +71,7 @@ Full changelog available at
 Full changelog available at
 [github](https://github.com/milanskocic/codata/releases)
 
-# 1.2.2 {#section-6 .unnumbered}
+# 1.2.2
 
 -   Fix conflict that could occur with C API modules. Add prefix in
     module names.
@@ -80,7 +80,7 @@ Full changelog available at
 
 -   Documentation update.
 
-# 1.2.1 {#section-7 .unnumbered}
+# 1.2.1
 
 -   Refractoring
 
@@ -89,7 +89,7 @@ Full changelog available at
 Full changelog available at
 [github](https://github.com/milanskocic/codata/releases)
 
-# 1.2.0 {#section-8 .unnumbered}
+# 1.2.0
 
 -   Refractoring
 
@@ -98,7 +98,7 @@ Full changelog available at
 Full changelog available at
 [github](https://github.com/milanskocic/codata/releases)
 
-# 1.1.0 {#section-9 .unnumbered}
+# 1.1.0
 
 -   C API and Python wrapper moved to their own repositories.
 
@@ -116,7 +116,7 @@ Full changelog available at
 Full changelog available at
 [github](https://github.com/MilanSkocic/codata/releases)
 
-# 1.0.0 {#section-10 .unnumbered}
+# 1.0.0
 
 -   Add codata values for 2010, 2014 and 2018.
 
@@ -135,7 +135,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.10.0 {#section-11 .unnumbered}
+# 0.10.0
 
 -   Remove remove generation of the version module.
 
@@ -155,7 +155,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.9.0 {#section-12 .unnumbered}
+# 0.9.0
 
 -   No API changes.
 
@@ -173,7 +173,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.8.2 {#section-13 .unnumbered}
+# 0.8.2
 
 -   No API changes.
 
@@ -190,7 +190,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.8.1 {#section-14 .unnumbered}
+# 0.8.1
 
 -   Use shared library in python wrapper.
 
@@ -201,7 +201,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.8.0 {#section-15 .unnumbered}
+# 0.8.0
 
 -   Back to the approach with a library.
 
@@ -230,7 +230,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.7.1 {#section-16 .unnumbered}
+# 0.7.1
 
 -   Minor fixes in generator code
 
@@ -241,7 +241,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.7.0 {#section-17 .unnumbered}
+# 0.7.0
 
 -   Migrate documentation from doxygen to sphinx+breathe.
 
@@ -254,7 +254,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.6.0 {#section-18 .unnumbered}
+# 0.6.0
 
 -   Created documentation.
 
@@ -265,7 +265,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.5.0 {#section-19 .unnumbered}
+# 0.5.0
 
 -   Changed the complete approach by not generating a library but only
     source files for different languages.
@@ -277,7 +277,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.4.0 {#section-20 .unnumbered}
+# 0.4.0
 
 -   Bring back pywrapper in the codata repository to sync versions.
 
@@ -288,7 +288,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.3.0 {#section-21 .unnumbered}
+# 0.3.0
 
 -   Only last codata constants.
 
@@ -297,7 +297,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.2.1 {#section-22 .unnumbered}
+# 0.2.1
 
 -   Integration of Intel Fortran compiler and MSVC in cmake scripts.
 
@@ -308,7 +308,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.2.0 {#section-23 .unnumbered}
+# 0.2.0
 
 -   Bug fixes for the codata 2010.
 
@@ -321,7 +321,7 @@ Full changelog available at
 
 Python wrapper available at [pypi](https://pypi.org/project/pycodata).
 
-# 0.1.0 {#section-24 .unnumbered}
+# 0.1.0
 
 Implementation of:
 

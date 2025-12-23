@@ -142,8 +142,7 @@ doc:
 
 docs:
 	rm -rf docs/*
-	cp -rf doc/build/html/* ./docs/
-	cp -fv doc/build/html/00-main.html doc/build/html/index.html
+	cp -rf doc/sphinx/build/html/* ./docs/
 
 logo:
 	make -C media

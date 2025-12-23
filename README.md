@@ -3,15 +3,16 @@
 `codata` is a Fortran library providing the fundamental physical
 constants according to
 [CODATA](https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants).
-[@mohr2012; @mohr2016; @mohr2021; @mohr2024; @mohr2025]. A C API allows
-usage from C, or can be used as a basis for other wrappers. Python
-wrapper allows easy usage from Python.
+A C API allows usage from C, or can be used as a basis for other wrappers. 
+Python wrapper allows easy usage from Python.
 
 To use `codata` within your [fpm](https://github.com/fortran-lang/fpm)
 project, add the following to your `fpm.toml` file:
 
-            [dependencies]
-            codata = { git="https://github.com/MilanSkocic/codata.git" }
+```
+[dependencies]
+codata = { git="https://github.com/MilanSkocic/codata.git" }
+```
 
 The latest codata constants
 ([2022](https://pml.nist.gov/cuu/Constants/)) were integrated in the
@@ -27,10 +28,12 @@ directly in your sources you may be interested by
 
 # Dependencies
 
-            gfortran>=10
-            fpm>=0.8
-            stdlib>=0.5
-            fypp>=3.0
+```
+gfortran>=10
+fpm>=0.8
+stdlib>=0.5
+fypp>=3.0
+```
 
 # Installation
 
@@ -47,11 +50,13 @@ for building the library.
 Build: the configuration file will set all the environment variables
 necessary for the compilation
 
-            chmod +x configure.sh
-            ./configure.sh
-            make
-            make install
-            make uninstall
+```
+chmod +x configure.sh
+./configure.sh
+make
+make install
+make uninstall
+```
 
 # License
 

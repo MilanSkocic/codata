@@ -1,0 +1,818 @@
+codata(3)               Library Functions Manual              codata(3)
+
+NAME
+       codata - Fundamental physical constants.
+
+SYNOPSIS
+         use codata (Fortran)
+         #include "codata.h" (C)
+         import pycodata (Python)
+
+DESCRIPTION
+       codata  is  a Fortran library providing the fundamental physical
+       constants according to CODATA.  A C API allows usage from C,  or
+       can  be  used as a basis for other wrappers.  Python wrapper al‐
+       lows easy usage from Python.
+
+       The latest codata constants were released in 2022.   All  values
+       for  the codata constants are provided as double precision reals
+       in a derived type codata_constant_type.   The  names  are  quite
+       long  and can be aliased with shorter names.  A module level in‐
+       terface to_real is available for getting the constant  value  or
+       uncertainty of a constant.
+
+       The  latest  values  (2022)  do not have the year as a suffix in
+       their name.  Older values can be used and they feature the  year
+       as a suffix in their name.
+
+EXAMPLE
+       Minimal example in Fortran.
+
+               program example_in_f
+               use iso_fortran_env
+               use codata
+               implicit none
+
+               print '(A)', '########## EXAMPLE IN FORTRAN ##########'
+
+               print '(A)', '# VERSION'
+               print *, "version = ", get_version()
+
+               print '(A)', '# CONSTANTS'
+               print *, "c = ",  SPEED_OF_LIGHT_IN_VACUUM%value
+
+               print '(A)', '# UNCERTAINTY'
+               print *, "u(c) = ", SPEED_OF_LIGHT_IN_VACUUM%uncertainty
+
+               print '(A)', '# OLDER VALUES'
+               print '(A, F23.16)', "Mu_2022(latest) = ", MOLAR_MASS_CONSTANT%value
+               print '(A, F23.16)', "Mu_2018 = ", MOLAR_MASS_CONSTANT_2018%value
+               print '(A, F23.16)', "Mu_2014 = ",  MOLAR_MASS_CONSTANT_2014%value
+               print '(A, F23.16)', "Mu_2010 = ",  MOLAR_MASS_CONSTANT_2010%value
+               end program
+
+       Minimal example in C.
+
+               #include <stdio.h>
+               #include "codata.h"
+
+               int main(void){
+
+               printf("########## EXAMPLE IN C ##########0);
+
+               printf("%s0,"# VERSION");
+               printf("version = %s0, codata_get_version());
+
+               printf("%s0,"# CONSTANTS");
+               printf("c = %f0, SPEED_OF_LIGHT_IN_VACUUM.value);
+
+               printf("%s0,"# UNCERTAINTY");
+               printf("u(c) = %f0, SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
+
+               printf("%s0,"# OLDER VALUES");
+               printf("Mu_2022(latest) = %23.16f0, MOLAR_MASS_CONSTANT.value);
+               printf("Mu_2018 = %23.16f0, MOLAR_MASS_CONSTANT_2018.value);
+               printf("Mu_2014 = %23.16f0, MOLAR_MASS_CONSTANT_2014.value);
+               printf("Mu_2010 = %23.16f0, MOLAR_MASS_CONSTANT_2010.value);
+
+               return 0;
+               }
+
+       Minimal example in Python
+
+               r"""EXAMPLE in PYTHON"""
+               import sys
+               sys.path.insert(0, "../py/src/")
+               import pycodata
+
+               print("########## EXAMPLE IN PYTHON ##########")
+               print("# VERSION")
+               print(f"version = {pycodata.__version__}")
+
+               print("# Constants")
+               print(f"c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
+
+               print("# UNCERTAINTY")
+               print(f"u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
+
+               print("# OLDER VALUES")
+               print(f"Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
+               print(f"Mu_2018 = ", pycodata.constants_2018.MOLAR_MASS_CONSTANT_2018["value"])
+               print(f"Mu_2014 = ", pycodata.constants_2014.MOLAR_MASS_CONSTANT_2014["value"])
+               print(f"Mu_2010 = ", pycodata.constants_2010.MOLAR_MASS_CONSTANT_2010["value"])
+
+SEE ALSO
+       List of constants:
+
+              •  ALPHA_PARTICLE_ELECTRON_MASS_RATIO
+
+              •  ALPHA_PARTICLE_MASS
+
+              •  ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT
+
+              •  ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV
+
+              •  ALPHA_PARTICLE_MASS_IN_U
+
+              •  ALPHA_PARTICLE_MOLAR_MASS
+
+              •  ALPHA_PARTICLE_PROTON_MASS_RATIO
+
+              •  ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS
+
+              •  ALPHA_PARTICLE_RMS_CHARGE_RADIUS
+
+              •  ANGSTROM_STAR
+
+              •  ATOMIC_MASS_CONSTANT
+
+              •  ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT
+
+              •  ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV
+
+              •  ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP
+
+              •  ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP
+
+              •  ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP
+
+              •  ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP
+
+              •  ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP
+
+              •  ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP
+
+              •  ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP
+
+              •  ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY
+
+              •  ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY
+
+              •  ATOMIC_UNIT_OF_ACTION
+
+              •  ATOMIC_UNIT_OF_CHARGE
+
+              •  ATOMIC_UNIT_OF_CHARGE_DENSITY
+
+              •  ATOMIC_UNIT_OF_CURRENT
+
+              •  ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM
+
+              •  ATOMIC_UNIT_OF_ELECTRIC_FIELD
+
+              •  ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT
+
+              •  ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY
+
+              •  ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL
+
+              •  ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM
+
+              •  ATOMIC_UNIT_OF_ENERGY
+
+              •  ATOMIC_UNIT_OF_FORCE
+
+              •  ATOMIC_UNIT_OF_LENGTH
+
+              •  ATOMIC_UNIT_OF_MAG_DIPOLE_MOM
+
+              •  ATOMIC_UNIT_OF_MAG_FLUX_DENSITY
+
+              •  ATOMIC_UNIT_OF_MAGNETIZABILITY
+
+              •  ATOMIC_UNIT_OF_MASS
+
+              •  ATOMIC_UNIT_OF_MOMENTUM
+
+              •  ATOMIC_UNIT_OF_PERMITTIVITY
+
+              •  ATOMIC_UNIT_OF_TIME
+
+              •  ATOMIC_UNIT_OF_VELOCITY
+
+              •  AVOGADRO_CONSTANT
+
+              •  BOHR_MAGNETON
+
+              •  BOHR_MAGNETON_IN_EV_T
+
+              •  BOHR_MAGNETON_IN_HZ_T
+
+              •  BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA
+
+              •  BOHR_MAGNETON_IN_K_T
+
+              •  BOHR_RADIUS
+
+              •  BOLTZMANN_CONSTANT
+
+              •  BOLTZMANN_CONSTANT_IN_EV_K
+
+              •  BOLTZMANN_CONSTANT_IN_HZ_K
+
+              •  BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN
+
+              •  CHARACTERISTIC_IMPEDANCE_OF_VACUUM
+
+              •  CLASSICAL_ELECTRON_RADIUS
+
+              •  COMPTON_WAVELENGTH
+
+              •  CONDUCTANCE_QUANTUM
+
+              •  CONVENTIONAL_VALUE_OF_AMPERE_90
+
+              •  CONVENTIONAL_VALUE_OF_COULOMB_90
+
+              •  CONVENTIONAL_VALUE_OF_FARAD_90
+
+              •  CONVENTIONAL_VALUE_OF_HENRY_90
+
+              •  CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT
+
+              •  CONVENTIONAL_VALUE_OF_OHM_90
+
+              •  CONVENTIONAL_VALUE_OF_VOLT_90
+
+              •  CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT
+
+              •  CONVENTIONAL_VALUE_OF_WATT_90
+
+              •  COPPER_X_UNIT
+
+              •  DEUTERON_ELECTRON_MAG_MOM_RATIO
+
+              •  DEUTERON_ELECTRON_MASS_RATIO
+
+              •  DEUTERON_G_FACTOR
+
+              •  DEUTERON_MAG_MOM
+
+              •  DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+
+              •  DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+
+              •  DEUTERON_MASS
+
+              •  DEUTERON_MASS_ENERGY_EQUIVALENT
+
+              •  DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV
+
+              •  DEUTERON_MASS_IN_U
+
+              •  DEUTERON_MOLAR_MASS
+
+              •  DEUTERON_NEUTRON_MAG_MOM_RATIO
+
+              •  DEUTERON_PROTON_MAG_MOM_RATIO
+
+              •  DEUTERON_PROTON_MASS_RATIO
+
+              •  DEUTERON_RELATIVE_ATOMIC_MASS
+
+              •  DEUTERON_RMS_CHARGE_RADIUS
+
+              •  ELECTRON_CHARGE_TO_MASS_QUOTIENT
+
+              •  ELECTRON_DEUTERON_MAG_MOM_RATIO
+
+              •  ELECTRON_DEUTERON_MASS_RATIO
+
+              •  ELECTRON_G_FACTOR
+
+              •  ELECTRON_GYROMAG_RATIO
+
+              •  ELECTRON_GYROMAG_RATIO_IN_MHZ_T
+
+              •  ELECTRON_HELION_MASS_RATIO
+
+              •  ELECTRON_MAG_MOM
+
+              •  ELECTRON_MAG_MOM_ANOMALY
+
+              •  ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+
+              •  ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+
+              •  ELECTRON_MASS
+
+              •  ELECTRON_MASS_ENERGY_EQUIVALENT
+
+              •  ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV
+
+              •  ELECTRON_MASS_IN_U
+
+              •  ELECTRON_MOLAR_MASS
+
+              •  ELECTRON_MUON_MAG_MOM_RATIO
+
+              •  ELECTRON_MUON_MASS_RATIO
+
+              •  ELECTRON_NEUTRON_MAG_MOM_RATIO
+
+              •  ELECTRON_NEUTRON_MASS_RATIO
+
+              •  ELECTRON_PROTON_MAG_MOM_RATIO
+
+              •  ELECTRON_PROTON_MASS_RATIO
+
+              •  ELECTRON_RELATIVE_ATOMIC_MASS
+
+              •  ELECTRON_TAU_MASS_RATIO
+
+              •  ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO
+
+              •  ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO
+
+              •  ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO
+
+              •  ELECTRON_TRITON_MASS_RATIO
+
+              •  ELECTRON_VOLT
+
+              •  ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP
+
+              •  ELECTRON_VOLT_HARTREE_RELATIONSHIP
+
+              •  ELECTRON_VOLT_HERTZ_RELATIONSHIP
+
+              •  ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP
+
+              •  ELECTRON_VOLT_JOULE_RELATIONSHIP
+
+              •  ELECTRON_VOLT_KELVIN_RELATIONSHIP
+
+              •  ELECTRON_VOLT_KILOGRAM_RELATIONSHIP
+
+              •  ELEMENTARY_CHARGE
+
+              •  ELEMENTARY_CHARGE_OVER_H_BAR
+
+              •  FARADAY_CONSTANT
+
+              •  FERMI_COUPLING_CONSTANT
+
+              •  FINE_STRUCTURE_CONSTANT
+
+              •  FIRST_RADIATION_CONSTANT
+
+              •  FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE
+
+              •  HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP
+
+              •  HARTREE_ELECTRON_VOLT_RELATIONSHIP
+
+              •  HARTREE_ENERGY
+
+              •  HARTREE_ENERGY_IN_EV
+
+              •  HARTREE_HERTZ_RELATIONSHIP
+
+              •  HARTREE_INVERSE_METER_RELATIONSHIP
+
+              •  HARTREE_JOULE_RELATIONSHIP
+
+              •  HARTREE_KELVIN_RELATIONSHIP
+
+              •  HARTREE_KILOGRAM_RELATIONSHIP
+
+              •  HELION_ELECTRON_MASS_RATIO
+
+              •  HELION_G_FACTOR
+
+              •  HELION_MAG_MOM
+
+              •  HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+
+              •  HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+
+              •  HELION_MASS
+
+              •  HELION_MASS_ENERGY_EQUIVALENT
+
+              •  HELION_MASS_ENERGY_EQUIVALENT_IN_MEV
+
+              •  HELION_MASS_IN_U
+
+              •  HELION_MOLAR_MASS
+
+              •  HELION_PROTON_MASS_RATIO
+
+              •  HELION_RELATIVE_ATOMIC_MASS
+
+              •  HELION_SHIELDING_SHIFT
+
+              •  HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP
+
+              •  HERTZ_ELECTRON_VOLT_RELATIONSHIP
+
+              •  HERTZ_HARTREE_RELATIONSHIP
+
+              •  HERTZ_INVERSE_METER_RELATIONSHIP
+
+              •  HERTZ_JOULE_RELATIONSHIP
+
+              •  HERTZ_KELVIN_RELATIONSHIP
+
+              •  HERTZ_KILOGRAM_RELATIONSHIP
+
+              •  HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133
+
+              •  INVERSE_FINE_STRUCTURE_CONSTANT
+
+              •  INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP
+
+              •  INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP
+
+              •  INVERSE_METER_HARTREE_RELATIONSHIP
+
+              •  INVERSE_METER_HERTZ_RELATIONSHIP
+
+              •  INVERSE_METER_JOULE_RELATIONSHIP
+
+              •  INVERSE_METER_KELVIN_RELATIONSHIP
+
+              •  INVERSE_METER_KILOGRAM_RELATIONSHIP
+
+              •  INVERSE_OF_CONDUCTANCE_QUANTUM
+
+              •  JOSEPHSON_CONSTANT
+
+              •  JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP
+
+              •  JOULE_ELECTRON_VOLT_RELATIONSHIP
+
+              •  JOULE_HARTREE_RELATIONSHIP
+
+              •  JOULE_HERTZ_RELATIONSHIP
+
+              •  JOULE_INVERSE_METER_RELATIONSHIP
+
+              •  JOULE_KELVIN_RELATIONSHIP
+
+              •  JOULE_KILOGRAM_RELATIONSHIP
+
+              •  KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP
+
+              •  KELVIN_ELECTRON_VOLT_RELATIONSHIP
+
+              •  KELVIN_HARTREE_RELATIONSHIP
+
+              •  KELVIN_HERTZ_RELATIONSHIP
+
+              •  KELVIN_INVERSE_METER_RELATIONSHIP
+
+              •  KELVIN_JOULE_RELATIONSHIP
+
+              •  KELVIN_KILOGRAM_RELATIONSHIP
+
+              •  KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP
+
+              •  KILOGRAM_ELECTRON_VOLT_RELATIONSHIP
+
+              •  KILOGRAM_HARTREE_RELATIONSHIP
+
+              •  KILOGRAM_HERTZ_RELATIONSHIP
+
+              •  KILOGRAM_INVERSE_METER_RELATIONSHIP
+
+              •  KILOGRAM_JOULE_RELATIONSHIP
+
+              •  KILOGRAM_KELVIN_RELATIONSHIP
+
+              •  LATTICE_PARAMETER_OF_SILICON
+
+              •  LATTICE_SPACING_OF_IDEAL_SI_220
+
+              •  LOSCHMIDT_CONSTANT_273_15_K_100_KPA
+
+              •  LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA
+
+              •  LUMINOUS_EFFICACY
+
+              •  MAG_FLUX_QUANTUM
+
+              •  MOLAR_GAS_CONSTANT
+
+              •  MOLAR_MASS_CONSTANT
+
+              •  MOLAR_MASS_OF_CARBON_12
+
+              •  MOLAR_PLANCK_CONSTANT
+
+              •  MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA
+
+              •  MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA
+
+              •  MOLAR_VOLUME_OF_SILICON
+
+              •  MOLYBDENUM_X_UNIT
+
+              •  MUON_COMPTON_WAVELENGTH
+
+              •  MUON_ELECTRON_MASS_RATIO
+
+              •  MUON_G_FACTOR
+
+              •  MUON_MAG_MOM
+
+              •  MUON_MAG_MOM_ANOMALY
+
+              •  MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+
+              •  MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+
+              •  MUON_MASS
+
+              •  MUON_MASS_ENERGY_EQUIVALENT
+
+              •  MUON_MASS_ENERGY_EQUIVALENT_IN_MEV
+
+              •  MUON_MASS_IN_U
+
+              •  MUON_MOLAR_MASS
+
+              •  MUON_NEUTRON_MASS_RATIO
+
+              •  MUON_PROTON_MAG_MOM_RATIO
+
+              •  MUON_PROTON_MASS_RATIO
+
+              •  MUON_TAU_MASS_RATIO
+
+              •  NATURAL_UNIT_OF_ACTION
+
+              •  NATURAL_UNIT_OF_ACTION_IN_EV_S
+
+              •  NATURAL_UNIT_OF_ENERGY
+
+              •  NATURAL_UNIT_OF_ENERGY_IN_MEV
+
+              •  NATURAL_UNIT_OF_LENGTH
+
+              •  NATURAL_UNIT_OF_MASS
+
+              •  NATURAL_UNIT_OF_MOMENTUM
+
+              •  NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C
+
+              •  NATURAL_UNIT_OF_TIME
+
+              •  NATURAL_UNIT_OF_VELOCITY
+
+              •  NEUTRON_COMPTON_WAVELENGTH
+
+              •  NEUTRON_ELECTRON_MAG_MOM_RATIO
+
+              •  NEUTRON_ELECTRON_MASS_RATIO
+
+              •  NEUTRON_G_FACTOR
+
+              •  NEUTRON_GYROMAG_RATIO
+
+              •  NEUTRON_GYROMAG_RATIO_IN_MHZ_T
+
+              •  NEUTRON_MAG_MOM
+
+              •  NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+
+              •  NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+
+              •  NEUTRON_MASS
+
+              •  NEUTRON_MASS_ENERGY_EQUIVALENT
+
+              •  NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV
+
+              •  NEUTRON_MASS_IN_U
+
+              •  NEUTRON_MOLAR_MASS
+
+              •  NEUTRON_MUON_MASS_RATIO
+
+              •  NEUTRON_PROTON_MAG_MOM_RATIO
+
+              •  NEUTRON_PROTON_MASS_DIFFERENCE
+
+              •  NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT
+
+              •  NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVA‐
+                 LENT_IN_MEV
+
+              •  NEUTRON_PROTON_MASS_DIFFERENCE_IN_U
+
+              •  NEUTRON_PROTON_MASS_RATIO
+
+              •  NEUTRON_RELATIVE_ATOMIC_MASS
+
+              •  NEUTRON_TAU_MASS_RATIO
+
+              •  NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO
+
+              •  NEWTONIAN_CONSTANT_OF_GRAVITATION
+
+              •  NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C
+
+              •  NUCLEAR_MAGNETON
+
+              •  NUCLEAR_MAGNETON_IN_EV_T
+
+              •  NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA
+
+              •  NUCLEAR_MAGNETON_IN_K_T
+
+              •  NUCLEAR_MAGNETON_IN_MHZ_T
+
+              •  PLANCK_CONSTANT
+
+              •  PLANCK_CONSTANT_IN_EV_HZ
+
+              •  PLANCK_LENGTH
+
+              •  PLANCK_MASS
+
+              •  PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV
+
+              •  PLANCK_TEMPERATURE
+
+              •  PLANCK_TIME
+
+              •  PROTON_CHARGE_TO_MASS_QUOTIENT
+
+              •  PROTON_COMPTON_WAVELENGTH
+
+              •  PROTON_ELECTRON_MASS_RATIO
+
+              •  PROTON_G_FACTOR
+
+              •  PROTON_GYROMAG_RATIO
+
+              •  PROTON_GYROMAG_RATIO_IN_MHZ_T
+
+              •  PROTON_MAG_MOM
+
+              •  PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+
+              •  PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+
+              •  PROTON_MAG_SHIELDING_CORRECTION
+
+              •  PROTON_MASS
+
+              •  PROTON_MASS_ENERGY_EQUIVALENT
+
+              •  PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV
+
+              •  PROTON_MASS_IN_U
+
+              •  PROTON_MOLAR_MASS
+
+              •  PROTON_MUON_MASS_RATIO
+
+              •  PROTON_NEUTRON_MAG_MOM_RATIO
+
+              •  PROTON_NEUTRON_MASS_RATIO
+
+              •  PROTON_RELATIVE_ATOMIC_MASS
+
+              •  PROTON_RMS_CHARGE_RADIUS
+
+              •  PROTON_TAU_MASS_RATIO
+
+              •  QUANTUM_OF_CIRCULATION
+
+              •  QUANTUM_OF_CIRCULATION_TIMES_2
+
+              •  REDUCED_COMPTON_WAVELENGTH
+
+              •  REDUCED_MUON_COMPTON_WAVELENGTH
+
+              •  REDUCED_NEUTRON_COMPTON_WAVELENGTH
+
+              •  REDUCED_PLANCK_CONSTANT
+
+              •  REDUCED_PLANCK_CONSTANT_IN_EV_S
+
+              •  REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM
+
+              •  REDUCED_PROTON_COMPTON_WAVELENGTH
+
+              •  REDUCED_TAU_COMPTON_WAVELENGTH
+
+              •  RYDBERG_CONSTANT
+
+              •  RYDBERG_CONSTANT_TIMES_C_IN_HZ
+
+              •  RYDBERG_CONSTANT_TIMES_HC_IN_EV
+
+              •  RYDBERG_CONSTANT_TIMES_HC_IN_J
+
+              •  SACKUR_TETRODE_CONSTANT_1_K_100_KPA
+
+              •  SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA
+
+              •  SECOND_RADIATION_CONSTANT
+
+              •  SHIELDED_HELION_GYROMAG_RATIO
+
+              •  SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T
+
+              •  SHIELDED_HELION_MAG_MOM
+
+              •  SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+
+              •  SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+
+              •  SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO
+
+              •  SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO
+
+              •  SHIELDED_PROTON_GYROMAG_RATIO
+
+              •  SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T
+
+              •  SHIELDED_PROTON_MAG_MOM
+
+              •  SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+
+              •  SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+
+              •  SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD
+
+              •  SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT
+
+              •  SPEED_OF_LIGHT_IN_VACUUM
+
+              •  STANDARD_ACCELERATION_OF_GRAVITY
+
+              •  STANDARD_ATMOSPHERE
+
+              •  STANDARD_STATE_PRESSURE
+
+              •  STEFAN_BOLTZMANN_CONSTANT
+
+              •  TAU_COMPTON_WAVELENGTH
+
+              •  TAU_ELECTRON_MASS_RATIO
+
+              •  TAU_ENERGY_EQUIVALENT
+
+              •  TAU_MASS
+
+              •  TAU_MASS_ENERGY_EQUIVALENT
+
+              •  TAU_MASS_IN_U
+
+              •  TAU_MOLAR_MASS
+
+              •  TAU_MUON_MASS_RATIO
+
+              •  TAU_NEUTRON_MASS_RATIO
+
+              •  TAU_PROTON_MASS_RATIO
+
+              •  THOMSON_CROSS_SECTION
+
+              •  TRITON_ELECTRON_MASS_RATIO
+
+              •  TRITON_G_FACTOR
+
+              •  TRITON_MAG_MOM
+
+              •  TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+
+              •  TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+
+              •  TRITON_MASS
+
+              •  TRITON_MASS_ENERGY_EQUIVALENT
+
+              •  TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV
+
+              •  TRITON_MASS_IN_U
+
+              •  TRITON_MOLAR_MASS
+
+              •  TRITON_PROTON_MASS_RATIO
+
+              •  TRITON_RELATIVE_ATOMIC_MASS
+
+              •  TRITON_TO_PROTON_MAG_MOM_RATIO
+
+              •  UNIFIED_ATOMIC_MASS_UNIT
+
+              •  VACUUM_ELECTRIC_PERMITTIVITY
+
+              •  VACUUM_MAG_PERMEABILITY
+
+              •  VON_KLITZING_CONSTANT
+
+              •  WEAK_MIXING_ANGLE
+
+              •  WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT
+
+              •  WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT
+
+              •  W_TO_Z_MASS_RATIO
+
+codata                      23 December 2025                  codata(3)

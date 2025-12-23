@@ -1,0 +1,5430 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fortran &#8212; codata 2.3.2dev0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=754ac078"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/fortran';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="C" href="c.html" />
+    <link rel="prev" title="APIs" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">codata 2.3.2dev0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../getting_started/index.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    APIs
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../references/index.html">
+    Bibliography
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MilanSkocic/codata" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../getting_started/index.html">
+    Getting Started
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="index.html">
+    APIs
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../references/index.html">
+    Bibliography
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MilanSkocic/codata" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Fortran</a></li>
+<li class="toctree-l1"><a class="reference internal" href="c.html">C</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python.html">Python</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">APIs</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">Fortran</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="fortran">
+<h1>Fortran<a class="headerlink" href="#fortran" title="Link to this heading">#</a></h1>
+<section id="codata-3">
+<h2>codata(3)<a class="headerlink" href="#codata-3" title="Link to this heading">#</a></h2>
+<!-- Creator     : groff version 1.23.0 -->
+<!-- CreationDate: Tue Dec 23 14:12:20 2025 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>codata</title>
+
+</head>
+<body>
+
+<h1 align="center">codata</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#EXAMPLE">EXAMPLE</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b> -
+Fundamental physical constants.</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">use codata
+(<i>Fortran</i>) <br>
+#include &quot;codata.h&quot; (<i>C</i>) <br>
+import pycodata (<i>Python</i>)</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">codata is a
+<i>Fortran</i> library providing the fundamental physical
+constants according to CODATA. A <i>C</i> API allows usage
+from <i>C</i>, or can be used as a basis for other wrappers.
+<i>Python</i> wrapper allows easy usage from
+<i>Python</i>.</p>
+
+<p style="margin-left:9%; margin-top: 1em">The latest
+codata constants were released in 2022. All values for the
+codata constants are provided as double precision reals in a
+derived type codata_constant_type. The names are quite long
+and can be aliased with shorter names. A module level
+interface to_real is available for getting the constant
+value or uncertainty of a constant.</p>
+
+<p style="margin-left:9%; margin-top: 1em">The latest
+values (2022) do not have the year as a suffix in their
+name. Older values can be used and they feature the year as
+a suffix in their name.</p>
+
+<h2>EXAMPLE
+<a name="EXAMPLE"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Minimal example
+in <i>Fortran</i>.</p>
+
+<p style="margin-left:9%; margin-top: 1em">program
+example_in_f <br>
+use iso_fortran_env <br>
+use codata <br>
+implicit none</p>
+
+<p style="margin-left:9%; margin-top: 1em">print
+&rsquo;(A)&rsquo;, &rsquo;########## EXAMPLE IN FORTRAN
+##########&rsquo;</p>
+
+<p style="margin-left:9%; margin-top: 1em">print
+&rsquo;(A)&rsquo;, &rsquo;# VERSION&rsquo; <br>
+print *, &quot;version = &quot;, get_version()</p>
+
+<p style="margin-left:9%; margin-top: 1em">print
+&rsquo;(A)&rsquo;, &rsquo;# CONSTANTS&rsquo; <br>
+print *, &quot;c = &quot;,
+SPEED_OF_LIGHT_IN_VACUUM%value</p>
+
+<p style="margin-left:9%; margin-top: 1em">print
+&rsquo;(A)&rsquo;, &rsquo;# UNCERTAINTY&rsquo; <br>
+print *, &quot;u(c) = &quot;,
+SPEED_OF_LIGHT_IN_VACUUM%uncertainty</p>
+
+<p style="margin-left:9%; margin-top: 1em">print
+&rsquo;(A)&rsquo;, &rsquo;# OLDER VALUES&rsquo; <br>
+print &rsquo;(A, F23.16)&rsquo;, &quot;Mu_2022(latest) =
+&quot;, MOLAR_MASS_CONSTANT%value <br>
+print &rsquo;(A, F23.16)&rsquo;, &quot;Mu_2018 = &quot;,
+MOLAR_MASS_CONSTANT_2018%value <br>
+print &rsquo;(A, F23.16)&rsquo;, &quot;Mu_2014 = &quot;,
+MOLAR_MASS_CONSTANT_2014%value <br>
+print &rsquo;(A, F23.16)&rsquo;, &quot;Mu_2010 = &quot;,
+MOLAR_MASS_CONSTANT_2010%value <br>
+end program</p>
+
+<p style="margin-left:9%; margin-top: 1em">Minimal example
+in <i>C</i>.</p>
+
+<p style="margin-left:9%; margin-top: 1em">#include
+&lt;stdio.h&gt; <br>
+#include &quot;codata.h&quot;</p>
+
+<p style="margin-left:9%; margin-top: 1em">int
+main(void){</p>
+
+
+<p style="margin-left:9%; margin-top: 1em">printf(&quot;##########
+EXAMPLE IN C ##########0);</p>
+
+
+<p style="margin-left:9%; margin-top: 1em">printf(&quot;%s0,&quot;#
+VERSION&quot;); <br>
+printf(&quot;version = %s0, codata_get_version());</p>
+
+
+<p style="margin-left:9%; margin-top: 1em">printf(&quot;%s0,&quot;#
+CONSTANTS&quot;); <br>
+printf(&quot;c = %f0, SPEED_OF_LIGHT_IN_VACUUM.value);</p>
+
+
+<p style="margin-left:9%; margin-top: 1em">printf(&quot;%s0,&quot;#
+UNCERTAINTY&quot;); <br>
+printf(&quot;u(c) = %f0,
+SPEED_OF_LIGHT_IN_VACUUM.uncertainty);</p>
+
+
+<p style="margin-left:9%; margin-top: 1em">printf(&quot;%s0,&quot;#
+OLDER VALUES&quot;); <br>
+printf(&quot;Mu_2022(latest) = %23.16f0,
+MOLAR_MASS_CONSTANT.value); <br>
+printf(&quot;Mu_2018 = %23.16f0,
+MOLAR_MASS_CONSTANT_2018.value); <br>
+printf(&quot;Mu_2014 = %23.16f0,
+MOLAR_MASS_CONSTANT_2014.value); <br>
+printf(&quot;Mu_2010 = %23.16f0,
+MOLAR_MASS_CONSTANT_2010.value);</p>
+
+<p style="margin-left:9%; margin-top: 1em">return 0; <br>
+}</p>
+
+<p style="margin-left:9%; margin-top: 1em">Minimal example
+in <i>Python</i></p>
+
+
+<p style="margin-left:9%; margin-top: 1em">r&quot;&quot;&quot;EXAMPLE
+in PYTHON&quot;&quot;&quot; <br>
+import sys <br>
+sys.path.insert(0, &quot;../py/src/&quot;) <br>
+import pycodata</p>
+
+
+<p style="margin-left:9%; margin-top: 1em">print(&quot;##########
+EXAMPLE IN PYTHON ##########&quot;) <br>
+print(&quot;# VERSION&quot;) <br>
+print(f&quot;version = {pycodata.__version__}&quot;)</p>
+
+<p style="margin-left:9%; margin-top: 1em">print(&quot;#
+Constants&quot;) <br>
+print(f&quot;c =&quot;,
+pycodata.SPEED_OF_LIGHT_IN_VACUUM[&quot;value&quot;])</p>
+
+<p style="margin-left:9%; margin-top: 1em">print(&quot;#
+UNCERTAINTY&quot;) <br>
+print(f&quot;u(c) = &quot;,
+pycodata.SPEED_OF_LIGHT_IN_VACUUM[&quot;uncertainty&quot;])</p>
+
+<p style="margin-left:9%; margin-top: 1em">print(&quot;#
+OLDER VALUES&quot;) <br>
+print(f&quot;Mu_2022 = &quot;,
+pycodata.MOLAR_MASS_CONSTANT[&quot;value&quot;]) <br>
+print(f&quot;Mu_2018 = &quot;,
+pycodata.constants_2018.MOLAR_MASS_CONSTANT_2018[&quot;value&quot;])
+<br>
+print(f&quot;Mu_2014 = &quot;,
+pycodata.constants_2014.MOLAR_MASS_CONSTANT_2014[&quot;value&quot;])
+<br>
+print(f&quot;Mu_2010 = &quot;,
+pycodata.constants_2010.MOLAR_MASS_CONSTANT_2010[&quot;value&quot;])</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">List of
+constants:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ALPHA_PARTICLE_ELECTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ALPHA_PARTICLE_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ALPHA_PARTICLE_MASS_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ALPHA_PARTICLE_MOLAR_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ALPHA_PARTICLE_PROTON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ALPHA_PARTICLE_RMS_CHARGE_RADIUS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ANGSTROM_STAR</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_ACTION</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_CHARGE</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_CHARGE_DENSITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_CURRENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_ELECTRIC_FIELD</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_ENERGY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_FORCE</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_LENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_MAG_DIPOLE_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_MAG_FLUX_DENSITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_MAGNETIZABILITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_MOMENTUM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_PERMITTIVITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_TIME</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ATOMIC_UNIT_OF_VELOCITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>AVOGADRO_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOHR_MAGNETON</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOHR_MAGNETON_IN_EV_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOHR_MAGNETON_IN_HZ_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOHR_MAGNETON_IN_K_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOHR_RADIUS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOLTZMANN_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOLTZMANN_CONSTANT_IN_EV_K</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOLTZMANN_CONSTANT_IN_HZ_K</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CHARACTERISTIC_IMPEDANCE_OF_VACUUM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CLASSICAL_ELECTRON_RADIUS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONDUCTANCE_QUANTUM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONVENTIONAL_VALUE_OF_AMPERE_90</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONVENTIONAL_VALUE_OF_COULOMB_90</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONVENTIONAL_VALUE_OF_FARAD_90</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONVENTIONAL_VALUE_OF_HENRY_90</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONVENTIONAL_VALUE_OF_OHM_90</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONVENTIONAL_VALUE_OF_VOLT_90</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>CONVENTIONAL_VALUE_OF_WATT_90</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>COPPER_X_UNIT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_ELECTRON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_ELECTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_G_FACTOR</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_MAG_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_MASS_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_MASS_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_MOLAR_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_NEUTRON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_PROTON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_PROTON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_RELATIVE_ATOMIC_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>DEUTERON_RMS_CHARGE_RADIUS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_CHARGE_TO_MASS_QUOTIENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_DEUTERON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_DEUTERON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_G_FACTOR</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_GYROMAG_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_GYROMAG_RATIO_IN_MHZ_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_HELION_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MAG_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MAG_MOM_ANOMALY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MASS_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MASS_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MOLAR_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MUON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_MUON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_NEUTRON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_NEUTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_PROTON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_PROTON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_RELATIVE_ATOMIC_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_TAU_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_TRITON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_VOLT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_VOLT_HARTREE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_VOLT_HERTZ_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_VOLT_JOULE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_VOLT_KELVIN_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELECTRON_VOLT_KILOGRAM_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELEMENTARY_CHARGE</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>ELEMENTARY_CHARGE_OVER_H_BAR</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>FARADAY_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>FERMI_COUPLING_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>FINE_STRUCTURE_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>FIRST_RADIATION_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HARTREE_ELECTRON_VOLT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HARTREE_ENERGY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HARTREE_ENERGY_IN_EV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HARTREE_HERTZ_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HARTREE_INVERSE_METER_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HARTREE_JOULE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HARTREE_KELVIN_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HARTREE_KILOGRAM_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_ELECTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_G_FACTOR</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_MAG_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_MASS_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_MASS_ENERGY_EQUIVALENT_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_MASS_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_MOLAR_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_PROTON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_RELATIVE_ATOMIC_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HELION_SHIELDING_SHIFT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HERTZ_ELECTRON_VOLT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HERTZ_HARTREE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HERTZ_INVERSE_METER_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HERTZ_JOULE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HERTZ_KELVIN_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HERTZ_KILOGRAM_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>INVERSE_FINE_STRUCTURE_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>INVERSE_METER_HARTREE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>INVERSE_METER_HERTZ_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>INVERSE_METER_JOULE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>INVERSE_METER_KELVIN_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>INVERSE_METER_KILOGRAM_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>INVERSE_OF_CONDUCTANCE_QUANTUM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>JOSEPHSON_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>JOULE_ELECTRON_VOLT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>JOULE_HARTREE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>JOULE_HERTZ_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>JOULE_INVERSE_METER_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>JOULE_KELVIN_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>JOULE_KILOGRAM_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KELVIN_ELECTRON_VOLT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KELVIN_HARTREE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KELVIN_HERTZ_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KELVIN_INVERSE_METER_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KELVIN_JOULE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KELVIN_KILOGRAM_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KILOGRAM_ELECTRON_VOLT_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KILOGRAM_HARTREE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KILOGRAM_HERTZ_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KILOGRAM_INVERSE_METER_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KILOGRAM_JOULE_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>KILOGRAM_KELVIN_RELATIONSHIP</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>LATTICE_PARAMETER_OF_SILICON</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>LATTICE_SPACING_OF_IDEAL_SI_220</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>LOSCHMIDT_CONSTANT_273_15_K_100_KPA</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>LUMINOUS_EFFICACY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MAG_FLUX_QUANTUM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MOLAR_GAS_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MOLAR_MASS_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MOLAR_MASS_OF_CARBON_12</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MOLAR_PLANCK_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MOLAR_VOLUME_OF_SILICON</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MOLYBDENUM_X_UNIT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_ELECTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_G_FACTOR</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_MAG_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_MAG_MOM_ANOMALY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_MASS_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_MASS_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_MOLAR_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_NEUTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_PROTON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_PROTON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>MUON_TAU_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_ACTION</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_ACTION_IN_EV_S</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_ENERGY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_ENERGY_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_LENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_MOMENTUM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_TIME</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NATURAL_UNIT_OF_VELOCITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_ELECTRON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_ELECTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_G_FACTOR</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_GYROMAG_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_GYROMAG_RATIO_IN_MHZ_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_MAG_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_MASS_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_MASS_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_MOLAR_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_MUON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_PROTON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_PROTON_MASS_DIFFERENCE</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+
+<p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV</p> </td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_PROTON_MASS_DIFFERENCE_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_PROTON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_RELATIVE_ATOMIC_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_TAU_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEWTONIAN_CONSTANT_OF_GRAVITATION</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NUCLEAR_MAGNETON</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NUCLEAR_MAGNETON_IN_EV_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NUCLEAR_MAGNETON_IN_K_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>NUCLEAR_MAGNETON_IN_MHZ_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PLANCK_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PLANCK_CONSTANT_IN_EV_HZ</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PLANCK_LENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PLANCK_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PLANCK_TEMPERATURE</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PLANCK_TIME</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_CHARGE_TO_MASS_QUOTIENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_ELECTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_G_FACTOR</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_GYROMAG_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_GYROMAG_RATIO_IN_MHZ_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MAG_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MAG_SHIELDING_CORRECTION</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MASS_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MASS_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MOLAR_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_MUON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_NEUTRON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_NEUTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_RELATIVE_ATOMIC_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_RMS_CHARGE_RADIUS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>PROTON_TAU_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>QUANTUM_OF_CIRCULATION</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>QUANTUM_OF_CIRCULATION_TIMES_2</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>REDUCED_COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>REDUCED_MUON_COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>REDUCED_NEUTRON_COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>REDUCED_PLANCK_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>REDUCED_PLANCK_CONSTANT_IN_EV_S</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>REDUCED_PROTON_COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>REDUCED_TAU_COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>RYDBERG_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>RYDBERG_CONSTANT_TIMES_C_IN_HZ</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>RYDBERG_CONSTANT_TIMES_HC_IN_EV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>RYDBERG_CONSTANT_TIMES_HC_IN_J</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SACKUR_TETRODE_CONSTANT_1_K_100_KPA</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SECOND_RADIATION_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_HELION_GYROMAG_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_HELION_MAG_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_PROTON_GYROMAG_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_PROTON_MAG_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>SPEED_OF_LIGHT_IN_VACUUM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>STANDARD_ACCELERATION_OF_GRAVITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>STANDARD_ATMOSPHERE</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>STANDARD_STATE_PRESSURE</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>STEFAN_BOLTZMANN_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_COMPTON_WAVELENGTH</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_ELECTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_MASS_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_MASS_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_MOLAR_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_MUON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_NEUTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TAU_PROTON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>THOMSON_CROSS_SECTION</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_ELECTRON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_G_FACTOR</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_MAG_MOM</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_MASS_ENERGY_EQUIVALENT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_MASS_IN_U</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_MOLAR_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_PROTON_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_RELATIVE_ATOMIC_MASS</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>TRITON_TO_PROTON_MAG_MOM_RATIO</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>UNIFIED_ATOMIC_MASS_UNIT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>VACUUM_ELECTRIC_PERMITTIVITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>VACUUM_MAG_PERMEABILITY</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>VON_KLITZING_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>WEAK_MIXING_ANGLE</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT</p></td>
+<td width="8%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="70%">
+
+
+<p>W_TO_Z_MASS_RATIO</p></td>
+<td width="8%">
+</td></tr>
+ </table>
+<hr>
+</body>
+</html>
+</section>
+<section id="get-version-3">
+<h2>get_version(3)<a class="headerlink" href="#get-version-3" title="Link to this heading">#</a></h2>
+<!-- Creator     : groff version 1.23.0 -->
+<!-- CreationDate: Tue Dec 23 14:12:21 2025 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>get_version</title>
+
+</head>
+<body>
+
+<h1 align="center">get_version</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#LIBRARY">LIBRARY</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#RETURN VALUE">RETURN VALUE</a><br>
+<a href="#EXAMPLE">EXAMPLE</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+
+<p style="margin-left:9%; margin-top: 1em"><b>get_version</b>
+- Get the version.</p>
+
+<h2>LIBRARY
+<a name="LIBRARY"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">codata
+(libcodata, <b>-lcodata</b>)</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">function
+<b>get_version</b>()result(<i>fptr</i>)</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Get the version
+of library.</p>
+
+<h2>RETURN VALUE
+<a name="RETURN VALUE"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em"><b>o
+character(len=:), pointer ::</b> <i>fptr</i></p>
+
+<p style="margin-left:18%;">Version as a deferred-length
+pointer.</p>
+
+<h2>EXAMPLE
+<a name="EXAMPLE"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Minimal
+example</p>
+
+<p style="margin-left:9%; margin-top: 1em">print *,
+get_version()</p>
+<hr>
+</body>
+</html>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">APIs</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="c.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">C</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-3">codata(3)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-version-3">get_version(3)</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/api/fortran.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2022-2024, Milan Skocic.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

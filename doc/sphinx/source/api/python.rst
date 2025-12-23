@@ -1,0 +1,6 @@
+******
+Python
+******
+
+.. automodule:: pycodata
+   :members:

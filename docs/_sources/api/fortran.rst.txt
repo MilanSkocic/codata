@@ -1,0 +1,13 @@
+*******
+Fortran
+*******
+
+codata(3)
+=========
+.. raw:: html
+   :file: ../../../man/codata.3.html
+
+get_version(3)
+==============
+.. raw:: html
+   :file: ../../../man/codata_get_version.3.html

@@ -1,17 +1,15 @@
-include ../make.in
+.PHONY: man html pdf clean
 
-all: 
-	./build.sh pdf html
+all: man pdf html
 
-none:
-	./build.sh
+man:
+	make -C man
 
 pdf:
-	./build.sh pdf
+	make -C sphinx latexpdf
 
 html:
-	./build.sh html
+	make -C sphinx html
 
 clean:
-	rm -rf build/*
-	rm -f *.ilg 
+	make -C sphinx clean
