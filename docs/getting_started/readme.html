@@ -387,13 +387,12 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">codata</span></code> is a Fortran library providing the fundamental physical
 constants according to
 <a class="reference external" href="https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants">CODATA</a>.
-[&#64;mohr2012; &#64;mohr2016; &#64;mohr2021; &#64;mohr2024; &#64;mohr2025]. A C API allows
-usage from C, or can be used as a basis for other wrappers. Python
-wrapper allows easy usage from Python.</p>
+A C API allows usage from C, or can be used as a basis for other wrappers.
+Python wrapper allows easy usage from Python.</p>
 <p>To use <code class="docutils literal notranslate"><span class="pre">codata</span></code> within your <a class="reference external" href="https://github.com/fortran-lang/fpm">fpm</a>
 project, add the following to your <code class="docutils literal notranslate"><span class="pre">fpm.toml</span></code> file:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        [dependencies]
-        codata = { git=&quot;https://github.com/MilanSkocic/codata.git&quot; }
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">dependencies</span><span class="p">]</span>
+<span class="n">codata</span> <span class="o">=</span> <span class="p">{</span> <span class="n">git</span><span class="o">=</span><span class="s2">&quot;https://github.com/MilanSkocic/codata.git&quot;</span> <span class="p">}</span>
 </pre></div>
 </div>
 <p>The latest codata constants
@@ -409,10 +408,10 @@ directly in your sources you may be interested by
 </section>
 <section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h2>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        gfortran&gt;=10
-        fpm&gt;=0.8
-        stdlib&gt;=0.5
-        fypp&gt;=3.0
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gfortran</span><span class="o">&gt;=</span><span class="mi">10</span>
+<span class="n">fpm</span><span class="o">&gt;=</span><span class="mf">0.8</span>
+<span class="n">stdlib</span><span class="o">&gt;=</span><span class="mf">0.5</span>
+<span class="n">fypp</span><span class="o">&gt;=</span><span class="mf">3.0</span>
 </pre></div>
 </div>
 </section>
@@ -429,11 +428,11 @@ needs to be installed.</p></li>
 </ul>
 <p>Build: the configuration file will set all the environment variables
 necessary for the compilation</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        chmod +x configure.sh
-        ./configure.sh
-        make
-        make install
-        make uninstall
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">configure</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">configure</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">make</span>
+<span class="n">make</span> <span class="n">install</span>
+<span class="n">make</span> <span class="n">uninstall</span>
 </pre></div>
 </div>
 </section>

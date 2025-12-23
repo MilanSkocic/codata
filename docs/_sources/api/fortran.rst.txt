@@ -4,10 +4,8 @@ Fortran
 
 codata(3)
 =========
-.. raw:: html
-   :file: ../../../man/codata.3.html
+.. include:: ../../../man/codata.3.rst
 
 get_version(3)
 ==============
-.. raw:: html
-   :file: ../../../man/codata_get_version.3.html
+.. include:: ../../../man/codata_get_version.3.rst
