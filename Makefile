@@ -43,7 +43,7 @@ $(FPM_LIBNAME): sources build copy_a shared
 
 # ---------------------------------------------------------------------
 # SOURCES
-sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
+sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB) prep
 
 ./src/%.f90: ./data/%.toml
 	$(FPM_PYGEN) $(GEN_F) $< $@
@@ -62,6 +62,10 @@ $(C_HEADER):
 
 ./stdlib/stdlib_codata.f90: ./src/codata_constants_2022.f90
 	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
+
+.PHONY: prep
+prep:
+	make -C prep
 # ---------------------------------------------------------------------
 
 
@@ -134,11 +138,11 @@ uninstall:
 # ---------------------------------------------------------------------
 # OTHERS
 doc:
-	make -C doc/sphinx html
+	make -C doc
 
 docs:
 	rm -rf docs/*
-	cp -rf doc/sphinx/build/html/* ./docs/
+	cp -rf doc/build/html/* ./docs/
 
 logo:
 	make -C media
