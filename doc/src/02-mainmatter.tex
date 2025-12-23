@@ -1,44 +1,30 @@
 %------------------------------------------------------------------------------
-\chapter{Getting Starter}
+\chapter{Getting Started}
 \input{src/readme.tex}
-
-
-
-
 
 
 %------------------------------------------------------------------------------
 \chapter{Examples}
+    \section{Fortran}
+        \inputminted{Fortran}{../example/example.f90}
 
-\section{Fortran}
-\inputminted{Fortran}{../example/example.f90}
+    \section{C}
+        \inputminted{C}{../example/example.c}
 
-\section{C}
-\inputminted{C}{../example/example.c}
-
-\section{Python}
-\inputminted{Python}{../example/example.py}
-
-
-
-
+    \section{Python}
+        \inputminted{Python}{../example/example.py}
 
 
 %------------------------------------------------------------------------------
-\chapter{API}
-
-\section{Fortran}
-
-\section{C}
-
-\section{Python}
-
-
-
-
-
+\chapter{Man Pages}
+    \input{build/latex/codata.tex}
 
 %------------------------------------------------------------------------------
 \appendix
 \chapter{Changelog}
-\input{src/CHANGELOG.tex}
+    \input{src/CHANGELOG.tex}
+
+\chapter{C header}
+{\footnotesize
+    \inputminted{C}{../include/codata.h}
+}
