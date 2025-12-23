@@ -12,7 +12,7 @@ DOC_MK4CFG=make4ht.cfg
 DOC_MK4BUILD=make4ht.mk4
 DOC_TEXINFO=makeinfo
 PREP_DOC_DIR=../prep/doc
-DOC_NAME="${FOM_NAME:-ecx}"
+DOC_NAME="${FPM_NAME:-codata}"
 
 GIT="bibfiles drawings"
 
@@ -84,7 +84,7 @@ dowload_dependencies () {
         cp -fv $url/$target ./src/figures/
 
         url=$DOC_DEP_DIR/bibfiles
-        target=references.bib
+        target=codata.bib
         cp -fv $url/$target ./src/references.bib
         echo "done."
     fi
@@ -168,7 +168,7 @@ make_latex () {
     echo -n "Generating latex documentation..."
     DOC="$DOC_BUILD_DIR/latex/$DOC_NAME.tex"
     rm $FLAGS_RM $DOC  >/dev/null 2>&1
-    files=$(ls "$DOC_BUILD_DIR/latex/$DOC_NAME""_"*.tex)
+    files=$(ls $DOC_BUILD_DIR/latex/$DOC_NAME*.tex)
     echo "" > $DOC
     for file in $files; do
         man_name=$(basename -s .tex $file)
@@ -176,7 +176,7 @@ make_latex () {
         man_name_nosec=$(echo $man_name | cut -d "." -f 1)
         man_title=$(echo $man_name_nosec | sed "s/$DOC_NAME\_//g")
         man_title2=$(echo $man_title | sed -E 's/_/\\_/g')
-        echo "\\subsection{$man_title2}\\index{$man_title2}\\label{subsec_$man_title}" >> $DOC
+        echo "\\section{$man_title2}\\index{$man_title2}\\label{sec_$man_title}" >> $DOC
         echo "\\input{build/latex/$(basename $file)}" >> $DOC
         echo "" >> $DOC
     done
@@ -195,9 +195,9 @@ make_markdown () {
 
 make_dirs
 dowload_dependencies
-#make_man
-#make_txt
-#make_latex
+make_man
+make_txt
+make_latex
 make_markdown
 
 
