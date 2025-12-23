@@ -5,8 +5,9 @@ CODATA
    :maxdepth: 1
    :hidden:
 
-   getting_started/index
    api/index
+   examples/index.rst
+   changelog/index.rst
    references/index.rst
 
 .. image:: ../../../media/logo.png
@@ -15,14 +16,6 @@ CODATA
    
 Fundamental physical constants for Modern Fortran according to
 `CODATA <https://pml.nist.gov/cuu/Constants/>`_.
-
-
-The latest codata constants were released in 2022 by the `NIST <https://pml.nist.gov/cuu/Constants/>`_.
-All values for the codata constants are provided as double precision reals in a derived type
-`codata_constant_type`.
-The names are quite long and can be aliased with shorter names.
-A module level interface `to_real` is 
-available for getting the constant value or uncertainty of a constant. 
 
 .. only:: html
     
