@@ -3,9 +3,9 @@
 `codata` is a Fortran library providing the fundamental physical
 constants according to
 [CODATA](https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants).
-[@mohr2012-1; @mohr2016-1; @mohr2021-1; @mohr2024-2; @mohr2025-1]. A C
-API allows usage from C, or can be used as a basis for other wrappers.
-Python wrapper allows easy usage from Python.
+[@mohr2012; @mohr2016; @mohr2021; @mohr2024; @mohr2025]. A C API allows
+usage from C, or can be used as a basis for other wrappers. Python
+wrapper allows easy usage from Python.
 
 The latest codata constants were released in 2022 by the
 [NIST](https://pml.nist.gov/cuu/Constants/). All values for the codata
