@@ -1,40 +1,20 @@
 module codata__api
-    !! API.
+    ! API.
 use codata__version, only: version
 implicit none
 private
 
-character(len=:), allocatable, target, private :: version_f
+character(len=:), allocatable, target, private :: version_f ! Version
 
 public :: get_version
 
 contains
 
 
-! NAME
-!     get_version - Get the version.
-! 
-! LIBRARY
-!     codata (libcodata, -lcodata)
-! 
-! SYNOPSIS
-!     function get_version()result(fptr)
-! 
-! DESCRIPTION
-!     Get the version of library.
-! 
-! RETURN VALUE
-!     o character(len=:), pointer :: fptr    Version as a deferred-length pointer.
-! 
-! EXAMPLE
-!     Minimal example
-! 
-!         print *, get_version()
 function get_version()result(fptr)
     !! Get the version.
 
-    character(len=:), pointer :: fptr
-        !! Fortran pointer to a string indicating the version.
+    character(len=:), pointer :: fptr !! Fortran pointer to a string indicating the version.
 
     if(allocated(version_f))then
         deallocate(version_f)
