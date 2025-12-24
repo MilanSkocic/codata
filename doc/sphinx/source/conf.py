@@ -30,13 +30,18 @@ extensions = [
     'myst_parser',
     'sphinxcontrib.bibtex',
     'numpydoc',
-]
+    "sphinxfortran.fortran_domain",
+    "sphinxfortran.fortran_autodoc"
+    ]
 bibtex_bibfiles = ["./references/references.bib"]
 bibtex_default_style = 'unsrt'
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # fspx_docstring_character = ""
+
+fortran_src=["../../src/*.f90"]
+fortran_ext=['f90', 'f95']
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -58,3 +63,8 @@ html_theme_options = {
 # If true, the current module name will be prepended to all description
 # unit titles (such as .. function::).
 add_module_names = False
+
+
+man_pages = [
+    ('man/index', 'codata', 'Fundamental physical constants', [author], 3),
+]

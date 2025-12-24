@@ -4,8 +4,9 @@ CODATA
 .. toctree::
    :maxdepth: 1
    :hidden:
-
-   api/index
+    
+   man/index.rst 
+   api/index.rst
    examples/index.rst
    changelog/index.rst
    references/index.rst
@@ -20,4 +21,3 @@ Fundamental physical constants for Modern Fortran according to
 .. only:: html
     
     A pdf version of the documentation is also available :download:`codata.pdf <../build/latex/codata.pdf>`.
-
