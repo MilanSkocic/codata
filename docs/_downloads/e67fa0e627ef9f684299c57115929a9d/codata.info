@@ -864,12 +864,6 @@ File: codata.info,  Node: Fortran,  Next: C,  Up: APIs
 2.1 Fortran
 ===========
 
-FORD documentation(1)
-
-   ---------- Footnotes ----------
-
-   (1) https://milanskocic.github.io/codata/ford/index.html
-
 
 File: codata.info,  Node: C,  Next: Python,  Prev: Fortran,  Up: APIs
 
@@ -3074,173 +3068,172 @@ Ref: api/fortran doc16631
 Ref: a16631
 Ref: api/fortran fortran16631
 Ref: b16631
-Ref: Fortran-Footnote-116715
-Node: C16776
-Ref: api/c doc16849
-Ref: c16849
-Ref: api/c c16849
-Ref: d16849
-Node: Python108848
-Ref: api/python doc108905
-Ref: e108905
-Ref: api/python module-pycodata108905
-Ref: 0108905
-Ref: api/python python108905
-Ref: f108905
-Node: Examples109202
-Ref: examples/index doc109281
-Ref: 10109281
-Ref: examples/index examples109281
-Ref: 11109281
-Node: Fortran<2>109369
-Ref: examples/index fortran109437
-Ref: 12109437
-Node: C<2>110298
-Ref: examples/index c110384
-Ref: 13110384
-Node: Python<2>111220
-Ref: examples/index python111287
-Ref: 14111287
-Node: Changelog112039
-Ref: changelog/index doc112133
-Ref: 15112133
-Ref: changelog/index changelog112133
-Ref: 16112133
-Node: 2 3 1112586
-Ref: changelog/index id1112651
-Ref: 17112651
-Node: 2 3 0112878
-Ref: changelog/index id2112957
-Ref: 18112957
-Ref: 2 3 0-Footnote-1113105
-Node: 2 2 0113160
-Ref: changelog/index id3113239
-Ref: 19113239
-Ref: 2 2 0-Footnote-1113538
-Ref: 2 2 0-Footnote-2113578
-Node: 2 1 1113633
-Ref: changelog/index id4113712
-Ref: 1a113712
-Ref: 2 1 1-Footnote-1113877
-Node: 2 1 0113932
-Ref: changelog/index id5114011
-Ref: 1b114011
-Ref: 2 1 0-Footnote-1114241
-Node: 2 0 1114296
-Ref: changelog/index id6114375
-Ref: 1c114375
-Ref: 2 0 1-Footnote-1114514
-Node: 2 0 0114569
-Ref: changelog/index id7114648
-Ref: 1d114648
-Ref: 2 0 0-Footnote-1115092
-Node: 1 2 2115147
-Ref: changelog/index id8115226
-Ref: 1e115226
-Node: 1 2 1115397
-Ref: changelog/index id9115476
-Ref: 1f115476
-Ref: 1 2 1-Footnote-1115634
-Node: 1 2 0115689
-Ref: changelog/index id10115768
-Ref: 20115768
-Ref: 1 2 0-Footnote-1115913
-Node: 1 1 0115968
-Ref: changelog/index id11116047
-Ref: 21116047
-Ref: 1 1 0-Footnote-1116397
-Ref: 1 1 0-Footnote-2116448
-Ref: 1 1 0-Footnote-3116497
-Node: 1 0 0116552
-Ref: changelog/index id12116632
-Ref: 22116632
-Ref: 1 0 0-Footnote-1117067
-Ref: 1 0 0-Footnote-2117122
-Node: 0 10 0117164
-Ref: changelog/index id13117244
-Ref: 23117244
-Ref: 0 10 0-Footnote-1117683
-Ref: 0 10 0-Footnote-2117738
-Node: 0 9 0117780
-Ref: changelog/index id14117860
-Ref: 24117860
-Ref: 0 9 0-Footnote-1118259
-Ref: 0 9 0-Footnote-2118314
-Node: 0 8 2118356
-Ref: changelog/index id15118435
-Ref: 25118435
-Ref: 0 8 2-Footnote-1118809
-Ref: 0 8 2-Footnote-2118864
-Node: 0 8 1118906
-Ref: changelog/index id16118985
-Ref: 26118985
-Ref: 0 8 1-Footnote-1119201
-Ref: 0 8 1-Footnote-2119256
-Node: 0 8 0119298
-Ref: changelog/index id17119377
-Ref: 27119377
-Ref: 0 8 0-Footnote-1120117
-Ref: 0 8 0-Footnote-2120172
-Node: 0 7 1120214
-Ref: changelog/index id18120293
-Ref: 28120293
-Ref: 0 7 1-Footnote-1120527
-Ref: 0 7 1-Footnote-2120582
-Node: 0 7 0120624
-Ref: changelog/index id19120703
-Ref: 29120703
-Ref: 0 7 0-Footnote-1120987
-Ref: 0 7 0-Footnote-2121042
-Node: 0 6 0121084
-Ref: changelog/index id20121163
-Ref: 2a121163
-Ref: 0 6 0-Footnote-1121375
-Ref: 0 6 0-Footnote-2121430
-Node: 0 5 0121472
-Ref: changelog/index id21121551
-Ref: 2b121551
-Ref: 0 5 0-Footnote-1121858
-Ref: 0 5 0-Footnote-2121913
-Node: 0 4 0121955
-Ref: changelog/index id22122034
-Ref: 2c122034
-Ref: 0 4 0-Footnote-1122281
-Ref: 0 4 0-Footnote-2122336
-Node: 0 3 0122378
-Ref: changelog/index id23122457
-Ref: 2d122457
-Ref: 0 3 0-Footnote-1122627
-Ref: 0 3 0-Footnote-2122682
-Node: 0 2 1122724
-Ref: changelog/index id24122803
-Ref: 2e122803
-Ref: 0 2 1-Footnote-1123077
-Ref: 0 2 1-Footnote-2123132
-Node: 0 2 0123174
-Ref: changelog/index id25123253
-Ref: 2f123253
-Ref: 0 2 0-Footnote-1123543
-Ref: 0 2 0-Footnote-2123598
-Node: 0 1 0123640
-Ref: changelog/index id26123705
-Ref: 30123705
-Ref: references/index id2124010
-Ref: 31124010
-Ref: references/index id3124176
-Ref: 32124176
-Ref: references/index id4124364
-Ref: 33124364
-Ref: references/index id5124530
-Ref: 34124530
-Ref: references/index id6124770
-Ref: 35124770
-Ref: 0 1 0-Footnote-1125271
-Ref: 0 1 0-Footnote-2125326
-Ref: 0 1 0-Footnote-3125368
-Ref: 0 1 0-Footnote-4125418
-Ref: 0 1 0-Footnote-5125471
-Node: Python Module Index125515
-Node: Index125672
+Node: C16656
+Ref: api/c doc16729
+Ref: c16729
+Ref: api/c c16729
+Ref: d16729
+Node: Python108728
+Ref: api/python doc108785
+Ref: e108785
+Ref: api/python module-pycodata108785
+Ref: 0108785
+Ref: api/python python108785
+Ref: f108785
+Node: Examples109082
+Ref: examples/index doc109161
+Ref: 10109161
+Ref: examples/index examples109161
+Ref: 11109161
+Node: Fortran<2>109249
+Ref: examples/index fortran109317
+Ref: 12109317
+Node: C<2>110178
+Ref: examples/index c110264
+Ref: 13110264
+Node: Python<2>111100
+Ref: examples/index python111167
+Ref: 14111167
+Node: Changelog111919
+Ref: changelog/index doc112013
+Ref: 15112013
+Ref: changelog/index changelog112013
+Ref: 16112013
+Node: 2 3 1112466
+Ref: changelog/index id1112531
+Ref: 17112531
+Node: 2 3 0112758
+Ref: changelog/index id2112837
+Ref: 18112837
+Ref: 2 3 0-Footnote-1112985
+Node: 2 2 0113040
+Ref: changelog/index id3113119
+Ref: 19113119
+Ref: 2 2 0-Footnote-1113418
+Ref: 2 2 0-Footnote-2113458
+Node: 2 1 1113513
+Ref: changelog/index id4113592
+Ref: 1a113592
+Ref: 2 1 1-Footnote-1113757
+Node: 2 1 0113812
+Ref: changelog/index id5113891
+Ref: 1b113891
+Ref: 2 1 0-Footnote-1114121
+Node: 2 0 1114176
+Ref: changelog/index id6114255
+Ref: 1c114255
+Ref: 2 0 1-Footnote-1114394
+Node: 2 0 0114449
+Ref: changelog/index id7114528
+Ref: 1d114528
+Ref: 2 0 0-Footnote-1114972
+Node: 1 2 2115027
+Ref: changelog/index id8115106
+Ref: 1e115106
+Node: 1 2 1115277
+Ref: changelog/index id9115356
+Ref: 1f115356
+Ref: 1 2 1-Footnote-1115514
+Node: 1 2 0115569
+Ref: changelog/index id10115648
+Ref: 20115648
+Ref: 1 2 0-Footnote-1115793
+Node: 1 1 0115848
+Ref: changelog/index id11115927
+Ref: 21115927
+Ref: 1 1 0-Footnote-1116277
+Ref: 1 1 0-Footnote-2116328
+Ref: 1 1 0-Footnote-3116377
+Node: 1 0 0116432
+Ref: changelog/index id12116512
+Ref: 22116512
+Ref: 1 0 0-Footnote-1116947
+Ref: 1 0 0-Footnote-2117002
+Node: 0 10 0117044
+Ref: changelog/index id13117124
+Ref: 23117124
+Ref: 0 10 0-Footnote-1117563
+Ref: 0 10 0-Footnote-2117618
+Node: 0 9 0117660
+Ref: changelog/index id14117740
+Ref: 24117740
+Ref: 0 9 0-Footnote-1118139
+Ref: 0 9 0-Footnote-2118194
+Node: 0 8 2118236
+Ref: changelog/index id15118315
+Ref: 25118315
+Ref: 0 8 2-Footnote-1118689
+Ref: 0 8 2-Footnote-2118744
+Node: 0 8 1118786
+Ref: changelog/index id16118865
+Ref: 26118865
+Ref: 0 8 1-Footnote-1119081
+Ref: 0 8 1-Footnote-2119136
+Node: 0 8 0119178
+Ref: changelog/index id17119257
+Ref: 27119257
+Ref: 0 8 0-Footnote-1119997
+Ref: 0 8 0-Footnote-2120052
+Node: 0 7 1120094
+Ref: changelog/index id18120173
+Ref: 28120173
+Ref: 0 7 1-Footnote-1120407
+Ref: 0 7 1-Footnote-2120462
+Node: 0 7 0120504
+Ref: changelog/index id19120583
+Ref: 29120583
+Ref: 0 7 0-Footnote-1120867
+Ref: 0 7 0-Footnote-2120922
+Node: 0 6 0120964
+Ref: changelog/index id20121043
+Ref: 2a121043
+Ref: 0 6 0-Footnote-1121255
+Ref: 0 6 0-Footnote-2121310
+Node: 0 5 0121352
+Ref: changelog/index id21121431
+Ref: 2b121431
+Ref: 0 5 0-Footnote-1121738
+Ref: 0 5 0-Footnote-2121793
+Node: 0 4 0121835
+Ref: changelog/index id22121914
+Ref: 2c121914
+Ref: 0 4 0-Footnote-1122161
+Ref: 0 4 0-Footnote-2122216
+Node: 0 3 0122258
+Ref: changelog/index id23122337
+Ref: 2d122337
+Ref: 0 3 0-Footnote-1122507
+Ref: 0 3 0-Footnote-2122562
+Node: 0 2 1122604
+Ref: changelog/index id24122683
+Ref: 2e122683
+Ref: 0 2 1-Footnote-1122957
+Ref: 0 2 1-Footnote-2123012
+Node: 0 2 0123054
+Ref: changelog/index id25123133
+Ref: 2f123133
+Ref: 0 2 0-Footnote-1123423
+Ref: 0 2 0-Footnote-2123478
+Node: 0 1 0123520
+Ref: changelog/index id26123585
+Ref: 30123585
+Ref: references/index id2123890
+Ref: 31123890
+Ref: references/index id3124056
+Ref: 32124056
+Ref: references/index id4124244
+Ref: 33124244
+Ref: references/index id5124410
+Ref: 34124410
+Ref: references/index id6124650
+Ref: 35124650
+Ref: 0 1 0-Footnote-1125151
+Ref: 0 1 0-Footnote-2125206
+Ref: 0 1 0-Footnote-3125248
+Ref: 0 1 0-Footnote-4125298
+Ref: 0 1 0-Footnote-5125351
+Node: Python Module Index125395
+Node: Index125552
 
 End Tag Table
 
