@@ -30,8 +30,6 @@ extensions = [
     'myst_parser',
     'sphinxcontrib.bibtex',
     'numpydoc',
-    "sphinxfortran.fortran_domain",
-    "sphinxfortran.fortran_autodoc"
     ]
 bibtex_bibfiles = ["./references/references.bib"]
 bibtex_default_style = 'unsrt'
