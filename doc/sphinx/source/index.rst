@@ -20,4 +20,10 @@ Fundamental physical constants for Modern Fortran according to
 
 .. only:: html
     
-    A pdf version of the documentation is also available :download:`codata.pdf <../build/latex/codata.pdf>`.
+    - MAN PAGE: :download:`codata.3 <../build/man/codata.3>`.
+    
+    - INFO: :download:`codata.info <../build/texinfo/codata.info>`.
+    
+    - PDF: :download:`codata.pdf <../build/latex/codata.pdf>`.
+    
+    
