@@ -43,7 +43,7 @@ $(FPM_LIBNAME): sources build copy_a shared
 
 # ---------------------------------------------------------------------
 # SOURCES
-sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB) prep
+sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
 
 ./src/%.f90: ./data/%.toml
 	$(FPM_PYGEN) $(GEN_F) $< $@
@@ -63,9 +63,6 @@ $(C_HEADER):
 ./stdlib/stdlib_codata.f90: ./src/codata_constants_2022.f90
 	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
 
-.PHONY: prep
-prep:
-	make -C prep
 # ---------------------------------------------------------------------
 
 
