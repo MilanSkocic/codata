@@ -2,32 +2,11 @@
 Fortran
 *******
 
-codata
-======
-.. f:automodule:: codata
+.. only:: html 
 
+    `FORD documentation <../ford/index.html>`_
 
-API
-===
-.. f:automodule:: codata__api
-
-Type
-====
-.. f:automodule:: codata__constants_type
-
-2010
-====
-.. f:automodule:: codata__constants_2010
-
-2014
-====
-.. f:automodule:: codata__constants_2014
-
-2018
-====
-.. f:automodule:: codata__constants_2018
-
-2022
-====
-.. f:automodule:: codata__constants_2022
+.. only:: latex texinfo man
+    
+    `FORD documentation <https://milanskocic.github.io/codata/ford/index.html>`_
 
