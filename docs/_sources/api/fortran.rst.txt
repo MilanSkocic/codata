@@ -6,7 +6,7 @@ Fortran
 
     `FORD documentation <../ford/index.html>`_
 
-.. only:: latex or info or man
+.. only:: (latex or texinfo or man)
     
-    `FORD documentation <https://milanskocic.github.io/codata/ford/index.html>`_
+    https://milanskocic.github.io/codata/ford/index.html
 

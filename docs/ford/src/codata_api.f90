@@ -1,5 +1,5 @@
 module codata__api
-    ! API.
+    !! API.
 use codata__version, only: version
 implicit none
 private
