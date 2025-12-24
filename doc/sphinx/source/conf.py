@@ -64,5 +64,5 @@ add_module_names = False
 
 
 man_pages = [
-    ('man/index', 'codata', 'Fundamental physical constants', [author], 3),
+    ("index", 'codata', 'Fundamental physical constants', [author], 3),
 ]
