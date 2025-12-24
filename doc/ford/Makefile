@@ -1,0 +1,2 @@
+all:
+	ford ford.md
