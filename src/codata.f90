@@ -1,8 +1,8 @@
 module codata
-    ! Main module for the Codata library.
-    !
-    ! The latest values (2022) do not have the year as a suffix in their name.
-    ! Older values can be used and they feature the year as a suffix in their name.
+    !! Main module for the Codata library.
+    !!
+    !! The latest values (2022) do not have the year as a suffix in their name.
+    !! Older values can be used and they feature the year as a suffix in their name.
 
 use codata__constants_2022
 use codata__constants_2018
