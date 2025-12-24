@@ -2,5 +2,5 @@
 C
 ***
 
-.... literalinclude:: ../../../../include/codata.h
+.. literalinclude:: ../../../../include/codata.h
    :language: C
