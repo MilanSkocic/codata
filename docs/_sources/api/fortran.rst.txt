@@ -2,10 +2,11 @@
 Fortran
 *******
 
-codata(3)
-=========
-.. include:: ../../../man/codata.3.rst
+.. only:: html 
 
-get_version(3)
-==============
-.. include:: ../../../man/codata_get_version.3.rst
+    `FORD documentation <../ford/index.html>`_
+
+.. only:: latex texinfo man
+    
+    `FORD documentation <https://milanskocic.github.io/codata/ford/index.html>`_
+
