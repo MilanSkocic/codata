@@ -8,10 +8,10 @@
 
 extern char* codata_get_version(void); 
 
-struct codata_constant_type{
+typedef struct codata_constant_type{
     char name[65];
     double value;
     double uncertainty;
     char unit[33];
-};
+}cct;
 
