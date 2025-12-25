@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Python &#8212; codata 2.3.2dev0 documentation</title>
+    <title>Getting Started &#8212; codata 2.3.2dev0 documentation</title>
   
   
   
@@ -38,11 +38,11 @@
     <script src="../_static/documentation_options.js?v=754ac078"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/python';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started/index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Changelog" href="../changelog/index.html" />
-    <link rel="prev" title="C" href="c.html" />
+    <link rel="next" title="Examples" href="../examples/index.html" />
+    <link rel="prev" title="codata - Documentation" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -132,8 +132,8 @@
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../getting_started/index.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
     Getting Started
   </a>
 </li>
@@ -146,8 +146,8 @@
 </li>
 
 
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
     APIs
   </a>
 </li>
@@ -266,8 +266,8 @@ document.write(`
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../getting_started/index.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
     Getting Started
   </a>
 </li>
@@ -280,8 +280,8 @@ document.write(`
 </li>
 
 
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/index.html">
     APIs
   </a>
 </li>
@@ -347,12 +347,7 @@ document.write(`
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="fortran.html">Fortran</a></li>
-<li class="toctree-l1"><a class="reference internal" href="c.html">C</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Python</a></li>
-</ul>
-</div>
+  <div class="bd-toc-item navbar-nav"></div>
 </nav></div>
     </div>
   
@@ -388,10 +383,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">APIs</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page">Python</li>
+    <li class="breadcrumb-item active" aria-current="page">Getting Started</li>
   </ul>
 </nav>
 </div>
@@ -408,13 +400,67 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="module-pycodata">
-<span id="python"></span><h1>Python<a class="headerlink" href="#module-pycodata" title="Link to this heading">#</a></h1>
-<p>Codata constants.</p>
-<p>The latest values (2022) do not have the year as a suffix in their name.
-Older values can be used and they feature the year as a suffix in their name.</p>
-<p>The latest values are available at the top level and 
-older values are available in dedicated modules.</p>
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">codata</span></code> is a Fortran library providing the fundamental physical
+constants according to
+<a class="reference external" href="https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants">CODATA</a>.
+A C API allows usage from C, or can be used as a basis for other
+wrappers. Python wrapper allows easy usage from Python.</p>
+<p>To use <code class="docutils literal notranslate"><span class="pre">codata</span></code> within your
+<a class="reference external" href="https://github.com/fortran-lang/fpm">fpm</a> project, add the following
+to your <code class="docutils literal notranslate"><span class="pre">fpm.toml</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">dependencies</span><span class="p">]</span>
+<span class="n">codata</span> <span class="o">=</span> <span class="p">{</span> <span class="n">git</span><span class="o">=</span><span class="s2">&quot;https://github.com/MilanSkocic/codata.git&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>The latest codata constants
+(<a class="reference external" href="https://pml.nist.gov/cuu/Constants/">2022</a>) were integrated in
+<a class="reference external" href="https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0">stdlib</a>.
+The constants are implemented as derived type which carries the name,
+the value, the uncertainty and the unit. This library will be
+complementary to the constants defined in the <code class="docutils literal notranslate"><span class="pre">stdlib</span></code> by providing
+older values for the constants.</p>
+<p>If you only need sources for the codata constants that you can integrate
+directly in your sources you may be interested by
+<a class="github reference external" href="https://github.com/vmagnin/fundamental_constants">vmagnin/fundamental_constants</a>.</p>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gfortran</span><span class="o">&gt;=</span><span class="mi">10</span>
+<span class="n">fpm</span><span class="o">&gt;=</span><span class="mf">0.8</span>
+<span class="n">stdlib</span><span class="o">&gt;=</span><span class="mf">0.5</span>
+<span class="n">fypp</span><span class="o">&gt;=</span><span class="mf">3.0</span>
+</pre></div>
+</div>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<p>A Makefile is provided, which uses
+<a class="reference external" href="https://fpm.fortran-lang.org">fpm</a>, for building the library.</p>
+<ul class="simple">
+<li><p>On windows, <a class="reference external" href="https://www.msys2.org">msys2</a> needs to be installed.
+Add the msys2 binary (usually C:\msys64\usr\bin) to the path in
+order to be able to use make.</p></li>
+<li><p>On Darwin, the <a class="reference external" href="https://formulae.brew.sh/formula/gcc">gcc</a>
+toolchain needs to be installed.</p></li>
+</ul>
+<p>Build: the configuration file will set all the environment variables
+necessary for the compilation</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">configure</span><span class="o">.</span><span class="n">sh</span>
+<span class="o">./</span><span class="n">configure</span><span class="o">.</span><span class="n">sh</span>
+<span class="n">make</span>
+<span class="n">make</span> <span class="n">install</span>
+<span class="n">make</span> <span class="n">uninstall</span>
+</pre></div>
+</div>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h2>
+<p>MIT</p>
+</section>
 </section>
 
 
@@ -428,20 +474,20 @@ older values are available in dedicated modules.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="c.html"
+       href="../index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C</p>
+        <p class="prev-next-title">codata - Documentation</p>
       </div>
     </a>
     <a class="right-next"
-       href="../changelog/index.html"
+       href="../examples/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Changelog</p>
+        <p class="prev-next-title">Examples</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -456,9 +502,24 @@ older values are available in dedicated modules.</p>
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependencies">Dependencies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../_sources/api/python.rst.txt">
+    <a href="../_sources/getting_started/index.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>
