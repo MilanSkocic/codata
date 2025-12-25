@@ -17,18 +17,10 @@ It provides:
 - codata constants 2014
 - codata constants 2010
 
-If you need older values for the CODATA constants you can use `codata` 
-within your [fpm](https://github.com/fortran-lang/fpm)
-project by adding the following to your `fpm.toml` file:
+**Notes:**
 
-```
-[dependencies]
-codata = { git="https://github.com/MilanSkocic/codata.git" }
-```
-
-
-**Note**
-
-If you only need sources for the codata constants that you can integrate
-directly in your sources you may be interested by
-<https://github.com/vmagnin/fundamental_constants>.
+* If you need older values for the CODATA constants you can use `codata` otherwise
+  use the standard library.
+* If you only need sources for the codata constants that you can integrate
+  directly in your sources you may be interested by
+  <https://github.com/vmagnin/fundamental_constants>.

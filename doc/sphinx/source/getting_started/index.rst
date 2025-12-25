@@ -9,12 +9,12 @@ Introduction
 
 ``codata`` is a Fortran library providing the fundamental physical
 constants according to
-`CODATA <https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants>`__.
-A C API allows usage from C, or can be used as a basis for other
-wrappers. Python wrapper allows easy usage from Python.
+`CODATA <https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants>`_.
+A C API allows usage from C, or can be used as a basis for other wrappers. 
+Python wrapper allows easy usage from Python.
 
 To use ``codata`` within your
-`fpm <https://github.com/fortran-lang/fpm>`__ project, add the following
+`fpm <https://github.com/fortran-lang/fpm>`_ project, add the following lines
 to your ``fpm.toml`` file:
 
 ::
@@ -30,9 +30,6 @@ the value, the uncertainty and the unit. This library will be
 complementary to the constants defined in the ``stdlib`` by providing
 older values for the constants.
 
-If you only need sources for the codata constants that you can integrate
-directly in your sources you may be interested by
-https://github.com/vmagnin/fundamental_constants.
 
 Dependencies
 ============
