@@ -407,10 +407,10 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">codata</span></code> is a Fortran library providing the fundamental physical
 constants according to
 <a class="reference external" href="https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants">CODATA</a>.
-A C API allows usage from C, or can be used as a basis for other
-wrappers. Python wrapper allows easy usage from Python.</p>
+A C API allows usage from C, or can be used as a basis for other wrappers.
+Python wrapper allows easy usage from Python.</p>
 <p>To use <code class="docutils literal notranslate"><span class="pre">codata</span></code> within your
-<a class="reference external" href="https://github.com/fortran-lang/fpm">fpm</a> project, add the following
+<a class="reference external" href="https://github.com/fortran-lang/fpm">fpm</a> project, add the following lines
 to your <code class="docutils literal notranslate"><span class="pre">fpm.toml</span></code> file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">dependencies</span><span class="p">]</span>
 <span class="n">codata</span> <span class="o">=</span> <span class="p">{</span> <span class="n">git</span><span class="o">=</span><span class="s2">&quot;https://github.com/MilanSkocic/codata.git&quot;</span> <span class="p">}</span>
@@ -423,9 +423,6 @@ The constants are implemented as derived type which carries the name,
 the value, the uncertainty and the unit. This library will be
 complementary to the constants defined in the <code class="docutils literal notranslate"><span class="pre">stdlib</span></code> by providing
 older values for the constants.</p>
-<p>If you only need sources for the codata constants that you can integrate
-directly in your sources you may be interested by
-<a class="github reference external" href="https://github.com/vmagnin/fundamental_constants">vmagnin/fundamental_constants</a>.</p>
 </section>
 <section id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">#</a></h2>

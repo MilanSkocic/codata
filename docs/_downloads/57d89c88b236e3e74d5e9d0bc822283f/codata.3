@@ -41,11 +41,11 @@ Fundamental physical constants for Modern Fortran according to
 \fBcodata\fP is a Fortran library providing the fundamental physical
 constants according to
 \X'tty: link https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants'\fI\%CODATA\fP\X'tty: link'\&.
-A C API allows usage from C, or can be used as a basis for other
-wrappers. Python wrapper allows easy usage from Python.
+A C API allows usage from C, or can be used as a basis for other wrappers.
+Python wrapper allows easy usage from Python.
 .sp
 To use \fBcodata\fP within your
-\X'tty: link https://github.com/fortran-lang/fpm'\fI\%fpm\fP\X'tty: link' project, add the following
+\X'tty: link https://github.com/fortran-lang/fpm'\fI\%fpm\fP\X'tty: link' project, add the following lines
 to your \fBfpm.toml\fP file:
 .INDENT 0.0
 .INDENT 3.5
@@ -64,10 +64,6 @@ The constants are implemented as derived type which carries the name,
 the value, the uncertainty and the unit. This library will be
 complementary to the constants defined in the \fBstdlib\fP by providing
 older values for the constants.
-.sp
-If you only need sources for the codata constants that you can integrate
-directly in your sources you may be interested by
-\X'tty: link https://github.com/vmagnin/fundamental_constants'\fI\%https://github.com/vmagnin/fundamental_constants\fP\X'tty: link'\&.
 .SS Dependencies
 .INDENT 0.0
 .INDENT 3.5
