@@ -34,6 +34,10 @@ main = "example.f90"
 name = "example_in_c"
 main = "example.c"
 
+[[executable]]
+name = "codata-bin"
+main = "main.c"
+
 [[test]]
 name = "tester"
 main = "test_constants.f90"
