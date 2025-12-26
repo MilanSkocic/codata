@@ -37,7 +37,7 @@ STDLIB=./stdlib/stdlib_codata.f90
 
 all: $(FPM_LIBNAME)
 
-$(FPM_LIBNAME): sources build copy_a shared
+$(FPM_LIBNAME): build copy_a shared
 # ---------------------------------------------------------------------
 
 
