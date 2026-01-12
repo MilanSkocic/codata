@@ -28,18 +28,24 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.mathjax',
     'myst_parser',
-    'sphinxcontrib.bibtex',
-    'numpydoc',
+    #'sphinxcontrib.bibtex',
+    'numpydoc', 'sphinx_fortran_domain',
     ]
-bibtex_bibfiles = ["./references/references.bib"]
+#bibtex_bibfiles = ["./references/references.bib"]
 bibtex_default_style = 'unsrt'
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-# fspx_docstring_character = ""
+# Select a lexer (built-in: "regex")
+fortran_lexer = "regex"
 
-fortran_src=["../../src/*.f90"]
-fortran_ext=['f90', 'f95']
+# Doc comment markers to recognize (comment-only lines)
+fortran_doc_chars = ["!", ">"]
+
+fortran_sources = [
+	"../../../src",
+    "../../../app"
+]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
