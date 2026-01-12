@@ -33,11 +33,11 @@ STDLIB=./stdlib/stdlib_codata.f90
 
 # ---------------------------------------------------------------------
 # TARGETS
-.PHONY: build sources stdlib references doc docs clean logo
+.PHONY: prep build sources stdlib references doc docs clean logo
 
 all: $(FPM_LIBNAME)
 
-$(FPM_LIBNAME): build copy_a shared
+$(FPM_LIBNAME): prep build copy_a shared
 # ---------------------------------------------------------------------
 
 
@@ -62,6 +62,9 @@ $(C_HEADER):
 
 ./stdlib/stdlib_codata.f90: ./src/codata_constants_2022.f90
 	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
+
+prep:
+	make -C srcprep
 
 # ---------------------------------------------------------------------
 
