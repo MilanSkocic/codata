@@ -10,7 +10,7 @@ constants according to
 - **Man pages**: man pages are available in the doc folder as man, txt and pdf formats.
 - **Source code:** https://github.com/MilanSkocic/codata
 - **Python wrapper:** https://pypi.org/project/pycodata
-- **Binaries:** https://github.com/MilanSkocic/releases
+- **Binaries:** https://github.com/MilanSkocic/codata/releases
 
 It provides:
 
