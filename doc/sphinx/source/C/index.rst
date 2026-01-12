@@ -1,6 +1,6 @@
-***
+###
 C
-***
+###
 
 .. literalinclude:: ../../../../include/codata.h.start
    :language: C

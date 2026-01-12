@@ -1,9 +1,6 @@
-*******
+#######
 Fortran
-*******
-
-Modules
-=======
+#######
 
 .. f:module:: codata 
 

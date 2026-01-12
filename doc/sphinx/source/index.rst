@@ -7,15 +7,15 @@ codata - Documentation
         :align: center
         :alt: Alternative text
     
-Fundamental physical constants for Modern Fortran according to
-`CODATA <https://pml.nist.gov/cuu/Constants/>`_.
-
+.. include:: ../../codata.3.rst
 
 .. toctree::
    :maxdepth: 1
    :hidden:
-   
-   getting_started/index.rst
-   examples/index.rst
-   api/index.rst
-   changelog/index.rst
+    
+   fortran/index.rst
+   C/index.rst
+   python/index.rst
+
+
+
