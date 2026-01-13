@@ -117,7 +117,7 @@ def run(fpath_raw: str, fpath_ast:str)->None:
     fpath = fpath_mantxt
     with open(fpath, "w") as f:
         for var in toml.keys():
-            f.write("".join([" "]*8) + "o " + var + suffix + "\n")
+            f.write("".join([" "]*4) + "o " + var + suffix + "\n")
     
 #    fpath = fpath_tex
 #    with open(fpath, "w") as f:
