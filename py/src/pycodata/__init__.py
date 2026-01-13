@@ -8,7 +8,6 @@ older values are available in dedicated modules.
 """
 from .version import __version__
 from .constants_2022 import *
-from . import constants_2022
-from . import constants_2018
-from . import constants_2014
-from . import constants_2010
+from .constants_2018 import *
+from .constants_2014 import *
+from .constants_2010 import *
