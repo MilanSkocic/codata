@@ -34,6 +34,45 @@ older values for the constants.
 .PP
 The latest values (2022) do not have the year as a suffix in their name.
 Older values can be used and they feature the year as a suffix in their name.
+.PP
+All \fIcodata\fP (physical) constants are defined as a derived type codata_constant_type.
+All the \fIcodata\fP constants are provided as double precision reals.
+The names are quite long and can be aliased with shorter names.
+.PP
+The derived type codata_constant_type defines 4 members:
+.RS
+.TP
+.B
+o name
+string
+.TP
+.B
+o value
+double precision real
+.TP
+.B
+o uncertainty
+double precision real
+.TP
+.B
+o unit
+string
+.RE
+.PP
+The derived type codata_constant_type defines 2 type-bound procedures:
+.RS
+.TP
+.B
+o print
+to print the values of the constant members;
+.TP
+.B
+o to_real
+to get the value or the uncertainty to the desired precision.
+.RE
+.PP
+A module level interface to_real is available for getting the constant value
+or uncertainty of a constant.
 .SH NOTES
 To \fBuse\fP \fIcodata\fP within your fpm <https://github.com/fortran-lang/fpm>
 project, add the following lines to your file:
