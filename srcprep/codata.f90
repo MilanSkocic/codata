@@ -29,6 +29,27 @@ DESCRIPTION
     The latest values (2022) do not have the year as a suffix in their name.
     Older values can be used and they feature the year as a suffix in their name.
 
+    All codata (physical) constants are defined as a derived type codata_constant_type. 
+    All the codata constants are provided as double precision reals. 
+    The names are quite long and can be aliased with shorter names.
+
+    The derived type codata_constant_type defines 4 members:
+        o name         string
+        o value        double precision real
+        o uncertainty  double precision real
+        o unit         string
+    
+    The derived type codata_constant_type defines 2 type-bound procedures:
+        o print    to print the values of the constant members;
+        o to_real  to get the value or the uncertainty to the desired precision.
+
+    A module level interface to_real is available for getting the constant value
+    or uncertainty of a constant.
+
+    The C API exposes a structure codata_constant_ttype that defines the same 
+    members as in Fortran.
+    The Python wrapper encapsulates the members in a dictionnary.
+
 NOTES 
     To use codata within your fpm <https://github.com/fortran-lang/fpm>
     project, add the following lines to your file:
