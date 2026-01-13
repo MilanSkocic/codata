@@ -1,6 +1,6 @@
-******
-Python
-******
+##############
+Python AutoDoc
+##############
 
 .. automodule:: pycodata
    :members:

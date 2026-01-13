@@ -1,6 +1,6 @@
-###
-C
-###
+########
+C HEADER
+########
 
 .. literalinclude:: ../../../../include/codata.h.start
    :language: C

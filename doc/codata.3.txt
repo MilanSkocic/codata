@@ -45,6 +45,10 @@ DESCRIPTION
     A module level interface to_real is available for getting the constant value
     or uncertainty of a constant.
 
+    The C API exposes a structure codata_constant_ttype that defines the same
+    members as in Fortran.
+    The Python wrapper encapsulates the members in a dictionnary.
+
 NOTES
     To use codata within your fpm <https://github.com/fortran-lang/fpm>
     project, add the following lines to your file:

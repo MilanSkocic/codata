@@ -1,7 +1,5 @@
 include ../make.in
 
-# for i in doc/*.txt; do name=$(basename -s .txt $i ); echo "- :download:\`$name <../../$name>\`";done
-
 MANTXT=$(wildcard *.txt)
 MAN=$(patsubst %.txt, %, $(MANTXT))
 MANPDF=$(patsubst %.txt, %.pdf, $(MANTXT))
@@ -23,3 +21,4 @@ all: $(MAN) $(MANPDF) $(MANRST)
 .PHONY:
 clean:
 	make -C sphinx clean
+	rm $(MAN) $(MANPDF) $(MANRST)

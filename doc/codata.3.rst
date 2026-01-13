@@ -68,6 +68,10 @@ The derived type codata_constant_type defines 2 type-bound procedures:
 A module level interface to_real is available for getting the constant
 value or uncertainty of a constant.
 
+The C API exposes a structure codata_constant_ttype that defines the
+same members as in Fortran. The Python wrapper encapsulates the members
+in a dictionnary.
+
 NOTES
 =====
 

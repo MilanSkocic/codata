@@ -1,6 +1,6 @@
-#######
-Fortran
-#######
+################
+Fortran AutoDoc
+################
 
 .. f:module:: codata 
 
