@@ -5,8 +5,9 @@ include ../make.in
 MANTXT=$(wildcard *.txt)
 MAN=$(patsubst %.txt, %, $(MANTXT))
 MANPDF=$(patsubst %.txt, %.pdf, $(MANTXT))
+MANRST=$(patsubst %.txt, %.rst, $(MANTXT))
 
-all: $(MAN) $(MANPDF)
+all: $(MAN) $(MANPDF) $(MANRST)
 	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User commands & Libary calls" -r $(FPM_VERSION) $(MAN) > $(FPM_NAME).pdf
 	make -C sphinx html
 
@@ -15,6 +16,9 @@ all: $(MAN) $(MANPDF)
 
 %.pdf: %
 	man -l -Tpdf $< > $@
+
+%.rst: %
+	pandoc --from man --to rst $< -o $@
 
 .PHONY:
 clean:
