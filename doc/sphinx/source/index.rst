@@ -7,7 +7,6 @@ codata - Documentation
         :align: center
         :alt: Alternative text
     
-.. include:: ../../codata.3.rst
 
 .. toctree::
    :maxdepth: 1
