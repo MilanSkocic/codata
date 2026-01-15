@@ -7,12 +7,16 @@ MANPDF=$(patsubst %.txt, %.pdf, $(MANTXT))
 
 BOOKMAN=$(FPM_NAME).pdf
 
-all: man
+all: man html
+
+.PHONY:
+html:
 	make -C sphinx html
 
 .PHONY:
 man: $(MAN) $(MANPDF) $(BOOKMAN)
 
+.PHONY:
 $(BOOKMAN): $(MAN)
 	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User commands & Libary calls" -r $(FPM_VERSION) $(MAN) > $(BOOKMAN)
 
