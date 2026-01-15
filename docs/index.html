@@ -342,8 +342,94 @@ document.write(`
 <h1>codata - Documentation<a class="headerlink" href="#codata-documentation" title="Link to this heading">#</a></h1>
 <a class="reference internal image-reference" href="_images/logo.png"><img alt="Alternative text" class="align-center" src="_images/logo.png" style="width: 400px;" />
 </a>
+<section id="example-in-fortran">
+<h2>Example in Fortran<a class="headerlink" href="#example-in-fortran" title="Link to this heading">#</a></h2>
+<div class="highlight-Fortran notranslate"><div class="highlight"><pre><span></span><span class="c">! EXAMPLE IN FORTRAN</span>
+<span class="k">program </span><span class="n">example_in_f</span>
+<span class="w">    </span><span class="k">use </span><span class="n">iso_fortran_env</span>
+<span class="w">    </span><span class="k">use </span><span class="n">codata</span>
+<span class="w">    </span><span class="k">implicit none</span>
+<span class="k">    </span>
+<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## EXAMPLE IN FORTRAN ##########&#39;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# VERSION&#39;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;version = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">get_version</span><span class="p">()</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# CONSTANTS&#39;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;c = &quot;</span><span class="p">,</span><span class="w">  </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">%</span><span class="k">value</span>
+<span class="k">    </span>
+<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# UNCERTAINTY&#39;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">%</span><span class="n">uncertainty</span>
+
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# OLDER VALUES&#39;</span>
+<span class="w">    </span><span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2022(latest) = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">%</span><span class="k">value</span>
+<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">%</span><span class="k">value</span>
+<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span><span class="w">  </span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">%</span><span class="k">value</span>
+<span class="k">    print</span><span class="w"> </span><span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span><span class="w">  </span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">%</span><span class="k">value</span>
+
+
+<span class="k">end program</span>
+</pre></div>
+</div>
+</section>
+<section id="example-in-c">
+<h2>Example in C<a class="headerlink" href="#example-in-c" title="Link to this heading">#</a></h2>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cm">/* EXAMPLE IN C */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;codata.h&quot;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;########## EXAMPLE IN C ##########</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;# VERSION&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;version = %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">codata_get_version</span><span class="p">());</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;# CONSTANTS&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;c = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;# UNCERTAINTY&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;u(c) = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">.</span><span class="n">uncertainty</span><span class="p">);</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;# OLDER VALUES&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2022(latest) = %23.16f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2018 = %23.16f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2014 = %23.16f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Mu_2010 = %23.16f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="example-in-python">
+<h2>Example in Python<a class="headerlink" href="#example-in-python" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sa">r</span><span class="sd">&quot;&quot;&quot;EXAMPLE in PYTHON&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;../py/src/&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">pycodata</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########## EXAMPLE IN PYTHON ##########&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# VERSION&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;version = </span><span class="si">{</span><span class="n">pycodata</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# Constants&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;c =&quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# UNCERTAINTY&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;uncertainty&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# OLDER VALUES&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2022 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 </div>
+</section>
 </section>
 
 
@@ -374,6 +460,20 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-fortran">Example in Fortran</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-c">Example in C</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-in-python">Example in Python</a></li>
+</ul>
+  </nav></div>
 
   <div class="sidebar-secondary-item">
 
