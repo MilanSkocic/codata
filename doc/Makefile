@@ -1,12 +1,20 @@
 include ../make.in
 
+
 MANTXT=$(wildcard *.txt)
 MAN=$(patsubst %.txt, %, $(MANTXT))
 MANPDF=$(patsubst %.txt, %.pdf, $(MANTXT))
 
-all: $(MAN) $(MANPDF)
-	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User commands & Libary calls" -r $(FPM_VERSION) $(MAN) > $(FPM_NAME).pdf
+BOOKMAN=$(FPM_NAME).pdf
+
+all: man
 	make -C sphinx html
+
+.PHONY:
+man: $(MAN) $(MANPDF) $(BOOKMAN)
+
+$(BOOKMAN): $(MAN)
+	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User commands & Libary calls" -r $(FPM_VERSION) $(MAN) > $(BOOKMAN)
 
 %: %.txt 
 	txt2man -s 1 -v "User commands" -r $(FPM_VERSION) -t $(shell basename $@ | cut -d '.' -f 1) $< > $@
@@ -14,7 +22,8 @@ all: $(MAN) $(MANPDF)
 %.pdf: %
 	man -l -Tpdf $< > $@
 
+
 .PHONY:
 clean:
 	make -C sphinx clean
-	rm $(MAN) $(MANPDF)
+	rm -fv $(MAN) $(MANPDF) $(BOOKMAN)

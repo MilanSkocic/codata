@@ -72,6 +72,7 @@ prep:
 # ---------------------------------------------------------------------
 # COMPILATION
 build:
+	make -C doc man
 	fpm build --profile=$(btype)
 
 test: build
