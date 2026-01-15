@@ -134,6 +134,7 @@ uninstall:
 	rm -f $(install_dir)/lib/$(FPM_LIBNAME).dll.a
 	rm -f $(install_dir)/lib/$(FPM_LIBNAME).dll
 	rm -f $(install_dir)/bin/$(FPM_LIBNAME).dll
+	rm -r $(install_dir)/share/man3/$(FPM_LIBNAME)*.3
 # ---------------------------------------------------------------------
 
 
