@@ -12,13 +12,13 @@ SYNOPSIS
 DESCRIPTION
     codata is a Fortran library providing the fundamental physical
     constants according to CODATA
-    <https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants>.
+    https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants.
     A C APIallows usage from C, or can be used as a basis for other wrappers.
     Python wrapper allows easy usage from Python.
 
     The latest codata constants 2022
-    <https://pml.nist.gov/cuu/Constants> were integrated in
-    stdlib <https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0>.
+    https://pml.nist.gov/cuu/Constants were integrated in
+    stdlib https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
     The constants are implemented as derived type which carries the name,
     the value, the uncertainty and the unit.
     This library is
@@ -50,7 +50,7 @@ DESCRIPTION
     The Python wrapper encapsulates the members in a dictionnary.
 
 NOTES
-    To use codata within your fpm <https://github.com/fortran-lang/fpm>
+    To use codata within your fpm https://github.com/fortran-lang/fpm
     project, add the following lines to your file:
 
         [dependencies]
