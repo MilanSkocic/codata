@@ -1,4 +1,4 @@
-$BLOCK comment --file codata.3.txt
+$BLOCK comment --file codata.3.prep
 NAME
     codata - fundamental physical constants
 
