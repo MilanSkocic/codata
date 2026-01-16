@@ -1,0 +1,36 @@
+NAME
+    get_version - version getter for the library
+
+LIBRARY
+    Codata - (-libcodata, -lcodata)
+
+SYNOPSIS
+    function get_version()result(fptr)
+
+DESCRIPTION
+    This function returns the version of the codata library.
+
+RETURN VALUE
+    character(len=:), pointer :: fptr
+
+NOTES
+    The C API is defined by the following prototype: char* codata_get_version(void)
+
+    The python wrappers embeds the version of the version in the top level
+    variable __version__.
+
+EXAMPLE
+    Fortran
+
+        print *, "version = ", get_version()
+
+    C
+
+        printf("version = %s\n", codata_get_version());
+
+    Python
+
+        print(f"version = {pycodata.__version__}")
+
+SEE ALSO
+    codata(3)
