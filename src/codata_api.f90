@@ -1,3 +1,16 @@
+module codata__api
+    !! API.
+use codata__version, only: version
+implicit none
+private
+
+character(len=:), allocatable, target, private :: version_f ! Version
+
+public :: get_version
+
+contains
+
+
 ! NAME
 !     get_version - version getter for the library
 ! 
@@ -34,19 +47,6 @@
 ! 
 ! SEE ALSO
 !     codata(3)
-module codata__api
-    !! API.
-use codata__version, only: version
-implicit none
-private
-
-character(len=:), allocatable, target, private :: version_f ! Version
-
-public :: get_version
-
-contains
-
-
 function get_version()result(fptr)
     !! Get the version.
 
