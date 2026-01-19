@@ -5,7 +5,6 @@ program codatacli
     
     character(len=:),allocatable, target  :: help_text(:) 
     character(len=:),allocatable, target  :: version_text(:)
-    character(len=:),allocatable, target  :: usage_text(:)
     character(len=:), pointer :: char_fp(:)
     type(codata_constant_type), pointer :: cctptr(:)
     
@@ -15,31 +14,28 @@ program codatacli
     nullify(cctptr)
     
     version_text=[character(len=80) :: &
-        'PROGRAM:      codatacli                ', &
+        'PROGRAM:      codata                ', &
         'DESCRIPTION:  Command line for codata  ', &
         'VERSION:      '//get_version()//'      ', &
         'AUTHOR:       M. Skocic                ', &
         'LICENSE:      MIT                      ', &
         '' ]
     
-    usage_text=[character(len=80) :: &
-        'Usage: codatacli', &
-        '' ]
-
     help_text=[character(len=80) :: &
         'NAME                                                            ', &
-        '  codatacli(1) - Command line for codata                        ', &
+        '  codata(1) - Command line for codata                        ', &
         '                                                                ', &
         'SYNOPSIS                                                        ', &
-        '  codatacli [OPTIONS]                                           ', &
+        '  codata [OPTIONS]                                           ', &
         '                                                                ', &
         'DESCRIPTION                                                     ', &
-        '  codatacli is command line interface which prints all the codata', &
+        '  codata is command line interface which prints all the codata', &
         '  constants.                                                    ', &
         '  The current values are from 2022.                             ', &
         '                                                                ', &
         'OPTIONS                                                         ', &
         '  o --year, -y  Year of the codata constants: 2022, 2018, 2014, 2010', &
+        '  o --usage     Show usage text and exit                          ', & 
         '  o --help      Show help text and exit                          ', & 
         '  o --verbose   Display additional information when available.   ', &
         '  o --version   Show version information and exit.               ', &
