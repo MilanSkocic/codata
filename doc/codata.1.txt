@@ -1,4 +1,4 @@
-codatacli(1)                 Library calls                 codatacli(1)
+codata(1)                    Library calls                    codata(1)
 
 NAME
        codatacli(1) - Command line for codata
@@ -23,4 +23,4 @@ OPTIONS
        o --version
               Show version information and exit.
 
-2.3.2dev0+f5c8ad6           19 January 2026                codatacli(1)
+2.3.2dev0+3b02eeb           19 January 2026                   codata(1)
