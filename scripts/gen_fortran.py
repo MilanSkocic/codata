@@ -44,6 +44,21 @@ def write_constant(f, var, name, value, uncertainty, unit, year):
     
     f.write(newline)
 
+def write_constant_array(f, var, year, last=False):
+    suffix = get_suffix(year)
+    if last:
+        f.write(f"{var}{suffix} &" + newline)
+    else:
+        f.write(f"{var}{suffix}, &" + newline)
+
+def write_constant_array_decl(f, n, year):
+    suffix = get_suffix(year)
+    f.write(f"type(codata_constant_type), target, public :: cc{suffix}({n}) = &"+newline)
+    f.write("[")
+
+def write_constant_array_closing(f):
+    f.write("]" + newline)
+
 def write_module_end(f, year):
     suffix = "_" + year 
     f.write("end module codata__constants" + suffix)
@@ -67,6 +82,16 @@ def run(fpath_ast: str, fpath_code: str)->None:
         unit = ast[var]["unit"]
         
         write_constant(fcode, var, name, value, uncertainty, unit, year)
+        
+    n = len(ast.keys())
+    write_constant_array_decl(fcode, n, year)
+
+    for i, var in enumerate(ast.keys()):
+        if (i+1) == n:
+            write_constant_array(fcode, var, year,True)
+        else:
+            write_constant_array(fcode, var, year)
+    write_constant_array_closing(fcode)
     
     write_module_end(fcode, year)
 
