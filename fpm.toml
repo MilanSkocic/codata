@@ -20,11 +20,16 @@ auto-tests = true
 auto-examples = true
 module-naming = false 
 
+[[executable]]
+name = "codatacli"
+main = "main.f90"
+
 [install]
 library = true
 
 [dependencies]
 stdlib="*"
+M_CLI2 = {git="https://github.com/urbanjost/M_CLI2.git"}
 
 [[example]]
 name = "example_in_f"

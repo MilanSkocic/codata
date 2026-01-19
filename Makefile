@@ -114,6 +114,7 @@ install_dirs:
 	fpm install --prefix=$(install_dir) --profile=$(btype)
 	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(install_dir)/include
 	cp -f doc/$(FPM_NAME)*.3 $(install_dir)/share/man/man3
+	cp -f doc/$(FPM_NAME)*.1 $(install_dir)/share/man/man3
 
 install_linux: 
 	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so $(install_dir)/lib
@@ -142,6 +143,7 @@ uninstall:
 # ---------------------------------------------------------------------
 # OTHERS
 doc:
+	fpm run --profile release --target codatacli -- --help > doc/codatacli.1.prep
 	make -C doc
 
 docs:
