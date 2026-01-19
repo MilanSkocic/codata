@@ -24,4 +24,7 @@ include-package-data = false
 where = ["src"]
 
 [tool.setuptools.package-data]
-pycodata = ["libcodata.*", "libgfortran*", "libquadmath*", "libgcc_s*", "libwinpthread*"]
+pycodata = ["libcodata.*", "codata*", "libgfortran*", "libquadmath*", "libgcc_s*", "libwinpthread*"]
+
+[project.scripts]
+pycodata = "pycodata:main"
