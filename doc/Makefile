@@ -8,7 +8,7 @@ MANTXT=$(patsubst %.prep, %.txt, $(MANPREP))
 
 BOOKMAN=$(FPM_NAME).pdf
 
-all: man html
+all: man html $(BOOKMAN)
 
 .PHONY:
 html:
