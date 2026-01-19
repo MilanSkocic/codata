@@ -20,10 +20,6 @@ auto-tests = true
 auto-examples = true
 module-naming = false 
 
-[[executable]]
-name = "codatacli"
-main = "main.f90"
-
 [install]
 library = true
 
