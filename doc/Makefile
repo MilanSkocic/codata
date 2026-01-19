@@ -8,14 +8,14 @@ MANTXT=$(patsubst %.prep, %.txt, $(MANPREP))
 
 BOOKMAN=$(FPM_NAME).pdf
 
-all: man html $(BOOKMAN)
+all: man html
 
 .PHONY:
 html:
 	make -C sphinx html
 
 .PHONY:
-man: $(MAN) $(MANPDF) $(MANTXT)
+man: $(MAN) $(MANPDF) $(MANTXT) $(BOOKMAN)
 
 .PHONY:
 $(BOOKMAN): $(MAN)
