@@ -37,7 +37,7 @@ STDLIB=./stdlib/stdlib_codata.f90
 
 all: $(FPM_LIBNAME)
 
-$(FPM_LIBNAME): prep build copy_a shared
+$(FPM_LIBNAME): build copy_a shared
 # ---------------------------------------------------------------------
 
 
@@ -72,7 +72,6 @@ prep:
 # ---------------------------------------------------------------------
 # COMPILATION
 build:
-	make -C doc man
 	fpm build --profile=$(btype)
 
 test: build
@@ -143,7 +142,7 @@ uninstall:
 # ---------------------------------------------------------------------
 # OTHERS
 doc:
-	fpm run --profile release --target codatacli -- --help > doc/codatacli.1.prep
+	fpm run --profile release --target codata -- --help > doc/codata.1.prep
 	make -C doc
 
 docs:
