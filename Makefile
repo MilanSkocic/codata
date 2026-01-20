@@ -142,7 +142,7 @@ uninstall:
 # ---------------------------------------------------------------------
 # OTHERS
 doc:
-	fpm run --profile release --target codata -- --help > doc/codata.1.prep
+	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/$(FPM_APPNAME).1.prep
 	make -C doc
 
 docs:
@@ -155,5 +155,6 @@ logo:
 clean:
 	rm -rf $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) ./src/codata_version.f90 $(SRC_FYPP_F90) $(STDLIB)
 	fpm clean --all
+	make -C srcprep clean
 	make -C doc clean
 # ---------------------------------------------------------------------
