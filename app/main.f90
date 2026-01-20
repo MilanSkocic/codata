@@ -1,8 +1,10 @@
 program codatacli
     use iso_fortran_env, only: output_unit
     use M_CLI2, only: set_args, iget
+    use M_CLI2, only: args=>unnamed
     use codata
     
+    character(len=*), parameter :: name="codata"
     character(len=:),allocatable, target  :: help_text(:) 
     character(len=:),allocatable, target  :: version_text(:)
     character(len=:), pointer :: char_fp(:)
@@ -14,24 +16,25 @@ program codatacli
     nullify(cctptr)
     
     version_text=[character(len=80) :: &
-        'PROGRAM:      codata                ', &
-        'DESCRIPTION:  Command line for codata  ', &
-        'VERSION:      '//get_version()//'      ', &
-        'AUTHOR:       M. Skocic                ', &
-        'LICENSE:      MIT                      ', &
+        'PROGRAM:      '//name//'                         ', &
+        'DESCRIPTION:  Command line interface for codata  ', &
+        'VERSION:      '//get_version()//'                ', &
+        'AUTHOR:       M. Skocic                          ', &
+        'LICENSE:      MIT                                ', &
         '' ]
     
     help_text=[character(len=80) :: &
         'NAME                                                            ', &
-        '  codata(1) - Command line for codata                        ', &
+        '  '//name//' - Command line for codata                          ', &
         '                                                                ', &
         'SYNOPSIS                                                        ', &
-        '  codata [OPTIONS]                                           ', &
+        '  '//name//' [OPTIONS] [PATTERN ... ]                           ', &
         '                                                                ', &
         'DESCRIPTION                                                     ', &
-        '  codata is command line interface which prints all the codata', &
-        '  constants.                                                    ', &
-        '  The current values are from 2022.                             ', &
+        '  codatacli is command line interface which prints all the codata', &
+        '  constants. The current values are from 2022.                 ', &
+        '  The output can filtered with PATTERNS.                           ', &
+        '                                                                ', &
         '                                                                ', &
         'OPTIONS                                                         ', &
         '  o --year, -y  Year of the codata constants: 2022, 2018, 2014, 2010', &
@@ -40,6 +43,14 @@ program codatacli
         '  o --verbose   Display additional information when available.   ', &
         '  o --version   Show version information and exit.               ', &
         '                                                                ', &
+        'EXAMPLE                                                         ', &
+        '  Minimal example                                               ', &
+        '                                                                ', &
+        '     codata                                                     ', &
+        '     codata -y 2018 molar electron                              ', &
+        '                                                                ', &
+        'SEE ALSO                                                         ', &
+        '  codata(3)                                                     ', &
         '' ]
     
     call set_args("--year:y 2022", help_text, version_text)
@@ -58,8 +69,16 @@ program codatacli
             call print_text(char_fp)
             stop
     end select
-    
-    if(ASSOCIATED(cctptr)) call display(cctptr) 
+
+    if(ASSOCIATED(cctptr))then
+        if(size(args) > 0) then
+            do i=1, size(args), 1
+                 call display(cctptr, trim(args(i)))
+            end do
+        else
+            call display(cctptr)
+        end if
+    end if
 
 contains
 
@@ -71,12 +90,23 @@ subroutine print_text(char_fp)
     end do
 end subroutine
 
-subroutine display(fptr)
+subroutine display(fptr, pattern)
     type(codata_constant_type), intent(in), pointer :: fptr(:)
-    integer :: i
-    do i=1, size(fptr),1
-        call fptr(i)%print()
-    end do
+    character(len=*), intent(in), optional :: pattern
+    integer :: i,n
+    
+    if(present(pattern))then
+        n = len(pattern)
+        do i=1, size(fptr),1
+            if(fptr(i)%name(1:n) == pattern)then
+                call fptr(i)%print()
+            end if
+        end do
+    else
+        do i=1, size(fptr),1
+            call fptr(i)%print()
+        end do
+    end if
 end subroutine
 
 
