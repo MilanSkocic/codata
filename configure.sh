@@ -20,6 +20,7 @@ export FPM_AUTHOR="M. Skocic"
 export FPM_NAME=$(cat fpm.toml | grep -m 1 "name =" | awk -F '=' '{print $2}' | sed -E 's/[ "]//g')
 export FPM_VERSION=$(tr -d '\r' < VERSION | tr -d '\n')
 export FPM_LIBNAME="lib$FPM_NAME"
+export FPM_APPNAME=$FPM_NAME
 export FPM_PYNAME="py$FPM_NAME"
 export FPM_PY_SRC="./src/$FPM_PYNAME"
 export FPM_AW="auditwheel repair --plat manylinux_2_35_x86_64 ./dist/*.whl"
