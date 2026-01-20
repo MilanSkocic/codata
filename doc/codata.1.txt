@@ -1,18 +1,22 @@
 codata(1)                    Library calls                    codata(1)
 
 NAME
-       codatacli(1) - Command line for codata
+       codata - Command line for codata
 
 SYNOPSIS
-       codatacli [OPTIONS]
+       codata [OPTIONS] [PATTERN ... ]
 
 DESCRIPTION
        codatacli  is command line interface which prints all the codata
-       constants.  The current values are from 2022.
+       constants. The current values are from  2022.   The  output  can
+       filtered with PATTERNS.
 
 OPTIONS
        o --year, -y
               Year of the codata constants: 2022, 2018, 2014, 2010
+
+       o --usage
+              Show usage text and exit
 
        o --help
               Show help text and exit
@@ -23,4 +27,13 @@ OPTIONS
        o --version
               Show version information and exit.
 
-2.3.2dev0+3b02eeb           19 January 2026                   codata(1)
+EXAMPLE
+       Minimal example
+
+            codata
+            codata -y 2018 molar electron
+
+SEE ALSO
+       codata(3)
+
+2.3.2dev0+40721e6           20 January 2026                   codata(1)

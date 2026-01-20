@@ -22,7 +22,7 @@ $(BOOKMAN): $(MAN)
 	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User commands & Libary calls" -r $(FPM_VERSION) $(MAN) > $(BOOKMAN)
 
 %: %.prep 
-	txt2man -s 1 -v "Library calls" -r $(FPM_VERSION) -t $(shell basename $@ | cut -d '.' -f 1) $< > $@
+	txt2man -s $(shell basename $@ | cut -d '.' -f 2) -v "Library calls" -r $(FPM_VERSION) -t $(shell basename $@ | cut -d '.' -f 1) $< > $@
 
 %.pdf: %
 	man -l -Tpdf $< > $@
