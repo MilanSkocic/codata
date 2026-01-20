@@ -1,6 +1,6 @@
 $BLOCK comment --file codata.3.prep
 NAME
-    codata - fundamental physical constants
+    codata - libray for fundamental physical constants
 
 LIBRARY
     Codata (-libcodata, -lcodata)
