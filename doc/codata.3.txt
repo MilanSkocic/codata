@@ -149,7 +149,7 @@ EXAMPLE
                print(f"Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
 
 SEE ALSO
-       gsl(3)
+       gsl(3), codata(1)
 
 CODATA 2022
        •  ALPHA_PARTICLE_ELECTRON_MASS_RATIO
@@ -2913,4 +2913,4 @@ CODATA 2010
 
        •  WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010
 
-2.3.2dev0+40721e6           20 January 2026                   codata(3)
+2.3.2dev0+b936ba6           21 January 2026                   codata(3)
