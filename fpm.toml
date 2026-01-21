@@ -26,6 +26,7 @@ library = true
 [dependencies]
 stdlib="*"
 M_CLI2 = {git="https://github.com/urbanjost/M_CLI2.git"}
+fortran-regex = {git="https://github.com/perazz/fortran-regex.git", tag="1.1.2"}
 
 [[example]]
 name = "example_in_f"
