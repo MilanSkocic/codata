@@ -44,4 +44,4 @@ EXAMPLE
 SEE ALSO
        codata(3)
 
-2.3.2dev0+40721e6           21 January 2026                   codata(1)
+2.3.2dev0+b936ba6           21 January 2026                   codata(1)
