@@ -4,22 +4,28 @@ NAME
        codata - Command line for codata
 
 SYNOPSIS
-       codata [OPTIONS] [PATTERN ... ]
+       codata [OPTIONS] [REGEX_PATTERN ... ]
 
 DESCRIPTION
        codatacli  is command line interface which prints all the codata
-       constants. The current values are from  2022.   The  output  can
-       filtered with PATTERNS.
+       constants. The current values are from 2022.  The output can  be
+       filtered with REGEX PATTERNS.
 
 OPTIONS
        o --year, -y
-              Year of the codata constants: 2022, 2018, 2014, 2010
+              Year of the codata constants: 2022, 2018, 2014, 2010.
+
+       o --value
+              Show only the value.
+
+       o --uncertainty
+              Show only the uncertainty.
 
        o --usage
-              Show usage text and exit
+              Show usage text and exit.
 
        o --help
-              Show help text and exit
+              Show help text and exit.
 
        o --verbose
               Display additional information when available.
@@ -32,8 +38,10 @@ EXAMPLE
 
             codata
             codata -y 2018 molar electron
+            codata -y 2014 'molar.*gas' 'electron.*eV'
+            codata '[B,b]oltzmann.*eV'
 
 SEE ALSO
        codata(3)
 
-2.3.2dev0+40721e6           20 January 2026                   codata(1)
+2.3.2dev0+40721e6           21 January 2026                   codata(1)
