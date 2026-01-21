@@ -134,7 +134,7 @@
 !         print(f"Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
 ! 
 ! SEE ALSO
-!     gsl(3)
+!     gsl(3), codata(1)
 ! 
 ! CODATA 2022
 !     o ALPHA_PARTICLE_ELECTRON_MASS_RATIO
