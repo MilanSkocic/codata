@@ -2,6 +2,9 @@
 Fortran AutoDoc
 ################
 
+Modules
+=======
+
 .. f:module:: codata 
 
 .. f:module:: codata__api
@@ -27,4 +30,6 @@ Fortran AutoDoc
 .. f:module:: codata__constants_type
 
 .. f:module:: codata__constants_type_capi
+
+.. f:program:: codatacli
 
