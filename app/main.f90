@@ -1,7 +1,9 @@
 program codatacli
     use iso_fortran_env, only: output_unit
-    use M_CLI2, only: set_args, iget
+    use M_CLI2, only: set_args, iget, lget
     use M_CLI2, only: args=>unnamed
+    use regex_module, only: REGEX, parse_pattern, regex_pattern
+    use stdlib_optval
     use codata
     
     character(len=*), parameter :: name="codata"
@@ -28,32 +30,36 @@ program codatacli
         '  '//name//' - Command line for codata                          ', &
         '                                                                ', &
         'SYNOPSIS                                                        ', &
-        '  '//name//' [OPTIONS] [PATTERN ... ]                           ', &
+        '  '//name//' [OPTIONS] [REGEX_PATTERN ... ]                           ', &
         '                                                                ', &
         'DESCRIPTION                                                     ', &
         '  codatacli is command line interface which prints all the codata', &
-        '  constants. The current values are from 2022.                 ', &
-        '  The output can filtered with PATTERNS.                           ', &
+        '  constants. The current values are from 2022.                   ', &
+        '  The output can be filtered with REGEX PATTERNS.                ', &
         '                                                                ', &
         '                                                                ', &
         'OPTIONS                                                         ', &
-        '  o --year, -y  Year of the codata constants: 2022, 2018, 2014, 2010', &
-        '  o --usage     Show usage text and exit                          ', & 
-        '  o --help      Show help text and exit                          ', & 
-        '  o --verbose   Display additional information when available.   ', &
-        '  o --version   Show version information and exit.               ', &
+        '  o --year, -y        Year of the codata constants: 2022, 2018, 2014, 2010.', &
+        '  o --value           Show only the value.', &
+        '  o --uncertainty     Show only the uncertainty.                         ', &
+        '  o --usage           Show usage text and exit.                          ', & 
+        '  o --help            Show help text and exit.                          ', & 
+        '  o --verbose         Display additional information when available.   ', &
+        '  o --version         Show version information and exit.               ', &
         '                                                                ', &
         'EXAMPLE                                                         ', &
         '  Minimal example                                               ', &
         '                                                                ', &
         '     codata                                                     ', &
         '     codata -y 2018 molar electron                              ', &
+        "     codata -y 2014 'molar.*gas' 'electron.*eV'                 ", &
+        "     codata '[B,b]oltzmann.*eV'                                  ", &
         '                                                                ', &
         'SEE ALSO                                                         ', &
         '  codata(3)                                                     ', &
         '' ]
     
-    call set_args("--year:y 2022", help_text, version_text)
+    call set_args("--year:y 2022, --value F, --uncertainty F", help_text, version_text)
     select case(iget("year"))
         case (2022)
             cctptr => cc
@@ -73,7 +79,7 @@ program codatacli
     if(ASSOCIATED(cctptr))then
         if(size(args) > 0) then
             do i=1, size(args), 1
-                 call display(cctptr, trim(args(i)))
+                 call display(cctptr, trim(args(i)), lget("value"), lget("uncertainty"))
             end do
         else
             call display(cctptr)
@@ -90,16 +96,30 @@ subroutine print_text(char_fp)
     end do
 end subroutine
 
-subroutine display(fptr, pattern)
+subroutine display(fptr, pattern, value, uncertainty)
     type(codata_constant_type), intent(in), pointer :: fptr(:)
     character(len=*), intent(in), optional :: pattern
-    integer :: i,n
+    logical, intent(in), optional :: value, uncertainty
+
+    integer :: i, n, idx
+    type(regex_pattern) :: re
+    logical :: value2, uncertainty2
+
+    value2 = optval(value, .false.)
+    uncertainty2 = optval(uncertainty, .false.)
     
     if(present(pattern))then
-        n = len(pattern)
+        re = parse_pattern(pattern)
         do i=1, size(fptr),1
-            if(fptr(i)%name(1:n) == pattern)then
-                call fptr(i)%print()
+            idx = REGEX(trim(fptr(i)%name), pattern=re, length=n)
+            if(idx /= 0)then
+                if(value2)then
+                    write(output_unit, '(SP,ES24.16)') fptr(i)%value
+                elseif(uncertainty2)then
+                    write(output_unit, '(SP,ES24.16)') fptr(i)%uncertainty
+                else
+                    call fptr(i)%print()
+                end if
             end if
         end do
     else
