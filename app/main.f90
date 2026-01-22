@@ -33,19 +33,22 @@ program codatacli
         '  '//name//' [OPTIONS] [REGEX_PATTERN ... ]                           ', &
         '                                                                ', &
         'DESCRIPTION                                                     ', &
-        '  codatacli is command line interface which prints all the codata', &
-        '  constants. The current values are from 2022.                   ', &
-        '  The output can be filtered with REGEX PATTERNS.                ', &
+        '  codata is a command line interface which prints all the codata', &
+        '  constants.                                                    ', &
+        '                                                                ', &
+        '  The current values are from 2022.                             ', &
+        '  Older values can be retrieved if needed and                   ', &
+        '  the output can be filtered with REGEX PATTERNS.                ', &
         '                                                                ', &
         '                                                                ', &
         'OPTIONS                                                         ', &
-        '  o --year, -y        Year of the codata constants: 2022, 2018, 2014, 2010.', &
-        '  o --value           Show only the value.', &
-        '  o --uncertainty     Show only the uncertainty.                         ', &
-        '  o --usage           Show usage text and exit.                          ', & 
-        '  o --help            Show help text and exit.                          ', & 
-        '  o --verbose         Display additional information when available.   ', &
-        '  o --version         Show version information and exit.               ', &
+        '  o --year, -y       Year of the codata constants: 2022, 2018, 2014, 2010.', &
+        '  o --value          Show only the value.', &
+        '  o --uncertainty    Show only the uncertainty.                         ', &
+        '  o --usage          Show usage text and exit.                          ', & 
+        '  o --help           Show help text and exit.                          ', & 
+        '  o --verbose        Display additional information when available.   ', &
+        '  o --version        Show version information and exit.               ', &
         '                                                                ', &
         'EXAMPLE                                                         ', &
         '  Minimal example                                               ', &
