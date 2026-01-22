@@ -28,29 +28,45 @@ DESCRIPTION
     This library is
     complementary to the constants defined in the stdlib by providing
     older values for the constants.
-
     The latest values (2022) do not have the year as a suffix in their name.
     Older values can be used and they feature the year as a suffix in their name.
 
     All codata (physical) constants are defined as a derived type codata_constant_type.
     All the codata constants are provided as double precision reals.
     The names are quite long and can be aliased with shorter names.
+    The derived type codata_constant_type defines 4 members and 2 procedures.
 
-    The derived type codata_constant_type defines 4 members:
-        o name         string
-        o value        double precision real
-        o uncertainty  double precision real
-        o unit         string
+        type, public :: codata_constant_type
+            !! Derived type for representing a Codata constant.
+            character(len=64) :: name ! Name of the constant
+            real(dp) :: value         ! Value of the constant
+            real(dp) :: uncertainty   ! Uncertainty of the constant
+            character(len=32) :: unit ! Unit of the constant
+        contains
+            procedure :: print
+            procedure :: to_real_sp
+            procedure :: to_real_dp
+            generic :: to_real => to_real_sp, to_real_dp
+        end type
 
-    The derived type codata_constant_type defines 2 type-bound procedures:
-        o print    to print the values of the constant members;
-        o to_real  to get the value or the uncertainty to the desired precision.
+        interface to_real ! Get the constant value or uncertainty.
+            module procedure to_real_sp
+            module procedure to_real_dp
+        end interface
 
     A module level interface to_real is available for getting the constant value
     or uncertainty of a constant.
 
     The C API exposes a structure codata_constant_ttype that defines the same
     members as in Fortran.
+
+        typedef struct codata_constant_type{
+            char name[65];
+            double value;
+            double uncertainty;
+            char unit[33];
+        }cct;
+
     The Python wrapper encapsulates the members in a dictionnary.
 
 NOTES
