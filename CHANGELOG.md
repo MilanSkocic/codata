@@ -1,3 +1,11 @@
+# 2.4.0
+
+- Add tables for each codata year containing all constants.
+- Add CLI `codata(1)` for searching constants.
+- Refactoring code.
+
+[Full changelog](https://github.com/MilanSkocic/codata/releases)
+
 # 2.3.1
 
 -   Refactoring the `configure.sh` script.
@@ -6,6 +14,8 @@
 
 -   If binaries for Python 3.14t are needed you need to compile them by
     yourself.
+
+[Full changelog](https://github.com/MilanSkocic/codata/releases)
 
 # 2.3.0
 

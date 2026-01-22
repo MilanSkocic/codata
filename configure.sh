@@ -25,7 +25,6 @@ export FPM_PYNAME="py$FPM_NAME"
 export FPM_PY_SRC="./src/$FPM_PYNAME"
 export FPM_AW="auditwheel repair --plat manylinux_2_35_x86_64 ./dist/*.whl"
 
-update_version $FPM_NAME $FPM_VERSION
 
 # environment variables
 export FPM_FC=gfortran
@@ -76,6 +75,8 @@ fi
 if [[ "$FPM_VERSION" == *"dev"* ]]; then
     export FPM_VERSION="$FPM_VERSION+$(git rev-parse --short HEAD)"
 fi
+
+update_version $FPM_NAME $FPM_VERSION
 
 export DESTDIR=.
 export PREFIX=$FPM_DEFAULT_INSTALL_DIR
