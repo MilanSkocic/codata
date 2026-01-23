@@ -46,4 +46,4 @@ EXAMPLE
 SEE ALSO
        codata(3)
 
-2.4.0rc1                    22 January 2026                   codata(1)
+2.4.0rc1                    23 January 2026                   codata(1)
