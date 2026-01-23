@@ -62,7 +62,7 @@ program codatacli
         '  codata(3)                                                     ', &
         '' ]
     
-    call set_args("--year:y 2022, --value F, --uncertainty F", help_text, version_text)
+    call set_args("--year:y 2022 --value F --uncertainty F", help_text, version_text)
     select case(iget("year"))
         case (2022)
             cctptr => cc
