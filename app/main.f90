@@ -1,5 +1,6 @@
 program codatacli
     use iso_fortran_env, only: output_unit
+    use stdlib_kinds, only: dp, sp, int32, int64
     use M_CLI2, only: set_args, iget, lget
     use M_CLI2, only: args=>unnamed
     use regex_module, only: REGEX, parse_pattern, regex_pattern
@@ -43,8 +44,8 @@ program codatacli
         '                                                                ', &
         'OPTIONS                                                         ', &
         '  o --year, -y       Year of the codata constants: 2022, 2018, 2014, 2010.', &
-        '  o --value          Show only the value.', &
-        '  o --uncertainty    Show only the uncertainty.                         ', &
+        '  o --value, -a      Show only the value.', &
+        '  o --error, -e      Show only the uncertainty.                         ', &
         '  o --usage          Show usage text and exit.                          ', & 
         '  o --help           Show help text and exit.                          ', & 
         '  o --verbose        Display additional information when available.   ', &
@@ -62,7 +63,7 @@ program codatacli
         '  codata(3)                                                     ', &
         '' ]
     
-    call set_args("--year:y 2022 --value F --uncertainty F", help_text, version_text)
+    call set_args("--year:y 2022 --value:a F --error:e", help_text, version_text)
     select case(iget("year"))
         case (2022)
             cctptr => cc
@@ -74,15 +75,14 @@ program codatacli
             cctptr => cc_2010
         case default
             nullify(cctptr)
-            char_fp => help_text
-            call print_text(char_fp)
+            write(output_unit, '(A)') 'Invalid year. See --help.'
             stop
     end select
 
     if(ASSOCIATED(cctptr))then
         if(size(args) > 0) then
             do i=1, size(args), 1
-                 call display(cctptr, trim(args(i)), lget("value"), lget("uncertainty"))
+                 call display(cctptr, trim(args(i)), lget("a"), lget("e"))
             end do
         else
             call display(cctptr)
