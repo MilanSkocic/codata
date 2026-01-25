@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Fortran AutoDoc &#8212; codata 2.4.0rc1 documentation</title>
+    <title>Fortran AutoDoc &#8212; codata 2.4.0rc2 documentation</title>
   
   
   
@@ -35,7 +35,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=e20d6256"></script>
+    <script src="../_static/documentation_options.js?v=d5f5e83c"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'fortran/index';</script>
@@ -118,7 +118,7 @@
   
   
   
-    <p class="title logo__title">codata 2.4.0rc1 documentation</p>
+    <p class="title logo__title">codata 2.4.0rc2 documentation</p>
   
 </a></div>
     
@@ -2037,6 +2037,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <h3>codatacli (program)<a class="headerlink" href="#f-program-codatacli" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">codatacli</span>
 <span class="w">    </span><span class="k">use </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">output_unit</span>
+<span class="w">    </span><span class="k">use </span><span class="n">stdlib_kinds</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
 <span class="w">    </span><span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">set_args</span><span class="p">,</span><span class="w"> </span><span class="n">iget</span><span class="p">,</span><span class="w"> </span><span class="n">lget</span>
 <span class="w">    </span><span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">args</span><span class="o">=&gt;</span><span class="n">unnamed</span>
 <span class="w">    </span><span class="k">use </span><span class="n">regex_module</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">REGEX</span><span class="p">,</span><span class="w"> </span><span class="n">parse_pattern</span><span class="p">,</span><span class="w"> </span><span class="n">regex_pattern</span>
@@ -2080,8 +2081,8 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">        </span><span class="s1">&#39;OPTIONS                                                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">        </span><span class="s1">&#39;  o --year, -y       Year of the codata constants: 2022, 2018, 2014, 2010.&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  o --value          Show only the value.&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  o --uncertainty    Show only the uncertainty.                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">        </span><span class="s1">&#39;  o --value, -a      Show only the value.&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">        </span><span class="s1">&#39;  o --error, -e      Show only the uncertainty.                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">        </span><span class="s1">&#39;  o --usage          Show usage text and exit.                          &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>
 <span class="w">        </span><span class="s1">&#39;  o --help           Show help text and exit.                          &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>
 <span class="w">        </span><span class="s1">&#39;  o --verbose        Display additional information when available.   &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
@@ -2099,7 +2100,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <span class="w">        </span><span class="s1">&#39;  codata(3)                                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="w">        </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">]</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="k">call </span><span class="n">set_args</span><span class="p">(</span><span class="s2">&quot;--year:y 2022, --value F, --uncertainty F&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">help_text</span><span class="p">,</span><span class="w"> </span><span class="n">version_text</span><span class="p">)</span>
+<span class="w">    </span><span class="k">call </span><span class="n">set_args</span><span class="p">(</span><span class="s2">&quot;--year:y 2022 --value:a F --error:e&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">help_text</span><span class="p">,</span><span class="w"> </span><span class="n">version_text</span><span class="p">)</span>
 <span class="w">    </span><span class="k">select case</span><span class="p">(</span><span class="n">iget</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">))</span>
 <span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2022</span><span class="p">)</span>
 <span class="w">            </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc</span>
@@ -2111,15 +2112,14 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <span class="w">            </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2010</span>
 <span class="w">        </span><span class="k">case </span><span class="n">default</span>
 <span class="w">            </span><span class="k">nullify</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
-<span class="w">            </span><span class="n">char_fp</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">help_text</span>
-<span class="w">            </span><span class="k">call </span><span class="n">print_text</span><span class="p">(</span><span class="n">char_fp</span><span class="p">)</span>
+<span class="w">            </span><span class="k">write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Invalid year. See --help.&#39;</span>
 <span class="w">            </span><span class="k">stop</span>
 <span class="k">    end select</span>
 
 <span class="k">    if</span><span class="p">(</span><span class="nb">ASSOCIATED</span><span class="p">(</span><span class="n">cctptr</span><span class="p">))</span><span class="k">then</span>
 <span class="k">        if</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
 <span class="k">            do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">                 </span><span class="k">call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">args</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;uncertainty&quot;</span><span class="p">))</span>
+<span class="w">                 </span><span class="k">call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">args</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">))</span>
 <span class="w">            </span><span class="k">end do</span>
 <span class="k">        else</span>
 <span class="k">            call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
@@ -2179,6 +2179,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <li><p><a class="reference internal" href="#f-module-codata" title="codata"><code class="docutils literal notranslate"><span class="pre">codata</span></code></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iso_fortran_env</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regex_module</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">stdlib_kinds</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stdlib_optval</span></code></p></li>
 </ul>
 <p class="section-subtitle">Procedures</p>
