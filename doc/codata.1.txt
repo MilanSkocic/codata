@@ -17,10 +17,10 @@ OPTIONS
        o --year, -y
               Year of the codata constants: 2022, 2018, 2014, 2010.
 
-       o --value
+       o --value, -a
               Show only the value.
 
-       o --uncertainty
+       o --error, -e
               Show only the uncertainty.
 
        o --usage
@@ -46,4 +46,4 @@ EXAMPLE
 SEE ALSO
        codata(3)
 
-2.4.0rc1                    23 January 2026                   codata(1)
+2.4.0rc1                    25 January 2026                   codata(1)
