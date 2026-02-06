@@ -14,13 +14,13 @@ DESCRIPTION
 
 
 OPTIONS
-  o --year, -y       Year of the codata constants: 2022, 2018, 2014, 2010.
-  o --value, -a      Show only the value.
-  o --error, -e      Show only the uncertainty.
-  o --usage          Show usage text and exit.
-  o --help           Show help text and exit.
-  o --verbose        Display additional information when available.
-  o --version        Show version information and exit.
+  --year, -y YEAR  Year of the codata constants: 2022, 2018, 2014, 2010.
+  --value, -a      Show only the value.
+  --error, -e      Show only the uncertainty.
+  --usage          Show usage text and exit.
+  --help           Show help text and exit.
+  --verbose        Display additional information when available.
+  --version        Show version information and exit.
 
 EXAMPLE
   Minimal example

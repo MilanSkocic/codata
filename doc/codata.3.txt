@@ -1,4 +1,4 @@
-codata(3)                    Library calls                    codata(3)
+codata(3)                    Library Calls                    codata(3)
 
 NAME
        codata - libray for fundamental physical constants
@@ -2916,4 +2916,4 @@ CODATA 2010
 
        •  WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010
 
-2.4.0                       25 January 2026                   codata(3)
+2.4.1                       06 February 2026                  codata(3)
