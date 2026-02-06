@@ -1,3 +1,9 @@
+# 2.4.1
+
+- Fix option formatting in help text and man page.
+
+[Full changelog](https://github.com/MilanSkocic/codata/releases)
+
 # 2.4.0
 
 - Add tables for each codata year containing all constants.
