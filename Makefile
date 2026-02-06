@@ -114,7 +114,7 @@ install_dirs:
 	fpm install --prefix=$(install_dir) --profile=$(btype)
 	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(install_dir)/include
 	cp -f doc/$(FPM_NAME)*.3.gz $(install_dir)/share/man/man3
-	cp -f doc/$(FPM_NAME)*.1.gz $(install_dir)/share/man/man1
+	cp -f doc/$(FPM_APPNAME)*.1.gz $(install_dir)/share/man/man1
 
 install_linux: 
 	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so $(install_dir)/lib
@@ -136,7 +136,10 @@ uninstall:
 	rm -f $(install_dir)/lib/$(FPM_LIBNAME).dll.a
 	rm -f $(install_dir)/lib/$(FPM_LIBNAME).dll
 	rm -f $(install_dir)/bin/$(FPM_LIBNAME).dll
-	rm -r $(install_dir)/share/man3/$(FPM_LIBNAME)*.3
+	rm -f $(install_dir)/bin/$(FPM_APPNAME)
+	rm -f $(install_dir)/bin/$(FPM_APPNAME).exe
+	rm -r $(install_dir)/share/man1/$(FPM_NAME)*.1
+	rm -r $(install_dir)/share/man3/$(FPM_NAME)*.3
 # ---------------------------------------------------------------------
 
 
