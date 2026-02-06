@@ -138,7 +138,7 @@ uninstall:
 	rm -f $(install_dir)/bin/$(FPM_LIBNAME).dll
 	rm -f $(install_dir)/bin/$(FPM_APPNAME)
 	rm -f $(install_dir)/bin/$(FPM_APPNAME).exe
-	rm -r $(install_dir)/share/man1/$(FPM_NAME)*.1
+	rm -r $(install_dir)/share/man1/$(FPM_APPNAME)*.1
 	rm -r $(install_dir)/share/man3/$(FPM_NAME)*.3
 # ---------------------------------------------------------------------
 
