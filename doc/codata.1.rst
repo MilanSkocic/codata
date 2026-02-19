@@ -1,0 +1,61 @@
+NAME
+----
+
+**codata** - Command line for codata
+
+SYNOPSIS
+--------
+
+::
+
+   codata [OPTIONS] [REGEX_PATTERN ... ]
+
+DESCRIPTION
+-----------
+
+**codata is a command line interface which prints all the codata**
+constants.
+
+The current values are from 2022. Older values can be retrieved if
+needed and the output can be filtered with REGEX PATTERNS.
+
+OPTIONS
+-------
+
+**--year, -y YEAR**
+   Year of the **codata constants: 2022, 2018, 2014, 2010.**
+
+**--value, -a**
+   Show only the value.
+
+**--error, -e**
+   Show only the uncertainty.
+
+**--usage**
+   Show usage text and exit.
+
+**--help**
+   Show help text and exit.
+
+**--verbose**
+   Display additional information when available.
+
+**--version**
+   Show version information and exit.
+
+EXAMPLE
+-------
+
+Minimal example
+
+::
+
+        codata
+        codata -y 2018 molar electron
+        codata -y 2014 'molar.*gas' 'electron.*eV'
+        codata '[B,b]oltzmann.*eV'
+
+SEE ALSO
+--------
+
+**codata(3)**
