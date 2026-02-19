@@ -1,7 +1,7 @@
 program codatacli
     use iso_fortran_env, only: output_unit
     use stdlib_kinds, only: dp, sp, int32, int64
-    use M_CLI2, only: set_args, iget, lget
+    use M_CLI2, only: set_args, set_mode, specified, iget, lget, sget, get_args
     use M_CLI2, only: args=>unnamed
     use regex_module, only: REGEX, parse_pattern, regex_pattern
     use stdlib_optval
@@ -12,6 +12,7 @@ program codatacli
     character(len=:),allocatable, target  :: version_text(:)
     character(len=:), pointer :: char_fp(:)
     type(codata_constant_type), pointer :: cctptr(:)
+    character(len=:), allocatable :: patterns(:)
     
     integer :: i
     
@@ -62,8 +63,10 @@ program codatacli
         'SEE ALSO                                                         ', &
         '  codata(3)                                                     ', &
         '' ]
-    
-    call set_args("--year:y 2022 --value:a F --error:e", help_text, version_text)
+    call set_mode('strict') 
+    call set_mode('response_file')
+    call set_args('--year:y 2022 --value:a F --error:e F --pattern:p ,', help_text, version_text)
+    call get_args('p', patterns, delimiters=',')
     select case(iget("year"))
         case (2022)
             cctptr => cc
@@ -83,6 +86,10 @@ program codatacli
         if(size(args) > 0) then
             do i=1, size(args), 1
                  call display(cctptr, trim(args(i)), lget("a"), lget("e"))
+            end do
+        elseif(specified('p'))then
+            do i=1, size(patterns), 1
+                call display(cctptr, trim(patterns(i)), lget("a"), lget("e"))
             end do
         else
             call display(cctptr)
