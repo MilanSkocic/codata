@@ -6,6 +6,7 @@ MAN=$(patsubst %.prep, %, $(MANPREP))
 MANPDF=$(patsubst %.prep, %.pdf, $(MANPREP))
 MANTXT=$(patsubst %.prep, %.txt, $(MANPREP))
 MANGZ=$(patsubst %.prep, %.gz, $(MANPREP))
+MANRST=$(patsubst %.prep, %.rst, $(MANPREP))
 
 BOOKMAN=$(FPM_NAME).pdf
 
@@ -16,7 +17,7 @@ html:
 	make -C sphinx html
 
 .PHONY:
-man: $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(BOOKMAN)
+man: $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(MANRST) $(BOOKMAN)
 
 .PHONY:
 $(BOOKMAN): $(MAN)
@@ -36,6 +37,9 @@ $(BOOKMAN): $(MAN)
 
 %.txt: %
 	man -l $< > $@
+
+%.rst: %
+	pandoc --from man --to rst --shift-heading-level-by=1 $< -o $@
 
 
 .PHONY:
