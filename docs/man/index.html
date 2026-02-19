@@ -1,0 +1,2148 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Man Pages &#8212; codata 2.5.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=3c4615cf"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'man/index';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Fortran AutoDoc" href="../fortran/index.html" />
+    <link rel="prev" title="codata - Documentation" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">codata 2.5.0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Man Pages
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../fortran/index.html">
+    Fortran AutoDoc
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../C/index.html">
+    C HEADER
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../python/index.html">
+    Python AutoDoc
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MilanSkocic/codata" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    Man Pages
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../fortran/index.html">
+    Fortran AutoDoc
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../C/index.html">
+    C HEADER
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../python/index.html">
+    Python AutoDoc
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/MilanSkocic/codata" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Man Pages</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="man-pages">
+<h1>Man Pages<a class="headerlink" href="#man-pages" title="Link to this heading">#</a></h1>
+<section id="codata-1">
+<h2>codata(1)<a class="headerlink" href="#codata-1" title="Link to this heading">#</a></h2>
+<section id="name">
+<h3>NAME<a class="headerlink" href="#name" title="Link to this heading">#</a></h3>
+<p><strong>codata</strong> - Command line for codata</p>
+</section>
+<section id="synopsis">
+<h3>SYNOPSIS<a class="headerlink" href="#synopsis" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">codata</span> <span class="p">[</span><span class="n">OPTIONS</span><span class="p">]</span> <span class="p">[</span><span class="n">REGEX_PATTERN</span> <span class="o">...</span> <span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="description">
+<h3>DESCRIPTION<a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
+<p><strong>codata is a command line interface which prints all the codata</strong>
+constants.</p>
+<p>The current values are from 2022. Older values can be retrieved if
+needed and the output can be filtered with REGEX PATTERNS.</p>
+</section>
+<section id="options">
+<h3>OPTIONS<a class="headerlink" href="#options" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt><strong>–year, -y YEAR</strong></dt><dd><p>Year of the <strong>codata constants: 2022, 2018, 2014, 2010.</strong></p>
+</dd>
+<dt><strong>–value, -a</strong></dt><dd><p>Show only the value.</p>
+</dd>
+<dt><strong>–error, -e</strong></dt><dd><p>Show only the uncertainty.</p>
+</dd>
+<dt><strong>–usage</strong></dt><dd><p>Show usage text and exit.</p>
+</dd>
+<dt><strong>–help</strong></dt><dd><p>Show help text and exit.</p>
+</dd>
+<dt><strong>–verbose</strong></dt><dd><p>Display additional information when available.</p>
+</dd>
+<dt><strong>–version</strong></dt><dd><p>Show version information and exit.</p>
+</dd>
+</dl>
+</section>
+<section id="example">
+<h3>EXAMPLE<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<p>Minimal example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">codata</span>
+<span class="n">codata</span> <span class="o">-</span><span class="n">y</span> <span class="mi">2018</span> <span class="n">molar</span> <span class="n">electron</span>
+<span class="n">codata</span> <span class="o">-</span><span class="n">y</span> <span class="mi">2014</span> <span class="s1">&#39;molar.*gas&#39;</span> <span class="s1">&#39;electron.*eV&#39;</span>
+<span class="n">codata</span> <span class="s1">&#39;[B,b]oltzmann.*eV&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="see-also">
+<h3>SEE ALSO<a class="headerlink" href="#see-also" title="Link to this heading">#</a></h3>
+<p><strong>codata(3)</strong></p>
+</section>
+</section>
+<section id="codata-3">
+<h2>codata(3)<a class="headerlink" href="#codata-3" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>NAME<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p><strong>codata</strong> - libray for fundamental physical constants</p>
+</section>
+<section id="library">
+<h3>LIBRARY<a class="headerlink" href="#library" title="Link to this heading">#</a></h3>
+<p>Codata (<strong>-libcodata, -lcodata)</strong></p>
+</section>
+<section id="id2">
+<h3>SYNOPSIS<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">use</span> <span class="n">codata</span>
+<span class="n">include</span> <span class="s2">&quot;codata.h&quot;</span>
+<span class="kn">import</span> <span class="nn">pycodata</span>
+
+<span class="n">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="n">pointer</span> <span class="n">function</span> <span class="n">get_version</span><span class="p">()()</span>
+<span class="n">char</span><span class="o">**</span> <span class="n">codata_get_version</span><span class="p">(</span><span class="n">void</span><span class="p">)</span>
+<span class="n">pycodata</span><span class="o">.</span><span class="n">__version__</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3>DESCRIPTION<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><em>codata</em> <strong>is a Fortran library providing the fundamental physical</strong>
+constants according to CODATA
+<a class="reference external" href="https://www.nist.gov/programs-projects/">https://www.nist.gov/programs-projects/</a><em>codata</em><strong>-values-fundamental-physical-constants.</strong>
+A C API allows usage from C, or can be used as a basis for other
+wrappers. Python wrapper allows easy usage from Python.</p>
+<p>The latest <em>codata</em> <strong>constants 2022</strong>
+<a class="reference external" href="https://pml.nist.gov/cuu/Constants">https://pml.nist.gov/cuu/Constants</a> were integrated in stdlib
+<a class="github reference external" href="https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0">fortran-lang/stdlib</a>. The
+constants are implemented as derived type which carries the name, the
+value, the uncertainty and the unit. This library is complementary to
+the constants defined in the stdlib by providing older values for the
+constants. The latest values (2022) do not have the year as a suffix in
+their name. Older values can be used and they feature the year as a
+suffix in their name.</p>
+<p>All <em>codata</em> <strong>(physical) constants are defined as a derived type
+codata_constant_type.</strong> All the <em>codata</em> <strong>constants are provided as
+double precision reals.</strong> The names are quite long and can be aliased
+with shorter names. The derived type codata_constant_type defines 4
+members and 2 procedures.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>type, public :: codata_constant_type
+    !! Derived type for representing a Codata constant.
+    character(len=64) :: name ! Name of the constant
+    real(dp) :: value         ! Value of the constant
+    real(dp) :: uncertainty   ! Uncertainty of the constant
+    character(len=32) :: unit ! Unit of the constant
+contains
+    procedure :: print
+    procedure :: to_real_sp
+    procedure :: to_real_dp
+    generic :: to_real =&gt; to_real_sp, to_real_dp
+end type
+
+interface to_real ! Get the constant value or uncertainty.
+    module procedure to_real_sp
+    module procedure to_real_dp
+end interface
+</pre></div>
+</div>
+<p>A module level interface to_real is available for getting the constant
+value or uncertainty of a constant.</p>
+<p>The C API exposes a structure codata_constant_ttype that defines the
+same members as in Fortran.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">struct</span> <span class="n">codata_constant_type</span><span class="p">{</span>
+    <span class="n">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">65</span><span class="p">];</span>
+    <span class="n">double</span> <span class="n">value</span><span class="p">;</span>
+    <span class="n">double</span> <span class="n">uncertainty</span><span class="p">;</span>
+    <span class="n">char</span> <span class="n">unit</span><span class="p">[</span><span class="mi">33</span><span class="p">];</span>
+<span class="p">}</span><span class="n">cct</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The Python wrapper encapsulates the members in a dictionnary.</p>
+</section>
+<section id="notes">
+<h3>NOTES<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
+<p>To <strong>use</strong> <em>codata</em> <strong>within your fpm
+https://github.com/fortran-lang/fpm</strong> project, add the following lines
+to your file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">dependencies</span><span class="p">]</span>
+<span class="n">codata</span> <span class="o">=</span> <span class="p">{</span> <span class="n">git</span><span class="o">=</span><span class="s2">&quot;https://github.com/MilanSkocic/codata.git&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>EXAMPLE<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Example in Fortran</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">program</span> <span class="n">example_in_f</span>
+<span class="n">use</span> <span class="n">iso_fortran_env</span>
+<span class="n">use</span> <span class="n">codata</span>
+<span class="n">implicit</span> <span class="n">none</span>
+
+<span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;########## EXAMPLE IN FORTRAN ##########&#39;</span>
+
+<span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;# VERSION&#39;</span>
+<span class="nb">print</span> <span class="o">*</span><span class="p">,</span> <span class="s2">&quot;version = &quot;</span><span class="p">,</span> <span class="n">get_version</span><span class="p">()</span>
+
+<span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;# CONSTANTS&#39;</span>
+<span class="nb">print</span> <span class="o">*</span><span class="p">,</span> <span class="s2">&quot;c = &quot;</span><span class="p">,</span>  <span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="o">%</span><span class="n">value</span>
+
+<span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;# UNCERTAINTY&#39;</span>
+<span class="nb">print</span> <span class="o">*</span><span class="p">,</span> <span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span> <span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="o">%</span><span class="n">uncertainty</span>
+
+<span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;# OLDER VALUES&#39;</span>
+<span class="nb">print</span> <span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span> <span class="s2">&quot;Mu_2022(latest) = &quot;</span><span class="p">,</span> <span class="n">MOLAR_MASS_CONSTANT</span><span class="o">%</span><span class="n">value</span>
+<span class="nb">print</span> <span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span> <span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span> <span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="o">%</span><span class="n">value</span>
+<span class="nb">print</span> <span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span> <span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span>  <span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="o">%</span><span class="n">value</span>
+<span class="nb">print</span> <span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span> <span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span>  <span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="o">%</span><span class="n">value</span>
+<span class="n">end</span> <span class="n">program</span>
+</pre></div>
+</div>
+<p>Example in C:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;stdio.h&gt;</span>
+<span class="c1">#include &quot;codata.h&quot;</span>
+
+<span class="nb">int</span> <span class="n">main</span><span class="p">(</span><span class="n">void</span><span class="p">){</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;########## EXAMPLE IN C ##########);</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">,&quot;</span><span class="c1"># VERSION&quot;);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;version = </span><span class="si">%s</span><span class="s2">, codata_get_version());</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">,&quot;</span><span class="c1"># CONSTANTS&quot;);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;c = </span><span class="si">%f</span><span class="s2">, SPEED_OF_LIGHT_IN_VACUUM.value);</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">,&quot;</span><span class="c1"># UNCERTAINTY&quot;);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;u(c) = </span><span class="si">%f</span><span class="s2">, SPEED_OF_LIGHT_IN_VACUUM.uncertainty);</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">,&quot;</span><span class="c1"># OLDER VALUES&quot;);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Mu_2022(latest) = </span><span class="si">%23.16f</span><span class="s2">, MOLAR_MASS_CONSTANT.value);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Mu_2018 = </span><span class="si">%23.16f</span><span class="s2">, MOLAR_MASS_CONSTANT_2018.value);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Mu_2014 = </span><span class="si">%23.16f</span><span class="s2">, MOLAR_MASS_CONSTANT_2014.value);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Mu_2010 = </span><span class="si">%23.16f</span><span class="s2">, MOLAR_MASS_CONSTANT_2010.value);</span>
+
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Example in Python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pycodata</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########## EXAMPLE IN PYTHON ##########&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# VERSION&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;version = </span><span class="si">{</span><span class="n">pycodata</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# Constants&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;c =&quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# UNCERTAINTY&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;uncertainty&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# OLDER VALUES&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2022 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>SEE ALSO<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p><strong>gsl(3), codata(1)</strong></p>
+</section>
+<section id="codata-2022">
+<h3>CODATA 2022<a class="headerlink" href="#codata-2022" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>ALPHA_PARTICLE_ELECTRON_MASS_RATIO</p></li>
+<li><p>ALPHA_PARTICLE_MASS</p></li>
+<li><p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT</p></li>
+<li><p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>ALPHA_PARTICLE_MASS_IN_U</p></li>
+<li><p>ALPHA_PARTICLE_MOLAR_MASS</p></li>
+<li><p>ALPHA_PARTICLE_PROTON_MASS_RATIO</p></li>
+<li><p>ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS</p></li>
+<li><p>ALPHA_PARTICLE_RMS_CHARGE_RADIUS</p></li>
+<li><p>ANGSTROM_STAR</p></li>
+<li><p>ATOMIC_MASS_CONSTANT</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP</p></li>
+<li><p>ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP</p></li>
+<li><p>ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP</p></li>
+<li><p>ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP</p></li>
+<li><p>ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP</p></li>
+<li><p>ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP</p></li>
+<li><p>ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP</p></li>
+<li><p>ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY</p></li>
+<li><p>ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY</p></li>
+<li><p>ATOMIC_UNIT_OF_ACTION</p></li>
+<li><p>ATOMIC_UNIT_OF_CHARGE</p></li>
+<li><p>ATOMIC_UNIT_OF_CHARGE_DENSITY</p></li>
+<li><p>ATOMIC_UNIT_OF_CURRENT</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_FIELD</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM</p></li>
+<li><p>ATOMIC_UNIT_OF_ENERGY</p></li>
+<li><p>ATOMIC_UNIT_OF_FORCE</p></li>
+<li><p>ATOMIC_UNIT_OF_LENGTH</p></li>
+<li><p>ATOMIC_UNIT_OF_MAG_DIPOLE_MOM</p></li>
+<li><p>ATOMIC_UNIT_OF_MAG_FLUX_DENSITY</p></li>
+<li><p>ATOMIC_UNIT_OF_MAGNETIZABILITY</p></li>
+<li><p>ATOMIC_UNIT_OF_MASS</p></li>
+<li><p>ATOMIC_UNIT_OF_MOMENTUM</p></li>
+<li><p>ATOMIC_UNIT_OF_PERMITTIVITY</p></li>
+<li><p>ATOMIC_UNIT_OF_TIME</p></li>
+<li><p>ATOMIC_UNIT_OF_VELOCITY</p></li>
+<li><p>AVOGADRO_CONSTANT</p></li>
+<li><p>BOHR_MAGNETON</p></li>
+<li><p>BOHR_MAGNETON_IN_EV_T</p></li>
+<li><p>BOHR_MAGNETON_IN_HZ_T</p></li>
+<li><p>BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA</p></li>
+<li><p>BOHR_MAGNETON_IN_K_T</p></li>
+<li><p>BOHR_RADIUS</p></li>
+<li><p>BOLTZMANN_CONSTANT</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_EV_K</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_HZ_K</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN</p></li>
+<li><p>CHARACTERISTIC_IMPEDANCE_OF_VACUUM</p></li>
+<li><p>CLASSICAL_ELECTRON_RADIUS</p></li>
+<li><p>COMPTON_WAVELENGTH</p></li>
+<li><p>CONDUCTANCE_QUANTUM</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_AMPERE_90</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_COULOMB_90</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_FARAD_90</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_HENRY_90</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_OHM_90</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_VOLT_90</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_WATT_90</p></li>
+<li><p>COPPER_X_UNIT</p></li>
+<li><p>DEUTERON_ELECTRON_MAG_MOM_RATIO</p></li>
+<li><p>DEUTERON_ELECTRON_MASS_RATIO</p></li>
+<li><p>DEUTERON_G_FACTOR</p></li>
+<li><p>DEUTERON_MAG_MOM</p></li>
+<li><p>DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></li>
+<li><p>DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></li>
+<li><p>DEUTERON_MASS</p></li>
+<li><p>DEUTERON_MASS_ENERGY_EQUIVALENT</p></li>
+<li><p>DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>DEUTERON_MASS_IN_U</p></li>
+<li><p>DEUTERON_MOLAR_MASS</p></li>
+<li><p>DEUTERON_NEUTRON_MAG_MOM_RATIO</p></li>
+<li><p>DEUTERON_PROTON_MAG_MOM_RATIO</p></li>
+<li><p>DEUTERON_PROTON_MASS_RATIO</p></li>
+<li><p>DEUTERON_RELATIVE_ATOMIC_MASS</p></li>
+<li><p>DEUTERON_RMS_CHARGE_RADIUS</p></li>
+<li><p>ELECTRON_CHARGE_TO_MASS_QUOTIENT</p></li>
+<li><p>ELECTRON_DEUTERON_MAG_MOM_RATIO</p></li>
+<li><p>ELECTRON_DEUTERON_MASS_RATIO</p></li>
+<li><p>ELECTRON_G_FACTOR</p></li>
+<li><p>ELECTRON_GYROMAG_RATIO</p></li>
+<li><p>ELECTRON_GYROMAG_RATIO_IN_MHZ_T</p></li>
+<li><p>ELECTRON_HELION_MASS_RATIO</p></li>
+<li><p>ELECTRON_MAG_MOM</p></li>
+<li><p>ELECTRON_MAG_MOM_ANOMALY</p></li>
+<li><p>ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></li>
+<li><p>ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></li>
+<li><p>ELECTRON_MASS</p></li>
+<li><p>ELECTRON_MASS_ENERGY_EQUIVALENT</p></li>
+<li><p>ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>ELECTRON_MASS_IN_U</p></li>
+<li><p>ELECTRON_MOLAR_MASS</p></li>
+<li><p>ELECTRON_MUON_MAG_MOM_RATIO</p></li>
+<li><p>ELECTRON_MUON_MASS_RATIO</p></li>
+<li><p>ELECTRON_NEUTRON_MAG_MOM_RATIO</p></li>
+<li><p>ELECTRON_NEUTRON_MASS_RATIO</p></li>
+<li><p>ELECTRON_PROTON_MAG_MOM_RATIO</p></li>
+<li><p>ELECTRON_PROTON_MASS_RATIO</p></li>
+<li><p>ELECTRON_RELATIVE_ATOMIC_MASS</p></li>
+<li><p>ELECTRON_TAU_MASS_RATIO</p></li>
+<li><p>ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO</p></li>
+<li><p>ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO</p></li>
+<li><p>ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO</p></li>
+<li><p>ELECTRON_TRITON_MASS_RATIO</p></li>
+<li><p>ELECTRON_VOLT</p></li>
+<li><p>ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP</p></li>
+<li><p>ELECTRON_VOLT_HARTREE_RELATIONSHIP</p></li>
+<li><p>ELECTRON_VOLT_HERTZ_RELATIONSHIP</p></li>
+<li><p>ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP</p></li>
+<li><p>ELECTRON_VOLT_JOULE_RELATIONSHIP</p></li>
+<li><p>ELECTRON_VOLT_KELVIN_RELATIONSHIP</p></li>
+<li><p>ELECTRON_VOLT_KILOGRAM_RELATIONSHIP</p></li>
+<li><p>ELEMENTARY_CHARGE</p></li>
+<li><p>ELEMENTARY_CHARGE_OVER_H_BAR</p></li>
+<li><p>FARADAY_CONSTANT</p></li>
+<li><p>FERMI_COUPLING_CONSTANT</p></li>
+<li><p>FINE_STRUCTURE_CONSTANT</p></li>
+<li><p>FIRST_RADIATION_CONSTANT</p></li>
+<li><p>FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE</p></li>
+<li><p>HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP</p></li>
+<li><p>HARTREE_ELECTRON_VOLT_RELATIONSHIP</p></li>
+<li><p>HARTREE_ENERGY</p></li>
+<li><p>HARTREE_ENERGY_IN_EV</p></li>
+<li><p>HARTREE_HERTZ_RELATIONSHIP</p></li>
+<li><p>HARTREE_INVERSE_METER_RELATIONSHIP</p></li>
+<li><p>HARTREE_JOULE_RELATIONSHIP</p></li>
+<li><p>HARTREE_KELVIN_RELATIONSHIP</p></li>
+<li><p>HARTREE_KILOGRAM_RELATIONSHIP</p></li>
+<li><p>HELION_ELECTRON_MASS_RATIO</p></li>
+<li><p>HELION_G_FACTOR</p></li>
+<li><p>HELION_MAG_MOM</p></li>
+<li><p>HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></li>
+<li><p>HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></li>
+<li><p>HELION_MASS</p></li>
+<li><p>HELION_MASS_ENERGY_EQUIVALENT</p></li>
+<li><p>HELION_MASS_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>HELION_MASS_IN_U</p></li>
+<li><p>HELION_MOLAR_MASS</p></li>
+<li><p>HELION_PROTON_MASS_RATIO</p></li>
+<li><p>HELION_RELATIVE_ATOMIC_MASS</p></li>
+<li><p>HELION_SHIELDING_SHIFT</p></li>
+<li><p>HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP</p></li>
+<li><p>HERTZ_ELECTRON_VOLT_RELATIONSHIP</p></li>
+<li><p>HERTZ_HARTREE_RELATIONSHIP</p></li>
+<li><p>HERTZ_INVERSE_METER_RELATIONSHIP</p></li>
+<li><p>HERTZ_JOULE_RELATIONSHIP</p></li>
+<li><p>HERTZ_KELVIN_RELATIONSHIP</p></li>
+<li><p>HERTZ_KILOGRAM_RELATIONSHIP</p></li>
+<li><p>HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133</p></li>
+<li><p>INVERSE_FINE_STRUCTURE_CONSTANT</p></li>
+<li><p>INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP</p></li>
+<li><p>INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP</p></li>
+<li><p>INVERSE_METER_HARTREE_RELATIONSHIP</p></li>
+<li><p>INVERSE_METER_HERTZ_RELATIONSHIP</p></li>
+<li><p>INVERSE_METER_JOULE_RELATIONSHIP</p></li>
+<li><p>INVERSE_METER_KELVIN_RELATIONSHIP</p></li>
+<li><p>INVERSE_METER_KILOGRAM_RELATIONSHIP</p></li>
+<li><p>INVERSE_OF_CONDUCTANCE_QUANTUM</p></li>
+<li><p>JOSEPHSON_CONSTANT</p></li>
+<li><p>JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP</p></li>
+<li><p>JOULE_ELECTRON_VOLT_RELATIONSHIP</p></li>
+<li><p>JOULE_HARTREE_RELATIONSHIP</p></li>
+<li><p>JOULE_HERTZ_RELATIONSHIP</p></li>
+<li><p>JOULE_INVERSE_METER_RELATIONSHIP</p></li>
+<li><p>JOULE_KELVIN_RELATIONSHIP</p></li>
+<li><p>JOULE_KILOGRAM_RELATIONSHIP</p></li>
+<li><p>KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP</p></li>
+<li><p>KELVIN_ELECTRON_VOLT_RELATIONSHIP</p></li>
+<li><p>KELVIN_HARTREE_RELATIONSHIP</p></li>
+<li><p>KELVIN_HERTZ_RELATIONSHIP</p></li>
+<li><p>KELVIN_INVERSE_METER_RELATIONSHIP</p></li>
+<li><p>KELVIN_JOULE_RELATIONSHIP</p></li>
+<li><p>KELVIN_KILOGRAM_RELATIONSHIP</p></li>
+<li><p>KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP</p></li>
+<li><p>KILOGRAM_ELECTRON_VOLT_RELATIONSHIP</p></li>
+<li><p>KILOGRAM_HARTREE_RELATIONSHIP</p></li>
+<li><p>KILOGRAM_HERTZ_RELATIONSHIP</p></li>
+<li><p>KILOGRAM_INVERSE_METER_RELATIONSHIP</p></li>
+<li><p>KILOGRAM_JOULE_RELATIONSHIP</p></li>
+<li><p>KILOGRAM_KELVIN_RELATIONSHIP</p></li>
+<li><p>LATTICE_PARAMETER_OF_SILICON</p></li>
+<li><p>LATTICE_SPACING_OF_IDEAL_SI_220</p></li>
+<li><p>LOSCHMIDT_CONSTANT_273_15_K_100_KPA</p></li>
+<li><p>LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA</p></li>
+<li><p>LUMINOUS_EFFICACY</p></li>
+<li><p>MAG_FLUX_QUANTUM</p></li>
+<li><p>MOLAR_GAS_CONSTANT</p></li>
+<li><p>MOLAR_MASS_CONSTANT</p></li>
+<li><p>MOLAR_MASS_OF_CARBON_12</p></li>
+<li><p>MOLAR_PLANCK_CONSTANT</p></li>
+<li><p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA</p></li>
+<li><p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA</p></li>
+<li><p>MOLAR_VOLUME_OF_SILICON</p></li>
+<li><p>MOLYBDENUM_X_UNIT</p></li>
+<li><p>MUON_COMPTON_WAVELENGTH</p></li>
+<li><p>MUON_ELECTRON_MASS_RATIO</p></li>
+<li><p>MUON_G_FACTOR</p></li>
+<li><p>MUON_MAG_MOM</p></li>
+<li><p>MUON_MAG_MOM_ANOMALY</p></li>
+<li><p>MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></li>
+<li><p>MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></li>
+<li><p>MUON_MASS</p></li>
+<li><p>MUON_MASS_ENERGY_EQUIVALENT</p></li>
+<li><p>MUON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>MUON_MASS_IN_U</p></li>
+<li><p>MUON_MOLAR_MASS</p></li>
+<li><p>MUON_NEUTRON_MASS_RATIO</p></li>
+<li><p>MUON_PROTON_MAG_MOM_RATIO</p></li>
+<li><p>MUON_PROTON_MASS_RATIO</p></li>
+<li><p>MUON_TAU_MASS_RATIO</p></li>
+<li><p>NATURAL_UNIT_OF_ACTION</p></li>
+<li><p>NATURAL_UNIT_OF_ACTION_IN_EV_S</p></li>
+<li><p>NATURAL_UNIT_OF_ENERGY</p></li>
+<li><p>NATURAL_UNIT_OF_ENERGY_IN_MEV</p></li>
+<li><p>NATURAL_UNIT_OF_LENGTH</p></li>
+<li><p>NATURAL_UNIT_OF_MASS</p></li>
+<li><p>NATURAL_UNIT_OF_MOMENTUM</p></li>
+<li><p>NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C</p></li>
+<li><p>NATURAL_UNIT_OF_TIME</p></li>
+<li><p>NATURAL_UNIT_OF_VELOCITY</p></li>
+<li><p>NEUTRON_COMPTON_WAVELENGTH</p></li>
+<li><p>NEUTRON_ELECTRON_MAG_MOM_RATIO</p></li>
+<li><p>NEUTRON_ELECTRON_MASS_RATIO</p></li>
+<li><p>NEUTRON_G_FACTOR</p></li>
+<li><p>NEUTRON_GYROMAG_RATIO</p></li>
+<li><p>NEUTRON_GYROMAG_RATIO_IN_MHZ_T</p></li>
+<li><p>NEUTRON_MAG_MOM</p></li>
+<li><p>NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></li>
+<li><p>NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></li>
+<li><p>NEUTRON_MASS</p></li>
+<li><p>NEUTRON_MASS_ENERGY_EQUIVALENT</p></li>
+<li><p>NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>NEUTRON_MASS_IN_U</p></li>
+<li><p>NEUTRON_MOLAR_MASS</p></li>
+<li><p>NEUTRON_MUON_MASS_RATIO</p></li>
+<li><p>NEUTRON_PROTON_MAG_MOM_RATIO</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_IN_U</p></li>
+<li><p>NEUTRON_PROTON_MASS_RATIO</p></li>
+<li><p>NEUTRON_RELATIVE_ATOMIC_MASS</p></li>
+<li><p>NEUTRON_TAU_MASS_RATIO</p></li>
+<li><p>NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO</p></li>
+<li><p>NEWTONIAN_CONSTANT_OF_GRAVITATION</p></li>
+<li><p>NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C</p></li>
+<li><p>NUCLEAR_MAGNETON</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_EV_T</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_K_T</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_MHZ_T</p></li>
+<li><p>PLANCK_CONSTANT</p></li>
+<li><p>PLANCK_CONSTANT_IN_EV_HZ</p></li>
+<li><p>PLANCK_LENGTH</p></li>
+<li><p>PLANCK_MASS</p></li>
+<li><p>PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV</p></li>
+<li><p>PLANCK_TEMPERATURE</p></li>
+<li><p>PLANCK_TIME</p></li>
+<li><p>PROTON_CHARGE_TO_MASS_QUOTIENT</p></li>
+<li><p>PROTON_COMPTON_WAVELENGTH</p></li>
+<li><p>PROTON_ELECTRON_MASS_RATIO</p></li>
+<li><p>PROTON_G_FACTOR</p></li>
+<li><p>PROTON_GYROMAG_RATIO</p></li>
+<li><p>PROTON_GYROMAG_RATIO_IN_MHZ_T</p></li>
+<li><p>PROTON_MAG_MOM</p></li>
+<li><p>PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></li>
+<li><p>PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></li>
+<li><p>PROTON_MAG_SHIELDING_CORRECTION</p></li>
+<li><p>PROTON_MASS</p></li>
+<li><p>PROTON_MASS_ENERGY_EQUIVALENT</p></li>
+<li><p>PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>PROTON_MASS_IN_U</p></li>
+<li><p>PROTON_MOLAR_MASS</p></li>
+<li><p>PROTON_MUON_MASS_RATIO</p></li>
+<li><p>PROTON_NEUTRON_MAG_MOM_RATIO</p></li>
+<li><p>PROTON_NEUTRON_MASS_RATIO</p></li>
+<li><p>PROTON_RELATIVE_ATOMIC_MASS</p></li>
+<li><p>PROTON_RMS_CHARGE_RADIUS</p></li>
+<li><p>PROTON_TAU_MASS_RATIO</p></li>
+<li><p>QUANTUM_OF_CIRCULATION</p></li>
+<li><p>QUANTUM_OF_CIRCULATION_TIMES_2</p></li>
+<li><p>REDUCED_COMPTON_WAVELENGTH</p></li>
+<li><p>REDUCED_MUON_COMPTON_WAVELENGTH</p></li>
+<li><p>REDUCED_NEUTRON_COMPTON_WAVELENGTH</p></li>
+<li><p>REDUCED_PLANCK_CONSTANT</p></li>
+<li><p>REDUCED_PLANCK_CONSTANT_IN_EV_S</p></li>
+<li><p>REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM</p></li>
+<li><p>REDUCED_PROTON_COMPTON_WAVELENGTH</p></li>
+<li><p>REDUCED_TAU_COMPTON_WAVELENGTH</p></li>
+<li><p>RYDBERG_CONSTANT</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_C_IN_HZ</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_HC_IN_EV</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_HC_IN_J</p></li>
+<li><p>SACKUR_TETRODE_CONSTANT_1_K_100_KPA</p></li>
+<li><p>SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA</p></li>
+<li><p>SECOND_RADIATION_CONSTANT</p></li>
+<li><p>SHIELDED_HELION_GYROMAG_RATIO</p></li>
+<li><p>SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></li>
+<li><p>SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO</p></li>
+<li><p>SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO</p></li>
+<li><p>SHIELDED_PROTON_GYROMAG_RATIO</p></li>
+<li><p>SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></li>
+<li><p>SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD</p></li>
+<li><p>SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT</p></li>
+<li><p>SPEED_OF_LIGHT_IN_VACUUM</p></li>
+<li><p>STANDARD_ACCELERATION_OF_GRAVITY</p></li>
+<li><p>STANDARD_ATMOSPHERE</p></li>
+<li><p>STANDARD_STATE_PRESSURE</p></li>
+<li><p>STEFAN_BOLTZMANN_CONSTANT</p></li>
+<li><p>TAU_COMPTON_WAVELENGTH</p></li>
+<li><p>TAU_ELECTRON_MASS_RATIO</p></li>
+<li><p>TAU_ENERGY_EQUIVALENT</p></li>
+<li><p>TAU_MASS</p></li>
+<li><p>TAU_MASS_ENERGY_EQUIVALENT</p></li>
+<li><p>TAU_MASS_IN_U</p></li>
+<li><p>TAU_MOLAR_MASS</p></li>
+<li><p>TAU_MUON_MASS_RATIO</p></li>
+<li><p>TAU_NEUTRON_MASS_RATIO</p></li>
+<li><p>TAU_PROTON_MASS_RATIO</p></li>
+<li><p>THOMSON_CROSS_SECTION</p></li>
+<li><p>TRITON_ELECTRON_MASS_RATIO</p></li>
+<li><p>TRITON_G_FACTOR</p></li>
+<li><p>TRITON_MAG_MOM</p></li>
+<li><p>TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO</p></li>
+<li><p>TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO</p></li>
+<li><p>TRITON_MASS</p></li>
+<li><p>TRITON_MASS_ENERGY_EQUIVALENT</p></li>
+<li><p>TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV</p></li>
+<li><p>TRITON_MASS_IN_U</p></li>
+<li><p>TRITON_MOLAR_MASS</p></li>
+<li><p>TRITON_PROTON_MASS_RATIO</p></li>
+<li><p>TRITON_RELATIVE_ATOMIC_MASS</p></li>
+<li><p>TRITON_TO_PROTON_MAG_MOM_RATIO</p></li>
+<li><p>UNIFIED_ATOMIC_MASS_UNIT</p></li>
+<li><p>VACUUM_ELECTRIC_PERMITTIVITY</p></li>
+<li><p>VACUUM_MAG_PERMEABILITY</p></li>
+<li><p>VON_KLITZING_CONSTANT</p></li>
+<li><p>WEAK_MIXING_ANGLE</p></li>
+<li><p>WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT</p></li>
+<li><p>WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT</p></li>
+<li><p>W_TO_Z_MASS_RATIO</p></li>
+</ul>
+</section>
+<section id="codata-2018">
+<h3>CODATA 2018<a class="headerlink" href="#codata-2018" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018</p></li>
+<li><p>ALPHA_PARTICLE_MASS_2018</p></li>
+<li><p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>ALPHA_PARTICLE_MASS_IN_U_2018</p></li>
+<li><p>ALPHA_PARTICLE_MOLAR_MASS_2018</p></li>
+<li><p>ALPHA_PARTICLE_PROTON_MASS_RATIO_2018</p></li>
+<li><p>ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018</p></li>
+<li><p>ANGSTROM_STAR_2018</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_2018</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2018</p></li>
+<li><p>ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2018</p></li>
+<li><p>ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2018</p></li>
+<li><p>ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2018</p></li>
+<li><p>ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2018</p></li>
+<li><p>ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2018</p></li>
+<li><p>ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_ACTION_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_CHARGE_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_CHARGE_DENSITY_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_CURRENT_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_FIELD_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_ENERGY_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_FORCE_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_LENGTH_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_MAGNETIZABILITY_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_MASS_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_MOMENTUM_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_PERMITTIVITY_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_TIME_2018</p></li>
+<li><p>ATOMIC_UNIT_OF_VELOCITY_2018</p></li>
+<li><p>AVOGADRO_CONSTANT_2018</p></li>
+<li><p>BOHR_MAGNETON_2018</p></li>
+<li><p>BOHR_MAGNETON_IN_EV_T_2018</p></li>
+<li><p>BOHR_MAGNETON_IN_HZ_T_2018</p></li>
+<li><p>BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018</p></li>
+<li><p>BOHR_MAGNETON_IN_K_T_2018</p></li>
+<li><p>BOHR_RADIUS_2018</p></li>
+<li><p>BOLTZMANN_CONSTANT_2018</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_EV_K_2018</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_HZ_K_2018</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2018</p></li>
+<li><p>CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2018</p></li>
+<li><p>CLASSICAL_ELECTRON_RADIUS_2018</p></li>
+<li><p>COMPTON_WAVELENGTH_2018</p></li>
+<li><p>CONDUCTANCE_QUANTUM_2018</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_AMPERE_90_2018</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_COULOMB_90_2018</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_FARAD_90_2018</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_HENRY_90_2018</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2018</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_OHM_90_2018</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_VOLT_90_2018</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2018</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_WATT_90_2018</p></li>
+<li><p>COPPER_X_UNIT_2018</p></li>
+<li><p>DEUTERON_ELECTRON_MAG_MOM_RATIO_2018</p></li>
+<li><p>DEUTERON_ELECTRON_MASS_RATIO_2018</p></li>
+<li><p>DEUTERON_G_FACTOR_2018</p></li>
+<li><p>DEUTERON_MAG_MOM_2018</p></li>
+<li><p>DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018</p></li>
+<li><p>DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018</p></li>
+<li><p>DEUTERON_MASS_2018</p></li>
+<li><p>DEUTERON_MASS_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>DEUTERON_MASS_IN_U_2018</p></li>
+<li><p>DEUTERON_MOLAR_MASS_2018</p></li>
+<li><p>DEUTERON_NEUTRON_MAG_MOM_RATIO_2018</p></li>
+<li><p>DEUTERON_PROTON_MAG_MOM_RATIO_2018</p></li>
+<li><p>DEUTERON_PROTON_MASS_RATIO_2018</p></li>
+<li><p>DEUTERON_RELATIVE_ATOMIC_MASS_2018</p></li>
+<li><p>DEUTERON_RMS_CHARGE_RADIUS_2018</p></li>
+<li><p>ELECTRON_CHARGE_TO_MASS_QUOTIENT_2018</p></li>
+<li><p>ELECTRON_DEUTERON_MAG_MOM_RATIO_2018</p></li>
+<li><p>ELECTRON_DEUTERON_MASS_RATIO_2018</p></li>
+<li><p>ELECTRON_G_FACTOR_2018</p></li>
+<li><p>ELECTRON_GYROMAG_RATIO_2018</p></li>
+<li><p>ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2018</p></li>
+<li><p>ELECTRON_HELION_MASS_RATIO_2018</p></li>
+<li><p>ELECTRON_MAG_MOM_2018</p></li>
+<li><p>ELECTRON_MAG_MOM_ANOMALY_2018</p></li>
+<li><p>ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018</p></li>
+<li><p>ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018</p></li>
+<li><p>ELECTRON_MASS_2018</p></li>
+<li><p>ELECTRON_MASS_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>ELECTRON_MASS_IN_U_2018</p></li>
+<li><p>ELECTRON_MOLAR_MASS_2018</p></li>
+<li><p>ELECTRON_MUON_MAG_MOM_RATIO_2018</p></li>
+<li><p>ELECTRON_MUON_MASS_RATIO_2018</p></li>
+<li><p>ELECTRON_NEUTRON_MAG_MOM_RATIO_2018</p></li>
+<li><p>ELECTRON_NEUTRON_MASS_RATIO_2018</p></li>
+<li><p>ELECTRON_PROTON_MAG_MOM_RATIO_2018</p></li>
+<li><p>ELECTRON_PROTON_MASS_RATIO_2018</p></li>
+<li><p>ELECTRON_RELATIVE_ATOMIC_MASS_2018</p></li>
+<li><p>ELECTRON_TAU_MASS_RATIO_2018</p></li>
+<li><p>ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018</p></li>
+<li><p>ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2018</p></li>
+<li><p>ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018</p></li>
+<li><p>ELECTRON_TRITON_MASS_RATIO_2018</p></li>
+<li><p>ELECTRON_VOLT_2018</p></li>
+<li><p>ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2018</p></li>
+<li><p>ELECTRON_VOLT_HARTREE_RELATIONSHIP_2018</p></li>
+<li><p>ELECTRON_VOLT_HERTZ_RELATIONSHIP_2018</p></li>
+<li><p>ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2018</p></li>
+<li><p>ELECTRON_VOLT_JOULE_RELATIONSHIP_2018</p></li>
+<li><p>ELECTRON_VOLT_KELVIN_RELATIONSHIP_2018</p></li>
+<li><p>ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2018</p></li>
+<li><p>ELEMENTARY_CHARGE_2018</p></li>
+<li><p>ELEMENTARY_CHARGE_OVER_H_BAR_2018</p></li>
+<li><p>FARADAY_CONSTANT_2018</p></li>
+<li><p>FERMI_COUPLING_CONSTANT_2018</p></li>
+<li><p>FINE_STRUCTURE_CONSTANT_2018</p></li>
+<li><p>FIRST_RADIATION_CONSTANT_2018</p></li>
+<li><p>FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2018</p></li>
+<li><p>HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018</p></li>
+<li><p>HARTREE_ELECTRON_VOLT_RELATIONSHIP_2018</p></li>
+<li><p>HARTREE_ENERGY_2018</p></li>
+<li><p>HARTREE_ENERGY_IN_EV_2018</p></li>
+<li><p>HARTREE_HERTZ_RELATIONSHIP_2018</p></li>
+<li><p>HARTREE_INVERSE_METER_RELATIONSHIP_2018</p></li>
+<li><p>HARTREE_JOULE_RELATIONSHIP_2018</p></li>
+<li><p>HARTREE_KELVIN_RELATIONSHIP_2018</p></li>
+<li><p>HARTREE_KILOGRAM_RELATIONSHIP_2018</p></li>
+<li><p>HELION_ELECTRON_MASS_RATIO_2018</p></li>
+<li><p>HELION_G_FACTOR_2018</p></li>
+<li><p>HELION_MAG_MOM_2018</p></li>
+<li><p>HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018</p></li>
+<li><p>HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018</p></li>
+<li><p>HELION_MASS_2018</p></li>
+<li><p>HELION_MASS_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>HELION_MASS_IN_U_2018</p></li>
+<li><p>HELION_MOLAR_MASS_2018</p></li>
+<li><p>HELION_PROTON_MASS_RATIO_2018</p></li>
+<li><p>HELION_RELATIVE_ATOMIC_MASS_2018</p></li>
+<li><p>HELION_SHIELDING_SHIFT_2018</p></li>
+<li><p>HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2018</p></li>
+<li><p>HERTZ_ELECTRON_VOLT_RELATIONSHIP_2018</p></li>
+<li><p>HERTZ_HARTREE_RELATIONSHIP_2018</p></li>
+<li><p>HERTZ_INVERSE_METER_RELATIONSHIP_2018</p></li>
+<li><p>HERTZ_JOULE_RELATIONSHIP_2018</p></li>
+<li><p>HERTZ_KELVIN_RELATIONSHIP_2018</p></li>
+<li><p>HERTZ_KILOGRAM_RELATIONSHIP_2018</p></li>
+<li><p>HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2018</p></li>
+<li><p>INVERSE_FINE_STRUCTURE_CONSTANT_2018</p></li>
+<li><p>INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2018</p></li>
+<li><p>INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2018</p></li>
+<li><p>INVERSE_METER_HARTREE_RELATIONSHIP_2018</p></li>
+<li><p>INVERSE_METER_HERTZ_RELATIONSHIP_2018</p></li>
+<li><p>INVERSE_METER_JOULE_RELATIONSHIP_2018</p></li>
+<li><p>INVERSE_METER_KELVIN_RELATIONSHIP_2018</p></li>
+<li><p>INVERSE_METER_KILOGRAM_RELATIONSHIP_2018</p></li>
+<li><p>INVERSE_OF_CONDUCTANCE_QUANTUM_2018</p></li>
+<li><p>JOSEPHSON_CONSTANT_2018</p></li>
+<li><p>JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018</p></li>
+<li><p>JOULE_ELECTRON_VOLT_RELATIONSHIP_2018</p></li>
+<li><p>JOULE_HARTREE_RELATIONSHIP_2018</p></li>
+<li><p>JOULE_HERTZ_RELATIONSHIP_2018</p></li>
+<li><p>JOULE_INVERSE_METER_RELATIONSHIP_2018</p></li>
+<li><p>JOULE_KELVIN_RELATIONSHIP_2018</p></li>
+<li><p>JOULE_KILOGRAM_RELATIONSHIP_2018</p></li>
+<li><p>KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2018</p></li>
+<li><p>KELVIN_ELECTRON_VOLT_RELATIONSHIP_2018</p></li>
+<li><p>KELVIN_HARTREE_RELATIONSHIP_2018</p></li>
+<li><p>KELVIN_HERTZ_RELATIONSHIP_2018</p></li>
+<li><p>KELVIN_INVERSE_METER_RELATIONSHIP_2018</p></li>
+<li><p>KELVIN_JOULE_RELATIONSHIP_2018</p></li>
+<li><p>KELVIN_KILOGRAM_RELATIONSHIP_2018</p></li>
+<li><p>KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2018</p></li>
+<li><p>KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2018</p></li>
+<li><p>KILOGRAM_HARTREE_RELATIONSHIP_2018</p></li>
+<li><p>KILOGRAM_HERTZ_RELATIONSHIP_2018</p></li>
+<li><p>KILOGRAM_INVERSE_METER_RELATIONSHIP_2018</p></li>
+<li><p>KILOGRAM_JOULE_RELATIONSHIP_2018</p></li>
+<li><p>KILOGRAM_KELVIN_RELATIONSHIP_2018</p></li>
+<li><p>LATTICE_PARAMETER_OF_SILICON_2018</p></li>
+<li><p>LATTICE_SPACING_OF_IDEAL_SI_220_2018</p></li>
+<li><p>LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2018</p></li>
+<li><p>LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2018</p></li>
+<li><p>LUMINOUS_EFFICACY_2018</p></li>
+<li><p>MAG_FLUX_QUANTUM_2018</p></li>
+<li><p>MOLAR_GAS_CONSTANT_2018</p></li>
+<li><p>MOLAR_MASS_CONSTANT_2018</p></li>
+<li><p>MOLAR_MASS_OF_CARBON_12_2018</p></li>
+<li><p>MOLAR_PLANCK_CONSTANT_2018</p></li>
+<li><p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2018</p></li>
+<li><p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2018</p></li>
+<li><p>MOLAR_VOLUME_OF_SILICON_2018</p></li>
+<li><p>MOLYBDENUM_X_UNIT_2018</p></li>
+<li><p>MUON_COMPTON_WAVELENGTH_2018</p></li>
+<li><p>MUON_ELECTRON_MASS_RATIO_2018</p></li>
+<li><p>MUON_G_FACTOR_2018</p></li>
+<li><p>MUON_MAG_MOM_2018</p></li>
+<li><p>MUON_MAG_MOM_ANOMALY_2018</p></li>
+<li><p>MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018</p></li>
+<li><p>MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018</p></li>
+<li><p>MUON_MASS_2018</p></li>
+<li><p>MUON_MASS_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>MUON_MASS_IN_U_2018</p></li>
+<li><p>MUON_MOLAR_MASS_2018</p></li>
+<li><p>MUON_NEUTRON_MASS_RATIO_2018</p></li>
+<li><p>MUON_PROTON_MAG_MOM_RATIO_2018</p></li>
+<li><p>MUON_PROTON_MASS_RATIO_2018</p></li>
+<li><p>MUON_TAU_MASS_RATIO_2018</p></li>
+<li><p>NATURAL_UNIT_OF_ACTION_2018</p></li>
+<li><p>NATURAL_UNIT_OF_ACTION_IN_EV_S_2018</p></li>
+<li><p>NATURAL_UNIT_OF_ENERGY_2018</p></li>
+<li><p>NATURAL_UNIT_OF_ENERGY_IN_MEV_2018</p></li>
+<li><p>NATURAL_UNIT_OF_LENGTH_2018</p></li>
+<li><p>NATURAL_UNIT_OF_MASS_2018</p></li>
+<li><p>NATURAL_UNIT_OF_MOMENTUM_2018</p></li>
+<li><p>NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018</p></li>
+<li><p>NATURAL_UNIT_OF_TIME_2018</p></li>
+<li><p>NATURAL_UNIT_OF_VELOCITY_2018</p></li>
+<li><p>NEUTRON_COMPTON_WAVELENGTH_2018</p></li>
+<li><p>NEUTRON_ELECTRON_MAG_MOM_RATIO_2018</p></li>
+<li><p>NEUTRON_ELECTRON_MASS_RATIO_2018</p></li>
+<li><p>NEUTRON_G_FACTOR_2018</p></li>
+<li><p>NEUTRON_GYROMAG_RATIO_2018</p></li>
+<li><p>NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018</p></li>
+<li><p>NEUTRON_MAG_MOM_2018</p></li>
+<li><p>NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018</p></li>
+<li><p>NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018</p></li>
+<li><p>NEUTRON_MASS_2018</p></li>
+<li><p>NEUTRON_MASS_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>NEUTRON_MASS_IN_U_2018</p></li>
+<li><p>NEUTRON_MOLAR_MASS_2018</p></li>
+<li><p>NEUTRON_MUON_MASS_RATIO_2018</p></li>
+<li><p>NEUTRON_PROTON_MAG_MOM_RATIO_2018</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_2018</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2018</p></li>
+<li><p>NEUTRON_PROTON_MASS_RATIO_2018</p></li>
+<li><p>NEUTRON_RELATIVE_ATOMIC_MASS_2018</p></li>
+<li><p>NEUTRON_TAU_MASS_RATIO_2018</p></li>
+<li><p>NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018</p></li>
+<li><p>NEWTONIAN_CONSTANT_OF_GRAVITATION_2018</p></li>
+<li><p>NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2018</p></li>
+<li><p>NUCLEAR_MAGNETON_2018</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_EV_T_2018</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_K_T_2018</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_MHZ_T_2018</p></li>
+<li><p>PLANCK_CONSTANT_2018</p></li>
+<li><p>PLANCK_CONSTANT_IN_EV_HZ_2018</p></li>
+<li><p>PLANCK_LENGTH_2018</p></li>
+<li><p>PLANCK_MASS_2018</p></li>
+<li><p>PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2018</p></li>
+<li><p>PLANCK_TEMPERATURE_2018</p></li>
+<li><p>PLANCK_TIME_2018</p></li>
+<li><p>PROTON_CHARGE_TO_MASS_QUOTIENT_2018</p></li>
+<li><p>PROTON_COMPTON_WAVELENGTH_2018</p></li>
+<li><p>PROTON_ELECTRON_MASS_RATIO_2018</p></li>
+<li><p>PROTON_G_FACTOR_2018</p></li>
+<li><p>PROTON_GYROMAG_RATIO_2018</p></li>
+<li><p>PROTON_GYROMAG_RATIO_IN_MHZ_T_2018</p></li>
+<li><p>PROTON_MAG_MOM_2018</p></li>
+<li><p>PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018</p></li>
+<li><p>PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018</p></li>
+<li><p>PROTON_MAG_SHIELDING_CORRECTION_2018</p></li>
+<li><p>PROTON_MASS_2018</p></li>
+<li><p>PROTON_MASS_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>PROTON_MASS_IN_U_2018</p></li>
+<li><p>PROTON_MOLAR_MASS_2018</p></li>
+<li><p>PROTON_MUON_MASS_RATIO_2018</p></li>
+<li><p>PROTON_NEUTRON_MAG_MOM_RATIO_2018</p></li>
+<li><p>PROTON_NEUTRON_MASS_RATIO_2018</p></li>
+<li><p>PROTON_RELATIVE_ATOMIC_MASS_2018</p></li>
+<li><p>PROTON_RMS_CHARGE_RADIUS_2018</p></li>
+<li><p>PROTON_TAU_MASS_RATIO_2018</p></li>
+<li><p>QUANTUM_OF_CIRCULATION_2018</p></li>
+<li><p>QUANTUM_OF_CIRCULATION_TIMES_2_2018</p></li>
+<li><p>REDUCED_COMPTON_WAVELENGTH_2018</p></li>
+<li><p>REDUCED_MUON_COMPTON_WAVELENGTH_2018</p></li>
+<li><p>REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018</p></li>
+<li><p>REDUCED_PLANCK_CONSTANT_2018</p></li>
+<li><p>REDUCED_PLANCK_CONSTANT_IN_EV_S_2018</p></li>
+<li><p>REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018</p></li>
+<li><p>REDUCED_PROTON_COMPTON_WAVELENGTH_2018</p></li>
+<li><p>REDUCED_TAU_COMPTON_WAVELENGTH_2018</p></li>
+<li><p>RYDBERG_CONSTANT_2018</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_C_IN_HZ_2018</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_HC_IN_EV_2018</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_HC_IN_J_2018</p></li>
+<li><p>SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2018</p></li>
+<li><p>SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2018</p></li>
+<li><p>SECOND_RADIATION_CONSTANT_2018</p></li>
+<li><p>SHIELDED_HELION_GYROMAG_RATIO_2018</p></li>
+<li><p>SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_2018</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018</p></li>
+<li><p>SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2018</p></li>
+<li><p>SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018</p></li>
+<li><p>SHIELDED_PROTON_GYROMAG_RATIO_2018</p></li>
+<li><p>SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_2018</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018</p></li>
+<li><p>SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018</p></li>
+<li><p>SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018</p></li>
+<li><p>SPEED_OF_LIGHT_IN_VACUUM_2018</p></li>
+<li><p>STANDARD_ACCELERATION_OF_GRAVITY_2018</p></li>
+<li><p>STANDARD_ATMOSPHERE_2018</p></li>
+<li><p>STANDARD_STATE_PRESSURE_2018</p></li>
+<li><p>STEFAN_BOLTZMANN_CONSTANT_2018</p></li>
+<li><p>TAU_COMPTON_WAVELENGTH_2018</p></li>
+<li><p>TAU_ELECTRON_MASS_RATIO_2018</p></li>
+<li><p>TAU_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>TAU_MASS_2018</p></li>
+<li><p>TAU_MASS_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>TAU_MASS_IN_U_2018</p></li>
+<li><p>TAU_MOLAR_MASS_2018</p></li>
+<li><p>TAU_MUON_MASS_RATIO_2018</p></li>
+<li><p>TAU_NEUTRON_MASS_RATIO_2018</p></li>
+<li><p>TAU_PROTON_MASS_RATIO_2018</p></li>
+<li><p>THOMSON_CROSS_SECTION_2018</p></li>
+<li><p>TRITON_ELECTRON_MASS_RATIO_2018</p></li>
+<li><p>TRITON_G_FACTOR_2018</p></li>
+<li><p>TRITON_MAG_MOM_2018</p></li>
+<li><p>TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018</p></li>
+<li><p>TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018</p></li>
+<li><p>TRITON_MASS_2018</p></li>
+<li><p>TRITON_MASS_ENERGY_EQUIVALENT_2018</p></li>
+<li><p>TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018</p></li>
+<li><p>TRITON_MASS_IN_U_2018</p></li>
+<li><p>TRITON_MOLAR_MASS_2018</p></li>
+<li><p>TRITON_PROTON_MASS_RATIO_2018</p></li>
+<li><p>TRITON_RELATIVE_ATOMIC_MASS_2018</p></li>
+<li><p>TRITON_TO_PROTON_MAG_MOM_RATIO_2018</p></li>
+<li><p>UNIFIED_ATOMIC_MASS_UNIT_2018</p></li>
+<li><p>VACUUM_ELECTRIC_PERMITTIVITY_2018</p></li>
+<li><p>VACUUM_MAG_PERMEABILITY_2018</p></li>
+<li><p>VON_KLITZING_CONSTANT_2018</p></li>
+<li><p>WEAK_MIXING_ANGLE_2018</p></li>
+<li><p>WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018</p></li>
+<li><p>WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018</p></li>
+<li><p>W_TO_Z_MASS_RATIO_2018</p></li>
+</ul>
+</section>
+<section id="codata-2014">
+<h3>CODATA 2014<a class="headerlink" href="#codata-2014" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>LATTICE_SPACING_OF_SILICON_2014</p></li>
+<li><p>ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2014</p></li>
+<li><p>ALPHA_PARTICLE_MASS_2014</p></li>
+<li><p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>ALPHA_PARTICLE_MASS_IN_U_2014</p></li>
+<li><p>ALPHA_PARTICLE_MOLAR_MASS_2014</p></li>
+<li><p>ALPHA_PARTICLE_PROTON_MASS_RATIO_2014</p></li>
+<li><p>ANGSTROM_STAR_2014</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_2014</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2014</p></li>
+<li><p>ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2014</p></li>
+<li><p>ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2014</p></li>
+<li><p>ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2014</p></li>
+<li><p>ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2014</p></li>
+<li><p>ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2014</p></li>
+<li><p>ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_ACTION_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_CHARGE_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_CHARGE_DENSITY_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_CURRENT_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_FIELD_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_ENERGY_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_FORCE_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_LENGTH_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_MAGNETIZABILITY_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_MASS_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_MOMUM_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_PERMITTIVITY_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_TIME_2014</p></li>
+<li><p>ATOMIC_UNIT_OF_VELOCITY_2014</p></li>
+<li><p>AVOGADRO_CONSTANT_2014</p></li>
+<li><p>BOHR_MAGNETON_2014</p></li>
+<li><p>BOHR_MAGNETON_IN_EV_T_2014</p></li>
+<li><p>BOHR_MAGNETON_IN_HZ_T_2014</p></li>
+<li><p>BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2014</p></li>
+<li><p>BOHR_MAGNETON_IN_K_T_2014</p></li>
+<li><p>BOHR_RADIUS_2014</p></li>
+<li><p>BOLTZMANN_CONSTANT_2014</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_EV_K_2014</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_HZ_K_2014</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN_2014</p></li>
+<li><p>CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2014</p></li>
+<li><p>CLASSICAL_ELECTRON_RADIUS_2014</p></li>
+<li><p>COMPTON_WAVELENGTH_2014</p></li>
+<li><p>COMPTON_WAVELENGTH_OVER_2_PI_2014</p></li>
+<li><p>CONDUCTANCE_QUANTUM_2014</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2014</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2014</p></li>
+<li><p>CU_X_UNIT_2014</p></li>
+<li><p>DEUTERON_ELECTRON_MAG_MOM_RATIO_2014</p></li>
+<li><p>DEUTERON_ELECTRON_MASS_RATIO_2014</p></li>
+<li><p>DEUTERON_G_FACTOR_2014</p></li>
+<li><p>DEUTERON_MAG_MOM_2014</p></li>
+<li><p>DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2014</p></li>
+<li><p>DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2014</p></li>
+<li><p>DEUTERON_MASS_2014</p></li>
+<li><p>DEUTERON_MASS_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>DEUTERON_MASS_IN_U_2014</p></li>
+<li><p>DEUTERON_MOLAR_MASS_2014</p></li>
+<li><p>DEUTERON_NEUTRON_MAG_MOM_RATIO_2014</p></li>
+<li><p>DEUTERON_PROTON_MAG_MOM_RATIO_2014</p></li>
+<li><p>DEUTERON_PROTON_MASS_RATIO_2014</p></li>
+<li><p>DEUTERON_RMS_CHARGE_RADIUS_2014</p></li>
+<li><p>ELECTRIC_CONSTANT_2014</p></li>
+<li><p>ELECTRON_CHARGE_TO_MASS_QUOTIENT_2014</p></li>
+<li><p>ELECTRON_DEUTERON_MAG_MOM_RATIO_2014</p></li>
+<li><p>ELECTRON_DEUTERON_MASS_RATIO_2014</p></li>
+<li><p>ELECTRON_G_FACTOR_2014</p></li>
+<li><p>ELECTRON_GYROMAG_RATIO_2014</p></li>
+<li><p>ELECTRON_GYROMAG_RATIO_OVER_2_PI_2014</p></li>
+<li><p>ELECTRON_HELION_MASS_RATIO_2014</p></li>
+<li><p>ELECTRON_MAG_MOM_2014</p></li>
+<li><p>ELECTRON_MAG_MOM_ANOMALY_2014</p></li>
+<li><p>ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2014</p></li>
+<li><p>ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2014</p></li>
+<li><p>ELECTRON_MASS_2014</p></li>
+<li><p>ELECTRON_MASS_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>ELECTRON_MASS_IN_U_2014</p></li>
+<li><p>ELECTRON_MOLAR_MASS_2014</p></li>
+<li><p>ELECTRON_MUON_MAG_MOM_RATIO_2014</p></li>
+<li><p>ELECTRON_MUON_MASS_RATIO_2014</p></li>
+<li><p>ELECTRON_NEUTRON_MAG_MOM_RATIO_2014</p></li>
+<li><p>ELECTRON_NEUTRON_MASS_RATIO_2014</p></li>
+<li><p>ELECTRON_PROTON_MAG_MOM_RATIO_2014</p></li>
+<li><p>ELECTRON_PROTON_MASS_RATIO_2014</p></li>
+<li><p>ELECTRON_TAU_MASS_RATIO_2014</p></li>
+<li><p>ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2014</p></li>
+<li><p>ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2014</p></li>
+<li><p>ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2014</p></li>
+<li><p>ELECTRON_TRITON_MASS_RATIO_2014</p></li>
+<li><p>ELECTRON_VOLT_2014</p></li>
+<li><p>ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2014</p></li>
+<li><p>ELECTRON_VOLT_HARTREE_RELATIONSHIP_2014</p></li>
+<li><p>ELECTRON_VOLT_HERTZ_RELATIONSHIP_2014</p></li>
+<li><p>ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2014</p></li>
+<li><p>ELECTRON_VOLT_JOULE_RELATIONSHIP_2014</p></li>
+<li><p>ELECTRON_VOLT_KELVIN_RELATIONSHIP_2014</p></li>
+<li><p>ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2014</p></li>
+<li><p>ELEMENTARY_CHARGE_2014</p></li>
+<li><p>ELEMENTARY_CHARGE_OVER_H_2014</p></li>
+<li><p>FARADAY_CONSTANT_2014</p></li>
+<li><p>FARADAY_CONSTANT_FOR_CONVENTIONAL_ELECTRIC_CURRENT_2014</p></li>
+<li><p>FERMI_COUPLING_CONSTANT_2014</p></li>
+<li><p>FINE_STRUCTURE_CONSTANT_2014</p></li>
+<li><p>FIRST_RADIATION_CONSTANT_2014</p></li>
+<li><p>FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2014</p></li>
+<li><p>HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2014</p></li>
+<li><p>HARTREE_ELECTRON_VOLT_RELATIONSHIP_2014</p></li>
+<li><p>HARTREE_ENERGY_2014</p></li>
+<li><p>HARTREE_ENERGY_IN_EV_2014</p></li>
+<li><p>HARTREE_HERTZ_RELATIONSHIP_2014</p></li>
+<li><p>HARTREE_INVERSE_METER_RELATIONSHIP_2014</p></li>
+<li><p>HARTREE_JOULE_RELATIONSHIP_2014</p></li>
+<li><p>HARTREE_KELVIN_RELATIONSHIP_2014</p></li>
+<li><p>HARTREE_KILOGRAM_RELATIONSHIP_2014</p></li>
+<li><p>HELION_ELECTRON_MASS_RATIO_2014</p></li>
+<li><p>HELION_G_FACTOR_2014</p></li>
+<li><p>HELION_MAG_MOM_2014</p></li>
+<li><p>HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2014</p></li>
+<li><p>HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2014</p></li>
+<li><p>HELION_MASS_2014</p></li>
+<li><p>HELION_MASS_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>HELION_MASS_IN_U_2014</p></li>
+<li><p>HELION_MOLAR_MASS_2014</p></li>
+<li><p>HELION_PROTON_MASS_RATIO_2014</p></li>
+<li><p>HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2014</p></li>
+<li><p>HERTZ_ELECTRON_VOLT_RELATIONSHIP_2014</p></li>
+<li><p>HERTZ_HARTREE_RELATIONSHIP_2014</p></li>
+<li><p>HERTZ_INVERSE_METER_RELATIONSHIP_2014</p></li>
+<li><p>HERTZ_JOULE_RELATIONSHIP_2014</p></li>
+<li><p>HERTZ_KELVIN_RELATIONSHIP_2014</p></li>
+<li><p>HERTZ_KILOGRAM_RELATIONSHIP_2014</p></li>
+<li><p>INVERSE_FINE_STRUCTURE_CONSTANT_2014</p></li>
+<li><p>INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2014</p></li>
+<li><p>INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2014</p></li>
+<li><p>INVERSE_METER_HARTREE_RELATIONSHIP_2014</p></li>
+<li><p>INVERSE_METER_HERTZ_RELATIONSHIP_2014</p></li>
+<li><p>INVERSE_METER_JOULE_RELATIONSHIP_2014</p></li>
+<li><p>INVERSE_METER_KELVIN_RELATIONSHIP_2014</p></li>
+<li><p>INVERSE_METER_KILOGRAM_RELATIONSHIP_2014</p></li>
+<li><p>INVERSE_OF_CONDUCTANCE_QUANTUM_2014</p></li>
+<li><p>JOSEPHSON_CONSTANT_2014</p></li>
+<li><p>JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2014</p></li>
+<li><p>JOULE_ELECTRON_VOLT_RELATIONSHIP_2014</p></li>
+<li><p>JOULE_HARTREE_RELATIONSHIP_2014</p></li>
+<li><p>JOULE_HERTZ_RELATIONSHIP_2014</p></li>
+<li><p>JOULE_INVERSE_METER_RELATIONSHIP_2014</p></li>
+<li><p>JOULE_KELVIN_RELATIONSHIP_2014</p></li>
+<li><p>JOULE_KILOGRAM_RELATIONSHIP_2014</p></li>
+<li><p>KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2014</p></li>
+<li><p>KELVIN_ELECTRON_VOLT_RELATIONSHIP_2014</p></li>
+<li><p>KELVIN_HARTREE_RELATIONSHIP_2014</p></li>
+<li><p>KELVIN_HERTZ_RELATIONSHIP_2014</p></li>
+<li><p>KELVIN_INVERSE_METER_RELATIONSHIP_2014</p></li>
+<li><p>KELVIN_JOULE_RELATIONSHIP_2014</p></li>
+<li><p>KELVIN_KILOGRAM_RELATIONSHIP_2014</p></li>
+<li><p>KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2014</p></li>
+<li><p>KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2014</p></li>
+<li><p>KILOGRAM_HARTREE_RELATIONSHIP_2014</p></li>
+<li><p>KILOGRAM_HERTZ_RELATIONSHIP_2014</p></li>
+<li><p>KILOGRAM_INVERSE_METER_RELATIONSHIP_2014</p></li>
+<li><p>KILOGRAM_JOULE_RELATIONSHIP_2014</p></li>
+<li><p>KILOGRAM_KELVIN_RELATIONSHIP_2014</p></li>
+<li><p>LATTICE_PARAMETER_OF_SILICON_2014</p></li>
+<li><p>LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2014</p></li>
+<li><p>LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2014</p></li>
+<li><p>MAG_CONSTANT_2014</p></li>
+<li><p>MAG_FLUX_QUANTUM_2014</p></li>
+<li><p>MOLAR_GAS_CONSTANT_2014</p></li>
+<li><p>MOLAR_MASS_CONSTANT_2014</p></li>
+<li><p>MOLAR_MASS_OF_CARBON_12_2014</p></li>
+<li><p>MOLAR_PLANCK_CONSTANT_2014</p></li>
+<li><p>MOLAR_PLANCK_CONSTANT_TIMES_C_2014</p></li>
+<li><p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2014</p></li>
+<li><p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2014</p></li>
+<li><p>MOLAR_VOLUME_OF_SILICON_2014</p></li>
+<li><p>MO_X_UNIT_2014</p></li>
+<li><p>MUON_COMPTON_WAVELENGTH_2014</p></li>
+<li><p>MUON_COMPTON_WAVELENGTH_OVER_2_PI_2014</p></li>
+<li><p>MUON_ELECTRON_MASS_RATIO_2014</p></li>
+<li><p>MUON_G_FACTOR_2014</p></li>
+<li><p>MUON_MAG_MOM_2014</p></li>
+<li><p>MUON_MAG_MOM_ANOMALY_2014</p></li>
+<li><p>MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2014</p></li>
+<li><p>MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2014</p></li>
+<li><p>MUON_MASS_2014</p></li>
+<li><p>MUON_MASS_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>MUON_MASS_IN_U_2014</p></li>
+<li><p>MUON_MOLAR_MASS_2014</p></li>
+<li><p>MUON_NEUTRON_MASS_RATIO_2014</p></li>
+<li><p>MUON_PROTON_MAG_MOM_RATIO_2014</p></li>
+<li><p>MUON_PROTON_MASS_RATIO_2014</p></li>
+<li><p>MUON_TAU_MASS_RATIO_2014</p></li>
+<li><p>NATURAL_UNIT_OF_ACTION_2014</p></li>
+<li><p>NATURAL_UNIT_OF_ACTION_IN_EV_S_2014</p></li>
+<li><p>NATURAL_UNIT_OF_ENERGY_2014</p></li>
+<li><p>NATURAL_UNIT_OF_ENERGY_IN_MEV_2014</p></li>
+<li><p>NATURAL_UNIT_OF_LENGTH_2014</p></li>
+<li><p>NATURAL_UNIT_OF_MASS_2014</p></li>
+<li><p>NATURAL_UNIT_OF_MOMUM_2014</p></li>
+<li><p>NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2014</p></li>
+<li><p>NATURAL_UNIT_OF_TIME_2014</p></li>
+<li><p>NATURAL_UNIT_OF_VELOCITY_2014</p></li>
+<li><p>NEUTRON_COMPTON_WAVELENGTH_2014</p></li>
+<li><p>NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2014</p></li>
+<li><p>NEUTRON_ELECTRON_MAG_MOM_RATIO_2014</p></li>
+<li><p>NEUTRON_ELECTRON_MASS_RATIO_2014</p></li>
+<li><p>NEUTRON_G_FACTOR_2014</p></li>
+<li><p>NEUTRON_GYROMAG_RATIO_2014</p></li>
+<li><p>NEUTRON_GYROMAG_RATIO_OVER_2_PI_2014</p></li>
+<li><p>NEUTRON_MAG_MOM_2014</p></li>
+<li><p>NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2014</p></li>
+<li><p>NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2014</p></li>
+<li><p>NEUTRON_MASS_2014</p></li>
+<li><p>NEUTRON_MASS_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>NEUTRON_MASS_IN_U_2014</p></li>
+<li><p>NEUTRON_MOLAR_MASS_2014</p></li>
+<li><p>NEUTRON_MUON_MASS_RATIO_2014</p></li>
+<li><p>NEUTRON_PROTON_MAG_MOM_RATIO_2014</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_2014</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2014</p></li>
+<li><p>NEUTRON_PROTON_MASS_RATIO_2014</p></li>
+<li><p>NEUTRON_TAU_MASS_RATIO_2014</p></li>
+<li><p>NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2014</p></li>
+<li><p>NEWTONIAN_CONSTANT_OF_GRAVITATION_2014</p></li>
+<li><p>NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2014</p></li>
+<li><p>NUCLEAR_MAGNETON_2014</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_EV_T_2014</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2014</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_K_T_2014</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_MHZ_T_2014</p></li>
+<li><p>PLANCK_CONSTANT_2014</p></li>
+<li><p>PLANCK_CONSTANT_IN_EV_S_2014</p></li>
+<li><p>PLANCK_CONSTANT_OVER_2_PI_2014</p></li>
+<li><p>PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2014</p></li>
+<li><p>PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2014</p></li>
+<li><p>PLANCK_LENGTH_2014</p></li>
+<li><p>PLANCK_MASS_2014</p></li>
+<li><p>PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2014</p></li>
+<li><p>PLANCK_TEMPERATURE_2014</p></li>
+<li><p>PLANCK_TIME_2014</p></li>
+<li><p>PROTON_CHARGE_TO_MASS_QUOTIENT_2014</p></li>
+<li><p>PROTON_COMPTON_WAVELENGTH_2014</p></li>
+<li><p>PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2014</p></li>
+<li><p>PROTON_ELECTRON_MASS_RATIO_2014</p></li>
+<li><p>PROTON_G_FACTOR_2014</p></li>
+<li><p>PROTON_GYROMAG_RATIO_2014</p></li>
+<li><p>PROTON_GYROMAG_RATIO_OVER_2_PI_2014</p></li>
+<li><p>PROTON_MAG_MOM_2014</p></li>
+<li><p>PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2014</p></li>
+<li><p>PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2014</p></li>
+<li><p>PROTON_MAG_SHIELDING_CORRECTION_2014</p></li>
+<li><p>PROTON_MASS_2014</p></li>
+<li><p>PROTON_MASS_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>PROTON_MASS_IN_U_2014</p></li>
+<li><p>PROTON_MOLAR_MASS_2014</p></li>
+<li><p>PROTON_MUON_MASS_RATIO_2014</p></li>
+<li><p>PROTON_NEUTRON_MAG_MOM_RATIO_2014</p></li>
+<li><p>PROTON_NEUTRON_MASS_RATIO_2014</p></li>
+<li><p>PROTON_RMS_CHARGE_RADIUS_2014</p></li>
+<li><p>PROTON_TAU_MASS_RATIO_2014</p></li>
+<li><p>QUANTUM_OF_CIRCULATION_2014</p></li>
+<li><p>QUANTUM_OF_CIRCULATION_TIMES_2_2014</p></li>
+<li><p>RYDBERG_CONSTANT_2014</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_C_IN_HZ_2014</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_HC_IN_EV_2014</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_HC_IN_J_2014</p></li>
+<li><p>SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2014</p></li>
+<li><p>SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2014</p></li>
+<li><p>SECOND_RADIATION_CONSTANT_2014</p></li>
+<li><p>SHIELDED_HELION_GYROMAG_RATIO_2014</p></li>
+<li><p>SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2014</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_2014</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2014</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2014</p></li>
+<li><p>SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2014</p></li>
+<li><p>SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2014</p></li>
+<li><p>SHIELDED_PROTON_GYROMAG_RATIO_2014</p></li>
+<li><p>SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2014</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_2014</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2014</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2014</p></li>
+<li><p>SPEED_OF_LIGHT_IN_VACUUM_2014</p></li>
+<li><p>STANDARD_ACCELERATION_OF_GRAVITY_2014</p></li>
+<li><p>STANDARD_ATMOSPHERE_2014</p></li>
+<li><p>STANDARD_STATE_PRESSURE_2014</p></li>
+<li><p>STEFAN_BOLTZMANN_CONSTANT_2014</p></li>
+<li><p>TAU_COMPTON_WAVELENGTH_2014</p></li>
+<li><p>TAU_COMPTON_WAVELENGTH_OVER_2_PI_2014</p></li>
+<li><p>TAU_ELECTRON_MASS_RATIO_2014</p></li>
+<li><p>TAU_MASS_2014</p></li>
+<li><p>TAU_MASS_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>TAU_MASS_IN_U_2014</p></li>
+<li><p>TAU_MOLAR_MASS_2014</p></li>
+<li><p>TAU_MUON_MASS_RATIO_2014</p></li>
+<li><p>TAU_NEUTRON_MASS_RATIO_2014</p></li>
+<li><p>TAU_PROTON_MASS_RATIO_2014</p></li>
+<li><p>THOMSON_CROSS_SECTION_2014</p></li>
+<li><p>TRITON_ELECTRON_MASS_RATIO_2014</p></li>
+<li><p>TRITON_G_FACTOR_2014</p></li>
+<li><p>TRITON_MAG_MOM_2014</p></li>
+<li><p>TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2014</p></li>
+<li><p>TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2014</p></li>
+<li><p>TRITON_MASS_2014</p></li>
+<li><p>TRITON_MASS_ENERGY_EQUIVALENT_2014</p></li>
+<li><p>TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2014</p></li>
+<li><p>TRITON_MASS_IN_U_2014</p></li>
+<li><p>TRITON_MOLAR_MASS_2014</p></li>
+<li><p>TRITON_PROTON_MASS_RATIO_2014</p></li>
+<li><p>UNIFIED_ATOMIC_MASS_UNIT_2014</p></li>
+<li><p>VON_KLITZING_CONSTANT_2014</p></li>
+<li><p>WEAK_MIXING_ANGLE_2014</p></li>
+<li><p>WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2014</p></li>
+<li><p>WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014</p></li>
+</ul>
+</section>
+<section id="codata-2010">
+<h3>CODATA 2010<a class="headerlink" href="#codata-2010" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>LATTICE_SPACING_OF_SILICON_2010</p></li>
+<li><p>ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010</p></li>
+<li><p>ALPHA_PARTICLE_MASS_2010</p></li>
+<li><p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>ALPHA_PARTICLE_MASS_IN_U_2010</p></li>
+<li><p>ALPHA_PARTICLE_MOLAR_MASS_2010</p></li>
+<li><p>ALPHA_PARTICLE_PROTON_MASS_RATIO_2010</p></li>
+<li><p>ANGSTROM_STAR_2010</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_2010</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2010</p></li>
+<li><p>ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2010</p></li>
+<li><p>ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2010</p></li>
+<li><p>ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2010</p></li>
+<li><p>ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2010</p></li>
+<li><p>ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2010</p></li>
+<li><p>ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_ACTION_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_CHARGE_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_CHARGE_DENSITY_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_CURRENT_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_FIELD_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_ENERGY_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_FORCE_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_LENGTH_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_MAGNETIZABILITY_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_MASS_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_MOMUM_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_PERMITTIVITY_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_TIME_2010</p></li>
+<li><p>ATOMIC_UNIT_OF_VELOCITY_2010</p></li>
+<li><p>AVOGADRO_CONSTANT_2010</p></li>
+<li><p>BOHR_MAGNETON_2010</p></li>
+<li><p>BOHR_MAGNETON_IN_EV_T_2010</p></li>
+<li><p>BOHR_MAGNETON_IN_HZ_T_2010</p></li>
+<li><p>BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2010</p></li>
+<li><p>BOHR_MAGNETON_IN_K_T_2010</p></li>
+<li><p>BOHR_RADIUS_2010</p></li>
+<li><p>BOLTZMANN_CONSTANT_2010</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_EV_K_2010</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_HZ_K_2010</p></li>
+<li><p>BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN_2010</p></li>
+<li><p>CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2010</p></li>
+<li><p>CLASSICAL_ELECTRON_RADIUS_2010</p></li>
+<li><p>COMPTON_WAVELENGTH_2010</p></li>
+<li><p>COMPTON_WAVELENGTH_OVER_2_PI_2010</p></li>
+<li><p>CONDUCTANCE_QUANTUM_2010</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2010</p></li>
+<li><p>CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2010</p></li>
+<li><p>CU_X_UNIT_2010</p></li>
+<li><p>DEUTERON_ELECTRON_MAG_MOM_RATIO_2010</p></li>
+<li><p>DEUTERON_ELECTRON_MASS_RATIO_2010</p></li>
+<li><p>DEUTERON_G_FACTOR_2010</p></li>
+<li><p>DEUTERON_MAG_MOM_2010</p></li>
+<li><p>DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2010</p></li>
+<li><p>DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2010</p></li>
+<li><p>DEUTERON_MASS_2010</p></li>
+<li><p>DEUTERON_MASS_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>DEUTERON_MASS_IN_U_2010</p></li>
+<li><p>DEUTERON_MOLAR_MASS_2010</p></li>
+<li><p>DEUTERON_NEUTRON_MAG_MOM_RATIO_2010</p></li>
+<li><p>DEUTERON_PROTON_MAG_MOM_RATIO_2010</p></li>
+<li><p>DEUTERON_PROTON_MASS_RATIO_2010</p></li>
+<li><p>DEUTERON_RMS_CHARGE_RADIUS_2010</p></li>
+<li><p>ELECTRIC_CONSTANT_2010</p></li>
+<li><p>ELECTRON_CHARGE_TO_MASS_QUOTIENT_2010</p></li>
+<li><p>ELECTRON_DEUTERON_MAG_MOM_RATIO_2010</p></li>
+<li><p>ELECTRON_DEUTERON_MASS_RATIO_2010</p></li>
+<li><p>ELECTRON_G_FACTOR_2010</p></li>
+<li><p>ELECTRON_GYROMAG_RATIO_2010</p></li>
+<li><p>ELECTRON_GYROMAG_RATIO_OVER_2_PI_2010</p></li>
+<li><p>ELECTRON_HELION_MASS_RATIO_2010</p></li>
+<li><p>ELECTRON_MAG_MOM_2010</p></li>
+<li><p>ELECTRON_MAG_MOM_ANOMALY_2010</p></li>
+<li><p>ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2010</p></li>
+<li><p>ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2010</p></li>
+<li><p>ELECTRON_MASS_2010</p></li>
+<li><p>ELECTRON_MASS_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>ELECTRON_MASS_IN_U_2010</p></li>
+<li><p>ELECTRON_MOLAR_MASS_2010</p></li>
+<li><p>ELECTRON_MUON_MAG_MOM_RATIO_2010</p></li>
+<li><p>ELECTRON_MUON_MASS_RATIO_2010</p></li>
+<li><p>ELECTRON_NEUTRON_MAG_MOM_RATIO_2010</p></li>
+<li><p>ELECTRON_NEUTRON_MASS_RATIO_2010</p></li>
+<li><p>ELECTRON_PROTON_MAG_MOM_RATIO_2010</p></li>
+<li><p>ELECTRON_PROTON_MASS_RATIO_2010</p></li>
+<li><p>ELECTRON_TAU_MASS_RATIO_2010</p></li>
+<li><p>ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2010</p></li>
+<li><p>ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2010</p></li>
+<li><p>ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2010</p></li>
+<li><p>ELECTRON_TRITON_MASS_RATIO_2010</p></li>
+<li><p>ELECTRON_VOLT_2010</p></li>
+<li><p>ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2010</p></li>
+<li><p>ELECTRON_VOLT_HARTREE_RELATIONSHIP_2010</p></li>
+<li><p>ELECTRON_VOLT_HERTZ_RELATIONSHIP_2010</p></li>
+<li><p>ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2010</p></li>
+<li><p>ELECTRON_VOLT_JOULE_RELATIONSHIP_2010</p></li>
+<li><p>ELECTRON_VOLT_KELVIN_RELATIONSHIP_2010</p></li>
+<li><p>ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2010</p></li>
+<li><p>ELEMENTARY_CHARGE_2010</p></li>
+<li><p>ELEMENTARY_CHARGE_OVER_H_2010</p></li>
+<li><p>FARADAY_CONSTANT_2010</p></li>
+<li><p>FARADAY_CONSTANT_FOR_CONVENTIONAL_ELECTRIC_CURRENT_2010</p></li>
+<li><p>FERMI_COUPLING_CONSTANT_2010</p></li>
+<li><p>FINE_STRUCTURE_CONSTANT_2010</p></li>
+<li><p>FIRST_RADIATION_CONSTANT_2010</p></li>
+<li><p>FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2010</p></li>
+<li><p>HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2010</p></li>
+<li><p>HARTREE_ELECTRON_VOLT_RELATIONSHIP_2010</p></li>
+<li><p>HARTREE_ENERGY_2010</p></li>
+<li><p>HARTREE_ENERGY_IN_EV_2010</p></li>
+<li><p>HARTREE_HERTZ_RELATIONSHIP_2010</p></li>
+<li><p>HARTREE_INVERSE_METER_RELATIONSHIP_2010</p></li>
+<li><p>HARTREE_JOULE_RELATIONSHIP_2010</p></li>
+<li><p>HARTREE_KELVIN_RELATIONSHIP_2010</p></li>
+<li><p>HARTREE_KILOGRAM_RELATIONSHIP_2010</p></li>
+<li><p>HELION_ELECTRON_MASS_RATIO_2010</p></li>
+<li><p>HELION_G_FACTOR_2010</p></li>
+<li><p>HELION_MAG_MOM_2010</p></li>
+<li><p>HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2010</p></li>
+<li><p>HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2010</p></li>
+<li><p>HELION_MASS_2010</p></li>
+<li><p>HELION_MASS_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>HELION_MASS_IN_U_2010</p></li>
+<li><p>HELION_MOLAR_MASS_2010</p></li>
+<li><p>HELION_PROTON_MASS_RATIO_2010</p></li>
+<li><p>HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2010</p></li>
+<li><p>HERTZ_ELECTRON_VOLT_RELATIONSHIP_2010</p></li>
+<li><p>HERTZ_HARTREE_RELATIONSHIP_2010</p></li>
+<li><p>HERTZ_INVERSE_METER_RELATIONSHIP_2010</p></li>
+<li><p>HERTZ_JOULE_RELATIONSHIP_2010</p></li>
+<li><p>HERTZ_KELVIN_RELATIONSHIP_2010</p></li>
+<li><p>HERTZ_KILOGRAM_RELATIONSHIP_2010</p></li>
+<li><p>INVERSE_FINE_STRUCTURE_CONSTANT_2010</p></li>
+<li><p>INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2010</p></li>
+<li><p>INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2010</p></li>
+<li><p>INVERSE_METER_HARTREE_RELATIONSHIP_2010</p></li>
+<li><p>INVERSE_METER_HERTZ_RELATIONSHIP_2010</p></li>
+<li><p>INVERSE_METER_JOULE_RELATIONSHIP_2010</p></li>
+<li><p>INVERSE_METER_KELVIN_RELATIONSHIP_2010</p></li>
+<li><p>INVERSE_METER_KILOGRAM_RELATIONSHIP_2010</p></li>
+<li><p>INVERSE_OF_CONDUCTANCE_QUANTUM_2010</p></li>
+<li><p>JOSEPHSON_CONSTANT_2010</p></li>
+<li><p>JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2010</p></li>
+<li><p>JOULE_ELECTRON_VOLT_RELATIONSHIP_2010</p></li>
+<li><p>JOULE_HARTREE_RELATIONSHIP_2010</p></li>
+<li><p>JOULE_HERTZ_RELATIONSHIP_2010</p></li>
+<li><p>JOULE_INVERSE_METER_RELATIONSHIP_2010</p></li>
+<li><p>JOULE_KELVIN_RELATIONSHIP_2010</p></li>
+<li><p>JOULE_KILOGRAM_RELATIONSHIP_2010</p></li>
+<li><p>KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2010</p></li>
+<li><p>KELVIN_ELECTRON_VOLT_RELATIONSHIP_2010</p></li>
+<li><p>KELVIN_HARTREE_RELATIONSHIP_2010</p></li>
+<li><p>KELVIN_HERTZ_RELATIONSHIP_2010</p></li>
+<li><p>KELVIN_INVERSE_METER_RELATIONSHIP_2010</p></li>
+<li><p>KELVIN_JOULE_RELATIONSHIP_2010</p></li>
+<li><p>KELVIN_KILOGRAM_RELATIONSHIP_2010</p></li>
+<li><p>KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2010</p></li>
+<li><p>KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2010</p></li>
+<li><p>KILOGRAM_HARTREE_RELATIONSHIP_2010</p></li>
+<li><p>KILOGRAM_HERTZ_RELATIONSHIP_2010</p></li>
+<li><p>KILOGRAM_INVERSE_METER_RELATIONSHIP_2010</p></li>
+<li><p>KILOGRAM_JOULE_RELATIONSHIP_2010</p></li>
+<li><p>KILOGRAM_KELVIN_RELATIONSHIP_2010</p></li>
+<li><p>LATTICE_PARAMETER_OF_SILICON_2010</p></li>
+<li><p>LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2010</p></li>
+<li><p>LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2010</p></li>
+<li><p>MAG_CONSTANT_2010</p></li>
+<li><p>MAG_FLUX_QUANTUM_2010</p></li>
+<li><p>MOLAR_GAS_CONSTANT_2010</p></li>
+<li><p>MOLAR_MASS_CONSTANT_2010</p></li>
+<li><p>MOLAR_MASS_OF_CARBON_12_2010</p></li>
+<li><p>MOLAR_PLANCK_CONSTANT_2010</p></li>
+<li><p>MOLAR_PLANCK_CONSTANT_TIMES_C_2010</p></li>
+<li><p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2010</p></li>
+<li><p>MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2010</p></li>
+<li><p>MOLAR_VOLUME_OF_SILICON_2010</p></li>
+<li><p>MO_X_UNIT_2010</p></li>
+<li><p>MUON_COMPTON_WAVELENGTH_2010</p></li>
+<li><p>MUON_COMPTON_WAVELENGTH_OVER_2_PI_2010</p></li>
+<li><p>MUON_ELECTRON_MASS_RATIO_2010</p></li>
+<li><p>MUON_G_FACTOR_2010</p></li>
+<li><p>MUON_MAG_MOM_2010</p></li>
+<li><p>MUON_MAG_MOM_ANOMALY_2010</p></li>
+<li><p>MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2010</p></li>
+<li><p>MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2010</p></li>
+<li><p>MUON_MASS_2010</p></li>
+<li><p>MUON_MASS_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>MUON_MASS_IN_U_2010</p></li>
+<li><p>MUON_MOLAR_MASS_2010</p></li>
+<li><p>MUON_NEUTRON_MASS_RATIO_2010</p></li>
+<li><p>MUON_PROTON_MAG_MOM_RATIO_2010</p></li>
+<li><p>MUON_PROTON_MASS_RATIO_2010</p></li>
+<li><p>MUON_TAU_MASS_RATIO_2010</p></li>
+<li><p>NATURAL_UNIT_OF_ACTION_2010</p></li>
+<li><p>NATURAL_UNIT_OF_ACTION_IN_EV_S_2010</p></li>
+<li><p>NATURAL_UNIT_OF_ENERGY_2010</p></li>
+<li><p>NATURAL_UNIT_OF_ENERGY_IN_MEV_2010</p></li>
+<li><p>NATURAL_UNIT_OF_LENGTH_2010</p></li>
+<li><p>NATURAL_UNIT_OF_MASS_2010</p></li>
+<li><p>NATURAL_UNIT_OF_MOMUM_2010</p></li>
+<li><p>NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2010</p></li>
+<li><p>NATURAL_UNIT_OF_TIME_2010</p></li>
+<li><p>NATURAL_UNIT_OF_VELOCITY_2010</p></li>
+<li><p>NEUTRON_COMPTON_WAVELENGTH_2010</p></li>
+<li><p>NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2010</p></li>
+<li><p>NEUTRON_ELECTRON_MAG_MOM_RATIO_2010</p></li>
+<li><p>NEUTRON_ELECTRON_MASS_RATIO_2010</p></li>
+<li><p>NEUTRON_G_FACTOR_2010</p></li>
+<li><p>NEUTRON_GYROMAG_RATIO_2010</p></li>
+<li><p>NEUTRON_GYROMAG_RATIO_OVER_2_PI_2010</p></li>
+<li><p>NEUTRON_MAG_MOM_2010</p></li>
+<li><p>NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2010</p></li>
+<li><p>NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2010</p></li>
+<li><p>NEUTRON_MASS_2010</p></li>
+<li><p>NEUTRON_MASS_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>NEUTRON_MASS_IN_U_2010</p></li>
+<li><p>NEUTRON_MOLAR_MASS_2010</p></li>
+<li><p>NEUTRON_MUON_MASS_RATIO_2010</p></li>
+<li><p>NEUTRON_PROTON_MAG_MOM_RATIO_2010</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_2010</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2010</p></li>
+<li><p>NEUTRON_PROTON_MASS_RATIO_2010</p></li>
+<li><p>NEUTRON_TAU_MASS_RATIO_2010</p></li>
+<li><p>NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2010</p></li>
+<li><p>NEWTONIAN_CONSTANT_OF_GRAVITATION_2010</p></li>
+<li><p>NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2010</p></li>
+<li><p>NUCLEAR_MAGNETON_2010</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_EV_T_2010</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2010</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_K_T_2010</p></li>
+<li><p>NUCLEAR_MAGNETON_IN_MHZ_T_2010</p></li>
+<li><p>PLANCK_CONSTANT_2010</p></li>
+<li><p>PLANCK_CONSTANT_IN_EV_S_2010</p></li>
+<li><p>PLANCK_CONSTANT_OVER_2_PI_2010</p></li>
+<li><p>PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2010</p></li>
+<li><p>PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2010</p></li>
+<li><p>PLANCK_LENGTH_2010</p></li>
+<li><p>PLANCK_MASS_2010</p></li>
+<li><p>PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2010</p></li>
+<li><p>PLANCK_TEMPERATURE_2010</p></li>
+<li><p>PLANCK_TIME_2010</p></li>
+<li><p>PROTON_CHARGE_TO_MASS_QUOTIENT_2010</p></li>
+<li><p>PROTON_COMPTON_WAVELENGTH_2010</p></li>
+<li><p>PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2010</p></li>
+<li><p>PROTON_ELECTRON_MASS_RATIO_2010</p></li>
+<li><p>PROTON_G_FACTOR_2010</p></li>
+<li><p>PROTON_GYROMAG_RATIO_2010</p></li>
+<li><p>PROTON_GYROMAG_RATIO_OVER_2_PI_2010</p></li>
+<li><p>PROTON_MAG_MOM_2010</p></li>
+<li><p>PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2010</p></li>
+<li><p>PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2010</p></li>
+<li><p>PROTON_MAG_SHIELDING_CORRECTION_2010</p></li>
+<li><p>PROTON_MASS_2010</p></li>
+<li><p>PROTON_MASS_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>PROTON_MASS_IN_U_2010</p></li>
+<li><p>PROTON_MOLAR_MASS_2010</p></li>
+<li><p>PROTON_MUON_MASS_RATIO_2010</p></li>
+<li><p>PROTON_NEUTRON_MAG_MOM_RATIO_2010</p></li>
+<li><p>PROTON_NEUTRON_MASS_RATIO_2010</p></li>
+<li><p>PROTON_RMS_CHARGE_RADIUS_2010</p></li>
+<li><p>PROTON_TAU_MASS_RATIO_2010</p></li>
+<li><p>QUANTUM_OF_CIRCULATION_2010</p></li>
+<li><p>QUANTUM_OF_CIRCULATION_TIMES_2_2010</p></li>
+<li><p>RYDBERG_CONSTANT_2010</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_C_IN_HZ_2010</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_HC_IN_EV_2010</p></li>
+<li><p>RYDBERG_CONSTANT_TIMES_HC_IN_J_2010</p></li>
+<li><p>SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2010</p></li>
+<li><p>SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2010</p></li>
+<li><p>SECOND_RADIATION_CONSTANT_2010</p></li>
+<li><p>SHIELDED_HELION_GYROMAG_RATIO_2010</p></li>
+<li><p>SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2010</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_2010</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2010</p></li>
+<li><p>SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2010</p></li>
+<li><p>SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2010</p></li>
+<li><p>SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2010</p></li>
+<li><p>SHIELDED_PROTON_GYROMAG_RATIO_2010</p></li>
+<li><p>SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2010</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_2010</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2010</p></li>
+<li><p>SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2010</p></li>
+<li><p>SPEED_OF_LIGHT_IN_VACUUM_2010</p></li>
+<li><p>STANDARD_ACCELERATION_OF_GRAVITY_2010</p></li>
+<li><p>STANDARD_ATMOSPHERE_2010</p></li>
+<li><p>STANDARD_STATE_PRESSURE_2010</p></li>
+<li><p>STEFAN_BOLTZMANN_CONSTANT_2010</p></li>
+<li><p>TAU_COMPTON_WAVELENGTH_2010</p></li>
+<li><p>TAU_COMPTON_WAVELENGTH_OVER_2_PI_2010</p></li>
+<li><p>TAU_ELECTRON_MASS_RATIO_2010</p></li>
+<li><p>TAU_MASS_2010</p></li>
+<li><p>TAU_MASS_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>TAU_MASS_IN_U_2010</p></li>
+<li><p>TAU_MOLAR_MASS_2010</p></li>
+<li><p>TAU_MUON_MASS_RATIO_2010</p></li>
+<li><p>TAU_NEUTRON_MASS_RATIO_2010</p></li>
+<li><p>TAU_PROTON_MASS_RATIO_2010</p></li>
+<li><p>THOMSON_CROSS_SECTION_2010</p></li>
+<li><p>TRITON_ELECTRON_MASS_RATIO_2010</p></li>
+<li><p>TRITON_G_FACTOR_2010</p></li>
+<li><p>TRITON_MAG_MOM_2010</p></li>
+<li><p>TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2010</p></li>
+<li><p>TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2010</p></li>
+<li><p>TRITON_MASS_2010</p></li>
+<li><p>TRITON_MASS_ENERGY_EQUIVALENT_2010</p></li>
+<li><p>TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2010</p></li>
+<li><p>TRITON_MASS_IN_U_2010</p></li>
+<li><p>TRITON_MOLAR_MASS_2010</p></li>
+<li><p>TRITON_PROTON_MASS_RATIO_2010</p></li>
+<li><p>UNIFIED_ATOMIC_MASS_UNIT_2010</p></li>
+<li><p>VON_KLITZING_CONSTANT_2010</p></li>
+<li><p>WEAK_MIXING_ANGLE_2010</p></li>
+<li><p>WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2010</p></li>
+<li><p>WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">codata - Documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../fortran/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Fortran AutoDoc</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-1">codata(1)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#name">NAME</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synopsis">SYNOPSIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">DESCRIPTION</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#options">OPTIONS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">EXAMPLE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">SEE ALSO</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-3">codata(3)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">NAME</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#library">LIBRARY</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">SYNOPSIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">DESCRIPTION</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">NOTES</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">EXAMPLE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">SEE ALSO</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-2022">CODATA 2022</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-2018">CODATA 2018</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-2014">CODATA 2014</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-2010">CODATA 2010</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../_sources/man/index.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2022-2024, Milan Skocic.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
