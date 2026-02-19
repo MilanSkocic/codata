@@ -1,7 +1,7 @@
 include make.in
 # ---------------------------------------------------------------------
 # CONFIGURATION
-install_dir=$(DESTDIR)/$(PREFIX)
+install_dir=$(PREFIX)
 ifneq ($(prefix), )
 	PREFIX=$(prefix)
 endif
@@ -12,7 +12,7 @@ else
 	btype=release
 endif
 
-install_dir=$(DESTDIR)/$(PREFIX)
+install_dir=$(PREFIX)
 
 GEN_F=./scripts/gen_fortran.py
 GEN_C=./scripts/gen_capi.py
