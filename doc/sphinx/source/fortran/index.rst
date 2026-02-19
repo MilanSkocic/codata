@@ -31,5 +31,8 @@ Modules
 
 .. f:module:: codata__constants_type_capi
 
+Program
+=======
+
 .. f:program:: codatacli
 

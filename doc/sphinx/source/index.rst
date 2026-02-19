@@ -7,6 +7,8 @@ codata - Documentation
         :align: center
         :alt: Alternative text
 
+
+
 Example in Fortran
 ==================
 .. literalinclude:: ../../../example/example.f90
@@ -25,7 +27,8 @@ Example in Python
 .. toctree::
    :maxdepth: 1
    :hidden:
-    
+   
+   man/index.rst
    fortran/index.rst
    C/index.rst
    python/index.rst
