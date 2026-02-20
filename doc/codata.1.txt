@@ -1,14 +1,5 @@
 codata(1)                    User Commands                    codata(1)
 
-              [      0%]                       main.f90
-
-              [ 50%] main.f90  done.
-
-              [ 50%] codata
-
-              [100%] codata   done.   [100%]  Project compiled success‐
-                     fully.
-
 NAME
        codata - Command line for codata
 
@@ -16,7 +7,7 @@ SYNOPSIS
        codata [OPTIONS] [REGEX_PATTERN ... ]
 
 DESCRIPTION
-       codata is a command line interface which prints all  the  codata
+       codata  is  a command line interface which prints all the codata
        constants.
 
        The current values are from 2022.  Older values can be retrieved
@@ -47,14 +38,14 @@ OPTIONS
               Show version information and exit.
 
 NOTES
-       You  may  replace  the default options from a file if your first
-       options begin with @file.  Initial options  will  then  be  read
+       You may replace the default options from a file  if  your  first
+       options  begin  with  @file.   Initial options will then be read
        from the "response file" "file.rsp" in the current directory.
 
        If "file" does not exist or cannot be read, then an error occurs
-       and  the  program  stops. Each line of the file is prefixed with
-       "options" and interpreted as a separate argument. The  file  it‐
-       self  may  not  contain  @file  arguments.  That  is,  it is not
+       and the program stops. Each line of the file  is  prefixed  with
+       "options"  and  interpreted as a separate argument. The file it‐
+       self may not  contain  @file  arguments.  That  is,  it  is  not
        processed recursively.
 
        For  more  information  on  response  files  see  https://urban‐
