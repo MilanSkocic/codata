@@ -25,6 +25,9 @@ OPTIONS
 **--year, -y YEAR**
    Year of the **codata constants: 2022, 2018, 2014, 2010.**
 
+**--pattern, -p PATTERN**
+   Regex pattern for filtering the constants.
+
 **--value, -a**
    Show only the value.
 
@@ -52,7 +55,7 @@ Minimal example
 
         codata
         codata -y 2018 molar electron
-        codata -y 2014 'molar.*gas' 'electron.*eV'
+        codata -y 2014 -p 'molar.*gas','electron.*eV'
         codata '[B,b]oltzmann.*eV'
 
 SEE ALSO
