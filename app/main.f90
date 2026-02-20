@@ -66,8 +66,7 @@ program codatacli
         '  contain @file arguments. That is, it is not processed recursively.', &
         '                                                                      ', &
         '  For more information on response files see                          '  , &
-        '                                                                      ', &
-        '    https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html'  , &
+        '  https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html            '  , &
         '                                                                ', &
         'EXAMPLE                                                         ', &
         '  Minimal example                                               ', &

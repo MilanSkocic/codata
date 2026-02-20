@@ -1,3 +1,8 @@
+[  0%]                       main.f90
+[ 50%]                       main.f90  done.
+[ 50%]                         codata
+[100%]                         codata  done.
+[100%] Project compiled successfully.
 NAME
   codata - Command line for codata
 
@@ -22,6 +27,21 @@ OPTIONS
   --help                 Show help text and exit.
   --verbose              Display additional information when available.
   --version              Show version information and exit.
+
+NOTES
+
+  You may replace the default options from a file if your first
+  options begin with @file.
+  Initial options will then be read from the "response file"
+  "file.rsp" in the current directory.
+
+  If "file" does not exist or cannot be read, then an error occurs and
+  the program stops. Each line of the file is prefixed with "options"
+  and interpreted as a separate argument. The file itself may not
+  contain @file arguments. That is, it is not processed recursively.
+
+  For more information on response files see
+  https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html
 
 EXAMPLE
   Minimal example
