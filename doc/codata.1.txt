@@ -17,6 +17,9 @@ OPTIONS
        --year, -y YEAR
               Year of the codata constants: 2022, 2018, 2014, 2010.
 
+       --pattern, -p PATTERN
+              Regex pattern for filtering the constants.
+
        --value, -a
               Show only the value.
 
@@ -34,15 +37,29 @@ OPTIONS
        --version
               Show version information and exit.
 
+NOTES
+       You may replace the default options from a file  if  your  first
+       options  begin  with  @file.   Initial options will then be read
+       from the "response file" "file.rsp" in the current directory.
+
+       If "file" does not exist or cannot be read, then an error occurs
+       and the program stops. Each line of the file  is  prefixed  with
+       "options"  and  interpreted as a separate argument. The file it‐
+       self may not  contain  @file  arguments.  That  is,  it  is  not
+       processed recursively.
+
+       For  more  information  on  response  files  see  https://urban‐
+       jost.github.io/M_CLI2/set_args.3m_cli2.html
+
 EXAMPLE
        Minimal example
 
             codata
             codata -y 2018 molar electron
-            codata -y 2014 'molar.*gas' 'electron.*eV'
+            codata -y 2014 -p 'molar.*gas','electron.*eV'
             codata '[B,b]oltzmann.*eV'
 
 SEE ALSO
        codata(3)
 
-2.4.1                       14 February 2026                  codata(1)
+2.5.0                       20 February 2026                  codata(1)

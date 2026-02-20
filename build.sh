@@ -4,7 +4,7 @@
 
 echo ""
 echo "BUILD LIBS"
-d=build/install
+d=./build/install
 make
 make install prefix=$d
 
