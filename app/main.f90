@@ -65,8 +65,7 @@ program codatacli
         '' ]
     call set_mode('strict') 
     call set_mode('response_file')
-    call set_args('--year:y 2022 --value:a F --error:e F --pattern:p ,', help_text, version_text)
-    call get_args('p', patterns, delimiters=',')
+    call set_args('--year:y 2022 --value:a F --error:e F --pattern:p .*', help_text, version_text)
     select case(iget("year"))
         case (2022)
             cctptr => cc
@@ -87,11 +86,14 @@ program codatacli
             do i=1, size(args), 1
                  call display(cctptr, trim(args(i)), lget("a"), lget("e"))
             end do
-        elseif(specified('p'))then
+        end if
+        if(specified('p'))then
+            call get_args('p', patterns, delimiters=',')
             do i=1, size(patterns), 1
                 call display(cctptr, trim(patterns(i)), lget("a"), lget("e"))
             end do
-        else
+        end if
+        if(.not.specified('p') .and. size(args) <= 0)then
             call display(cctptr)
         end if
     end if
