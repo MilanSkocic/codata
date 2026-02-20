@@ -45,4 +45,4 @@ $(BOOKMAN): $(MAN)
 .PHONY:
 clean:
 	make -C sphinx clean
-	rm -fv $(MANPREP) $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(BOOKMAN)
+	rm -fv $(MANPREP) $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(MANRST) $(BOOKMAN)
