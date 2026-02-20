@@ -44,20 +44,21 @@ program codatacli
         '                                                                ', &
         '                                                                ', &
         'OPTIONS                                                         ', &
-        '  --year, -y YEAR  Year of the codata constants: 2022, 2018, 2014, 2010.', &
-        '  --value, -a      Show only the value.', &
-        '  --error, -e      Show only the uncertainty.                         ', &
-        '  --usage          Show usage text and exit.                          ', & 
-        '  --help           Show help text and exit.                          ', & 
-        '  --verbose        Display additional information when available.   ', &
-        '  --version        Show version information and exit.               ', &
+        '  --year, -y YEAR        Year of the codata constants: 2022, 2018, 2014, 2010.', &
+        '  --pattern, -p PATTERN  Regex pattern for filtering the constants.   ', &
+        '  --value, -a            Show only the value.                         ', &
+        '  --error, -e            Show only the uncertainty.                   ', &
+        '  --usage                Show usage text and exit.                    ', & 
+        '  --help                 Show help text and exit.                     ', & 
+        '  --verbose              Display additional information when available.', &
+        '  --version              Show version information and exit.           ', &
         '                                                                ', &
         'EXAMPLE                                                         ', &
         '  Minimal example                                               ', &
         '                                                                ', &
         '     codata                                                     ', &
         '     codata -y 2018 molar electron                              ', &
-        "     codata -y 2014 'molar.*gas' 'electron.*eV'                 ", &
+        "     codata -y 2014 -p 'molar.*gas','electron.*eV'                 ", &
         "     codata '[B,b]oltzmann.*eV'                                  ", &
         '                                                                ', &
         'SEE ALSO                                                         ', &
@@ -65,7 +66,7 @@ program codatacli
         '' ]
     call set_mode('strict') 
     call set_mode('response_file')
-    call set_args('--year:y 2022 --value:a F --error:e F --pattern:p .*', help_text, version_text)
+    call set_args('--year:y 2022 --value:a F --error:e F --pattern:p .', help_text, version_text)
     select case(iget("year"))
         case (2022)
             cctptr => cc
