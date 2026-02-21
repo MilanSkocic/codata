@@ -412,6 +412,8 @@ needed and the output can be filtered with REGEX PATTERNS.</p>
 <dl class="simple">
 <dt><strong>–year, -y YEAR</strong></dt><dd><p>Year of the <strong>codata constants: 2022, 2018, 2014, 2010.</strong></p>
 </dd>
+<dt><strong>–pattern, -p PATTERN</strong></dt><dd><p>Regex pattern for filtering the constants.</p>
+</dd>
 <dt><strong>–value, -a</strong></dt><dd><p>Show only the value.</p>
 </dd>
 <dt><strong>–error, -e</strong></dt><dd><p>Show only the uncertainty.</p>
@@ -426,12 +428,24 @@ needed and the output can be filtered with REGEX PATTERNS.</p>
 </dd>
 </dl>
 </section>
+<section id="notes">
+<h3>NOTES<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
+<p>You may replace the default options from a file if your first options
+begin with &#64;file. Initial options will then be read from the “response
+file” “file.rsp” in the current directory.</p>
+<p>If “file” does not exist or cannot be read, then an error occurs and the
+program stops. Each line of the file is prefixed with “options” and
+interpreted as a separate argument. The file itself may not contain
+&#64;file arguments. That is, it is not processed recursively.</p>
+<p>For more information on response files see
+<a class="reference external" href="https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html">https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html</a></p>
+</section>
 <section id="example">
 <h3>EXAMPLE<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
 <p>Minimal example</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">codata</span>
 <span class="n">codata</span> <span class="o">-</span><span class="n">y</span> <span class="mi">2018</span> <span class="n">molar</span> <span class="n">electron</span>
-<span class="n">codata</span> <span class="o">-</span><span class="n">y</span> <span class="mi">2014</span> <span class="s1">&#39;molar.*gas&#39;</span> <span class="s1">&#39;electron.*eV&#39;</span>
+<span class="n">codata</span> <span class="o">-</span><span class="n">y</span> <span class="mi">2014</span> <span class="o">-</span><span class="n">p</span> <span class="s1">&#39;molar.*gas&#39;</span><span class="p">,</span><span class="s1">&#39;electron.*eV&#39;</span>
 <span class="n">codata</span> <span class="s1">&#39;[B,b]oltzmann.*eV&#39;</span>
 </pre></div>
 </div>
@@ -517,8 +531,8 @@ same members as in Fortran.</p>
 </div>
 <p>The Python wrapper encapsulates the members in a dictionnary.</p>
 </section>
-<section id="notes">
-<h3>NOTES<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
+<section id="id4">
+<h3>NOTES<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <p>To <strong>use</strong> <em>codata</em> <strong>within your fpm
 https://github.com/fortran-lang/fpm</strong> project, add the following lines
 to your file:</p>
@@ -527,8 +541,8 @@ to your file:</p>
 </pre></div>
 </div>
 </section>
-<section id="id4">
-<h3>EXAMPLE<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<section id="id5">
+<h3>EXAMPLE<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>Example in Fortran</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">program</span> <span class="n">example_in_f</span>
 <span class="n">use</span> <span class="n">iso_fortran_env</span>
@@ -602,8 +616,8 @@ to your file:</p>
 </pre></div>
 </div>
 </section>
-<section id="id5">
-<h3>SEE ALSO<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<section id="id6">
+<h3>SEE ALSO<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <p><strong>gsl(3), codata(1)</strong></p>
 </section>
 <section id="codata-2022">
@@ -2059,6 +2073,7 @@ to your file:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#synopsis">SYNOPSIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">DESCRIPTION</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#options">OPTIONS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">NOTES</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example">EXAMPLE</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#see-also">SEE ALSO</a></li>
 </ul>
@@ -2068,9 +2083,9 @@ to your file:</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#library">LIBRARY</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">SYNOPSIS</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">DESCRIPTION</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">NOTES</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">EXAMPLE</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">SEE ALSO</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">NOTES</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">EXAMPLE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">SEE ALSO</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-2022">CODATA 2022</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-2018">CODATA 2018</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#codata-2014">CODATA 2014</a></li>

@@ -91,7 +91,6 @@ for i in $envs; do
 done
 echo "export DESTDIR=$DESTDIR" >> make.in
 echo "export PREFIX=$PREFIX" >> make.in
-echo "export PREP_DOCUMENT_DIR=$PREP_DOCUMENT_DIR" >> make.in
 echo "export MANWIDTH=$MANWIDTH" >> make.in
 echo "done"
 
