@@ -1,42 +1,43 @@
 #:include "common.fypp"
 #:set KINDS = REAL_KINDS
 module codata__constants_type
-    !! Codata constant type
-    use stdlib_kinds, only: #{for k in KINDS[:-1]}#${k}$, #{endfor}#${KINDS[-1]}$
-    use stdlib_io, only: FMT_REAL_DP
-    use stdlib_optval, only: optval 
-    private
+!! Codata constant type
+use stdlib_kinds, only: #{for k in KINDS[:-1]}#${k}$, #{endfor}#${KINDS[-1]}$
+use stdlib_io, only: FMT_REAL_DP
+use stdlib_optval, only: optval 
+implicit none(type,external)
+private
 
-    type, public :: codata_constant_type
-        !! Derived type for representing a Codata constant.
-        character(len=64) :: name ! Name of the constant
-        real(dp) :: value         ! Value of the constant
-        real(dp) :: uncertainty   ! Uncertainty of the constant
-        character(len=32) :: unit ! Unit of the constant
-    contains 
-        procedure :: print
-        #:for k in KINDS
-        procedure :: to_real_${k}$
-        #:endfor
-        generic :: to_real => #{for k in KINDS[:-1]}#to_real_${k}$, #{endfor}#to_real_${KINDS[-1]}$
-    end type
-    
-    interface to_real
-        !! Get the constant value or uncertainty.
-        #:for k in KINDS
-        module procedure to_real_${k}$
-        #:endfor
-    end interface
+type, public :: codata_constant_type
+    !! Derived type for representing a Codata constant.
+    character(len=64) :: name ! Name of the constant
+    real(dp) :: value         ! Value of the constant
+    real(dp) :: uncertainty   ! Uncertainty of the constant
+    character(len=32) :: unit ! Unit of the constant
+contains 
+    procedure :: print
+    #:for k in KINDS
+    procedure :: to_real_${k}$
+    #:endfor
+    generic :: to_real => #{for k in KINDS[:-1]}#to_real_${k}$, #{endfor}#to_real_${KINDS[-1]}$
+end type codata_constant_type
 
-    public :: to_real
-    
+interface to_real
+    !! Get the constant value or uncertainty.
+    #:for k in KINDS
+    module procedure to_real_${k}$
+    #:endfor
+end interface
+
+public :: to_real
+
 contains
 
 subroutine print(self)
     !! Print out the constant's name, value, uncertainty and unit.
     class(codata_constant_type), intent(in) :: self
     print "(A64, SP, "//FMT_REAL_DP//", A5, "//FMT_REAL_DP//", 1X, A32)", self%name, self%value, "+/-", self%uncertainty, self%unit 
-end subroutine
+end subroutine print
 
 #:for k in KINDS
 elemental pure real(${k}$) function to_real_${k}$(self, mold, uncertainty) result(r)
@@ -55,7 +56,7 @@ elemental pure real(${k}$) function to_real_${k}$(self, mold, uncertainty) resul
     else
         r = real(self%uncertainty, kind(mold))
     end if
-end function
+end function to_real_${k}$
 #:endfor
 
 end module codata__constants_type
