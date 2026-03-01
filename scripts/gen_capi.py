@@ -26,6 +26,7 @@ def write_module_start(f, year):
     f.write("use, intrinsic :: iso_c_binding, only: c_null_char, c_int" + newline)
     f.write("use codata__constants" + suffix + newline)
     f.write("use codata__constants_type_capi" + newline)
+    f.write("implicit none(type,external)" + newline)
     f.write("private"+newline)
     f.write(newline)
 

@@ -3,6 +3,7 @@ module codata__constants_2022_capi
 use, intrinsic :: iso_c_binding, only: c_null_char, c_int
 use codata__constants_2022
 use codata__constants_type_capi
+implicit none(type,external)
 private
 
 integer(c_int), protected, public, bind(C, name="YEAR") :: capi_YEAR = YEAR !capi
