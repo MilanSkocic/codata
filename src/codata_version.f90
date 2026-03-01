@@ -1,6 +1,6 @@
 module codata__version
 !! Version
-implicit none
+implicit none(type,external)
 private
 character(len=*), parameter, public :: version = "2.5.0"
 end module codata__version
