@@ -16,24 +16,24 @@ SYNOPSIS
 
 DESCRIPTION  
     codata is a Fortran library providing the fundamental physical
-    constants according to CODATA 
+    constants according to CODATA
     https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants.
-    A C API allows usage from C, or can be used as a basis for other wrappers. 
+    A C API allows usage from C, or can be used as a basis for other wrappers.
     Python wrapper allows easy usage from Python.
 
-    The latest codata constants 2022 
+    The latest codata constants 2022
     https://pml.nist.gov/cuu/Constants were integrated in
     stdlib https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
     The constants are implemented as derived type which carries the name,
-    the value, the uncertainty and the unit. 
+    the value, the uncertainty and the unit.
     This library is
     complementary to the constants defined in the stdlib by providing
     older values for the constants.
     The latest values (2022) do not have the year as a suffix in their name.
     Older values can be used and they feature the year as a suffix in their name.
 
-    All codata (physical) constants are defined as a derived type codata_constant_type. 
-    All the codata constants are provided as double precision reals. 
+    All codata (physical) constants are defined as a derived type codata_constant_type.
+    All the codata constants are provided as double precision reals.
     The names are quite long and can be aliased with shorter names.
     The derived type codata_constant_type defines 4 members and 2 procedures.
 
@@ -49,7 +49,7 @@ DESCRIPTION
             procedure :: to_real_dp
             generic :: to_real => to_real_sp, to_real_dp
         end type
-    
+
         interface to_real ! Get the constant value or uncertainty.
             module procedure to_real_sp
             module procedure to_real_dp
@@ -60,7 +60,7 @@ DESCRIPTION
 
     The C API exposes a structure codata_constant_ttype that defines the same 
     members as in Fortran.
-        
+
         typedef struct codata_constant_type{
             char name[65];
             double value;
@@ -70,7 +70,7 @@ DESCRIPTION
 
     The Python wrapper encapsulates the members in a dictionnary.
 
-NOTES 
+NOTES
     To use codata within your fpm https://github.com/fortran-lang/fpm
     project, add the following lines to your file:
 
@@ -1541,11 +1541,11 @@ CODATA 2010
     o WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010
 $ENDBLOCK
 module codata
-!! Main module for the Codata library.
-!!
+!! Codata library - Fundamental Physical Constants.
+!! Available from 2010, 2014, 2018 and 2022.
 !! The latest values (2022) do not have the year as a suffix in their name.
 !! Older values can be used and they feature the year as a suffix in their name.
-
+use, intrinsic :: iso_c_binding, only: c_ptr, c_null_char, c_loc
 use codata__constants_2022
 use codata__constants_2018
 use codata__constants_2014
@@ -1556,8 +1556,40 @@ use codata__constants_2018_capi
 use codata__constants_2014_capi
 use codata__constants_2010_capi
 use codata__constants_type_capi
-use codata__api
-use codata__capi
+use codata__version, only: version
 implicit none(type,external)
 public
+
+character(len=:), allocatable, target, private :: version_f
+character(len=:), allocatable, target, private :: version_c
+
+contains
+!=======================================================================
+! GET_VERSION
+!=======================================================================
+function get_version()result(fptr)
+!! Get the version.
+character(len=:), pointer :: fptr !! Pointer to a string (=>version).
+if(allocated(version_f))then
+    deallocate(version_f)
+endif
+allocate(character(len=len(version)) :: version_f)
+version_f = version
+fptr => version_f
+end function get_version
+!-----------------------------------------------------------------------
+function capi_get_version()bind(C,name="codata_get_version")result(cptr)
+!! C API - Get the version
+type(c_ptr) :: cptr !! C pointer to a string indicating the version.
+character(len=:), pointer :: fptr
+fptr => get_version() 
+if(allocated(version_c))then
+    deallocate(version_c)
+endif
+allocate(character(len=len(fptr)+1) :: version_c)
+version_c = fptr // c_null_char
+cptr = c_loc(version_c)
+end function capi_get_version
+!=======================================================================
+
 end module codata

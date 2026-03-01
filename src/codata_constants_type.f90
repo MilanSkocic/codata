@@ -1,12 +1,16 @@
 module codata__constants_type
 !! Codata constant type
+use, intrinsic :: iso_c_binding, only: c_char, c_double
 use stdlib_kinds, only: sp, dp
 use stdlib_io, only: FMT_REAL_DP
 use stdlib_optval, only: optval 
 implicit none(type,external)
 private
 
-type, public :: codata_constant_type
+!=======================================================================
+! CODATA_CONSTANT_TYPE
+!=======================================================================
+type :: codata_constant_type
     !! Derived type for representing a Codata constant.
     character(len=64) :: name ! Name of the constant
     real(dp) :: value         ! Value of the constant
@@ -18,6 +22,15 @@ contains
     procedure :: to_real_dp
     generic :: to_real => to_real_sp, to_real_dp
 end type codata_constant_type
+!-----------------------------------------------------------------------
+type, bind(C) :: capi_constant_type
+    !! Derived type for representing a Codata constant in C.
+    character(kind=c_char) :: name(65)
+    real(c_double) :: value
+    real(c_double) :: uncertainty
+    character(kind=c_char) :: unit(33)
+end type capi_constant_type
+!=======================================================================
 
 interface to_real
     !! Get the constant value or uncertainty.
@@ -25,7 +38,13 @@ interface to_real
     module procedure to_real_dp
 end interface
 
+!=======================================================================
+! PUBLIC
+!=======================================================================
 public :: to_real
+public :: codata_constant_type
+public :: capi_constant_type
+!=======================================================================
 
 contains
 
