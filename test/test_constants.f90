@@ -1,24 +1,24 @@
 module test_constants
-    !! Test constant values only for double precision.
-    use testdrive, only : new_unittest, unittest_type, error_type, check
-    use stdlib_kinds, only : dp, int32
-    use codata, only: YEAR, &
-                             ALPHA_PARTICLE_ELECTRON_MASS_RATIO, &
-                             ALPHA_PARTICLE_MASS, &
-                             ATOMIC_MASS_CONSTANT, &
-                             AVOGADRO_CONSTANT, &
-                             BOLTZMANN_CONSTANT, &
-                             ELECTRON_VOLT, &
-                             ELEMENTARY_CHARGE, &
-                             FARADAY_CONSTANT, &
-                             MOLAR_MASS_CONSTANT,&
-                             MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA, &
-                             PLANCK_CONSTANT,&
-                             SPEED_OF_LIGHT_IN_VACUUM,&
-                             STANDARD_ACCELERATION_OF_GRAVITY
-    implicit none
-    private
-    public :: collect_constants
+!! Test constant values only for double precision.
+use testdrive, only : new_unittest, unittest_type, error_type, check
+use stdlib_kinds, only : dp, int32
+use codata, only: YEAR, &
+                         ALPHA_PARTICLE_ELECTRON_MASS_RATIO, &
+                         ALPHA_PARTICLE_MASS, &
+                         ATOMIC_MASS_CONSTANT, &
+                         AVOGADRO_CONSTANT, &
+                         BOLTZMANN_CONSTANT, &
+                         ELECTRON_VOLT, &
+                         ELEMENTARY_CHARGE, &
+                         FARADAY_CONSTANT, &
+                         MOLAR_MASS_CONSTANT,&
+                         MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA, &
+                         PLANCK_CONSTANT,&
+                         SPEED_OF_LIGHT_IN_VACUUM,&
+                         STANDARD_ACCELERATION_OF_GRAVITY
+implicit none
+private
+public :: collect_constants
 
 contains
 
