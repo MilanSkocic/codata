@@ -1,8 +1,8 @@
 module codata__capi
     !! C API.
 use codata__api, only: get_version
-use iso_c_binding, only: c_ptr, c_null_char, c_loc
-implicit none
+use, intrinsic :: iso_c_binding, only: c_ptr, c_null_char, c_loc
+implicit none(type,external)
 private
 
 character(len=:), allocatable, target, private :: version_c ! Version
@@ -10,7 +10,6 @@ character(len=:), allocatable, target, private :: version_c ! Version
 public :: capi_get_version
 
 contains
-
 
 function capi_get_version()bind(C, name="codata_get_version")result(cptr) 
     !! C API - Get version
@@ -28,6 +27,6 @@ function capi_get_version()bind(C, name="codata_get_version")result(cptr)
 
     version_c = fptr // c_null_char
     cptr = c_loc(version_c)
-end function
+end function capi_get_version
 
 end module codata__capi

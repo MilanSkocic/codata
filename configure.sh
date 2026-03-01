@@ -5,11 +5,11 @@ update_version () {
     local v=$2
     
     f="./src/"$mod"_version.f90"
-    echo "module "$mod"__version"           > $f
-    echo "    !! Version"                   >> $f
-    echo "    implicit none"                >> $f
-    echo "    private"                      >> $f
-    echo "    character(len=*), parameter, public :: version = \"$v\"" >> $f
+    echo "module "$mod"__version"       > $f
+    echo "!! Version"                   >> $f
+    echo "implicit none(type,external)" >> $f
+    echo "private"                      >> $f
+    echo "character(len=*), parameter, public :: version = \"$v\"" >> $f
     echo "end module "$mod"__version" >> $f
     
     echo -n $FPM_VERSION > ./py/VERSION

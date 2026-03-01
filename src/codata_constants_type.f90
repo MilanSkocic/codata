@@ -1,38 +1,39 @@
 module codata__constants_type
-    !! Codata constant type
-    use stdlib_kinds, only: sp, dp
-    use stdlib_io, only: FMT_REAL_DP
-    use stdlib_optval, only: optval 
-    private
+!! Codata constant type
+use stdlib_kinds, only: sp, dp
+use stdlib_io, only: FMT_REAL_DP
+use stdlib_optval, only: optval 
+implicit none(type,external)
+private
 
-    type, public :: codata_constant_type
-        !! Derived type for representing a Codata constant.
-        character(len=64) :: name ! Name of the constant
-        real(dp) :: value         ! Value of the constant
-        real(dp) :: uncertainty   ! Uncertainty of the constant
-        character(len=32) :: unit ! Unit of the constant
-    contains 
-        procedure :: print
-        procedure :: to_real_sp
-        procedure :: to_real_dp
-        generic :: to_real => to_real_sp, to_real_dp
-    end type
-    
-    interface to_real
-        !! Get the constant value or uncertainty.
-        module procedure to_real_sp
-        module procedure to_real_dp
-    end interface
+type, public :: codata_constant_type
+    !! Derived type for representing a Codata constant.
+    character(len=64) :: name ! Name of the constant
+    real(dp) :: value         ! Value of the constant
+    real(dp) :: uncertainty   ! Uncertainty of the constant
+    character(len=32) :: unit ! Unit of the constant
+contains 
+    procedure :: print
+    procedure :: to_real_sp
+    procedure :: to_real_dp
+    generic :: to_real => to_real_sp, to_real_dp
+end type codata_constant_type
 
-    public :: to_real
-    
+interface to_real
+    !! Get the constant value or uncertainty.
+    module procedure to_real_sp
+    module procedure to_real_dp
+end interface
+
+public :: to_real
+
 contains
 
 subroutine print(self)
     !! Print out the constant's name, value, uncertainty and unit.
     class(codata_constant_type), intent(in) :: self
     print "(A64, SP, "//FMT_REAL_DP//", A5, "//FMT_REAL_DP//", 1X, A32)", self%name, self%value, "+/-", self%uncertainty, self%unit 
-end subroutine
+end subroutine print
 
 elemental pure real(sp) function to_real_sp(self, mold, uncertainty) result(r)
     !! Get the constant value or uncertainty for the kind sp
@@ -50,7 +51,7 @@ elemental pure real(sp) function to_real_sp(self, mold, uncertainty) result(r)
     else
         r = real(self%uncertainty, kind(mold))
     end if
-end function
+end function to_real_sp
 elemental pure real(dp) function to_real_dp(self, mold, uncertainty) result(r)
     !! Get the constant value or uncertainty for the kind dp
     
@@ -67,6 +68,6 @@ elemental pure real(dp) function to_real_dp(self, mold, uncertainty) result(r)
     else
         r = real(self%uncertainty, kind(mold))
     end if
-end function
+end function to_real_dp
 
 end module codata__constants_type

@@ -1,24 +1,24 @@
 module test_constants
-    !! Test constant values only for double precision.
-    use testdrive, only : new_unittest, unittest_type, error_type, check
-    use stdlib_kinds, only : dp, int32
-    use codata, only: YEAR, &
-                             ALPHA_PARTICLE_ELECTRON_MASS_RATIO, &
-                             ALPHA_PARTICLE_MASS, &
-                             ATOMIC_MASS_CONSTANT, &
-                             AVOGADRO_CONSTANT, &
-                             BOLTZMANN_CONSTANT, &
-                             ELECTRON_VOLT, &
-                             ELEMENTARY_CHARGE, &
-                             FARADAY_CONSTANT, &
-                             MOLAR_MASS_CONSTANT,&
-                             MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA, &
-                             PLANCK_CONSTANT,&
-                             SPEED_OF_LIGHT_IN_VACUUM,&
-                             STANDARD_ACCELERATION_OF_GRAVITY
-    implicit none
-    private
-    public :: collect_constants
+!! Test constant values only for double precision.
+use testdrive, only : new_unittest, unittest_type, error_type, check
+use stdlib_kinds, only : dp, int32
+use codata, only: YEAR, &
+                         ALPHA_PARTICLE_ELECTRON_MASS_RATIO, &
+                         ALPHA_PARTICLE_MASS, &
+                         ATOMIC_MASS_CONSTANT, &
+                         AVOGADRO_CONSTANT, &
+                         BOLTZMANN_CONSTANT, &
+                         ELECTRON_VOLT, &
+                         ELEMENTARY_CHARGE, &
+                         FARADAY_CONSTANT, &
+                         MOLAR_MASS_CONSTANT,&
+                         MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA, &
+                         PLANCK_CONSTANT,&
+                         SPEED_OF_LIGHT_IN_VACUUM,&
+                         STANDARD_ACCELERATION_OF_GRAVITY
+implicit none
+private
+public :: collect_constants
 
 contains
 
@@ -220,26 +220,26 @@ end subroutine
 end module test_constants
 
 program tester
-    use iso_fortran_env
-    use testdrive, only : run_testsuite, new_testsuite, testsuite_type
-    use test_constants, only : collect_constants
-    implicit none
-    type(testsuite_type), allocatable :: testsuites(:)
-    character(len=*), parameter :: fmt = '("#", *(1x, a))'
-    integer :: stat, is
+use, intrinsic :: iso_fortran_env, only: error_unit
+use testdrive, only : run_testsuite, new_testsuite, testsuite_type
+use test_constants, only : collect_constants
+implicit none(type,external)
+type(testsuite_type), allocatable :: testsuites(:)
+character(len=*), parameter :: fmt = '("#", *(1x, a))'
+integer :: stat, is
 
-    stat = 0
+stat = 0
 
-    testsuites = [new_testsuite("constants", collect_constants)]
+testsuites = [new_testsuite("constants", collect_constants)]
 
-    do is = 1, size(testsuites)
-        write(error_unit, fmt) "Testing:", testsuites(is)%name
-        call run_testsuite(testsuites(is)%collect, error_unit, stat)
-    end do
+do is = 1, size(testsuites)
+    write(error_unit, fmt) "Testing:", testsuites(is)%name
+    call run_testsuite(testsuites(is)%collect, error_unit, stat)
+end do
 
-    if (stat > 0) then
-        write(error_unit, '(i0, 1x, a)') stat, "test(s) failed!"
-        error stop
-    end if
+if (stat > 0) then
+    write(error_unit, '(i0, 1x, a)') stat, "test(s) failed!"
+    error stop
+end if
 
 end program
