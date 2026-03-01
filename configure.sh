@@ -6,10 +6,10 @@ update_version () {
     
     f="./src/"$mod"_version.f90"
     echo "module "$mod"__version"           > $f
-    echo "    !! Version"                   >> $f
-    echo "    implicit none"                >> $f
-    echo "    private"                      >> $f
-    echo "    character(len=*), parameter, public :: version = \"$v\"" >> $f
+    echo "!! Version"                   >> $f
+    echo "implicit none"                >> $f
+    echo "private"                      >> $f
+    echo "character(len=*), parameter, public :: version = \"$v\"" >> $f
     echo "end module "$mod"__version" >> $f
     
     echo -n $FPM_VERSION > ./py/VERSION

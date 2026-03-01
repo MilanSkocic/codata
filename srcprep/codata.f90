@@ -1541,10 +1541,10 @@ CODATA 2010
     o WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010
 $ENDBLOCK
 module codata
-    !! Main module for the Codata library.
-    !!
-    !! The latest values (2022) do not have the year as a suffix in their name.
-    !! Older values can be used and they feature the year as a suffix in their name.
+!! Main module for the Codata library.
+!!
+!! The latest values (2022) do not have the year as a suffix in their name.
+!! Older values can be used and they feature the year as a suffix in their name.
 
 use codata__constants_2022
 use codata__constants_2018
@@ -1558,7 +1558,6 @@ use codata__constants_2010_capi
 use codata__constants_type_capi
 use codata__api
 use codata__capi
-implicit none
-
-
+implicit none(type,external)
+public
 end module codata
