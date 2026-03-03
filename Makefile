@@ -22,7 +22,7 @@ GEN_STDLIB=./scripts/gen_stdlib.py
 
 AST_SRC=$(wildcard ./data/*.toml)
 F_SRC=$(patsubst ./data/%.toml, ./src/%.f90, $(AST_SRC))
-C_SRC=$(patsubst ./data/%.toml, ./src/%_capi.f90, $(AST_SRC))
+#C_SRC=$(patsubst ./data/%.toml, ./src/%_capi.f90, $(AST_SRC))
 C_HEADERS=$(patsubst ./data/%.toml, ./include/%.txt, $(AST_SRC))
 C_HEADER=./include/$(FPM_NAME).h
 SRC_FYPP=$(wildcard ./src/*.fypp)

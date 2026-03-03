@@ -8,51 +8,51 @@ use codata, only :cc, cc_2010,cc_2014, cc_2018, codata_constant_type, get_versio
 implicit none(type,external)
 
 character(len=*), parameter :: name="codata"
-character(len=:),allocatable, target  :: help_text(:) 
+character(len=:),allocatable, target  :: help_text(:)
 character(len=:),allocatable, target  :: version_text(:)
 character(len=:), pointer :: char_fp(:)
 type(codata_constant_type), pointer :: cctptr(:)
 character(len=:), allocatable :: patterns(:)
-
 integer :: i
 
 nullify(char_fp)
 nullify(cctptr)
 
 version_text=[character(len=80) :: &
-'PROGRAM:      '//name//'                         ', &
-'DESCRIPTION:  Command line interface for codata  ', &
-'VERSION:      '//get_version()//'                ', &
-'AUTHOR:       M. Skocic                          ', &
-'LICENSE:      MIT                                ', &
+'PROGRAM:      '//name//'                                              ', &
+'DESCRIPTION:  Command line interface for codata                       ', &
+'VERSION:      '//get_version()//'                                     ', &
+'AUTHOR:       M. Skocic                                               ', &
+'LICENSE:      MIT                                                     ', &
 '' ]
 
 help_text=[character(len=80) :: &
-'NAME                                                            ', &
-'  '//name//' - Command line for codata                          ', &
-'                                                                ', &
-'SYNOPSIS                                                        ', &
+'NAME                                                                  ', &
+'  '//name//' - Command line for codata                                ', &
+'                                                                      ', &
+'SYNOPSIS                                                              ', &
 '  '//name//' [OPTIONS] [REGEX_PATTERN ... ]                           ', &
-'                                                                ', &
-'DESCRIPTION                                                     ', &
-'  codata is a command line interface which prints all the codata', &
-'  constants.                                                    ', &
-'                                                                ', &
-'  The current values are from 2022.                             ', &
-'  Older values can be retrieved if needed and                   ', &
-'  the output can be filtered with REGEX PATTERNS.                ', &
-'                                                                ', &
-'                                                                ', &
-'OPTIONS                                                         ', &
-'  --year, -y YEAR        Year of the codata constants: 2022, 2018, 2014, 2010.', &
+'                                                                      ', &
+'DESCRIPTION                                                           ', &
+'  codata is a command line interface which prints all the codata      ', &
+'  constants.                                                          ', &
+'                                                                      ', &
+'  The current values are from 2022.                                   ', &
+'  Older values can be retrieved if needed and                         ', &
+'  the output can be filtered with REGEX PATTERNS.                     ', &
+'                                                                      ', &
+'                                                                      ', &
+'OPTIONS                                                               ', &
+'  --year, -y YEAR        Year of the codata constants:                ', &
+'                         2022, 2018, 2014, 2010                       ', &
 '  --pattern, -p PATTERN  Regex pattern for filtering the constants.   ', &
 '  --value, -a            Show only the value.                         ', &
 '  --error, -e            Show only the uncertainty.                   ', &
-'  --usage                Show usage text and exit.                    ', & 
-'  --help                 Show help text and exit.                     ', & 
-'  --verbose              Display additional information when available.', &
+'  --usage                Show usage text and exit.                    ', &
+'  --help                 Show help text and exit.                     ', &
+'  --verbose              Display additional information.              ', &
 '  --version              Show version information and exit.           ', &
-'                                                                ', &
+'                                                                      ', &
 'NOTES                                                                 ', &
 '                                                                      ', &
 '  You may replace the default options from a file if your first       ', &
@@ -61,27 +61,29 @@ help_text=[character(len=80) :: &
 '  "file.rsp" in the current directory.                                ', &
 '                                                                      ', &
 '  If "file" does not exist or cannot be read, then an error occurs and', &
-'  the program stops. Each line of the file is prefixed with "options"', &
-'  and interpreted as a separate argument. The file itself may not'  , &
-'  contain @file arguments. That is, it is not processed recursively.', &
+'  the program stops. Each line of the file is prefixed with "options" ', &
+'  and interpreted as a separate argument. The file itself may not     ', &
+'  contain @file arguments. That is, it is not processed recursively.  ', &
 '                                                                      ', &
-'  For more information on response files see                          '  , &
-'  https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html            '  , &
-'                                                                ', &
-'EXAMPLE                                                         ', &
-'  Minimal example                                               ', &
-'                                                                ', &
-'     codata                                                     ', &
-'     codata -y 2018 molar electron                              ', &
-"     codata -y 2014 -p 'molar.*gas','electron.*eV'                 ", &
-"     codata '[B,b]oltzmann.*eV'                                  ", &
-'                                                                ', &
-'SEE ALSO                                                         ', &
-'  codata(3)                                                     ', &
-'' ]
-call set_mode('strict') 
+'  For more information on response files see                          ', &
+'  https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html            ', &
+'                                                                      ', &
+'EXAMPLE                                                               ', &
+'  Minimal example                                                     ', &
+'                                                                      ', &
+'     codata                                                           ', &
+'     codata -y 2018 molar electron                                    ', &
+"     codata -y 2014 -p 'molar.*gas','electron.*eV'                    ", &
+"     codata '[B,b]oltzmann.*eV'                                       ", &
+'                                                                      ', &
+'SEE ALSO                                                              ', &
+'  codata(3)                                                           ', &
+'                                                                      ']
+
+call set_mode('strict')
 call set_mode('response_file')
-call set_args('--year:y 2022 --value:a F --error:e F --pattern:p .', help_text, version_text)
+call set_args('--year:y 2022 --value:a F --error:e F --pattern:p .', &
+              help_text, version_text)
 select case(iget("year"))
     case (2022)
         cctptr => cc
@@ -115,47 +117,40 @@ if(ASSOCIATED(cctptr))then
 end if
 
 contains
-
-subroutine print_text(char_fp)
-    character(len=:), pointer, intent(in) :: char_fp(:)
-    integer :: i
-    do i=1, size(char_fp), 1
-        write (OUTPUT_UNIT, '(A)') char_fp(i)
-    end do
-end subroutine
-
+!-----------------------------------------------------------------------
 subroutine display(fptr, pattern, value, uncertainty)
-    type(codata_constant_type), intent(in), pointer :: fptr(:)
-    character(len=*), intent(in), optional :: pattern
-    logical, intent(in), optional :: value, uncertainty
+!! Display results
+type(codata_constant_type), intent(in), pointer :: fptr(:)
+character(len=*), intent(in), optional :: pattern
+logical, intent(in), optional :: value, uncertainty
 
-    integer :: i, n, idx
-    type(regex_pattern) :: re
-    logical :: value2, uncertainty2
+integer :: i, n, idx
+type(regex_pattern) :: re
+logical :: value2, uncertainty2
 
-    value2 = optval(value, .false.)
-    uncertainty2 = optval(uncertainty, .false.)
-    
-    if(present(pattern))then
-        re = parse_pattern(pattern)
-        do i=1, size(fptr),1
-            idx = REGEX(trim(fptr(i)%name), pattern=re, length=n)
-            if(idx /= 0)then
-                if(value2)then
-                    write(output_unit, '(SP,ES24.16)') fptr(i)%value
-                elseif(uncertainty2)then
-                    write(output_unit, '(SP,ES24.16)') fptr(i)%uncertainty
-                else
-                    call fptr(i)%print()
-                end if
+value2 = optval(value, .false.)
+uncertainty2 = optval(uncertainty, .false.)
+
+if(present(pattern))then
+    re = parse_pattern(pattern)
+    do i=1, size(fptr),1
+        idx = REGEX(trim(fptr(i)%name), pattern=re, length=n)
+        if(idx /= 0)then
+            if(value2)then
+                write(output_unit, '(SP,ES24.16)') fptr(i)%value
+            elseif(uncertainty2)then
+                write(output_unit, '(SP,ES24.16)') fptr(i)%uncertainty
+            else
+                call fptr(i)%print()
             end if
-        end do
-    else
-        do i=1, size(fptr),1
-            call fptr(i)%print()
-        end do
-    end if
-end subroutine
+        end if
+    end do
+else
+    do i=1, size(fptr),1
+        call fptr(i)%print()
+    end do
+end if
+end subroutine display
+!-----------------------------------------------------------------------
 
-
-end program
+end program codatacli
