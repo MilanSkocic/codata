@@ -117,7 +117,9 @@ if(ASSOCIATED(cctptr))then
 end if
 
 contains
-!-----------------------------------------------------------------------
+!=======================================================================
+! DISPLAY
+!=======================================================================
 subroutine display(fptr, pattern, value, uncertainty)
 !! Display results
 type(codata_constant_type), intent(in), pointer :: fptr(:)
@@ -151,6 +153,6 @@ else
     end do
 end if
 end subroutine display
-!-----------------------------------------------------------------------
+!=======================================================================
 
 end program codatacli
