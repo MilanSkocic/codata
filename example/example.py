@@ -3,19 +3,15 @@ r"""EXAMPLE in PYTHON"""
 import sys
 sys.path.insert(0, "../py/src/")
 import pycodata
-
 print("########## EXAMPLE IN PYTHON ##########")
 print("# VERSION")
 print(f"version = {pycodata.__version__}")
-
 print("# Constants")
-print(f"c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
-
+print("c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
 print("# UNCERTAINTY")
-print(f"u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
-
+print("u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
 print("# OLDER VALUES")
-print(f"Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
-print(f"Mu_2018 = ", pycodata.MOLAR_MASS_CONSTANT_2018["value"])
-print(f"Mu_2014 = ", pycodata.MOLAR_MASS_CONSTANT_2014["value"])
-print(f"Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
+print("Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
+print("Mu_2018 = ", pycodata.MOLAR_MASS_CONSTANT_2018["value"])
+print("Mu_2014 = ", pycodata.MOLAR_MASS_CONSTANT_2014["value"])
+print("Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
