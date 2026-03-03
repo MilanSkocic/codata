@@ -1,7 +1,5 @@
-/* EXAMPLE IN C */
 #include <stdio.h>
 #include "codata.h"
-
 int main(void){
 printf("########## EXAMPLE IN C ##########\n");
 printf("%s\n","# VERSION");

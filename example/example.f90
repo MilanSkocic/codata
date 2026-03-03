@@ -1,4 +1,3 @@
-! EXAMPLE IN FORTRAN
 program example_in_f
 use iso_fortran_env
 use codata

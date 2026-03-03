@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-r"""EXAMPLE in PYTHON"""
 import sys
 sys.path.insert(0, "../py/src/")
 import pycodata
