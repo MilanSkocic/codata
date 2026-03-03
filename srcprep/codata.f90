@@ -1542,7 +1542,7 @@ CODATA 2010
 $ENDBLOCK
 module codata
 !! Codata library - Fundamental Physical Constants.
-!! Available from 2010, 2014, 2018 and 2022.
+!! Available constants from 2010, 2014, 2018 and 2022.
 !! The latest values (2022) do not have the year as a suffix in their name.
 !! Older values can be used and they feature the year as a suffix in their name.
 use, intrinsic :: iso_c_binding, only: c_ptr, c_null_char, c_loc
@@ -1555,7 +1555,6 @@ use codata__constants_2022_capi
 use codata__constants_2018_capi
 use codata__constants_2014_capi
 use codata__constants_2010_capi
-use codata__constants_type_capi
 use codata__version, only: version
 implicit none(type,external)
 public
