@@ -1577,7 +1577,7 @@ function capi_get_version()bind(C,name="codata_get_version")result(cptr)
 !! C API - Get the version
 type(c_ptr) :: cptr !! C pointer to a string indicating the version.
 character(len=:), pointer :: fptr
-fptr => get_version() 
+fptr => get_version()
 if(allocated(version_c))then
     deallocate(version_c)
 endif
