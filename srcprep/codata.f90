@@ -76,7 +76,8 @@ DESCRIPTION
           fundamental physical constants: 2010. Review of Modern Physics, 84, 2012.
 
         o Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA recommended values of the
-          fundamental physical constants: 2014. Journal of Physical and Chemical Reference Data, 45, 2016.
+          fundamental physical constants: 2014.
+          Journal of Physical and Chemical Reference Data, 45, 2016.
 
         o Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA recommended values of the
           fundamental physical constants: 2018. Review of Modern Physics, 93, 2021.
@@ -85,7 +86,7 @@ DESCRIPTION
           the Fundamental Physical Constants: 2022.
 
         o Peter J. Mohr, David B. Newell, Barry N. Taylor, and Eite Tiesinga. CODATA recommended
-          values of the fundamental physical constants: 2022. 
+          values of the fundamental physical constants: 2022.
           Reviews of Modern Physics, 97(2):025002, 2025.
 
 NOTES
