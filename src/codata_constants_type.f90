@@ -3,7 +3,7 @@ module codata__constants_type
 use, intrinsic :: iso_c_binding, only: c_char, c_double
 use stdlib_kinds, only: sp, dp
 use stdlib_io, only: FMT_REAL_DP
-use stdlib_optval, only: optval 
+use stdlib_optval, only: optval
 implicit none(type,external)
 private
 
@@ -16,7 +16,7 @@ character(len=64) :: name ! Name of the constant
 real(dp) :: value         ! Value of the constant
 real(dp) :: uncertainty   ! Uncertainty of the constant
 character(len=32) :: unit ! Unit of the constant
-contains 
+contains
 procedure :: print
 procedure :: to_real_sp
 procedure :: to_real_dp
@@ -61,7 +61,7 @@ subroutine print(self)
 !! Print out the constant's name, value, uncertainty and unit.
 class(codata_constant_type), intent(in) :: self
 print "(A64, SP, "//FMT_REAL_DP//", A5, "//FMT_REAL_DP//", 1X, A32)", &
-        self%name, self%value, "+/-", self%uncertainty, self%unit 
+        self%name, self%value, "+/-", self%uncertainty, self%unit
 end subroutine print
 !=======================================================================
 
@@ -75,7 +75,6 @@ elemental pure real(sp) function to_real_sp(self, mold, uncertainty) result(r)
 class(codata_constant_type), intent(in) :: self !! Codata constant
 real(sp), intent(in) :: mold                    !! dummy argument to disambiguate at compile time the generic interface
 logical, intent(in), optional :: uncertainty    !! Set to true if the uncertainty is required. Default to .false..
-    !! 
 logical :: u
 
 u = optval(uncertainty, .false.)
@@ -93,7 +92,6 @@ elemental pure real(dp) function to_real_dp(self, mold, uncertainty) result(r)
 class(codata_constant_type), intent(in) :: self !! Codata constant
 real(dp), intent(in) :: mold                    !! dummy argument to disambiguate at compile time the generic interface
 logical, intent(in), optional :: uncertainty    !! Set to true if the uncertainty is required. Default to .false..
-    !! 
 logical :: u
 
 u = optval(uncertainty, .false.)
