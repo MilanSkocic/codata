@@ -10,10 +10,6 @@ SYNOPSIS
     include "codata.h"
     import pycodata
 
-    character(len=:), pointer function get_version()
-    char* codata_get_version(void)
-    pycodata.__version__
-
 DESCRIPTION
     codata is a Fortran library providing the fundamental physical
     constants according to CODATA
@@ -23,40 +19,44 @@ DESCRIPTION
 
     The latest codata constants 2022
     https://pml.nist.gov/cuu/Constants were integrated in
-    stdlib https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
+    stdlib https://github.com/fortran-lang/stdlib/releases/tag/ since
+    version 0.7.0.
     The constants are implemented as derived type which carries the name,
     the value, the uncertainty and the unit.
-    This library is
-    complementary to the constants defined in the stdlib by providing
-    older values for the constants.
+    This library is complementary to the constants defined in the stdlib
+    by providing older values for the constants.
     The latest values (2022) do not have the year as a suffix in their name.
-    Older values can be used and they feature the year as a suffix in their name.
+    Older values (2010, 2014, 2018) can be used and they feature the
+    year as a suffix in their name.
 
     All codata (physical) constants are defined as a derived type codata_constant_type.
     All the codata constants are provided as double precision reals.
     The names are quite long and can be aliased with shorter names.
     The derived type codata_constant_type defines 4 members and 2 procedures.
 
-        type, public :: codata_constant_type
+        type :: codata_constant_type
             !! Derived type for representing a Codata constant.
             character(len=64) :: name ! Name of the constant
             real(dp) :: value         ! Value of the constant
             real(dp) :: uncertainty   ! Uncertainty of the constant
             character(len=32) :: unit ! Unit of the constant
-        contains 
+        contains
             procedure :: print
             procedure :: to_real_sp
             procedure :: to_real_dp
             generic :: to_real => to_real_sp, to_real_dp
-        end type
-
-        interface to_real ! Get the constant value or uncertainty.
-            module procedure to_real_sp
-            module procedure to_real_dp
-        end interface
+        end type codata_constant_type
 
     A module level interface to_real is available for getting the constant value
     or uncertainty of a constant.
+
+        type, bind(C) :: capi_constant_type
+            !! Derived type for representing a Codata constant in C.
+            character(kind=c_char) :: name(65)
+            real(c_double) :: value
+            real(c_double) :: uncertainty
+            character(kind=c_char) :: unit(33)
+        end type capi_constant_type
 
     The C API exposes a structure codata_constant_ttype that defines the same 
     members as in Fortran.
@@ -68,7 +68,8 @@ DESCRIPTION
             char unit[33];
         }cct;
 
-    The Python wrapper encapsulates the members in a dictionnary.
+    The Python wrapper encapsulates the members in a dictionnary with 
+    the keys name, value, uncertainty and unit.
 
     References
 
@@ -97,6 +98,7 @@ NOTES
         codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 EXAMPLE
+
     Example in Fortran
 
         program example_in_f
@@ -117,11 +119,10 @@ EXAMPLE
         print '(A, F23.16)', "Mu_2010 = ",  MOLAR_MASS_CONSTANT_2010%value
         end program
 
-    Example in C:
+    Example in C
 
         #include <stdio.h>
         #include "codata.h"
-
         int main(void){
         printf("########## EXAMPLE IN C ##########\n");
         printf("%s\n","# VERSION");
@@ -138,7 +139,7 @@ EXAMPLE
         return 0;
         }
 
-    Example in Python:
+    Example in Python
 
         import sys
         sys.path.insert(0, "../py/src/")
