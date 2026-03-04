@@ -3,7 +3,7 @@ NAME
     codata - libray for fundamental physical constants
 
 LIBRARY
-    Codata (-libcodata, -lcodata)
+    codata (-libcodata, -lcodata)
 
 SYNOPSIS
     use codata
@@ -102,7 +102,6 @@ EXAMPLE
     Example in Fortran
 
         program example_in_f
-        use iso_fortran_env
         use codata
         implicit none
         print '(A)', '########## EXAMPLE IN FORTRAN ##########'
@@ -1569,6 +1568,28 @@ contains
 !=======================================================================
 ! GET_VERSION
 !=======================================================================
+$BLOCK comment --file codata_get_version.3.prep
+NAME
+    get_version - get the version of the library
+
+LIBRARY
+    codata (-libcodata, -lcodata)
+
+SYNOPSIS
+    character(len=:), pointer get_version()
+
+DESCRIPTION
+    Returns the version of the library.
+
+EXAMPLE
+    Minimal example
+
+        use codata
+        print *, "version = ", get_version()
+
+SEE ALSO
+    codata(3), codata_capi_get_version(3)
+$ENDBLOCK
 function get_version()result(fptr)
 !! Get the version.
 character(len=:), pointer :: fptr !! Pointer to a string (=>version).
@@ -1580,6 +1601,28 @@ version_f = version
 fptr => version_f
 end function get_version
 !-----------------------------------------------------------------------
+$BLOCK comment --file codata_capi_get_version.3.prep
+NAME
+    get_version - get the version of the library
+
+LIBRARY
+    codata (-libcodata, -lcodata)
+
+SYNOPSIS
+    char* codata_get_version(void);
+
+DESCRIPTION
+    Returns the version of the library.
+
+EXAMPLE
+    Minimal example
+
+        #include "codata.h"
+        printf("version = %s\n", codata_get_version());
+
+SEE ALSO
+    codata(3), codata_get_version(3)
+$ENDBLOCK
 function capi_get_version()bind(C,name="codata_get_version")result(cptr)
 !! C API - Get the version
 type(c_ptr) :: cptr !! C pointer to a string indicating the version.
