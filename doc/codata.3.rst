@@ -6,7 +6,7 @@ NAME
 LIBRARY
 -------
 
-Codata (**-libcodata, -lcodata)**
+codata (**-libcodata, -lcodata)**
 
 SYNOPSIS
 --------
@@ -16,10 +16,6 @@ SYNOPSIS
      use codata
      include "codata.h"
      import pycodata
-
-     character(len=:), pointer function get_version()()
-     char** codata_get_version(void)
-     pycodata.__version__
 
 DESCRIPTION
 -----------
@@ -32,13 +28,13 @@ wrappers. Python wrapper allows easy usage from Python.
 
 The latest *codata* **constants 2022**
 https://pml.nist.gov/cuu/Constants were integrated in stdlib
-https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0. The
-constants are implemented as derived type which carries the name, the
-value, the uncertainty and the unit. This library is complementary to
-the constants defined in the stdlib by providing older values for the
-constants. The latest values (2022) do not have the year as a suffix in
-their name. Older values can be used and they feature the year as a
-suffix in their name.
+https://github.com/fortran-lang/stdlib/releases/tag/ since version
+0.7.0. The constants are implemented as derived type which carries the
+name, the value, the uncertainty and the unit. This library is
+complementary to the constants defined in the stdlib by providing older
+values for the constants. The latest values (2022) do not have the year
+as a suffix in their name. Older values (2010, 2014, 2018) can be used
+and they feature the year as a suffix in their name.
 
 All *codata* **(physical) constants are defined as a derived type
 codata_constant_type.** All the *codata* **constants are provided as
@@ -48,7 +44,7 @@ members and 2 procedures.
 
 ::
 
-           type, public :: codata_constant_type
+           type :: codata_constant_type
                !! Derived type for representing a Codata constant.
                character(len=64) :: name ! Name of the constant
                real(dp) :: value         ! Value of the constant
@@ -59,15 +55,20 @@ members and 2 procedures.
                procedure :: to_real_sp
                procedure :: to_real_dp
                generic :: to_real => to_real_sp, to_real_dp
-           end type
-
-           interface to_real ! Get the constant value or uncertainty.
-               module procedure to_real_sp
-               module procedure to_real_dp
-           end interface
+           end type codata_constant_type
 
 A module level interface to_real is available for getting the constant
 value or uncertainty of a constant.
+
+::
+
+           type, bind(C) :: capi_constant_type
+               !! Derived type for representing a Codata constant in C.
+               character(kind=c_char) :: name(65)
+               real(c_double) :: value
+               real(c_double) :: uncertainty
+               character(kind=c_char) :: unit(33)
+           end type capi_constant_type
 
 The C API exposes a structure codata_constant_ttype that defines the
 same members as in Fortran.
@@ -81,7 +82,30 @@ same members as in Fortran.
                char unit[33];
            }cct;
 
-The Python wrapper encapsulates the members in a dictionnary.
+The Python wrapper encapsulates the members in a dictionnary with the
+keys name, value, uncertainty and unit.
+
+References
+
+   -  Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA
+      recommended values of the fundamental physical constants: 2010.
+      Review of Modern Physics, 84, 2012.
+
+   -  Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA
+      recommended values of the fundamental physical constants: 2014.
+      Journal of Physical and Chemical Reference Data, 45, 2016.
+
+   -  Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA
+      recommended values of the fundamental physical constants: 2018.
+      Review of Modern Physics, 93, 2021.
+
+   -  Peter Mohr, David Newell, Barry Taylor, and Eite Tiesinga. CODATA
+      Recommended Values of the Fundamental Physical Constants: 2022.
+
+   -  Peter J. Mohr, David B. Newell, Barry N. Taylor, and Eite
+      Tiesinga. CODATA recommended values of the fundamental physical
+      constants: 2022. Reviews of Modern Physics, **97(2):025002,
+      2025.**
 
 NOTES
 -----
@@ -103,21 +127,15 @@ Example in Fortran
 ::
 
            program example_in_f
-           use iso_fortran_env
            use codata
            implicit none
-
            print '(A)', '########## EXAMPLE IN FORTRAN ##########'
-
            print '(A)', '# VERSION'
            print *, "version = ", get_version()
-
            print '(A)', '# CONSTANTS'
            print *, "c = ",  SPEED_OF_LIGHT_IN_VACUUM%value
-
            print '(A)', '# UNCERTAINTY'
            print *, "u(c) = ", SPEED_OF_LIGHT_IN_VACUUM%uncertainty
-
            print '(A)', '# OLDER VALUES'
            print '(A, F23.16)', "Mu_2022(latest) = ", MOLAR_MASS_CONSTANT%value
            print '(A, F23.16)', "Mu_2018 = ", MOLAR_MASS_CONSTANT_2018%value
@@ -125,56 +143,47 @@ Example in Fortran
            print '(A, F23.16)', "Mu_2010 = ",  MOLAR_MASS_CONSTANT_2010%value
            end program
 
-Example in C:
+Example in C
 
 ::
 
            #include <stdio.h>
            #include "codata.h"
-
            int main(void){
-
            printf("########## EXAMPLE IN C ##########);
-
            printf("%s,"# VERSION");
            printf("version = %s, codata_get_version());
-
            printf("%s,"# CONSTANTS");
            printf("c = %f, SPEED_OF_LIGHT_IN_VACUUM.value);
-
            printf("%s,"# UNCERTAINTY");
            printf("u(c) = %f, SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
-
            printf("%s,"# OLDER VALUES");
            printf("Mu_2022(latest) = %23.16f, MOLAR_MASS_CONSTANT.value);
            printf("Mu_2018 = %23.16f, MOLAR_MASS_CONSTANT_2018.value);
            printf("Mu_2014 = %23.16f, MOLAR_MASS_CONSTANT_2014.value);
            printf("Mu_2010 = %23.16f, MOLAR_MASS_CONSTANT_2010.value);
-
            return 0;
            }
 
-Example in Python:
+Example in Python
 
 ::
 
+           import sys
+           sys.path.insert(0, "../py/src/")
            import pycodata
-
            print("########## EXAMPLE IN PYTHON ##########")
            print("# VERSION")
            print(f"version = {pycodata.__version__}")
-
            print("# Constants")
-           print(f"c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
-
+           print("c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
            print("# UNCERTAINTY")
-           print(f"u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
-
+           print("u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
            print("# OLDER VALUES")
-           print(f"Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
-           print(f"Mu_2018 = ", pycodata.MOLAR_MASS_CONSTANT_2018["value"])
-           print(f"Mu_2014 = ", pycodata.MOLAR_MASS_CONSTANT_2014["value"])
-           print(f"Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
+           print("Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
+           print("Mu_2018 = ", pycodata.MOLAR_MASS_CONSTANT_2018["value"])
+           print("Mu_2014 = ", pycodata.MOLAR_MASS_CONSTANT_2014["value"])
+           print("Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
 
 SEE ALSO
 --------

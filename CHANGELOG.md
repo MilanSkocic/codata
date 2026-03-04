@@ -1,3 +1,11 @@
+# 2.5.1
+
+- Code refactoring and cleaning: trailing spaces, empty lines, formatted comments
+- Remove specific modules for C API: defined in the same module as Fortran equivalents
+
+[Full changelog](https://github.com/MilanSkocic/codata/releases)
+
+
 # 2.5.0
 
 - Add [response_file]( https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html) 

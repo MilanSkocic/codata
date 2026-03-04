@@ -15,7 +15,7 @@ DESCRIPTION
 
 OPTIONS
        --year, -y YEAR
-              Year of the codata constants: 2022, 2018, 2014, 2010.
+              Year of the codata constants: 2022, 2018, 2014, 2010
 
        --pattern, -p PATTERN
               Regex pattern for filtering the constants.
@@ -32,7 +32,7 @@ OPTIONS
        --help Show help text and exit.
 
        --verbose
-              Display additional information when available.
+              Display additional information.
 
        --version
               Show version information and exit.
@@ -62,4 +62,4 @@ EXAMPLE
 SEE ALSO
        codata(3)
 
-2.5.0                        01 March 2026                    codata(1)
+2.5.1                        04 March 2026                    codata(1)
