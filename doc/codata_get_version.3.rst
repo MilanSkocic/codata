@@ -1,0 +1,36 @@
+NAME
+----
+
+**get_version** - get the version of the library
+
+LIBRARY
+-------
+
+codata (**-libcodata, -lcodata)**
+
+SYNOPSIS
+--------
+
+::
+
+     character(len=:), pointer get_version()
+
+DESCRIPTION
+-----------
+
+Returns the version of the library.
+
+EXAMPLE
+-------
+
+Minimal example
+
+::
+
+           use codata
+           print *, "version = ", get_version()
+
+SEE ALSO
+--------
+
+**codata(3), codata_capi_get_version(3)**

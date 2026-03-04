@@ -4,7 +4,7 @@ NAME
        codata - libray for fundamental physical constants
 
 LIBRARY
-       Codata (-libcodata, -lcodata)
+       codata (-libcodata, -lcodata)
 
 SYNOPSIS
          use codata
@@ -107,7 +107,6 @@ EXAMPLE
        Example in Fortran
 
                program example_in_f
-               use iso_fortran_env
                use codata
                implicit none
                print '(A)', '########## EXAMPLE IN FORTRAN ##########'
@@ -2927,4 +2926,4 @@ CODATA 2010
 
        •  WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010
 
-2.5.1                        03 March 2026                    codata(3)
+2.5.1                        04 March 2026                    codata(3)

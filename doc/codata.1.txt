@@ -62,4 +62,4 @@ EXAMPLE
 SEE ALSO
        codata(3)
 
-2.5.1                        03 March 2026                    codata(1)
+2.5.1                        04 March 2026                    codata(1)
