@@ -1577,18 +1577,31 @@ LIBRARY
 
 SYNOPSIS
     character(len=:), pointer get_version()
+    char* codata_get_version(void);
 
 DESCRIPTION
     Returns the version of the library.
+    For use from Python, the version is retrieved using the module
+    attribute __version__.
 
 EXAMPLE
-    Minimal example
+    Example in Fortran
 
         use codata
         print *, "version = ", get_version()
 
+    Example in C
+
+        #include "codata.h"
+        printf("version = %s\n", codata_get_version());
+
+    Example in Python
+
+        import pycodata
+        print(f"version = {pycodata.__version__}")
+
 SEE ALSO
-    codata(3), codata_capi_get_version(3)
+    codata(3)
 $ENDBLOCK
 function get_version()result(fptr)
 !! Get the version.
@@ -1601,28 +1614,6 @@ version_f = version
 fptr => version_f
 end function get_version
 !-----------------------------------------------------------------------
-$BLOCK comment --file codata_capi_get_version.3.prep
-NAME
-    get_version - get the version of the library
-
-LIBRARY
-    codata (-libcodata, -lcodata)
-
-SYNOPSIS
-    char* codata_get_version(void);
-
-DESCRIPTION
-    Returns the version of the library.
-
-EXAMPLE
-    Minimal example
-
-        #include "codata.h"
-        printf("version = %s\n", codata_get_version());
-
-SEE ALSO
-    codata(3), codata_get_version(3)
-$ENDBLOCK
 function capi_get_version()bind(C,name="codata_get_version")result(cptr)
 !! C API - Get the version
 type(c_ptr) :: cptr !! C pointer to a string indicating the version.
