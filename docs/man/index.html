@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Man Pages &#8212; codata 2.5.0 documentation</title>
+    <title>Man Pages &#8212; codata 2.5.1 documentation</title>
   
   
   
@@ -35,7 +35,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=3c4615cf"></script>
+    <script src="../_static/documentation_options.js?v=983e91d6"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'man/index';</script>
@@ -118,7 +118,7 @@
   
   
   
-    <p class="title logo__title">codata 2.5.0 documentation</p>
+    <p class="title logo__title">codata 2.5.1 documentation</p>
   
 </a></div>
     
@@ -410,7 +410,7 @@ needed and the output can be filtered with REGEX PATTERNS.</p>
 <section id="options">
 <h3>OPTIONS<a class="headerlink" href="#options" title="Link to this heading">#</a></h3>
 <dl class="simple">
-<dt><strong>–year, -y YEAR</strong></dt><dd><p>Year of the <strong>codata constants: 2022, 2018, 2014, 2010.</strong></p>
+<dt><strong>–year, -y YEAR</strong></dt><dd><p>Year of the <strong>codata constants:</strong> 2022, 2018, 2014, 2010</p>
 </dd>
 <dt><strong>–pattern, -p PATTERN</strong></dt><dd><p>Regex pattern for filtering the constants.</p>
 </dd>
@@ -422,7 +422,7 @@ needed and the output can be filtered with REGEX PATTERNS.</p>
 </dd>
 <dt><strong>–help</strong></dt><dd><p>Show help text and exit.</p>
 </dd>
-<dt><strong>–verbose</strong></dt><dd><p>Display additional information when available.</p>
+<dt><strong>–verbose</strong></dt><dd><p>Display additional information.</p>
 </dd>
 <dt><strong>–version</strong></dt><dd><p>Show version information and exit.</p>
 </dd>
@@ -463,17 +463,13 @@ interpreted as a separate argument. The file itself may not contain
 </section>
 <section id="library">
 <h3>LIBRARY<a class="headerlink" href="#library" title="Link to this heading">#</a></h3>
-<p>Codata (<strong>-libcodata, -lcodata)</strong></p>
+<p>codata (<strong>-libcodata, -lcodata)</strong></p>
 </section>
 <section id="id2">
 <h3>SYNOPSIS<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">use</span> <span class="n">codata</span>
 <span class="n">include</span> <span class="s2">&quot;codata.h&quot;</span>
 <span class="kn">import</span> <span class="nn">pycodata</span>
-
-<span class="n">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="n">pointer</span> <span class="n">function</span> <span class="n">get_version</span><span class="p">()()</span>
-<span class="n">char</span><span class="o">**</span> <span class="n">codata_get_version</span><span class="p">(</span><span class="n">void</span><span class="p">)</span>
-<span class="n">pycodata</span><span class="o">.</span><span class="n">__version__</span>
 </pre></div>
 </div>
 </section>
@@ -486,19 +482,19 @@ A C API allows usage from C, or can be used as a basis for other
 wrappers. Python wrapper allows easy usage from Python.</p>
 <p>The latest <em>codata</em> <strong>constants 2022</strong>
 <a class="reference external" href="https://pml.nist.gov/cuu/Constants">https://pml.nist.gov/cuu/Constants</a> were integrated in stdlib
-<a class="github reference external" href="https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0">fortran-lang/stdlib</a>. The
-constants are implemented as derived type which carries the name, the
-value, the uncertainty and the unit. This library is complementary to
-the constants defined in the stdlib by providing older values for the
-constants. The latest values (2022) do not have the year as a suffix in
-their name. Older values can be used and they feature the year as a
-suffix in their name.</p>
+<a class="github reference external" href="https://github.com/fortran-lang/stdlib/releases/tag/">fortran-lang/stdlib</a> since version
+0.7.0. The constants are implemented as derived type which carries the
+name, the value, the uncertainty and the unit. This library is
+complementary to the constants defined in the stdlib by providing older
+values for the constants. The latest values (2022) do not have the year
+as a suffix in their name. Older values (2010, 2014, 2018) can be used
+and they feature the year as a suffix in their name.</p>
 <p>All <em>codata</em> <strong>(physical) constants are defined as a derived type
 codata_constant_type.</strong> All the <em>codata</em> <strong>constants are provided as
 double precision reals.</strong> The names are quite long and can be aliased
 with shorter names. The derived type codata_constant_type defines 4
 members and 2 procedures.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>type, public :: codata_constant_type
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>type :: codata_constant_type
     !! Derived type for representing a Codata constant.
     character(len=64) :: name ! Name of the constant
     real(dp) :: value         ! Value of the constant
@@ -509,16 +505,20 @@ contains
     procedure :: to_real_sp
     procedure :: to_real_dp
     generic :: to_real =&gt; to_real_sp, to_real_dp
-end type
-
-interface to_real ! Get the constant value or uncertainty.
-    module procedure to_real_sp
-    module procedure to_real_dp
-end interface
+end type codata_constant_type
 </pre></div>
 </div>
 <p>A module level interface to_real is available for getting the constant
 value or uncertainty of a constant.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>type, bind(C) :: capi_constant_type
+    !! Derived type for representing a Codata constant in C.
+    character(kind=c_char) :: name(65)
+    real(c_double) :: value
+    real(c_double) :: uncertainty
+    character(kind=c_char) :: unit(33)
+end type capi_constant_type
+</pre></div>
+</div>
 <p>The C API exposes a structure codata_constant_ttype that defines the
 same members as in Fortran.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">struct</span> <span class="n">codata_constant_type</span><span class="p">{</span>
@@ -529,7 +529,28 @@ same members as in Fortran.</p>
 <span class="p">}</span><span class="n">cct</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>The Python wrapper encapsulates the members in a dictionnary.</p>
+<p>The Python wrapper encapsulates the members in a dictionnary with the
+keys name, value, uncertainty and unit.</p>
+<p>References</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA
+recommended values of the fundamental physical constants: 2010.
+Review of Modern Physics, 84, 2012.</p></li>
+<li><p>Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA
+recommended values of the fundamental physical constants: 2014.
+Journal of Physical and Chemical Reference Data, 45, 2016.</p></li>
+<li><p>Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA
+recommended values of the fundamental physical constants: 2018.
+Review of Modern Physics, 93, 2021.</p></li>
+<li><p>Peter Mohr, David Newell, Barry Taylor, and Eite Tiesinga. CODATA
+Recommended Values of the Fundamental Physical Constants: 2022.</p></li>
+<li><p>Peter J. Mohr, David B. Newell, Barry N. Taylor, and Eite
+Tiesinga. CODATA recommended values of the fundamental physical
+constants: 2022. Reviews of Modern Physics, <strong>97(2):025002,
+2025.</strong></p></li>
+</ul>
+</div></blockquote>
 </section>
 <section id="id4">
 <h3>NOTES<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
@@ -545,21 +566,15 @@ to your file:</p>
 <h3>EXAMPLE<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>Example in Fortran</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">program</span> <span class="n">example_in_f</span>
-<span class="n">use</span> <span class="n">iso_fortran_env</span>
 <span class="n">use</span> <span class="n">codata</span>
 <span class="n">implicit</span> <span class="n">none</span>
-
 <span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;########## EXAMPLE IN FORTRAN ##########&#39;</span>
-
 <span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;# VERSION&#39;</span>
 <span class="nb">print</span> <span class="o">*</span><span class="p">,</span> <span class="s2">&quot;version = &quot;</span><span class="p">,</span> <span class="n">get_version</span><span class="p">()</span>
-
 <span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;# CONSTANTS&#39;</span>
 <span class="nb">print</span> <span class="o">*</span><span class="p">,</span> <span class="s2">&quot;c = &quot;</span><span class="p">,</span>  <span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="o">%</span><span class="n">value</span>
-
 <span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;# UNCERTAINTY&#39;</span>
 <span class="nb">print</span> <span class="o">*</span><span class="p">,</span> <span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span> <span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="o">%</span><span class="n">uncertainty</span>
-
 <span class="nb">print</span> <span class="s1">&#39;(A)&#39;</span><span class="p">,</span> <span class="s1">&#39;# OLDER VALUES&#39;</span>
 <span class="nb">print</span> <span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span> <span class="s2">&quot;Mu_2022(latest) = &quot;</span><span class="p">,</span> <span class="n">MOLAR_MASS_CONSTANT</span><span class="o">%</span><span class="n">value</span>
 <span class="nb">print</span> <span class="s1">&#39;(A, F23.16)&#39;</span><span class="p">,</span> <span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span> <span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="o">%</span><span class="n">value</span>
@@ -568,51 +583,42 @@ to your file:</p>
 <span class="n">end</span> <span class="n">program</span>
 </pre></div>
 </div>
-<p>Example in C:</p>
+<p>Example in C</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;stdio.h&gt;</span>
 <span class="c1">#include &quot;codata.h&quot;</span>
-
 <span class="nb">int</span> <span class="n">main</span><span class="p">(</span><span class="n">void</span><span class="p">){</span>
-
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;########## EXAMPLE IN C ##########);</span>
-
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">,&quot;</span><span class="c1"># VERSION&quot;);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;version = </span><span class="si">%s</span><span class="s2">, codata_get_version());</span>
-
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">,&quot;</span><span class="c1"># CONSTANTS&quot;);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;c = </span><span class="si">%f</span><span class="s2">, SPEED_OF_LIGHT_IN_VACUUM.value);</span>
-
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">,&quot;</span><span class="c1"># UNCERTAINTY&quot;);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;u(c) = </span><span class="si">%f</span><span class="s2">, SPEED_OF_LIGHT_IN_VACUUM.uncertainty);</span>
-
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">,&quot;</span><span class="c1"># OLDER VALUES&quot;);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Mu_2022(latest) = </span><span class="si">%23.16f</span><span class="s2">, MOLAR_MASS_CONSTANT.value);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Mu_2018 = </span><span class="si">%23.16f</span><span class="s2">, MOLAR_MASS_CONSTANT_2018.value);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Mu_2014 = </span><span class="si">%23.16f</span><span class="s2">, MOLAR_MASS_CONSTANT_2014.value);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s2">&quot;Mu_2010 = </span><span class="si">%23.16f</span><span class="s2">, MOLAR_MASS_CONSTANT_2010.value);</span>
-
 <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Example in Python:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pycodata</span>
-
+<p>Example in Python</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;../py/src/&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">pycodata</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;########## EXAMPLE IN PYTHON ##########&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# VERSION&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;version = </span><span class="si">{</span><span class="n">pycodata</span><span class="o">.</span><span class="n">__version__</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# Constants&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;c =&quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
-
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c =&quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# UNCERTAINTY&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;uncertainty&quot;</span><span class="p">])</span>
-
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;u(c) = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">[</span><span class="s2">&quot;uncertainty&quot;</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;# OLDER VALUES&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2022 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mu_2022 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mu_2018 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2018</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mu_2014 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2014</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mu_2010 = &quot;</span><span class="p">,</span> <span class="n">pycodata</span><span class="o">.</span><span class="n">MOLAR_MASS_CONSTANT_2010</span><span class="p">[</span><span class="s2">&quot;value&quot;</span><span class="p">])</span>
 </pre></div>
 </div>
 </section>
