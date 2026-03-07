@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Fortran AutoDoc &#8212; codata 2.5.0 documentation</title>
+    <title>Fortran AutoDoc &#8212; codata 2.5.1 documentation</title>
   
   
   
@@ -35,7 +35,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=3c4615cf"></script>
+    <script src="../_static/documentation_options.js?v=983e91d6"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'fortran/index';</script>
@@ -118,7 +118,7 @@
   
   
   
-    <p class="title logo__title">codata 2.5.0 documentation</p>
+    <p class="title logo__title">codata 2.5.1 documentation</p>
   
 </a></div>
     
@@ -393,23 +393,19 @@ document.write(`
 <section id="f-module-codata">
 <h3>codata (module)<a class="headerlink" href="#f-module-codata" title="Link to this heading">#</a></h3>
 <div class="docutils container">
-<p>Main module for the Codata library.
+<p>Codata library - Fundamental Physical Constants.
+Available constants from 2010, 2014, 2018 and 2022.
 The latest values (2022) do not have the year as a suffix in their name.
 Older values can be used and they feature the year as a suffix in their name.</p>
 </div>
-</section>
-<section id="f-module-codata-api">
-<h3>codata__api (module)<a class="headerlink" href="#f-module-codata-api" title="Link to this heading">#</a></h3>
-<div class="docutils container">
-<p>API.</p>
-</div>
 <p class="section-subtitle">Variables</p>
 <dl class="simple">
-<dt><span class="target" id="f-variable-codata-api-version-f"></span><strong>version_f</strong><span class="classifier">character(len=:), allocatable, target, private</span></dt><dd></dd>
+<dt><span class="target" id="f-variable-codata-version-f"></span><strong>version_f</strong><span class="classifier">character(len=:), allocatable, target, private</span></dt><dd></dd>
+<dt><span class="target" id="f-variable-codata-version-c"></span><strong>version_c</strong><span class="classifier">character(len=:), allocatable, target, private</span></dt><dd></dd>
 </dl>
 <p class="section-subtitle">Procedures</p>
-<section id="f-function-codata-api-get-version">
-<h4>get_version (function)<a class="headerlink" href="#f-function-codata-api-get-version" title="Link to this heading">#</a></h4>
+<section id="f-function-codata-get-version">
+<h4>get_version (function)<a class="headerlink" href="#f-function-codata-get-version" title="Link to this heading">#</a></h4>
 <dl class="f function">
 <dt class="sig sig-object f">
 <code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">get_version()</span> <span class="pre">-&gt;</span> <span class="pre">fptr</span></code></dt>
@@ -419,7 +415,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>fptr</strong><span class="classifier">character(len=:), pointer</span></dt><dd><p>Fortran pointer to a string indicating the version.</p>
+<dt><strong>fptr</strong><span class="classifier">character(len=:), pointer</span></dt><dd><p>Pointer to a string (=&gt;version).</p>
 </dd>
 </dl>
 </dd>
@@ -427,29 +423,18 @@ Older values can be used and they feature the year as a suffix in their name.</p
 </dd></dl>
 
 </section>
-</section>
-<section id="f-module-codata-api">
-<h3>codata__api (module)<a class="headerlink" href="#f-module-codata-api" title="Link to this heading">#</a></h3>
-<div class="docutils container">
-<p>API.</p>
-</div>
-<p class="section-subtitle">Variables</p>
-<dl class="simple">
-<dt><span class="target" id="f-variable-codata-api-version-f"></span><strong>version_f</strong><span class="classifier">character(len=:), allocatable, target, private</span></dt><dd></dd>
-</dl>
-<p class="section-subtitle">Procedures</p>
-<section id="f-function-codata-api-get-version">
-<h4>get_version (function)<a class="headerlink" href="#f-function-codata-api-get-version" title="Link to this heading">#</a></h4>
+<section id="f-function-codata-capi-get-version">
+<h4>capi_get_version (function)<a class="headerlink" href="#f-function-codata-capi-get-version" title="Link to this heading">#</a></h4>
 <dl class="f function">
 <dt class="sig sig-object f">
-<code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">get_version()</span> <span class="pre">-&gt;</span> <span class="pre">fptr</span></code></dt>
+<code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">capi_get_version()bind(C,name=&quot;codata_get_version&quot;)</span> <span class="pre">-&gt;</span> <span class="pre">cptr</span></code></dt>
 <dd><div class="docutils container">
-<p>Get the version.</p>
+<p>C API - Get the version</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>fptr</strong><span class="classifier">character(len=:), pointer</span></dt><dd><p>Fortran pointer to a string indicating the version.</p>
+<dt><strong>cptr</strong><span class="classifier">type(c_ptr)</span></dt><dd><p>C pointer to a string indicating the version.</p>
 </dd>
 </dl>
 </dd>
@@ -458,6 +443,12 @@ Older values can be used and they feature the year as a suffix in their name.</p
 
 </section>
 </section>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+</div>
 <section id="f-module-codata-constants-2010">
 <h3>codata__constants_2010 (module)<a class="headerlink" href="#f-module-codata-constants-2010" title="Link to this heading">#</a></h3>
 <div class="docutils container">
@@ -467,6 +458,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dl class="simple">
 <dt><span class="target" id="f-variable-codata-constants-2010-year-2010"></span><strong>YEAR_2010</strong><span class="classifier">integer(int32), parameter, public, Default = 2010</span></dt><dd><p>Year of release.</p>
 </dd>
+<dt><span class="target" id="f-variable-codata-constants-2010-capi-year-2010"></span><strong>capi_YEAR_2010</strong><span class="classifier">integer(c_int), protected, public, bind(C, name=”YEAR_2010”), Default = YEAR_2010</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2010-lattice-spacing-of-silicon-2010"></span><strong>LATTICE_SPACING_OF_SILICON_2010</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2010-alpha-particle-electron-mass-ratio-2010"></span><strong>ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2010-alpha-particle-mass-2010"></span><strong>ALPHA_PARTICLE_MASS_2010</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
@@ -805,16 +797,9 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dt><span class="target" id="f-variable-codata-constants-2010-cc-2010"></span><strong>cc_2010</strong><span class="classifier">type(codata_constant_type), target, public, dimension(335), Default = &amp;</span></dt><dd></dd>
 </dl>
 </section>
-<section id="f-module-codata-constants-2010-capi">
-<h3>codata__constants_2010_capi (module)<a class="headerlink" href="#f-module-codata-constants-2010-capi" title="Link to this heading">#</a></h3>
-<div class="docutils container">
-<p>Codata Constants - C API Autogenerated</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 </div>
-<p class="section-subtitle">Variables</p>
-<dl class="simple">
-<dt><span class="target" id="f-variable-codata-constants-2010-capi-capi-year-2010"></span><strong>capi_YEAR_2010</strong><span class="classifier">integer(c_int), protected, public, bind(C, name=”YEAR_2010”), Default = YEAR_2010</span></dt><dd></dd>
-</dl>
-</section>
 <section id="f-module-codata-constants-2014">
 <h3>codata__constants_2014 (module)<a class="headerlink" href="#f-module-codata-constants-2014" title="Link to this heading">#</a></h3>
 <div class="docutils container">
@@ -824,6 +809,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dl class="simple">
 <dt><span class="target" id="f-variable-codata-constants-2014-year-2014"></span><strong>YEAR_2014</strong><span class="classifier">integer(int32), parameter, public, Default = 2014</span></dt><dd><p>Year of release.</p>
 </dd>
+<dt><span class="target" id="f-variable-codata-constants-2014-capi-year-2014"></span><strong>capi_YEAR_2014</strong><span class="classifier">integer(c_int), protected, public, bind(C, name=”YEAR_2014”), Default = YEAR_2014</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2014-lattice-spacing-of-silicon-2014"></span><strong>LATTICE_SPACING_OF_SILICON_2014</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2014-alpha-particle-electron-mass-ratio-2014"></span><strong>ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2014</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2014-alpha-particle-mass-2014"></span><strong>ALPHA_PARTICLE_MASS_2014</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
@@ -1162,16 +1148,9 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dt><span class="target" id="f-variable-codata-constants-2014-cc-2014"></span><strong>cc_2014</strong><span class="classifier">type(codata_constant_type), target, public, dimension(335), Default = &amp;</span></dt><dd></dd>
 </dl>
 </section>
-<section id="f-module-codata-constants-2014-capi">
-<h3>codata__constants_2014_capi (module)<a class="headerlink" href="#f-module-codata-constants-2014-capi" title="Link to this heading">#</a></h3>
-<div class="docutils container">
-<p>Codata Constants - C API Autogenerated</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 </div>
-<p class="section-subtitle">Variables</p>
-<dl class="simple">
-<dt><span class="target" id="f-variable-codata-constants-2014-capi-capi-year-2014"></span><strong>capi_YEAR_2014</strong><span class="classifier">integer(c_int), protected, public, bind(C, name=”YEAR_2014”), Default = YEAR_2014</span></dt><dd></dd>
-</dl>
-</section>
 <section id="f-module-codata-constants-2018">
 <h3>codata__constants_2018 (module)<a class="headerlink" href="#f-module-codata-constants-2018" title="Link to this heading">#</a></h3>
 <div class="docutils container">
@@ -1181,6 +1160,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dl class="simple">
 <dt><span class="target" id="f-variable-codata-constants-2018-year-2018"></span><strong>YEAR_2018</strong><span class="classifier">integer(int32), parameter, public, Default = 2018</span></dt><dd><p>Year of release.</p>
 </dd>
+<dt><span class="target" id="f-variable-codata-constants-2018-capi-year-2018"></span><strong>capi_YEAR_2018</strong><span class="classifier">integer(c_int), protected, public, bind(C, name=”YEAR_2018”), Default = YEAR_2018</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2018-alpha-particle-electron-mass-ratio-2018"></span><strong>ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2018-alpha-particle-mass-2018"></span><strong>ALPHA_PARTICLE_MASS_2018</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2018-alpha-particle-mass-energy-equivalent-2018"></span><strong>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
@@ -1538,16 +1518,9 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dt><span class="target" id="f-variable-codata-constants-2018-cc-2018"></span><strong>cc_2018</strong><span class="classifier">type(codata_constant_type), target, public, dimension(354), Default = &amp;</span></dt><dd></dd>
 </dl>
 </section>
-<section id="f-module-codata-constants-2018-capi">
-<h3>codata__constants_2018_capi (module)<a class="headerlink" href="#f-module-codata-constants-2018-capi" title="Link to this heading">#</a></h3>
-<div class="docutils container">
-<p>Codata Constants - C API Autogenerated</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 </div>
-<p class="section-subtitle">Variables</p>
-<dl class="simple">
-<dt><span class="target" id="f-variable-codata-constants-2018-capi-capi-year-2018"></span><strong>capi_YEAR_2018</strong><span class="classifier">integer(c_int), protected, public, bind(C, name=”YEAR_2018”), Default = YEAR_2018</span></dt><dd></dd>
-</dl>
-</section>
 <section id="f-module-codata-constants-2022">
 <h3>codata__constants_2022 (module)<a class="headerlink" href="#f-module-codata-constants-2022" title="Link to this heading">#</a></h3>
 <div class="docutils container">
@@ -1557,6 +1530,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dl class="simple">
 <dt><span class="target" id="f-variable-codata-constants-2022-year"></span><strong>YEAR</strong><span class="classifier">integer(int32), parameter, public, Default = 2022</span></dt><dd><p>Year of release.</p>
 </dd>
+<dt><span class="target" id="f-variable-codata-constants-2022-capi-year"></span><strong>capi_YEAR</strong><span class="classifier">integer(c_int), protected, public, bind(C, name=”YEAR”), Default = YEAR</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2022-alpha-particle-electron-mass-ratio"></span><strong>ALPHA_PARTICLE_ELECTRON_MASS_RATIO</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2022-alpha-particle-mass"></span><strong>ALPHA_PARTICLE_MASS</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
 <dt><span class="target" id="f-variable-codata-constants-2022-alpha-particle-mass-energy-equivalent"></span><strong>ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT</strong><span class="classifier">type(codata_constant_type), parameter, public, Default = &amp;</span></dt><dd></dd>
@@ -1915,16 +1889,9 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dt><span class="target" id="f-variable-codata-constants-2022-cc"></span><strong>cc</strong><span class="classifier">type(codata_constant_type), target, public, dimension(355), Default = &amp;</span></dt><dd></dd>
 </dl>
 </section>
-<section id="f-module-codata-constants-2022-capi">
-<h3>codata__constants_2022_capi (module)<a class="headerlink" href="#f-module-codata-constants-2022-capi" title="Link to this heading">#</a></h3>
-<div class="docutils container">
-<p>Codata Constants - C API Autogenerated</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 </div>
-<p class="section-subtitle">Variables</p>
-<dl class="simple">
-<dt><span class="target" id="f-variable-codata-constants-2022-capi-capi-year"></span><strong>capi_YEAR</strong><span class="classifier">integer(c_int), protected, public, bind(C, name=”YEAR”), Default = YEAR</span></dt><dd></dd>
-</dl>
-</section>
 <section id="f-module-codata-constants-type">
 <h3>codata__constants_type (module)<a class="headerlink" href="#f-module-codata-constants-type" title="Link to this heading">#</a></h3>
 <div class="docutils container">
@@ -1954,6 +1921,25 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <li><p><a class="reference internal" href="#f-function-codata-constants-type-to-real-sp" title="to_real_sp"><code class="docutils literal notranslate"><span class="pre">to_real_sp</span></code></a></p></li>
 <li><p><a class="reference internal" href="#f-function-codata-constants-type-to-real-dp" title="to_real_dp"><code class="docutils literal notranslate"><span class="pre">to_real_dp</span></code></a></p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="f-type-codata-constants-type-capi-constant-type">
+<h4>capi_constant_type (type)<a class="headerlink" href="#f-type-codata-constants-type-capi-constant-type" title="Link to this heading">#</a></h4>
+<dl class="f type">
+<dt class="sig sig-object f">
+<code class="docutils literal notranslate"><span class="pre">capi_constant_type</span> <span class="pre">(type)</span></code></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">character(kind=c_char), dimension(65)</span></dt><dd><p>Derived type for representing a Codata constant in C.</p>
+</dd>
+<dt><strong>value</strong><span class="classifier">real(c_double)</span></dt><dd></dd>
+<dt><strong>uncertainty</strong><span class="classifier">real(c_double)</span></dt><dd></dd>
+<dt><strong>unit</strong><span class="classifier">character(kind=c_char), dimension(33)</span></dt><dd></dd>
+</dl>
 </dd>
 </dl>
 </dd></dl>
@@ -2021,198 +2007,172 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <h4>to_real (interface)<a class="headerlink" href="#f-interface-codata-constants-type-to-real" title="Link to this heading">#</a></h4>
 </section>
 </section>
-<section id="f-module-codata-constants-type-capi">
-<h3>codata__constants_type_capi (module)<a class="headerlink" href="#f-module-codata-constants-type-capi" title="Link to this heading">#</a></h3>
-<div class="docutils container">
-<p>Codata constant type: C API.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 </div>
-<p class="section-subtitle">Types</p>
-<section id="f-type-codata-constants-type-capi-capi-constant-type">
-<h4>capi_constant_type (type)<a class="headerlink" href="#f-type-codata-constants-type-capi-capi-constant-type" title="Link to this heading">#</a></h4>
-<dl class="f type">
-<dt class="sig sig-object f">
-<code class="docutils literal notranslate"><span class="pre">capi_constant_type</span> <span class="pre">(type)</span></code></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Attributes<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>name</strong><span class="classifier">character(kind=c_char), dimension(65)</span></dt><dd><p>Derived type for representing a Codata constant in C.</p>
-</dd>
-<dt><strong>value</strong><span class="classifier">real(c_double)</span></dt><dd></dd>
-<dt><strong>uncertainty</strong><span class="classifier">real(c_double)</span></dt><dd></dd>
-<dt><strong>unit</strong><span class="classifier">character(kind=c_char), dimension(33)</span></dt><dd></dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
-</section>
 </section>
 <section id="program">
 <h2>Program<a class="headerlink" href="#program" title="Link to this heading">#</a></h2>
 <section id="f-program-codatacli">
 <h3>codatacli (program)<a class="headerlink" href="#f-program-codatacli" title="Link to this heading">#</a></h3>
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">program </span><span class="n">codatacli</span>
-<span class="w">    </span><span class="k">use </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">output_unit</span>
-<span class="w">    </span><span class="k">use </span><span class="n">stdlib_kinds</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">dp</span><span class="p">,</span><span class="w"> </span><span class="n">sp</span><span class="p">,</span><span class="w"> </span><span class="n">int32</span><span class="p">,</span><span class="w"> </span><span class="n">int64</span>
-<span class="w">    </span><span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">set_args</span><span class="p">,</span><span class="w"> </span><span class="n">set_mode</span><span class="p">,</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">iget</span><span class="p">,</span><span class="w"> </span><span class="n">lget</span><span class="p">,</span><span class="w"> </span><span class="n">sget</span><span class="p">,</span><span class="w"> </span><span class="n">get_args</span>
-<span class="w">    </span><span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">args</span><span class="o">=&gt;</span><span class="n">unnamed</span>
-<span class="w">    </span><span class="k">use </span><span class="n">regex_module</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">REGEX</span><span class="p">,</span><span class="w"> </span><span class="n">parse_pattern</span><span class="p">,</span><span class="w"> </span><span class="n">regex_pattern</span>
-<span class="w">    </span><span class="k">use </span><span class="n">stdlib_optval</span>
-<span class="w">    </span><span class="k">use </span><span class="n">codata</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;codata&quot;</span>
-<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">target</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">help_text</span><span class="p">(:)</span><span class="w"> </span>
-<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">target</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">version_text</span><span class="p">(:)</span>
-<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">char_fp</span><span class="p">(:)</span>
-<span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">codata_constant_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">cctptr</span><span class="p">(:)</span>
-<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">patterns</span><span class="p">(:)</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="k">nullify</span><span class="p">(</span><span class="n">char_fp</span><span class="p">)</span>
-<span class="w">    </span><span class="k">nullify</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="n">version_text</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;PROGRAM:      &#39;</span><span class="o">//</span><span class="n">name</span><span class="o">//</span><span class="s1">&#39;                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;DESCRIPTION:  Command line interface for codata  &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;VERSION:      &#39;</span><span class="o">//</span><span class="n">get_version</span><span class="p">()</span><span class="o">//</span><span class="s1">&#39;                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;AUTHOR:       M. Skocic                          &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;LICENSE:      MIT                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">]</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="n">help_text</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;NAME                                                            &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  &#39;</span><span class="o">//</span><span class="n">name</span><span class="o">//</span><span class="s1">&#39; - Command line for codata                          &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;SYNOPSIS                                                        &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  &#39;</span><span class="o">//</span><span class="n">name</span><span class="o">//</span><span class="s1">&#39; [OPTIONS] [REGEX_PATTERN ... ]                           &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;DESCRIPTION                                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  codata is a command line interface which prints all the codata&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  constants.                                                    &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  The current values are from 2022.                             &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  Older values can be retrieved if needed and                   &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  the output can be filtered with REGEX PATTERNS.                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;OPTIONS                                                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  --year, -y YEAR        Year of the codata constants: 2022, 2018, 2014, 2010.&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  --pattern, -p PATTERN  Regex pattern for filtering the constants.   &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  --value, -a            Show only the value.                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  --error, -e            Show only the uncertainty.                   &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  --usage                Show usage text and exit.                    &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;  --help                 Show help text and exit.                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>
-<span class="w">        </span><span class="s1">&#39;  --verbose              Display additional information when available.&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  --version              Show version information and exit.           &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;NOTES                                                                 &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  You may replace the default options from a file if your first       &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  options begin with @file.                                           &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  Initial options will then be read from the &quot;response file&quot;          &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  &quot;file.rsp&quot; in the current directory.                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  If &quot;file&quot; does not exist or cannot be read, then an error occurs and&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  the program stops. Each line of the file is prefixed with &quot;options&quot;&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  and interpreted as a separate argument. The file itself may not&#39;</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  contain @file arguments. That is, it is not processed recursively.&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  For more information on response files see                          &#39;</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html            &#39;</span><span class="w">  </span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;EXAMPLE                                                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  Minimal example                                               &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;     codata                                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;     codata -y 2018 molar electron                              &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s2">&quot;     codata -y 2014 -p &#39;molar.*gas&#39;,&#39;electron.*eV&#39;                 &quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s2">&quot;     codata &#39;[B,b]oltzmann.*eV&#39;                                  &quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;                                                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;SEE ALSO                                                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;  codata(3)                                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="w">        </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">]</span>
-<span class="w">    </span><span class="k">call </span><span class="n">set_mode</span><span class="p">(</span><span class="s1">&#39;strict&#39;</span><span class="p">)</span><span class="w"> </span>
-<span class="w">    </span><span class="k">call </span><span class="n">set_mode</span><span class="p">(</span><span class="s1">&#39;response_file&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="k">call </span><span class="n">set_args</span><span class="p">(</span><span class="s1">&#39;--year:y 2022 --value:a F --error:e F --pattern:p .&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">help_text</span><span class="p">,</span><span class="w"> </span><span class="n">version_text</span><span class="p">)</span>
-<span class="w">    </span><span class="k">select case</span><span class="p">(</span><span class="n">iget</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">))</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2022</span><span class="p">)</span>
-<span class="w">            </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2018</span><span class="p">)</span>
-<span class="w">            </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2018</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2014</span><span class="p">)</span>
-<span class="w">            </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2014</span>
-<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2010</span><span class="p">)</span>
-<span class="w">            </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2010</span>
-<span class="w">        </span><span class="k">case </span><span class="n">default</span>
-<span class="w">            </span><span class="k">nullify</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
-<span class="w">            </span><span class="k">write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Invalid year. See --help.&#39;</span>
-<span class="w">            </span><span class="k">stop</span>
-<span class="k">    end select</span>
+<span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">output_unit</span>
+<span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">set_args</span><span class="p">,</span><span class="w"> </span><span class="n">set_mode</span><span class="p">,</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">iget</span><span class="p">,</span><span class="w"> </span><span class="n">lget</span><span class="p">,</span><span class="w"> </span><span class="n">sget</span><span class="p">,</span><span class="w"> </span><span class="n">get_args</span>
+<span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">args</span><span class="o">=&gt;</span><span class="n">unnamed</span>
+<span class="k">use </span><span class="n">regex_module</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">REGEX</span><span class="p">,</span><span class="w"> </span><span class="n">parse_pattern</span><span class="p">,</span><span class="w"> </span><span class="n">regex_pattern</span>
+<span class="k">use </span><span class="n">stdlib_optval</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">optval</span>
+<span class="k">use </span><span class="n">codata</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="n">cc</span><span class="p">,</span><span class="w"> </span><span class="n">cc_2010</span><span class="p">,</span><span class="n">cc_2014</span><span class="p">,</span><span class="w"> </span><span class="n">cc_2018</span><span class="p">,</span><span class="w"> </span><span class="n">codata_constant_type</span><span class="p">,</span><span class="w"> </span><span class="n">get_version</span>
+<span class="k">implicit none</span><span class="p">(</span><span class="k">type</span><span class="p">,</span><span class="k">external</span><span class="p">)</span>
 
-<span class="k">    if</span><span class="p">(</span><span class="nb">ASSOCIATED</span><span class="p">(</span><span class="n">cctptr</span><span class="p">))</span><span class="k">then</span>
-<span class="k">        if</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
-<span class="k">            do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">                 </span><span class="k">call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">args</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">))</span>
-<span class="w">            </span><span class="k">end do</span>
-<span class="k">        end if</span>
-<span class="k">        if</span><span class="p">(</span><span class="n">specified</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">))</span><span class="k">then</span>
-<span class="k">            call </span><span class="n">get_args</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">patterns</span><span class="p">,</span><span class="w"> </span><span class="n">delimiters</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
-<span class="w">            </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">patterns</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">                </span><span class="k">call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">patterns</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">))</span>
-<span class="w">            </span><span class="k">end do</span>
-<span class="k">        end if</span>
-<span class="k">        if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">specified</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
-<span class="k">            call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
-<span class="w">        </span><span class="k">end if</span>
-<span class="k">    end if</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;codata&quot;</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">target</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">help_text</span><span class="p">(:)</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">target</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">version_text</span><span class="p">(:)</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">char_fp</span><span class="p">(:)</span>
+<span class="k">type</span><span class="p">(</span><span class="n">codata_constant_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">cctptr</span><span class="p">(:)</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">patterns</span><span class="p">(:)</span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
 
-<span class="k">contains</span>
+<span class="k">nullify</span><span class="p">(</span><span class="n">char_fp</span><span class="p">)</span>
+<span class="k">nullify</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
 
-<span class="k">subroutine </span><span class="n">print_text</span><span class="p">(</span><span class="n">char_fp</span><span class="p">)</span>
-<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">pointer</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">char_fp</span><span class="p">(:)</span>
-<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
-<span class="w">    </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">char_fp</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">        </span><span class="k">write</span><span class="w"> </span><span class="p">(</span><span class="n">OUTPUT_UNIT</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">char_fp</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-<span class="w">    </span><span class="k">end do</span>
-<span class="k">end subroutine</span>
+<span class="n">version_text</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;PROGRAM:      &#39;</span><span class="o">//</span><span class="n">name</span><span class="o">//</span><span class="s1">&#39;                                              &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;DESCRIPTION:  Command line interface for codata                       &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;VERSION:      &#39;</span><span class="o">//</span><span class="n">get_version</span><span class="p">()</span><span class="o">//</span><span class="s1">&#39;                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;AUTHOR:       M. Skocic                                               &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;LICENSE:      MIT                                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">]</span>
 
-<span class="k">subroutine </span><span class="n">display</span><span class="p">(</span><span class="n">fptr</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">uncertainty</span><span class="p">)</span>
-<span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">codata_constant_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">fptr</span><span class="p">(:)</span>
-<span class="w">    </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pattern</span>
-<span class="w">    </span><span class="kt">logical</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">uncertainty</span>
+<span class="n">help_text</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;NAME                                                                  &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  &#39;</span><span class="o">//</span><span class="n">name</span><span class="o">//</span><span class="s1">&#39; - Command line for codata                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;SYNOPSIS                                                              &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  &#39;</span><span class="o">//</span><span class="n">name</span><span class="o">//</span><span class="s1">&#39; [OPTIONS] [REGEX_PATTERN ... ]                           &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;DESCRIPTION                                                           &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  codata is a command line interface which prints all the codata      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  constants.                                                          &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  The current values are from 2022.                                   &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  Older values can be retrieved if needed and                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  the output can be filtered with REGEX PATTERNS.                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;OPTIONS                                                               &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  --year, -y YEAR        Year of the codata constants:                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                         2022, 2018, 2014, 2010                       &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  --pattern, -p PATTERN  Regex pattern for filtering the constants.   &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  --value, -a            Show only the value.                         &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  --error, -e            Show only the uncertainty.                   &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  --usage                Show usage text and exit.                    &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  --help                 Show help text and exit.                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  --verbose              Display additional information.              &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  --version              Show version information and exit.           &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;NOTES                                                                 &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  You may replace the default options from a file if your first       &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  options begin with @file.                                           &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  Initial options will then be read from the &quot;response file&quot;          &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  &quot;file.rsp&quot; in the current directory.                                &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  If &quot;file&quot; does not exist or cannot be read, then an error occurs and&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  the program stops. Each line of the file is prefixed with &quot;options&quot; &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  and interpreted as a separate argument. The file itself may not     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  contain @file arguments. That is, it is not processed recursively.  &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  For more information on response files see                          &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html            &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;EXAMPLE                                                               &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  Minimal example                                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;     codata                                                           &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;     codata -y 2018 molar electron                                    &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s2">&quot;     codata -y 2014 -p &#39;molar.*gas&#39;,&#39;electron.*eV&#39;                    &quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s2">&quot;     codata &#39;[B,b]oltzmann.*eV&#39;                                       &quot;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;SEE ALSO                                                              &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;  codata(3)                                                           &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">]</span>
 
-<span class="w">    </span><span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">idx</span>
-<span class="w">    </span><span class="k">type</span><span class="p">(</span><span class="n">regex_pattern</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">re</span>
-<span class="w">    </span><span class="kt">logical</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="n">uncertainty2</span>
+<span class="k">call </span><span class="n">set_mode</span><span class="p">(</span><span class="s1">&#39;strict&#39;</span><span class="p">)</span>
+<span class="k">call </span><span class="n">set_mode</span><span class="p">(</span><span class="s1">&#39;response_file&#39;</span><span class="p">)</span>
+<span class="k">call </span><span class="n">set_args</span><span class="p">(</span><span class="s1">&#39;--year:y 2022 --value:a F --error:e F --pattern:p .&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">              </span><span class="n">help_text</span><span class="p">,</span><span class="w"> </span><span class="n">version_text</span><span class="p">)</span>
+<span class="k">select case</span><span class="p">(</span><span class="n">iget</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2022</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2018</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2018</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2014</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2014</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2010</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2010</span>
+<span class="w">    </span><span class="k">case </span><span class="n">default</span>
+<span class="w">        </span><span class="k">nullify</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
+<span class="w">        </span><span class="k">write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Invalid year. See --help.&#39;</span>
+<span class="w">        </span><span class="k">stop</span>
+<span class="k">end select</span>
 
-<span class="w">    </span><span class="n">value2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optval</span><span class="p">(</span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.)</span>
-<span class="w">    </span><span class="n">uncertainty2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optval</span><span class="p">(</span><span class="n">uncertainty</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.)</span>
-<span class="w">    </span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span><span class="k">then</span>
-<span class="k">        </span><span class="n">re</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse_pattern</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
-<span class="w">        </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">fptr</span><span class="p">),</span><span class="mi">1</span>
-<span class="w">            </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">REGEX</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">name</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="n">re</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
-<span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">idx</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
-<span class="k">                if</span><span class="p">(</span><span class="n">value2</span><span class="p">)</span><span class="k">then</span>
-<span class="k">                    write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(SP,ES24.16)&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="k">value</span>
-<span class="k">                elseif</span><span class="p">(</span><span class="n">uncertainty2</span><span class="p">)</span><span class="k">then</span>
-<span class="k">                    write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(SP,ES24.16)&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">uncertainty</span>
-<span class="w">                </span><span class="k">else</span>
-<span class="k">                    call </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="k">print</span><span class="p">()</span>
-<span class="w">                </span><span class="k">end if</span>
-<span class="k">            end if</span>
-<span class="k">        end do</span>
-<span class="k">    else</span>
-<span class="k">        do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">fptr</span><span class="p">),</span><span class="mi">1</span>
-<span class="w">            </span><span class="k">call </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="k">print</span><span class="p">()</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">ASSOCIATED</span><span class="p">(</span><span class="n">cctptr</span><span class="p">))</span><span class="k">then</span>
+<span class="k">    if</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">             </span><span class="k">call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">args</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">))</span>
 <span class="w">        </span><span class="k">end do</span>
 <span class="k">    end if</span>
-<span class="k">end subroutine</span>
+<span class="k">    if</span><span class="p">(</span><span class="n">specified</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">))</span><span class="k">then</span>
+<span class="k">        call </span><span class="n">get_args</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">patterns</span><span class="p">,</span><span class="w"> </span><span class="n">delimiters</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">patterns</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">            </span><span class="k">call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">patterns</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="k">end do</span>
+<span class="k">    end if</span>
+<span class="k">    if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">specified</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">        call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
+<span class="w">    </span><span class="k">end if</span>
+<span class="k">end if</span>
 
+<span class="k">contains</span>
+<span class="c">!=======================================================================</span>
+<span class="c">! DISPLAY</span>
+<span class="c">!=======================================================================</span>
+<span class="k">subroutine </span><span class="n">display</span><span class="p">(</span><span class="n">fptr</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">uncertainty</span><span class="p">)</span>
+<span class="c">!! Display results</span>
+<span class="k">type</span><span class="p">(</span><span class="n">codata_constant_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">fptr</span><span class="p">(:)</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pattern</span>
+<span class="kt">logical</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">uncertainty</span>
 
-<span class="k">end program</span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">idx</span>
+<span class="k">type</span><span class="p">(</span><span class="n">regex_pattern</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">re</span>
+<span class="kt">logical</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="n">uncertainty2</span>
+
+<span class="n">value2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optval</span><span class="p">(</span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.)</span>
+<span class="n">uncertainty2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optval</span><span class="p">(</span><span class="n">uncertainty</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.)</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span><span class="k">then</span>
+<span class="k">    </span><span class="n">re</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse_pattern</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+<span class="w">    </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">fptr</span><span class="p">),</span><span class="mi">1</span>
+<span class="w">        </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">REGEX</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">name</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="n">re</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">idx</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">            if</span><span class="p">(</span><span class="n">value2</span><span class="p">)</span><span class="k">then</span>
+<span class="k">                write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(SP,ES24.16)&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="k">value</span>
+<span class="k">            elseif</span><span class="p">(</span><span class="n">uncertainty2</span><span class="p">)</span><span class="k">then</span>
+<span class="k">                write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(SP,ES24.16)&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">uncertainty</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="k">                call </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="k">print</span><span class="p">()</span>
+<span class="w">            </span><span class="k">end if</span>
+<span class="k">        end if</span>
+<span class="k">    end do</span>
+<span class="k">else</span>
+<span class="k">    do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">fptr</span><span class="p">),</span><span class="mi">1</span>
+<span class="w">        </span><span class="k">call </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="k">print</span><span class="p">()</span>
+<span class="w">    </span><span class="k">end do</span>
+<span class="k">end if</span>
+<span class="k">end subroutine </span><span class="n">display</span>
+<span class="c">!=======================================================================</span>
+
+<span class="k">end program </span><span class="n">codatacli</span>
 </pre></div>
 </div>
 <p class="section-subtitle">Dependencies</p>
@@ -2221,25 +2181,9 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <li><p><a class="reference internal" href="#f-module-codata" title="codata"><code class="docutils literal notranslate"><span class="pre">codata</span></code></a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iso_fortran_env</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">regex_module</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">stdlib_kinds</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">stdlib_optval</span></code></p></li>
 </ul>
 <p class="section-subtitle">Procedures</p>
-<section id="f-subroutine-codatacli-print-text">
-<h4>print_text (subroutine)<a class="headerlink" href="#f-subroutine-codatacli-print-text" title="Link to this heading">#</a></h4>
-<dl class="f subroutine">
-<dt class="sig sig-object f">
-<code class="docutils literal notranslate"><span class="pre">subroutine</span> <span class="pre">print_text(char_fp)</span></code></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Arguments<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>char_fp</strong><span class="classifier">character(len=:), pointer, intent(in), dimension(:)</span></dt><dd></dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-</section>
 <section id="f-subroutine-codatacli-display">
 <h4>display (subroutine)<a class="headerlink" href="#f-subroutine-codatacli-display" title="Link to this heading">#</a></h4>
 <dl class="f subroutine">
@@ -2248,7 +2192,8 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dd><dl class="field-list simple">
 <dt class="field-odd">Arguments<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>fptr</strong><span class="classifier">type(codata_constant_type), intent(in), pointer, dimension(:)</span></dt><dd></dd>
+<dt><strong>fptr</strong><span class="classifier">type(codata_constant_type), intent(in), pointer, dimension(:)</span></dt><dd><p>Display results</p>
+</dd>
 <dt><strong>pattern</strong><span class="classifier">character(len=*), intent(in), optional</span></dt><dd></dd>
 <dt><strong>value</strong><span class="classifier">logical, intent(in), optional</span></dt><dd></dd>
 <dt><strong>uncertainty</strong><span class="classifier">logical, intent(in), optional</span></dt><dd></dd>
@@ -2309,40 +2254,28 @@ Older values can be used and they feature the year as a suffix in their name.</p
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modules">Modules</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata">codata (module)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-api">codata__api (module)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-api-get-version">get_version (function)</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-api">codata__api (module)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-api-get-version">get_version (function)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata">codata (module)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-get-version">get_version (function)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-capi-get-version">capi_get_version (function)</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-2010">codata__constants_2010 (module)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-2010-capi">codata__constants_2010_capi (module)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-2014">codata__constants_2014 (module)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-2014-capi">codata__constants_2014_capi (module)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-2018">codata__constants_2018 (module)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-2018-capi">codata__constants_2018_capi (module)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-2022">codata__constants_2022 (module)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-2022-capi">codata__constants_2022_capi (module)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-type">codata__constants_type (module)</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-type-codata-constants-type-codata-constant-type">codata_constant_type (type)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-type-codata-constants-type-capi-constant-type">capi_constant_type (type)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-subroutine-codata-constants-type-print">print (subroutine)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-constants-type-to-real-sp">to_real_sp (function)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-constants-type-to-real-dp">to_real_dp (function)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-interface-codata-constants-type-to-real">to_real (interface)</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-type-capi">codata__constants_type_capi (module)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-type-codata-constants-type-capi-capi-constant-type">capi_constant_type (type)</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program">Program</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-program-codatacli">codatacli (program)</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-subroutine-codatacli-print-text">print_text (subroutine)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-subroutine-codatacli-display">display (subroutine)</a></li>
 </ul>
 </li>
