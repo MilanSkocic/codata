@@ -1557,10 +1557,14 @@ use codata__constants_2018
 use codata__constants_2014
 use codata__constants_2010
 use codata__constants_type
-use codata__version, only: version
 implicit none(type,external)
 public
 
+$IFDEF FPM_VERSION
+$IMPORT FPM_VERSION
+$MESSAGE ${FPM_VERSION}
+character(len=*), parameter :: version = '${FPM_VERSION}'
+$ENDIF
 character(len=:), allocatable, target, private :: version_f
 character(len=:), allocatable, target, private :: version_c
 

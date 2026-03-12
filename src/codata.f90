@@ -1555,10 +1555,10 @@ use codata__constants_2018
 use codata__constants_2014
 use codata__constants_2010
 use codata__constants_type
-use codata__version, only: version
 implicit none(type,external)
 public
 
+character(len=*), parameter :: version = '2.5.1'
 character(len=:), allocatable, target, private :: version_f
 character(len=:), allocatable, target, private :: version_c
 
