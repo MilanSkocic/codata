@@ -1558,7 +1558,6 @@ use codata__constants_type
 implicit none(type,external)
 public
 
-character(len=*), parameter :: version = '2.5.1'
 character(len=:), allocatable, target, private :: version_f
 character(len=:), allocatable, target, private :: version_c
 
