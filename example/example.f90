@@ -3,7 +3,7 @@ use codata
 implicit none
 print '(A)', '########## EXAMPLE IN FORTRAN ##########'
 print '(A)', '# VERSION'
-print *, "version = ", get_version()
+print *, "version = ", version()
 print '(A)', '# CONSTANTS'
 print *, "c = ",  SPEED_OF_LIGHT_IN_VACUUM%value
 print '(A)', '# UNCERTAINTY'

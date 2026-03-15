@@ -131,25 +131,27 @@ public
 
 $IFDEF FPM_VERSION
 $IMPORT FPM_VERSION
-$MESSAGE ${FPM_VERSION}
-character(len=*), parameter :: version = '${FPM_VERSION}'
+character(len=*), parameter, private :: v = '${FPM_VERSION}'
 $ENDIF
-character(len=:), allocatable, target, private :: version_f
-character(len=:), allocatable, target, private :: version_c
+character(len=:), allocatable, target, private :: vf
+character(len=:), allocatable, target, private :: vc
 
 contains
 !=======================================================================
-! GET_VERSION
+! GET_VERSION() - DEPRECATED - WILL BE REMOVED IN 3.0
 !=======================================================================
 function get_version()result(fptr)
 !! Get the version.
+!! Deprecated. It will be removed in the next major release 3.0 when
+!! the new codata constants will be released (2026).
+!! Use version() instead.
 character(len=:), pointer :: fptr !! Pointer to a string (=>version).
-if(allocated(version_f))then
-    deallocate(version_f)
+if(allocated(vf))then
+    deallocate(vf)
 endif
-allocate(character(len=len(version)) :: version_f)
-version_f = version
-fptr => version_f
+allocate(character(len=len(v)) :: vf)
+vf = v
+fptr => vf
 end function get_version
 !-----------------------------------------------------------------------
 function capi_get_version()bind(C,name="codata_get_version")result(cptr)
@@ -157,13 +159,41 @@ function capi_get_version()bind(C,name="codata_get_version")result(cptr)
 type(c_ptr) :: cptr !! C pointer to a string indicating the version.
 character(len=:), pointer :: fptr
 fptr => get_version()
-if(allocated(version_c))then
-    deallocate(version_c)
+if(allocated(vc))then
+    deallocate(vc)
 endif
-allocate(character(len=len(fptr)+1) :: version_c)
-version_c = fptr // c_null_char
-cptr = c_loc(version_c)
+allocate(character(len=len(fptr)+1) :: vc)
+vc = fptr // c_null_char
+cptr = c_loc(vc)
 end function capi_get_version
 !=======================================================================
 
+
+!=======================================================================
+! VERSION()
+!=======================================================================
+function version()result(fptr)
+!! Get the version.
+character(len=:), pointer :: fptr !! Pointer to a string (=>version).
+if(allocated(vf))then
+    deallocate(vf)
+endif
+allocate(character(len=len(v)) :: vf)
+vf = v
+fptr => vf
+end function version
+!-----------------------------------------------------------------------
+function capi_version()bind(C,name="codata_version")result(cptr)
+!! C API - Get the version
+type(c_ptr) :: cptr !! C pointer to a string indicating the version.
+character(len=:), pointer :: fptr
+fptr => version()
+if(allocated(vc))then
+    deallocate(vc)
+endif
+allocate(character(len=len(fptr)+1) :: vc)
+vc = fptr // c_null_char
+cptr = c_loc(vc)
+end function capi_version
+!=======================================================================
 end module codata
