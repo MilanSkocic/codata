@@ -4,7 +4,7 @@ use M_CLI2, only: set_args, set_mode, specified, iget, lget, sget, get_args
 use M_CLI2, only: args=>unnamed
 use regex_module, only: REGEX, parse_pattern, regex_pattern
 use stdlib_optval, only: optval
-use codata, only :cc, cc_2010,cc_2014, cc_2018, codata_constant_type, get_version
+use codata, only :cc, cc_2010,cc_2014, cc_2018, codata_constant_type, version
 implicit none(type,external)
 
 character(len=*), parameter :: name="codata"
@@ -21,7 +21,7 @@ nullify(cctptr)
 version_text=[character(len=80) :: &
 'PROGRAM:      '//name//'                                              ', &
 'DESCRIPTION:  Command line interface for codata                       ', &
-'VERSION:      '//get_version()//'                                     ', &
+'VERSION:      '//version()//'                                     ', &
 'AUTHOR:       M. Skocic                                               ', &
 'LICENSE:      MIT                                                     ', &
 '' ]

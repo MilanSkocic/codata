@@ -98,63 +98,7 @@ NOTES
         codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 EXAMPLE
-
-    Example in Fortran
-
-        program example_in_f
-        use codata
-        implicit none
-        print '(A)', '########## EXAMPLE IN FORTRAN ##########'
-        print '(A)', '# VERSION'
-        print *, "version = ", get_version()
-        print '(A)', '# CONSTANTS'
-        print *, "c = ",  SPEED_OF_LIGHT_IN_VACUUM%value
-        print '(A)', '# UNCERTAINTY'
-        print *, "u(c) = ", SPEED_OF_LIGHT_IN_VACUUM%uncertainty
-        print '(A)', '# OLDER VALUES'
-        print '(A, F23.16)', "Mu_2022(latest) = ", MOLAR_MASS_CONSTANT%value
-        print '(A, F23.16)', "Mu_2018 = ", MOLAR_MASS_CONSTANT_2018%value
-        print '(A, F23.16)', "Mu_2014 = ",  MOLAR_MASS_CONSTANT_2014%value
-        print '(A, F23.16)', "Mu_2010 = ",  MOLAR_MASS_CONSTANT_2010%value
-        end program
-
-    Example in C
-
-        #include <stdio.h>
-        #include "codata.h"
-        int main(void){
-        printf("########## EXAMPLE IN C ##########\n");
-        printf("%s\n","# VERSION");
-        printf("version = %s\n", codata_get_version());
-        printf("%s\n","# CONSTANTS");
-        printf("c = %f\n", SPEED_OF_LIGHT_IN_VACUUM.value);
-        printf("%s\n","# UNCERTAINTY");
-        printf("u(c) = %f\n", SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
-        printf("%s\n","# OLDER VALUES");
-        printf("Mu_2022(latest) = %23.16f\n", MOLAR_MASS_CONSTANT.value);
-        printf("Mu_2018 = %23.16f\n", MOLAR_MASS_CONSTANT_2018.value);
-        printf("Mu_2014 = %23.16f\n", MOLAR_MASS_CONSTANT_2014.value);
-        printf("Mu_2010 = %23.16f\n", MOLAR_MASS_CONSTANT_2010.value);
-        return 0;
-        }
-
-    Example in Python
-
-        import sys
-        sys.path.insert(0, "../py/src/")
-        import pycodata
-        print("########## EXAMPLE IN PYTHON ##########")
-        print("# VERSION")
-        print(f"version = {pycodata.__version__}")
-        print("# Constants")
-        print("c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
-        print("# UNCERTAINTY")
-        print("u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
-        print("# OLDER VALUES")
-        print("Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
-        print("Mu_2018 = ", pycodata.MOLAR_MASS_CONSTANT_2018["value"])
-        print("Mu_2014 = ", pycodata.MOLAR_MASS_CONSTANT_2014["value"])
-        print("Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
+$INCLUDE ../example/example.mantxt
 
 SEE ALSO
     gsl(3), codata(1)
@@ -187,25 +131,27 @@ public
 
 $IFDEF FPM_VERSION
 $IMPORT FPM_VERSION
-$MESSAGE ${FPM_VERSION}
-character(len=*), parameter :: version = '${FPM_VERSION}'
+character(len=*), parameter, private :: v = '${FPM_VERSION}'
 $ENDIF
-character(len=:), allocatable, target, private :: version_f
-character(len=:), allocatable, target, private :: version_c
+character(len=:), allocatable, target, private :: vf
+character(len=:), allocatable, target, private :: vc
 
 contains
 !=======================================================================
-! GET_VERSION
+! GET_VERSION() - DEPRECATED - WILL BE REMOVED IN 3.0
 !=======================================================================
 function get_version()result(fptr)
 !! Get the version.
+!! Deprecated. It will be removed in the next major release 3.0 when
+!! the new codata constants will be released (2026).
+!! Use version() instead.
 character(len=:), pointer :: fptr !! Pointer to a string (=>version).
-if(allocated(version_f))then
-    deallocate(version_f)
+if(allocated(vf))then
+    deallocate(vf)
 endif
-allocate(character(len=len(version)) :: version_f)
-version_f = version
-fptr => version_f
+allocate(character(len=len(v)) :: vf)
+vf = v
+fptr => vf
 end function get_version
 !-----------------------------------------------------------------------
 function capi_get_version()bind(C,name="codata_get_version")result(cptr)
@@ -213,13 +159,41 @@ function capi_get_version()bind(C,name="codata_get_version")result(cptr)
 type(c_ptr) :: cptr !! C pointer to a string indicating the version.
 character(len=:), pointer :: fptr
 fptr => get_version()
-if(allocated(version_c))then
-    deallocate(version_c)
+if(allocated(vc))then
+    deallocate(vc)
 endif
-allocate(character(len=len(fptr)+1) :: version_c)
-version_c = fptr // c_null_char
-cptr = c_loc(version_c)
+allocate(character(len=len(fptr)+1) :: vc)
+vc = fptr // c_null_char
+cptr = c_loc(vc)
 end function capi_get_version
 !=======================================================================
 
+
+!=======================================================================
+! VERSION()
+!=======================================================================
+function version()result(fptr)
+!! Get the version.
+character(len=:), pointer :: fptr !! Pointer to a string (=>version).
+if(allocated(vf))then
+    deallocate(vf)
+endif
+allocate(character(len=len(v)) :: vf)
+vf = v
+fptr => vf
+end function version
+!-----------------------------------------------------------------------
+function capi_version()bind(C,name="codata_version")result(cptr)
+!! C API - Get the version
+type(c_ptr) :: cptr !! C pointer to a string indicating the version.
+character(len=:), pointer :: fptr
+fptr => version()
+if(allocated(vc))then
+    deallocate(vc)
+endif
+allocate(character(len=len(fptr)+1) :: vc)
+vc = fptr // c_null_char
+cptr = c_loc(vc)
+end function capi_version
+!=======================================================================
 end module codata

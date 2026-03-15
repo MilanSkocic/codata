@@ -6,7 +6,8 @@
 #define ADD_IMPORT
 #endif
 
-extern char* codata_get_version(void); 
+extern char* codata_get_version(void);
+extern char* codata_version(void); 
 
 typedef struct codata_constant_type{
     char name[65];

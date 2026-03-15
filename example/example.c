@@ -3,7 +3,7 @@
 int main(void){
 printf("########## EXAMPLE IN C ##########\n");
 printf("%s\n","# VERSION");
-printf("version = %s\n", codata_get_version());
+printf("version = %s\n", codata_version());
 printf("%s\n","# CONSTANTS");
 printf("c = %f\n", SPEED_OF_LIGHT_IN_VACUUM.value);
 printf("%s\n","# UNCERTAINTY");
