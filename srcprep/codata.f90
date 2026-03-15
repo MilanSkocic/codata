@@ -58,8 +58,8 @@ DESCRIPTION
             character(kind=c_char) :: unit(33)
         end type capi_constant_type
 
-    The C API exposes a structure codata_constant_ttype that defines the same 
-    members as in Fortran.
+    The C API exposes a structure codata_constant_type that defines
+    the same members as in Fortran.
 
         typedef struct codata_constant_type{
             char name[65];
@@ -68,7 +68,7 @@ DESCRIPTION
             char unit[33];
         }cct;
 
-    The Python wrapper encapsulates the members in a dictionnary with 
+    The Python wrapper encapsulates the members in a dictionnary with
     the keys name, value, uncertainty and unit.
 
     References
