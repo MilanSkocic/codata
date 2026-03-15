@@ -41,6 +41,14 @@ $(BOOKMAN): $(MAN)
 %.rst: %
 	pandoc --from man --to rst --shift-heading-level-by=1 $< -o $@
 
+.PHONY:
+bib:
+	mkdir -p build
+	pdflatex -output-directory=./build/ -synctex=1 references.tex
+	biber ./build/references.bcf --output-file ./build/references.bbl
+	pdflatex -output-directory=./build/ -synctex=1 references.tex
+	pdflatex -output-directory=./build/ -synctex=1 references.tex
+	cp -f build/references.pdf ./
 
 .PHONY:
 clean:

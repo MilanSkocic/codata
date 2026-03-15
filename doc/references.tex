@@ -1,0 +1,26 @@
+\documentclass[11pt]{article}
+    \usepackage[margin=2cm]{geometry}
+    \usepackage[backend=biber,
+        bibstyle=ieee, 
+        citestyle=numeric-comp,
+        natbib=true,
+        doi=false, 
+        url=false,
+        isbn=false,
+        mincitenames=1,
+        maxcitenames=1,
+        minbibnames=1,
+        maxbibnames=99,
+        backref=true,]
+    {biblatex}
+    \addbibresource[label=main_bib]{references.bib}
+    \title{}
+    \author{}
+    \date{}
+
+\begin{document}
+    \maketitle
+    \pagestyle{plain}
+    \nocite{*}
+    \printbibliography
+\end{document}
