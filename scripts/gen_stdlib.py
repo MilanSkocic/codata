@@ -19,6 +19,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
                 new_line=""
             fcode.write(new_line)
     fcode.write("!======================================================================="+newline)
+    fcode.write("end module stdlib_codata")
     fast.close()
     fcode.close()
 
