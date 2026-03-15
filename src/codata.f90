@@ -57,8 +57,8 @@
 !             character(kind=c_char) :: unit(33)
 !         end type capi_constant_type
 ! 
-!     The C API exposes a structure codata_constant_ttype that defines the same
-!     members as in Fortran.
+!     The C API exposes a structure codata_constant_type that defines
+!     the same members as in Fortran.
 ! 
 !         typedef struct codata_constant_type{
 !             char name[65];
