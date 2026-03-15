@@ -1,3 +1,16 @@
+# 2.5.2
+
+- Maintenance release. No API break.
+- Use `prep(1)` for auto-generating the version parameter.
+- Add new API for getting the version number:
+    - `version()` instead of `get_version()`.
+    - `get_version()` is marked as deprecated, it will be removed in the
+      next major release 3.0 when the new codata constants will be 
+      released i.e. 2026/2027.
+
+[Full changelog](https://github.com/MilanSkocic/codata/releases)
+
+
 # 2.5.1
 
 - Code refactoring and cleaning: trailing spaces, empty lines, formatted comments.

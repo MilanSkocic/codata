@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>codata - Documentation &#8212; codata 2.5.1 documentation</title>
+    <title>codata - Documentation &#8212; codata 2.5.2 documentation</title>
   
   
   
@@ -35,7 +35,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=983e91d6"></script>
+    <script src="_static/documentation_options.js?v=afc61bbc"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
@@ -117,7 +117,7 @@
   
   
   
-    <p class="title logo__title">codata 2.5.1 documentation</p>
+    <p class="title logo__title">codata 2.5.2 documentation</p>
   
 </a></div>
     
@@ -363,7 +363,7 @@ document.write(`
 <span class="k">implicit none</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;########## EXAMPLE IN FORTRAN ##########&#39;</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# VERSION&#39;</span>
-<span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;version = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">get_version</span><span class="p">()</span>
+<span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;version = &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="p">()</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# CONSTANTS&#39;</span>
 <span class="k">print</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;c = &quot;</span><span class="p">,</span><span class="w">  </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">%</span><span class="k">value</span>
 <span class="k">print</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;# UNCERTAINTY&#39;</span>
@@ -384,7 +384,7 @@ document.write(`
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;########## EXAMPLE IN C ##########</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;# VERSION&quot;</span><span class="p">);</span>
-<span class="n">printf</span><span class="p">(</span><span class="s">&quot;version = %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">codata_get_version</span><span class="p">());</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&quot;version = %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">codata_version</span><span class="p">());</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;# CONSTANTS&quot;</span><span class="p">);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;c = %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">SPEED_OF_LIGHT_IN_VACUUM</span><span class="p">.</span><span class="n">value</span><span class="p">);</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="s">&quot;# UNCERTAINTY&quot;</span><span class="p">);</span>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Fortran AutoDoc &#8212; codata 2.5.1 documentation</title>
+    <title>Fortran AutoDoc &#8212; codata 2.5.2 documentation</title>
   
   
   
@@ -35,7 +35,7 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=983e91d6"></script>
+    <script src="../_static/documentation_options.js?v=afc61bbc"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'fortran/index';</script>
@@ -118,7 +118,7 @@
   
   
   
-    <p class="title logo__title">codata 2.5.1 documentation</p>
+    <p class="title logo__title">codata 2.5.2 documentation</p>
   
 </a></div>
     
@@ -400,8 +400,9 @@ Older values can be used and they feature the year as a suffix in their name.</p
 </div>
 <p class="section-subtitle">Variables</p>
 <dl class="simple">
-<dt><span class="target" id="f-variable-codata-version-f"></span><strong>version_f</strong><span class="classifier">character(len=:), allocatable, target, private</span></dt><dd></dd>
-<dt><span class="target" id="f-variable-codata-version-c"></span><strong>version_c</strong><span class="classifier">character(len=:), allocatable, target, private</span></dt><dd></dd>
+<dt><span class="target" id="f-variable-codata-v"></span><strong>v</strong><span class="classifier">character(len=*), parameter, private, Default = ‘2.5.2’</span></dt><dd></dd>
+<dt><span class="target" id="f-variable-codata-vf"></span><strong>vf</strong><span class="classifier">character(len=:), allocatable, target, private</span></dt><dd></dd>
+<dt><span class="target" id="f-variable-codata-vc"></span><strong>vc</strong><span class="classifier">character(len=:), allocatable, target, private</span></dt><dd></dd>
 </dl>
 <p class="section-subtitle">Procedures</p>
 <section id="f-function-codata-get-version">
@@ -410,7 +411,10 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dt class="sig sig-object f">
 <code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">get_version()</span> <span class="pre">-&gt;</span> <span class="pre">fptr</span></code></dt>
 <dd><div class="docutils container">
-<p>Get the version.</p>
+<p>Get the version.
+Deprecated. It will be removed in the next major release 3.0 when
+the new codata constants will be released (2026).
+Use version() instead.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -428,6 +432,44 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <dl class="f function">
 <dt class="sig sig-object f">
 <code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">capi_get_version()bind(C,name=&quot;codata_get_version&quot;)</span> <span class="pre">-&gt;</span> <span class="pre">cptr</span></code></dt>
+<dd><div class="docutils container">
+<p>C API - Get the version</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>cptr</strong><span class="classifier">type(c_ptr)</span></dt><dd><p>C pointer to a string indicating the version.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="f-function-codata-version">
+<h4>version (function)<a class="headerlink" href="#f-function-codata-version" title="Link to this heading">#</a></h4>
+<dl class="f function">
+<dt class="sig sig-object f">
+<code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">version()</span> <span class="pre">-&gt;</span> <span class="pre">fptr</span></code></dt>
+<dd><div class="docutils container">
+<p>Get the version.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fptr</strong><span class="classifier">character(len=:), pointer</span></dt><dd><p>Pointer to a string (=&gt;version).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="f-function-codata-capi-version">
+<h4>capi_version (function)<a class="headerlink" href="#f-function-codata-capi-version" title="Link to this heading">#</a></h4>
+<dl class="f function">
+<dt class="sig sig-object f">
+<code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">capi_version()bind(C,name=&quot;codata_version&quot;)</span> <span class="pre">-&gt;</span> <span class="pre">cptr</span></code></dt>
 <dd><div class="docutils container">
 <p>C API - Get the version</p>
 </div>
@@ -2021,7 +2063,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">args</span><span class="o">=&gt;</span><span class="n">unnamed</span>
 <span class="k">use </span><span class="n">regex_module</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">REGEX</span><span class="p">,</span><span class="w"> </span><span class="n">parse_pattern</span><span class="p">,</span><span class="w"> </span><span class="n">regex_pattern</span>
 <span class="k">use </span><span class="n">stdlib_optval</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">optval</span>
-<span class="k">use </span><span class="n">codata</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="n">cc</span><span class="p">,</span><span class="w"> </span><span class="n">cc_2010</span><span class="p">,</span><span class="n">cc_2014</span><span class="p">,</span><span class="w"> </span><span class="n">cc_2018</span><span class="p">,</span><span class="w"> </span><span class="n">codata_constant_type</span><span class="p">,</span><span class="w"> </span><span class="n">get_version</span>
+<span class="k">use </span><span class="n">codata</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="n">cc</span><span class="p">,</span><span class="w"> </span><span class="n">cc_2010</span><span class="p">,</span><span class="n">cc_2014</span><span class="p">,</span><span class="w"> </span><span class="n">cc_2018</span><span class="p">,</span><span class="w"> </span><span class="n">codata_constant_type</span><span class="p">,</span><span class="w"> </span><span class="n">version</span>
 <span class="k">implicit none</span><span class="p">(</span><span class="k">type</span><span class="p">,</span><span class="k">external</span><span class="p">)</span>
 
 <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;codata&quot;</span>
@@ -2038,7 +2080,7 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <span class="n">version_text</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="s1">&#39;PROGRAM:      &#39;</span><span class="o">//</span><span class="n">name</span><span class="o">//</span><span class="s1">&#39;                                              &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="s1">&#39;DESCRIPTION:  Command line interface for codata                       &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
-<span class="s1">&#39;VERSION:      &#39;</span><span class="o">//</span><span class="n">get_version</span><span class="p">()</span><span class="o">//</span><span class="s1">&#39;                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;VERSION:      &#39;</span><span class="o">//</span><span class="n">version</span><span class="p">()</span><span class="o">//</span><span class="s1">&#39;                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="s1">&#39;AUTHOR:       M. Skocic                                               &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="s1">&#39;LICENSE:      MIT                                                     &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
 <span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">]</span>
@@ -2257,6 +2299,8 @@ Older values can be used and they feature the year as a suffix in their name.</p
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata">codata (module)</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-get-version">get_version (function)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-capi-get-version">capi_get_version (function)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-version">version (function)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#f-function-codata-capi-version">capi_version (function)</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-module-codata-constants-2010">codata__constants_2010 (module)</a></li>
