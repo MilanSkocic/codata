@@ -131,7 +131,7 @@ Example in Fortran
            implicit none
            print '(A)', '########## EXAMPLE IN FORTRAN ##########'
            print '(A)', '# VERSION'
-           print *, "version = ", get_version()
+           print *, "version = ", version()
            print '(A)', '# CONSTANTS'
            print *, "c = ",  SPEED_OF_LIGHT_IN_VACUUM%value
            print '(A)', '# UNCERTAINTY'
@@ -152,7 +152,7 @@ Example in C
            int main(void){
            printf("########## EXAMPLE IN C ##########);
            printf("%s,"# VERSION");
-           printf("version = %s, codata_get_version());
+           printf("version = %s, codata_version());
            printf("%s,"# CONSTANTS");
            printf("c = %f, SPEED_OF_LIGHT_IN_VACUUM.value);
            printf("%s,"# UNCERTAINTY");
