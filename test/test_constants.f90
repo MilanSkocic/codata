@@ -3,22 +3,27 @@ module test_constants
 use testdrive, only : new_unittest, unittest_type, error_type, check
 use stdlib_kinds, only : dp, int32
 use codata, only: YEAR, &
-                         ALPHA_PARTICLE_ELECTRON_MASS_RATIO, &
-                         ALPHA_PARTICLE_MASS, &
-                         ATOMIC_MASS_CONSTANT, &
-                         AVOGADRO_CONSTANT, &
-                         BOLTZMANN_CONSTANT, &
-                         ELECTRON_VOLT, &
-                         ELEMENTARY_CHARGE, &
-                         FARADAY_CONSTANT, &
-                         MOLAR_MASS_CONSTANT,&
-                         MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA, &
-                         PLANCK_CONSTANT,&
-                         SPEED_OF_LIGHT_IN_VACUUM,&
-                         STANDARD_ACCELERATION_OF_GRAVITY
-implicit none
+ALPHA_PARTICLE_ELECTRON_MASS_RATIO, &
+ALPHA_PARTICLE_MASS, &
+ATOMIC_MASS_CONSTANT, &
+AVOGADRO_CONSTANT, &
+BOLTZMANN_CONSTANT, &
+ELECTRON_VOLT, &
+ELEMENTARY_CHARGE, &
+FARADAY_CONSTANT, &
+MOLAR_MASS_CONSTANT,&
+MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA, &
+PLANCK_CONSTANT,&
+SPEED_OF_LIGHT_IN_VACUUM,&
+STANDARD_ACCELERATION_OF_GRAVITY
+implicit none(type,external)
 private
+
+!=======================================================================
+! PUBLIC
+!=======================================================================
 public :: collect_constants
+!=======================================================================
 
 contains
 
@@ -53,169 +58,169 @@ subroutine collect_constants(testsuite)
                  new_unittest("U_PLANCK_CONSTANT", test_U_PLANCK_CONSTANT),&
                  new_unittest("U_SPEED_OF_LIGHT_IN_VACUUM", test_U_SPEED_OF_LIGHT),&
                  new_unittest("U_STANDARD_ACCELERATION_OF_GRAVITY", test_U_STANDARD_ACCELERATION_OF_GRAVITY)]
-end subroutine
+end subroutine collect_constants
 
 subroutine test_year(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, YEAR, 2022)
     if (allocated(error)) return
-end subroutine
+end subroutine test_year
 
 subroutine test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ALPHA_PARTICLE_ELECTRON_MASS_RATIO%to_real(1.0_dp), 7294.29954171_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO
 
 subroutine test_ALPHA_PARTICLE_MASS(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ALPHA_PARTICLE_MASS%to_real(1.0_dp), 6.6446573450d-27)
     if (allocated(error)) return
-end subroutine
+end subroutine test_ALPHA_PARTICLE_MASS
 
 subroutine test_ATOMIC_MASS_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ATOMIC_MASS_CONSTANT%to_real(1.0_dp), 1.66053906892d-27)
     if (allocated(error)) return
-end subroutine
+end subroutine test_ATOMIC_MASS_CONSTANT
 
 subroutine test_AVOGADRO_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, AVOGADRO_CONSTANT%to_real(1.0_dp), 6.02214076d23)
     if (allocated(error)) return
-end subroutine
+end subroutine test_AVOGADRO_CONSTANT
 
 subroutine test_BOLTZMANN_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, BOLTZMANN_CONSTANT%to_real(1.0_dp), 1.380649d-23)
     if (allocated(error)) return
-end subroutine
+end subroutine test_BOLTZMANN_CONSTANT
 
 subroutine test_ELECTRON_VOLT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ELECTRON_VOLT%to_real(1.0_dp), 1.602176634d-19)
     if (allocated(error)) return
-end subroutine
+end subroutine test_ELECTRON_VOLT
 
 subroutine test_ELEMENTARY_CHARGE(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ELEMENTARY_CHARGE%to_real(1.0_dp), 1.602176634d-19)
     if (allocated(error)) return
-end subroutine
+end subroutine test_ELEMENTARY_CHARGE
 
 subroutine test_FARADAY_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, FARADAY_CONSTANT%to_real(1.0_dp), 96485.33212d0)
     if (allocated(error)) return
-end subroutine
+end subroutine test_FARADAY_CONSTANT
 
 subroutine test_MOLAR_MASS_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, MOLAR_MASS_CONSTANT%to_real(1.0_dp), 1.00000000105d-3)
     if (allocated(error)) return
-end subroutine
+end subroutine test_MOLAR_MASS_CONSTANT
 
 subroutine test_MOLAR_VOLUME_NTP(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA%to_real(1.0_dp), 22.41396954d-3)
     if (allocated(error)) return
-end subroutine
+end subroutine test_MOLAR_VOLUME_NTP
 
 subroutine test_PLANCK_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, PLANCK_CONSTANT%to_real(1.0_dp), 6.62607015d-34)
     if (allocated(error)) return
-end subroutine
+end subroutine test_PLANCK_CONSTANT
 
 subroutine test_SPEED_OF_LIGHT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, SPEED_OF_LIGHT_IN_VACUUM%to_real(1.0_dp), 299792458.0d0)
     if (allocated(error)) return
-end subroutine
+end subroutine test_SPEED_OF_LIGHT
 
 subroutine test_STANDARD_ACCELERATION_OF_GRAVITY(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, STANDARD_ACCELERATION_OF_GRAVITY%to_real(1.0_dp), 9.80665d0)
     if (allocated(error)) return
-end subroutine
+end subroutine test_STANDARD_ACCELERATION_OF_GRAVITY
 
 subroutine test_U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ALPHA_PARTICLE_ELECTRON_MASS_RATIO%to_real(1.0_dp, uncertainty=.true.), 0.00000017d0)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_ALPHA_PARTICLE_ELECTRON_MASS_RATIO
 
 subroutine test_U_ALPHA_PARTICLE_MASS(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ALPHA_PARTICLE_MASS%to_real(1.0_dp, uncertainty=.true.), 0.0000000021d-27)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_ALPHA_PARTICLE_MASS
 
 subroutine test_U_ATOMIC_MASS_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ATOMIC_MASS_CONSTANT%to_real(1.0_dp, uncertainty=.true.), 0.00000000052d-27)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_ATOMIC_MASS_CONSTANT
 
 subroutine test_U_AVOGADRO_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, AVOGADRO_CONSTANT%to_real(1.0_dp, uncertainty=.true.), 0.0_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_AVOGADRO_CONSTANT
 
 subroutine test_U_BOLTZMANN_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, BOLTZMANN_CONSTANT%to_real(1.0_dp, uncertainty=.true.), 0.0_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_BOLTZMANN_CONSTANT
 
 subroutine test_U_ELECTRON_VOLT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ELECTRON_VOLT%to_real(1.0_dp, uncertainty=.true.), 0.0_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_ELECTRON_VOLT
 
 subroutine test_U_ELEMENTARY_CHARGE(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, ELEMENTARY_CHARGE%to_real(1.0_dp, uncertainty=.true.), 0.0_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_ELEMENTARY_CHARGE
 
 subroutine test_U_FARADAY_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, FARADAY_CONSTANT%to_real(1.0_dp, uncertainty=.true.), 0.0_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_FARADAY_CONSTANT
 
 subroutine test_U_MOLAR_MASS_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, MOLAR_MASS_CONSTANT%to_real(1.0_dp, uncertainty=.true.), 0.00000000031d-3)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_MOLAR_MASS_CONSTANT
 
 subroutine test_U_MOLAR_VOLUME_NTP(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA%to_real(1.0_dp, uncertainty=.true.), 0.0_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_MOLAR_VOLUME_NTP
 
 subroutine test_U_PLANCK_CONSTANT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, PLANCK_CONSTANT%to_real(1.0_dp, uncertainty=.true.), 0.0_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_PLANCK_CONSTANT
 
 subroutine test_U_SPEED_OF_LIGHT(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, SPEED_OF_LIGHT_IN_VACUUM%to_real(1.0_dp, uncertainty=.true.), 0.0_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_SPEED_OF_LIGHT
 
 subroutine test_U_STANDARD_ACCELERATION_OF_GRAVITY(error)
     type(error_type), allocatable, intent(out) :: error
     call check(error, STANDARD_ACCELERATION_OF_GRAVITY%to_real(1.0_dp, uncertainty=.true.), 0.0_dp)
     if (allocated(error)) return
-end subroutine
+end subroutine test_U_STANDARD_ACCELERATION_OF_GRAVITY
 
 end module test_constants
 
@@ -242,4 +247,4 @@ if (stat > 0) then
     error stop
 end if
 
-end program
+end program tester
