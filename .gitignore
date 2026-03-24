@@ -52,6 +52,7 @@ make.in
 make.in.tex
 
 srcprep/*api.txt
+srcprep/example*.txt
 
 Makefile.in
 /ar-lib
