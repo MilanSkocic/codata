@@ -51,6 +51,8 @@ C/bin/
 make.in
 make.in.tex
 
+srcprep/*api.txt
+
 Makefile.in
 /ar-lib
 /mdate-sh
