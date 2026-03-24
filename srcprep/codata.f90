@@ -98,7 +98,7 @@ NOTES
         codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 EXAMPLE
-$INCLUDE ../example/example.mantxt
+$INCLUDE ./example.txt
 
 SEE ALSO
     gsl(3), codata(1)
