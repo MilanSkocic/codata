@@ -21,7 +21,6 @@ at https://github.com/fortran-lang/fpm/releases/.
 A Makefile allows to compile the static and the shared library. It uses
 fpm for compiling the dependencies and the source code.
 
-
 $ ./configure.sh
 $ make
 $ make install
