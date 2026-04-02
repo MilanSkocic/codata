@@ -1,0 +1,31 @@
+FROM BINARIES
+Download the binaries for your operating system from 
+https://github.com/MilanSkocic/codata/releases.
+The archives contains 3 folders bin, lib and share that you can simply
+copy/paste somewhere on your PATH (usually $HOME/.local).
+For Windows, you can a .local folder to your %USERPROFILE% and add it
+to your PATH.
+
+$ unzip codata-linux-x86_64-2.5.2.zip codata
+$ cp -v codata/* your/path/
+
+
+
+FROM SOURCES
+You need to install fpm (Fortran Package Manager) which can be downloaded
+at https://github.com/fortran-lang/fpm/releases/. 
+A Makefile allows to compile the static and the shared library. It uses
+fpm for compiling the dependencies and the source code.
+
+$ ./configure.sh
+$ make
+$ make install
+
+
+
+PYTHON WRAPPER
+If you also need to build the Python wrapper. There is script build.sh
+which builds the static and shared library and also the Python wrapper.
+
+$ ./configure.sh
+$ ./build.sh
