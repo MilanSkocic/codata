@@ -76,6 +76,6 @@ echo "done"
 
 echo -n "Copying env vars and license to python..."
 cp -f make.in ./py/make.in
-cp -f LICENSE ./py/LICENSE
+cp -f COPYING ./py/LICENSE
 echo -n $FPM_VERSION > ./py/VERSION
 echo "done."
