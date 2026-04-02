@@ -12,10 +12,15 @@ $ cp -v codata/* your/path/
 
 
 FROM SOURCES
-You need to install fpm (Fortran Package Manager) which can be downloaded
+You need to install a compilation toolchain for Fortran. 
+The Fortran compiler must support the f2018 standard.
+
+You also need to install fpm (Fortran Package Manager) which can be downloaded
 at https://github.com/fortran-lang/fpm/releases/. 
+
 A Makefile allows to compile the static and the shared library. It uses
 fpm for compiling the dependencies and the source code.
+
 
 $ ./configure.sh
 $ make
@@ -26,6 +31,9 @@ $ make install
 PYTHON WRAPPER
 If you also need to build the Python wrapper. There is script build.sh
 which builds the static and shared library and also the Python wrapper.
+
+You need to install a compilation toolchain for C. 
+The C compiler must support the c11 standard.
 
 $ ./configure.sh
 $ ./build.sh
