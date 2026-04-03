@@ -4,7 +4,8 @@ constants according to CODATA.
 https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants.
 
 o Online documentation  https://milanskocic.github.io/codata/
-o Man pages             https://github.com/MilanSkocic/codata/tree/main/doc
+o PDF documentation     https://github.com/MilanSkocic/codata/tree/main/doc/latex/pdf
+o Man pages             https://github.com/MilanSkocic/codata/tree/main/doc/manpages
 o Examples              https://github.com/MilanSkocic/codata/tree/main/example
 o Source code           https://github.com/MilanSkocic/codata
 o Python wrapper        https://pypi.org/project/pycodata

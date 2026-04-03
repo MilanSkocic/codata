@@ -1,4 +1,4 @@
-$BLOCK comment --file codata.3.prep
+$BLOCK comment --file manpages/codata.3.prep
 NAME
     codata - libray for fundamental physical constants
 

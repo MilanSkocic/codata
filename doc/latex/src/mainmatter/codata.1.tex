@@ -1,0 +1,67 @@
+\section{NAME}
+
+\textbf{codata }- Command line for codata
+
+\section{SYNOPSIS}
+
+\begin{verbatim}
+codata [OPTIONS] [REGEX_PATTERN ... ]
+\end{verbatim}
+
+\section{DESCRIPTION}
+
+\textbf{codata is a command line interface which prints all the codata}
+constants.
+
+The current values are from 2022. Older values can be retrieved if
+needed and the output can be filtered with REGEX PATTERNS.
+
+\section{OPTIONS}
+
+\begin{description}
+\item[\textbf{\textbf{-\/-year, -y YEAR}}]
+Year of the \textbf{codata constants:} 2022, 2018, 2014, 2010
+\item[\textbf{\textbf{-\/-pattern, -p PATTERN}}]
+Regex pattern for filtering the constants.
+\item[\textbf{\textbf{-\/-value, -a}}]
+Show only the value.
+\item[\textbf{\textbf{-\/-error, -e}}]
+Show only the uncertainty.
+\item[\textbf{\textbf{-\/-usage}}]
+Show usage text and exit.
+\item[\textbf{\textbf{-\/-help}}]
+Show help text and exit.
+\item[\textbf{\textbf{-\/-verbose}}]
+Display additional information.
+\item[\textbf{\textbf{-\/-version}}]
+Show version information and exit.
+\end{description}
+
+\section{NOTES}
+
+You may replace the default options from a file if your first options
+begin with @file. Initial options will then be read from the "response
+file" "file.rsp" in the current directory.
+
+If "file" does not exist or cannot be read, then an error occurs and the
+program stops. Each line of the file is prefixed with "options" and
+interpreted as a separate argument. The file itself may not contain
+@file arguments. That is, it is not processed recursively.
+
+For more information on response files see
+https://urbanjost.github.io/M\_CLI2/set\_args.3m\_cli2.html
+
+\section{EXAMPLE}
+
+Minimal example
+
+\begin{verbatim}
+     codata
+     codata -y 2018 molar electron
+     codata -y 2014 -p 'molar.*gas','electron.*eV'
+     codata '[B,b]oltzmann.*eV'
+\end{verbatim}
+
+\section{SEE ALSO}
+
+\textbf{codata(3)}
