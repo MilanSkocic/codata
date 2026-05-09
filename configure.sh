@@ -79,3 +79,5 @@ cp -f make.in ./py/make.in
 cp -f COPYING ./py/LICENSE
 echo -n $FPM_VERSION > ./py/VERSION
 echo "done."
+
+awk -F'=' 'NR>1{gsub("_","",$1);gsub("_","\\_",$2);  print "\\newcommand{\\"$1 "}{" $2 "}"}' make.in > doc/latex/src/settings/make.in.tex
