@@ -101,7 +101,7 @@ EXAMPLE
 $INCLUDE ./example.txt
 
 SEE ALSO
-    gsl(3), codata(1)
+  gsl(3), codata(1)
 
 CODATA 2022
 $INCLUDE ../data/codata_constants_2022.mantxt
