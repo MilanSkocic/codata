@@ -10,7 +10,7 @@ all: example.txt $(f90)
 	prep $< -o $@
 
 example.txt: ../example/example.f90 ../example/example.c ../example/example.py
-	./concatex.sh
+	./concatex
 
 clean:
-	rm -f $(f90)
+	rm -f $(f90) example.txt

@@ -64,7 +64,9 @@ $(C_HEADER):
 	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
 
 prep:
+	make -C srcprep clean
 	make -C srcprep
+	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/manpages/$(FPM_APPNAME).1.prep
 
 # ---------------------------------------------------------------------
 
@@ -113,8 +115,8 @@ install_dirs:
 	mkdir -p $(install_dir)/share/man/man1
 	fpm install --prefix=$(install_dir) --profile=$(btype)
 	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(install_dir)/include
-	cp -f doc/$(FPM_NAME)*.3.gz $(install_dir)/share/man/man3
-	cp -f doc/$(FPM_APPNAME)*.1.gz $(install_dir)/share/man/man1
+	cp -f doc/manpages/$(FPM_NAME)*.3.gz $(install_dir)/share/man/man3
+	cp -f doc/manpages/$(FPM_APPNAME)*.1.gz $(install_dir)/share/man/man1
 
 install_linux: 
 	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so $(install_dir)/lib
@@ -146,7 +148,6 @@ uninstall:
 # ---------------------------------------------------------------------
 # OTHERS
 doc:
-	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/$(FPM_APPNAME).1.prep
 	make -C doc
 
 docs:
