@@ -43,7 +43,7 @@ jobs:
       uses: actions/checkout@v4
     - name: Configure
       run: |
-        . ./configure.sh
+        . ./configure
         echo "FPM_NAME=$FPM_NAME" >> $GITHUB_ENV
         echo "FPM_PYNAME=$FPM_PYNAME" >> $GITHUB_ENV
         echo "FPM_VERSION=$FPM_VERSION" >> $GITHUB_ENV
