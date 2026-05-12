@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-. configure.sh
+. configure
 
 echo ""
 echo "BUILD LIBS"

@@ -6,11 +6,11 @@ MAN=$(patsubst %.prep, %, $(MANPREP))
 MANPDF=$(patsubst %.prep, %.pdf, $(MANPREP))
 MANTXT=$(patsubst %.prep, %.txt, $(MANPREP))
 MANGZ=$(patsubst %.prep, %.gz, $(MANPREP))
-MANRST=$(patsubst %.prep, %.rst, $(MANPREP))
+MANRST=$(patsubst %.prep, sphinx/source/man/%.rst, $(MANPREP))
 
 BOOKMAN=$(FPM_NAME).pdf
 
-all: man html
+all: man html bib cleanprep
 
 .PHONY:
 html:
@@ -38,7 +38,7 @@ $(BOOKMAN): $(MAN)
 %.txt: %
 	man -l $< > $@
 
-%.rst: %
+sphinx/source/man/%.rst: %
 	pandoc --from man --to rst --shift-heading-level-by=1 $< -o $@
 
 .PHONY:
@@ -49,6 +49,10 @@ bib:
 	pdflatex -output-directory=./build/ -synctex=1 references.tex
 	pdflatex -output-directory=./build/ -synctex=1 references.tex
 	cp -f build/references.pdf ./
+
+.PHONY:
+cleanprep:
+	rm -fv $(MANPREP)
 
 .PHONY:
 clean:

@@ -1,0 +1,29 @@
+DESCRIPTION
+  codata is a Fortran library providing the fundamental physical
+  constants according to CODATA.
+  https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants.
+
+  o Online documentation  https://milanskocic.github.io/codata/
+  o PDF documentation     https://github.com/MilanSkocic/codata/tree/main/doc/latex/pdf
+  o Man pages             https://github.com/MilanSkocic/codata/tree/main/doc/manpages
+  o Examples              https://github.com/MilanSkocic/codata/tree/main/example
+  o Source code           https://github.com/MilanSkocic/codata
+  o Python wrapper        https://pypi.org/project/pycodata
+  o Binaries              https://github.com/MilanSkocic/codata/releases
+
+  It provides:
+  - codata constants 2022
+  - codata constants 2018
+  - codata constants 2014
+  - codata constants 2010
+
+  The codata constant from 2022 were integrated in the Fortran stdlib.
+  See https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
+
+NOTES
+  If you need older values for the CODATA constants you can use `codata` otherwise
+  use the standard library.
+
+  If you only need sources for the codata constants that you can integrate
+  directly in your sources you may be interested by this repo
+  https://github.com/vmagnin/fundamental_constants.

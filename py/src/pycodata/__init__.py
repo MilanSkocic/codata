@@ -2,9 +2,9 @@
  
 The latest values (2022) do not have the year as a suffix in their name.
 Older values can be used and they feature the year as a suffix in their name.
+The names of constants are the same as the one defined in Fortran and C.
 
-The latest values are available at the top level and 
-older values are available in dedicated modules.
+All constants are available at the top level of the module. 
 """
 import platform
 import subprocess
