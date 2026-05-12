@@ -1,4 +1,4 @@
-$BLOCK comment --file manpages/codata.3.prep
+$BLOCK comment --file codata.3.prep
 NAME
   codata - libray for fundamental physical constants
 
@@ -15,7 +15,7 @@ DESCRIPTION
   constants according to CODATA
   https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants.
   A C API allows usage from C, or can be used as a basis for other wrappers.
-  Python wrapper allows easy usage from Python.
+  A python wrapper allows easy usage from Python.
 
   The latest codata constants 2022
   https://pml.nist.gov/cuu/Constants were integrated in
@@ -50,6 +50,10 @@ DESCRIPTION
   A module level interface to_real is available for getting the constant value
   or uncertainty of a constant.
 
+
+  The C API exposes a structure codata_constant_type that defines
+  the same members as in Fortran.
+      
       type, bind(C) :: capi_constant_type
           !! Derived type for representing a Codata constant in C.
           character(kind=c_char) :: name(65)
@@ -57,9 +61,6 @@ DESCRIPTION
           real(c_double) :: uncertainty
           character(kind=c_char) :: unit(33)
       end type capi_constant_type
-
-  The C API exposes a structure codata_constant_type that defines
-  the same members as in Fortran.
 
       typedef struct codata_constant_type{
           char name[65];
@@ -69,7 +70,7 @@ DESCRIPTION
       }cct;
 
   The Python wrapper encapsulates the members in a dictionnary with
-  the keys name, value, uncertainty and unit.
+  the keys being name, value, uncertainty and unit.
 
 NOTES
   To use codata within your fpm https://github.com/fortran-lang/fpm
