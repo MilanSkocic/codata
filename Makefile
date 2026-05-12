@@ -66,7 +66,7 @@ $(C_HEADER):
 prep:
 	make -C srcprep clean
 	make -C srcprep
-	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/manpages/$(FPM_APPNAME).1.prep
+	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/$(FPM_APPNAME).1.prep
 
 # ---------------------------------------------------------------------
 
