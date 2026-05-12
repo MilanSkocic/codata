@@ -14,7 +14,7 @@
 !   constants according to CODATA
 !   https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants.
 !   A C API allows usage from C, or can be used as a basis for other wrappers.
-!   Python wrapper allows easy usage from Python.
+!   A python wrapper allows easy usage from Python.
 ! 
 !   The latest codata constants 2022
 !   https://pml.nist.gov/cuu/Constants were integrated in
@@ -49,6 +49,10 @@
 !   A module level interface to_real is available for getting the constant value
 !   or uncertainty of a constant.
 ! 
+! 
+!   The C API exposes a structure codata_constant_type that defines
+!   the same members as in Fortran.
+! 
 !       type, bind(C) :: capi_constant_type
 !           !! Derived type for representing a Codata constant in C.
 !           character(kind=c_char) :: name(65)
@@ -56,9 +60,6 @@
 !           real(c_double) :: uncertainty
 !           character(kind=c_char) :: unit(33)
 !       end type capi_constant_type
-! 
-!   The C API exposes a structure codata_constant_type that defines
-!   the same members as in Fortran.
 ! 
 !       typedef struct codata_constant_type{
 !           char name[65];
@@ -68,26 +69,7 @@
 !       }cct;
 ! 
 !   The Python wrapper encapsulates the members in a dictionnary with
-!   the keys name, value, uncertainty and unit.
-! 
-!   References
-! 
-!   o Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA recommended values of the
-!     fundamental physical constants: 2010. Review of Modern Physics, 84, 2012.
-! 
-!   o Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA recommended values of the
-!     fundamental physical constants: 2014.
-!     Journal of Physical and Chemical Reference Data, 45, 2016.
-! 
-!   o Peter J Mohr, Barry N Taylor, and David B. Newell. CODATA recommended values of the
-!     fundamental physical constants: 2018. Review of Modern Physics, 93, 2021.
-! 
-!   o Peter Mohr, David Newell, Barry Taylor, and Eite Tiesinga. CODATA Recommended Values of
-!     the Fundamental Physical Constants: 2022.
-! 
-!   o Peter J. Mohr, David B. Newell, Barry N. Taylor, and Eite Tiesinga. CODATA recommended
-!     values of the fundamental physical constants: 2022.
-!     Reviews of Modern Physics, 97(2):025002, 2025.
+!   the keys being name, value, uncertainty and unit.
 ! 
 ! NOTES
 !   To use codata within your fpm https://github.com/fortran-lang/fpm
