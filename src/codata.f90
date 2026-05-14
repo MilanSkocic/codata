@@ -1,3 +1,4 @@
+! SPDX-License-Identifier: MIT
 ! NAME
 !   codata - libray for fundamental physical constants
 ! 

@@ -19,6 +19,7 @@ def get_suffix(year):
 
 def write_module_start(f, year):
     suffix = "_" + year
+    f.write("/* SPDX-License-Identifier: MIT */")
     f.write("#include \"codata_constants_type.h\"" + newline)
     f.write(f"#include \"codata_constants{suffix}.h\"" + newline)
     f.write(newline)

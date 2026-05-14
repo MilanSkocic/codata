@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: MIT */
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
 #include "codata.h"

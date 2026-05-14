@@ -1,3 +1,4 @@
+! SPDX-License-Identifier: MIT
 module codata__constants_type
 !! Codata constant type
 use, intrinsic :: iso_c_binding, only: c_char, c_double

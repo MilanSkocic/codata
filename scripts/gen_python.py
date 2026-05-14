@@ -18,8 +18,8 @@ def get_suffix(year):
     return suffix
 
 def write_module_start(f, year):
-    suffix = "_" + year
-
+    
+    f.write("# SPDX-License-Identifier: MIT")
     f.write(f"\"\"\"Codata constants {year:s}.\"\"\"" + newline)
     f.write(newline)
 

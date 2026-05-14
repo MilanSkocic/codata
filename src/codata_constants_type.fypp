@@ -1,3 +1,4 @@
+! SPDX-License-Identifier: MIT
 #:include "common.fypp"
 #:set KINDS = REAL_KINDS
 module codata__constants_type

@@ -1,3 +1,4 @@
+/* SPDX-License-Identifier: MIT */
 #ifndef CODATA_H
 #define CODATA_H
 #if _MSC_VER
