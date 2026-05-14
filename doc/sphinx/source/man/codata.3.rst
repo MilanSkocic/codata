@@ -22,19 +22,19 @@ DESCRIPTION
 
 *codata* **is a Fortran library providing the fundamental physical**
 constants according to CODATA
-https://www.nist.gov/programs-projects/*codata*\ **-values-fundamental-physical-constants.**
+(https://www.nist.gov/programs-projects/*codata*\ **-values-fundamental-physical-constants).**
 A C API allows usage from C, or can be used as a basis for other
 wrappers. A python wrapper allows easy usage from Python.
 
-The latest *codata* **constants 2022**
+The latest *codata* **constants (2022)**
 https://pml.nist.gov/cuu/Constants were integrated in stdlib
 https://github.com/fortran-lang/stdlib/releases/tag/ since version
 0.7.0. The constants are implemented as derived type which carries the
 name, the value, the uncertainty and the unit. This library is
 complementary to the constants defined in the stdlib by providing older
 values for the constants. The latest values (2022) do not have the year
-as a suffix in their name. Older values (2010, 2014, 2018) can be used
-and they feature the year as a suffix in their name.
+as a suffix in their name whereas older values (2010, 2014, 2018)
+feature the year as a suffix in their name.
 
 All *codata* **(physical) constants are defined as a derived type
 codata_constant_type.** All the *codata* **constants are provided as
@@ -45,7 +45,6 @@ members and 2 procedures.
 ::
 
          type :: codata_constant_type
-             !! Derived type for representing a Codata constant.
              character(len=64) :: name
              real(dp) :: value
              real(dp) :: uncertainty
@@ -60,13 +59,28 @@ members and 2 procedures.
 A module level interface to_real is available for getting the constant
 value or uncertainty of a constant.
 
+   **o to_real(self, mold, uncertainty) result(r)**
+      Get the constant value or uncertainty. Warning: Some constants
+      cannot be converted to single precision sp reals due to the value
+      of the exponents.
+
+      **o class(codata_constant_type), intent(in) :: self**
+         Codata constant
+
+      **o real(sp), intent(in) :: mold**
+         Should be of type real single or double precision
+
+      **o logical, intent(in), optional :: uncertainty**
+         Set to true if the uncertainty is required. Default to .false..
+
+..
+
    The C API exposes a structure codata_constant_type that defines the
-   same members as in Fortran.
+   same members as in Fortran. to_real is not exposed in the C API.
 
    ::
 
             type, bind(C) :: capi_constant_type
-                !! Derived type for representing a Codata constant in C.
                 character(kind=c_char) :: name(65)
                 real(c_double) :: value
                 real(c_double) :: uncertainty
@@ -81,13 +95,14 @@ value or uncertainty of a constant.
             }cct;
 
    The Python wrapper encapsulates the members in a dictionnary with the
-   keys being name, value, uncertainty and unit.
+   keys being name, value, uncertainty and unit. to_real is not exposed
+   in the Python wrapper.
 
 NOTES
 -----
 
-To **use** *codata* **within your fpm
-https://github.com/fortran-lang/fpm** project, add the following lines
+To **use** *codata* **within your fpm(1)
+(https://github.com/fortran-lang/fpm)** project, add the following lines
 to your file:
 
 ::
@@ -164,7 +179,7 @@ Example in Python
 SEE ALSO
 --------
 
-**gsl(3), codata(1)**
+**gsl(3), codata(1), fpm(1)**
 
 CODATA 2022
 -----------
