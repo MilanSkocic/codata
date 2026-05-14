@@ -44,11 +44,11 @@ sphinx/source/man/%.rst: %
 .PHONY:
 bib:
 	mkdir -p build
-	pdflatex -output-directory=./build/ -synctex=1 references.tex
-	biber ./build/references.bcf --output-file ./build/references.bbl
-	pdflatex -output-directory=./build/ -synctex=1 references.tex
-	pdflatex -output-directory=./build/ -synctex=1 references.tex
-	cp -f build/references.pdf ./
+	pdflatex -output-directory=./build/ -synctex=1 $(FPM_NAME)-refman.tex
+	biber ./build/$(FPM_NAME)-refman.bcf --output-file ./build/$(FPM_NAME)-refman.bbl
+	pdflatex -output-directory=./build/ -synctex=1 $(FPM_NAME)-refman.tex
+	pdflatex -output-directory=./build/ -synctex=1 $(FPM_NAME)-refman.tex
+	cp -f build/$(FPM_NAME)-refman.pdf ./
 
 .PHONY:
 cleanprep:

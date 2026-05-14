@@ -13,43 +13,43 @@
     maxbibnames=99,
     backref=true,]
 {biblatex}
-\addbibresource[label=main_bib]{references.bib}
+\addbibresource[label=main_bib]{codata-references.bib}
 \usepackage{fancyvrb}
 \usepackage{ccfonts}
 
 \input{make.in.tex}
 
-%\title{}
-%\author{}
+\title{codata --- \FPMVERSION}
+\author{M. Skocic}
 %\date{}
 
 
 
 %=======================================================================
 \begin{document}
-%\maketitle
-%\tableofcontents
+\maketitle
+\tableofcontents
   
 
 %-----------------------------------------------------------------------
 % MAN PAGES
-%\clearpage
-%\section{Man Pages}
-%\subsection{codata(3)}
-%\fvset{}
-%\VerbatimInput{codata.3.txt}
+\clearpage
+\section{Man Pages}
+\subsection{codata(3)}
+\fvset{}
+\VerbatimInput{codata.3.txt}
 
-%\clearpage
-%\subsection{codata(1)}
-%\fvset{}
-%\VerbatimInput{codata.1.txt}
+\clearpage
+\subsection{codata(1)}
+\fvset{}
+\VerbatimInput{codata.1.txt}
 %-----------------------------------------------------------------------
     
 
 
 %-----------------------------------------------------------------------
 % REFERENCES
-%\clearpage
+\clearpage
 \nocite{*}
 \printbibliography[heading=bibintoc]
 %-----------------------------------------------------------------------
