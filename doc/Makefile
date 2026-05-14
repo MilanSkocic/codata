@@ -8,7 +8,7 @@ MANTXT=$(patsubst %.prep, %.txt, $(MANPREP))
 MANGZ=$(patsubst %.prep, %.gz, $(MANPREP))
 MANRST=$(patsubst %.prep, sphinx/source/man/%.rst, $(MANPREP))
 
-BOOKMAN=$(FPM_NAME).pdf
+BOOKMAN=$(FPM_NAME)-bookman.pdf
 
 all: man html bib cleanprep
 
