@@ -1,60 +1,61 @@
 include ../make.in
 
 
-MANPREP=$(wildcard *.prep)
-MAN=$(patsubst %.prep, %, $(MANPREP))
-MANPDF=$(patsubst %.prep, %.pdf, $(MANPREP))
-MANTXT=$(patsubst %.prep, %.txt, $(MANPREP))
-MANGZ=$(patsubst %.prep, %.gz, $(MANPREP))
-MANRST=$(patsubst %.prep, sphinx/source/man/%.rst, $(MANPREP))
+MANPREP=$(wildcard man/*.prep)
+MAN=$(patsubst man/%.prep, man/%, $(MANPREP))
+MANPDF=$(patsubst man/%.prep, man/%.pdf, $(MANPREP))
+MANTXT=$(patsubst man/%.prep, man/%.txt, $(MANPREP))
+MANGZ=$(patsubst man/%.prep, man/%.gz, $(MANPREP))
 
-BOOKMAN=$(FPM_NAME)-bookman.pdf
+BOOKMAN=man/$(FPM_NAME)-bookman.pdf
 
-all: man html bib cleanprep
+all: man html latex cleanprep
 
-.PHONY:
+.PHONY: html
 html:
 	make -C sphinx html
+	make -C ford
+
+.PHONY: sphinx
+sphinx:
+	make -C sphinx html
+
+.PHONY: ford
+ford:
+	make -C ford
 
 .PHONY:
-man: $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(MANRST) $(BOOKMAN)
+man: $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(BOOKMAN)
 
 .PHONY:
 $(BOOKMAN): $(MAN)
 	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User Commands & Libary Calls" -r $(FPM_VERSION) $(MAN) > $(BOOKMAN)
 
-%.3: %.3.prep 
+man/%.3: man/%.3.prep 
 	txt2man -s $(shell basename $@ | cut -d '.' -f 2) -v "Library Calls" -r $(FPM_VERSION) -t $(shell basename $@ | cut -d '.' -f 1) $< > $@
 
-%.1: %.1.prep 
+man/%.1: man/%.1.prep 
 	txt2man -s $(shell basename $@ | cut -d '.' -f 2) -v "User Commands" -r $(FPM_VERSION) -t $(shell basename $@ | cut -d '.' -f 1) $< > $@
 
-%.pdf: %
+man/%.pdf: man/%
 	man -l -Tpdf $< > $@
 
-%.gz: %
+man/%.gz: man/%
 	gzip -fk $^
 
-%.txt: %
+man/%.txt: man/%
 	man -l $< > $@
 
-sphinx/source/man/%.rst: %
-	pandoc --from man --to rst --shift-heading-level-by=1 $< -o $@
+.PHONY: latex
+latex:
+	make -C latex
 
-.PHONY:
-bib:
-	mkdir -p build
-	pdflatex -output-directory=./build/ -synctex=1 $(FPM_NAME)-refman.tex
-	biber ./build/$(FPM_NAME)-refman.bcf --output-file ./build/$(FPM_NAME)-refman.bbl
-	pdflatex -output-directory=./build/ -synctex=1 $(FPM_NAME)-refman.tex
-	pdflatex -output-directory=./build/ -synctex=1 $(FPM_NAME)-refman.tex
-	cp -f build/$(FPM_NAME)-refman.pdf ./
-
-.PHONY:
+.PHONY: cleanprep
 cleanprep:
 	rm -fv $(MANPREP)
 
-.PHONY:
+.PHONY: clean
 clean:
+	rm -fv $(MANPREP) $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(BOOKMAN)
 	make -C sphinx clean
-	rm -fv $(MANPREP) $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(MANRST) $(BOOKMAN)
+	make -C ford clean
