@@ -66,7 +66,7 @@ $(C_HEADER):
 prep:
 	make -C srcprep clean
 	make -C srcprep
-	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/$(FPM_APPNAME).1.prep
+	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/man/$(FPM_APPNAME).1.prep
 
 # ---------------------------------------------------------------------
 
@@ -151,8 +151,18 @@ doc:
 	make -C doc
 
 docs:
-	rm -rf docs/*
-	cp -rf doc/sphinx/build/html/* ./docs/
+	rm -rf docs/sphinx/*
+	rm -rf docs/ford/*
+	rm -rf docs/latex/*
+	rm -rf docs/man/*
+	mkdir -p docs/sphinx
+	mkdir -p docs/ford
+	mkdir -p docs/latex
+	mkdir -p docs/man
+	cp -rf doc/man/*.pdf ./docs/man
+	cp -rf doc/latex/*.pdf ./docs/latex
+	cp -rf doc/sphinx/build/html/* ./docs/sphinx
+	cp -rf doc/ford/build/* ./docs/ford
 
 logo:
 	make -C media
