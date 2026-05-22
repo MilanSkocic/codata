@@ -2,7 +2,7 @@
 codata - Documentation
 ######################
 
-.. image:: ../../../media/logo.png
+.. image:: ../../../../media/logo.png
         :width: 400
         :align: center
         :alt: Alternative text
