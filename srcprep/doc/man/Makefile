@@ -1,4 +1,4 @@
-include ../../make.in
+include ../../../make.in
 
 MANPREP=$(wildcard src/*.prep)
 MAN=$(patsubst src/%.prep, build/%, $(MANPREP))

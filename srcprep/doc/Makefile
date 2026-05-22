@@ -1,4 +1,4 @@
-include ../make.in
+include ../../make.in
 
 all: man latex sphinx ford
 

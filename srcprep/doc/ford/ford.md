@@ -7,13 +7,13 @@ project_website: https://milanskocic.github.io/codata/index.html
 author: Milan Skocic
 email: milan.skocic@gmail.com
 github: https://github.com/MilanSkocic
-src_dir: ../../src
-include: ../../include
-media_dir: ../../media
+src_dir: ../../../src
+include: ../../../include
+media_dir: ../../../media
 page_dir: ./
 output_dir: ./build
-exclude_dir: ./example
-             ./test
+exclude_dir: ../../../example
+             ../../../test
 display: public
          protected
 source: true

@@ -1,4 +1,4 @@
-include ../../make.in
+include ../../../make.in
 
 FNAME=main
 OUTNAME=codata-refman

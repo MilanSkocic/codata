@@ -1,3 +1,5 @@
+include ../../../make.in
+
 all:
 	mkdir -p build
 	ford ford.md

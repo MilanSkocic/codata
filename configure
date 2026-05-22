@@ -80,4 +80,4 @@ cp -f COPYING ./py/LICENSE
 echo -n $FPM_VERSION > ./py/VERSION
 echo "done."
 
-awk -F'=' 'NR>1{gsub("_","",$1);gsub("_","\\_",$2);  print "\\newcommand{\\"$1 "}{" $2 "}"}' make.in > doc/latex/make.in.tex
+awk -F'=' 'NR>1{gsub("_","",$1);gsub("_","\\_",$2);  print "\\newcommand{\\"$1 "}{" $2 "}"}' make.in > srcprep/doc/latex/make.in.tex

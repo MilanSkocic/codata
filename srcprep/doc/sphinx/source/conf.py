@@ -5,12 +5,12 @@
 import os
 import sys
 import tomllib
-sys.path.insert(0, os.path.abspath('../../../py/src/'))
+sys.path.insert(0, os.path.abspath('../../../../py/src/'))
 import pycodata
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-fpath="../../../fpm.toml"
+fpath="../../../../fpm.toml"
 f = open(fpath, "rb")
 fpm = tomllib.load(f)
 f.close()

@@ -14,6 +14,12 @@ endif
 
 install_dir=$(DESTDIR)$(PREFIX)
 
+MANDIR=srcprep/doc/man/build
+LATEXDIRPDF=srcprep/doc/latex/build/pdf
+LATEXDIRHTML=srcprep/doc/latex/build/html
+SPHINXDIRHTML=srcprep/doc/sphinx/build/html
+FORDDIRHTML=srcprep/doc/ford/build
+
 GEN_F=./scripts/gen_fortran.py
 GEN_C=./scripts/gen_capi.py
 GEN_HEADERS=./scripts/gen_headers.py
@@ -66,7 +72,8 @@ $(C_HEADER):
 prep:
 	make -C srcprep clean
 	make -C srcprep
-	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/man/src/$(FPM_APPNAME).1.prep
+	fpm run --profile release --target $(FPM_APPNAME) -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
+	make -C srcprep doc
 
 # ---------------------------------------------------------------------
 
@@ -115,8 +122,8 @@ install_dirs:
 	mkdir -p $(install_dir)/share/man/man1
 	fpm install --prefix=$(install_dir) --profile=$(btype)
 	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(install_dir)/include
-	cp -f doc/$(FPM_NAME)*.3.gz $(install_dir)/share/man/man3
-	cp -f doc/$(FPM_APPNAME)*.1.gz $(install_dir)/share/man/man1
+	cp -f $(MANDIR)/$(FPM_NAME)*.3.gz $(install_dir)/share/man/man3
+	cp -f $(MANDIR)/$(FPM_APPNAME)*.1.gz $(install_dir)/share/man/man1
 
 install_linux: 
 	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so $(install_dir)/lib
@@ -159,11 +166,11 @@ docs:
 	mkdir -p docs/ford
 	mkdir -p docs/latex
 	mkdir -p docs/man
-	cp -rf doc/man/build/* ./docs/man
-	cp -rf doc/latex/build/pdf/* ./docs/latex
-	cp -rf doc/latex/build/html/* ./docs
-	cp -rf doc/sphinx/build/html/* ./docs/sphinx
-	cp -rf doc/ford/build/* ./docs/ford
+	cp -rf $(MANDIR)/* ./docs/man
+	cp -rf $(LATEXDIRPDF)/* ./docs/latex
+	cp -rf $(SPHINXDIRHTML)/* ./docs/sphinx
+	cp -rf $(FORDDIRHTML)/* ./docs/ford
+	cp -rf $(LATEXDIRHTML)/* ./docs
 
 logo:
 	make -C media
