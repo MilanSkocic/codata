@@ -50,6 +50,7 @@ copy:
 
 html: 
 	make4ht -c $(MK4CFG) -d $(HTML_FOLDER) -B $(BUILD_FOLDER) -e $(MK4BUILD) $(SRC_FOLDER)/$(FNAME).tex -a info
+	cp $(HTML_FOLDER)/$(FNAME).html $(HTML_FOLDER)/index.html
 
 clean:
 	rm -rf $(BUILD_FOLDER)/*
