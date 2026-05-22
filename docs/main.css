@@ -1,0 +1,435 @@
+ 
+/* start css.sty */
+.cmr-7{font-size:63%;}
+.cmr-10x-x-109{}
+.ccr-10x-x-109{}
+.ccr-9{font-size:81%;}
+.ccr-7{font-size:63%;}
+.xccmi-10x-x-109{}
+.xccmi-9{font-size:81%;}
+.xccmi-7{font-size:63%;}
+.xccsy-10x-x-109{}
+.xccsy-9{font-size:81%;}
+.xccsy-7{font-size:63%;}
+.xccex-10{font-size:90%;}
+.msam-10x-x-109{}
+.msam-10x-x-90{font-size:81%;}
+.msam-7{font-size:63%;}
+.msbm-10x-x-109{}
+.msbm-10x-x-90{font-size:81%;}
+.msbm-7{font-size:63%;}
+.cmr-9{font-size:81%;}
+.ccr-10x-x-248{font-size:225%;}
+.ccr-10x-x-172{font-size:156%;}
+.ccti-10x-x-172{font-size:156%;font-style: italic;}
+.ccti-10x-x-172{font-style: italic;}
+.ccr-10x-x-120{font-size:109%;}
+.cmtt-10x-x-109{font-family: monospace,monospace;}
+.cmtt-10x-x-109{font-family: monospace,monospace;}
+.cmitt-10x-x-109{font-family: monospace,monospace; font-style: italic;}
+.tctt-1095{font-family: monospace,monospace;}
+.ccti-10x-x-109{font-style: italic;}
+.ccti-10x-x-109{font-style: italic;}
+p{margin-top:0;margin-bottom:0}
+p.indent{text-indent:0;}
+p + p{margin-top:1em;}
+p + div, p + pre {margin-top:1em;}
+div + p, pre + p {margin-top:1em;}
+a { overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; hyphens: auto; }
+@media print {div.crosslinks {visibility:hidden;}}
+table.tabular{border-collapse: collapse; border-spacing: 0;}
+a img { border-top: 0; border-left: 0; border-right: 0; }
+center { margin-top:1em; margin-bottom:1em; }
+td center { margin-top:0em; margin-bottom:0em; }
+.Canvas { position:relative; }
+math { text-indent: 0em; }
+body{ margin:1em auto; max-width:80ch; padding:0 .62em; }
+h1,h2,h3,h4,h5 { line-height:1.2; }
+@media print{ body{ max-width:none } }
+.partHead, .likepartHead { font-size: 2em; }
+.chapterHead, .likechapterHead { font-size: 1.7411em; }
+.sectionHead, .likesectionHead { font-size: 1.5157em; }
+.subsectionHead, .likesubsectionHead { font-size: 1.3195em; }
+.subsubsectionHead, .likesubsubsectionHead { font-size: 1.1487em; }
+ @media (prefers-color-scheme: dark) { img[src^="main"]{filter: invert(1); } } 
+ body { background-color: Canvas; color: CanvasText; color-scheme: light dark; } 
+li p.indent { text-indent: 0em }
+li p:first-child{ margin-top:0em; }
+li p:last-child, li div:last-child { margin-bottom:0.5em; }
+li p:first-child{ margin-bottom:0; }
+li p~ul:last-child, li p~ol:last-child{ margin-bottom:0.5em; }
+.enumerate1 {list-style-type:decimal;}
+.enumerate2 {list-style-type:lower-alpha;}
+.enumerate3 {list-style-type:lower-roman;}
+.enumerate4 {list-style-type:upper-alpha;}
+div.newtheorem { margin-bottom: 2em; margin-top: 2em;}
+div.newtheorem .head{font-weight: bold;}
+.obeylines-h,.obeylines-v {white-space: nowrap; }
+div.obeylines-v p { margin-top:0; margin-bottom:0; }
+.overline{ text-decoration:overline; }
+.overline img{ border-top: 1px solid black; }
+td.displaylines {text-align:center; white-space:nowrap;}
+.centerline {text-align:center;}
+.rightline {text-align:right;}
+pre.verbatim {font-family: monospace,monospace; text-align:left; clear:both; }
+.fbox {padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+div.fbox {display:table}
+div.center div.fbox {text-align:center; clear:both; padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+div.minipage{width:100%;}
+div.center, div.center div.center {text-align: center; margin-left:1em; margin-right:1em;}
+div.center div {text-align: left;}
+div.flushright, div.flushright div.flushright {text-align: right;}
+div.flushright div {text-align: left;}
+div.flushleft {text-align: left;}
+.underline{ text-decoration:underline; }
+.underline img{ border-bottom: 1px solid black; margin-bottom:1pt; }
+.framebox-c, .framebox-l, .framebox-r { padding-left:3.0pt; padding-right:3.0pt; text-indent:0pt; border:solid black 0.4pt; }
+.framebox-c {text-align:center;}
+.framebox-l {text-align:left;}
+.framebox-r {text-align:right;}
+span.thank-mark{ vertical-align: super }
+span.footnote-mark sup.textsuperscript, span.footnote-mark a sup.textsuperscript{ font-size:80%; }
+code.verb{font-family:monospace,monospace;}
+div.tabular, div.center div.tabular {text-align: center; margin-top:0.5em; margin-bottom:0.5em; }
+table.tabular td p{margin-top:0em;}
+table.tabular {margin-left: auto; margin-right: auto;}
+td p:first-child{ margin-top:0em; }
+td p:last-child{ margin-bottom:0em; }
+div.td00{ margin-left:0pt; margin-right:0pt; }
+div.td01{ margin-left:0pt; margin-right:5pt; }
+div.td10{ margin-left:5pt; margin-right:0pt; }
+div.td11{ margin-left:5pt; margin-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+td.td00{ padding-left:0pt; padding-right:0pt; }
+td.td01{ padding-left:0pt; padding-right:5pt; }
+td.td10{ padding-left:5pt; padding-right:0pt; }
+td.td11{ padding-left:5pt; padding-right:5pt; }
+table[rules] {border-left:solid black 0.4pt; border-right:solid black 0.4pt; }
+.hline hr, .cline hr{ height : 0px; margin:0px; }
+.hline td, .cline td{ padding: 0; }
+.hline hr, .cline hr{border:none;border-top:1px solid black;}
+.hline {border-top: 1px solid black;}
+.hline + .vspace:last-child{display:none;}
+.tabbing-right {text-align:right;}
+div.float, div.figure {margin-left: auto; margin-right: auto;}
+div.float img {text-align:center;}
+div.figure img {text-align:center;}
+.marginpar,.reversemarginpar {width:20%; float:right; text-align:left; margin-left:auto; margin-top:0.5em; font-size:85%; text-decoration:underline;}
+.marginpar p,.reversemarginpar p{margin-top:0.4em; margin-bottom:0.4em;}
+.reversemarginpar{float:left;}
+.equation td{text-align:center; vertical-align:middle; }
+td.eq-no{ width:5%; }
+table.equation { width:100%; } 
+div.math-display, div.par-math-display{text-align:center;}
+.array-hline,.array-cline{ border-top: 1px solid black; height:0px; }
+.array-hline + .array-vspace:last-child{display:none;}
+.hline-mtd, .array-hline td{ display:none }
+.array-hline:first-child{border-bottom:1px solid black;border-top:none;}
+math .texttt { font-family: monospace; }
+math .textit { font-style: italic; }
+math .textsl { font-style: oblique; }
+math .textsf { font-family: sans-serif; }
+math .textbf { font-weight: bold; }
+mo.MathClass-op + mi{margin-left:0.3em}
+mi + mo.MathClass-op{margin-left:0.3em}
+ math mstyle[mathvariant="bold"] { font-weight: bold; font-style: normal; } 
+ math mstyle[mathvariant="normal"] { font-weight: normal; font-style: normal; } 
+.partToc a, .partToc, .likepartToc a, .likepartToc {line-height: 200%; font-weight:bold; font-size:110%;}
+.chapterToc a, .chapterToc, .likechapterToc a, .likechapterToc, .appendixToc a, .appendixToc {line-height: 200%; font-weight:bold;}
+.index-item, .index-subitem, .index-subsubitem {display:block}
+div.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center; margin-top: 0.5rem;}
+div.caption span.id{font-weight: bold; white-space: nowrap; }
+h1.partHead{text-align: center}
+p.bibitem { text-indent: -2em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+p.bibitem-p { text-indent: 0em; margin-left: 2em; margin-top:0.6em; margin-bottom:0.6em; }
+.subsubsectionHead, .likesubsubsectionHead { font-size: 1em; }
+.paragraphHead, .likeparagraphHead { margin-top:2em; font-weight: bold;}
+.subparagraphHead, .likesubparagraphHead { font-weight: bold;}
+.verse{white-space:nowrap; margin-left:2em}
+div.maketitle {text-align:center;}
+h2.titleHead{text-align:center;}
+div.maketitle{ margin-bottom: 2em; }
+div.author, div.date {text-align:center;}
+div.thanks{text-align:left; margin-left:10%; font-size:85%; font-style:italic; }
+div.author{white-space: nowrap;}
+h1.partHead{text-align: center}
+ .chapterToc, .likechapterToc {margin-left:0em;}
+ .likesectionToc, .sectionToc {margin-left:1em;}
+ .likesubsectionToc, .subsectionToc {margin-left:2em;}
+ .likesubsectionToc, .subsectionToc {margin-left:2em;}
+ .likesubsubsectionToc, .subsubsectionToc {margin-left:3em;}
+.paragraphToc, .likeparagraphToc {margin-left:4em;}
+.subparagraphToc, .likesubparagraphToc {margin-left:5em;}
+figure.float, div.figure {margin-left: auto; margin-right: auto;}
+figure.figure {text-align:center;}
+figcaption.caption {text-indent:-2em; margin-left:3em; margin-right:1em; text-align:center;}
+figcaption.caption span.id{font-weight: bold; white-space: nowrap; }
+p + figcaption, img + figcaption{margin-top: 1em;}
+dt.printshorthands{float:left; clear:left; margin-right:1em;}
+dd.thebibliography {margin-left: 2.5em;}
+dt.thebibliography {float:left; clear:left; margin-right:1em;}
+.equation-star td{text-align:center; vertical-align:middle; }
+table.equation-star { width:100%; } 
+.boxed{border: 1px solid black; padding-left:2px; padding-right:2px;}
+mtd.align-odd{margin-left:2em; text-align:right;}
+mtd.align-even{margin-right:2em; text-align:left;}
+pre.fancyvrb {white-space: pre-wrap; margin:0em;font-family:monospace,monospace;}
+code.minted-inline{font-family:monospace,monospace;}
+@font-face {font-family: "CMUC";src: url("./fonts/cmunorm.ttf") format("truetype");}
+body{width:21cm;margin:1em auto;text-align:justify;font-family:"CMUC",serif;font-size:15pt}
+pre{font-family: "CMUC"}
+pre.fancyvrb{font-family: "CMUC"}
+.cmtt-10x-x-109{font-family: "CMUC",monospace;}
+.cmtt-10x-x-109{font-family: "CMUC",monospace;}
+.cmitt-10x-x-109{font-family: "CMUC",monospace; font-style: italic;}
+h1{color:red}
+#textcolor1{color:rgb(0,127,0)}
+#textcolor2{color:rgb(0,127,0)}
+#textcolor3{color:rgb(0,127,0)}
+#textcolor4{color:rgb(0,127,0)}
+#textcolor5{color:rgb(0,127,0)}
+#textcolor6{color:rgb(186,186,186)}
+#textcolor7{color:rgb(186,33,33)}
+#textcolor8{color:rgb(186,186,186)}
+#textcolor9{color:rgb(186,33,33)}
+#textcolor10{color:rgb(0,127,0)}
+#textcolor11{color:rgb(186,186,186)}
+#textcolor12{color:rgb(186,33,33)}
+#textcolor13{color:rgb(186,186,186)}
+#textcolor14{color:rgb(186,33,33)}
+#textcolor15{color:rgb(0,127,0)}
+#textcolor16{color:rgb(186,186,186)}
+#textcolor17{color:rgb(101,101,101)}
+#textcolor18{color:rgb(186,186,186)}
+#textcolor19{color:rgb(186,33,33)}
+#textcolor20{color:rgb(186,186,186)}
+#textcolor21{color:rgb(0,127,0)}
+#textcolor22{color:rgb(186,186,186)}
+#textcolor23{color:rgb(186,33,33)}
+#textcolor24{color:rgb(186,186,186)}
+#textcolor25{color:rgb(186,33,33)}
+#textcolor26{color:rgb(0,127,0)}
+#textcolor27{color:rgb(186,186,186)}
+#textcolor28{color:rgb(101,101,101)}
+#textcolor29{color:rgb(186,186,186)}
+#textcolor30{color:rgb(186,33,33)}
+#textcolor31{color:rgb(186,186,186)}
+#textcolor32{color:rgb(0,127,0)}
+#textcolor33{color:rgb(0,127,0)}
+#textcolor34{color:rgb(186,186,186)}
+#textcolor35{color:rgb(186,33,33)}
+#textcolor36{color:rgb(186,186,186)}
+#textcolor37{color:rgb(186,33,33)}
+#textcolor38{color:rgb(0,127,0)}
+#textcolor39{color:rgb(186,186,186)}
+#textcolor40{color:rgb(101,101,101)}
+#textcolor41{color:rgb(186,186,186)}
+#textcolor42{color:rgb(186,33,33)}
+#textcolor43{color:rgb(186,186,186)}
+#textcolor44{color:rgb(0,127,0)}
+#textcolor45{color:rgb(186,186,186)}
+#textcolor46{color:rgb(186,33,33)}
+#textcolor47{color:rgb(186,186,186)}
+#textcolor48{color:rgb(186,33,33)}
+#textcolor49{color:rgb(0,127,0)}
+#textcolor50{color:rgb(186,186,186)}
+#textcolor51{color:rgb(186,33,33)}
+#textcolor52{color:rgb(186,186,186)}
+#textcolor53{color:rgb(186,33,33)}
+#textcolor54{color:rgb(186,186,186)}
+#textcolor55{color:rgb(0,127,0)}
+#textcolor56{color:rgb(0,127,0)}
+#textcolor57{color:rgb(186,186,186)}
+#textcolor58{color:rgb(186,33,33)}
+#textcolor59{color:rgb(186,186,186)}
+#textcolor60{color:rgb(186,33,33)}
+#textcolor61{color:rgb(186,186,186)}
+#textcolor62{color:rgb(0,127,0)}
+#textcolor63{color:rgb(0,127,0)}
+#textcolor64{color:rgb(186,186,186)}
+#textcolor65{color:rgb(186,33,33)}
+#textcolor66{color:rgb(186,186,186)}
+#textcolor67{color:rgb(186,33,33)}
+#textcolor68{color:rgb(186,186,186)}
+#textcolor69{color:rgb(0,127,0)}
+#textcolor70{color:rgb(0,127,0)}
+#textcolor71{color:rgb(186,186,186)}
+#textcolor72{color:rgb(186,33,33)}
+#textcolor73{color:rgb(186,186,186)}
+#textcolor74{color:rgb(186,33,33)}
+#textcolor75{color:rgb(186,186,186)}
+#textcolor76{color:rgb(0,127,0)}
+#textcolor77{color:rgb(0,127,0)}
+#textcolor78{color:rgb(0,127,0)}
+#textcolor79{color:rgb(155,101,0)}
+#textcolor80{color:rgb(155,101,0)}
+#textcolor81{color:rgb(186,186,186)}
+#textcolor82{color:rgb(61,122,122)}
+#textcolor83{color:rgb(155,101,0)}
+#textcolor84{color:rgb(155,101,0)}
+#textcolor85{color:rgb(186,186,186)}
+#textcolor86{color:rgb(61,122,122)}
+#textcolor87{color:rgb(175,0,63)}
+#textcolor88{color:rgb(186,186,186)}
+#textcolor89{color:rgb(0,0,255)}
+#textcolor90{color:rgb(175,0,63)}
+#textcolor91{color:rgb(186,33,33)}
+#textcolor92{color:rgb(186,33,33)}
+#textcolor93{color:rgb(170,91,30)}
+#textcolor94{color:rgb(186,33,33)}
+#textcolor95{color:rgb(186,33,33)}
+#textcolor96{color:rgb(186,33,33)}
+#textcolor97{color:rgb(170,91,30)}
+#textcolor98{color:rgb(186,33,33)}
+#textcolor99{color:rgb(186,33,33)}
+#textcolor100{color:rgb(186,33,33)}
+#textcolor101{color:rgb(186,33,33)}
+#textcolor102{color:rgb(186,33,33)}
+#textcolor103{color:rgb(186,33,33)}
+#textcolor104{color:rgb(170,91,30)}
+#textcolor105{color:rgb(186,33,33)}
+#textcolor106{color:rgb(186,186,186)}
+#textcolor107{color:rgb(186,33,33)}
+#textcolor108{color:rgb(186,33,33)}
+#textcolor109{color:rgb(170,91,30)}
+#textcolor110{color:rgb(186,33,33)}
+#textcolor111{color:rgb(186,33,33)}
+#textcolor112{color:rgb(186,33,33)}
+#textcolor113{color:rgb(186,33,33)}
+#textcolor114{color:rgb(186,33,33)}
+#textcolor115{color:rgb(186,33,33)}
+#textcolor116{color:rgb(170,91,30)}
+#textcolor117{color:rgb(186,33,33)}
+#textcolor118{color:rgb(186,186,186)}
+#textcolor119{color:rgb(186,33,33)}
+#textcolor120{color:rgb(186,33,33)}
+#textcolor121{color:rgb(170,91,30)}
+#textcolor122{color:rgb(186,33,33)}
+#textcolor123{color:rgb(186,33,33)}
+#textcolor124{color:rgb(186,33,33)}
+#textcolor125{color:rgb(186,33,33)}
+#textcolor126{color:rgb(186,33,33)}
+#textcolor127{color:rgb(186,33,33)}
+#textcolor128{color:rgb(170,91,30)}
+#textcolor129{color:rgb(186,33,33)}
+#textcolor130{color:rgb(186,186,186)}
+#textcolor131{color:rgb(186,33,33)}
+#textcolor132{color:rgb(186,33,33)}
+#textcolor133{color:rgb(170,91,30)}
+#textcolor134{color:rgb(186,33,33)}
+#textcolor135{color:rgb(186,33,33)}
+#textcolor136{color:rgb(186,33,33)}
+#textcolor137{color:rgb(186,33,33)}
+#textcolor138{color:rgb(186,33,33)}
+#textcolor139{color:rgb(186,33,33)}
+#textcolor140{color:rgb(170,91,30)}
+#textcolor141{color:rgb(186,33,33)}
+#textcolor142{color:rgb(186,186,186)}
+#textcolor143{color:rgb(186,33,33)}
+#textcolor144{color:rgb(186,33,33)}
+#textcolor145{color:rgb(170,91,30)}
+#textcolor146{color:rgb(186,33,33)}
+#textcolor147{color:rgb(186,186,186)}
+#textcolor148{color:rgb(186,33,33)}
+#textcolor149{color:rgb(186,33,33)}
+#textcolor150{color:rgb(170,91,30)}
+#textcolor151{color:rgb(186,33,33)}
+#textcolor152{color:rgb(186,186,186)}
+#textcolor153{color:rgb(186,33,33)}
+#textcolor154{color:rgb(186,33,33)}
+#textcolor155{color:rgb(170,91,30)}
+#textcolor156{color:rgb(186,33,33)}
+#textcolor157{color:rgb(186,186,186)}
+#textcolor158{color:rgb(0,127,0)}
+#textcolor159{color:rgb(186,186,186)}
+#textcolor160{color:rgb(101,101,101)}
+#textcolor161{color:rgb(0,127,0)}
+#textcolor162{color:rgb(186,186,186)}
+#textcolor163{color:rgb(0,0,255)}
+#textcolor164{color:rgb(101,101,101)}
+#textcolor165{color:rgb(101,101,101)}
+#textcolor166{color:rgb(101,101,101)}
+#textcolor167{color:rgb(186,33,33)}
+#textcolor168{color:rgb(186,33,33)}
+#textcolor169{color:rgb(186,33,33)}
+#textcolor170{color:rgb(0,127,0)}
+#textcolor171{color:rgb(186,186,186)}
+#textcolor172{color:rgb(0,0,255)}
+#textcolor173{color:rgb(0,127,0)}
+#textcolor174{color:rgb(186,33,33)}
+#textcolor175{color:rgb(186,33,33)}
+#textcolor176{color:rgb(186,33,33)}
+#textcolor177{color:rgb(0,127,0)}
+#textcolor178{color:rgb(186,33,33)}
+#textcolor179{color:rgb(186,33,33)}
+#textcolor180{color:rgb(186,33,33)}
+#textcolor181{color:rgb(0,127,0)}
+#textcolor182{color:rgb(186,33,33)}
+#textcolor183{color:rgb(186,33,33)}
+#textcolor184{color:rgb(186,33,33)}
+#textcolor185{color:rgb(163,89,119)}
+#textcolor186{color:rgb(101,101,101)}
+#textcolor187{color:rgb(163,89,119)}
+#textcolor188{color:rgb(186,33,33)}
+#textcolor189{color:rgb(0,127,0)}
+#textcolor190{color:rgb(186,33,33)}
+#textcolor191{color:rgb(186,33,33)}
+#textcolor192{color:rgb(186,33,33)}
+#textcolor193{color:rgb(0,127,0)}
+#textcolor194{color:rgb(186,33,33)}
+#textcolor195{color:rgb(186,33,33)}
+#textcolor196{color:rgb(186,33,33)}
+#textcolor197{color:rgb(101,101,101)}
+#textcolor198{color:rgb(186,33,33)}
+#textcolor199{color:rgb(186,33,33)}
+#textcolor200{color:rgb(186,33,33)}
+#textcolor201{color:rgb(0,127,0)}
+#textcolor202{color:rgb(186,33,33)}
+#textcolor203{color:rgb(186,33,33)}
+#textcolor204{color:rgb(186,33,33)}
+#textcolor205{color:rgb(0,127,0)}
+#textcolor206{color:rgb(186,33,33)}
+#textcolor207{color:rgb(186,33,33)}
+#textcolor208{color:rgb(186,33,33)}
+#textcolor209{color:rgb(101,101,101)}
+#textcolor210{color:rgb(186,33,33)}
+#textcolor211{color:rgb(186,33,33)}
+#textcolor212{color:rgb(186,33,33)}
+#textcolor213{color:rgb(0,127,0)}
+#textcolor214{color:rgb(186,33,33)}
+#textcolor215{color:rgb(186,33,33)}
+#textcolor216{color:rgb(186,33,33)}
+#textcolor217{color:rgb(0,127,0)}
+#textcolor218{color:rgb(186,33,33)}
+#textcolor219{color:rgb(186,33,33)}
+#textcolor220{color:rgb(186,33,33)}
+#textcolor221{color:rgb(101,101,101)}
+#textcolor222{color:rgb(186,33,33)}
+#textcolor223{color:rgb(186,33,33)}
+#textcolor224{color:rgb(186,33,33)}
+#textcolor225{color:rgb(0,127,0)}
+#textcolor226{color:rgb(186,33,33)}
+#textcolor227{color:rgb(186,33,33)}
+#textcolor228{color:rgb(186,33,33)}
+#textcolor229{color:rgb(101,101,101)}
+#textcolor230{color:rgb(186,33,33)}
+#textcolor231{color:rgb(186,33,33)}
+#textcolor232{color:rgb(186,33,33)}
+#textcolor233{color:rgb(0,127,0)}
+#textcolor234{color:rgb(186,33,33)}
+#textcolor235{color:rgb(186,33,33)}
+#textcolor236{color:rgb(186,33,33)}
+#textcolor237{color:rgb(101,101,101)}
+#textcolor238{color:rgb(186,33,33)}
+#textcolor239{color:rgb(186,33,33)}
+#textcolor240{color:rgb(186,33,33)}
+#textcolor241{color:rgb(0,127,0)}
+#textcolor242{color:rgb(186,33,33)}
+#textcolor243{color:rgb(186,33,33)}
+#textcolor244{color:rgb(186,33,33)}
+#textcolor245{color:rgb(101,101,101)}
+#textcolor246{color:rgb(186,33,33)}
+#textcolor247{color:rgb(186,33,33)}
+#textcolor248{color:rgb(186,33,33)}
+/* end css.sty */
+

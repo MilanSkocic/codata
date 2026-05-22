@@ -1,5 +1,5 @@
 ! SPDX-License-Identifier: MIT
-$BLOCK comment --file man/codata.3.prep
+$BLOCK comment --file man/src/codata.3.prep
 NAME
   codata - libray for fundamental physical constants
 

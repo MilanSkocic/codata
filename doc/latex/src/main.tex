@@ -1,0 +1,125 @@
+\documentclass[11pt,a4paper,twoside,openright]{book}
+\usepackage[margin=2cm]{geometry}
+\usepackage[backend=biber,
+    bibstyle=ieee, 
+    citestyle=numeric-comp,
+    natbib=true,
+    doi=false, 
+    url=false,
+    isbn=false,
+    mincitenames=1,
+    maxcitenames=1,
+    minbibnames=1,
+    maxbibnames=99,
+    backref=true,]
+{biblatex}
+\addbibresource[label=main_bib]{./src/references.bib}
+\usepackage{fancyhdr} %custom headers and footers layout
+\usepackage{lastpage} %package to print the last page
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools} 
+\usepackage{mathastext}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{fancyvrb}
+\usepackage{ccfonts}
+\usepackage{minted}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\hypersetup{
+    bookmarks=true, 		% show bookmarks bar?
+    unicode=true,  		% non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=true,      % page fit to window when opened
+    pdftitle={Electrochemistry},    % title
+    pdfauthor={M. Skocic},     % author
+    pdfsubject={},   % subject of the document
+    pdfnewwindow=true,      % links in new window
+    pdfkeywords={}, % list of keywords
+    colorlinks=False,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=cyan           % color of external links
+}
+
+
+\usepackage{makeidx}
+\makeindex
+
+
+\input{make.in.tex}
+
+\title{{\Huge codata} \\
+{\it Fundamental Physical Constants}\\
+***\\
+Version \FPMVERSION}
+\author{M. Skocic}
+%\date{}
+
+
+
+\begin{document}
+\maketitle
+%\tableofcontents
+
+%=======================================================================
+% FRONTMATTER
+%=======================================================================
+\frontmatter
+\pagestyle{plain}
+\tableofcontents
+\listoffigures
+\listoftables
+\chapter{Preface}
+\chapter{Acknowledgment}
+%=======================================================================
+
+
+
+%=======================================================================
+% MAIN MATTER
+%=======================================================================
+\mainmatter
+\pagestyle{fancy}
+%-----------------------------------------------------------------------
+% EXAMPLES
+\chapter{Examples}
+\href{./latex/codata-refman.pdf}{codata} 
+\lipsum[0-6]
+
+\inputminted{Fortran}{../../example/example.f90}
+\inputminted{c}{../../example/example.c}
+\inputminted{python}{../../example/example.py}
+%-----------------------------------------------------------------------
+% MAN PAGES
+\chapter{Man Pages}
+\section{codata(3)}
+\fvset{}
+\VerbatimInput{../man/build/codata.3.txt}
+
+\section{codata(1)}
+\fvset{}
+\VerbatimInput{../man/build/codata.1.txt}
+%=======================================================================
+    
+
+
+%=======================================================================
+% BACKMATTER
+%=======================================================================
+\backmatter
+\pagestyle{plain}
+%-----------------------------------------------------------------------
+\nocite{*}
+\printbibliography[heading=bibintoc]
+\printindex
+%=======================================================================
+
+
+\end{document}
+%=======================================================================

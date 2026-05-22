@@ -66,7 +66,7 @@ $(C_HEADER):
 prep:
 	make -C srcprep clean
 	make -C srcprep
-	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/man/$(FPM_APPNAME).1.prep
+	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/man/src/$(FPM_APPNAME).1.prep
 
 # ---------------------------------------------------------------------
 
@@ -159,8 +159,9 @@ docs:
 	mkdir -p docs/ford
 	mkdir -p docs/latex
 	mkdir -p docs/man
-	cp -rf doc/man/*.pdf ./docs/man
-	cp -rf doc/latex/*.pdf ./docs/latex
+	cp -rf doc/man/build/* ./docs/man
+	cp -rf doc/latex/build/pdf/* ./docs/latex
+	cp -rf doc/latex/build/html/* ./docs
 	cp -rf doc/sphinx/build/html/* ./docs/sphinx
 	cp -rf doc/ford/build/* ./docs/ford
 
