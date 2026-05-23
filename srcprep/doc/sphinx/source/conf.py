@@ -43,8 +43,8 @@ fortran_lexer = "regex"
 fortran_doc_chars = ["!", ">"]
 
 fortran_sources = [
-	"../../../src",
-    "../../../app"
+	"../../../../src",
+    "../../../../app"
 ]
 
 # -- Options for HTML output -------------------------------------------------

@@ -1,5 +1,8 @@
 ! SPDX-License-Identifier: MIT
-$BLOCK comment --file man/src/codata.3.prep
+
+! MAN PAGE
+! {{{
+$BLOCK comment --prefix "!!" --file man/src/codata.3.prep
 NAME
   codata - libray for fundamental physical constants
 
@@ -105,9 +108,14 @@ CODATA 2010
 $INCLUDE ../data/codata_constants_2010.mantxt
 
 $ENDBLOCK
-module codata
+!}}}
+!=======================================================================
+! MODULE: codata
+!=======================================================================
+!{{{1
+module codata 
 !! Codata library - Fundamental Physical Constants.
-!! Available constants from 2010, 2014, 2018 and 2022.
+!! Available constants for 2010, 2014, 2018 and 2022.
 !! The latest values (2022) do not have the year as a suffix in their name.
 !! Older values can be used and they feature the year as a suffix in their name.
 use, intrinsic :: iso_c_binding, only: c_ptr, c_null_char, c_loc
@@ -122,15 +130,20 @@ public
 $IFDEF FPM_VERSION
 $IMPORT FPM_VERSION
 character(len=*), parameter, private :: v = '${FPM_VERSION}'
+$ELSE
+character(len=*), parameter, private :: v = 'x.y.z'
 $ENDIF
 character(len=:), allocatable, target, private :: vf
 character(len=:), allocatable, target, private :: vc
 
+
+
 contains
-!=======================================================================
-! GET_VERSION() - DEPRECATED - WILL BE REMOVED IN 3.0
-!=======================================================================
-function get_version()result(fptr)
+!-----------------------------------------------------------------------
+! GET_VERSION() - DEPRECATED - WILL BE REMOVED IN 3.0 
+!-----------------------------------------------------------------------
+!{{{2
+function get_version()result(fptr) 
 !! Get the version.
 !! Deprecated. It will be removed in the next major release 3.0 when
 !! the new codata constants will be released (2026).
@@ -156,12 +169,15 @@ allocate(character(len=len(fptr)+1) :: vc)
 vc = fptr // c_null_char
 cptr = c_loc(vc)
 end function capi_get_version
-!=======================================================================
+!}}}
+!-----------------------------------------------------------------------
 
 
-!=======================================================================
+
+!-----------------------------------------------------------------------
 ! VERSION()
-!=======================================================================
+!-----------------------------------------------------------------------
+!{{{2
 function version()result(fptr)
 !! Get the version.
 character(len=:), pointer :: fptr !! Pointer to a string (=>version).
@@ -185,5 +201,7 @@ allocate(character(len=len(fptr)+1) :: vc)
 vc = fptr // c_null_char
 cptr = c_loc(vc)
 end function capi_version
-!=======================================================================
+!}}}
+!-----------------------------------------------------------------------
+
 end module codata

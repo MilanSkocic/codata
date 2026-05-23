@@ -1,4 +1,5 @@
 \documentclass[11pt,a4paper,twoside,openright]{book}
+%{{{
 \usepackage[margin=2cm]{geometry}
 \usepackage[backend=biber,
     bibstyle=ieee, 
@@ -50,6 +51,7 @@
 
 \usepackage{makeidx}
 \makeindex
+%}}}
 
 
 \input{make.in.tex}
@@ -62,7 +64,6 @@ Version \FPMVERSION}
 %\date{}
 
 
-
 \begin{document}
 \maketitle
 %\tableofcontents
@@ -70,13 +71,15 @@ Version \FPMVERSION}
 %=======================================================================
 % FRONTMATTER
 %=======================================================================
-\frontmatter
+%{{{
+\frontmatter 
 \pagestyle{plain}
 \tableofcontents
 \listoffigures
 \listoftables
-\chapter{Preface}
-\chapter{Acknowledgment}
+
+\input{./src/preface.tex}
+%}}}
 %=======================================================================
 
 
@@ -84,27 +87,27 @@ Version \FPMVERSION}
 %=======================================================================
 % MAIN MATTER
 %=======================================================================
+%{{{
 \mainmatter
 \pagestyle{fancy}
 %-----------------------------------------------------------------------
 % EXAMPLES
 \chapter{Examples}
-\href{./latex/codata-refman.pdf}{codata} 
-\lipsum[0-6]
 
 \inputminted{Fortran}{../../../example/example.f90}
 \inputminted{c}{../../../example/example.c}
 \inputminted{python}{../../../example/example.py}
 %-----------------------------------------------------------------------
 % MAN PAGES
-\chapter{Man Pages}
-\section{codata(3)}
+\part{Man Pages}
+\chapter{codata(3)}
 \fvset{}
 \VerbatimInput{../man/build/codata.3.txt}
 
-\section{codata(1)}
+\chapter{codata(1)}
 \fvset{}
 \VerbatimInput{../man/build/codata.1.txt}
+%}}}
 %=======================================================================
     
 
@@ -112,12 +115,14 @@ Version \FPMVERSION}
 %=======================================================================
 % BACKMATTER
 %=======================================================================
+%{{{
 \backmatter
 \pagestyle{plain}
 %-----------------------------------------------------------------------
 \nocite{*}
 \printbibliography[heading=bibintoc]
 \printindex
+%}}}
 %=======================================================================
 
 

@@ -13,6 +13,8 @@ HTML_FOLDER=$(BUILD_FOLDER)/html
 MK4BUILD=html.mk4
 MK4CFG=html.cfg
 
+README=../../../README
+
 .ONESHELL:
 
 .PHONY: all dirs tex biber bibtex index link copy clean html
@@ -20,9 +22,8 @@ MK4CFG=html.cfg
 all: dirs tex biber index link copy html
 
 dirs:
-	mkdir -p $(BUILD_FOLDER)
-	mkdir -p $(BIN_FOLDER)
 	mkdir -p $(HTML_FOLDER)
+	mkdir -p $(BIN_FOLDER)
 
 tex:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 $(SRC_FOLDER)/$(FNAME).tex
