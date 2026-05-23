@@ -25,7 +25,7 @@ FROM SOURCES
 
 PYTHON WRAPPER
   If you also need to build the Python wrapper. There is script build.sh
-  which builds the static and shared library and also the Python wrapper.
+  which builds the static and shared library and then the Python wrapper.
 
   You need to install a compilation toolchain for C. 
   The C compiler must support the c11 standard.
