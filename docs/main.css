@@ -26,10 +26,15 @@
 .ccr-10x-x-120{font-size:109%;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
+.cmtt-10x-x-109{font-family: monospace,monospace;}
 .ccti-10x-x-109{font-style: italic;}
 .ccti-10x-x-109{font-style: italic;}
 .cmitt-10x-x-109{font-family: monospace,monospace; font-style: italic;}
 .tctt-1095{font-family: monospace,monospace;}
+.ccr-6{font-size:54%;}
+.cmtt-8x-x-75{font-size:54%;font-family: monospace,monospace;}
+.cmtt-8x-x-75{font-family: monospace,monospace;}
+.cmtt-8x-x-75{font-family: monospace,monospace;}
 p{margin-top:0;margin-bottom:0}
 p.indent{text-indent:0;}
 p + p{margin-top:1em;}
@@ -181,7 +186,6 @@ pre{font-family: "CMUC"}
 pre.fancyvrb{font-family: "CMUC"}
 .cmtt-10x-x-109{font-family: "CMUC",monospace;}
 .cmitt-10x-x-109{font-family: "CMUC",monospace; font-style: italic;}
-h1{color:red}
 #textcolor1{color:rgb(0,127,0)}
 #textcolor2{color:rgb(0,127,0)}
 #textcolor3{color:rgb(0,127,0)}
