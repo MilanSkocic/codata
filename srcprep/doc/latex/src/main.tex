@@ -57,18 +57,23 @@
 
 \input{make.in.tex}
 
-\title{{\Huge codata} \\
-{\it Fundamental Physical Constants}\\
-***\\
-Version \FPMVERSION}
-\author{M. Skocic}
-%\date{}
+\title{
+%\textsc{Reference Manual} \\
+\vspace{1cm}
+{\sc \huge type(reference\_manual) :: codata = v\FPMVERSION} \\ 
+\vspace{0.25cm}
+{\it \normalsize ! Fortran library for fundamental physical constants }\\
+}
+\author{*** \\ Milan Skocic}
+\date{\today }
 
 
 \begin{document}
 \maketitle
 %\tableofcontents
-
+{\hspace{1cm} \par
+\vfill 
+\hfill MIT License - Copyright (c) 2022 Milan Skocic \hfill}
 %=======================================================================
 % FRONTMATTER
 %=======================================================================
@@ -107,12 +112,14 @@ Version \FPMVERSION}
 % MAN PAGES
 \part{Man Pages}
 \chapter{codata(3)}
-\fvset{}
-\VerbatimInput{../man/build/codata.3.txt}
+%\fvset{}
+%\VerbatimInput{../man/build/codata.3.txt}
+\input{../man/build/codata.3.tex}
 
 \chapter{codata(1)}
-\fvset{}
-\VerbatimInput{../man/build/codata.1.txt}
+%\fvset{}
+%\VerbatimInput{../man/build/codata.1.txt}
+\input{../man/build/codata.1.tex}
 %-----------------------------------------------------------------------
 % APPENDICES
 \part{Appendices}
