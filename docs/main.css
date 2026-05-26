@@ -1,17 +1,22 @@
  
 /* start css.sty */
 .cmr-7{font-size:63%;}
+.cmmi-7{font-size:63%;font-style: italic;}
+.cmsy-7{font-size:63%;}
 .cmr-10x-x-109{}
-.ccr-10x-x-109{}
-.ccr-9{font-size:81%;}
-.ccr-7{font-size:63%;}
-.xccmi-10x-x-109{}
-.xccmi-9{font-size:81%;}
-.xccmi-7{font-size:63%;}
-.xccsy-10x-x-109{}
-.xccsy-9{font-size:81%;}
-.xccsy-7{font-size:63%;}
-.xccex-10{font-size:90%;}
+.cmbx-10x-x-109{ font-weight: bold;}
+.cmbsy-10x-x-109{font-weight: bold;}
+.cmbsy-10x-x-109{font-weight: bold;}
+.cmbsy-10x-x-109{font-weight: bold;}
+.cmbsy-9{font-size:81%;font-weight: bold;}
+.cmbsy-9{font-weight: bold;}
+.cmbsy-9{font-weight: bold;}
+.cmbsy-7{font-size:63%;font-weight: bold;}
+.cmbsy-7{font-weight: bold;}
+.cmbsy-7{font-weight: bold;}
+.cmex-10x-x-109{}
+.cmex-9{font-size:81%;}
+.cmex-7{font-size:63%;}
 .msam-10x-x-109{}
 .msam-10x-x-90{font-size:81%;}
 .msam-7{font-size:63%;}
@@ -19,22 +24,23 @@
 .msbm-10x-x-90{font-size:81%;}
 .msbm-7{font-size:63%;}
 .cmr-9{font-size:81%;}
-.ccr-10x-x-248{font-size:225%;}
-.ccr-10x-x-172{font-size:156%;}
-.ccti-10x-x-172{font-size:156%;font-style: italic;}
-.ccti-10x-x-172{font-style: italic;}
-.ccr-10x-x-120{font-size:109%;}
+.cmmi-10x-x-109{font-style: italic;}
+.cmmi-9{font-size:81%;font-style: italic;}
+.cmsy-10x-x-109{}
+.cmsy-9{font-size:81%;}
+.cmr-17x-x-120{font-size:185%;}
+.cmcsc-10x-x-207{font-size:188%;}
+.cmti-10x-x-109{ font-style: italic;}
+.cmr-12{font-size:109%;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
-.ccti-10x-x-109{font-style: italic;}
-.ccti-10x-x-109{font-style: italic;}
 .cmitt-10x-x-109{font-family: monospace,monospace; font-style: italic;}
-.tctt-1095{font-family: monospace,monospace;}
-.ccr-6{font-size:54%;}
+.cmr-6{font-size:54%;}
 .cmtt-8x-x-75{font-size:54%;font-family: monospace,monospace;}
 .cmtt-8x-x-75{font-family: monospace,monospace;}
 .cmtt-8x-x-75{font-family: monospace,monospace;}
+.small-caps{font-variant: small-caps; }
 p{margin-top:0;margin-bottom:0}
 p.indent{text-indent:0;}
 p + p{margin-top:1em;}
@@ -181,11 +187,7 @@ mtd.align-even{margin-right:2em; text-align:left;}
 pre.fancyvrb {white-space: pre-wrap; margin:0em;font-family:monospace,monospace;}
 code.minted-inline{font-family:monospace,monospace;}
 @font-face {font-family: "CMUC";src: url("./fonts/cmunorm.ttf") format("truetype");}
-body{width:21cm;margin:1em auto;text-align:justify;font-family:"CMUC",serif;font-size:15pt}
-pre{font-family: "CMUC"}
-pre.fancyvrb{font-family: "CMUC"}
-.cmtt-10x-x-109{font-family: "CMUC",monospace;}
-.cmitt-10x-x-109{font-family: "CMUC",monospace; font-style: italic;}
+body{width:21cm;margin:1em auto;text-align:justify;font-family:sans-serif;font-size:15pt}
 #textcolor1{color:rgb(0,127,0)}
 #textcolor2{color:rgb(0,127,0)}
 #textcolor3{color:rgb(0,127,0)}

@@ -1,9 +1,8 @@
 <!DOCTYPE html> 
 <html lang='en-US' xml:lang='en-US'> 
-<head> <title>codata
-Fundamental Physical Constants
-***
-Version 2.5.2</title> 
+<head> <title> type(reference_anual) :: codata = v2.5.2
+ ! Fortran library for fundamental physical constants
+</title> 
 <meta charset='utf-8' /> 
 <meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
 <meta content='width=device-width,initial-scale=1' name='viewport' /> 
@@ -11,162 +10,157 @@ Version 2.5.2</title>
 <meta content='main.tex' name='src' /> 
  <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
 </head><body>
-   <div class='maketitle'>                                                                                         
-                                                                                            
-                                                                                            
-                                                                                            
-                                                                                            
-                                                                                            
+   <div class='maketitle'>                                                                                   
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
 
-<h2 class='titleHead'>codata<br />
-Fundamental Physical Constants<br />
-***<br />
-Version 2.5.2</h2>
- <div class='author'><span class='ccr-10x-x-120'>M. Skocic</span></div><br />
-<div class='date'><span class='ccr-10x-x-120'>May 24, 2026</span></div>
-                                                                                            
-                                                                                            
-   </div>
-                                                                                            
-                                                                                            
-                                                                                            
-                                                                                            
-<!-- l. 78 --><p class='indent'>
-                                                                                            
-                                                                                            
+<h2 class='titleHead'> type(reference_manual) :: codata =
+v2.5.2<br />
+! Fortran library for fundamental physical constants<br />
+</h2>
+      <div class='author'><span class='cmr-12'>***</span>
+<br /> <span class='cmr-12'>Milan Skocic</span></div><br />
+<div class='date'><span class='cmr-12'>May 26, 2026</span></div>
+                                                                                       
+                                                                                       
+   </div><p>  
+<!-- l. 76 --></p><p class='indent'>                                                  MIT License - Copyright (c) 2022 Milan
+Skocic
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!-- l. 83 --><p class='indent'>
+                                                                                       
+                                                                                       
 </p>
    <div class='tableofcontents'>
    <span class='likechapterToc'><a href='#contents' id='QQ2-1-1'>Contents</a></span>
 <br />   <span class='likechapterToc'><a href='#list-of-figures' id='QQ2-1-2'>List of Figures</a></span>
 <br />   <span class='likechapterToc'><a href='#list-of-tables' id='QQ2-1-3'>List of Tables</a></span>
 <br />   <span class='chapterToc'> <a href='#preface' id='QQ2-1-4'>Preface</a></span>
-<br />   <span class='chapterToc'>1 <a href='#examples' id='QQ2-1-5'>Examples</a></span>
-<br />   <span class='partToc'>I  <a href='ManPages.html#man-pages' id='QQ2-2-6'>Man Pages</a></span>
-<br />   <span class='chapterToc'>2 <a href='ManPages.html#codata' id='QQ2-2-7'>codata(3)</a></span>
-<br />   <span class='chapterToc'>3 <a href='ManPages.html#codata1' id='QQ2-2-8'>codata(1)</a></span>
-<br />   <span class='partToc'>II  <a href='Appendices.html#appendices' id='QQ2-3-9'>Appendices</a></span>
-<br />   <span class='chapterToc'>4 <a href='Appendices.html#raw-data' id='QQ2-3-10'>Raw Data</a></span>
-<br />   <span class='likechapterToc'><a href='Appendices.html#bibliography' id='QQ2-3-15'>Bibliography</a></span>
+<br />   <span class='partToc'>I  <a href='Introduction.html#introduction' id='QQ2-2-5'>Introduction</a></span>
+<br />   <span class='partToc'>II  <a href='Installation.html#installation' id='QQ2-3-6'>Installation</a></span>
+<br />   <span class='partToc'>III  <a href='TheoreticalBackground.html#theoretical-background' id='QQ2-4-7'>Theoretical Background</a></span>
+<br />   <span class='partToc'>IV  <a href='API.html#api' id='QQ2-5-8'>API</a></span>
+<br />   <span class='partToc'>V  <a href='ExamplesandTutorials.html#examples-and-tutorials' id='QQ2-6-9'>Examples and Tutorials</a></span>
+<br />   <span class='chapterToc'>1 <a href='ExamplesandTutorials.html#examples' id='QQ2-6-10'>Examples</a></span>
+<br />   <span class='partToc'>VI  <a href='ManPages.html#man-pages' id='QQ2-7-11'>Man Pages</a></span>
+<br />   <span class='chapterToc'>2 <a href='ManPages.html#codata' id='QQ2-7-12'>codata(3)</a></span>
+<br />   <span class='chapterToc'>3 <a href='ManPages.html#codata1' id='QQ2-7-24'>codata(1)</a></span>
+<br />   <span class='partToc'>VII  <a href='Appendices.html#appendices' id='QQ2-8-32'>Appendices</a></span>
+<br />   <span class='chapterToc'>4 <a href='Appendices.html#raw-data' id='QQ2-8-33'>Raw Data</a></span>
+<br />   <span class='likechapterToc'><a href='Appendices.html#bibliography' id='QQ2-8-38'>Bibliography</a></span>
 <br />   <span class='chapterToc'> <a href='Appendices.html#bibliography1'>Bibliography</a></span>
    </div>
    <h2 class='likechapterHead' id='contents'><a id='x1-1000'></a>Contents</h2>
    <div class='tableofcontents'>
    <span class='chapterToc'> <a href='#preface'>Preface</a></span>
-<br />   <span class='chapterToc'>1 <a href='#examples'>Examples</a></span>
-<br />   <span class='partToc'>I  <a href='ManPages.html#man-pages'>Man Pages</a></span>
+<br />   <span class='partToc'>I  <a href='Introduction.html#introduction'>Introduction</a></span>
+<br />   <span class='partToc'>II  <a href='Installation.html#installation'>Installation</a></span>
+<br />   <span class='partToc'>III  <a href='TheoreticalBackground.html#theoretical-background'>Theoretical Background</a></span>
+<br />   <span class='partToc'>IV  <a href='API.html#api'>API</a></span>
+<br />   <span class='partToc'>V  <a href='ExamplesandTutorials.html#examples-and-tutorials'>Examples and Tutorials</a></span>
+<br />   <span class='chapterToc'>1 <a href='ExamplesandTutorials.html#examples'>Examples</a></span>
+<br />   <span class='partToc'>VI  <a href='ManPages.html#man-pages'>Man Pages</a></span>
 <br />   <span class='chapterToc'>2 <a href='ManPages.html#codata'>codata(3)</a></span>
 <br />   <span class='chapterToc'>3 <a href='ManPages.html#codata1'>codata(1)</a></span>
-<br />   <span class='partToc'>II  <a href='Appendices.html#appendices'>Appendices</a></span>
+<br />   <span class='partToc'>VII  <a href='Appendices.html#appendices'>Appendices</a></span>
 <br />   <span class='chapterToc'>4 <a href='Appendices.html#raw-data'>Raw Data</a></span>
-<br />   <span class='sectionToc'>4.1 <a href='Appendices.html#_' id='QQ2-3-11'>2010</a></span>
-<br />   <span class='sectionToc'>4.2 <a href='Appendices.html#_1' id='QQ2-3-12'>2014</a></span>
-<br />   <span class='sectionToc'>4.3 <a href='Appendices.html#_2' id='QQ2-3-13'>2018</a></span>
-<br />   <span class='sectionToc'>4.4 <a href='Appendices.html#_3' id='QQ2-3-14'>2022</a></span>
+<br />   <span class='sectionToc'>4.1 <a href='Appendices.html#_' id='QQ2-8-34'>2010</a></span>
+<br />   <span class='sectionToc'>4.2 <a href='Appendices.html#_1' id='QQ2-8-35'>2014</a></span>
+<br />   <span class='sectionToc'>4.3 <a href='Appendices.html#_2' id='QQ2-8-36'>2018</a></span>
+<br />   <span class='sectionToc'>4.4 <a href='Appendices.html#_3' id='QQ2-8-37'>2022</a></span>
 <br />   <span class='chapterToc'> <a href='Appendices.html#bibliography1'>Bibliography</a></span>
    </div>
-                                                                                            
-                                                                                            
-                                                                                            
-                                                                                            
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
    <h2 class='likechapterHead' id='list-of-figures'><a id='x1-2000'></a>List of Figures</h2>
    <div class='tableofcontents'>
    </div>
-                                                                                            
-                                                                                            
-                                                                                            
-                                                                                            
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
    <h2 class='likechapterHead' id='list-of-tables'><a id='x1-3000'></a>List of Tables</h2>
    <div class='tableofcontents'>
    </div>
-                                                                                            
-                                                                                            
+                                                                                       
+                                                                                       
 <!-- l. 1 --><p class='indent'>
-                                                                                            
-                                                                                            
+                                                                                       
+                                                                                       
 </p>
    <h2 class='chapterHead' id='preface'><a id='x1-4000'></a>Preface</h2>
-<!-- l. 2 --><p class='noindent'>This document provides a detailed documentation for the <span class='ccti-10x-x-109'>codata </span>library.
-</p>
+<!-- l. 2 --><p class='noindent'>This document provides a reference manual for the library <span class='cmti-10x-x-109'>codata</span>. The documentation is PDF-centric
+and authored in LaTeX in order to provide a stable, high-quality printout. The PDF edition preserves
+the intended layout, typography, equations, figures and cross-references, ensuring a consistent reading
+experience across platforms and over time. A HTML version of the documentation is rendered with
+<span class='cmti-10x-x-109'>make4ht</span>.
+</p><!-- l. 10 --><p class='indent'>   In addition, POSIX-style man pages are generated from the sources using the <span class='cmti-10x-x-109'>prep(1) </span>preprocessor
+and are provided as both terminal-native documentation in the binaries and as a PDF
+document.
+</p><!-- l. 14 --><p class='indent'>   Additional HTML versions are also available for users who prefer quick navigation, keyword search,
+or rapid access to specific sections. However, those versions provide only documentation of the API
+generated from the docstrings using <span class='cmti-10x-x-109'>Sphinx </span>and <span class='cmti-10x-x-109'>FORD</span>. They are provided as a convenient
+complement to the present PDF documentation, and should not be considered as a replacement for the
+present reference manual. The <span class='cmti-10x-x-109'>Sphinx </span>HTML version presents the APIs for Fortran, C, and Python —
+whereas, the <span class='cmti-10x-x-109'>FORD </span>HTML version is Fortran-specific and is primarily intended for Fortran
+users.
+</p><!-- l. 26 --><p class='noindent'>Related Documentation: </p>
      <ul class='itemize1'>
-     <li class='itemize'> <a href='https://milanskocic.github.io/codata'>HTML version of the reference manual.</a>
+     <li class='itemize'>Reference Manual [HTML]: <a class='url' href='https://milanskocic.github.io/codata'><span class='cmtt-10x-x-109'>https://milanskocic.github.io/codata</span></a>
      </li>
-     <li class='itemize'> <a href='./latex/codata-refman.pdf'>PDF version of the present reference manual.</a>
+     <li class='itemize'>Man Pages [GROFF, TXT, PDF]: <a class='url' href='https://milanskocic.github.io/codata/man/'><span class='cmtt-10x-x-109'>https://milanskocic.github.io/codata/man/</span></a>
      </li>
-     <li class='itemize'> <a href='./sphinx/index.html'>Auto-generated documentation from docstrings using <span class='ccti-10x-x-109'>Sphinx </span>and <span class='ccti-10x-x-109'>sphinx-domain-fortran</span>.</a>
+     <li class='itemize'>APIs with Sphinx [HTML]: <a class='url' href='https://milanskocic.github.io/codata/sphinx'><span class='cmtt-10x-x-109'>https://milanskocic.github.io/codata/sphinx</span></a>
      </li>
-     <li class='itemize'> <a href='./ford/index.html'>Auto-generated documentation from the docstrings using <span class='ccti-10x-x-109'>FORD </span>dedicated to Fortran only.</a>
+     <li class='itemize'>API with FORD [HTML]: <a class='url' href='https://milanskocic.github.io/codata/ford'><span class='cmtt-10x-x-109'>https://milanskocic.github.io/codata/ford</span></a></li></ul>
+<!-- l. 35 --><p class='noindent'>Related resources: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>Binary releases: <a class='url' href='https://github.com/MilanSkocic/codata/releases'><span class='cmtt-10x-x-109'>https://github.com/MilanSkocic/codata/releases</span></a>
      </li>
-     <li class='itemize'> <a href='./man/codata-bookman.pdf'>PDF version of the man pages concatenated with <span class='ccti-10x-x-109'>bookman</span>.</a></li></ul>
-                                                                                            
-                                                                                            
-<!-- l. 92 --><p class='indent'>
-                                                                                            
-                                                                                            
-                                                                                            
-                                                                                            
-</p><!-- l. 96 --><p class='indent'>
-                                                                                            
-                                                                                            
+     <li class='itemize'><span class='cmti-10x-x-109'>prep(1)</span>: <a class='url' href='https://github.com/urbanjost/prep'><span class='cmtt-10x-x-109'>https://github.com/urbanjost/prep</span></a>
+     </li>
+     <li class='itemize'><span class='cmti-10x-x-109'>make4ht</span>: <a class='url' href='https://github.com/michal-h21/make4ht'><span class='cmtt-10x-x-109'>https://github.com/michal-h21/make4ht</span></a>
+     </li>
+     <li class='itemize'>Sphinx: <a class='url' href='https://github.com/fortran-lang/sphinx-fortran-domain'><span class='cmtt-10x-x-109'>https://github.com/fortran-lang/sphinx-fortran-domain</span></a>
+                                                                                       
+                                                                                       
+     </li>
+     <li class='itemize'>FORD: <a class='url' href='https://github.com/Fortran-FOSS-Programmers/ford'><span class='cmtt-10x-x-109'>https://github.com/Fortran-FOSS-Programmers/ford</span></a></li></ul>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<!-- l. 100 --><p class='indent'>
+                                                                                       
+                                                                                       
 </p>
-   <h2 class='chapterHead' id='examples'><span class='titlemark'>Chapter 1</span><br /><a id='x1-50001'></a>Examples</h2>
-   <pre class='fancyvrb' id='fancyvrb1'><a id='x1-5002r1'></a><span id='textcolor1'><span class='cmtt-10x-x-109'>program </span></span><span class='cmtt-10x-x-109'>example_in_f</span> 
-<a id='x1-5004r2'></a><span id='textcolor2'><span class='cmtt-10x-x-109'>use </span></span><span class='cmtt-10x-x-109'>codata</span> 
-<a id='x1-5006r3'></a><span id='textcolor3'><span class='cmtt-10x-x-109'>implicit </span></span><span id='textcolor4'><span class='cmtt-10x-x-109'>none</span></span> 
-<a id='x1-5008r4'></a><span id='textcolor5'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor6'> </span><span id='textcolor7'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor8'> </span><span id='textcolor9'><span class='cmtt-10x-x-109'>'########## EXAMPLE IN FORTRAN ##########'</span></span> 
-<a id='x1-5010r5'></a><span id='textcolor10'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor11'> </span><span id='textcolor12'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor13'> </span><span id='textcolor14'><span class='cmtt-10x-x-109'>'# VERSION'</span></span> 
-<a id='x1-5012r6'></a><span id='textcolor15'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor16'> </span><span id='textcolor17'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor18'> </span><span id='textcolor19'><span class='cmtt-10x-x-109'>"version = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor20'> </span><span class='cmtt-10x-x-109'>version()</span> 
-<a id='x1-5014r7'></a><span id='textcolor21'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor22'> </span><span id='textcolor23'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor24'> </span><span id='textcolor25'><span class='cmtt-10x-x-109'>'# CONSTANTS'</span></span> 
-<a id='x1-5016r8'></a><span id='textcolor26'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor27'> </span><span id='textcolor28'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor29'> </span><span id='textcolor30'><span class='cmtt-10x-x-109'>"c = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor31'>  </span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM%</span><span id='textcolor32'><span class='cmtt-10x-x-109'>value</span></span> 
-<a id='x1-5018r9'></a><span id='textcolor33'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor34'> </span><span id='textcolor35'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor36'> </span><span id='textcolor37'><span class='cmtt-10x-x-109'>'# UNCERTAINTY'</span></span> 
-<a id='x1-5020r10'></a><span id='textcolor38'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor39'> </span><span id='textcolor40'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor41'> </span><span id='textcolor42'><span class='cmtt-10x-x-109'>"u(c) = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor43'> </span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM%uncertainty</span> 
-<a id='x1-5022r11'></a><span id='textcolor44'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor45'> </span><span id='textcolor46'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor47'> </span><span id='textcolor48'><span class='cmtt-10x-x-109'>'# OLDER VALUES'</span></span> 
-<a id='x1-5024r12'></a><span id='textcolor49'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor50'> </span><span id='textcolor51'><span class='cmtt-10x-x-109'>'(A, F23.16)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor52'> </span><span id='textcolor53'><span class='cmtt-10x-x-109'>"Mu_2022(latest) = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor54'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT%</span><span id='textcolor55'><span class='cmtt-10x-x-109'>value</span></span> 
-<a id='x1-5026r13'></a><span id='textcolor56'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor57'> </span><span id='textcolor58'><span class='cmtt-10x-x-109'>'(A, F23.16)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor59'> </span><span id='textcolor60'><span class='cmtt-10x-x-109'>"Mu_2018 = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor61'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2018%</span><span id='textcolor62'><span class='cmtt-10x-x-109'>value</span></span> 
-<a id='x1-5028r14'></a><span id='textcolor63'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor64'> </span><span id='textcolor65'><span class='cmtt-10x-x-109'>'(A, F23.16)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor66'> </span><span id='textcolor67'><span class='cmtt-10x-x-109'>"Mu_2014 = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor68'>  </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2014%</span><span id='textcolor69'><span class='cmtt-10x-x-109'>value</span></span> 
-<a id='x1-5030r15'></a><span id='textcolor70'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor71'> </span><span id='textcolor72'><span class='cmtt-10x-x-109'>'(A, F23.16)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor73'> </span><span id='textcolor74'><span class='cmtt-10x-x-109'>"Mu_2010 = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor75'>  </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2010%</span><span id='textcolor76'><span class='cmtt-10x-x-109'>value</span></span> 
-<a id='x1-5032r16'></a><span id='textcolor77'><span class='cmtt-10x-x-109'>end </span></span><span id='textcolor78'><span class='cmtt-10x-x-109'>program</span></span></pre>
-<pre class='fancyvrb' id='fancyvrb2'><a id='x1-5034r1'></a><span id='textcolor79'><span class='cmitt-10x-x-109'>#</span></span><span id='textcolor80'><span class='cmitt-10x-x-109'>include</span></span><span id='textcolor81'> </span><span id='textcolor82'><span class='cmitt-10x-x-109'>&lt;stdio.h&gt;</span></span> 
-<a id='x1-5036r2'></a><span id='textcolor83'><span class='cmitt-10x-x-109'>#</span></span><span id='textcolor84'><span class='cmitt-10x-x-109'>include</span></span><span id='textcolor85'> </span><span id='textcolor86'><span class='cmitt-10x-x-109'>"codata.h"</span></span> 
-<a id='x1-5038r3'></a><span id='textcolor87'><span class='cmtt-10x-x-109'>int</span></span><span id='textcolor88'> </span><span id='textcolor89'><span class='cmtt-10x-x-109'>main</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor90'><span class='cmtt-10x-x-109'>void</span></span><span class='cmtt-10x-x-109'>){</span> 
-<a id='x1-5040r4'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor91'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor92'><span class='cmtt-10x-x-109'>########## EXAMPLE IN C ##########</span></span><span id='textcolor93'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor94'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
-<a id='x1-5042r5'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor95'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor96'><span class='cmtt-10x-x-109'>%s</span></span><span id='textcolor97'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor98'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor99'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor100'><span class='cmtt-10x-x-109'># VERSION</span></span><span id='textcolor101'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
-<a id='x1-5044r6'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor102'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor103'><span class='cmtt-10x-x-109'>version = %s</span></span><span id='textcolor104'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor105'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor106'> </span><span class='cmtt-10x-x-109'>codata_version());</span> 
-<a id='x1-5046r7'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor107'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor108'><span class='cmtt-10x-x-109'>%s</span></span><span id='textcolor109'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor110'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor111'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor112'><span class='cmtt-10x-x-109'># CONSTANTS</span></span><span id='textcolor113'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
-<a id='x1-5048r8'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor114'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor115'><span class='cmtt-10x-x-109'>c = %f</span></span><span id='textcolor116'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor117'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor118'> </span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM.value);</span> 
-<a id='x1-5050r9'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor119'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor120'><span class='cmtt-10x-x-109'>%s</span></span><span id='textcolor121'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor122'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor123'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor124'><span class='cmtt-10x-x-109'># UNCERTAINTY</span></span><span id='textcolor125'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
-<a id='x1-5052r10'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor126'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor127'><span class='cmtt-10x-x-109'>u(c) = %f</span></span><span id='textcolor128'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor129'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor130'> </span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM.uncertainty);</span> 
-<a id='x1-5054r11'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor131'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor132'><span class='cmtt-10x-x-109'>%s</span></span><span id='textcolor133'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor134'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor135'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor136'><span class='cmtt-10x-x-109'># OLDER VALUES</span></span><span id='textcolor137'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
-<a id='x1-5056r12'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor138'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor139'><span class='cmtt-10x-x-109'>Mu_2022(latest) = %23.16f</span></span><span id='textcolor140'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor141'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor142'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT.value);</span> 
-<a id='x1-5058r13'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor143'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor144'><span class='cmtt-10x-x-109'>Mu_2018 = %23.16f</span></span><span id='textcolor145'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor146'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor147'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2018.value);</span> 
-<a id='x1-5060r14'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor148'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor149'><span class='cmtt-10x-x-109'>Mu_2014 = %23.16f</span></span><span id='textcolor150'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor151'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor152'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2014.value);</span> 
-<a id='x1-5062r15'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor153'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor154'><span class='cmtt-10x-x-109'>Mu_2010 = %23.16f</span></span><span id='textcolor155'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor156'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor157'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2010.value);</span> 
-<a id='x1-5064r16'></a><span id='textcolor158'><span class='cmtt-10x-x-109'>return</span></span><span id='textcolor159'> </span><span id='textcolor160'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>;</span> 
-<a id='x1-5066r17'></a><span class='cmtt-10x-x-109'>}</span></pre>
-<pre class='fancyvrb' id='fancyvrb3'><a id='x1-5068r1'></a><span id='textcolor161'><span class='cmtt-10x-x-109'>import</span></span><span id='textcolor162'> </span><span id='textcolor163'><span class='cmtt-10x-x-109'>sys</span></span> 
-<a id='x1-5070r2'></a><span class='cmtt-10x-x-109'>sys</span><span id='textcolor164'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>path</span><span id='textcolor165'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>insert(</span><span id='textcolor166'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor167'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor168'><span class='cmtt-10x-x-109'>../py/src/</span></span><span id='textcolor169'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x1-5072r3'></a><span id='textcolor170'><span class='cmtt-10x-x-109'>import</span></span><span id='textcolor171'> </span><span id='textcolor172'><span class='cmtt-10x-x-109'>pycodata</span></span> 
-<a id='x1-5074r4'></a><span id='textcolor173'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor174'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor175'><span class='cmtt-10x-x-109'>########## EXAMPLE IN PYTHON ##########</span></span><span id='textcolor176'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x1-5076r5'></a><span id='textcolor177'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor178'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor179'><span class='cmtt-10x-x-109'># VERSION</span></span><span id='textcolor180'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x1-5078r6'></a><span id='textcolor181'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor182'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor183'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor184'><span class='cmtt-10x-x-109'>version = </span></span><span id='textcolor185'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>pycodata</span><span id='textcolor186'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>__version__</span><span id='textcolor187'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor188'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x1-5080r7'></a><span id='textcolor189'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor190'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor191'><span class='cmtt-10x-x-109'># Constants</span></span><span id='textcolor192'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x1-5082r8'></a><span id='textcolor193'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor194'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor195'><span class='cmtt-10x-x-109'>c =</span></span><span id='textcolor196'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor197'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM[</span><span id='textcolor198'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor199'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor200'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
-<a id='x1-5084r9'></a><span id='textcolor201'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor202'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor203'><span class='cmtt-10x-x-109'># UNCERTAINTY</span></span><span id='textcolor204'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x1-5086r10'></a><span id='textcolor205'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor206'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor207'><span class='cmtt-10x-x-109'>u(c) = </span></span><span id='textcolor208'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor209'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM[</span><span id='textcolor210'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor211'><span class='cmtt-10x-x-109'>uncertainty</span></span><span id='textcolor212'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
-<a id='x1-5088r11'></a><span id='textcolor213'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor214'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor215'><span class='cmtt-10x-x-109'># OLDER VALUES</span></span><span id='textcolor216'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
-<a id='x1-5090r12'></a><span id='textcolor217'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor218'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor219'><span class='cmtt-10x-x-109'>Mu_2022 = </span></span><span id='textcolor220'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor221'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT[</span><span id='textcolor222'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor223'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor224'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
-<a id='x1-5092r13'></a><span id='textcolor225'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor226'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor227'><span class='cmtt-10x-x-109'>Mu_2018 = </span></span><span id='textcolor228'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor229'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2018[</span><span id='textcolor230'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor231'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor232'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
-<a id='x1-5094r14'></a><span id='textcolor233'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor234'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor235'><span class='cmtt-10x-x-109'>Mu_2014 = </span></span><span id='textcolor236'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor237'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2014[</span><span id='textcolor238'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor239'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor240'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
-<a id='x1-5096r15'></a><span id='textcolor241'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor242'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor243'><span class='cmtt-10x-x-109'>Mu_2010 = </span></span><span id='textcolor244'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor245'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2010[</span><span id='textcolor246'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor247'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor248'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span></pre>
-                                                                                            
-                                                                                            
-<!-- l. 103 --><p class='noindent'>
-                                                                                            
-                                                                                            
-</p>
-                                                                                            
-                                                                                            
-                                                                                            
-                                                                                            
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
  
 </body> 
 </html>
