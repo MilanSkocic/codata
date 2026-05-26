@@ -1,5 +1,5 @@
 \chapter{Preface}
-This document provides a reference manual for the library \emph{codata}.
+This document provides a reference manual for the \emph{codata} library.
 The documentation is PDF-centric and authored in \LaTeX\ in order to provide 
 a stable, high-quality printout.
 The PDF edition preserves the intended layout, typography, equations, figures
@@ -22,6 +22,40 @@ The \emph{Sphinx} HTML version presents the APIs for Fortran, C, and Python
 --- whereas, the \emph{FORD} HTML version is Fortran-specific and is primarily
 intended for Fortran users.
 
+\vspace{1cm}
+
+\begin{tikzpicture}[scale=0.8,
+    inout/.style={draw, trapezium, minimum width=2.5cm, align=center},
+    process/.style={draw, rectangle, minimum width=2.5cm, align=center},
+    decision/.style={draw, diamond, aspect=2, align=center},
+    startend/.style={draw, ellipse, minimum width=2.5cm, align=center},
+    ]
+    \node[startend] (SRC) {SOURCES};
+    
+    \node[process, right=1cm of SRC] (PREP) {prep(1)};
+    
+    \node[inout, above right=1cm of PREP] (f90) {sources};
+    \node[process, right=1cm of f90] (FF) {gfortran};
+
+    \node[inout, below right=1cm of PREP] (MANTXT) {Man pages \\ (plain text)};
+    \node[process, right=1cm of MANTXT] (TXT2MAN) {txt2man(1)};
+    \node[inout, text width=2cm, right=1cm of TXT2MAN] (MANPAGES) {Man Pages \\ (groff)};
+    \node[process, below=1cm of MANTXT] (MANPDF) {man(1) + txt2latex(1)};
+    \node[inout, below=1cm of MANPDF] (MANOUT) {Man Pages \\ pdf, txt, tex};
+
+
+    \draw[->] (SRC) -- (PREP);
+    \draw[->] (PREP) -- (f90); 
+    \draw[->] (f90) -- (FF);
+    \draw[->] (PREP) -- (MANTXT); 
+    \draw[->] (MANTXT) -- (TXT2MAN);
+    \draw[->] (TXT2MAN) -- (MANPAGES);
+    \draw[->] (MANTXT) -- (MANPDF);
+    \draw[->] (MANPDF) -- (MANOUT);
+\end{tikzpicture}
+
+
+\vspace{1cm}
 
 \noindent Related Documentation:
 \begin{itemize}
