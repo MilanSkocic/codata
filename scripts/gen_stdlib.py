@@ -10,15 +10,15 @@ def run(fpath_ast: str, fpath_code: str)->None:
     copy = True
 
     for i, line in enumerate(fast):
-        if line.startswith("!=====") and i > 100:
+        if line.startswith("!END FOR STDLIB"):
             copy = False
         if copy:
             new_line = line.replace("codata__constants_type", "stdlib_codata_type")
             new_line = new_line.replace("codata__constants_2022", "stdlib_codata")
+            new_line = new_line.replace("CODATA_CONSTANTS_2022", "STDLIB_CODATA")
             if "!capi" in new_line:
                 new_line=""
             fcode.write(new_line)
-    fcode.write("!======================================================================="+newline)
     fcode.write("end module stdlib_codata")
     fast.close()
     fcode.close()

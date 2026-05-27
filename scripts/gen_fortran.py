@@ -51,8 +51,7 @@ def write_constant(f, var, name, value, uncertainty, unit, year):
                 f"codata_constant_type(\"{name:s}\", &" + newline+\
                 f"{value:s}_dp, {uncertainty:s}_dp, &" + newline+\
                 f"\"{unit:s}\") !! {name:s}" + newline)
-    f.write("!-----------------------------------------------------------------------"+newline)
-    #f.write(newline)
+    f.write(newline)
 
 def write_constant_capi(f, var, name, value, uncertainty, unit, year, count):
     suffix = get_suffix(year)
@@ -105,8 +104,7 @@ def write_constant_capi(f, var, name, value, uncertainty, unit, year, count):
     _cname = cnames[-1]
     f.write(f"{_cname:s} &" + ctag + newline)
     f.write("])" + ctag+newline)
-    f.write("!-----------------------------------------------------------------------"+newline)
-    #f.write(newline)
+    f.write(newline)
 
 
 def write_constant_array(f, var, year, last=False):
@@ -136,8 +134,8 @@ def run(fpath_ast: str, fpath_code: str)->None:
     fcode = open(fpath_code, "w")
     fast = open(fpath_ast, "r")
 
-    write_module_start(fcode, year)
-    write_year(fcode, year)
+    #write_module_start(fcode, year)
+    #write_year(fcode, year)
 
     ast = tomlkit.load(fast)
     fcode.write(newline+newline)
@@ -153,7 +151,8 @@ def run(fpath_ast: str, fpath_code: str)->None:
         
         write_constant(fcode, var, name, value, uncertainty, unit, year)
     fcode.write("!-----------------------------------------------------------------------"+newline)
-    fcode.write("}}}" + newline)
+    fcode.write("!}}}" + newline)
+    fcode.write("!END FOR STDLIB" + newline)
     
     fcode.write(newline+newline)
     fcode.write("!-----------------------------------------------------------------------"+newline)
@@ -168,7 +167,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
         
         write_constant_capi(fcode, var, name, value, uncertainty, unit, year,i)
     fcode.write("!-----------------------------------------------------------------------"+newline)
-    fcode.write("}}}" + newline)
+    fcode.write("!}}}" + newline)
         
     fcode.write(newline+newline)
     fcode.write("!-----------------------------------------------------------------------"+newline)
@@ -185,9 +184,9 @@ def run(fpath_ast: str, fpath_code: str)->None:
             write_constant_array(fcode, var, year)
     write_constant_array_closing(fcode)
     fcode.write("!-----------------------------------------------------------------------"+newline)
-    fcode.write("}}}" + newline)
+    fcode.write("!}}}" + newline)
     
-    write_module_end(fcode, year)
+    #write_module_end(fcode, year)
 
     fast.close()
     fcode.close()
