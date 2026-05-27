@@ -2,7 +2,7 @@
 
 ! MAN PAGE
 ! {{{
-$BLOCK comment --prefix "!!" --file man/src/codata.3.prep
+$BLOCK comment --file man/src/codata.3.prep
 NAME
   codata - libray for fundamental physical constants
 
@@ -90,23 +90,10 @@ NOTES
      codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 EXAMPLE
-$INCLUDE ./example.txt
+$INCLUDE example.txt
 
 SEE ALSO
   gsl(3), codata(1), fpm(1)
-
-CODATA 2022
-$INCLUDE ../data/codata_constants_2022.mantxt
-
-CODATA 2018
-$INCLUDE ../data/codata_constants_2018.mantxt
-
-CODATA 2014
-$INCLUDE ../data/codata_constants_2014.mantxt
-
-CODATA 2010
-$INCLUDE ../data/codata_constants_2010.mantxt
-
 $ENDBLOCK
 !}}}
 !=======================================================================
