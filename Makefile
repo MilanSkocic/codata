@@ -49,7 +49,7 @@ $(FPM_LIBNAME): build copy_a shared
 
 # ---------------------------------------------------------------------
 # SOURCES
-sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
+sources: $(SRC_FYPP_F90) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
 
 ./src/%.f90: ./data/%.toml
 	$(FPM_PYGEN) $(GEN_F) $< $@
