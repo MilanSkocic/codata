@@ -13,7 +13,7 @@ documentation in the binaries and as a PDF document.
 
 Additional HTML versions are also available for users who prefer quick
 navigation, keyword search, or rapid access to specific sections. 
-However, those versions provide only documentation of the API generated 
+However, those versions provide only the  documentation of the API generated 
 from the docstrings using \emph{Sphinx} and \emph{FORD}. 
 They are provided as a convenient complement to the present PDF 
 documentation, and should not be considered as a replacement for the 
@@ -22,8 +22,7 @@ The \emph{Sphinx} HTML version presents the APIs for Fortran, C, and Python
 --- whereas, the \emph{FORD} HTML version is Fortran-specific and is primarily
 intended for Fortran users.
 
-\vspace{1cm}
-
+\begin{figure}
 \begin{tikzpicture}[scale=0.8,
     inout/.style={draw, trapezium, minimum width=2.5cm, align=center},
     process/.style={draw, rectangle, minimum width=2.5cm, align=center},
@@ -53,12 +52,14 @@ intended for Fortran users.
     \draw[->] (MANTXT) -- (MANPDF);
     \draw[->] (MANPDF) -- (MANOUT);
 \end{tikzpicture}
+\end{figure}
 
 
 \vspace{1cm}
 
 \noindent Related Documentation:
 \begin{itemize}
+\item Reference Manual [PDF]:          \url{https://milanskocic.github.io/codata/latex/codata-refman.pdf}
 \item Reference Manual [HTML]:         \url{https://milanskocic.github.io/codata}
 \item Man Pages [GROFF, TXT, PDF]:     \url{https://milanskocic.github.io/codata/man/}
 \item APIs with Sphinx [HTML]:         \url{https://milanskocic.github.io/codata/sphinx}
