@@ -1,16 +1,20 @@
+include ../make.in
+
 # ---------------------------------------------------------------------
 # CONFIGURATION
 GENAST=../scripts/gen_ast.py
+GEN_F=../scripts/gen_fortran.py
 
 RAW_SRC=$(wildcard *.txt)
 AST_SRC=$(patsubst %.txt, %.toml, $(RAW_SRC))
+FOR_SRC=$(patsubst %.txt, %.f90, $(RAW_SRC))
 # ---------------------------------------------------------------------
 
 # ---------------------------------------------------------------------
 # TARGETS
 .PHONY: clean
 
-all: $(AST_SRC)
+all: $(AST_SRC) $(FOR_SRC)
 # ---------------------------------------------------------------------
 
 
@@ -18,6 +22,9 @@ all: $(AST_SRC)
 # COMPILATION
 %.toml: %.txt
 	$(PYGEN) $(GENAST) $< $@
+
+%.f90: %.toml
+	$(FPM_PYGEN) $(GEN_F) $< $@
 # ---------------------------------------------------------------------
 
 
@@ -27,5 +34,6 @@ clean:
 	rm -f *.toml
 	rm -f *.mantxt
 	rm -f *.tex
+	rm -f *.f90
 # ---------------------------------------------------------------------
 
