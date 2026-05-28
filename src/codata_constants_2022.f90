@@ -19,6 +19,7 @@
 !   codata is a Fortran library providing the fundamental physical
 !   constants according to CODATA
 ! 
+!   List of available constants:
 !   o ALPHA_PARTICLE_ELECTRON_MASS_RATIO
 !   o ALPHA_PARTICLE_MASS
 !   o ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT
