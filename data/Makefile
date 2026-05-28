@@ -3,19 +3,26 @@ include ../make.in
 # ---------------------------------------------------------------------
 # CONFIGURATION
 GENAST=./gen_ast.py
-GEN_F=../scripts/gen_fortran.py
+GEN_F=./gen_fortran.py
+GEN_HEADERS=./gen_headers.py
+GEN_HEADER=./gen_header.py
+GEN_STDLIB=./gen_stdlib.py
 
-RAW_SRC=$(wildcard *.txt)
-AST_SRC=$(patsubst %.txt, ./build/%.toml, $(RAW_SRC))
-FOR_SRC=$(patsubst %.txt, ./build/%.f90, $(RAW_SRC))
-MAN_SRC=$(patsubst %.txt, ./build/%.man, $(RAW_SRC))
+RAW_SRC=$(wildcard ./src/*.txt)
+AST_SRC=$(patsubst ./src/%.txt, ./build/%.toml, $(RAW_SRC))
+FOR_SRC=$(patsubst ./src/%.txt, ./build/%.f90, $(RAW_SRC))
+MAN_SRC=$(patsubst ./src/%.txt, ./build/%.man, $(RAW_SRC))
+
+C_HEADERS=$(patsubst ./src/%.txt, ./build/%.h, $(RAW_SRC))
+
+STDLIB=./build/stdlib_codata.f90
 # ---------------------------------------------------------------------
 
 # ---------------------------------------------------------------------
 # TARGETS
 .PHONY: clean
 
-all: dirs $(AST_SRC) $(FOR_SRC) $(MAN_SRC)
+all: dirs $(AST_SRC) $(FOR_SRC) $(MAN_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
 # ---------------------------------------------------------------------
 
 # ----------------------------------------------------------------------
@@ -26,14 +33,20 @@ dirs:
 
 # ---------------------------------------------------------------------
 # COMPILATION
-build/%.toml: %.txt
+build/%.toml: ./src/%.txt
 	$(PYGEN) $(GENAST) $< $@
+
+build/%.man: build/%.toml
+	./toml2man $< > $@
 
 build/%.f90: build/%.toml
 	$(FPM_PYGEN) $(GEN_F) $< $@
 
-build/%.man: build/%.toml
-	./toml2man $< > $@
+build/%.h: ./build/%.toml
+	$(FPM_PYGEN) $(GEN_HEADERS) $< $@
+
+./build/stdlib_codata.f90: ./build/codata_constants_2022.f90
+	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
 # ---------------------------------------------------------------------
 
 

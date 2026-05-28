@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
 
 
-awk '/^\[.*\]/{gsub(/\[/,""); gsub(/\]/,""); print "  o "$0}' $1
+awk '
+BEGIN{
+    print "  List of available constants:"
+}
+/^\[.*\]/{
+    gsub(/\[/,"")
+    gsub(/\]/,"")
+    print "  o "$0}
+' $1

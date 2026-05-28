@@ -15,6 +15,6 @@ NR>11{
     gsub(/\(/,"",$1)
     gsub(/\)/,"",$1)
     gsub(/\//,"_",$1)
-    printf "%-50s\n", toupper($1)
+    printf "%-50s\n", "["toupper($1)"]"
 }
 ' $1
