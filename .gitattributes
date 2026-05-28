@@ -9,3 +9,4 @@ include/** linguist-documentation
 media/** linguist-vendored
 py/** linguist-vendored
 scripts/** linguist-vendored
+data/** linguist-vendored
