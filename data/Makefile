@@ -2,38 +2,44 @@ include ../make.in
 
 # ---------------------------------------------------------------------
 # CONFIGURATION
-GENAST=../scripts/gen_ast.py
+GENAST=./gen_ast.py
 GEN_F=../scripts/gen_fortran.py
 
 RAW_SRC=$(wildcard *.txt)
-AST_SRC=$(patsubst %.txt, %.toml, $(RAW_SRC))
-FOR_SRC=$(patsubst %.txt, %.f90, $(RAW_SRC))
+AST_SRC=$(patsubst %.txt, ./build/%.toml, $(RAW_SRC))
+FOR_SRC=$(patsubst %.txt, ./build/%.f90, $(RAW_SRC))
+MAN_SRC=$(patsubst %.txt, ./build/%.man, $(RAW_SRC))
 # ---------------------------------------------------------------------
 
 # ---------------------------------------------------------------------
 # TARGETS
 .PHONY: clean
 
-all: $(AST_SRC) $(FOR_SRC)
+all: dirs $(AST_SRC) $(FOR_SRC) $(MAN_SRC)
 # ---------------------------------------------------------------------
 
+# ----------------------------------------------------------------------
+.PHONY: dirs
+dirs:
+	mkdir -p build
+# ----------------------------------------------------------------------
 
 # ---------------------------------------------------------------------
 # COMPILATION
-%.toml: %.txt
+build/%.toml: %.txt
 	$(PYGEN) $(GENAST) $< $@
 
-%.f90: %.toml
+build/%.f90: build/%.toml
 	$(FPM_PYGEN) $(GEN_F) $< $@
+
+build/%.man: build/%.toml
+	./toml2man $< > $@
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # OTHERS
 clean:
-	rm -f *.toml
-	rm -f *.mantxt
-	rm -f *.tex
-	rm -f *.f90
+	rm -rf build/*
 # ---------------------------------------------------------------------
 

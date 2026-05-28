@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+
+awk '/^\[.*\]/{gsub(/\[/,""); gsub(/\]/,""); print "  o "$0}' $1
