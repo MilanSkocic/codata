@@ -1,4 +1,5 @@
 /* SPDX-License-Identifier: MIT */
+
 #ifndef CODATA_H
 #define CODATA_H
 #if _MSC_VER
@@ -8,7 +9,7 @@
 #endif
 
 extern char* codata_get_version(void);
-extern char* codata_version(void); 
+extern char* codata_version(void);
 
 typedef struct codata_constant_type{
     char name[65];
@@ -17,6 +18,10 @@ typedef struct codata_constant_type{
     char unit[33];
 }cct;
 
+//----------------------------------------------------------------------
+// CODATA_CONSTANTS_2010
+//----------------------------------------------------------------------
+//{{{
 ADD_IMPORT extern const int YEAR_2010;
 ADD_IMPORT extern const cct LATTICE_SPACING_OF_SILICON_2010;
 ADD_IMPORT extern const cct ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010;
@@ -353,7 +358,12 @@ ADD_IMPORT extern const cct VON_KLITZING_CONSTANT_2010;
 ADD_IMPORT extern const cct WEAK_MIXING_ANGLE_2010;
 ADD_IMPORT extern const cct WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2010;
 ADD_IMPORT extern const cct WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010;
+//}}}
 
+//----------------------------------------------------------------------
+// CODATA_CONSTANTS_2014
+//----------------------------------------------------------------------
+//{{{
 ADD_IMPORT extern const int YEAR_2014;
 ADD_IMPORT extern const cct LATTICE_SPACING_OF_SILICON_2014;
 ADD_IMPORT extern const cct ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2014;
@@ -690,7 +700,12 @@ ADD_IMPORT extern const cct VON_KLITZING_CONSTANT_2014;
 ADD_IMPORT extern const cct WEAK_MIXING_ANGLE_2014;
 ADD_IMPORT extern const cct WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2014;
 ADD_IMPORT extern const cct WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014;
+//}}}
 
+//----------------------------------------------------------------------
+// CODATA_CONSTANTS_2018
+//----------------------------------------------------------------------
+//{{{
 ADD_IMPORT extern const int YEAR_2018;
 ADD_IMPORT extern const cct ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018;
 ADD_IMPORT extern const cct ALPHA_PARTICLE_MASS_2018;
@@ -1046,7 +1061,12 @@ ADD_IMPORT extern const cct WEAK_MIXING_ANGLE_2018;
 ADD_IMPORT extern const cct WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018;
 ADD_IMPORT extern const cct WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018;
 ADD_IMPORT extern const cct W_TO_Z_MASS_RATIO_2018;
+//}}}
 
+//----------------------------------------------------------------------
+// CODATA_CONSTANTS_2022
+//----------------------------------------------------------------------
+//{{{
 ADD_IMPORT extern const int YEAR;
 ADD_IMPORT extern const cct ALPHA_PARTICLE_ELECTRON_MASS_RATIO;
 ADD_IMPORT extern const cct ALPHA_PARTICLE_MASS;
@@ -1403,5 +1423,6 @@ ADD_IMPORT extern const cct WEAK_MIXING_ANGLE;
 ADD_IMPORT extern const cct WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT;
 ADD_IMPORT extern const cct WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT;
 ADD_IMPORT extern const cct W_TO_Z_MASS_RATIO;
+//}}}
 
 #endif
