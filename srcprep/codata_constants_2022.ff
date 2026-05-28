@@ -20,7 +20,7 @@ DESCRIPTION
   codata is a Fortran library providing the fundamental physical
   constants according to CODATA
 
-$INCLUDE ../data/codata_constants_2022.mantxt
+$INCLUDE ../data/build/codata_constants_2022.man
 
 SEE ALSO
   codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
@@ -42,6 +42,6 @@ integer(int32), parameter, public :: YEAR = 2022 !! Year of release.
 
 integer(c_int), protected, public, bind(C, name="YEAR") :: capi_YEAR = YEAR !capi
 
-$INCLUDE ../data/codata_constants_2022.f90
+$INCLUDE ../data/build/codata_constants_2022.f90
 
 end module codata__constants_2022
