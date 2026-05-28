@@ -26,14 +26,8 @@ GEN_HEADERS=./scripts/gen_headers.py
 GEN_HEADER=./scripts/gen_header.py
 GEN_STDLIB=./scripts/gen_stdlib.py
 
-AST_SRC=$(wildcard ./data/*.txt)
-F_SRC=$(patsubst ./data/%.txt, ./src/%.f90, $(AST_SRC))
-#C_SRC=$(patsubst ./data/%.toml, ./src/%_capi.f90, $(AST_SRC))
-C_HEADERS=$(patsubst ./data/%.txt, ./include/%.txt, $(AST_SRC))
-C_HEADER=./include/$(FPM_NAME).h
 SRC_FYPP=$(wildcard ./src/*.fypp)
 SRC_FYPP_F90=$(patsubst ./src/%.fypp, ./src/%.f90, $(SRC_FYPP))
-STDLIB=./stdlib/stdlib_codata.f90
 # ---------------------------------------------------------------------
 
 
@@ -49,31 +43,15 @@ $(FPM_LIBNAME): build copy_a shared
 
 # ---------------------------------------------------------------------
 # SOURCES
-sources: $(SRC_FYPP_F90) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
-
-./src/%.f90: ./data/%.toml
-	$(FPM_PYGEN) $(GEN_F) $< $@
-
-./src/%_capi.f90: ./data/%.toml
-	$(FPM_PYGEN) $(GEN_C) $< $@
-
-./include/%.txt: ./data/%.toml
-	$(FPM_PYGEN) $(GEN_HEADERS) $< $@
-
-$(C_HEADER):
-	$(FPM_PYGEN) $(GEN_HEADER) $(C_HEADERS) -o $@
+sources: $(SRC_FYPP_F90) prep
 
 ./src/%.f90: ./src/%.fypp
 	fypp -I ./include $< $@
 
-./stdlib/stdlib_codata.f90: ./src/codata_constants_2022.f90
-	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
-
 prep:
-	make -C srcprep clean
+	make -C data
 	make -C srcprep
 	fpm run --profile release --target $(FPM_APPNAME) -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
-	make -C srcprep doc
 
 # ---------------------------------------------------------------------
 
@@ -155,7 +133,7 @@ uninstall:
 # ---------------------------------------------------------------------
 # OTHERS
 doc:
-	make -C doc
+	make -C srcprep doc
 
 docs:
 	rm -rf docs/sphinx/*
@@ -176,8 +154,7 @@ logo:
 	make -C media
 
 clean:
-	rm -rf $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) ./src/codata_version.f90 $(SRC_FYPP_F90) $(STDLIB)
+	rm -rf $(SRC_FYPP_F90)
 	fpm clean --all
 	make -C srcprep clean
-	make -C doc clean
 # ---------------------------------------------------------------------
