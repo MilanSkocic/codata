@@ -1,29 +1,15 @@
 include make.in
 # ---------------------------------------------------------------------
 # CONFIGURATION
-GENPY=../scripts/gen_cpython.py
-
-AST_SRC=$(wildcard ../data/*.toml)
-PYTHON_SRC=$(patsubst ../data/%.toml, ./src/pycodata/_%.c, $(AST_SRC))
-
 SETUP=setup.py pyproject.toml
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # TARGETS
-.PHONY: sources package clean
+.PHONY: package clean
 
 all: package
-# ---------------------------------------------------------------------
-
-
-# ---------------------------------------------------------------------
-# SOURCES
-sources: $(PYTHON_SRC)
-
-src/pycodata/_%.c: ../data/%.toml
-	$(FPM_PYGEN) $(GENPY) $< $@
 # ---------------------------------------------------------------------
 
 
