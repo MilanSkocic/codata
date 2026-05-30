@@ -7,6 +7,9 @@ GEN_F=./gen_fortran.py
 GEN_HEADERS=./gen_headers.py
 GEN_HEADER=./gen_header.py
 GEN_STDLIB=./gen_stdlib.py
+GEN_PY=./gen_python.py
+GEN_C=./gen_c.py
+GEN_CPY=./gen_cpython.py
 
 RAW_SRC=$(wildcard ./src/*.txt)
 AST_SRC=$(patsubst ./src/%.txt, ./build/%.toml, $(RAW_SRC))
@@ -15,6 +18,11 @@ MAN_SRC=$(patsubst ./src/%.txt, ./build/%.man, $(RAW_SRC))
 
 C_HEADERS=$(patsubst ./src/%.txt, ./build/%.h, $(RAW_SRC))
 
+PY_SRC=$(patsubst ./src/%.txt, ./build/%.py, $(RAW_SRC))
+CPY_SRC=$(patsubst ./src/%.txt, ./build/_%.c, $(RAW_SRC))
+
+C_SRC=$(patsubst ./src/%.txt, ./build/%.c, $(RAW_SRC))
+
 STDLIB=./build/stdlib_codata.f90
 # ---------------------------------------------------------------------
 
@@ -22,7 +30,7 @@ STDLIB=./build/stdlib_codata.f90
 # TARGETS
 .PHONY: clean
 
-all: dirs $(AST_SRC) $(FOR_SRC) $(MAN_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
+all: dirs $(AST_SRC) $(FOR_SRC) $(MAN_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB) $(PY_SRC) $(C_SRC) $(CPY_SRC)
 # ---------------------------------------------------------------------
 
 # ----------------------------------------------------------------------
@@ -47,6 +55,15 @@ build/%.h: ./build/%.toml
 
 ./build/stdlib_codata.f90: ./build/codata_constants_2022.f90
 	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
+
+./build/%.py: ./build/%.toml
+	$(FPM_PYGEN) $(GEN_PY) $< $@
+
+./build/_%.c: ./build/%.toml
+	$(FPM_PYGEN) $(GEN_CPY) $< $@
+
+./build/%.c: ./build/%.toml
+	$(FPM_PYGEN) $(GEN_C) $< $@
 # ---------------------------------------------------------------------
 
 
