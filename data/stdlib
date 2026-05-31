@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+awk '
+BEGIN{copy=1}
+/.*END FOR STDLIB.*/{
+    copy = 0
+}
+{
+    if(copy == 1){print $0}
+}
+
+' $1
