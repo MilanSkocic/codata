@@ -19,7 +19,7 @@ from .constants_2010 import *
 
 
 def main():
-    binary = Path(__file__).parent / "codata"
+    binary = Path(__file__).parent / platform.system().lower() / "bin" / "codata"
     if platform.system() == "Windows":
         binary = binary.with_suffix(".exe")
 
