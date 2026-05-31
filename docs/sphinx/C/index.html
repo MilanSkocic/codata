@@ -369,6 +369,7 @@
   <section id="c">
 <h1>C<a class="headerlink" href="#c" title="Link to this heading">#</a></h1>
 <div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cm">/* SPDX-License-Identifier: MIT */</span>
+
 <span class="cp">#ifndef CODATA_H</span>
 <span class="cp">#define CODATA_H</span>
 <span class="cp">#if _MSC_VER</span>
@@ -378,7 +379,7 @@
 <span class="cp">#endif</span>
 
 <span class="k">extern</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">codata_get_version</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
-<span class="k">extern</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">codata_version</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"> </span>
+<span class="k">extern</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="nf">codata_version</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
 
 <span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">codata_constant_type</span><span class="p">{</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">65</span><span class="p">];</span>
@@ -386,9 +387,12 @@
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">uncertainty</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">unit</span><span class="p">[</span><span class="mi">33</span><span class="p">];</span>
 <span class="p">}</span><span class="n">cct</span><span class="p">;</span>
-</pre></div>
-</div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">YEAR_2010</span><span class="p">;</span>
+
+<span class="c1">//----------------------------------------------------------------------</span>
+<span class="c1">// CODATA_CONSTANTS_2010</span>
+<span class="c1">//----------------------------------------------------------------------</span>
+<span class="c1">//{{{</span>
+<span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">YEAR_2010</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">LATTICE_SPACING_OF_SILICON_2010</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_MASS_2010</span><span class="p">;</span>
@@ -724,9 +728,13 @@
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WEAK_MIXING_ANGLE_2010</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2010</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010</span><span class="p">;</span>
-</pre></div>
-</div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">YEAR_2014</span><span class="p">;</span>
+<span class="c1">//}}}</span>
+
+<span class="c1">//----------------------------------------------------------------------</span>
+<span class="c1">// CODATA_CONSTANTS_2014</span>
+<span class="c1">//----------------------------------------------------------------------</span>
+<span class="c1">//{{{</span>
+<span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">YEAR_2014</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">LATTICE_SPACING_OF_SILICON_2014</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2014</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_MASS_2014</span><span class="p">;</span>
@@ -1062,9 +1070,13 @@
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WEAK_MIXING_ANGLE_2014</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2014</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014</span><span class="p">;</span>
-</pre></div>
-</div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">YEAR_2018</span><span class="p">;</span>
+<span class="c1">//}}}</span>
+
+<span class="c1">//----------------------------------------------------------------------</span>
+<span class="c1">// CODATA_CONSTANTS_2018</span>
+<span class="c1">//----------------------------------------------------------------------</span>
+<span class="c1">//{{{</span>
+<span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">YEAR_2018</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_MASS_2018</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018</span><span class="p">;</span>
@@ -1419,9 +1431,13 @@
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">W_TO_Z_MASS_RATIO_2018</span><span class="p">;</span>
-</pre></div>
-</div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">YEAR</span><span class="p">;</span>
+<span class="c1">//}}}</span>
+
+<span class="c1">//----------------------------------------------------------------------</span>
+<span class="c1">// CODATA_CONSTANTS_2022</span>
+<span class="c1">//----------------------------------------------------------------------</span>
+<span class="c1">//{{{</span>
+<span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">YEAR</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_ELECTRON_MASS_RATIO</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_MASS</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT</span><span class="p">;</span>
@@ -1777,9 +1793,9 @@
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT</span><span class="p">;</span>
 <span class="n">ADD_IMPORT</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">cct</span><span class="w"> </span><span class="n">W_TO_Z_MASS_RATIO</span><span class="p">;</span>
-</pre></div>
-</div>
-<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="cp">#endif</span>
+<span class="c1">//}}}</span>
+
+<span class="cp">#endif</span>
 </pre></div>
 </div>
 </section>
