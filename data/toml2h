@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+latest_year="2022"
+fname="$1"
+name=$(basename -s .toml $fname)
+year="${name##*_}"
+
+suffix="_$year"
+if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
+
+awk -v suffix="$suffix" '
+BEGIN{
+    print "ADD_IMPORT extern const int YEAR;"
+}
+/^\[.*\]/{
+    gsub(/\[/,"")
+    gsub(/\]/,"")
+    var=$0 suffix
+}
+NF==0{
+    print "ADD_IMPORT extern const cct "var";"
+}
+' $1
