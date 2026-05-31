@@ -34,11 +34,11 @@ jobs:
           3.14
     - name: Update python packages
       run: |
-       python3.10 -m pip install -U --user pip setuptools wheel build auditwheel 
-       python3.11 -m pip install -U --user pip setuptools wheel build auditwheel
-       python3.12 -m pip install -U --user pip setuptools wheel build auditwheel
-       python3.13 -m pip install -U --user pip setuptools wheel build auditwheel
-       python3.14 -m pip install -U --user pip setuptools wheel build auditwheel
+       python3.10 -m pip install -U --user pip setuptools wheel build auditwheel fypp 
+       python3.11 -m pip install -U --user pip setuptools wheel build auditwheel fypp
+       python3.12 -m pip install -U --user pip setuptools wheel build auditwheel fypp
+       python3.13 -m pip install -U --user pip setuptools wheel build auditwheel fypp
+       python3.14 -m pip install -U --user pip setuptools wheel build auditwheel fypp
     - name: Checkout
       uses: actions/checkout@v4
     - name: Configure
@@ -51,13 +51,15 @@ jobs:
         echo "FPM_ARCH=$FPM_ARCH" >> $GITHUB_ENV
     - name: Compile
       run: |
-        chmod u+x build.sh
-        ./build.sh
+        make
+        make python
+        make -C py auditwheel
+        make archives
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: ${{ env.FPM_NAME }}-${{ env.FPM_PLATFORM }}-${{ env.FPM_ARCH }}-${{ env.FPM_VERSION }}
-        path: ./build/install/
+        path: ./build/install/${{ env.FPM_NAME }}-${{ env.FPM_PLATFORM }}-${{ env.FPM_ARCH }}-${{ env.FPM_VERSION }}.tar.gz
+        archive: False
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
