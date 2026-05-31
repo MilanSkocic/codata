@@ -54,10 +54,10 @@ sources: $(SRC_FYPP_F90) prep
 prep:
 	make -C data
 	make -C srcprep
-	fpm run --profile release -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
+	fpm run --profile $(btype) -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
 	fpm clean --skip
-	fpm run --profile release -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
-	fpm run --profile release -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
+	fpm run --profile $(btype) -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
+	fpm run --profile $(btype) -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
 # ---------------------------------------------------------------------
 
 
