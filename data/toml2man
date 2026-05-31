@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
 
+latest_year="2022"
+fname="$1"
+name=$(basename -s .toml $fname)
+year="${name##*_}"
 
-awk '
+suffix="_$year"
+if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
+
+awk -v suffix="$suffix" '
 BEGIN{
     print "  List of available constants:"
 }
 /^\[.*\]/{
     gsub(/\[/,"")
     gsub(/\]/,"")
-    print "  o "$0}
+    printf "%s%s%s\n", "  o ", $0, suffix
+}
 ' $1
