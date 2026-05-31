@@ -42,7 +42,7 @@ dirs:
 # ---------------------------------------------------------------------
 # COMPILATION
 build/%.toml: ./src/%.txt
-	$(PYGEN) $(GENAST) $< $@
+	./txt2toml $< > $@
 
 build/%.man: build/%.toml
 	./toml2man $< > $@
