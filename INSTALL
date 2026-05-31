@@ -6,28 +6,31 @@ FROM BINARIES
   For Windows, you can add .local folder to your %USERPROFILE% and add it
   to your PATH.
 
-    $ unzip codata-linux-x86_64-2.5.2.zip codata
-    $ cp -v codata/* your/path/
 
 FROM SOURCES
-  You need to install a compilation toolchain for Fortran. 
-  The Fortran compiler must support the f2018 standard.
-
-  You also need to install fpm (Fortran Package Manager) which can be downloaded
-  at https://github.com/fortran-lang/fpm/releases/. 
-
-  A Makefile allows to compile the static and the shared library. It uses
-  fpm for compiling the dependencies and the source code.
-
-    $ ./configure
+  Building the static and shared libraries requires the following dependencies:
+  - Fortran Preprocessor: prep(1)
+  - Fortran compiler: gfortran(1)
+  - C compiler: gcc(1)
+  - Fortran Package Manager: fpm(1)
+  - Python Interpreter: python(1)
+ 
+    $ . ./configure
     $ make
-    $ make install
+    $ make install [prefix=your/path]
 
-PYTHON WRAPPER
-  If you also need to build the Python wrapper. There is script build.sh
-  which builds the static and shared library and then the Python wrapper.
+  Building the Python wrapper requires additional dependencies:
+  - python interpreter: 3.10, 3.11, 3.12, 3.13, 3.14
 
-  You need to install a compilation toolchain for C. 
-  The C compiler must support the c11 standard.
+    $ make python
+  
+  Install the wheels in the py/sdist/ folder with pip.
 
-    $ ./build.sh
+  Building the documentation requires even more additional dependencies:
+  - txt2man(1)
+  - bookman(1)
+  - txt2latex(1)
+  - pdflatex(1)
+  - make4ht(1)
+  - sphinx
+  - FORD
