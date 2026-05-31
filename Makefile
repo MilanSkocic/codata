@@ -13,6 +13,7 @@ else
 endif
 
 install_dir=$(DESTDIR)$(PREFIX)
+pyinstall_dir=py/src/$(FPM_PYNAME)/$(FPM_PLATFORM)
 
 MANDIR=srcprep/doc/man/build
 LATEXDIRPDF=srcprep/doc/latex/build/pdf
@@ -28,6 +29,9 @@ GEN_STDLIB=./scripts/gen_stdlib.py
 
 SRC_FYPP=$(wildcard ./src/*.fypp)
 SRC_FYPP_F90=$(patsubst ./src/%.fypp, ./src/%.f90, $(SRC_FYPP))
+
+ARCHIVE=$(FPM_NAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
+PYARCHIVE=$(FPM_PYNAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
 # ---------------------------------------------------------------------
 
 
@@ -37,7 +41,7 @@ SRC_FYPP_F90=$(patsubst ./src/%.fypp, ./src/%.f90, $(SRC_FYPP))
 
 all: $(FPM_LIBNAME)
 
-$(FPM_LIBNAME): build copy_a shared
+$(FPM_LIBNAME): data sources build copy_a shared
 # ---------------------------------------------------------------------
 
 
@@ -51,22 +55,24 @@ sources: $(SRC_FYPP_F90) prep
 prep:
 	make -C data
 	make -C srcprep
-	fpm run --profile release --target $(FPM_APPNAME) -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
-
+	fpm run --profile release -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
+	fpm clean --skip
+	fpm run --profile release -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
+	fpm run --profile release -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # COMPILATION
 build:
-	fpm build --profile=$(btype)
+	fpm build --profile $(btype)
 
 test: build
-	fpm test --profile=$(btype)
+	fpm test --profile $(btype)
 
 example: build
-	fpm run --profile=$(btype) --example example_in_f
-	fpm run --profile=$(btype) --example example_in_c
+	fpm run --profile $(btype) --example example_in_f
+	fpm run --profile $(btype) --example example_in_c
 # ---------------------------------------------------------------------
 
 
@@ -98,10 +104,10 @@ install_dirs:
 	mkdir -p $(install_dir)/lib
 	mkdir -p $(install_dir)/share/man/man3
 	mkdir -p $(install_dir)/share/man/man1
-	fpm install --prefix=$(install_dir) --profile=$(btype)
+	fpm install --prefix $(install_dir) --profile $(btype) --no-rebuild
 	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(install_dir)/include
-	cp -f $(MANDIR)/$(FPM_NAME)*.3.gz $(install_dir)/share/man/man3
-	cp -f $(MANDIR)/$(FPM_APPNAME)*.1.gz $(install_dir)/share/man/man1
+	cp -f docs/man/$(FPM_NAME)*.3.gz $(install_dir)/share/man/man3
+	cp -f docs/man/$(FPM_APPNAME)*.1.gz $(install_dir)/share/man/man1
 
 install_linux: 
 	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so $(install_dir)/lib
@@ -132,10 +138,28 @@ uninstall:
 
 # ---------------------------------------------------------------------
 # OTHERS
+.PHONY: python
+python:
+	make install prefix=$(pyinstall_dir)
+	cp -vf $(pyinstall_dir)/bin/* py/$(FPM_PY_SRC)
+	cp -vf $(pyinstall_dir)/include/*.h py/$(FPM_PY_SRC)
+	cp -vf $(pyinstall_dir)/lib/* py/$(FPM_PY_SRC)
+	make -C py
+
+.PHONY: archives 
+archives:
+	make install prefix=build/install/
+	#cd ./build/install && zip -r $(ARCHIVE).zip . && cd ../../ && mv ./build/install/$(ARCHIVE) ./build/
+	cd ./build/install && tar -czvf ../$(ARCHIVE).tar.gz . && cd ../../
+	#cd ./py && [ -d wheelhouse ] && cp -rfv ./wheelhouse/*.whl ./sdist/ || true && cd ./dist && zip -r $(PYARCHIVE).zip *.* && cd ../../ 
+	cd ./py && [ -d wheelhouse ] && cp -rfv ./wheelhouse/*.whl ./dist/ || true && cd ./dist && tar -czvf $(PYARCHIVE).tar.gz *.* && cd ../../ 
+
+.PHONY: doc
 doc:
 	make -C srcprep doc
 
-docs:
+.PHONY: 
+docs: doc
 	rm -rf docs/sphinx/*
 	rm -rf docs/ford/*
 	rm -rf docs/latex/*
@@ -155,6 +179,8 @@ logo:
 
 clean:
 	rm -rf $(SRC_FYPP_F90)
+	make -C data clean
 	fpm clean --all
 	make -C srcprep clean
+	make -C py clean
 # ---------------------------------------------------------------------
