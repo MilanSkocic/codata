@@ -9,13 +9,13 @@ SETUP=setup.py pyproject.toml
 # TARGETS
 .PHONY: package clean
 
-all: package
+all: build
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # COMPILATION
-package: python3.10 python3.11 python3.12 python3.13 python3.14 sdist auditwheel
+build: python3.10 python3.11 python3.12 python3.13 python3.14 sdist
 
 auditwheel: $(SETUP)
 	$(FPM_AW)
@@ -95,4 +95,7 @@ clean:
 	rm -f $(FPM_PY_SRC)/*.dll 
 	rm -f $(FPM_PY_SRC)/*.dll.a 
 	rm -f $(FPM_PY_SRC)/*.pyd
+	rm -rf $(FPM_PY_SRC)/linux
+	rm -rf $(FPM_PY_SRC)/darwin
+	rm -rf $(FPM_PY_SRC)/windows
 # ---------------------------------------------------------------------
