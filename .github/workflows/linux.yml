@@ -51,6 +51,7 @@ jobs:
         echo "FPM_ARCH=$FPM_ARCH" >> $GITHUB_ENV
     - name: Compile
       run: |
+        . ./configure
         make
         make python
         make -C py auditwheel
