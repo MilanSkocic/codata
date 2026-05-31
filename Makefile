@@ -41,7 +41,7 @@ PYARCHIVE=$(FPM_PYNAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
 
 all: $(FPM_LIBNAME)
 
-$(FPM_LIBNAME): data sources build copy_a shared
+$(FPM_LIBNAME): build copy_a shared
 # ---------------------------------------------------------------------
 
 
@@ -152,7 +152,7 @@ archives:
 	#cd ./build/install && zip -r $(ARCHIVE).zip . && cd ../../ && mv ./build/install/$(ARCHIVE) ./build/
 	cd ./build/install && tar -czvf ../$(ARCHIVE).tar.gz . && cd ../../
 	#cd ./py && [ -d wheelhouse ] && cp -rfv ./wheelhouse/*.whl ./sdist/ || true && cd ./dist && zip -r $(PYARCHIVE).zip *.* && cd ../../ 
-	cd ./py && [ -d wheelhouse ] && cp -rfv ./wheelhouse/*.whl ./dist/ || true && cd ./dist && tar -czvf $(PYARCHIVE).tar.gz *.* && cd ../../ 
+	cd ./py && [ -d wheelhouse ] && cp -rfv ./wheelhouse/*.whl ./dist/ || true && cd ./dist && tar --exclude='$(PYARCHIVE).tar.gz' -czvf $(PYARCHIVE).tar.gz *.* && cd ../../ 
 
 .PHONY: doc
 doc:
