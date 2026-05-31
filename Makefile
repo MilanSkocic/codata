@@ -36,9 +36,6 @@ PYARCHIVE=$(FPM_PYNAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
 
 
 # ---------------------------------------------------------------------
-# TARGETS
-.PHONY: prep build sources stdlib references doc docs clean logo
-
 all: $(FPM_LIBNAME)
 
 $(FPM_LIBNAME): build shared
@@ -47,11 +44,13 @@ $(FPM_LIBNAME): build shared
 
 # ---------------------------------------------------------------------
 # SOURCES
+.PHONY: sources
 sources: $(SRC_FYPP_F90) prep
 
 ./src/%.f90: ./src/%.fypp
 	fypp -I ./include $< $@
 
+.PHONY: prep
 prep:
 	make -C data
 	make -C srcprep
@@ -64,6 +63,7 @@ prep:
 
 # ---------------------------------------------------------------------
 # COMPILATION
+.PHONY: build
 build:
 	fpm build --profile $(btype)
 	mkdir -p $(FPM_BUILD_DIR)/install/bin
@@ -89,14 +89,18 @@ example:
 
 # ---------------------------------------------------------------------
 # SHARED LIBRARY
+.PHONY: shared
 shared: shared_$(FPM_PLATFORM)
 
+.PHONY: shared_linux
 shared_linux: 
 	$(FPM_FC) -shared -o $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).so -Wl,--whole-archive $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).a -Wl,--no-whole-archive
 
+.PHONY: shared_darwin
 shared_darwin: 
 	$(FPM_FC) -dynamiclib -install_name @rpath/$(FPM_LIBNAME).dylib $(FPM_LDFLAGS) -o $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).dylib -Wl,-all_load $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).a
 
+.PHONY: shared_window
 shared_windows: 
 	$(FPM_FC) -shared $(FPM_LDFLAGS) -o $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).dll -Wl,--out-implib=$(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).a -Wl,--no-whole-archive
 # ---------------------------------------------------------------------
@@ -104,23 +108,15 @@ shared_windows:
 
 # ---------------------------------------------------------------------
 # INSTALLATION 
+.PHONY: install
 install: install_dirs
 
+.PHONY: install_dirs
 install_dirs: 
 	mkdir -p $(install_dir)
 	cp -rfv $(FPM_BUILD_DIR)/install/* $(install_dir)
 
-install_linux: 
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so $(install_dir)/lib
-
-install_darwin: 
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dylib $(install_dir)/lib
-
-install_windows:
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll.a $(install_dir)/lib
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll $(install_dir)/lib
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll $(install_dir)/bin
-
+.PHONY: uninstall
 uninstall:
 	rm -f $(install_dir)/include/$(FPM_NAME)*.h
 	rm -f $(install_dir)/include/$(FPM_NAME)*.mod
@@ -172,9 +168,11 @@ docs: doc
 	cp -rf $(FORDDIRHTML)/* ./docs/ford
 	cp -rf $(LATEXDIRHTML)/* ./docs
 
+.PHONY: logo
 logo:
 	make -C media
 
+.PHONY: clean
 clean:
 	rm -rf $(SRC_FYPP_F90)
 	make -C data clean
