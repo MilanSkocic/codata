@@ -12,7 +12,7 @@ if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 
 awk -v suffix="$suffix" '
 BEGIN{
-    print "ADD_IMPORT extern const int YEAR;"
+    print "ADD_IMPORT extern const int YEAR"suffix";"
 }
 /^\[.*\]/{
     gsub(/\[/,"")
