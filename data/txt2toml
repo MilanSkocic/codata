@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+years=()
+for i in src/*;do 
+    b=$(basename -s .txt $i)
+    b=${b##*_}
+    years+=($b)
+done; 
+latest_year=$(printf "%s\n" ${years[@]} | sort -n | tail -1)
+
 fname="$1"
 name=$(basename -s .txt $fname)
 year="${name##*_}"
