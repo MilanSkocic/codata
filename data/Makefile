@@ -2,11 +2,7 @@ include ../make.in
 
 # ---------------------------------------------------------------------
 # CONFIGURATION
-GENAST=./gen_ast.py
 GEN_F=./gen_fortran.py
-GEN_HEADERS=./gen_headers.py
-GEN_HEADER=./gen_header.py
-GEN_STDLIB=./gen_stdlib.py
 GEN_PY=./gen_python.py
 GEN_C=./gen_c.py
 GEN_CPY=./gen_cpython.py
@@ -51,7 +47,7 @@ build/%.f90: build/%.toml
 	$(FPM_PYGEN) $(GEN_F) $< $@
 
 build/%.h: ./build/%.toml
-	$(FPM_PYGEN) $(GEN_HEADERS) $< $@
+	./toml2h $< > $@
 
 ./build/stdlib_codata.f90: ./build/codata_constants_2022.f90
 	./stdlib $< > $@
