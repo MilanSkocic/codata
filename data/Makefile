@@ -54,7 +54,7 @@ build/%.h: ./build/%.toml
 	$(FPM_PYGEN) $(GEN_HEADERS) $< $@
 
 ./build/stdlib_codata.f90: ./build/codata_constants_2022.f90
-	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
+	./stdlib $< > $@
 
 ./build/%.py: ./build/%.toml
 	$(FPM_PYGEN) $(GEN_PY) $< $@
