@@ -59,7 +59,7 @@ jobs:
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        path: ./build/install/${{ env.FPM_NAME }}-${{ env.FPM_PLATFORM }}-${{ env.FPM_ARCH }}-${{ env.FPM_VERSION }}.tar.gz
+        path: ./build/${{ env.FPM_NAME }}-${{ env.FPM_PLATFORM }}-${{ env.FPM_ARCH }}-${{ env.FPM_VERSION }}.tar.gz
         archive: False
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
