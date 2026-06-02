@@ -1,7 +1,8 @@
 codata_2018(3)               Library Calls               codata_2018(3)
 
 NAME
-       codata - libray for fundamental physical constants
+       codata_2018  -  Fortran  module  containing the CODATA 2018 con‐
+       stants
 
 LIBRARY
        codata (-libcodata, -lcodata)
@@ -14,9 +15,6 @@ SYNOPSIS
        import pycodata
 
 DESCRIPTION
-       codata  is  a Fortran library providing the fundamental physical
-       constants according to CODATA
-
        List of available constants:
 
        •  ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018
@@ -731,4 +729,4 @@ SEE ALSO
        codata(3), codata_2010(3), codata_2014(3),  codata_2018(3),  co‐
        data_2022(3)
 
-2.5.2                         31 May 2026                codata_2018(3)
+2.5.2                         02 June 2026               codata_2018(3)

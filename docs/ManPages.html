@@ -81,98 +81,42 @@
    
 </p>
    <h3 class='likesectionHead' id='description'><a id='x7-16000'></a>DESCRIPTION</h3>
-<!-- l. 16 --><p class='noindent'>codata is a Fortran library providing the fundamental physical constants according to CODATA
-(https://www.nist.gov/programs-projects/codata-values-fundamental-physical-constants). A C API
-allows usage from C, or can be used as a basis for other wrappers. A python wrapper allows easy usage
-from Python.
-</p><!-- l. 22 --><p class='indent'>   The latest codata constants (2022) https://pml.nist.gov/cuu/Constants were integrated in stdlib
-https://github.com/fortran-lang/stdlib/releases/tag/ since version 0.7.0. The constants are
-implemented as derived type which carries the name, the value, the uncertainty and the
-unit. This library is complementary to the constants defined in the stdlib by providing
-older values for the constants. The latest values (2022) do not have the year as a suffix in
-their name whereas older values (2010, 2014, 2018) feature the year as a suffix in their
-name.
-</p><!-- l. 33 --><p class='indent'>   All codata (physical) constants are defined as a derived type codata_constant_type. All the codata
-constants are provided as double precision reals. The names are quite long and can be
-aliased with shorter names. The derived type codata_constant_type defines 4 members and 2
-procedures.
+<!-- l. 16 --><p class='noindent'>codata is a Fortran library providing the fundamental physical constants according to CODATA A C
+API allows usage from C, or can be used as a basis for other wrappers. A python wrapper allows easy
+usage from Python.
+</p><!-- l. 21 --><p class='indent'>   The latest codata constants (2022) were integrated in the Fortran standard library
+(stdlib) from version 0.7.0. The constants are implemented as derived type which carries the
+name, the value, the uncertainty and the unit. All the codata constants are provided as
+double precision reals. The names are quite long and can be aliased with shorter names. A
+module level interface to_real is available for getting the constant value or uncertainty of a
+constant.
+</p><!-- l. 30 --><p class='indent'>   This library is complementary to the constants defined in the stdlib by providing older values for
+the constants. The latest values (2022) do not have the year as a suffix in their name whereas older
+values (2010, 2014, 2018) feature the year as a suffix in their name.
+</p><!-- l. 35 --><p class='indent'>   The C API exposes a structure codata_constant_type that defines the same members as in
+Fortran.
+</p><!-- l. 38 --><p class='indent'>   The Python wrapper encapsulates the members in a dictionnary with the keys being name, value,
+uncertainty and unit.
+   
+</p>
+   <h3 class='likesectionHead' id='notes'><a id='x7-17000'></a>NOTES</h3>
+<!-- l. 42 --><p class='noindent'>To use codata within your fpm(1) project, add the following lines to your file:
                                                                                        
                                                                                        
 </p>
    <pre class='verbatim' id='verbatim-1'>
-      type :: codata_constant_type
-          character(len=64) :: name
-          real(dp) :: value
-          real(dp) :: uncertainty
-          character(len=32) :: unit
-      contains
-          procedure :: print
-          procedure :: to_real_sp
-          procedure :: to_real_dp
-          generic :: to_real =&gt; to_real_sp, to_real_dp
-      end type codata_constant_type
-
-</pre>
-<!-- l. 51 --><p class='nopar'> A module level interface to_real is available for getting the constant value or uncertainty of a
-constant.
-     </p><dl class='description'><dt class='description'>
-<span class='cmbx-10x-x-109'>o to_real(self, mold, uncertainty) result(r)</span> </dt><dd class='description'>
-     <!-- l. 56 --><p class='noindent'> Get the constant value or uncertainty. Warning: Some constants cannot be converted to
-     single precision sp reals due to the value of the exponents.
-     </p></dd><dt class='description'>
-<span class='cmbx-10x-x-109'>o class(codata_constant_type), intent(in) :: self</span> </dt><dd class='description'>
-     <!-- l. 59 --><p class='noindent'> Codata constant
-     </p></dd><dt class='description'>
-<span class='cmbx-10x-x-109'>o real(sp), intent(in) :: mold</span> </dt><dd class='description'>
-     <!-- l. 60 --><p class='noindent'> Should be of type real single or double precision
-     </p></dd><dt class='description'>
-<span class='cmbx-10x-x-109'>o logical, intent(in), optional :: uncertainty</span> </dt><dd class='description'>
-     <!-- l. 61 --><p class='noindent'> Set to true if the uncertainty is required. Default to .false..</p></dd></dl>
-<!-- l. 65 --><p class='indent'>   The C API exposes a structure codata_constant_type that defines the same members as in Fortran.
-to_real is not exposed in the C API.
-                                                                                       
-                                                                                       
-</p>
-   <pre class='verbatim' id='verbatim-2'>
-      type, bind(C) :: capi_constant_type
-          character(kind=c_char) :: name(65)
-          real(c_double) :: value
-          real(c_double) :: uncertainty
-          character(kind=c_char) :: unit(33)
-      end type capi_constant_type
-
-      typedef struct codata_constant_type{
-          char name[65];
-          double value;
-          double uncertainty;
-          char unit[33];
-      }cct;
-
-
-</pre>
-<!-- l. 84 --><p class='nopar'> The Python wrapper encapsulates the members in a dictionnary with the keys being name, value,
-uncertainty and unit. to_real is not exposed in the Python wrapper.
-   
-</p>
-   <h3 class='likesectionHead' id='notes'><a id='x7-17000'></a>NOTES</h3>
-<!-- l. 90 --><p class='noindent'>To use codata within your fpm(1) (https://github.com/fortran-lang/fpm) project, add the following
-lines to your file:
-                                                                                       
-                                                                                       
-</p>
-   <pre class='verbatim' id='verbatim-3'>
      [dependencies]
      codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 </pre>
-<!-- l. 97 --><p class='nopar'>
+<!-- l. 49 --><p class='nopar'>
 </p>
    <h3 class='likesectionHead' id='example'><a id='x7-18000'></a>EXAMPLE</h3>
-<!-- l. 100 --><p class='noindent'>Example in Fortran
+<!-- l. 52 --><p class='noindent'>Example in Fortran
                                                                                        
                                                                                        
 </p>
-   <pre class='verbatim' id='verbatim-4'>
+   <pre class='verbatim' id='verbatim-2'>
     program example_in_f
     use codata
     implicit none
@@ -191,11 +135,11 @@ lines to your file:
     end program
 
 </pre>
-<!-- l. 120 --><p class='nopar'> Example in C
+<!-- l. 72 --><p class='nopar'> Example in C
                                                                                        
                                                                                        
 </p>
-   <pre class='verbatim' id='verbatim-5'>
+   <pre class='verbatim' id='verbatim-3'>
     #include &lt;stdio.h&gt;
     #include "codata.h"
     int main(void){
@@ -215,11 +159,11 @@ lines to your file:
     }
 
 </pre>
-<!-- l. 142 --><p class='nopar'> Example in Python
+<!-- l. 94 --><p class='nopar'> Example in Python
                                                                                        
                                                                                        
 </p>
-   <pre class='verbatim' id='verbatim-6'>
+   <pre class='verbatim' id='verbatim-4'>
     import sys
     sys.path.insert(0, "../py/src/")
     import pycodata
@@ -238,17 +182,17 @@ lines to your file:
 
 
 </pre>
-<!-- l. 163 --><p class='nopar'>
+<!-- l. 115 --><p class='nopar'>
 </p>
    <h3 class='likesectionHead' id='see-also'><a id='x7-19000'></a>SEE ALSO</h3>
-<!-- l. 165 --><p class='noindent'>gsl(3), codata(1), fpm(1)
+<!-- l. 117 --><p class='noindent'>codata(1), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3), fpm(1)
                                                                                        
                                                                                        
 </p>
    <h2 class='chapterHead' id='codata1'><span class='titlemark'>Chapter 3</span><br /><a id='x7-200003'></a>codata_2010(3)</h2>
    
    <h3 class='likesectionHead' id='name1'><a id='x7-21000'></a>NAME</h3>
-<!-- l. 3 --><p class='noindent'>codata - libray for fundamental physical constants
+<!-- l. 3 --><p class='noindent'>codata_2010 - Fortran module containing the CODATA 2010 constants
    
 </p>
    <h3 class='likesectionHead' id='library1'><a id='x7-22000'></a>LIBRARY</h3>
@@ -262,8 +206,7 @@ lines to your file:
    
 </p>
    <h3 class='likesectionHead' id='description1'><a id='x7-24000'></a>DESCRIPTION</h3>
-<!-- l. 18 --><p class='noindent'>codata is a Fortran library providing the fundamental physical constants according to CODATA
-</p><!-- l. 21 --><p class='indent'>   List of available constants: </p>
+<!-- l. 18 --><p class='noindent'>List of available constants: </p>
      <ul class='itemize1'>
      <li class='itemize'>LATTICE_SPACING_OF_SILICON_2010
      </li>
@@ -988,7 +931,7 @@ lines to your file:
      <li class='itemize'>WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010</li></ul>
    
    <h3 class='likesectionHead' id='see-also1'><a id='x7-25000'></a>SEE ALSO</h3>
-<!-- l. 361 --><p class='noindent'>codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
+<!-- l. 358 --><p class='noindent'>codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
                                                                                        
                                                                                        
 </p><!-- l. 125 --><p class='indent'>
@@ -998,7 +941,7 @@ lines to your file:
    <h2 class='chapterHead' id='codata2'><span class='titlemark'>Chapter 4</span><br /><a id='x7-260004'></a>codata_2014(3)</h2>
    
    <h3 class='likesectionHead' id='name2'><a id='x7-27000'></a>NAME</h3>
-<!-- l. 3 --><p class='noindent'>codata - libray for fundamental physical constants
+<!-- l. 3 --><p class='noindent'>codata_2014 - Fortran module containing the CODATA 2014 constants
    
 </p>
    <h3 class='likesectionHead' id='library2'><a id='x7-28000'></a>LIBRARY</h3>
@@ -1012,8 +955,7 @@ lines to your file:
    
 </p>
    <h3 class='likesectionHead' id='description2'><a id='x7-30000'></a>DESCRIPTION</h3>
-<!-- l. 18 --><p class='noindent'>codata is a Fortran library providing the fundamental physical constants according to CODATA
-</p><!-- l. 21 --><p class='indent'>   List of available constants: </p>
+<!-- l. 18 --><p class='noindent'>List of available constants: </p>
      <ul class='itemize1'>
      <li class='itemize'>LATTICE_SPACING_OF_SILICON_2014
      </li>
@@ -1738,7 +1680,7 @@ lines to your file:
      <li class='itemize'>WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014</li></ul>
    
    <h3 class='likesectionHead' id='see-also2'><a id='x7-31000'></a>SEE ALSO</h3>
-<!-- l. 361 --><p class='noindent'>codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
+<!-- l. 358 --><p class='noindent'>codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
                                                                                        
                                                                                        
 </p><!-- l. 128 --><p class='indent'>
@@ -1748,7 +1690,7 @@ lines to your file:
    <h2 class='chapterHead' id='codata3'><span class='titlemark'>Chapter 5</span><br /><a id='x7-320005'></a>codata_2018(3)</h2>
    
    <h3 class='likesectionHead' id='name3'><a id='x7-33000'></a>NAME</h3>
-<!-- l. 3 --><p class='noindent'>codata - libray for fundamental physical constants
+<!-- l. 3 --><p class='noindent'>codata_2018 - Fortran module containing the CODATA 2018 constants
    
 </p>
    <h3 class='likesectionHead' id='library3'><a id='x7-34000'></a>LIBRARY</h3>
@@ -1762,8 +1704,7 @@ lines to your file:
    
 </p>
    <h3 class='likesectionHead' id='description3'><a id='x7-36000'></a>DESCRIPTION</h3>
-<!-- l. 18 --><p class='noindent'>codata is a Fortran library providing the fundamental physical constants according to CODATA
-</p><!-- l. 21 --><p class='indent'>   List of available constants: </p>
+<!-- l. 18 --><p class='noindent'>List of available constants: </p>
      <ul class='itemize1'>
      <li class='itemize'>ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018
      </li>
@@ -2528,14 +2469,14 @@ lines to your file:
      <li class='itemize'>W_TO_Z_MASS_RATIO_2018</li></ul>
    
    <h3 class='likesectionHead' id='see-also3'><a id='x7-37000'></a>SEE ALSO</h3>
-<!-- l. 380 --><p class='noindent'>codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
+<!-- l. 377 --><p class='noindent'>codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
                                                                                        
                                                                                        
 </p>
    <h2 class='chapterHead' id='codata4'><span class='titlemark'>Chapter 6</span><br /><a id='x7-380006'></a>codata_2022(3)</h2>
    
    <h3 class='likesectionHead' id='name4'><a id='x7-39000'></a>NAME</h3>
-<!-- l. 3 --><p class='noindent'>codata - libray for fundamental physical constants
+<!-- l. 3 --><p class='noindent'>codata_2022 - Fortran module containing the CODATA 2022 constants
    
 </p>
    <h3 class='likesectionHead' id='library4'><a id='x7-40000'></a>LIBRARY</h3>
@@ -2549,8 +2490,7 @@ lines to your file:
    
 </p>
    <h3 class='likesectionHead' id='description4'><a id='x7-42000'></a>DESCRIPTION</h3>
-<!-- l. 18 --><p class='noindent'>codata is a Fortran library providing the fundamental physical constants according to CODATA
-</p><!-- l. 21 --><p class='indent'>   List of available constants: </p>
+<!-- l. 18 --><p class='noindent'>List of available constants: </p>
      <ul class='itemize1'>
      <li class='itemize'>ALPHA_PARTICLE_ELECTRON_MASS_RATIO
      </li>
@@ -3317,14 +3257,14 @@ lines to your file:
      <li class='itemize'>W_TO_Z_MASS_RATIO</li></ul>
    
    <h3 class='likesectionHead' id='see-also4'><a id='x7-43000'></a>SEE ALSO</h3>
-<!-- l. 381 --><p class='noindent'>codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
+<!-- l. 378 --><p class='noindent'>codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
                                                                                        
                                                                                        
 </p>
    <h2 class='chapterHead' id='codata5'><span class='titlemark'>Chapter 7</span><br /><a id='x7-440007'></a>codata(1)</h2>
    
    <h3 class='likesectionHead' id='name5'><a id='x7-45000'></a>NAME</h3>
-<!-- l. 3 --><p class='noindent'>codata - Command line for codata
+<!-- l. 3 --><p class='noindent'>codata - fundamental physical constants
    
 </p>
    <h3 class='likesectionHead' id='synopsis5'><a id='x7-46000'></a>SYNOPSIS</h3>
@@ -3379,7 +3319,7 @@ contain @file arguments. That is, it is not processed recursively.
                                                                                        
                                                                                        
 </p>
-   <pre class='verbatim' id='verbatim-7'>
+   <pre class='verbatim' id='verbatim-5'>
      codata
      codata -y 2018 molar electron
      codata -y 2014 -p 'molar.*gas','electron.*eV'

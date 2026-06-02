@@ -1,7 +1,7 @@
 codata(1)                    User Commands                    codata(1)
 
 NAME
-       codata - Command line for codata
+       codata - fundamental physical constants
 
 SYNOPSIS
        codata [OPTIONS] [REGEX_PATTERN ... ]
@@ -62,4 +62,4 @@ EXAMPLE
 SEE ALSO
        codata(3)
 
-2.5.2                         31 May 2026                     codata(1)
+2.5.2                         02 June 2026                    codata(1)

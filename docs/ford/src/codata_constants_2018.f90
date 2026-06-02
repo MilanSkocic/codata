@@ -3,7 +3,7 @@
 ! MAN PAGE
 !{{{
 ! NAME
-!   codata - libray for fundamental physical constants
+!   codata_2018 - Fortran module containing the CODATA 2018 constants
 ! 
 ! LIBRARY
 !   codata (-libcodata, -lcodata)
@@ -16,9 +16,6 @@
 !   import pycodata
 ! 
 ! DESCRIPTION
-!   codata is a Fortran library providing the fundamental physical
-!   constants according to CODATA
-! 
 !   List of available constants:
 !   o ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018
 !   o ALPHA_PARTICLE_MASS_2018
