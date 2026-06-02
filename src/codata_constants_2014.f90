@@ -3,7 +3,7 @@
 ! MAN PAGE
 !{{{
 ! NAME
-!   codata - libray for fundamental physical constants
+!   codata_2014 - Fortran module containing the CODATA 2014 constants
 ! 
 ! LIBRARY
 !   codata (-libcodata, -lcodata)
@@ -16,9 +16,6 @@
 !   import pycodata
 ! 
 ! DESCRIPTION
-!   codata is a Fortran library providing the fundamental physical
-!   constants according to CODATA
-! 
 !   List of available constants:
 !   o LATTICE_SPACING_OF_SILICON_2014
 !   o ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2014
