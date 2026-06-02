@@ -20,15 +20,15 @@ nullify(cctptr)
 
 version_text=[character(len=80) :: &
 'PROGRAM:      '//name//'                                              ', &
-'DESCRIPTION:  Command line interface for codata                       ', &
-'VERSION:      '//version()//'                                     ', &
+'DESCRIPTION:  Fundamental physical constants                          ', &
+'VERSION:      '//version()//'                                         ', &
 'AUTHOR:       M. Skocic                                               ', &
 'LICENSE:      MIT                                                     ', &
 '' ]
 
 help_text=[character(len=80) :: &
 'NAME                                                                  ', &
-'  '//name//' - Command line for codata                                ', &
+'  '//name//' - fundamental physical constants                         ', &
 '                                                                      ', &
 'SYNOPSIS                                                              ', &
 '  '//name//' [OPTIONS] [REGEX_PATTERN ... ]                           ', &
