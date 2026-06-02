@@ -18,7 +18,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
 
     v = PyLong_FromLong(YEAR_2018);
     PyDict_SetItemString(d, "YEAR_2018", v);
-    Py_INCREF(v);
+    Py_DECREF(v);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018.name,
@@ -27,7 +27,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ALPHA_PARTICLE_MASS_2018.name,
@@ -36,7 +36,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ALPHA_PARTICLE_MASS_2018.unit
     );
     PyDict_SetItemString(d, "ALPHA_PARTICLE_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018.name,
@@ -45,7 +45,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -54,7 +54,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ALPHA_PARTICLE_MASS_IN_U_2018.name,
@@ -63,7 +63,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ALPHA_PARTICLE_MASS_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "ALPHA_PARTICLE_MASS_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ALPHA_PARTICLE_MOLAR_MASS_2018.name,
@@ -72,7 +72,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ALPHA_PARTICLE_MOLAR_MASS_2018.unit
     );
     PyDict_SetItemString(d, "ALPHA_PARTICLE_MOLAR_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ALPHA_PARTICLE_PROTON_MASS_RATIO_2018.name,
@@ -81,7 +81,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ALPHA_PARTICLE_PROTON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ALPHA_PARTICLE_PROTON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018.name,
@@ -90,7 +90,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018.unit
     );
     PyDict_SetItemString(d, "ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ANGSTROM_STAR_2018.name,
@@ -99,7 +99,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ANGSTROM_STAR_2018.unit
     );
     PyDict_SetItemString(d, "ANGSTROM_STAR_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_CONSTANT_2018.name,
@@ -108,7 +108,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2018.name,
@@ -117,7 +117,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -126,7 +126,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2018.name,
@@ -135,7 +135,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2018.name,
@@ -144,7 +144,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2018.name,
@@ -153,7 +153,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2018.name,
@@ -162,7 +162,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2018.name,
@@ -171,7 +171,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2018.name,
@@ -180,7 +180,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2018.name,
@@ -189,7 +189,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2018.name,
@@ -198,7 +198,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2018.name,
@@ -207,7 +207,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_ACTION_2018.name,
@@ -216,7 +216,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_ACTION_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_ACTION_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_CHARGE_2018.name,
@@ -225,7 +225,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_CHARGE_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_CHARGE_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_CHARGE_DENSITY_2018.name,
@@ -234,7 +234,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_CHARGE_DENSITY_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_CHARGE_DENSITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_CURRENT_2018.name,
@@ -243,7 +243,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_CURRENT_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_CURRENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2018.name,
@@ -252,7 +252,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_ELECTRIC_FIELD_2018.name,
@@ -261,7 +261,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_ELECTRIC_FIELD_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_ELECTRIC_FIELD_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2018.name,
@@ -270,7 +270,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2018.name,
@@ -279,7 +279,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2018.name,
@@ -288,7 +288,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2018.name,
@@ -297,7 +297,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_ENERGY_2018.name,
@@ -306,7 +306,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_ENERGY_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_ENERGY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_FORCE_2018.name,
@@ -315,7 +315,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_FORCE_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_FORCE_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_LENGTH_2018.name,
@@ -324,7 +324,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_LENGTH_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_LENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2018.name,
@@ -333,7 +333,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2018.name,
@@ -342,7 +342,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_MAGNETIZABILITY_2018.name,
@@ -351,7 +351,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_MAGNETIZABILITY_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_MAGNETIZABILITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_MASS_2018.name,
@@ -360,7 +360,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_MASS_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_MOMENTUM_2018.name,
@@ -369,7 +369,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_MOMENTUM_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_MOMENTUM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_PERMITTIVITY_2018.name,
@@ -378,7 +378,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_PERMITTIVITY_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_PERMITTIVITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_TIME_2018.name,
@@ -387,7 +387,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_TIME_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_TIME_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ATOMIC_UNIT_OF_VELOCITY_2018.name,
@@ -396,7 +396,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_VELOCITY_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_VELOCITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", AVOGADRO_CONSTANT_2018.name,
@@ -405,7 +405,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", AVOGADRO_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "AVOGADRO_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOHR_MAGNETON_2018.name,
@@ -414,7 +414,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOHR_MAGNETON_2018.unit
     );
     PyDict_SetItemString(d, "BOHR_MAGNETON_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOHR_MAGNETON_IN_EV_T_2018.name,
@@ -423,7 +423,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOHR_MAGNETON_IN_EV_T_2018.unit
     );
     PyDict_SetItemString(d, "BOHR_MAGNETON_IN_EV_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOHR_MAGNETON_IN_HZ_T_2018.name,
@@ -432,7 +432,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOHR_MAGNETON_IN_HZ_T_2018.unit
     );
     PyDict_SetItemString(d, "BOHR_MAGNETON_IN_HZ_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018.name,
@@ -441,7 +441,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018.unit
     );
     PyDict_SetItemString(d, "BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOHR_MAGNETON_IN_K_T_2018.name,
@@ -450,7 +450,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOHR_MAGNETON_IN_K_T_2018.unit
     );
     PyDict_SetItemString(d, "BOHR_MAGNETON_IN_K_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOHR_RADIUS_2018.name,
@@ -459,7 +459,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOHR_RADIUS_2018.unit
     );
     PyDict_SetItemString(d, "BOHR_RADIUS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOLTZMANN_CONSTANT_2018.name,
@@ -468,7 +468,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOLTZMANN_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "BOLTZMANN_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOLTZMANN_CONSTANT_IN_EV_K_2018.name,
@@ -477,7 +477,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOLTZMANN_CONSTANT_IN_EV_K_2018.unit
     );
     PyDict_SetItemString(d, "BOLTZMANN_CONSTANT_IN_EV_K_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOLTZMANN_CONSTANT_IN_HZ_K_2018.name,
@@ -486,7 +486,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOLTZMANN_CONSTANT_IN_HZ_K_2018.unit
     );
     PyDict_SetItemString(d, "BOLTZMANN_CONSTANT_IN_HZ_K_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2018.name,
@@ -495,7 +495,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2018.unit
     );
     PyDict_SetItemString(d, "BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2018.name,
@@ -504,7 +504,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2018.unit
     );
     PyDict_SetItemString(d, "CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CLASSICAL_ELECTRON_RADIUS_2018.name,
@@ -513,7 +513,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CLASSICAL_ELECTRON_RADIUS_2018.unit
     );
     PyDict_SetItemString(d, "CLASSICAL_ELECTRON_RADIUS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", COMPTON_WAVELENGTH_2018.name,
@@ -522,7 +522,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONDUCTANCE_QUANTUM_2018.name,
@@ -531,7 +531,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONDUCTANCE_QUANTUM_2018.unit
     );
     PyDict_SetItemString(d, "CONDUCTANCE_QUANTUM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONVENTIONAL_VALUE_OF_AMPERE_90_2018.name,
@@ -540,7 +540,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONVENTIONAL_VALUE_OF_AMPERE_90_2018.unit
     );
     PyDict_SetItemString(d, "CONVENTIONAL_VALUE_OF_AMPERE_90_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONVENTIONAL_VALUE_OF_COULOMB_90_2018.name,
@@ -549,7 +549,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONVENTIONAL_VALUE_OF_COULOMB_90_2018.unit
     );
     PyDict_SetItemString(d, "CONVENTIONAL_VALUE_OF_COULOMB_90_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONVENTIONAL_VALUE_OF_FARAD_90_2018.name,
@@ -558,7 +558,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONVENTIONAL_VALUE_OF_FARAD_90_2018.unit
     );
     PyDict_SetItemString(d, "CONVENTIONAL_VALUE_OF_FARAD_90_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONVENTIONAL_VALUE_OF_HENRY_90_2018.name,
@@ -567,7 +567,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONVENTIONAL_VALUE_OF_HENRY_90_2018.unit
     );
     PyDict_SetItemString(d, "CONVENTIONAL_VALUE_OF_HENRY_90_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2018.name,
@@ -576,7 +576,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONVENTIONAL_VALUE_OF_OHM_90_2018.name,
@@ -585,7 +585,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONVENTIONAL_VALUE_OF_OHM_90_2018.unit
     );
     PyDict_SetItemString(d, "CONVENTIONAL_VALUE_OF_OHM_90_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONVENTIONAL_VALUE_OF_VOLT_90_2018.name,
@@ -594,7 +594,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONVENTIONAL_VALUE_OF_VOLT_90_2018.unit
     );
     PyDict_SetItemString(d, "CONVENTIONAL_VALUE_OF_VOLT_90_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2018.name,
@@ -603,7 +603,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", CONVENTIONAL_VALUE_OF_WATT_90_2018.name,
@@ -612,7 +612,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", CONVENTIONAL_VALUE_OF_WATT_90_2018.unit
     );
     PyDict_SetItemString(d, "CONVENTIONAL_VALUE_OF_WATT_90_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", COPPER_X_UNIT_2018.name,
@@ -621,7 +621,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", COPPER_X_UNIT_2018.unit
     );
     PyDict_SetItemString(d, "COPPER_X_UNIT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_ELECTRON_MAG_MOM_RATIO_2018.name,
@@ -630,7 +630,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_ELECTRON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_ELECTRON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_ELECTRON_MASS_RATIO_2018.name,
@@ -639,7 +639,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_ELECTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_ELECTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_G_FACTOR_2018.name,
@@ -648,7 +648,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_G_FACTOR_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_G_FACTOR_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_MAG_MOM_2018.name,
@@ -657,7 +657,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_MAG_MOM_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_MAG_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.name,
@@ -666,7 +666,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.name,
@@ -675,7 +675,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_MASS_2018.name,
@@ -684,7 +684,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_MASS_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_MASS_ENERGY_EQUIVALENT_2018.name,
@@ -693,7 +693,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_MASS_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_MASS_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -702,7 +702,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_MASS_IN_U_2018.name,
@@ -711,7 +711,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_MASS_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_MASS_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_MOLAR_MASS_2018.name,
@@ -720,7 +720,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_MOLAR_MASS_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_MOLAR_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_NEUTRON_MAG_MOM_RATIO_2018.name,
@@ -729,7 +729,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_NEUTRON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_NEUTRON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_PROTON_MAG_MOM_RATIO_2018.name,
@@ -738,7 +738,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_PROTON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_PROTON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_PROTON_MASS_RATIO_2018.name,
@@ -747,7 +747,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_PROTON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_PROTON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_RELATIVE_ATOMIC_MASS_2018.name,
@@ -756,7 +756,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_RELATIVE_ATOMIC_MASS_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_RELATIVE_ATOMIC_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", DEUTERON_RMS_CHARGE_RADIUS_2018.name,
@@ -765,7 +765,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", DEUTERON_RMS_CHARGE_RADIUS_2018.unit
     );
     PyDict_SetItemString(d, "DEUTERON_RMS_CHARGE_RADIUS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_CHARGE_TO_MASS_QUOTIENT_2018.name,
@@ -774,7 +774,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_CHARGE_TO_MASS_QUOTIENT_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_CHARGE_TO_MASS_QUOTIENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_DEUTERON_MAG_MOM_RATIO_2018.name,
@@ -783,7 +783,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_DEUTERON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_DEUTERON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_DEUTERON_MASS_RATIO_2018.name,
@@ -792,7 +792,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_DEUTERON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_DEUTERON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_G_FACTOR_2018.name,
@@ -801,7 +801,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_G_FACTOR_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_G_FACTOR_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_GYROMAG_RATIO_2018.name,
@@ -810,7 +810,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_GYROMAG_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_GYROMAG_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2018.name,
@@ -819,7 +819,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_HELION_MASS_RATIO_2018.name,
@@ -828,7 +828,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_HELION_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_HELION_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MAG_MOM_2018.name,
@@ -837,7 +837,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MAG_MOM_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MAG_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MAG_MOM_ANOMALY_2018.name,
@@ -846,7 +846,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MAG_MOM_ANOMALY_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MAG_MOM_ANOMALY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.name,
@@ -855,7 +855,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.name,
@@ -864,7 +864,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MASS_2018.name,
@@ -873,7 +873,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MASS_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MASS_ENERGY_EQUIVALENT_2018.name,
@@ -882,7 +882,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MASS_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MASS_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -891,7 +891,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MASS_IN_U_2018.name,
@@ -900,7 +900,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MASS_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MASS_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MOLAR_MASS_2018.name,
@@ -909,7 +909,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MOLAR_MASS_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MOLAR_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MUON_MAG_MOM_RATIO_2018.name,
@@ -918,7 +918,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MUON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MUON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_MUON_MASS_RATIO_2018.name,
@@ -927,7 +927,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_MUON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_MUON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_NEUTRON_MAG_MOM_RATIO_2018.name,
@@ -936,7 +936,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_NEUTRON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_NEUTRON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_NEUTRON_MASS_RATIO_2018.name,
@@ -945,7 +945,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_NEUTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_NEUTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_PROTON_MAG_MOM_RATIO_2018.name,
@@ -954,7 +954,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_PROTON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_PROTON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_PROTON_MASS_RATIO_2018.name,
@@ -963,7 +963,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_PROTON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_PROTON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_RELATIVE_ATOMIC_MASS_2018.name,
@@ -972,7 +972,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_RELATIVE_ATOMIC_MASS_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_RELATIVE_ATOMIC_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_TAU_MASS_RATIO_2018.name,
@@ -981,7 +981,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_TAU_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_TAU_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018.name,
@@ -990,7 +990,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2018.name,
@@ -999,7 +999,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018.name,
@@ -1008,7 +1008,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_TRITON_MASS_RATIO_2018.name,
@@ -1017,7 +1017,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_TRITON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_TRITON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_VOLT_2018.name,
@@ -1026,7 +1026,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_VOLT_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_VOLT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.name,
@@ -1035,7 +1035,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_VOLT_HARTREE_RELATIONSHIP_2018.name,
@@ -1044,7 +1044,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_VOLT_HARTREE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_VOLT_HARTREE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_VOLT_HERTZ_RELATIONSHIP_2018.name,
@@ -1053,7 +1053,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_VOLT_HERTZ_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_VOLT_HERTZ_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2018.name,
@@ -1062,7 +1062,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_VOLT_JOULE_RELATIONSHIP_2018.name,
@@ -1071,7 +1071,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_VOLT_JOULE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_VOLT_JOULE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_VOLT_KELVIN_RELATIONSHIP_2018.name,
@@ -1080,7 +1080,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_VOLT_KELVIN_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_VOLT_KELVIN_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2018.name,
@@ -1089,7 +1089,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELEMENTARY_CHARGE_2018.name,
@@ -1098,7 +1098,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELEMENTARY_CHARGE_2018.unit
     );
     PyDict_SetItemString(d, "ELEMENTARY_CHARGE_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ELEMENTARY_CHARGE_OVER_H_BAR_2018.name,
@@ -1107,7 +1107,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELEMENTARY_CHARGE_OVER_H_BAR_2018.unit
     );
     PyDict_SetItemString(d, "ELEMENTARY_CHARGE_OVER_H_BAR_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", FARADAY_CONSTANT_2018.name,
@@ -1116,7 +1116,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", FARADAY_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "FARADAY_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", FERMI_COUPLING_CONSTANT_2018.name,
@@ -1125,7 +1125,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", FERMI_COUPLING_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "FERMI_COUPLING_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", FINE_STRUCTURE_CONSTANT_2018.name,
@@ -1134,7 +1134,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", FINE_STRUCTURE_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "FINE_STRUCTURE_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", FIRST_RADIATION_CONSTANT_2018.name,
@@ -1143,7 +1143,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", FIRST_RADIATION_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "FIRST_RADIATION_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2018.name,
@@ -1152,7 +1152,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2018.unit
     );
     PyDict_SetItemString(d, "FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.name,
@@ -1161,7 +1161,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HARTREE_ELECTRON_VOLT_RELATIONSHIP_2018.name,
@@ -1170,7 +1170,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HARTREE_ELECTRON_VOLT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HARTREE_ELECTRON_VOLT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HARTREE_ENERGY_2018.name,
@@ -1179,7 +1179,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HARTREE_ENERGY_2018.unit
     );
     PyDict_SetItemString(d, "HARTREE_ENERGY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HARTREE_ENERGY_IN_EV_2018.name,
@@ -1188,7 +1188,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HARTREE_ENERGY_IN_EV_2018.unit
     );
     PyDict_SetItemString(d, "HARTREE_ENERGY_IN_EV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HARTREE_HERTZ_RELATIONSHIP_2018.name,
@@ -1197,7 +1197,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HARTREE_HERTZ_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HARTREE_HERTZ_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HARTREE_INVERSE_METER_RELATIONSHIP_2018.name,
@@ -1206,7 +1206,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HARTREE_INVERSE_METER_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HARTREE_INVERSE_METER_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HARTREE_JOULE_RELATIONSHIP_2018.name,
@@ -1215,7 +1215,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HARTREE_JOULE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HARTREE_JOULE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HARTREE_KELVIN_RELATIONSHIP_2018.name,
@@ -1224,7 +1224,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HARTREE_KELVIN_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HARTREE_KELVIN_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HARTREE_KILOGRAM_RELATIONSHIP_2018.name,
@@ -1233,7 +1233,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HARTREE_KILOGRAM_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HARTREE_KILOGRAM_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_ELECTRON_MASS_RATIO_2018.name,
@@ -1242,7 +1242,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_ELECTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "HELION_ELECTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_G_FACTOR_2018.name,
@@ -1251,7 +1251,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_G_FACTOR_2018.unit
     );
     PyDict_SetItemString(d, "HELION_G_FACTOR_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_MAG_MOM_2018.name,
@@ -1260,7 +1260,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_MAG_MOM_2018.unit
     );
     PyDict_SetItemString(d, "HELION_MAG_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.name,
@@ -1269,7 +1269,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.name,
@@ -1278,7 +1278,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_MASS_2018.name,
@@ -1287,7 +1287,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_MASS_2018.unit
     );
     PyDict_SetItemString(d, "HELION_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_MASS_ENERGY_EQUIVALENT_2018.name,
@@ -1296,7 +1296,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_MASS_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "HELION_MASS_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -1305,7 +1305,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_MASS_IN_U_2018.name,
@@ -1314,7 +1314,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_MASS_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "HELION_MASS_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_MOLAR_MASS_2018.name,
@@ -1323,7 +1323,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_MOLAR_MASS_2018.unit
     );
     PyDict_SetItemString(d, "HELION_MOLAR_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_PROTON_MASS_RATIO_2018.name,
@@ -1332,7 +1332,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_PROTON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "HELION_PROTON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_RELATIVE_ATOMIC_MASS_2018.name,
@@ -1341,7 +1341,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_RELATIVE_ATOMIC_MASS_2018.unit
     );
     PyDict_SetItemString(d, "HELION_RELATIVE_ATOMIC_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HELION_SHIELDING_SHIFT_2018.name,
@@ -1350,7 +1350,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HELION_SHIELDING_SHIFT_2018.unit
     );
     PyDict_SetItemString(d, "HELION_SHIELDING_SHIFT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.name,
@@ -1359,7 +1359,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HERTZ_ELECTRON_VOLT_RELATIONSHIP_2018.name,
@@ -1368,7 +1368,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HERTZ_ELECTRON_VOLT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HERTZ_ELECTRON_VOLT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HERTZ_HARTREE_RELATIONSHIP_2018.name,
@@ -1377,7 +1377,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HERTZ_HARTREE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HERTZ_HARTREE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HERTZ_INVERSE_METER_RELATIONSHIP_2018.name,
@@ -1386,7 +1386,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HERTZ_INVERSE_METER_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HERTZ_INVERSE_METER_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HERTZ_JOULE_RELATIONSHIP_2018.name,
@@ -1395,7 +1395,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HERTZ_JOULE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HERTZ_JOULE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HERTZ_KELVIN_RELATIONSHIP_2018.name,
@@ -1404,7 +1404,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HERTZ_KELVIN_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HERTZ_KELVIN_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HERTZ_KILOGRAM_RELATIONSHIP_2018.name,
@@ -1413,7 +1413,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HERTZ_KILOGRAM_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "HERTZ_KILOGRAM_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2018.name,
@@ -1422,7 +1422,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2018.unit
     );
     PyDict_SetItemString(d, "HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", INVERSE_FINE_STRUCTURE_CONSTANT_2018.name,
@@ -1431,7 +1431,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", INVERSE_FINE_STRUCTURE_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "INVERSE_FINE_STRUCTURE_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.name,
@@ -1440,7 +1440,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2018.name,
@@ -1449,7 +1449,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", INVERSE_METER_HARTREE_RELATIONSHIP_2018.name,
@@ -1458,7 +1458,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", INVERSE_METER_HARTREE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "INVERSE_METER_HARTREE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", INVERSE_METER_HERTZ_RELATIONSHIP_2018.name,
@@ -1467,7 +1467,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", INVERSE_METER_HERTZ_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "INVERSE_METER_HERTZ_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", INVERSE_METER_JOULE_RELATIONSHIP_2018.name,
@@ -1476,7 +1476,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", INVERSE_METER_JOULE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "INVERSE_METER_JOULE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", INVERSE_METER_KELVIN_RELATIONSHIP_2018.name,
@@ -1485,7 +1485,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", INVERSE_METER_KELVIN_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "INVERSE_METER_KELVIN_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", INVERSE_METER_KILOGRAM_RELATIONSHIP_2018.name,
@@ -1494,7 +1494,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", INVERSE_METER_KILOGRAM_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "INVERSE_METER_KILOGRAM_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", INVERSE_OF_CONDUCTANCE_QUANTUM_2018.name,
@@ -1503,7 +1503,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", INVERSE_OF_CONDUCTANCE_QUANTUM_2018.unit
     );
     PyDict_SetItemString(d, "INVERSE_OF_CONDUCTANCE_QUANTUM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", JOSEPHSON_CONSTANT_2018.name,
@@ -1512,7 +1512,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", JOSEPHSON_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "JOSEPHSON_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.name,
@@ -1521,7 +1521,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", JOULE_ELECTRON_VOLT_RELATIONSHIP_2018.name,
@@ -1530,7 +1530,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", JOULE_ELECTRON_VOLT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "JOULE_ELECTRON_VOLT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", JOULE_HARTREE_RELATIONSHIP_2018.name,
@@ -1539,7 +1539,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", JOULE_HARTREE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "JOULE_HARTREE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", JOULE_HERTZ_RELATIONSHIP_2018.name,
@@ -1548,7 +1548,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", JOULE_HERTZ_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "JOULE_HERTZ_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", JOULE_INVERSE_METER_RELATIONSHIP_2018.name,
@@ -1557,7 +1557,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", JOULE_INVERSE_METER_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "JOULE_INVERSE_METER_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", JOULE_KELVIN_RELATIONSHIP_2018.name,
@@ -1566,7 +1566,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", JOULE_KELVIN_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "JOULE_KELVIN_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", JOULE_KILOGRAM_RELATIONSHIP_2018.name,
@@ -1575,7 +1575,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", JOULE_KILOGRAM_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "JOULE_KILOGRAM_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.name,
@@ -1584,7 +1584,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KELVIN_ELECTRON_VOLT_RELATIONSHIP_2018.name,
@@ -1593,7 +1593,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KELVIN_ELECTRON_VOLT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KELVIN_ELECTRON_VOLT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KELVIN_HARTREE_RELATIONSHIP_2018.name,
@@ -1602,7 +1602,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KELVIN_HARTREE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KELVIN_HARTREE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KELVIN_HERTZ_RELATIONSHIP_2018.name,
@@ -1611,7 +1611,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KELVIN_HERTZ_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KELVIN_HERTZ_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KELVIN_INVERSE_METER_RELATIONSHIP_2018.name,
@@ -1620,7 +1620,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KELVIN_INVERSE_METER_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KELVIN_INVERSE_METER_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KELVIN_JOULE_RELATIONSHIP_2018.name,
@@ -1629,7 +1629,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KELVIN_JOULE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KELVIN_JOULE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KELVIN_KILOGRAM_RELATIONSHIP_2018.name,
@@ -1638,7 +1638,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KELVIN_KILOGRAM_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KELVIN_KILOGRAM_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.name,
@@ -1647,7 +1647,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2018.name,
@@ -1656,7 +1656,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KILOGRAM_HARTREE_RELATIONSHIP_2018.name,
@@ -1665,7 +1665,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KILOGRAM_HARTREE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KILOGRAM_HARTREE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KILOGRAM_HERTZ_RELATIONSHIP_2018.name,
@@ -1674,7 +1674,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KILOGRAM_HERTZ_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KILOGRAM_HERTZ_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KILOGRAM_INVERSE_METER_RELATIONSHIP_2018.name,
@@ -1683,7 +1683,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KILOGRAM_INVERSE_METER_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KILOGRAM_INVERSE_METER_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KILOGRAM_JOULE_RELATIONSHIP_2018.name,
@@ -1692,7 +1692,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KILOGRAM_JOULE_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KILOGRAM_JOULE_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", KILOGRAM_KELVIN_RELATIONSHIP_2018.name,
@@ -1701,7 +1701,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", KILOGRAM_KELVIN_RELATIONSHIP_2018.unit
     );
     PyDict_SetItemString(d, "KILOGRAM_KELVIN_RELATIONSHIP_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", LATTICE_PARAMETER_OF_SILICON_2018.name,
@@ -1710,7 +1710,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", LATTICE_PARAMETER_OF_SILICON_2018.unit
     );
     PyDict_SetItemString(d, "LATTICE_PARAMETER_OF_SILICON_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", LATTICE_SPACING_OF_IDEAL_SI_220_2018.name,
@@ -1719,7 +1719,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", LATTICE_SPACING_OF_IDEAL_SI_220_2018.unit
     );
     PyDict_SetItemString(d, "LATTICE_SPACING_OF_IDEAL_SI_220_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2018.name,
@@ -1728,7 +1728,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2018.unit
     );
     PyDict_SetItemString(d, "LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2018.name,
@@ -1737,7 +1737,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2018.unit
     );
     PyDict_SetItemString(d, "LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", LUMINOUS_EFFICACY_2018.name,
@@ -1746,7 +1746,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", LUMINOUS_EFFICACY_2018.unit
     );
     PyDict_SetItemString(d, "LUMINOUS_EFFICACY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MAG_FLUX_QUANTUM_2018.name,
@@ -1755,7 +1755,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MAG_FLUX_QUANTUM_2018.unit
     );
     PyDict_SetItemString(d, "MAG_FLUX_QUANTUM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MOLAR_GAS_CONSTANT_2018.name,
@@ -1764,7 +1764,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MOLAR_GAS_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "MOLAR_GAS_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MOLAR_MASS_CONSTANT_2018.name,
@@ -1773,7 +1773,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MOLAR_MASS_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "MOLAR_MASS_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MOLAR_MASS_OF_CARBON_12_2018.name,
@@ -1782,7 +1782,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MOLAR_MASS_OF_CARBON_12_2018.unit
     );
     PyDict_SetItemString(d, "MOLAR_MASS_OF_CARBON_12_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MOLAR_PLANCK_CONSTANT_2018.name,
@@ -1791,7 +1791,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MOLAR_PLANCK_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "MOLAR_PLANCK_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2018.name,
@@ -1800,7 +1800,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2018.unit
     );
     PyDict_SetItemString(d, "MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2018.name,
@@ -1809,7 +1809,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2018.unit
     );
     PyDict_SetItemString(d, "MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MOLAR_VOLUME_OF_SILICON_2018.name,
@@ -1818,7 +1818,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MOLAR_VOLUME_OF_SILICON_2018.unit
     );
     PyDict_SetItemString(d, "MOLAR_VOLUME_OF_SILICON_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MOLYBDENUM_X_UNIT_2018.name,
@@ -1827,7 +1827,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MOLYBDENUM_X_UNIT_2018.unit
     );
     PyDict_SetItemString(d, "MOLYBDENUM_X_UNIT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_COMPTON_WAVELENGTH_2018.name,
@@ -1836,7 +1836,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "MUON_COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_ELECTRON_MASS_RATIO_2018.name,
@@ -1845,7 +1845,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_ELECTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "MUON_ELECTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_G_FACTOR_2018.name,
@@ -1854,7 +1854,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_G_FACTOR_2018.unit
     );
     PyDict_SetItemString(d, "MUON_G_FACTOR_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_MAG_MOM_2018.name,
@@ -1863,7 +1863,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_MAG_MOM_2018.unit
     );
     PyDict_SetItemString(d, "MUON_MAG_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_MAG_MOM_ANOMALY_2018.name,
@@ -1872,7 +1872,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_MAG_MOM_ANOMALY_2018.unit
     );
     PyDict_SetItemString(d, "MUON_MAG_MOM_ANOMALY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.name,
@@ -1881,7 +1881,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.name,
@@ -1890,7 +1890,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_MASS_2018.name,
@@ -1899,7 +1899,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_MASS_2018.unit
     );
     PyDict_SetItemString(d, "MUON_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_MASS_ENERGY_EQUIVALENT_2018.name,
@@ -1908,7 +1908,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_MASS_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "MUON_MASS_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -1917,7 +1917,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_MASS_IN_U_2018.name,
@@ -1926,7 +1926,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_MASS_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "MUON_MASS_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_MOLAR_MASS_2018.name,
@@ -1935,7 +1935,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_MOLAR_MASS_2018.unit
     );
     PyDict_SetItemString(d, "MUON_MOLAR_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_NEUTRON_MASS_RATIO_2018.name,
@@ -1944,7 +1944,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_NEUTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "MUON_NEUTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_PROTON_MAG_MOM_RATIO_2018.name,
@@ -1953,7 +1953,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_PROTON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "MUON_PROTON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_PROTON_MASS_RATIO_2018.name,
@@ -1962,7 +1962,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_PROTON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "MUON_PROTON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", MUON_TAU_MASS_RATIO_2018.name,
@@ -1971,7 +1971,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MUON_TAU_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "MUON_TAU_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_ACTION_2018.name,
@@ -1980,7 +1980,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_ACTION_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_ACTION_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_ACTION_IN_EV_S_2018.name,
@@ -1989,7 +1989,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_ACTION_IN_EV_S_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_ACTION_IN_EV_S_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_ENERGY_2018.name,
@@ -1998,7 +1998,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_ENERGY_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_ENERGY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_ENERGY_IN_MEV_2018.name,
@@ -2007,7 +2007,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_ENERGY_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_ENERGY_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_LENGTH_2018.name,
@@ -2016,7 +2016,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_LENGTH_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_LENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_MASS_2018.name,
@@ -2025,7 +2025,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_MASS_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_MOMENTUM_2018.name,
@@ -2034,7 +2034,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_MOMENTUM_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_MOMENTUM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018.name,
@@ -2043,7 +2043,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_TIME_2018.name,
@@ -2052,7 +2052,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_TIME_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_TIME_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NATURAL_UNIT_OF_VELOCITY_2018.name,
@@ -2061,7 +2061,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_VELOCITY_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_VELOCITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_COMPTON_WAVELENGTH_2018.name,
@@ -2070,7 +2070,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_ELECTRON_MAG_MOM_RATIO_2018.name,
@@ -2079,7 +2079,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_ELECTRON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_ELECTRON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_ELECTRON_MASS_RATIO_2018.name,
@@ -2088,7 +2088,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_ELECTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_ELECTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_G_FACTOR_2018.name,
@@ -2097,7 +2097,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_G_FACTOR_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_G_FACTOR_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_GYROMAG_RATIO_2018.name,
@@ -2106,7 +2106,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_GYROMAG_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_GYROMAG_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018.name,
@@ -2115,7 +2115,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_MAG_MOM_2018.name,
@@ -2124,7 +2124,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_MAG_MOM_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_MAG_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.name,
@@ -2133,7 +2133,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.name,
@@ -2142,7 +2142,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_MASS_2018.name,
@@ -2151,7 +2151,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_MASS_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_MASS_ENERGY_EQUIVALENT_2018.name,
@@ -2160,7 +2160,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_MASS_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_MASS_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -2169,7 +2169,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_MASS_IN_U_2018.name,
@@ -2178,7 +2178,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_MASS_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_MASS_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_MOLAR_MASS_2018.name,
@@ -2187,7 +2187,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_MOLAR_MASS_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_MOLAR_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_MUON_MASS_RATIO_2018.name,
@@ -2196,7 +2196,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_MUON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_MUON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_PROTON_MAG_MOM_RATIO_2018.name,
@@ -2205,7 +2205,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_PROTON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_PROTON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_PROTON_MASS_DIFFERENCE_2018.name,
@@ -2214,7 +2214,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_PROTON_MASS_DIFFERENCE_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_PROTON_MASS_DIFFERENCE_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2018.name,
@@ -2223,7 +2223,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -2232,7 +2232,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2018.name,
@@ -2241,7 +2241,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_PROTON_MASS_RATIO_2018.name,
@@ -2250,7 +2250,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_PROTON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_PROTON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_RELATIVE_ATOMIC_MASS_2018.name,
@@ -2259,7 +2259,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_RELATIVE_ATOMIC_MASS_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_RELATIVE_ATOMIC_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_TAU_MASS_RATIO_2018.name,
@@ -2268,7 +2268,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_TAU_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_TAU_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018.name,
@@ -2277,7 +2277,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEWTONIAN_CONSTANT_OF_GRAVITATION_2018.name,
@@ -2286,7 +2286,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEWTONIAN_CONSTANT_OF_GRAVITATION_2018.unit
     );
     PyDict_SetItemString(d, "NEWTONIAN_CONSTANT_OF_GRAVITATION_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2018.name,
@@ -2295,7 +2295,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2018.unit
     );
     PyDict_SetItemString(d, "NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NUCLEAR_MAGNETON_2018.name,
@@ -2304,7 +2304,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NUCLEAR_MAGNETON_2018.unit
     );
     PyDict_SetItemString(d, "NUCLEAR_MAGNETON_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NUCLEAR_MAGNETON_IN_EV_T_2018.name,
@@ -2313,7 +2313,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NUCLEAR_MAGNETON_IN_EV_T_2018.unit
     );
     PyDict_SetItemString(d, "NUCLEAR_MAGNETON_IN_EV_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018.name,
@@ -2322,7 +2322,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018.unit
     );
     PyDict_SetItemString(d, "NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NUCLEAR_MAGNETON_IN_K_T_2018.name,
@@ -2331,7 +2331,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NUCLEAR_MAGNETON_IN_K_T_2018.unit
     );
     PyDict_SetItemString(d, "NUCLEAR_MAGNETON_IN_K_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", NUCLEAR_MAGNETON_IN_MHZ_T_2018.name,
@@ -2340,7 +2340,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NUCLEAR_MAGNETON_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "NUCLEAR_MAGNETON_IN_MHZ_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PLANCK_CONSTANT_2018.name,
@@ -2349,7 +2349,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PLANCK_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "PLANCK_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PLANCK_CONSTANT_IN_EV_HZ_2018.name,
@@ -2358,7 +2358,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PLANCK_CONSTANT_IN_EV_HZ_2018.unit
     );
     PyDict_SetItemString(d, "PLANCK_CONSTANT_IN_EV_HZ_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PLANCK_LENGTH_2018.name,
@@ -2367,7 +2367,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PLANCK_LENGTH_2018.unit
     );
     PyDict_SetItemString(d, "PLANCK_LENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PLANCK_MASS_2018.name,
@@ -2376,7 +2376,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PLANCK_MASS_2018.unit
     );
     PyDict_SetItemString(d, "PLANCK_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2018.name,
@@ -2385,7 +2385,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2018.unit
     );
     PyDict_SetItemString(d, "PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PLANCK_TEMPERATURE_2018.name,
@@ -2394,7 +2394,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PLANCK_TEMPERATURE_2018.unit
     );
     PyDict_SetItemString(d, "PLANCK_TEMPERATURE_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PLANCK_TIME_2018.name,
@@ -2403,7 +2403,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PLANCK_TIME_2018.unit
     );
     PyDict_SetItemString(d, "PLANCK_TIME_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_CHARGE_TO_MASS_QUOTIENT_2018.name,
@@ -2412,7 +2412,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_CHARGE_TO_MASS_QUOTIENT_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_CHARGE_TO_MASS_QUOTIENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_COMPTON_WAVELENGTH_2018.name,
@@ -2421,7 +2421,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_ELECTRON_MASS_RATIO_2018.name,
@@ -2430,7 +2430,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_ELECTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_ELECTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_G_FACTOR_2018.name,
@@ -2439,7 +2439,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_G_FACTOR_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_G_FACTOR_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_GYROMAG_RATIO_2018.name,
@@ -2448,7 +2448,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_GYROMAG_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_GYROMAG_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_GYROMAG_RATIO_IN_MHZ_T_2018.name,
@@ -2457,7 +2457,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MAG_MOM_2018.name,
@@ -2466,7 +2466,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MAG_MOM_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MAG_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.name,
@@ -2475,7 +2475,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.name,
@@ -2484,7 +2484,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MAG_SHIELDING_CORRECTION_2018.name,
@@ -2493,7 +2493,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MAG_SHIELDING_CORRECTION_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MAG_SHIELDING_CORRECTION_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MASS_2018.name,
@@ -2502,7 +2502,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MASS_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MASS_ENERGY_EQUIVALENT_2018.name,
@@ -2511,7 +2511,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MASS_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MASS_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -2520,7 +2520,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MASS_IN_U_2018.name,
@@ -2529,7 +2529,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MASS_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MASS_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MOLAR_MASS_2018.name,
@@ -2538,7 +2538,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MOLAR_MASS_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MOLAR_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_MUON_MASS_RATIO_2018.name,
@@ -2547,7 +2547,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_MUON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_MUON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_NEUTRON_MAG_MOM_RATIO_2018.name,
@@ -2556,7 +2556,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_NEUTRON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_NEUTRON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_NEUTRON_MASS_RATIO_2018.name,
@@ -2565,7 +2565,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_NEUTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_NEUTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_RELATIVE_ATOMIC_MASS_2018.name,
@@ -2574,7 +2574,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_RELATIVE_ATOMIC_MASS_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_RELATIVE_ATOMIC_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_RMS_CHARGE_RADIUS_2018.name,
@@ -2583,7 +2583,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_RMS_CHARGE_RADIUS_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_RMS_CHARGE_RADIUS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", PROTON_TAU_MASS_RATIO_2018.name,
@@ -2592,7 +2592,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_TAU_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_TAU_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", QUANTUM_OF_CIRCULATION_2018.name,
@@ -2601,7 +2601,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", QUANTUM_OF_CIRCULATION_2018.unit
     );
     PyDict_SetItemString(d, "QUANTUM_OF_CIRCULATION_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", QUANTUM_OF_CIRCULATION_TIMES_2_2018.name,
@@ -2610,7 +2610,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", QUANTUM_OF_CIRCULATION_TIMES_2_2018.unit
     );
     PyDict_SetItemString(d, "QUANTUM_OF_CIRCULATION_TIMES_2_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", REDUCED_COMPTON_WAVELENGTH_2018.name,
@@ -2619,7 +2619,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", REDUCED_MUON_COMPTON_WAVELENGTH_2018.name,
@@ -2628,7 +2628,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_MUON_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_MUON_COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018.name,
@@ -2637,7 +2637,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", REDUCED_PLANCK_CONSTANT_2018.name,
@@ -2646,7 +2646,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_PLANCK_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_PLANCK_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", REDUCED_PLANCK_CONSTANT_IN_EV_S_2018.name,
@@ -2655,7 +2655,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_PLANCK_CONSTANT_IN_EV_S_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_PLANCK_CONSTANT_IN_EV_S_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018.name,
@@ -2664,7 +2664,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", REDUCED_PROTON_COMPTON_WAVELENGTH_2018.name,
@@ -2673,7 +2673,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_PROTON_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_PROTON_COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", REDUCED_TAU_COMPTON_WAVELENGTH_2018.name,
@@ -2682,7 +2682,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_TAU_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_TAU_COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", RYDBERG_CONSTANT_2018.name,
@@ -2691,7 +2691,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", RYDBERG_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "RYDBERG_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", RYDBERG_CONSTANT_TIMES_C_IN_HZ_2018.name,
@@ -2700,7 +2700,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", RYDBERG_CONSTANT_TIMES_C_IN_HZ_2018.unit
     );
     PyDict_SetItemString(d, "RYDBERG_CONSTANT_TIMES_C_IN_HZ_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", RYDBERG_CONSTANT_TIMES_HC_IN_EV_2018.name,
@@ -2709,7 +2709,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", RYDBERG_CONSTANT_TIMES_HC_IN_EV_2018.unit
     );
     PyDict_SetItemString(d, "RYDBERG_CONSTANT_TIMES_HC_IN_EV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", RYDBERG_CONSTANT_TIMES_HC_IN_J_2018.name,
@@ -2718,7 +2718,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", RYDBERG_CONSTANT_TIMES_HC_IN_J_2018.unit
     );
     PyDict_SetItemString(d, "RYDBERG_CONSTANT_TIMES_HC_IN_J_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2018.name,
@@ -2727,7 +2727,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2018.unit
     );
     PyDict_SetItemString(d, "SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2018.name,
@@ -2736,7 +2736,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2018.unit
     );
     PyDict_SetItemString(d, "SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SECOND_RADIATION_CONSTANT_2018.name,
@@ -2745,7 +2745,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SECOND_RADIATION_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "SECOND_RADIATION_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_HELION_GYROMAG_RATIO_2018.name,
@@ -2754,7 +2754,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_HELION_GYROMAG_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_HELION_GYROMAG_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018.name,
@@ -2763,7 +2763,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_HELION_MAG_MOM_2018.name,
@@ -2772,7 +2772,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_HELION_MAG_MOM_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_HELION_MAG_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.name,
@@ -2781,7 +2781,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.name,
@@ -2790,7 +2790,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2018.name,
@@ -2799,7 +2799,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018.name,
@@ -2808,7 +2808,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_PROTON_GYROMAG_RATIO_2018.name,
@@ -2817,7 +2817,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_PROTON_GYROMAG_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_PROTON_GYROMAG_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018.name,
@@ -2826,7 +2826,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_PROTON_MAG_MOM_2018.name,
@@ -2835,7 +2835,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_PROTON_MAG_MOM_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_PROTON_MAG_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.name,
@@ -2844,7 +2844,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.name,
@@ -2853,7 +2853,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018.name,
@@ -2862,7 +2862,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018.name,
@@ -2871,7 +2871,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", SPEED_OF_LIGHT_IN_VACUUM_2018.name,
@@ -2880,7 +2880,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SPEED_OF_LIGHT_IN_VACUUM_2018.unit
     );
     PyDict_SetItemString(d, "SPEED_OF_LIGHT_IN_VACUUM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", STANDARD_ACCELERATION_OF_GRAVITY_2018.name,
@@ -2889,7 +2889,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", STANDARD_ACCELERATION_OF_GRAVITY_2018.unit
     );
     PyDict_SetItemString(d, "STANDARD_ACCELERATION_OF_GRAVITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", STANDARD_ATMOSPHERE_2018.name,
@@ -2898,7 +2898,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", STANDARD_ATMOSPHERE_2018.unit
     );
     PyDict_SetItemString(d, "STANDARD_ATMOSPHERE_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", STANDARD_STATE_PRESSURE_2018.name,
@@ -2907,7 +2907,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", STANDARD_STATE_PRESSURE_2018.unit
     );
     PyDict_SetItemString(d, "STANDARD_STATE_PRESSURE_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", STEFAN_BOLTZMANN_CONSTANT_2018.name,
@@ -2916,7 +2916,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", STEFAN_BOLTZMANN_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "STEFAN_BOLTZMANN_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_COMPTON_WAVELENGTH_2018.name,
@@ -2925,7 +2925,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "TAU_COMPTON_WAVELENGTH_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_ELECTRON_MASS_RATIO_2018.name,
@@ -2934,7 +2934,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_ELECTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "TAU_ELECTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_ENERGY_EQUIVALENT_2018.name,
@@ -2943,7 +2943,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "TAU_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_MASS_2018.name,
@@ -2952,7 +2952,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_MASS_2018.unit
     );
     PyDict_SetItemString(d, "TAU_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_MASS_ENERGY_EQUIVALENT_2018.name,
@@ -2961,7 +2961,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_MASS_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "TAU_MASS_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_MASS_IN_U_2018.name,
@@ -2970,7 +2970,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_MASS_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "TAU_MASS_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_MOLAR_MASS_2018.name,
@@ -2979,7 +2979,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_MOLAR_MASS_2018.unit
     );
     PyDict_SetItemString(d, "TAU_MOLAR_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_MUON_MASS_RATIO_2018.name,
@@ -2988,7 +2988,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_MUON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "TAU_MUON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_NEUTRON_MASS_RATIO_2018.name,
@@ -2997,7 +2997,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_NEUTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "TAU_NEUTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TAU_PROTON_MASS_RATIO_2018.name,
@@ -3006,7 +3006,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_PROTON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "TAU_PROTON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", THOMSON_CROSS_SECTION_2018.name,
@@ -3015,7 +3015,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", THOMSON_CROSS_SECTION_2018.unit
     );
     PyDict_SetItemString(d, "THOMSON_CROSS_SECTION_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_ELECTRON_MASS_RATIO_2018.name,
@@ -3024,7 +3024,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_ELECTRON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_ELECTRON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_G_FACTOR_2018.name,
@@ -3033,7 +3033,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_G_FACTOR_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_G_FACTOR_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_MAG_MOM_2018.name,
@@ -3042,7 +3042,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_MAG_MOM_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_MAG_MOM_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.name,
@@ -3051,7 +3051,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.name,
@@ -3060,7 +3060,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_MASS_2018.name,
@@ -3069,7 +3069,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_MASS_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_MASS_ENERGY_EQUIVALENT_2018.name,
@@ -3078,7 +3078,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_MASS_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_MASS_ENERGY_EQUIVALENT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.name,
@@ -3087,7 +3087,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_MASS_IN_U_2018.name,
@@ -3096,7 +3096,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_MASS_IN_U_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_MASS_IN_U_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_MOLAR_MASS_2018.name,
@@ -3105,7 +3105,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_MOLAR_MASS_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_MOLAR_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_PROTON_MASS_RATIO_2018.name,
@@ -3114,7 +3114,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_PROTON_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_PROTON_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_RELATIVE_ATOMIC_MASS_2018.name,
@@ -3123,7 +3123,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_RELATIVE_ATOMIC_MASS_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_RELATIVE_ATOMIC_MASS_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", TRITON_TO_PROTON_MAG_MOM_RATIO_2018.name,
@@ -3132,7 +3132,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TRITON_TO_PROTON_MAG_MOM_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "TRITON_TO_PROTON_MAG_MOM_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", UNIFIED_ATOMIC_MASS_UNIT_2018.name,
@@ -3141,7 +3141,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", UNIFIED_ATOMIC_MASS_UNIT_2018.unit
     );
     PyDict_SetItemString(d, "UNIFIED_ATOMIC_MASS_UNIT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", VACUUM_ELECTRIC_PERMITTIVITY_2018.name,
@@ -3150,7 +3150,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", VACUUM_ELECTRIC_PERMITTIVITY_2018.unit
     );
     PyDict_SetItemString(d, "VACUUM_ELECTRIC_PERMITTIVITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", VACUUM_MAG_PERMEABILITY_2018.name,
@@ -3159,7 +3159,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", VACUUM_MAG_PERMEABILITY_2018.unit
     );
     PyDict_SetItemString(d, "VACUUM_MAG_PERMEABILITY_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", VON_KLITZING_CONSTANT_2018.name,
@@ -3168,7 +3168,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", VON_KLITZING_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "VON_KLITZING_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", WEAK_MIXING_ANGLE_2018.name,
@@ -3177,7 +3177,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", WEAK_MIXING_ANGLE_2018.unit
     );
     PyDict_SetItemString(d, "WEAK_MIXING_ANGLE_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018.name,
@@ -3186,7 +3186,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018.name,
@@ -3195,7 +3195,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", W_TO_Z_MASS_RATIO_2018.name,
@@ -3204,7 +3204,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", W_TO_Z_MASS_RATIO_2018.unit
     );
     PyDict_SetItemString(d, "W_TO_Z_MASS_RATIO_2018", constant);
-    Py_INCREF(constant);
+    Py_DECREF(constant);
 
     return m;
 }
