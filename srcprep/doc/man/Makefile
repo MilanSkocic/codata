@@ -6,10 +6,11 @@ MANPDF=$(patsubst src/%.prep, build/%.pdf, $(MANPREP))
 MANTXT=$(patsubst src/%.prep, build/%.txt, $(MANPREP))
 MANGZ=$(patsubst src/%.prep, build/%.gz, $(MANPREP))
 MANLATEX=$(patsubst src/%.prep, build/%.tex, $(MANPREP))
+MANHTML=$(patsubst src/%.prep, build/%.html, $(MANPREP))
 
 BOOKMAN=build/$(FPM_NAME)-bookman.pdf
 
-all: $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(MANLATEX) $(BOOKMAN)
+all: $(MAN) $(MANPDF) $(MANTXT) $(MANGZ) $(MANHTML) $(MANLATEX) $(BOOKMAN)
 
 .PHONY:
 $(BOOKMAN): $(MAN)
@@ -23,6 +24,9 @@ build/%.1: src/%.1.prep
 
 build/%.pdf: build/%
 	man -l -Tpdf $< > $@
+
+build/%.html: build/%
+	man -l -Thtml $< > $@
 
 build/%.gz: build/%
 	gzip -fk $^
