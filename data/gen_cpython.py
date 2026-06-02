@@ -44,7 +44,7 @@ def write_year(f, year):
 
     f.write(f"    v = PyLong_FromLong(YEAR{suffix:s});" + newline)
     f.write(f"    PyDict_SetItemString(d, \"YEAR{suffix:s}\", v);" + newline)
-    f.write("    Py_INCREF(v);" + newline)
+    f.write("    Py_DECREF(v);" + newline)
     f.write(newline)
 
 def write_constant(f, var, name, value, uncertainty, unit, year):
@@ -57,7 +57,7 @@ def write_constant(f, var, name, value, uncertainty, unit, year):
     f.write(f"    \"unit\", {var:s}{suffix:s}.unit" + newline)
     f.write("    );" + newline)
     f.write("    PyDict_SetItemString(d, \"" + f"{var:s}{suffix:s}" + "\", constant);" + newline)
-    f.write("    Py_INCREF(constant);" + newline)
+    f.write("    Py_DECREF(constant);" + newline)
 
     f.write(newline)
 
