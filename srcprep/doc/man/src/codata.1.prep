@@ -1,5 +1,5 @@
 NAME
-  codata - Command line for codata
+  codata - fundamental physical constants
 
 SYNOPSIS
   codata [OPTIONS] [REGEX_PATTERN ... ]

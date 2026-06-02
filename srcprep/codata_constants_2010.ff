@@ -4,7 +4,7 @@
 !{{{
 $BLOCK comment --file man/src/codata_2010.3.prep
 NAME
-  codata - libray for fundamental physical constants
+  codata_2010 - Fortran module containing the CODATA 2010 constants
 
 LIBRARY
   codata (-libcodata, -lcodata)
@@ -17,9 +17,6 @@ SYNOPSIS
   import pycodata
 
 DESCRIPTION
-  codata is a Fortran library providing the fundamental physical
-  constants according to CODATA
-
 $INCLUDE ../data/build/codata_constants_2010.man
 
 SEE ALSO
