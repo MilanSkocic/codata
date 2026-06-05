@@ -40,6 +40,8 @@ __pycache__
 
 *.ilg
 
+srcprep/doc
+
 py/wheelhouse/
 py/src/pycodata/bin/
 py/src/pycodata/include/
