@@ -44,7 +44,7 @@ $(FPM_LIBNAME): build shared
 
 # ---------------------------------------------------------------------
 # SOURCES
-.PHONY: sources
+.PHONY: sources 
 sources: $(SRC_FYPP_F90) prep
 
 ./src/%.f90: ./src/%.fypp
@@ -54,10 +54,8 @@ sources: $(SRC_FYPP_F90) prep
 prep:
 	make -C data
 	make -C srcprep
-	fpm run --profile $(btype) -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
-	fpm clean --skip
-	fpm run --profile $(btype) -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
-	fpm run --profile $(btype) -- --help > srcprep/doc/man/src/$(FPM_APPNAME).1.prep
+	make -C docs/source/man
+	make -C srcprep
 # ---------------------------------------------------------------------
 
 
@@ -73,8 +71,8 @@ build:
 	mkdir -p $(FPM_BUILD_DIR)/install/share/man/man1
 	fpm install --prefix $(FPM_BUILD_DIR)/install --profile $(btype) --no-rebuild
 	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(FPM_BUILD_DIR)/install/include
-	cp -f docs/man/$(FPM_NAME)*.3.gz $(FPM_BUILD_DIR)/install/share/man/man3
-	cp -f docs/man/$(FPM_APPNAME)*.1.gz $(FPM_BUILD_DIR)/install/share/man/man1
+	cp -f docs/source/man/$(FPM_NAME)*.3.gz $(FPM_BUILD_DIR)/install/share/man/man3
+	cp -f docs/source/man/$(FPM_APPNAME)*.1.gz $(FPM_BUILD_DIR)/install/share/man/man1
 
 .PHONY: test
 test:
@@ -148,25 +146,9 @@ archives:
 	cd ./build/install && tar -czvf ../$(ARCHIVE).tar.gz . && cd ../../
 	cd ./py && [ -d wheelhouse ] && cp -rfv ./wheelhouse/*.whl ./dist/ || true && cd ./dist && tar --exclude='$(PYARCHIVE).tar.gz' -czvf $(PYARCHIVE).tar.gz *.* && cd ../../ 
 
-.PHONY: doc
-doc:
-	make -C srcprep doc
-
-.PHONY: 
-docs: doc
-	rm -rf docs/sphinx/*
-	rm -rf docs/ford/*
-	rm -rf docs/latex/*
-	rm -rf docs/man/*
-	mkdir -p docs/sphinx
-	mkdir -p docs/ford
-	mkdir -p docs/latex
-	mkdir -p docs/man
-	cp -rf $(MANDIR)/* ./docs/man
-	cp -rf $(LATEXDIRPDF)/* ./docs/latex
-	cp -rf $(SPHINXDIRHTML)/* ./docs/sphinx
-	cp -rf $(FORDDIRHTML)/* ./docs/ford
-	cp -rf $(LATEXDIRHTML)/* ./docs
+.PHONY: docs
+docs: 
+	make -C docs ford html
 
 .PHONY: logo
 logo:
@@ -179,4 +161,6 @@ clean:
 	fpm clean --all
 	make -C srcprep clean
 	make -C py clean
+	make -C docs clean
+	make -C docs/source/man clean
 # ---------------------------------------------------------------------
