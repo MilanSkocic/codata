@@ -2,22 +2,22 @@
 
 ! MAN PAGE
 !{{{
-$BLOCK comment --file man/src/codata_2018.3.prep
-NAME
-  codata_2018 - Fortran module containing the CODATA 2018 constants
+$BLOCK comment --file codata_2018.3.md
+# NAME
+  **codata_2018** - Fortran module containing the CODATA 2018 constants
 
-LIBRARY
-  codata (-libcodata, -lcodata)
+# LIBRARY
+  **codata** (-libcodata, -lcodata)
 
-SYNOPSIS
+# SYNOPSIS
+```
   use codata
-
   include "codata.h"
-
   import pycodata
+```
 
-DESCRIPTION
-$INCLUDE ../data/build/codata_constants_2018.man
+# DESCRIPTION
+$INCLUDE ../data/build/codata_constants_2018.md
 
 SEE ALSO
   codata(3), codata_2010(3), codata_2014(3), codata_2018(3), codata_2022(3)
