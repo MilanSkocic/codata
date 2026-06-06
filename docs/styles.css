@@ -1,14 +1,19 @@
 body {
     margin: 0;
-    width=21cm;
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: sans-serif;
+    text-align: justify;
 }
 
 .header-image {
     display: block;
     margin: 0 auto;
-    max-width: 600px;
-    width: 100%;
+    width: 300px;
     height: auto;
+}
+
+.container {
+    width: 21cm;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size:14pt;
 }
