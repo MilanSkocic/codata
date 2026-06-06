@@ -9,29 +9,29 @@ FROM BINARIES
 
 FROM SOURCES
   Building the static and shared libraries requires the following dependencies:
-  - Fortran Preprocessor: prep(1)
-  - Fortran compiler: gfortran(1)
-  - C compiler: gcc(1)
-  - Fortran Package Manager: fpm(1)
-  - Python Interpreter: python(1)
+    - Fortran Preprocessor: prep(1)
+    - Fortran compiler: gfortran(1)
+    - C compiler: gcc(1)
+    - Fortran Package Manager: fpm(1)
+    - Python Interpreter: python(1)
  
-    $ . ./configure
-    $ make sources
-    $ make
-    $ make install [prefix=your/path]
+        $ . ./configure
+        $ make sources
+        $ make
+        $ make install [prefix=your/path]
 
   Building the Python wrapper requires additional dependencies:
-  - python interpreter: 3.10, 3.11, 3.12, 3.13, 3.14
+    - python interpreter: 3.10, 3.11, 3.12, 3.13, 3.14
 
-    $ make python
+        $ make python
   
   Install the wheels in the py/sdist/ folder with pip.
 
   Building the documentation requires even more additional dependencies:
-  - txt2man(1)
-  - bookman(1)
-  - txt2latex(1)
-  - pdflatex(1)
-  - make4ht(1)
-  - sphinx
-  - FORD
+    - txt2man(1)
+    - bookman(1)
+    - txt2latex(1)
+    - pdflatex(1)
+    - make4ht(1)
+    - sphinx
+    - FORD
