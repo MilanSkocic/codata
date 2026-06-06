@@ -1,7 +1,7 @@
 include ../../../make.in
 
 FNAME=main
-OUTNAME=$(FPMNAME)-refman
+OUTNAME=$(FPM_NAME)-refman
 TEX=pdflatex
 BIB=biber
 VIEWER=sumatrapdf 
@@ -17,7 +17,7 @@ MK4CFG=html.cfg
 
 .PHONY: all dirs tex biber bibtex index link copy clean html
 
-all: dirs tex biber link
+all: dirs tex biber link copy
 
 dirs:
 	mkdir -p $(BUILD_FOLDER)
@@ -44,7 +44,7 @@ index:
 
 copy: 
 	cp -rf $(BUILD_FOLDER)/$(FNAME).pdf $(BIN_FOLDER)/$(OUTNAME).pdf
-	cp -f ./$(BUILD_FOLDER)/$(FNAME).idx ./$(BUILD_FOLDER)/$(FNAME).4idx
+	#cp -f ./$(BUILD_FOLDER)/$(FNAME).idx ./$(BUILD_FOLDER)/$(FNAME).4idx
 
 html: 
 	make4ht -c $(MK4CFG) -d $(HTML_FOLDER) -B $(BUILD_FOLDER) -e $(MK4BUILD) $(SRC_FOLDER)/$(FNAME).tex -a info
