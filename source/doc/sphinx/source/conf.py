@@ -5,12 +5,12 @@
 import os
 import sys
 import tomllib
-sys.path.insert(0, os.path.abspath('../../py/src/'))
+sys.path.insert(0, os.path.abspath('../../../../py/src/'))
 import pycodata
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-fpath="../../fpm.toml"
+fpath="../../../../fpm.toml"
 f = open(fpath, "rb")
 fpm = tomllib.load(f)
 f.close()
@@ -28,11 +28,11 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.mathjax',
     #'myst_parser',
-    'sphinxcontrib.bibtex',
+    #'sphinxcontrib.bibtex',
     'numpydoc', 'sphinx_fortran_domain',
     ]
-bibtex_bibfiles = ["./references/references.bib"]
-bibtex_default_style = 'unsrt'
+#bibtex_bibfiles = ["./references/references.bib"]
+#bibtex_default_style = 'unsrt'
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
@@ -42,7 +42,7 @@ fortran_lexer = "regex"
 # Doc comment markers to recognize (comment-only lines)
 fortran_doc_chars = ["!", ">"]
 
-fortran_sources = [ "../../src", "../../app", "../../example" ]
+fortran_sources = [ "../../../../src"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

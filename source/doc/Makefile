@@ -15,7 +15,7 @@ ford:
 
 .PHONY: sphinx
 sphinx:
-	make -C sphinx
+	make -C sphinx html
 
 .PHONY:
 clean:

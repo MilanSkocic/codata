@@ -2,7 +2,7 @@
 
 ! MAN PAGE
 !{{{
-$BLOCK comment --file codata_2014.3.man
+$BLOCK comment --file man/src/codata_2014.3.man
 NAME
   codata_2014 - Fortran module containing the CODATA 2014 constants
 

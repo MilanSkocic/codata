@@ -2,57 +2,55 @@
 
 ! MAN PAGE
 ! {{{
-$BLOCK comment --file man/src/codata.1.man
-NAME                                                                  
-  codata - fundamental physical constants                             
-                                                                      
-SYNOPSIS                                                              
-  codata [OPTION...] [REGEX_PATTERN...]                             
-                                                                      
-DESCRIPTION                                                           
-  Codata is a command line interface which prints all the codata      
-  constants.                                                          
-                                                                  
-  The current values are from 2022.                                   
-  Older values can be retrieved if needed and                         
-  the output can be filtered with REGEX PATTERNS.                     
-                                                                      
-                                                                      
-OPTIONS                                                               
-  --year, -y YEAR        Codata constants: 2022, 2018, 2014, 2010                       
-  --pattern, -p PATTERN  Regex pattern for filtering the constants.   
-  --value, -a            Show only the value.  
-  --error, -e            Show only the uncertainty.      
-  --usage                Show usage text and exit.     
-  --help                 Show help text and exit.    
-  --verbose              Display additional information.  
-  --version              Show version information and exit.           
-                                                                      
-NOTES                                                                 
-  You may replace the default options from a file if your first       
-  options begin with @file.                                           
-  Initial options will then be read from the "response file"          
-  "file.rsp" in the current directory.                                
-                                                                  
-  If "file" does not exist or cannot be read, then an error occurs and
-  the program stops. Each line of the file is prefixed with "options" 
-  and interpreted as a separate argument. The file itself may not     
-  contain @file arguments. That is, it is not processed recursively.  
-                                                                    
-  For more information on response files see                          
-  https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html            
-                                                                      
-EXAMPLE                                                               
-  Minimal example                                                     
-
-     codata                                                           
-     codata -y 2018 molar electron                                    
-     codata -y 2014 -p molar.*gas,electron.*eV
-     codata [B,b]oltzmann.*eV                  
-
-SEE ALSO                                                              
-  codata(3)                                                           
-$ENDBLOCK
+! NAME
+!   codata - fundamental physical constants
+! 
+! SYNOPSIS
+!   codata [OPTION...] [REGEX_PATTERN...]
+! 
+! DESCRIPTION
+!   Codata is a command line interface which prints all the codata
+!   constants.
+! 
+!   The current values are from 2022.
+!   Older values can be retrieved if needed and
+!   the output can be filtered with REGEX PATTERNS.
+! 
+! 
+! OPTIONS
+!   --year, -y YEAR        Codata constants: 2022, 2018, 2014, 2010
+!   --pattern, -p PATTERN  Regex pattern for filtering the constants.
+!   --value, -a            Show only the value.
+!   --error, -e            Show only the uncertainty.
+!   --usage                Show usage text and exit.
+!   --help                 Show help text and exit.
+!   --verbose              Display additional information.
+!   --version              Show version information and exit.
+! 
+! NOTES
+!   You may replace the default options from a file if your first
+!   options begin with @file.
+!   Initial options will then be read from the "response file"
+!   "file.rsp" in the current directory.
+! 
+!   If "file" does not exist or cannot be read, then an error occurs and
+!   the program stops. Each line of the file is prefixed with "options"
+!   and interpreted as a separate argument. The file itself may not
+!   contain @file arguments. That is, it is not processed recursively.
+! 
+!   For more information on response files see
+!   https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html
+! 
+! EXAMPLE
+!   Minimal example
+! 
+!      codata
+!      codata -y 2018 molar electron
+!      codata -y 2014 -p molar.*gas,electron.*eV
+!      codata [B,b]oltzmann.*eV
+! 
+! SEE ALSO
+!   codata(3)
 !}}}
 program codatacli
 use, intrinsic :: iso_fortran_env, only: output_unit
@@ -81,11 +79,11 @@ version_text=[character(len=80) :: &
 '' ]
 
 help_text=[character(len=72) :: &
-'Usage: codata [OPTION...] [REGEX_PATTERN...]                          ',&                               
-'codata - fundamental physical constants                               ',&                                                                                           
+'Usage: codata [OPTION...] [REGEX_PATTERN...]                          ',&
+'codata - fundamental physical constants                               ',&
 '                                                                      ',&
-'  --year, -y YEAR         Codata constants: 2022, 2018, 2014, 2010    ',&                     
-'  --pattern, -p PATTERN   Regex pattern for filtering the constants.  ',& 
+'  --year, -y YEAR         Codata constants: 2022, 2018, 2014, 2010    ',&
+'  --pattern, -p PATTERN   Regex pattern for filtering the constants.  ',&
 '  --value, -a             Show only the value.  ',&
 '  --error, -e             Show only the uncertainty.      ',&
 '  --usage                 Show usage text and exit.     ',&
