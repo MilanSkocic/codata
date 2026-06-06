@@ -48,6 +48,12 @@ $(FPM_LIBNAME): build shared
 sources: 
 	make -C data
 	make -C source
+	make -C source/doc/man
+	cp -rfv source/doc/man/build/* docs/man/
+	mkdir -p docs/man
+	mkdir -p docs/latex
+	mkdir -p docs/ford
+	mkdir -p docs/sphinx
 # ---------------------------------------------------------------------
 
 
@@ -142,12 +148,15 @@ archives:
 
 .PHONY: docs
 docs: 
+	rm -rf docs/man/*
+	rm -rf docs/latex/*
+	rm -rf docs/ford/*
+	rm -rf docs/sphinx/*
 	make -C source/doc
-	mkdir -p docs/man
-	mkdir -p docs/latex
-	mkdir -p docs/ford
-	mkdir -p docs/sphinx
 	cp -rfv source/doc/man/build/* docs/man/
+	cp -rfv source/doc/latex/build/* docs/latex/
+	cp -rfv source/doc/ford/build/* docs/ford/
+	cp -rfv source/doc/sphinx/build/html/* docs/sphinx/
 
 .PHONY: logo
 logo:
@@ -160,4 +169,5 @@ clean:
 	fpm clean --all
 	make -C source clean
 	make -C py clean
+	make -C source/doc clean
 # ---------------------------------------------------------------------
