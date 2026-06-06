@@ -43,18 +43,29 @@ DESCRIPTION
   the keys being name, value, uncertainty and unit.
 
 NOTES
-To use codata within your fpm(1) project, add the following lines to 
-your file:
+  To use codata within your fpm(1) project, add the following lines to 
+  your file:
     
-    [dependencies]
-    codata = { git="https://github.com/MilanSkocic/codata.git" }
+      [dependencies]
+      codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 EXAMPLE
 $INCLUDE example.txt
 
 SEE ALSO
-codata(1), codata_2010(3), codata_2014(3), codata_2018(3), 
-codata_2022(3), fpm(1)
+  codata(1)
+
+CODATA 2022
+$INCLUDE ../data/build/codata_constants_2022.man
+
+CODATA 2018
+$INCLUDE ../data/build/codata_constants_2018.man
+
+CODATA 2014
+$INCLUDE ../data/build/codata_constants_2014.man
+
+CODATA 2010
+$INCLUDE ../data/build/codata_constants_2010.man
 $ENDBLOCK
 !}}}
 !=======================================================================
