@@ -1,0 +1,275 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{mohr2012-1}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=70ffad8a9850472813ebca8d8d1f2f69}{%
+           family={Mohr},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=77904d9affa7a41f527d077427b5e034}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Barry\bibnamedelima N},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=2f44e26ac0465165a8ac1a25c397cced}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={David\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2daa6da605b82b46a96e8d5030ed98b}
+      \strng{fullhash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{fullhashraw}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{bibnamehash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{authorbibnamehash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{authornamehash}{e2daa6da605b82b46a96e8d5030ed98b}
+      \strng{authorfullhash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{authorfullhashraw}{1eab8e674ef691d87527edb9d248f25e}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Review of Modern Physics}
+      \field{title}{{{CODATA}} Recommended Values of the Fundamental Physical Constants: 2010}
+      \field{volume}{84}
+      \field{year}{2012}
+      \true{nocite}
+      \verb{file}
+      \verb C:\Users\mskocic\Documents\05-Library\01-Papers\Mohr et al. - 2012 - CODATA recommended values of the fundamental physi.pdf
+      \endverb
+      \keyw{CODATA}
+    \endentry
+    \entry{mohr2016-1}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=70ffad8a9850472813ebca8d8d1f2f69}{%
+           family={Mohr},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=77904d9affa7a41f527d077427b5e034}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Barry\bibnamedelima N},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=2f44e26ac0465165a8ac1a25c397cced}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={David\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2daa6da605b82b46a96e8d5030ed98b}
+      \strng{fullhash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{fullhashraw}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{bibnamehash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{authorbibnamehash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{authornamehash}{e2daa6da605b82b46a96e8d5030ed98b}
+      \strng{authorfullhash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{authorfullhashraw}{1eab8e674ef691d87527edb9d248f25e}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Physical and Chemical Reference Data}
+      \field{title}{{{CODATA}} Recommended Values of the Fundamental Physical Constants: 2014}
+      \field{volume}{45}
+      \field{year}{2016}
+      \true{nocite}
+      \verb{file}
+      \verb C:\Users\mskocic\Documents\05-Library\01-Papers\Mohr et al. - 2016 - CODATA recommended values of the fundamental physi.pdf
+      \endverb
+      \keyw{CODATA}
+    \endentry
+    \entry{mohr2021-1}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=70ffad8a9850472813ebca8d8d1f2f69}{%
+           family={Mohr},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=77904d9affa7a41f527d077427b5e034}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Barry\bibnamedelima N},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=2f44e26ac0465165a8ac1a25c397cced}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={David\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2daa6da605b82b46a96e8d5030ed98b}
+      \strng{fullhash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{fullhashraw}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{bibnamehash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{authorbibnamehash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{authornamehash}{e2daa6da605b82b46a96e8d5030ed98b}
+      \strng{authorfullhash}{1eab8e674ef691d87527edb9d248f25e}
+      \strng{authorfullhashraw}{1eab8e674ef691d87527edb9d248f25e}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Review of Modern Physics}
+      \field{title}{{{CODATA}} Recommended Values of the Fundamental Physical Constants: 2018}
+      \field{volume}{93}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{file}
+      \verb C:\Users\mskocic\Documents\05-Library\01-Papers\Mohr et al. - 2021 - CODATA recommended values of the fundamental physi.pdf
+      \endverb
+      \keyw{CODATA}
+    \endentry
+    \entry{mohr2024-2}{online}{}{}
+      \name{author}{4}{}{%
+        {{hash=ffaf33656d90745819c47c7e51e580dd}{%
+           family={Mohr},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6884b36e4a72e6c12dd748bad2c99e8a}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c37f61eeb0e308b3b1aa96c0becb8d37}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c78972b7154db12858f8b2a43cbddc26}{%
+           family={Tiesinga},
+           familyi={T\bibinitperiod},
+           given={Eite},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{cfc2c7d1802c4c90e427f6547bf5607d}
+      \strng{fullhash}{f8e7e311e8373073d13b0739b6078e1b}
+      \strng{fullhashraw}{f8e7e311e8373073d13b0739b6078e1b}
+      \strng{bibnamehash}{f8e7e311e8373073d13b0739b6078e1b}
+      \strng{authorbibnamehash}{f8e7e311e8373073d13b0739b6078e1b}
+      \strng{authornamehash}{cfc2c7d1802c4c90e427f6547bf5607d}
+      \strng{authorfullhash}{f8e7e311e8373073d13b0739b6078e1b}
+      \strng{authorfullhashraw}{f8e7e311e8373073d13b0739b6078e1b}
+      \field{extraname}{4}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We report the 2022 self-consistent values of constants and conversion factors of physics and chemistry recommended by the Committee on Data of the International Science Council (CODATA). The recommended values can also be found at physics.nist.gov/constants. The values are based on a least-squares adjustment that takes into account all theoretical and experimental data available through 31 December 2022. A discussion of the major improvements as well as inconsistencies within the data is given.}
+      \field{pubstate}{prepublished}
+      \field{shorttitle}{{{CODATA Recommended Values}} of the {{Fundamental Physical Constants}}}
+      \field{title}{{{CODATA Recommended Values}} of the {{Fundamental Physical Constants}}: 2022}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{version}{1}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2409.03787
+      \endverb
+      \verb{file}
+      \verb C:\Users\mskocic\Documents\05-Library\01-Papers\Mohr et al. - 2024 - CODATA Recommended Values of the Fundamental Physical Constants 2022.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2409.03787
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2409.03787
+      \endverb
+      \keyw{FOS: Physical sciences,High Energy Physics - Phenomenology (hep-ph)}
+    \endentry
+    \entry{mohr2025-1}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=70ffad8a9850472813ebca8d8d1f2f69}{%
+           family={Mohr},
+           familyi={M\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=2f44e26ac0465165a8ac1a25c397cced}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={David\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=77904d9affa7a41f527d077427b5e034}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Barry\bibnamedelima N.},
+           giveni={B\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=c78972b7154db12858f8b2a43cbddc26}{%
+           family={Tiesinga},
+           familyi={T\bibinitperiod},
+           given={Eite},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{e2daa6da605b82b46a96e8d5030ed98b}
+      \strng{fullhash}{247b8519bbd946b583cd5c1496b11837}
+      \strng{fullhashraw}{247b8519bbd946b583cd5c1496b11837}
+      \strng{bibnamehash}{247b8519bbd946b583cd5c1496b11837}
+      \strng{authorbibnamehash}{247b8519bbd946b583cd5c1496b11837}
+      \strng{authornamehash}{e2daa6da605b82b46a96e8d5030ed98b}
+      \strng{authorfullhash}{247b8519bbd946b583cd5c1496b11837}
+      \strng{authorfullhashraw}{247b8519bbd946b583cd5c1496b11837}
+      \field{extraname}{5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0034-6861, 1539-0756}
+      \field{journaltitle}{Reviews of Modern Physics}
+      \field{langid}{english}
+      \field{number}{2}
+      \field{shortjournal}{Rev. Mod. Phys.}
+      \field{shorttitle}{{{CODATA}} Recommended Values of the Fundamental Physical Constants}
+      \field{title}{{{CODATA}} Recommended Values of the Fundamental Physical Constants: 2022}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2025}
+      \field{volume}{97}
+      \field{year}{2025}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \field{pages}{025002}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/RevModPhys.97.025002
+      \endverb
+      \verb{file}
+      \verb C:\Users\mskocic\Documents\05-Library\01-Papers\Mohr et al. - 2025 - CODATA recommended values of the fundamental physical constants 2022.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.97.025002
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/RevModPhys.97.025002
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

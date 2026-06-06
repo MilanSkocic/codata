@@ -1,0 +1,1198 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Fundamental physical constants.">
+    <meta name="author" content="Milan Skocic" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>codatacli &ndash; codata</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
+    <link href="../css/local.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">codata </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/codatacli.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>codatacli      <small>Program</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+            <li class="list-inline-item" id="meta-license"><i class="fa fa-legal"></i> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a></li>
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="100.0% of total for programs.">83 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/main.f90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/main.f90.html'>main.f90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">codatacli</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/codatacli.html#variable-cctptr">cctptr</a>
+            <a class="list-group-item" href="../program/codatacli.html#variable-char_fp">char_fp</a>
+            <a class="list-group-item" href="../program/codatacli.html#variable-help_text">help_text</a>
+            <a class="list-group-item" href="../program/codatacli.html#variable-i">i</a>
+            <a class="list-group-item" href="../program/codatacli.html#variable-name">name</a>
+            <a class="list-group-item" href="../program/codatacli.html#variable-patterns">patterns</a>
+            <a class="list-group-item" href="../program/codatacli.html#variable-version_text">version_text</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../program/codatacli.html#proc-display">display</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+    <div class="card card-primary">
+      <div class="card-header text-left"><h3 class="card-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../program/codatacli.html#src">codatacli</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+        <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">regex_module</li>
+                  <li class="list-inline-item">M_CLI2</li>
+                  <li class="list-inline-item">stdlib_optval</li>
+                  <li class="list-inline-item"><a href='http://fortranwiki.org/fortran/show/iso_fortran_env'>iso_fortran_env</a></li>
+                  <li class="list-inline-item"><a href='../module/codata.html'>codata</a></li>
+              </ul>
+            </li>
+            <li class="list-group-item">
+              <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.42.4 (0)
+ -->
+<!-- Title: program~~codatacli~~UsesGraph Pages: 1 -->
+<svg id="programcodatacliUsesGraph" width="634pt" height="290pt"
+ viewBox="0.00 0.00 634.00 290.43" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~codatacli~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 286.43)">
+<title>program~~codatacli~~UsesGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-286.43 630,-286.43 630,4 -4,4"/>
+<!-- program~codatacli -->
+<g id="program~~codatacli~~UsesGraph_node1" class="node">
+<title>program~codatacli</title>
+<polygon fill="none" stroke="black" points="626,-164 571,-164 571,-140 626,-140 626,-164"/>
+<text text-anchor="middle" x="598.5" y="-149.6" font-family="Helvetica,sans-Serif" font-size="10.50">codatacli</text>
+</g>
+<!-- M_CLI2 -->
+<g id="program~~codatacli~~UsesGraph_node2" class="node">
+<title>M_CLI2</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="518.5,-248 464.5,-248 464.5,-224 518.5,-224 518.5,-248"/>
+<text text-anchor="middle" x="491.5" y="-233.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">M_CLI2</text>
+</g>
+<!-- program~codatacli&#45;&gt;M_CLI2 -->
+<g id="program~~codatacli~~UsesGraph_edge1" class="edge">
+<title>program~codatacli&#45;&gt;M_CLI2</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M587.45,-164.34C575.87,-178 555.75,-200.05 535,-215 532.68,-216.67 530.21,-218.27 527.68,-219.79"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="525.96,-216.74 518.91,-224.65 529.35,-222.87 525.96,-216.74"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="program~~codatacli~~UsesGraph_node3" class="node">
+<title>iso_fortran_env</title>
+<g id="a_program~~codatacli~~UsesGraph_node3"><a xlink:href="http://fortranwiki.org/fortran/show/iso_fortran_env" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="535,-206 448,-206 448,-182 535,-182 535,-206"/>
+<text text-anchor="middle" x="491.5" y="-191.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- program~codatacli&#45;&gt;iso_fortran_env -->
+<g id="program~~codatacli~~UsesGraph_edge2" class="edge">
+<title>program~codatacli&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M570.73,-162.71C559.02,-167.39 545.03,-172.99 532.14,-178.14"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="530.54,-175.01 522.55,-181.98 533.14,-181.51 530.54,-175.01"/>
+</g>
+<!-- module~codata -->
+<g id="program~~codatacli~~UsesGraph_node4" class="node">
+<title>module~codata</title>
+<g id="a_program~~codatacli~~UsesGraph_node4"><a xlink:href="../module/codata.html" xlink:title="codata">
+<polygon fill="#337ab7" stroke="#337ab7" points="518.5,-164 464.5,-164 464.5,-140 518.5,-140 518.5,-164"/>
+<text text-anchor="middle" x="491.5" y="-149.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata</text>
+</a>
+</g>
+</g>
+<!-- program~codatacli&#45;&gt;module~codata -->
+<g id="program~~codatacli~~UsesGraph_edge3" class="edge">
+<title>program~codatacli&#45;&gt;module~codata</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M570.73,-152C558.05,-152 542.7,-152 528.97,-152"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="528.86,-148.5 518.86,-152 528.86,-155.5 528.86,-148.5"/>
+</g>
+<!-- regex_module -->
+<g id="program~~codatacli~~UsesGraph_node5" class="node">
+<title>regex_module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="532,-24 451,-24 451,0 532,0 532,-24"/>
+<text text-anchor="middle" x="491.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">regex_module</text>
+</g>
+<!-- program~codatacli&#45;&gt;regex_module -->
+<g id="program~~codatacli~~UsesGraph_edge4" class="edge">
+<title>program~codatacli&#45;&gt;regex_module</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M593.21,-139.72C584.9,-117.3 564.75,-69.2 535,-38 532.19,-35.06 528.98,-32.32 525.61,-29.8"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="527.29,-26.72 517.04,-24.05 523.39,-32.53 527.29,-26.72"/>
+</g>
+<!-- stdlib_optval -->
+<g id="program~~codatacli~~UsesGraph_node6" class="node">
+<title>stdlib_optval</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="75,-82 3,-82 3,-58 75,-58 75,-82"/>
+<text text-anchor="middle" x="39" y="-67.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stdlib_optval</text>
+</g>
+<!-- program~codatacli&#45;&gt;stdlib_optval -->
+<g id="program~~codatacli~~UsesGraph_edge5" class="edge">
+<title>program~codatacli&#45;&gt;stdlib_optval</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M577.29,-139.85C544.16,-120.72 475.62,-84.37 412,-71 296.43,-46.71 156.16,-56.61 85.44,-64.25"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="84.66,-60.81 75.11,-65.4 85.44,-67.77 84.66,-60.81"/>
+</g>
+<!-- iso_c_binding -->
+<g id="program~~codatacli~~UsesGraph_node7" class="node">
+<title>iso_c_binding</title>
+<g id="a_program~~codatacli~~UsesGraph_node7"><a xlink:href="http://fortranwiki.org/fortran/show/iso_c_binding" xlink:title="iso_c_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="78,-226 0,-226 0,-202 78,-202 78,-226"/>
+<text text-anchor="middle" x="39" y="-211.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iso_c_binding</text>
+</a>
+</g>
+</g>
+<!-- module~codata&#45;&gt;iso_c_binding -->
+<g id="program~~codatacli~~UsesGraph_edge6" class="edge">
+<title>module~codata&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M464.47,-160.9C458.43,-163.96 452.46,-167.94 448,-173 415.65,-209.69 451.84,-248.63 412,-277 389.19,-293.24 118.53,-267.6 114,-266 93.83,-258.87 74.16,-244.6 60.18,-232.81"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="62.48,-230.17 52.65,-226.23 57.88,-235.44 62.48,-230.17"/>
+</g>
+<!-- module~codata__constants_2010 -->
+<g id="program~~codatacli~~UsesGraph_node8" class="node">
+<title>module~codata__constants_2010</title>
+<g id="a_program~~codatacli~~UsesGraph_node8"><a xlink:href="../module/codata__constants_2010.html" xlink:title="codata__constants_2010">
+<polygon fill="#337ab7" stroke="#337ab7" points="412,-184 279,-184 279,-160 412,-160 412,-184"/>
+<text text-anchor="middle" x="345.5" y="-169.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_2010</text>
+</a>
+</g>
+</g>
+<!-- module~codata&#45;&gt;module~codata__constants_2010 -->
+<g id="program~~codatacli~~UsesGraph_edge7" class="edge">
+<title>module~codata&#45;&gt;module~codata__constants_2010</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M464.42,-155.62C452.39,-157.29 437.42,-159.37 422.22,-161.48"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="421.66,-158.03 412.24,-162.87 422.62,-164.96 421.66,-158.03"/>
+</g>
+<!-- module~codata__constants_2014 -->
+<g id="program~~codatacli~~UsesGraph_node9" class="node">
+<title>module~codata__constants_2014</title>
+<g id="a_program~~codatacli~~UsesGraph_node9"><a xlink:href="../module/codata__constants_2014.html" xlink:title="codata__constants_2014">
+<polygon fill="#337ab7" stroke="#337ab7" points="412,-104 279,-104 279,-80 412,-80 412,-104"/>
+<text text-anchor="middle" x="345.5" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_2014</text>
+</a>
+</g>
+</g>
+<!-- module~codata&#45;&gt;module~codata__constants_2014 -->
+<g id="program~~codatacli~~UsesGraph_edge8" class="edge">
+<title>module~codata&#45;&gt;module~codata__constants_2014</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M464.42,-140.46C449.18,-133.79 429.56,-125.29 412,-118 403.96,-114.66 395.33,-111.17 387.06,-107.87"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="388.15,-104.54 377.57,-104.1 385.57,-111.05 388.15,-104.54"/>
+</g>
+<!-- module~codata__constants_2018 -->
+<g id="program~~codatacli~~UsesGraph_node10" class="node">
+<title>module~codata__constants_2018</title>
+<g id="a_program~~codatacli~~UsesGraph_node10"><a xlink:href="../module/codata__constants_2018.html" xlink:title="codata__constants_2018">
+<polygon fill="#337ab7" stroke="#337ab7" points="412,-226 279,-226 279,-202 412,-202 412,-226"/>
+<text text-anchor="middle" x="345.5" y="-211.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_2018</text>
+</a>
+</g>
+</g>
+<!-- module~codata&#45;&gt;module~codata__constants_2018 -->
+<g id="program~~codatacli~~UsesGraph_edge9" class="edge">
+<title>module~codata&#45;&gt;module~codata__constants_2018</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M465.68,-164.02C459.85,-166.9 453.69,-170.02 448,-173 431.79,-181.5 428.8,-185.73 412,-193 407.51,-194.94 402.78,-196.8 398,-198.56"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="396.47,-195.39 388.19,-202 398.78,-201.99 396.47,-195.39"/>
+</g>
+<!-- module~codata__constants_2022 -->
+<g id="program~~codatacli~~UsesGraph_node11" class="node">
+<title>module~codata__constants_2022</title>
+<g id="a_program~~codatacli~~UsesGraph_node11"><a xlink:href="../module/codata__constants_2022.html" xlink:title="codata__constants_2022">
+<polygon fill="#337ab7" stroke="#337ab7" points="412,-268 279,-268 279,-244 412,-244 412,-268"/>
+<text text-anchor="middle" x="345.5" y="-253.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_2022</text>
+</a>
+</g>
+</g>
+<!-- module~codata&#45;&gt;module~codata__constants_2022 -->
+<g id="program~~codatacli~~UsesGraph_edge10" class="edge">
+<title>module~codata&#45;&gt;module~codata__constants_2022</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M464.23,-161.98C458.47,-164.95 452.69,-168.62 448,-173 424.73,-194.76 436.83,-215.03 412,-235 410.22,-236.43 408.35,-237.76 406.4,-239.01"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="404.54,-236.03 397.44,-243.9 407.9,-242.17 404.54,-236.03"/>
+</g>
+<!-- module~codata__constants_type -->
+<g id="program~~codatacli~~UsesGraph_node12" class="node">
+<title>module~codata__constants_type</title>
+<g id="a_program~~codatacli~~UsesGraph_node12"><a xlink:href="../module/codata__constants_type.html" xlink:title="codata__constants_type">
+<polygon fill="#337ab7" stroke="#337ab7" points="243,-148 114,-148 114,-124 243,-124 243,-148"/>
+<text text-anchor="middle" x="178.5" y="-133.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">codata__constants_type</text>
+</a>
+</g>
+</g>
+<!-- module~codata&#45;&gt;module~codata__constants_type -->
+<g id="program~~codatacli~~UsesGraph_edge11" class="edge">
+<title>module~codata&#45;&gt;module~codata__constants_type</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M464.25,-150.65C418.22,-148.28 321.37,-143.3 253.45,-139.8"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="253.4,-136.3 243.23,-139.28 253.04,-143.29 253.4,-136.3"/>
+</g>
+<!-- module~codata__constants_2010&#45;&gt;iso_c_binding -->
+<g id="program~~codatacli~~UsesGraph_edge12" class="edge">
+<title>module~codata__constants_2010&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M177.5,-176C143.73,-178.46 106.82,-189.13 79.75,-198.54"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="78.48,-195.27 70.24,-201.93 80.84,-201.86 78.48,-195.27"/>
+</g>
+<!-- module~codata__constants_2010&#45;&gt;module~codata__constants_type -->
+<g id="program~~codatacli~~UsesGraph_edge13" class="edge">
+<title>module~codata__constants_2010&#45;&gt;module~codata__constants_type</title>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M289.1,-159.91C274.87,-156.81 259.44,-153.44 244.77,-150.24"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="245.27,-146.77 234.76,-148.06 243.78,-153.61 245.27,-146.77"/>
+</g>
+<!-- stdlib_kinds -->
+<g id="program~~codatacli~~UsesGraph_node14" class="node">
+<title>stdlib_kinds</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="73,-184 5,-184 5,-160 73,-160 73,-184"/>
+<text text-anchor="middle" x="39" y="-169.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stdlib_kinds</text>
+</g>
+<!-- module~codata__constants_2010&#45;&gt;stdlib_kinds -->
+<g id="program~~codatacli~~UsesGraph_edge14" class="edge">
+<title>module~codata__constants_2010&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M278.99,-172.13C248.68,-172.57 212.22,-173.62 179.5,-176"/>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M177.5,-176C146.06,-178.29 110.5,-177.15 83.41,-175.52"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="83.31,-172 73.1,-174.85 82.85,-178.99 83.31,-172"/>
+</g>
+<!-- module~codata__constants_2014&#45;&gt;iso_c_binding -->
+<g id="program~~codatacli~~UsesGraph_edge15" class="edge">
+<title>module~codata__constants_2014&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M177.5,-96C149.5,-105.15 136.25,-95.7 114,-115 85.16,-140.02 104,-165.04 78,-193 77.1,-193.96 76.16,-194.89 75.16,-195.79"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="72.8,-193.19 66.91,-201.99 77.01,-198.78 72.8,-193.19"/>
+</g>
+<!-- module~codata__constants_2014&#45;&gt;module~codata__constants_type -->
+<g id="program~~codatacli~~UsesGraph_edge16" class="edge">
+<title>module~codata__constants_2014&#45;&gt;module~codata__constants_type</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M299.41,-104.02C279.31,-109.38 255.46,-115.74 234.34,-121.38"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="233.29,-118.03 224.53,-123.99 235.1,-124.8 233.29,-118.03"/>
+</g>
+<!-- module~codata__constants_2014&#45;&gt;stdlib_kinds -->
+<g id="program~~codatacli~~UsesGraph_edge17" class="edge">
+<title>module~codata__constants_2014&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M278.78,-85.02C247.94,-83.89 211.1,-85.68 179.5,-96"/>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M177.5,-96C149.5,-105.15 139.3,-99.9 114,-115 94.57,-126.6 96.08,-137.39 78,-151 76.42,-152.19 74.76,-153.36 73.06,-154.49"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="71.02,-151.64 64.35,-159.88 74.7,-157.59 71.02,-151.64"/>
+</g>
+<!-- module~codata__constants_2018&#45;&gt;iso_c_binding -->
+<g id="program~~codatacli~~UsesGraph_edge18" class="edge">
+<title>module~codata__constants_2018&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M177.5,-214C147.97,-211.79 114.78,-211.72 88.41,-212.24"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="88.2,-208.74 78.29,-212.47 88.36,-215.74 88.2,-208.74"/>
+</g>
+<!-- module~codata__constants_2018&#45;&gt;module~codata__constants_type -->
+<g id="program~~codatacli~~UsesGraph_edge19" class="edge">
+<title>module~codata__constants_2018&#45;&gt;module~codata__constants_type</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M298.75,-201.95C291.94,-199.41 285.15,-196.44 279,-193 260.58,-182.68 261,-173.03 243,-162 237.13,-158.4 230.68,-155.11 224.2,-152.16"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="225.33,-148.83 214.76,-148.09 222.56,-155.26 225.33,-148.83"/>
+</g>
+<!-- module~codata__constants_2018&#45;&gt;stdlib_kinds -->
+<g id="program~~codatacli~~UsesGraph_edge20" class="edge">
+<title>module~codata__constants_2018&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M278.98,-216.24C248.67,-216.71 212.21,-216.45 179.5,-214"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M177.5,-214C142.03,-211.35 103.44,-198.63 76.2,-187.88"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="77.29,-184.54 66.7,-184.03 74.66,-191.03 77.29,-184.54"/>
+</g>
+<!-- module~codata__constants_2022&#45;&gt;iso_c_binding -->
+<g id="program~~codatacli~~UsesGraph_edge21" class="edge">
+<title>module~codata__constants_2022&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M177.5,-252C147.44,-245.53 114.2,-236.4 87.94,-228.71"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="88.81,-225.32 78.23,-225.84 86.83,-232.03 88.81,-225.32"/>
+</g>
+<!-- module~codata__constants_2022&#45;&gt;module~codata__constants_type -->
+<g id="program~~codatacli~~UsesGraph_edge22" class="edge">
+<title>module~codata__constants_2022&#45;&gt;module~codata__constants_type</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M292.66,-243.87C287.73,-241.43 283.07,-238.51 279,-235 251.6,-211.38 269.45,-186.68 243,-162 239.23,-158.48 234.92,-155.41 230.36,-152.74"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="231.85,-149.57 221.37,-148.07 228.63,-155.78 231.85,-149.57"/>
+</g>
+<!-- module~codata__constants_2022&#45;&gt;stdlib_kinds -->
+<g id="program~~codatacli~~UsesGraph_edge23" class="edge">
+<title>module~codata__constants_2022&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M278.79,-260.01C248.28,-260.45 211.71,-258.93 179.5,-252"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M177.5,-252C148,-245.65 139.46,-244.19 114,-228 95.17,-216.03 95.92,-206.29 78,-193 76.41,-191.82 74.75,-190.66 73.04,-189.54"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="74.67,-186.43 64.32,-184.17 71,-192.39 74.67,-186.43"/>
+</g>
+<!-- module~codata__constants_type&#45;&gt;stdlib_optval -->
+<g id="program~~codatacli~~UsesGraph_edge27" class="edge">
+<title>module~codata__constants_type&#45;&gt;stdlib_optval</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M146.21,-123.96C135.85,-119.77 124.34,-114.89 114,-110 99.2,-102.99 83.17,-94.45 69.82,-87.06"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="71.5,-83.99 61.06,-82.17 68.08,-90.1 71.5,-83.99"/>
+</g>
+<!-- module~codata__constants_type&#45;&gt;iso_c_binding -->
+<g id="program~~codatacli~~UsesGraph_edge24" class="edge">
+<title>module~codata__constants_type&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M142.24,-148.09C132.77,-151.96 122.74,-156.65 114,-162 96,-173.03 95.33,-180.94 78,-193 76.19,-194.26 74.3,-195.5 72.37,-196.72"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="70.56,-193.72 63.77,-201.85 74.15,-199.73 70.56,-193.72"/>
+</g>
+<!-- stdlib_io -->
+<g id="program~~codatacli~~UsesGraph_node13" class="node">
+<title>stdlib_io</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="66,-142 12,-142 12,-118 66,-118 66,-142"/>
+<text text-anchor="middle" x="39" y="-127.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">stdlib_io</text>
+</g>
+<!-- module~codata__constants_type&#45;&gt;stdlib_io -->
+<g id="program~~codatacli~~UsesGraph_edge25" class="edge">
+<title>module~codata__constants_type&#45;&gt;stdlib_io</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M113.98,-133.23C101.05,-132.66 87.87,-132.09 76.29,-131.58"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="76.3,-128.08 66.16,-131.14 75.99,-135.07 76.3,-128.08"/>
+</g>
+<!-- module~codata__constants_type&#45;&gt;stdlib_kinds -->
+<g id="program~~codatacli~~UsesGraph_edge26" class="edge">
+<title>module~codata__constants_type&#45;&gt;stdlib_kinds</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M131.33,-148.09C115.72,-152.18 98.35,-156.72 82.99,-160.74"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="82.01,-157.38 73.23,-163.3 83.79,-164.15 82.01,-157.38"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#UsesGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="UsesGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.42.4 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="490pt" height="32pt"
+ viewBox="0.00 0.00 489.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 485.5,-28 485.5,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="139.5,-24 72.5,-24 72.5,0 139.5,0 139.5,-24"/>
+<text text-anchor="middle" x="106" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="222,-24 158,-24 158,0 222,0 222,-24"/>
+<text text-anchor="middle" x="190" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="294,-24 240,-24 240,0 294,0 294,-24"/>
+<text text-anchor="middle" x="267" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="366,-24 312,-24 312,0 366,0 366,-24"/>
+<text text-anchor="middle" x="339" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="481.5,-24 384.5,-24 384.5,0 481.5,0 481.5,-24"/>
+<text text-anchor="middle" x="433" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a submodule to the (sub)module which it is
+descended from. Dashed arrows point from a module or program unit to 
+modules which it uses.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <br>
+    <div class="card">
+      <div class="card-header">
+  <h3 class="card-title">Calls</h3>
+      </div>
+      <div class="card-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.42.4 (0)
+ -->
+<!-- Title: program~~codatacli~~CallsGraph Pages: 1 -->
+<svg id="programcodatacliCallsGraph" width="274pt" height="368pt"
+ viewBox="0.00 0.00 274.00 368.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="program~~codatacli~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 364)">
+<title>program~~codatacli~~CallsGraph</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-364 270,-364 270,4 -4,4"/>
+<!-- program~codatacli -->
+<g id="program~~codatacli~~CallsGraph_node1" class="node">
+<title>program~codatacli</title>
+<polygon fill="none" stroke="black" points="55,-192 0,-192 0,-168 55,-168 55,-192"/>
+<text text-anchor="middle" x="27.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50">codatacli</text>
+</g>
+<!-- args -->
+<g id="program~~codatacli~~CallsGraph_node2" class="node">
+<title>args</title>
+<polygon fill="#777777" stroke="#777777" points="148,-360 94,-360 94,-336 148,-336 148,-360"/>
+<text text-anchor="middle" x="121" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">args</text>
+</g>
+<!-- program~codatacli&#45;&gt;args -->
+<g id="program~~codatacli~~CallsGraph_edge1" class="edge">
+<title>program~codatacli&#45;&gt;args</title>
+<path fill="none" stroke="#ff0000" d="M31.3,-192.2C37.91,-218.96 56.6,-283.85 91,-327 91.48,-327.6 91.98,-328.19 92.5,-328.78"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="90.31,-331.52 100.01,-335.77 95.08,-326.39 90.31,-331.52"/>
+</g>
+<!-- get_args -->
+<g id="program~~codatacli~~CallsGraph_node3" class="node">
+<title>get_args</title>
+<polygon fill="#777777" stroke="#777777" points="148.5,-318 93.5,-318 93.5,-294 148.5,-294 148.5,-318"/>
+<text text-anchor="middle" x="121" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">get_args</text>
+</g>
+<!-- program~codatacli&#45;&gt;get_args -->
+<g id="program~~codatacli~~CallsGraph_edge2" class="edge">
+<title>program~codatacli&#45;&gt;get_args</title>
+<path fill="none" stroke="#ff0000" d="M33.69,-192.06C43,-212.73 64.09,-255.56 91,-285 91.73,-285.8 92.5,-286.59 93.3,-287.37"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="91.1,-290.09 100.97,-293.94 95.65,-284.78 91.1,-290.09"/>
+</g>
+<!-- iget -->
+<g id="program~~codatacli~~CallsGraph_node4" class="node">
+<title>iget</title>
+<polygon fill="#777777" stroke="#777777" points="148,-276 94,-276 94,-252 148,-252 148,-276"/>
+<text text-anchor="middle" x="121" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">iget</text>
+</g>
+<!-- program~codatacli&#45;&gt;iget -->
+<g id="program~~codatacli~~CallsGraph_edge3" class="edge">
+<title>program~codatacli&#45;&gt;iget</title>
+<path fill="none" stroke="#ff0000" d="M39.48,-192.19C51.55,-205.33 71.81,-226.57 91,-243 91.98,-243.84 93,-244.68 94.03,-245.52"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="92.11,-248.46 102.17,-251.79 96.38,-242.91 92.11,-248.46"/>
+</g>
+<!-- lget -->
+<g id="program~~codatacli~~CallsGraph_node5" class="node">
+<title>lget</title>
+<polygon fill="#777777" stroke="#777777" points="148,-234 94,-234 94,-210 148,-210 148,-234"/>
+<text text-anchor="middle" x="121" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">lget</text>
+</g>
+<!-- program~codatacli&#45;&gt;lget -->
+<g id="program~~codatacli~~CallsGraph_edge4" class="edge">
+<title>program~codatacli&#45;&gt;lget</title>
+<path fill="none" stroke="#ff0000" d="M54.97,-192.15C64.24,-196.41 74.82,-201.26 84.71,-205.8"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="83.36,-209.03 93.91,-210.02 86.28,-202.67 83.36,-209.03"/>
+</g>
+<!-- proc~display -->
+<g id="program~~codatacli~~CallsGraph_node6" class="node">
+<title>proc~display</title>
+<g id="a_program~~codatacli~~CallsGraph_node6"><a xlink:href="../proc/display.html" xlink:title="display">
+<polygon fill="#d9534f" stroke="#d9534f" points="148,-192 94,-192 94,-168 148,-168 148,-192"/>
+<text text-anchor="middle" x="121" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">display</text>
+</a>
+</g>
+</g>
+<!-- program~codatacli&#45;&gt;proc~display -->
+<g id="program~~codatacli~~CallsGraph_edge5" class="edge">
+<title>program~codatacli&#45;&gt;proc~display</title>
+<path fill="none" stroke="#ff0000" d="M55.46,-180C64.27,-180 74.2,-180 83.59,-180"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="83.86,-183.5 93.86,-180 83.86,-176.5 83.86,-183.5"/>
+</g>
+<!-- proc~version -->
+<g id="program~~codatacli~~CallsGraph_node7" class="node">
+<title>proc~version</title>
+<g id="a_program~~codatacli~~CallsGraph_node7"><a xlink:href="../proc/version.html" xlink:title="version">
+<polygon fill="#d94e8f" stroke="#d94e8f" points="148,-150 94,-150 94,-126 148,-126 148,-150"/>
+<text text-anchor="middle" x="121" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">version</text>
+</a>
+</g>
+</g>
+<!-- program~codatacli&#45;&gt;proc~version -->
+<g id="program~~codatacli~~CallsGraph_edge6" class="edge">
+<title>program~codatacli&#45;&gt;proc~version</title>
+<path fill="none" stroke="#ff0000" d="M54.97,-167.85C64.24,-163.59 74.82,-158.74 84.71,-154.2"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="86.28,-157.33 93.91,-149.98 83.36,-150.97 86.28,-157.33"/>
+</g>
+<!-- set_args -->
+<g id="program~~codatacli~~CallsGraph_node8" class="node">
+<title>set_args</title>
+<polygon fill="#777777" stroke="#777777" points="148,-108 94,-108 94,-84 148,-84 148,-108"/>
+<text text-anchor="middle" x="121" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">set_args</text>
+</g>
+<!-- program~codatacli&#45;&gt;set_args -->
+<g id="program~~codatacli~~CallsGraph_edge7" class="edge">
+<title>program~codatacli&#45;&gt;set_args</title>
+<path fill="none" stroke="#ff0000" d="M39.48,-167.81C51.55,-154.67 71.81,-133.43 91,-117 91.98,-116.16 93,-115.32 94.03,-114.48"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="96.38,-117.09 102.17,-108.21 92.11,-111.54 96.38,-117.09"/>
+</g>
+<!-- set_mode -->
+<g id="program~~codatacli~~CallsGraph_node9" class="node">
+<title>set_mode</title>
+<polygon fill="#777777" stroke="#777777" points="151,-66 91,-66 91,-42 151,-42 151,-66"/>
+<text text-anchor="middle" x="121" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">set_mode</text>
+</g>
+<!-- program~codatacli&#45;&gt;set_mode -->
+<g id="program~~codatacli~~CallsGraph_edge8" class="edge">
+<title>program~codatacli&#45;&gt;set_mode</title>
+<path fill="none" stroke="#ff0000" d="M33.69,-167.94C43,-147.27 64.09,-104.44 91,-75 91.73,-74.2 92.5,-73.41 93.3,-72.63"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="95.65,-75.22 100.97,-66.06 91.1,-69.91 95.65,-75.22"/>
+</g>
+<!-- specified -->
+<g id="program~~codatacli~~CallsGraph_node10" class="node">
+<title>specified</title>
+<polygon fill="#777777" stroke="#777777" points="148.5,-24 93.5,-24 93.5,0 148.5,0 148.5,-24"/>
+<text text-anchor="middle" x="121" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">specified</text>
+</g>
+<!-- program~codatacli&#45;&gt;specified -->
+<g id="program~~codatacli~~CallsGraph_edge9" class="edge">
+<title>program~codatacli&#45;&gt;specified</title>
+<path fill="none" stroke="#ff0000" d="M31.3,-167.8C37.91,-141.04 56.6,-76.15 91,-33 91.48,-32.4 91.98,-31.81 92.5,-31.22"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="95.08,-33.61 100.01,-24.23 90.31,-28.48 95.08,-33.61"/>
+</g>
+<!-- optval -->
+<g id="program~~codatacli~~CallsGraph_node11" class="node">
+<title>optval</title>
+<polygon fill="#777777" stroke="#777777" points="253.5,-234 199.5,-234 199.5,-210 253.5,-210 253.5,-234"/>
+<text text-anchor="middle" x="226.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">optval</text>
+</g>
+<!-- proc~display&#45;&gt;optval -->
+<g id="program~~codatacli~~CallsGraph_edge10" class="edge">
+<title>proc~display&#45;&gt;optval</title>
+<path fill="none" stroke="#00ffa9" d="M148.12,-190.6C160.74,-195.72 176.09,-201.95 189.78,-207.5"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="188.81,-210.89 199.39,-211.41 191.44,-204.4 188.81,-210.89"/>
+</g>
+<!-- parse_pattern -->
+<g id="program~~codatacli~~CallsGraph_node12" class="node">
+<title>parse_pattern</title>
+<polygon fill="#777777" stroke="#777777" points="266,-192 187,-192 187,-168 266,-168 266,-192"/>
+<text text-anchor="middle" x="226.5" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">parse_pattern</text>
+</g>
+<!-- proc~display&#45;&gt;parse_pattern -->
+<g id="program~~codatacli~~CallsGraph_edge11" class="edge">
+<title>proc~display&#45;&gt;parse_pattern</title>
+<path fill="none" stroke="#00ffa9" d="M148.12,-180C156.83,-180 166.84,-180 176.7,-180"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="176.87,-183.5 186.87,-180 176.87,-176.5 176.87,-183.5"/>
+</g>
+<!-- regex -->
+<g id="program~~codatacli~~CallsGraph_node13" class="node">
+<title>regex</title>
+<polygon fill="#777777" stroke="#777777" points="253.5,-150 199.5,-150 199.5,-126 253.5,-126 253.5,-150"/>
+<text text-anchor="middle" x="226.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">regex</text>
+</g>
+<!-- proc~display&#45;&gt;regex -->
+<g id="program~~codatacli~~CallsGraph_edge12" class="edge">
+<title>proc~display&#45;&gt;regex</title>
+<path fill="none" stroke="#00ffa9" d="M148.12,-169.4C160.74,-164.28 176.09,-158.05 189.78,-152.5"/>
+<polygon fill="#00ffa9" stroke="#00ffa9" points="191.44,-155.6 199.39,-148.59 188.81,-149.11 191.44,-155.6"/>
+</g>
+</g>
+</svg>
+</div>          <div>
+            <a type="button" class="graph-help" data-bs-toggle="modal" href="#CallsGraph-help-text">Help</a>
+          </div>
+          <div class="modal fade" id="CallsGraph-help-text" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title" id="-graph-help-label">Graph Key</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+<p>Nodes of different colours represent the following: </p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.42.4 (0)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="641pt" height="29pt"
+ viewBox="0.00 0.00 641.00 29.32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(0.92 0.92) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-28 695.5,-28 695.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="64,-24 0,-24 0,0 64,0 64,-24"/>
+<text text-anchor="middle" x="32" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="136,-24 82,-24 82,0 136,0 136,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="209.5,-24 154.5,-24 154.5,0 209.5,0 209.5,-24"/>
+<text text-anchor="middle" x="182" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Interface</text>
+</g>
+<!-- Type Bound Procedure -->
+<g id="node4" class="node">
+<title>Type Bound Procedure</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="350,-24 228,-24 228,0 350,0 350,-24"/>
+<text text-anchor="middle" x="289" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Type Bound Procedure</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node5" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="504,-24 368,-24 368,0 504,0 504,-24"/>
+<text text-anchor="middle" x="436" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node6" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="576,-24 522,-24 522,0 576,0 576,-24"/>
+<text text-anchor="middle" x="549" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="white">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node7" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="black" points="691.5,-24 594.5,-24 594.5,0 691.5,0 691.5,-24"/>
+<text text-anchor="middle" x="643" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+<p>Solid arrows point from a procedure to one which it calls. Dashed 
+arrows point from an interface to procedures which implement that interface.
+This could include the module procedures in a generic interface or the
+implementation in a submodule of an interface in a parent module.
+</p>
+ Where possible, edges connecting nodes are
+given different colours to make them easier to distinguish in
+large graphs.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+
+    <section>
+    <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cctptr"></span>
+              type(<a href='../type/codata_constant_type.html'>codata_constant_type</a>),
+            </td>
+            <td>
+              pointer
+            </td>
+            <td>::</td>
+            <td><strong>cctptr</strong>(:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-char_fp"></span>
+              character(len=:),
+            </td>
+            <td>
+              pointer
+            </td>
+            <td>::</td>
+            <td><strong>char_fp</strong>(:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-help_text"></span>
+              character(len=:),
+            </td>
+            <td>
+              allocatable, target
+            </td>
+            <td>::</td>
+            <td><strong>help_text</strong>(:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i"></span>
+              integer
+            </td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-name"></span>
+              character(len=*),
+            </td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>name</strong></td>
+<td> =</td>
+                <td>&#34;codata&#34;</td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-patterns"></span>
+              character(len=:),
+            </td>
+            <td>
+              allocatable
+            </td>
+            <td>::</td>
+            <td><strong>patterns</strong>(:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-version_text"></span>
+              character(len=:),
+            </td>
+            <td>
+              allocatable, target
+            </td>
+            <td>::</td>
+            <td><strong>version_text</strong>(:)</td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+    
+
+    
+
+
+    <section>
+    <h2>Subroutines</h2>
+      <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-display"></span> <h3> subroutine <a href='../proc/display.html'>display</a>(fptr, pattern, value, uncertainty)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Display results</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fptr"></span>
+              type(<a href='../type/codata_constant_type.html'>codata_constant_type</a>),
+            </td>
+<td>intent(in),</td>
+              <td></td>            <td>
+              pointer
+            </td>
+            <td>::</td>
+            <td><strong>fptr</strong>(:)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pattern"></span>
+              character(len=*),
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>pattern</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-value"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>value</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-uncertainty"></span>
+              logical,
+            </td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>uncertainty</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+    </section>    
+    
+
+    <section>
+    <h2 id="src">Source Code</h2>
+    <div class="hl codehilite"><pre><span></span><span class="k">program </span><span class="n">codatacli</span>
+<span class="k">use</span><span class="p">,</span><span class="w"> </span><span class="k">intrinsic</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">iso_fortran_env</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">output_unit</span>
+<span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">set_args</span><span class="p">,</span><span class="w"> </span><span class="n">set_mode</span><span class="p">,</span><span class="w"> </span><span class="n">specified</span><span class="p">,</span><span class="w"> </span><span class="n">iget</span><span class="p">,</span><span class="w"> </span><span class="n">lget</span><span class="p">,</span><span class="w"> </span><span class="n">sget</span><span class="p">,</span><span class="w"> </span><span class="n">get_args</span>
+<span class="k">use </span><span class="n">M_CLI2</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">args</span><span class="o">=&gt;</span><span class="n">unnamed</span>
+<span class="k">use </span><span class="n">regex_module</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">REGEX</span><span class="p">,</span><span class="w"> </span><span class="n">parse_pattern</span><span class="p">,</span><span class="w"> </span><span class="n">regex_pattern</span>
+<span class="k">use </span><span class="n">stdlib_optval</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="p">:</span><span class="w"> </span><span class="n">optval</span>
+<span class="k">use </span><span class="n">codata</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="n">cc</span><span class="p">,</span><span class="w"> </span><span class="n">cc_2010</span><span class="p">,</span><span class="n">cc_2014</span><span class="p">,</span><span class="w"> </span><span class="n">cc_2018</span><span class="p">,</span><span class="w"> </span><span class="n">codata_constant_type</span><span class="p">,</span><span class="w"> </span><span class="n">version</span>
+<span class="k">implicit none</span><span class="p">(</span><span class="k">type</span><span class="p">,</span><span class="k">external</span><span class="p">)</span>
+
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">parameter</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;codata&quot;</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">target</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">help_text</span><span class="p">(:)</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="p">,</span><span class="w"> </span><span class="k">target</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">version_text</span><span class="p">(:)</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">char_fp</span><span class="p">(:)</span>
+<span class="k">type</span><span class="p">(</span><span class="n">codata_constant_type</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">cctptr</span><span class="p">(:)</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="w"> </span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">patterns</span><span class="p">(:)</span>
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span>
+
+<span class="k">nullify</span><span class="p">(</span><span class="n">char_fp</span><span class="p">)</span>
+<span class="k">nullify</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
+
+<span class="n">version_text</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="o">//</span><span class="n">name</span><span class="o">//</span><span class="s1">&#39; &#39;</span><span class="o">//</span><span class="n">version</span><span class="p">()</span><span class="o">//</span><span class="s1">&#39;                                            &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;Copyright (c) 2022 Milan Skocic                                       &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;License: MIT                                                          &#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="w"> </span><span class="p">]</span>
+
+<span class="n">help_text</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">72</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="s1">&#39;Usage: codata [OPTION...] [REGEX_PATTERN...]                          &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;codata - fundamental physical constants                               &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;                                                                      &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;  --year, -y YEAR         Codata constants: 2022, 2018, 2014, 2010    &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;  --pattern, -p PATTERN   Regex pattern for filtering the constants.  &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;  --value, -a             Show only the value.  &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;  --error, -e             Show only the uncertainty.      &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;  --usage                 Show usage text and exit.     &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;  --help                  Show help text and exit.    &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;  --verbose               Display additional information.  &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;  --version               Show version information and exit.           &#39;</span><span class="p">,&amp;</span>
+<span class="s1">&#39;&#39;</span><span class="p">]</span>
+
+<span class="k">call </span><span class="n">set_mode</span><span class="p">(</span><span class="s1">&#39;strict&#39;</span><span class="p">)</span>
+<span class="k">call </span><span class="n">set_mode</span><span class="p">(</span><span class="s1">&#39;response_file&#39;</span><span class="p">)</span>
+<span class="k">call </span><span class="n">set_args</span><span class="p">(</span><span class="s1">&#39;--year:y 2022 --value:a F --error:e F --pattern:p .&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="w">              </span><span class="n">help_text</span><span class="p">,</span><span class="w"> </span><span class="n">version_text</span><span class="p">)</span>
+<span class="k">select case</span><span class="p">(</span><span class="n">iget</span><span class="p">(</span><span class="s2">&quot;year&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2022</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2018</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2018</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2014</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2014</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="p">(</span><span class="mi">2010</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cctptr</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">cc_2010</span>
+<span class="w">    </span><span class="k">case </span><span class="n">default</span>
+<span class="w">        </span><span class="k">nullify</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
+<span class="w">        </span><span class="k">write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(A)&#39;</span><span class="p">)</span><span class="w"> </span><span class="s1">&#39;Invalid year. See --help.&#39;</span>
+<span class="w">        </span><span class="k">stop</span>
+<span class="k">end select</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nb">ASSOCIATED</span><span class="p">(</span><span class="n">cctptr</span><span class="p">))</span><span class="k">then</span>
+<span class="k">    if</span><span class="p">(</span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">then</span>
+<span class="k">        do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">             </span><span class="k">call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">args</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="k">end do</span>
+<span class="k">    end if</span>
+<span class="k">    if</span><span class="p">(</span><span class="n">specified</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">))</span><span class="k">then</span>
+<span class="k">        call </span><span class="n">get_args</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">patterns</span><span class="p">,</span><span class="w"> </span><span class="n">delimiters</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">patterns</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">            </span><span class="k">call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">,</span><span class="w"> </span><span class="nb">trim</span><span class="p">(</span><span class="n">patterns</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">lget</span><span class="p">(</span><span class="s2">&quot;e&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="k">end do</span>
+<span class="k">    end if</span>
+<span class="k">    if</span><span class="p">(.</span><span class="nb">not</span><span class="p">.</span><span class="n">specified</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">.</span><span class="nb">and</span><span class="p">.</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">        call </span><span class="n">display</span><span class="p">(</span><span class="n">cctptr</span><span class="p">)</span>
+<span class="w">    </span><span class="k">end if</span>
+<span class="k">end if</span>
+
+<span class="k">contains</span>
+<span class="c">!=======================================================================</span>
+<span class="c">! DISPLAY</span>
+<span class="c">!=======================================================================</span>
+<span class="k">subroutine </span><span class="n">display</span><span class="p">(</span><span class="n">fptr</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="p">,</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">uncertainty</span><span class="p">)</span>
+<span class="c">!! Display results</span>
+<span class="k">type</span><span class="p">(</span><span class="n">codata_constant_type</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">pointer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">fptr</span><span class="p">(:)</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">pattern</span>
+<span class="kt">logical</span><span class="p">,</span><span class="w"> </span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="w"> </span><span class="k">optional</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="n">uncertainty</span>
+
+<span class="kt">integer</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">idx</span>
+<span class="k">type</span><span class="p">(</span><span class="n">regex_pattern</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">re</span>
+<span class="kt">logical</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="n">uncertainty2</span>
+
+<span class="n">value2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optval</span><span class="p">(</span><span class="k">value</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.)</span>
+<span class="n">uncertainty2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optval</span><span class="p">(</span><span class="n">uncertainty</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.)</span>
+
+<span class="k">if</span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">pattern</span><span class="p">))</span><span class="k">then</span>
+<span class="k">    </span><span class="n">re</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse_pattern</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
+<span class="w">    </span><span class="k">do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">fptr</span><span class="p">),</span><span class="mi">1</span>
+<span class="w">        </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">REGEX</span><span class="p">(</span><span class="nb">trim</span><span class="p">(</span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">name</span><span class="p">),</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="n">re</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">idx</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">            if</span><span class="p">(</span><span class="n">value2</span><span class="p">)</span><span class="k">then</span>
+<span class="k">                write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(SP,ES24.16)&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="k">value</span>
+<span class="k">            elseif</span><span class="p">(</span><span class="n">uncertainty2</span><span class="p">)</span><span class="k">then</span>
+<span class="k">                write</span><span class="p">(</span><span class="n">output_unit</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;(SP,ES24.16)&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="n">uncertainty</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="k">                call </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="k">print</span><span class="p">()</span>
+<span class="w">            </span><span class="k">end if</span>
+<span class="k">        end if</span>
+<span class="k">    end do</span>
+<span class="k">else</span>
+<span class="k">    do </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">fptr</span><span class="p">),</span><span class="mi">1</span>
+<span class="w">        </span><span class="k">call </span><span class="n">fptr</span><span class="p">(</span><span class="n">i</span><span class="p">)%</span><span class="k">print</span><span class="p">()</span>
+<span class="w">    </span><span class="k">end do</span>
+<span class="k">end if</span>
+<span class="k">end subroutine </span><span class="n">display</span>
+<span class="c">!=======================================================================</span>
+
+<span class="k">end program </span><span class="n">codatacli</span>
+</pre></div>
+
+    </section>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              codata
+ was developed by Milan Skocic<br>              &copy; 2026 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2026-06-06T12:43:46.520924+0200             </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+  </body>
+</html>

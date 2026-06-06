@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    width=21cm;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.header-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}

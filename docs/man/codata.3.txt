@@ -48,51 +48,65 @@ NOTES
            codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 EXAMPLE
-       Example in Fortran ``` program example_in_f use codata  implicit
-       none  print  '(A)',  '##########  EXAMPLE IN FORTRAN ##########'
-       print '(A)', '# VERSION' print *, "version = ", version()  print
-       '(A)', '# CONSTANTS'
+       Example in Fortran
 
-       print *, "c = ",
-              SPEED_OF_LIGHT_IN_VACUUM%value  print  '(A)',  '#  UNCER‐
-              TAINTY' print *, "u(c) = ",  SPEED_OF_LIGHT_IN_VACUUM%un‐
-              certainty  print  '(A)',  '#  OLDER  VALUES'  print  '(A,
-              F23.16)', "Mu_2022(latest) = ", MOLAR_MASS_CONSTANT%value
-              print  '(A,  F23.16)',  "Mu_2018  =  ",   MOLAR_MASS_CON‐
-              STANT_2018%value
+           program example_in_f
+           use codata
+           implicit none
+           print '(A)', '########## EXAMPLE IN FORTRAN ##########'
+           print '(A)', '# VERSION'
+           print *, "version = ", version()
+           print '(A)', '# CONSTANTS'
+           print *, "c = ",  SPEED_OF_LIGHT_IN_VACUUM%value
+           print '(A)', '# UNCERTAINTY'
+           print *, "u(c) = ", SPEED_OF_LIGHT_IN_VACUUM%uncertainty
+           print '(A)', '# OLDER VALUES'
+           print '(A, F23.16)', "Mu_2022(latest) = ", MOLAR_MASS_CONSTANT%value
+           print '(A, F23.16)', "Mu_2018 = ", MOLAR_MASS_CONSTANT_2018%value
+           print '(A, F23.16)', "Mu_2014 = ",  MOLAR_MASS_CONSTANT_2014%value
+           print '(A, F23.16)', "Mu_2010 = ",  MOLAR_MASS_CONSTANT_2010%value
+           end program
 
-       print '(A, F23.16)', "Mu_2014 = ",
-              MOLAR_MASS_CONSTANT_2014%value
+       Example in C
 
-       print '(A, F23.16)', "Mu_2010 = ",
-              MOLAR_MASS_CONSTANT_2010%value end program ```
+           #include <stdio.h>
+           #include "codata.h"
+           int main(void){
+           printf("########## EXAMPLE IN C ##########0);
+           printf("%s0,"# VERSION");
+           printf("version = %s0, codata_version());
+           printf("%s0,"# CONSTANTS");
+           printf("c = %f0, SPEED_OF_LIGHT_IN_VACUUM.value);
+           printf("%s0,"# UNCERTAINTY");
+           printf("u(c) = %f0, SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
+           printf("%s0,"# OLDER VALUES");
+           printf("Mu_2022(latest) = %23.16f0, MOLAR_MASS_CONSTANT.value);
+           printf("Mu_2018 = %23.16f0, MOLAR_MASS_CONSTANT_2018.value);
+           printf("Mu_2014 = %23.16f0, MOLAR_MASS_CONSTANT_2014.value);
+           printf("Mu_2010 = %23.16f0, MOLAR_MASS_CONSTANT_2010.value);
+           return 0;
+           }
 
-       Example  in  C  ```  #include  <stdio.h> #include "codata.h" int
-       main(void){  printf("##########  EXAMPLE  IN   C   ##########0);
-       printf("%s0,"#  VERSION");  printf("version  =  %s0, codata_ver‐
-       sion());   printf("%s0,"#   CONSTANTS");   printf("c   =    %f0,
-       SPEED_OF_LIGHT_IN_VACUUM.value);  printf("%s0,"#  UNCERTAINTY");
-       printf("u(c)   =   %f0,   SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
-       printf("%s0,"#   OLDER   VALUES");   printf("Mu_2022(latest)   =
-       %23.16f0,    MOLAR_MASS_CONSTANT.value);    printf("Mu_2018    =
-       %23.16f0,   MOLAR_MASS_CONSTANT_2018.value);  printf("Mu_2014  =
-       %23.16f0,  MOLAR_MASS_CONSTANT_2014.value);  printf("Mu_2010   =
-       %23.16f0, MOLAR_MASS_CONSTANT_2010.value); return 0; } ```
+       Example in Python
 
-       Example    in   Python   ```   import   sys   sys.path.insert(0,
-       "../py/src/")  import  pycodata  print("##########  EXAMPLE   IN
-       PYTHON  ##########") print("# VERSION") print(f"version = {pyco‐
-       data.__version__}")  print("#  Constants")  print("c  =",  pyco‐
-       data.SPEED_OF_LIGHT_IN_VACUUM["value"])  print("#  UNCERTAINTY")
-       print("u(c)   =   ",   pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncer‐
-       tainty"])  print("#  OLDER  VALUES")  print("Mu_2022  = ", pyco‐
-       data.MOLAR_MASS_CONSTANT["value"])  print("Mu_2018  =  ",  pyco‐
-       data.MOLAR_MASS_CONSTANT_2018["value"])  print("Mu_2014 = ", py‐
-       codata.MOLAR_MASS_CONSTANT_2014["value"])  print("Mu_2010  =  ",
-       pycodata.MOLAR_MASS_CONSTANT_2010["value"]) ```
+           import sys
+           sys.path.insert(0, "../py/src/")
+           import pycodata
+           print("########## EXAMPLE IN PYTHON ##########")
+           print("# VERSION")
+           print(f"version = {pycodata.__version__}")
+           print("# Constants")
+           print("c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
+           print("# UNCERTAINTY")
+           print("u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
+           print("# OLDER VALUES")
+           print("Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
+           print("Mu_2018 = ", pycodata.MOLAR_MASS_CONSTANT_2018["value"])
+           print("Mu_2014 = ", pycodata.MOLAR_MASS_CONSTANT_2014["value"])
+           print("Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
 
 SEE ALSO
-       codata(1),  codata_2010(3),  codata_2014(3), codata_2018(3), co‐
+       codata(1), codata_2010(3), codata_2014(3),  codata_2018(3),  co‐
        data_2022(3), fpm(1)
 
 2.5.2                         06 June 2026                    codata(3)
