@@ -1,26 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Homepage</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head> <title> type(reference_anual) :: codata = v2.5.2
+ ! Fortran library for fundamental physical constants
+</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='main.css' rel='stylesheet' type='text/css' /> 
+<meta content='main.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+</head><body>
+   <div class='maketitle'>                                                                                   
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
 
-    <header>
-        <img src="logo.png" alt="LOGO" class="header-image">
-    </header>
-    
-    <div class="container">
-        Available documentation:
-        <ul class="link-list">
-            <li><a href="man/codata-bookman.pdf">[PDF]: Bookman</a></li>
-            <li><a href="latex/codata-refman.pdf">[PDF]: Reference Manual</a></li>
-            <li><a href="sphinx/index.html">[HTML]: sphinx-fortran-domain</a></li>
-            <li><a href="ford/index.html">[HTML]: FORD</a></li>
-        </ul>
+<h2 class='titleHead'> type(reference_manual) :: codata =
+v2.5.2<br />
+! Fortran library for fundamental physical constants<br />
+</h2>
+      <div class='author'><span class='cmr-12'>***</span>
+<br /> <span class='cmr-12'>Milan Skocic</span></div><br />
+<div class='date'><span class='cmr-12'>June 6, 2026</span></div>
+                                                                                       
+                                                                                       
+   </div><p>  
+<!-- l. 79 --></p><p class='indent'>                                                  MIT License - Copyright (c) 2022 Milan
+Skocic
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!-- l. 87 --><p class='indent'>
+                                                                                       
+                                                                                       
+</p>
+   <div class='tableofcontents'>
+   <span class='likechapterToc'><a href='#list-of-figures' id='QQ2-1-1'>List of Figures</a></span>
+<br />   <span class='likechapterToc'><a href='#list-of-tables' id='QQ2-1-2'>List of Tables</a></span>
+<br />   <span class='chapterToc'> <a href='#preface' id='QQ2-1-3'>Preface</a></span>
+<br />   <span class='partToc'>I  <a href='Introduction.html#introduction' id='QQ2-2-4'>Introduction</a></span>
+<br />   <span class='partToc'>II  <a href='Installation.html#installation' id='QQ2-3-5'>Installation</a></span>
+<br />   <span class='partToc'>III  <a href='TheoreticalBackground.html#theoretical-background' id='QQ2-4-6'>Theoretical Background</a></span>
+<br />   <span class='partToc'>IV  <a href='API.html#api' id='QQ2-5-7'>API</a></span>
+<br />   <span class='partToc'>V  <a href='ExamplesandTutorials.html#examples-and-tutorials' id='QQ2-6-8'>Examples and Tutorials</a></span>
+<br />   <span class='chapterToc'>1 <a href='ExamplesandTutorials.html#examples' id='QQ2-6-9'>Examples</a></span>
+<br />   <span class='partToc'>VI  <a href='ManPages.html#man-pages' id='QQ2-7-10'>Man Pages</a></span>
+<br />   <span class='chapterToc'>2 <a href='ManPages.html#codata' id='QQ2-7-11'>codata(3)</a></span>
+<br />   <span class='chapterToc'>3 <a href='ManPages.html#codata1' id='QQ2-7-23'>codata(1)</a></span>
+<br />   <span class='partToc'>VII  <a href='Appendices.html#appendices' id='QQ2-8-31'>Appendices</a></span>
+<br />   <span class='chapterToc'>4 <a href='Appendices.html#raw-data' id='QQ2-8-32'>Raw Data</a></span>
+<br />   <span class='chapterToc'>5 <a href='Appendices.html#codatah' id='QQ2-8-37'>codata.h</a></span>
+<br />   <span class='likechapterToc'><a href='Appendices.html#bibliography' id='QQ2-8-38'>Bibliography</a></span>
+<br />   <span class='chapterToc'> <a href='Appendices.html#bibliography1'>Bibliography</a></span>
+   </div>
+   <h2 class='likechapterHead' id='list-of-figures'><a id='x1-1000'></a>List of Figures</h2>
+   <div class='tableofcontents'>
+   </div>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+   <h2 class='likechapterHead' id='list-of-tables'><a id='x1-2000'></a>List of Tables</h2>
+   <div class='tableofcontents'>
+   </div>
+                                                                                       
+                                                                                       
+<!-- l. 1 --><p class='indent'>
+                                                                                       
+                                                                                       
+</p>
+   <h2 class='chapterHead' id='preface'><a id='x1-3000'></a>Preface</h2>
+<!-- l. 2 --><p class='noindent'>This document provides a reference manual for the <span class='cmti-10x-x-109'>codata </span>library. The documentation is PDF-centric
+and authored in LaTeX in order to provide a stable, high-quality printout. The PDF edition preserves
+the intended layout, typography, equations, figures and cross-references, ensuring a consistent reading
+experience across platforms and over time. A HTML version of the documentation is rendered with
+<span class='cmti-10x-x-109'>make4ht</span>.
+</p><!-- l. 10 --><p class='indent'>   In addition, POSIX-style man pages are generated from the sources using the <span class='cmti-10x-x-109'>prep(1) </span>preprocessor
+and are provided as both terminal-native documentation in the binaries and as a PDF
+document.
+</p><!-- l. 14 --><p class='indent'>   Additional HTML versions are also available for users who prefer quick navigation, keyword search,
+or rapid access to specific sections. However, those versions provide only the documentation of the API
+generated from the docstrings using <span class='cmti-10x-x-109'>Sphinx </span>and <span class='cmti-10x-x-109'>FORD</span>. They are provided as a convenient
+complement to the present PDF documentation, and should not be considered as a replacement for the
+present reference manual. The <span class='cmti-10x-x-109'>Sphinx </span>HTML version presents the APIs for Fortran, C, and Python —
+whereas, the <span class='cmti-10x-x-109'>FORD </span>HTML version is Fortran-specific and is primarily intended for Fortran
+users.
+</p><!-- l. 27 --><p class='noindent'>Related Documentation: </p>
+     <ul class='itemize1'>
+     <li class='itemize'> <a href='./latex/codata-refman.pdf'>Reference Manual [PDF]</a>
+     </li>
+     <li class='itemize'> <a href='./man/'>Man Pages [GROFF, TXT, PDF]</a>
+     </li>
+     <li class='itemize'> <a href='./sphinx/index.html'>APIs with Sphinx [HTML]</a>
+     </li>
+     <li class='itemize'> <a href='./ford/index.html'>API with FORD [HTML]</a></li></ul>
+<!-- l. 43 --><p class='noindent'>Related resources: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>Binary releases: <a class='url' href='https://github.com/MilanSkocic/codata/releases'><span class='cmtt-10x-x-109'>https://github.com/MilanSkocic/codata/releases</span></a>
+     </li>
+     <li class='itemize'><span class='cmti-10x-x-109'>prep(1)</span>: <a class='url' href='https://github.com/urbanjost/prep'><span class='cmtt-10x-x-109'>https://github.com/urbanjost/prep</span></a>
+     </li>
+     <li class='itemize'><span class='cmti-10x-x-109'>make4ht</span>: <a class='url' href='https://github.com/michal-h21/make4ht'><span class='cmtt-10x-x-109'>https://github.com/michal-h21/make4ht</span></a>
+     </li>
+     <li class='itemize'>Sphinx: <a class='url' href='https://github.com/fortran-lang/sphinx-fortran-domain'><span class='cmtt-10x-x-109'>https://github.com/fortran-lang/sphinx-fortran-domain</span></a>
+     </li>
+     <li class='itemize'>FORD: <a class='url' href='https://github.com/Fortran-FOSS-Programmers/ford'><span class='cmtt-10x-x-109'>https://github.com/Fortran-FOSS-Programmers/ford</span></a></li></ul>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+<!-- l. 103 --><p class='indent'>
+                                                                                       
+                                                                                       
+</p>
+                                                                                       
+                                                                                       
 
-    </div>
-</body>
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+
+                                                                                       
+                                                                                       
+ 
+</body> 
 </html>
