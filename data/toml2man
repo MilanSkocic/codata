@@ -12,13 +12,12 @@ if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 
 awk -v suffix="$suffix" '
 BEGIN{
-    print "List of available constants:"
+    print "  List of available constants:"
     print ""
 }
 /^\[.*\]/{
     gsub(/\[/,"")
     gsub(/\]/,"")
-    gsub("_","\\_")
-    printf "%s%s%s\n", "- ", $0, suffix
+    printf "%s%s%s\n", "  - ", $0, suffix
 }
 ' $1
