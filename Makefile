@@ -27,8 +27,8 @@ GEN_HEADERS=./scripts/gen_headers.py
 GEN_HEADER=./scripts/gen_header.py
 GEN_STDLIB=./scripts/gen_stdlib.py
 
-SRC_FYPP=$(wildcard ./src/*.fypp)
-SRC_FYPP_F90=$(patsubst ./src/%.fypp, ./src/%.f90, $(SRC_FYPP))
+SRC_FYPP=$(wildcard ./source/*.fypp)
+SRC_FYPP_F90=$(patsubst ./source/%.fypp, ./src/%.f90, $(SRC_FYPP))
 
 ARCHIVE=$(FPM_NAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
 PYARCHIVE=$(FPM_PYNAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
@@ -45,17 +45,9 @@ $(FPM_LIBNAME): build shared
 # ---------------------------------------------------------------------
 # SOURCES
 .PHONY: sources 
-sources: $(SRC_FYPP_F90) prep
-
-./src/%.f90: ./src/%.fypp
-	fypp -I ./include $< $@
-
-.PHONY: prep
-prep:
+sources: 
 	make -C data
-	make -C srcprep
-	make -C docs/source/man
-	make -C srcprep
+	make -C source
 # ---------------------------------------------------------------------
 
 
@@ -64,6 +56,8 @@ prep:
 .PHONY: build
 build:
 	fpm build --profile $(btype)
+	fpm clean --skip
+	fpm build --profile $(btype)
 	mkdir -p $(FPM_BUILD_DIR)/install/bin
 	mkdir -p $(FPM_BUILD_DIR)/install/include
 	mkdir -p $(FPM_BUILD_DIR)/install/lib
@@ -71,8 +65,8 @@ build:
 	mkdir -p $(FPM_BUILD_DIR)/install/share/man/man1
 	fpm install --prefix $(FPM_BUILD_DIR)/install --profile $(btype) --no-rebuild
 	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(FPM_BUILD_DIR)/install/include
-	cp -f docs/source/man/$(FPM_NAME)*.3.gz $(FPM_BUILD_DIR)/install/share/man/man3
-	cp -f docs/source/man/$(FPM_APPNAME)*.1.gz $(FPM_BUILD_DIR)/install/share/man/man1
+	cp -f docs/man/$(FPM_NAME)*.3.gz $(FPM_BUILD_DIR)/install/share/man/man3
+	cp -f docs/man/$(FPM_APPNAME)*.1.gz $(FPM_BUILD_DIR)/install/share/man/man1
 
 .PHONY: test
 test:
@@ -148,7 +142,12 @@ archives:
 
 .PHONY: docs
 docs: 
-	make -C docs ford html
+	make -C source/doc
+	mkdir -p docs/man
+	mkdir -p docs/latex
+	mkdir -p docs/ford
+	mkdir -p docs/sphinx
+	cp -rfv source/doc/man/build/* docs/man/
 
 .PHONY: logo
 logo:
@@ -159,8 +158,6 @@ clean:
 	rm -rf $(SRC_FYPP_F90)
 	make -C data clean
 	fpm clean --all
-	make -C srcprep clean
+	make -C source clean
 	make -C py clean
-	make -C docs clean
-	make -C docs/source/man clean
 # ---------------------------------------------------------------------
