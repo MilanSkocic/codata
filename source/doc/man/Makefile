@@ -16,6 +16,7 @@ dir:
 	mkdir -p build
 
 $(BOOKMAN): $(MAN)
+	@echo $(MAN)
 	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User Commands & Libary Calls" -r $(FPM_VERSION) $(MAN) > $(BOOKMAN)
 
 build/%.1: src/%.1.man
