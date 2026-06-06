@@ -4,10 +4,10 @@ NAME
        codata - fundamental physical constants
 
 SYNOPSIS
-       codata [OPTIONS] [REGEX_PATTERN ... ]
+       codata [OPTION...] [REGEX_PATTERN...]
 
 DESCRIPTION
-       codata  is  a command line interface which prints all the codata
+       Codata  is  a command line interface which prints all the codata
        constants.
 
        The current values are from 2022.  Older values can be retrieved
@@ -15,7 +15,7 @@ DESCRIPTION
 
 OPTIONS
        --year, -y YEAR
-              Year of the codata constants: 2022, 2018, 2014, 2010
+              Codata constants: 2022, 2018, 2014, 2010
 
        --pattern, -p PATTERN
               Regex pattern for filtering the constants.
@@ -56,10 +56,10 @@ EXAMPLE
 
             codata
             codata -y 2018 molar electron
-            codata -y 2014 -p 'molar.*gas','electron.*eV'
-            codata '[B,b]oltzmann.*eV'
+            codata -y 2014 -p molar.*gas,electron.*eV
+            codata [B,b]oltzmann.*eV
 
 SEE ALSO
        codata(3)
 
-2.5.2                         02 June 2026                    codata(1)
+2.5.2                         06 June 2026                    codata(1)
