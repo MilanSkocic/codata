@@ -17,8 +17,6 @@ INSTALLATION
   INSTALL file.
 
 DOCUMENTATION
-  The pdf version of the reference manual is available at 
-  https://github.com/MilanSkocic/codata/latex/codata-refman.pdf. 
   The online documentation is available at https://milanskocic.github.io/codata.
 
 NOTES FOR FORTRAN USERS
