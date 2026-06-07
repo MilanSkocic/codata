@@ -55,8 +55,12 @@
 \usepackage{makeidx}
 \makeindex
 \usepackage{pdflscape}
+\usepackage{titlesec}
 %}}}
 
+\setlength{\parskip}{0.5\baselineskip}
+\setlength{\parindent}{0pt}
+\titlespacing*{\section}{0pt}{\baselineskip}{-0.2\baselineskip}
 
 \input{make.in.tex}
 
@@ -100,16 +104,17 @@
 \mainmatter
 \pagestyle{fancy}
 %-----------------------------------------------------------------------
-\part{Getting Started}
+\part{GETTING STARTED}
+\input{src/ch_introduction.tex}
 \input{src/ch_install.tex}
 \input{src/ch_examples.tex}
 %-----------------------------------------------------------------------
 % MAN PAGES
-\part{Man Pages}
+\part{MAN-PAGES}
 \input{src/ch_manpages.tex}
 %-----------------------------------------------------------------------
 % APPENDICES
-\part{Appendices}
+\part{APPENDICES}
 \input{src/ch_rawdata.tex}
 \input{src/ch_license.tex}
 %}}}
