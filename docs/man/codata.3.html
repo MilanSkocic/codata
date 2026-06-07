@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Sat Jun  6 23:54:45 2026 -->
+<!-- CreationDate: Sun Jun  7 08:05:16 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -72,50 +72,216 @@ libray for fundamental physical constants</p>
 
 <p style="margin-left:9%; margin-top: 1em"><i>codata</i> is
 a Fortran library providing the fundamental physical
-constants according to CODATA. A C API allows usage from C,
-or can be used as a basis for other wrappers. A python
-wrapper allows easy usage from Python.</p>
+constants published by the CODATA. <b><br>
+Fortran API</b></p>
 
-<p style="margin-left:9%; margin-top: 1em">The latest
-<i>codata</i> constants (2022) were integrated in the
-Fortran standard library (stdlib) from version 0.7.0. The
-constants are implemented as derived type which carries the
-name, the value, the uncertainty and the unit. All the
-<i>codata</i> constants are provided as double precision
-reals. The names are quite long and can be aliased with
-shorter names. A module level interface to_real is available
-for getting the constant value or uncertainty of a
-constant.</p>
+<p style="margin-left:18%;">exposes the constants as
+derived type codata_constant_type which carries:</p>
 
-<p style="margin-left:9%; margin-top: 1em">This library is
-complementary to the constants defined in the stdlib by
-providing older values for the constants. The latest values
-(2022) do not have the year as a suffix in their name
-whereas older values (2010, 2014, 2018) feature the year as
-a suffix in their name.</p>
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
 
-<p style="margin-left:9%; margin-top: 1em">The C API
-exposes a structure codata_constant_type that defines the
-same members as in Fortran.</p>
 
-<p style="margin-left:9%; margin-top: 1em">The Python
-wrapper encapsulates the members in a dictionary with the
-keys being name, value, uncertainty and unit.</p>
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="14%">
+
+
+<p>name</p></td>
+<td width="64%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="14%">
+
+
+<p>value</p></td>
+<td width="64%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="14%">
+
+
+<p>uncertainty</p></td>
+<td width="64%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="14%">
+
+
+<p>unit</p></td>
+<td width="64%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
+
+
+<p><b>C API</b></p></td>
+<td width="3%"></td>
+<td width="14%"></td>
+<td width="64%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">exposes a
+structure codata_constant_type that defines the same members
+as in Fortran:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
+
+
+<p style="margin-top: 1em">&bull;</p></td>
+<td width="3%"></td>
+<td width="14%">
+
+
+<p style="margin-top: 1em">name</p></td>
+<td width="64%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="14%">
+
+
+<p>value</p></td>
+<td width="64%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="14%">
+
+
+<p>uncertainty</p></td>
+<td width="64%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="14%">
+
+
+<p>unit</p></td>
+<td width="64%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="10%">
+
+
+<p><b>Python</b></p></td>
+<td width="3%"></td>
+<td width="14%"></td>
+<td width="64%">
+</td></tr>
+</table>
+
+<p style="margin-left:18%; margin-top: 1em">exposes a
+dictionary with the keys being:</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p style="margin-top: 1em">&bull;</p></td>
+<td width="3%"></td>
+<td width="19%">
+
+
+<p style="margin-top: 1em">the name</p></td>
+<td width="59%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="19%">
+
+
+<p>the value</p></td>
+<td width="59%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="19%">
+
+
+<p>the uncertainty</p></td>
+<td width="59%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="18%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="3%"></td>
+<td width="19%">
+
+
+<p>the unit</p></td>
+<td width="59%">
+</td></tr>
+</table>
 
 <h2>NOTES
 <a name="NOTES"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">To <b>use</b>
-<i>codata</i> within your <b>fpm</b>(1) project, add the
-following lines to your file:</p>
-
-<p style="margin-left:9%; margin-top: 1em">[dependencies]
-<br>
-codata = {
-git=&quot;https://github.com/MilanSkocic/codata.git&quot;
-}</p>
+<p style="margin-left:9%; margin-top: 1em">The latest
+values (2022) do not have the year as a suffix in their name
+whereas older values (2010, 2014, 2018) feature the year as
+a suffix.</p>
 
 <h2>EXAMPLE
 <a name="EXAMPLE"></a>
@@ -226,12 +392,13 @@ available constants:</p>
 <td width="1%">
 
 
-<p>&bull;</p></td>
+<p style="margin-top: 1em">&bull;</p></td>
 <td width="3%"></td>
 <td width="70%">
 
 
-<p>ALPHA_PARTICLE_ELECTRON_MASS_RATIO</p></td>
+
+<p style="margin-top: 1em">ALPHA_PARTICLE_ELECTRON_MASS_RATIO</p> </td>
 <td width="17%">
 </td></tr>
 <tr valign="top" align="left">

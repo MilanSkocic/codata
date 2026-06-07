@@ -17,36 +17,31 @@
 ! 
 ! DESCRIPTION
 !   codata is a Fortran library providing the fundamental physical
-!   constants according to CODATA.
-!   A C API allows usage from C, or can be used as a basis for other wrappers.
-!   A python wrapper allows easy usage from Python.
+!   constants published by the CODATA.
 ! 
-!   The latest codata constants (2022) were integrated in the Fortran
-!   standard library (stdlib) from version 0.7.0.
-!   The constants are implemented as derived type which carries the name,
-!   the value, the uncertainty and the unit.
-!   All the codata constants are provided as double precision reals.
-!   The names are quite long and can be aliased with shorter names.
-!   A module level interface to_real is available for getting the constant
-!   value or uncertainty of a constant.
+!   Fortran API  exposes the constants as derived type codata_constant_type
+!                which carries:
+!                  - name
+!                  - value
+!                  - uncertainty
+!                  - unit
 ! 
-!   This library is complementary to the constants defined in the stdlib
-!   by providing older values for the constants.
-!   The latest values (2022) do not have the year as a suffix in their name
-!   whereas older values (2010, 2014, 2018) feature the year as a suffix in their name.
+!   C API        exposes a structure codata_constant_type that defines
+!                the same members as in Fortran:
+!                  - name
+!                  - value
+!                  - uncertainty
+!                  - unit
 ! 
-!   The C API exposes a structure codata_constant_type that defines
-!   the same members as in Fortran.
-! 
-!   The Python wrapper encapsulates the members in a dictionary with
-!   the keys being name, value, uncertainty and unit.
+!   Python       exposes a dictionary with the keys being:
+!                  - the name
+!                  - the value
+!                  - the uncertainty
+!                  - the unit
 ! 
 ! NOTES
-!   To use codata within your fpm(1) project, add the following lines to
-!   your file:
-! 
-!       [dependencies]
-!       codata = { git="https://github.com/MilanSkocic/codata.git" }
+!   The latest values (2022) do not have the year as a suffix in their name
+!   whereas older values (2010, 2014, 2018) feature the year as a suffix.
 ! 
 ! EXAMPLE
 ! 
@@ -1524,7 +1519,7 @@ use codata__constants_type
 implicit none(type,external)
 public
 
-character(len=*), parameter, private :: v = '2.5.2'
+character(len=*), parameter, private :: v = 'x.y.z'
 character(len=:), allocatable, target, private :: vf
 character(len=:), allocatable, target, private :: vc
 
