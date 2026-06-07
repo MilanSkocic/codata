@@ -26,7 +26,7 @@
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{fancyvrb}
-%\usepackage{ccfonts}
+\usepackage{ccfonts}
 \usepackage{minted}
 \usepackage{hyperref}
 \usepackage{lipsum}
@@ -84,8 +84,8 @@
 \frontmatter 
 \pagestyle{plain}
 \tableofcontents
-\listoffigures
-\listoftables
+%\listoffigures
+%\listoftables
 
 \input{./src/preface.tex}
 %}}}
@@ -100,33 +100,18 @@
 \mainmatter
 \pagestyle{fancy}
 %-----------------------------------------------------------------------
-\part{Introduction}
-\part{Installation}
-\part{Theoretical Background}
-\part{API}
-%-----------------------------------------------------------------------
-% EXAMPLES
-\part{Examples and Tutorials}
-\chapter{Examples}
-\inputminted{Fortran}{../../../example/example.f90}
-\inputminted{c}{../../../example/example.c}
-\inputminted{python}{../../../example/example.py}
+\part{Getting Started}
+\input{src/ch_install.tex}
+\input{src/ch_examples.tex}
 %-----------------------------------------------------------------------
 % MAN PAGES
 \part{Man Pages}
-{\setlength\parindent{0pt}
-\setlength\parskip{0.5\baselineskip}
-\chapter{codata(3)}
-\input{../man/build/codata.3.tex}
-
-\chapter{codata(1)}
-\input{../man/build/codata.1.tex}
-}
+\input{src/ch_manpages.tex}
 %-----------------------------------------------------------------------
 % APPENDICES
 \part{Appendices}
 \input{src/ch_rawdata.tex}
-\input{src/ch_cheader.tex}
+\input{src/ch_license.tex}
 %}}}
 %=======================================================================
 
