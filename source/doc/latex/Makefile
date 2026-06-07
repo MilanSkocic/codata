@@ -24,6 +24,8 @@ all: dirs tex biber index link copy html
 dirs:
 	mkdir -p $(HTML_FOLDER)
 	mkdir -p $(BIN_FOLDER)
+	txt2latex ../../../INSTALL > src/INSTALL.tex
+	txt2latex ../../../README > src/README.tex
 
 tex:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 $(SRC_FOLDER)/$(FNAME).tex
