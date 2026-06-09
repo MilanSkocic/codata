@@ -24,7 +24,6 @@
 !   --error, -e            Show only the uncertainty.
 !   --usage                Show usage text and exit.
 !   --help                 Show help text and exit.
-!   --verbose              Display additional information.
 !   --version              Show version information and exit.
 ! 
 ! NOTES
