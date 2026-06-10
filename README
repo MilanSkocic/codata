@@ -28,9 +28,6 @@ INSTALLATION
   Detailed build and installation instructions are available in the 
   INSTALL file.
 
-DOCUMENTATION
-  The online documentation is available at https://milanskocic.github.io/codata.
-
 NOTES FOR FORTRAN USERS
   The codata constant from 2022 were integrated in the Fortran 
   standard library (stdlib).
