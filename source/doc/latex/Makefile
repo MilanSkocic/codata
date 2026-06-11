@@ -26,6 +26,7 @@ dirs:
 	mkdir -p $(BIN_FOLDER)
 	txt2latex ../../../INSTALL > src/INSTALL.tex
 	txt2latex ../../../README > src/README.tex
+	txt2latex ../../../NEWS > src/NEWS.tex
 
 tex:
 	$(TEX) -output-directory=./$(BUILD_FOLDER) -synctex=1 $(SRC_FOLDER)/$(FNAME).tex
