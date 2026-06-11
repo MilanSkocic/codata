@@ -25,13 +25,9 @@
 .ccr-10x-x-120{font-size:109%;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
-.cmtt-10x-x-109{font-family: monospace,monospace;}
 .torm-10x-x-109{}
 .cmitt-10x-x-109{font-family: monospace,monospace; font-style: italic;}
 .cmbx-10x-x-109{ font-weight: bold;}
-.cmtt-8x-x-75{font-size:54%;font-family: monospace,monospace;}
-.cmtt-8x-x-75{font-family: monospace,monospace;}
-.cmtt-8x-x-75{font-family: monospace,monospace;}
 .small-caps{font-variant: small-caps; }
 p{margin-top:0;margin-bottom:0}
 p.indent{text-indent:0;}
@@ -179,6 +175,7 @@ mtd.align-even{margin-right:2em; text-align:left;}
 pre.fancyvrb {white-space: pre-wrap; margin:0em;font-family:monospace,monospace;}
 code.minted-inline{font-family:monospace,monospace;}
 .rotatebox{display: inline-block;}
+dl.enumerate-enumitem{display:grid; grid-template-columns: 3ch 1fr; align-items: top; row-gap:1ch;}
 @font-face {font-family: "CMUC";src: url("./fonts/cmunorm.ttf") format("truetype");}
 body{width:21cm;margin:1em auto;text-align:justify;font-family:sans-serif;font-size:15pt}
 #textcolor1{color:rgb(0,127,0)}
