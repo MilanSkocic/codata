@@ -1519,7 +1519,7 @@ use codata__constants_type
 implicit none(type,external)
 public
 
-character(len=*), parameter, private :: v = 'x.y.z'
+character(len=*), parameter, private :: v = '2.5.2'
 character(len=:), allocatable, target, private :: vf
 character(len=:), allocatable, target, private :: vc
 
@@ -1529,7 +1529,35 @@ contains
 !-----------------------------------------------------------------------
 ! GET_VERSION() - DEPRECATED - WILL BE REMOVED IN 3.0
 !-----------------------------------------------------------------------
+! MAN PAGE
 !{{{2
+! NAME
+!  get_version - get the version of the library
+! 
+! LIBRARY
+!   codata (-libcodata, -lcodata)
+! 
+! SYNOPSIS
+!   get_version()
+! 
+! DESCRIPTION
+!   Get the library version.
+! 
+!   Deprecated. It will be removed in the next major release 3.0 when
+!   the new codata constants will be released (2026).
+!   Use codata_version(3) instead.
+! 
+! RETURN VALUE
+!   character(len=:), pointer :: fptr  Pointer to a string.
+! 
+! EXAMPLE
+!   Minimal example:
+! 
+!       use codata
+!       implicit none
+! 
+! SEE ALSO
+!   codata_version(3)
 function get_version()result(fptr)
 !! Get the version.
 !! Deprecated. It will be removed in the next major release 3.0 when
@@ -1564,7 +1592,31 @@ end function capi_get_version
 !-----------------------------------------------------------------------
 ! VERSION()
 !-----------------------------------------------------------------------
+! MAN PAGE
 !{{{2
+! NAME
+!  version - get the version of the library
+! 
+! LIBRARY
+!   codata (-libcodata, -lcodata)
+! 
+! SYNOPSIS
+!   version()
+! 
+! DESCRIPTION
+!   Get the library version.
+! 
+! RETURN VALUE
+!   character(len=:), pointer :: fptr  Pointer to the version as string.
+! 
+! EXAMPLE
+!   Minimal example:
+! 
+!       use codata
+!       print *, "version = ", version()
+! 
+! SEE ALSO
+!   codata(3)
 function version()result(fptr)
 !! Get the version.
 character(len=:), pointer :: fptr !! Pointer to a string (=>version).
