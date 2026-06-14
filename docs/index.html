@@ -24,7 +24,7 @@ v2.5.2<br />
       <div class='author'><span class='ccr-10x-x-120'>***</span>
 <br /> <span class='ccr-10x-x-120'>Milan Skocic</span></div>
 <br />
-<div class='date'><span class='ccr-10x-x-120'>June 11, 2026</span></div>
+<div class='date'><span class='ccr-10x-x-120'>June 14, 2026</span></div>
                                                                                        
                                                                                        
 </div><p>  
@@ -45,11 +45,13 @@ Skocic
 <br /><span class='chapterToc'>2 <a href='GETTINGSTARTED.html#installation1' id='QQ2-2-9'>INSTALLATION</a></span>
 <br /><span class='chapterToc'>3 <a href='GETTINGSTARTED.html#examples' id='QQ2-2-12'>EXAMPLES</a></span>
 <br /><span class='partToc'>II  <a href='API.html#api' id='QQ2-3-16'>API</a></span>
-<br /><span class='chapterToc'>4 <a href='API.html#codata' id='QQ2-3-17'>CODATA(3)</a></span>
-<br /><span class='chapterToc'>5 <a href='API.html#codata1' id='QQ2-3-29'>CODATA(1)</a></span>
-<br /><span class='partToc'>III  <a href='APPENDICES.html#appendices' id='QQ2-4-37'>APPENDICES</a></span>
-<br /><span class='chapterToc'>6 <a href='APPENDICES.html#license1' id='QQ2-4-38'>LICENSE</a></span>
-<br /><span class='likechapterToc'><a href='APPENDICES.html#bibliography' id='QQ2-4-39'>Bibliography</a></span>
+<br /><span class='chapterToc'>4 <a href='API.html#codata' id='QQ2-3-17'>CODATA(1)</a></span>
+<br /><span class='chapterToc'>5 <a href='API.html#codata1' id='QQ2-3-25'>CODATA(3)</a></span>
+<br /><span class='chapterToc'>6 <a href='API.html#codatagetversion' id='QQ2-3-37'>CODATA_GET_VERSION(3)</a></span>
+<br /><span class='chapterToc'>7 <a href='API.html#codataversion' id='QQ2-3-45'>CODATA_VERSION(3)</a></span>
+<br /><span class='partToc'>III  <a href='APPENDICES.html#appendices' id='QQ2-4-53'>APPENDICES</a></span>
+<br /><span class='chapterToc'>8 <a href='APPENDICES.html#license1' id='QQ2-4-54'>LICENSE</a></span>
+<br /><span class='likechapterToc'><a href='APPENDICES.html#bibliography' id='QQ2-4-55'>Bibliography</a></span>
 <br /><span class='chapterToc'> <a href='APPENDICES.html#bibliography1'>Bibliography</a></span>
 </div>
 <h2 class='chapterHead' id='preface'><a id='x1-1000'></a>Preface</h2>
@@ -59,27 +61,27 @@ the intended layout, typography, equations, figures and cross-references, ensuri
 experience across platforms and over time. A HTML version of the documentation is rendered with
 <span class='ccti-10x-x-109'>make4ht</span>.
 </p><!-- l. 10 --><p class='noindent'>In addition, POSIX-style man-pages are generated from the sources using the <span class='ccti-10x-x-109'>prep(1) </span>preprocessor
-and are provided as both terminal-native documentation in the binaries and as a PDF
-document.
-</p><!-- l. 14 --><p class='noindent'>Additional HTML versions are also available for users who prefer quick navigation, keyword search, or
-rapid access to specific sections. However, those versions provide only the documentation of the API
-generated from the docstrings using <span class='ccti-10x-x-109'>Sphinx </span>and <span class='ccti-10x-x-109'>FORD</span>. They are provided as a convenient
-complement to the present PDF documentation, and should not be considered as a replacement for the
-present reference manual. The <span class='ccti-10x-x-109'>Sphinx </span>HTML version presents the APIs for Fortran, C, and Python —
+and are provided as both terminal-native documentation in the binaries and as a PDF document. The
+API is primarily written as man-pages.
+</p><!-- l. 15 --><p class='noindent'>Additional HTML versions are also available for users who prefer quick navigation, keyword search, or
+rapid access to specific sections. However, those versions provide only the documentation generated
+from the docstrings using <span class='ccti-10x-x-109'>Sphinx </span>and <span class='ccti-10x-x-109'>FORD</span>. They are provided as a convenient complement to the
+present PDF documentation, and should not be considered as a replacement for the present reference
+manual. The <span class='ccti-10x-x-109'>Sphinx </span>HTML version presents the documentation for Fortran, C, and Python —
 whereas, the <span class='ccti-10x-x-109'>FORD </span>HTML version is Fortran-specific and is primarily intended for Fortran
 users.
-</p><!-- l. 27 --><p class='noindent'>Related Documentation: </p>
+</p><!-- l. 28 --><p class='noindent'>Related Documentation: </p>
+                                                                                       
+                                                                                       
      <ul class='itemize1'>
      <li class='itemize'> <a href='./latex/codata-refman.pdf'>Reference Manual [PDF]</a>
-                                                                                       
-                                                                                       
      </li>
-     <li class='itemize'> <a href='./man/'>Man Pages [GROFF, TXT, PDF, HTML]</a>
+     <li class='itemize'> <a href='./man/'>Man Pages [GROFF, TXT, TEX, PDF, HTML]</a>
      </li>
      <li class='itemize'> <a href='./sphinx/index.html'>APIs with Sphinx [HTML]</a>
      </li>
      <li class='itemize'> <a href='./ford/index.html'>API with FORD [HTML]</a></li></ul>
-<!-- l. 43 --><p class='noindent'>Related resources: </p>
+<!-- l. 44 --><p class='noindent'>Related resources: </p>
      <ul class='itemize1'>
      <li class='itemize'>Binary releases: <a class='url' href='https://github.com/MilanSkocic/codata/releases'><span class='cmtt-10x-x-109'>https://github.com/MilanSkocic/codata/releases</span></a>
      </li>

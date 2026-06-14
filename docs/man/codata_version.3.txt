@@ -1,0 +1,28 @@
+codata_version(3)            Library Calls            codata_version(3)
+
+NAME
+       version - get the version of the library
+
+LIBRARY
+       codata (-libcodata, -lcodata)
+
+SYNOPSIS
+       version()
+
+DESCRIPTION
+       Get the library version.
+
+RETURN VALUE
+       character(len=:), pointer :: fptr
+              Pointer to the version as string.
+
+EXAMPLE
+       Minimal example:
+
+             use codata
+             print *, "version = ", version()
+
+SEE ALSO
+       codata(3)
+
+2.5.2                         14 June 2026            codata_version(3)
