@@ -9,16 +9,17 @@ A HTML version of the documentation is rendered with \emph{make4ht}.
 
 In addition, POSIX-style man-pages are generated from the sources using 
 the \emph{prep(1)} preprocessor and are provided as both terminal-native
-documentation in the binaries and as a PDF document.
+documentation in the binaries and as a PDF document. The API is primarily
+written as man-pages.
 
 Additional HTML versions are also available for users who prefer quick
 navigation, keyword search, or rapid access to specific sections. 
-However, those versions provide only the  documentation of the API generated 
+However, those versions provide only the  documentation generated 
 from the docstrings using \emph{Sphinx} and \emph{FORD}. 
 They are provided as a convenient complement to the present PDF 
 documentation, and should not be considered as a replacement for the 
 present reference manual. 
-The \emph{Sphinx} HTML version presents the APIs for Fortran, C, and Python 
+The \emph{Sphinx} HTML version presents the documentation for Fortran, C, and Python 
 --- whereas, the \emph{FORD} HTML version is Fortran-specific and is primarily
 intended for Fortran users.
 
@@ -28,12 +29,12 @@ intended for Fortran users.
 \begin{itemize}
 \ifdefined\HCode
 \item \href{./latex/codata-refman.pdf}{Reference Manual [PDF]}
-\item \href{./man/}{Man Pages [GROFF, TXT, PDF, HTML]}
+\item \href{./man/}{Man Pages [GROFF, TXT, TEX, PDF, HTML]}
 \item \href{./sphinx/index.html}{APIs with Sphinx [HTML]}
 \item \href{./ford/index.html}{API with FORD [HTML]}
 \else
 \item \href{https://milanskocic.github.io/codata}{Reference Manual [HTML]}
-\item \href{https://milanskocic.github.io/codata/man/}{Man Pages [GROFF, TXT, PDF, HTML]}
+\item \href{https://milanskocic.github.io/codata/man/}{Man Pages [GROFF, TXT, TEX, PDF, HTML]}
 \item \href{https://milanskocic.github.io/codata/sphinx}{APIs with Sphinx [HTML]}
 \item \href{https://milanskocic.github.io/codata/ford}{API with FORD [HTML]}
 \fi
