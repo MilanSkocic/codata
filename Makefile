@@ -156,8 +156,8 @@ docs:
 	cp -rfv source/doc/man/build/* docs/man/
 	cp -rfv source/doc/latex/build/pdf/* docs/latex/
 	cp -rfv source/doc/latex/build/html/* docs/
-	cp -rfv source/doc/ford/build/* docs/ford/
-	cp -rfv source/doc/sphinx/build/html/* docs/sphinx/
+	#cp -rfv source/doc/ford/build/* docs/ford/
+	#cp -rfv source/doc/sphinx/build/html/* docs/sphinx/
 
 .PHONY: logo
 logo:
