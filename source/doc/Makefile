@@ -1,4 +1,4 @@
-all: man latex sphinx ford
+all: man latex
 
 
 .PHONY: man
