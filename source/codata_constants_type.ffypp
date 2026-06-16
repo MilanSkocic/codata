@@ -31,6 +31,21 @@ public :: capi_constant_type
 ! TYPE: CODATA_CONSTANT_TYPE
 !***********************************************************************
 !{{{2
+$BLOCK comment --file man/src/codata_constant_type.3.man
+NAME
+  codata_constant_type - data type defining a constant
+
+SYNOPSIS
+  type(codata_constant_type) :: c
+
+  struct codata_constant_type c;
+
+DESCRIPTION
+  Defines a constant with the name, the value, the uncertainty and the unit. 
+
+SEE ALSO
+  codata(3)
+$ENDBLOCK
 type :: codata_constant_type
 !! Derived type for representing a Codata constant.
 character(len=64) :: name ! Name of the constant
