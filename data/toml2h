@@ -20,6 +20,6 @@ BEGIN{
     var=$0 suffix
 }
 NF==0{
-    print "ADD_IMPORT extern const cct "var";"
+    print "ADD_IMPORT extern const struct codata_constant_type "var";"
 }
 ' $1
