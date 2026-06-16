@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Mon Jun 15 06:48:47 2026 -->
+<!-- CreationDate: Tue Jun 16 02:01:53 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,7 +24,6 @@
 <a href="#LIBRARY">LIBRARY</a><br>
 <a href="#SYNOPSIS">SYNOPSIS</a><br>
 <a href="#DESCRIPTION">DESCRIPTION</a><br>
-<a href="#RETURN VALUE">RETURN VALUE</a><br>
 <a href="#EXAMPLE">EXAMPLE</a><br>
 <a href="#SEE ALSO">SEE ALSO</a><br>
 
@@ -37,7 +36,7 @@
 
 
 <p style="margin-left:9%; margin-top: 1em"><b>version</b> -
-get the version of the library</p>
+get the version of the Fortran library codata</p>
 
 <h2>LIBRARY
 <a name="LIBRARY"></a>
@@ -52,8 +51,14 @@ get the version of the library</p>
 </h2>
 
 
+<p style="margin-left:9%; margin-top: 1em">Fortran:
+<b>character</b>(<i>len</i>=:), pointer <b>version</b>()</p>
 
-<p style="margin-left:9%; margin-top: 1em"><b>version</b>()</p>
+<p style="margin-left:9%; margin-top: 1em">C: char*
+<b>codata_version</b>()</p>
+
+<p style="margin-left:9%; margin-top: 1em">Python:
+pycodata.__version__</p>
 
 <h2>DESCRIPTION
 <a name="DESCRIPTION"></a>
@@ -63,28 +68,28 @@ get the version of the library</p>
 <p style="margin-left:9%; margin-top: 1em">Get the library
 version.</p>
 
-<h2>RETURN VALUE
-<a name="RETURN VALUE"></a>
-</h2>
-
-
-
-<p style="margin-left:9%; margin-top: 1em"><b>character(len=:),
-pointer :: fptr</b></p>
-
-<p style="margin-left:18%;">Pointer to the version as
-string.</p>
-
 <h2>EXAMPLE
 <a name="EXAMPLE"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Minimal
-example:</p>
+<p style="margin-left:9%; margin-top: 1em">Fortran:</p>
 
 <p style="margin-left:9%; margin-top: 1em">use codata <br>
 print *, &quot;version = &quot;, version()</p>
+
+<p style="margin-left:9%; margin-top: 1em">C:</p>
+
+<p style="margin-left:9%; margin-top: 1em">include
+&lt;stdio.h&gt; <br>
+include &quot;codata.h&quot; <br>
+printf(&quot;version = %s0, codata_version());</p>
+
+<p style="margin-left:9%; margin-top: 1em">Python:</p>
+
+<p style="margin-left:9%; margin-top: 1em">import pycodata
+<br>
+print(f&quot;version = {pycodata.__version__}&quot;)</p>
 
 <h2>SEE ALSO
 <a name="SEE ALSO"></a>

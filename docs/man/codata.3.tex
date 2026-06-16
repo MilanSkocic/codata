@@ -7,11 +7,11 @@ codata (-libcodata, -lcodata)
 
 \section*{SYNOPSIS}
 {\ttfamily
-use codata
+Fortran: use codata
 
-include "codata.h"
+C: include "codata.h"
 
-import pycodata
+Python: import pycodata
 
 }
 \section*{DESCRIPTION}
@@ -53,6 +53,8 @@ constants published by the CODATA.
 \section*{NOTES}
 The latest values (2022) do not have the year as a suffix in their name
 whereas older values (2010, 2014, 2018) feature the year as a suffix.
+All constants are declared with the same variable name in Fortran, C,
+and Python.
 
 \section*{EXAMPLE}
 
@@ -121,7 +123,7 @@ Example in Python
 
 \end{verbatim}
 \section*{SEE ALSO}
-codata(1)
+codata(1), codata\_version(3)
 
 \section*{CODATA 2022}
 List of available constants:
