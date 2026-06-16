@@ -1,6 +1,5 @@
 ! SPDX-License-Identifier: MIT
 
-! MAN PAGE
 ! {{{
 ! NAME
 !   codata - fundamental physical constants
@@ -9,7 +8,7 @@
 !   codata [OPTION...] [REGEX_PATTERN...]
 ! 
 ! DESCRIPTION
-!   Codata is a command line interface which prints all the codata
+!   codata(1) is a command line interface which prints all the codata
 !   constants.
 ! 
 !   The current values are from 2022.
