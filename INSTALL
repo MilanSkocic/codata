@@ -18,7 +18,7 @@ SOURCES
         $ . ./configure
         $ make sources
         $ make
-        $ make install [prefix=your/path]
+        $ make install [prefix=path]
 
   Building the Python wrapper requires additional dependencies:
     - python interpreter: 3.10, 3.11, 3.12, 3.13, 3.14
