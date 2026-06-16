@@ -5,17 +5,10 @@ DESCRIPTION
   layer for other languages.
   A Python wrapper allows easy usage from Python.
   
-  The latest codata constants (2022) were integrated in the Fortran 
-  standard library (stdlib) from version 0.7.0.
   The constants are implemented as derived type which carries the name,
   the value, the uncertainty and the unit.
   All the codata constants are provided as double precision reals.
   The names are quite long and can be aliased with shorter names.
-  A module level interface to_real is available for getting the constant
-  value or uncertainty of a constant.
-
-  This library is complementary to the constants defined in the stdlib
-  by providing older values for the constants.
 
 FEATURES
   It provides:
@@ -24,13 +17,11 @@ FEATURES
   - codata constants 2014
   - codata constants 2010
 
-INSTALLATION
-  Detailed build and installation instructions are available in the 
-  INSTALL file.
-
 NOTES FOR FORTRAN USERS
   The codata constant from 2022 were integrated in the Fortran 
   standard library (stdlib).
+  This library is complementary to the constants defined in the stdlib
+  by providing older values for the constants.
   See https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
   If you need older values for the CODATA constants you can use this library 
   otherwise use the standard library.
