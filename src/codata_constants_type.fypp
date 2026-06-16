@@ -35,9 +35,9 @@ public :: capi_constant_type
 !   codata_constant_type - data type defining a constant
 ! 
 ! SYNOPSIS
-!   type(codata_constant_type) :: c
+!   Fortran: type(codata_constant_type) :: a
 ! 
-!   struct codata_constant_type c;
+!   C: struct codata_constant_type a
 ! 
 ! DESCRIPTION
 !   Defines a constant with the name, the value, the uncertainty and the unit.
