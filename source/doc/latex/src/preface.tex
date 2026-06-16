@@ -8,9 +8,8 @@ platforms and over time.
 A HTML version of the documentation is rendered with \emph{make4ht}.
 
 In addition, POSIX-style man-pages are generated from the sources using 
-the \emph{prep(1)} preprocessor and are provided as both terminal-native
-documentation in the binaries and as a PDF document. The API is primarily
-written as man-pages.
+the \emph{prep(1)} preprocessor and are provided with the binaries. 
+The API is written as man-pages and is basically a list of the constants.
 
 %Additional HTML versions are also available for users who prefer quick
 %navigation, keyword search, or rapid access to specific sections. 
@@ -25,27 +24,12 @@ written as man-pages.
 
 \vspace{1cm}
 
-\noindent Related Documentation:
-\begin{itemize}
 \ifdefined\HCode
-\item \href{./latex/codata-refman.pdf}{Reference Manual [PDF]}
-\item \href{./man/}{Man Pages [GROFF, TXT, TEX, PDF, HTML]}
-%\item \href{./sphinx/index.html}{APIs with Sphinx [HTML]}
-%\item \href{./ford/index.html}{API with FORD [HTML]}
-\else
-\item \href{https://milanskocic.github.io/codata}{Reference Manual [HTML]}
-\item \href{https://milanskocic.github.io/codata/man/}{Man Pages [GROFF, TXT, TEX, PDF, HTML]}
-%\item \href{https://milanskocic.github.io/codata/sphinx}{APIs with Sphinx [HTML]}
-%\item \href{https://milanskocic.github.io/codata/ford}{API with FORD [HTML]}
+\noindent Related Documentation: \href{./latex/codata-refman.pdf}{Reference Manual [PDF]}
 \fi
-\end{itemize}
-
 
 \noindent Related resources:
 \begin{itemize}
-\item Binary releases:  \url{https://github.com/MilanSkocic/codata/releases}
 \item \emph{prep(1)}:   \url{https://github.com/urbanjost/prep}
 \item \emph{make4ht}:   \url{https://github.com/michal-h21/make4ht}
-%\item Sphinx:           \url{https://github.com/fortran-lang/sphinx-fortran-domain}
-%\item FORD:             \url{https://github.com/Fortran-FOSS-Programmers/ford}
 \end{itemize}

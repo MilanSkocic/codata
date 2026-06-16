@@ -1,23 +1,35 @@
 NAME
- version - get the version of the library
+ version - get the version of the Fortran library codata
 
 LIBRARY
   codata (-libcodata, -lcodata)
 
 SYNOPSIS
-  version()
+  Fortran: character(len=:), pointer version()
+
+  C: char* codata_version()
+
+  Python: pycodata.__version__
 
 DESCRIPTION
   Get the library version.
 
-RETURN VALUE
-  character(len=:), pointer :: fptr  Pointer to the version as string.
-
 EXAMPLE
-  Minimal example:
+  Fortran:
 
       use codata
       print *, "version = ", version()
+
+  C:
+
+      include <stdio.h>
+      include "codata.h"
+      printf("version = %s\n", codata_version());
+
+  Python:
+
+      import pycodata
+      print(f"version = {pycodata.__version__}")
 
 SEE ALSO
   codata(3)
