@@ -25,7 +25,7 @@ dirs:
 	mkdir -p $(HTML_FOLDER)
 	mkdir -p $(BIN_FOLDER)
 	txt2latex ../../../INSTALL > src/INSTALL.tex
-	txt2latex ../../../README > src/README.tex
+	txt2latex -E "codata" ../../../README > src/README.tex
 	txt2latex ../../../NEWS > src/NEWS.tex
 
 tex:

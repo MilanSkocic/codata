@@ -12,7 +12,7 @@ SYNOPSIS
   Python: import pycodata
 
 DESCRIPTION
-  codata is a Fortran library providing the fundamental physical
+  codata(3) is a Fortran library providing the fundamental physical
   constants published by the CODATA.
 
   Fortran API  exposes the constants as derived type codata_constant_type
