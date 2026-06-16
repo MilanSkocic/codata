@@ -9,11 +9,11 @@
 !   codata (-libcodata, -lcodata)
 ! 
 ! SYNOPSIS
-!   use codata
+!   Fortran: use codata
 ! 
-!   include "codata.h"
+!   C: include "codata.h"
 ! 
-!   import pycodata
+!   Python: import pycodata
 ! 
 ! DESCRIPTION
 !   codata is a Fortran library providing the fundamental physical
@@ -42,6 +42,8 @@
 ! NOTES
 !   The latest values (2022) do not have the year as a suffix in their name
 !   whereas older values (2010, 2014, 2018) feature the year as a suffix.
+!   All constants are declared with the same variable name in Fortran, C,
+!   and Python.
 ! 
 ! EXAMPLE
 ! 
@@ -104,7 +106,7 @@
 ! 
 ! 
 ! SEE ALSO
-!   codata(1)
+!   codata(1), codata_version(3)
 ! 
 ! CODATA 2022
 !   List of available constants:
@@ -1529,35 +1531,7 @@ contains
 !-----------------------------------------------------------------------
 ! GET_VERSION() - DEPRECATED - WILL BE REMOVED IN 3.0
 !-----------------------------------------------------------------------
-! MAN PAGE
 !{{{2
-! NAME
-!  get_version - get the version of the library
-! 
-! LIBRARY
-!   codata (-libcodata, -lcodata)
-! 
-! SYNOPSIS
-!   get_version()
-! 
-! DESCRIPTION
-!   Get the library version.
-! 
-!   Deprecated. It will be removed in the next major release 3.0 when
-!   the new codata constants will be released (2026).
-!   Use codata_version(3) instead.
-! 
-! RETURN VALUE
-!   character(len=:), pointer :: fptr  Pointer to a string.
-! 
-! EXAMPLE
-!   Minimal example:
-! 
-!       use codata
-!       implicit none
-! 
-! SEE ALSO
-!   codata_version(3)
 function get_version()result(fptr)
 !! Get the version.
 !! Deprecated. It will be removed in the next major release 3.0 when
@@ -1592,28 +1566,39 @@ end function capi_get_version
 !-----------------------------------------------------------------------
 ! VERSION()
 !-----------------------------------------------------------------------
-! MAN PAGE
 !{{{2
 ! NAME
-!  version - get the version of the library
+!  version - get the version of the Fortran library codata
 ! 
 ! LIBRARY
 !   codata (-libcodata, -lcodata)
 ! 
 ! SYNOPSIS
-!   version()
+!   Fortran: character(len=:), pointer version()
+! 
+!   C: char* codata_version()
+! 
+!   Python: pycodata.__version__
 ! 
 ! DESCRIPTION
 !   Get the library version.
 ! 
-! RETURN VALUE
-!   character(len=:), pointer :: fptr  Pointer to the version as string.
-! 
 ! EXAMPLE
-!   Minimal example:
+!   Fortran:
 ! 
 !       use codata
 !       print *, "version = ", version()
+! 
+!   C:
+! 
+!       include <stdio.h>
+!       include "codata.h"
+!       printf("version = %s\n", codata_version());
+! 
+!   Python:
+! 
+!       import pycodata
+!       print(f"version = {pycodata.__version__}")
 ! 
 ! SEE ALSO
 !   codata(3)

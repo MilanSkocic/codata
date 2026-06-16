@@ -1,5 +1,7 @@
 ! SPDX-License-Identifier: MIT
 
+#:include "common.fypp"
+#:set KINDS = REAL_KINDS
 !=======================================================================
 ! MODULE: codata_constants_type
 !=======================================================================
@@ -7,7 +9,7 @@
 module codata__constants_type
 !! Codata constant type
 use, intrinsic :: iso_c_binding, only: c_char, c_double
-use stdlib_kinds, only: sp, dp
+use stdlib_kinds, only: #{for k in KINDS[:-1]}#${k}$, #{endfor}#${KINDS[-1]}$
 use stdlib_io, only: FMT_REAL_DP
 use stdlib_optval, only: optval
 implicit none(type,external)
@@ -50,9 +52,10 @@ real(dp) :: uncertainty   ! Uncertainty of the constant
 character(len=32) :: unit ! Unit of the constant
 contains
 procedure :: print
-procedure :: to_real_sp
-procedure :: to_real_dp
-generic :: to_real => to_real_sp, to_real_dp
+#:for k in KINDS
+procedure :: to_real_${k}$
+#:endfor
+generic :: to_real => #{for k in KINDS[:-1]}#to_real_${k}$, #{endfor}#to_real_${KINDS[-1]}$
 end type codata_constant_type
 !***********************************************************************
 type, bind(C) :: capi_constant_type
@@ -73,8 +76,9 @@ end type capi_constant_type
 !{{{2
 interface to_real
 !! Get the constant value or uncertainty.
-module procedure to_real_sp
-module procedure to_real_dp
+#:for k in KINDS
+module procedure to_real_${k}$
+#:endfor
 end interface
 !}}}
 !>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -101,11 +105,12 @@ end subroutine print
 ! FUNCTION: TO_REAL
 !-----------------------------------------------------------------------
 !{{{2
-elemental pure real(sp) function to_real_sp(self, mold, uncertainty) result(r)
-!! Get the constant value or uncertainty for the kind sp
+#:for k in KINDS
+elemental pure real(${k}$) function to_real_${k}$(self, mold, uncertainty) result(r)
+!! Get the constant value or uncertainty for the kind ${k}$
 
 class(codata_constant_type), intent(in) :: self !! Codata constant
-real(sp), intent(in) :: mold                    !! dummy argument to disambiguate at compile time the generic interface
+real(${k}$), intent(in) :: mold                    !! dummy argument to disambiguate at compile time the generic interface
 logical, intent(in), optional :: uncertainty    !! Set to true if the uncertainty is required. Default to .false..
 logical :: u
 
@@ -116,25 +121,9 @@ if(u .eqv. .false.)then
 else
     r = real(self%uncertainty, kind(mold))
 end if
-end function to_real_sp
+end function to_real_${k}$
 !-----------------------------------------------------------------------
-elemental pure real(dp) function to_real_dp(self, mold, uncertainty) result(r)
-!! Get the constant value or uncertainty for the kind dp
-
-class(codata_constant_type), intent(in) :: self !! Codata constant
-real(dp), intent(in) :: mold                    !! dummy argument to disambiguate at compile time the generic interface
-logical, intent(in), optional :: uncertainty    !! Set to true if the uncertainty is required. Default to .false..
-logical :: u
-
-u = optval(uncertainty, .false.)
-
-if(u .eqv. .false.)then
-    r = real(self%value, kind(mold))
-else
-    r = real(self%uncertainty, kind(mold))
-end if
-end function to_real_dp
-!-----------------------------------------------------------------------
+#:endfor
 !}}}
 
 end module codata__constants_type
