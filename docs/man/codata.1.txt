@@ -7,8 +7,8 @@ SYNOPSIS
        codata [OPTION...] [REGEX_PATTERN...]
 
 DESCRIPTION
-       Codata  is  a command line interface which prints all the codata
-       constants.
+       codata(1)  is  a command line interface which prints all the co‐
+       data constants.
 
        The current values are from 2022.  Older values can be retrieved
        if needed and the output can be filtered with REGEX PATTERNS.
