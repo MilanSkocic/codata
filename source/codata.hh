@@ -11,12 +11,12 @@
 extern char* codata_get_version(void);
 extern char* codata_version(void); 
 
-typedef struct codata_constant_type{
+struct codata_constant_type{
     char name[65];
     double value;
     double uncertainty;
     char unit[33];
-}cct;
+};
 
 //----------------------------------------------------------------------
 // CODATA_CONSTANTS_2010
