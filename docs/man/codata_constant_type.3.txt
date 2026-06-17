@@ -15,4 +15,4 @@ DESCRIPTION
 SEE ALSO
        codata(3)
 
-2.5.2                         16 June 2026      codata_constant_type(3)
+2.5.2                         17 June 2026      codata_constant_type(3)

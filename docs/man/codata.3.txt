@@ -2887,4 +2887,4 @@ CODATA 2010
 
        •  WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010
 
-2.5.2                         16 June 2026                    codata(3)
+2.5.2                         17 June 2026                    codata(3)
