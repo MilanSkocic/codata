@@ -20,6 +20,23 @@ It provides:
 \item \emph{codata} constants 2010
 \end{itemize}
 
+\section*{DOCUMENTATION }
+The documentation is PDF-centric and authored in \LaTeX\   in order to provide 
+a stable, high-quality printout.
+The PDF edition preserves the intended layout, typography, equations, figures
+and cross-references, ensuring a consistent reading experience across 
+platforms and over time.
+A HTML version of the documentation is rendered with make4ht(1).
+  
+In addition, POSIX-style man-pages are generated from the sources using 
+the prep(1) preprocessor and are provided with the binaries. 
+The API is written as man-pages and is basically a list of the constants.
+  
+\begin{description}
+\item[PDF] \href{https://milanskocic.github.io/codata/latex/codata-refman.pdf}{milanskocic.github.io/codata/latex/codata-refman.pdf} 
+\item[HTML] \href{https://milanskocic.github.io/codata/index.html}{milanskocic.github.io/codata/index.html} 
+\end{description}
+
 \section*{NOTES FOR FORTRAN USERS}
 The \emph{codata} constant from 2022 were integrated in the Fortran 
 standard library (stdlib).

@@ -19,8 +19,8 @@ OPTIONS
   --value, -a            Show only the value.
   --error, -e            Show only the uncertainty.
   --usage                Show usage text and exit.
-  --help, -h             Show help text and exit.
   --version, -v          Show version information and exit.
+  --help, -h             Show help text and exit.
 
 NOTES
   You may replace the default options from a file if your first
