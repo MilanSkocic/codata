@@ -9,7 +9,7 @@
  <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
 </head><body>
 <!-- l. 109 --><div class='crosslinks'><p class='noindent'>[<a href='API.html'>next</a>] [<a href='#tailGETTINGSTARTED.html'>tail</a>] [<a href='main.html#GETTINGSTARTED.html'>up</a>] </p></div>
-<h1 class='partHead' id='getting-started'><span class='titlemark'>Part I<br /></span><a id='x2-2000I'></a>GETTING STARTED</h1>
+<h1 class='partHead' id='getting-started'><span class='titlemark'>Part I<br /></span><a id='x2-1000I'></a>GETTING STARTED</h1>
 <!-- l. 109 --><p class='noindent'>
                                                                                        
                                                                                        
@@ -24,21 +24,22 @@
 </p>
 <div class='chapterTOCS'>
 <span class='chapterToc'>1 <a href='#introduction'>INTRODUCTION</a></span>
-<br /><span class='likesectionToc'><a href='#description' id='QQ2-2-4'>DESCRIPTION</a></span>
-<br /><span class='likesectionToc'><a href='#features' id='QQ2-2-5'>FEATURES</a></span>
+<br /><span class='likesectionToc'><a href='#description' id='QQ2-2-3'>DESCRIPTION</a></span>
+<br /><span class='likesectionToc'><a href='#features' id='QQ2-2-4'>FEATURES</a></span>
+<br /><span class='likesectionToc'><a href='#documentation-' id='QQ2-2-5'>DOCUMENTATION </a></span>
 <br /><span class='likesectionToc'><a href='#notes-for-fortran-users' id='QQ2-2-6'>NOTES FOR FORTRAN USERS</a></span>
 <br /><span class='likesectionToc'><a href='#license' id='QQ2-2-7'>LICENSE</a></span>
 <br /><span class='chapterToc'>2 <a href='#installation'>INSTALLATION</a></span>
 <br /><span class='likesectionToc'><a href='#binaries' id='QQ2-2-9'>BINARIES</a></span>
 <br /><span class='likesectionToc'><a href='#sources' id='QQ2-2-10'>SOURCES</a></span>
 <br /><span class='chapterToc'>3 <a href='#examples'>EXAMPLES</a></span>
-<br /><span class='sectionToc'>3.1 <a href='#fortran' id='QQ2-2-12'>FORTRAN</a></span>
-<br /><span class='sectionToc'>3.2 <a href='#c' id='QQ2-2-13'>C</a></span>
-<br /><span class='sectionToc'>3.3 <a href='#python' id='QQ2-2-14'>PYTHON</a></span>
+<br /><span class='likesectionToc'><a href='#fortran' id='QQ2-2-12'>FORTRAN</a></span>
+<br /><span class='likesectionToc'><a href='#c' id='QQ2-2-13'>C</a></span>
+<br /><span class='likesectionToc'><a href='#python' id='QQ2-2-14'>PYTHON</a></span>
 </div>
-<h2 class='chapterHead' id='introduction'><span class='titlemark'>Chapter 1</span><br /><a id='x2-30001'></a>INTRODUCTION</h2>
+<h2 class='chapterHead' id='introduction'><span class='titlemark'>Chapter 1</span><br /><a id='x2-20001'></a>INTRODUCTION</h2>
 
-<h3 class='likesectionHead' id='description'><a id='x2-4000'></a>DESCRIPTION</h3>
+<h3 class='likesectionHead' id='description'><a id='x2-3000'></a>DESCRIPTION</h3>
 <!-- l. 3 --><p class='noindent'><span class='ccti-10x-x-109'>codata </span>is a Fortran library providing the fundamental physical constants published by the CODATA.
 A C API allows usage from C, or can be used as an interoperability layer for other languages. A
 Python wrapper allows easy usage from Python.
@@ -47,9 +48,11 @@ the unit. All the <span class='ccti-10x-x-109'>codata </span>constants are provi
 and can be aliased with shorter names.
 
 </p>
-<h3 class='likesectionHead' id='features'><a id='x2-5000'></a>FEATURES</h3>
+<h3 class='likesectionHead' id='features'><a id='x2-4000'></a>FEATURES</h3>
 <!-- l. 15 --><p class='noindent'>It provides: </p>
      <ul class='itemize1'>
+                                                                                       
+                                                                                       
      <li class='itemize'><span class='ccti-10x-x-109'>codata </span>constants 2022
      </li>
      <li class='itemize'><span class='ccti-10x-x-109'>codata </span>constants 2018
@@ -58,13 +61,30 @@ and can be aliased with shorter names.
      </li>
      <li class='itemize'><span class='ccti-10x-x-109'>codata </span>constants 2010</li></ul>
 
+<h3 class='likesectionHead' id='documentation-'><a id='x2-5000'></a>DOCUMENTATION </h3>
+<!-- l. 24 --><p class='noindent'>The documentation is PDF-centric and authored in LaTeX in order to provide a stable, high-quality
+printout. The PDF edition preserves the intended layout, typography, equations, figures and
+cross-references, ensuring a consistent reading experience across platforms and over time. A HTML
+version of the documentation is rendered with make4ht(1).
+</p><!-- l. 31 --><p class='noindent'>In addition, POSIX-style man-pages are generated from the sources using the prep(1) preprocessor and
+are provided with the binaries. The API is written as man-pages and is basically a list of the
+constants.
+     </p><dl class='description'><dt class='description'>
+<span class='cmbx-10x-x-109'>PDF</span> </dt><dd class='description'>
+     <!-- l. 36 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/latex/codata-refman.pdf'>milanskocic.github.io/codata/latex/codata-refman.pdf</a>
+     </p></dd><dt class='description'>
+<span class='cmbx-10x-x-109'>HTML</span> </dt><dd class='description'>
+     <!-- l. 37 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/index.html'>milanskocic.github.io/codata/index.html</a></p></dd></dl>
+
 <h3 class='likesectionHead' id='notes-for-fortran-users'><a id='x2-6000'></a>NOTES FOR FORTRAN USERS</h3>
-<!-- l. 24 --><p class='noindent'>The <span class='ccti-10x-x-109'>codata </span>constant from 2022 were integrated in the Fortran standard library (stdlib). This
+<!-- l. 41 --><p class='noindent'>The <span class='ccti-10x-x-109'>codata </span>constant from 2022 were integrated in the Fortran standard library (stdlib). This
 library is complementary to the constants defined in the stdlib by providing older values for
 the constants. See  <a href='https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0'>github.com/fortran-lang/stdlib/releases/tag/v0.7.0.</a> If you need older
 values for the CODATA constants you can use this library otherwise use the standard
 library.
-</p><!-- l. 32 --><p class='noindent'>To use <span class='ccti-10x-x-109'>codata </span>within your fpm(1) ( <a href='https://github.com/fortran-lang/fpm'>github.com/fortran-lang/fpm)</a> project, add the following lines to
+                                                                                       
+                                                                                       
+</p><!-- l. 49 --><p class='noindent'>To use <span class='ccti-10x-x-109'>codata </span>within your fpm(1) ( <a href='https://github.com/fortran-lang/fpm'>github.com/fortran-lang/fpm)</a> project, add the following lines to
 your file:
                                                                                        
                                                                                        
@@ -74,14 +94,12 @@ your file:
      codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 </pre>
-<!-- l. 39 --><p class='nopar'> If you only need sources for the <span class='ccti-10x-x-109'>codata </span>constants that you can integrate directly embed in your
+<!-- l. 56 --><p class='nopar'> If you only need sources for the <span class='ccti-10x-x-109'>codata </span>constants that you can integrate directly embed in your
 sources you may be interested by this repository  <a href='https://github.com/vmagnin/fundamental_constants'>github.com/vmagnin/fundamental_constants.</a>
 
 </p>
 <h3 class='likesectionHead' id='license'><a id='x2-7000'></a>LICENSE</h3>
-<!-- l. 45 --><p class='noindent'>MIT
-                                                                                       
-                                                                                       
+<!-- l. 62 --><p class='noindent'>MIT
                                                                                        
                                                                                        
 </p>
@@ -157,7 +175,7 @@ pretty straightforward: </p>
      </li>
      <li class='itemize'>access the constant members: name, value, uncertainty, unit</li></ul>
 
-<h3 class='sectionHead' id='fortran'><span class='titlemark'>3.1   </span> <a id='x2-120003.1'></a>FORTRAN</h3>
+<h3 class='likesectionHead' id='fortran'><a id='x2-12000'></a>FORTRAN</h3>
 <!-- l. 1 --><p class='noindent'>
 </p>
 <pre class='fancyvrb' id='fancyvrb1'><a id='x2-12002r1'></a><span id='textcolor1'><span class='cmtt-10x-x-109'>program </span></span><span class='cmtt-10x-x-109'>example_in_f</span> 
@@ -177,7 +195,7 @@ pretty straightforward: </p>
 <a id='x2-12030r15'></a><span id='textcolor70'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor71'> </span><span id='textcolor72'><span class='cmtt-10x-x-109'>'(A, F23.16)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor73'> </span><span id='textcolor74'><span class='cmtt-10x-x-109'>"Mu_2010 = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor75'>  </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2010%</span><span id='textcolor76'><span class='cmtt-10x-x-109'>value</span></span> 
 <a id='x2-12032r16'></a><span id='textcolor77'><span class='cmtt-10x-x-109'>end </span></span><span id='textcolor78'><span class='cmtt-10x-x-109'>program</span></span></pre>
 
-<h3 class='sectionHead' id='c'><span class='titlemark'>3.2   </span> <a id='x2-130003.2'></a>C</h3>
+<h3 class='likesectionHead' id='c'><a id='x2-13000'></a>C</h3>
 <!-- l. 1 --><p class='noindent'>
 </p>
 <pre class='fancyvrb' id='fancyvrb2'><a id='x2-13002r1'></a><span id='textcolor79'><span class='cmitt-10x-x-109'>#</span></span><span id='textcolor80'><span class='cmitt-10x-x-109'>include</span></span><span id='textcolor81'> </span><span id='textcolor82'><span class='cmitt-10x-x-109'>&lt;stdio.h&gt;</span></span> 
@@ -198,7 +216,7 @@ pretty straightforward: </p>
 <a id='x2-13032r16'></a><span id='textcolor158'><span class='cmtt-10x-x-109'>return</span></span><span id='textcolor159'> </span><span id='textcolor160'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>;</span> 
 <a id='x2-13034r17'></a><span class='cmtt-10x-x-109'>}</span></pre>
 
-<h3 class='sectionHead' id='python'><span class='titlemark'>3.3   </span> <a id='x2-140003.3'></a>PYTHON</h3>
+<h3 class='likesectionHead' id='python'><a id='x2-14000'></a>PYTHON</h3>
 <!-- l. 1 --><p class='noindent'>
 </p>
 <pre class='fancyvrb' id='fancyvrb3'><a id='x2-14002r1'></a><span id='textcolor161'><span class='cmtt-10x-x-109'>import</span></span><span id='textcolor162'> </span><span id='textcolor163'><span class='cmtt-10x-x-109'>sys</span></span> 
