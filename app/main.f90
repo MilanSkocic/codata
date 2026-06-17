@@ -22,8 +22,8 @@
 !   --value, -a            Show only the value.
 !   --error, -e            Show only the uncertainty.
 !   --usage                Show usage text and exit.
-!   --help                 Show help text and exit.
-!   --version              Show version information and exit.
+!   --version, -v          Show version information and exit.
+!   --help, -h             Show help text and exit.
 ! 
 ! NOTES
 !   You may replace the default options from a file if your first
@@ -85,9 +85,8 @@ help_text=[character(len=72) :: &
 '  --value, -a             Show only the value.  ',&
 '  --error, -e             Show only the uncertainty.      ',&
 '  --usage                 Show usage text and exit.     ',&
-'  --help                  Show help text and exit.    ',&
-'  --verbose               Display additional information.  ',&
-'  --version               Show version information and exit.           ',&
+'  --version, -v           Show version information and exit.           ',&
+'  --help, -h              Show help text and exit.    ',&
 '']
 
 call set_mode('strict')
