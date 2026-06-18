@@ -18,17 +18,13 @@ FEATURES
   - codata constants 2010
 
 DOCUMENTATION 
-  The documentation is PDF-centric and authored in LaTeX in order to provide 
-  a stable, high-quality printout.
-  The PDF edition preserves the intended layout, typography, equations, figures
-  and cross-references, ensuring a consistent reading experience across 
-  platforms and over time.
-  A HTML version of the documentation is rendered with make4ht(1).
-  
-  In addition, POSIX-style man-pages are generated from the sources using 
+  POSIX-style man-pages are generated from the sources using 
   the prep(1) preprocessor and are provided with the binaries. 
   The API is written as man-pages and is basically a list of the constants.
+  MAN   https://milanskocic.github.io.codata/man
+  PDF   https://milanskocic.github.io/codata/man/codata-bookman.pdf
   
+  The man-pages are included in the reference manual.
   PDF   https://milanskocic.github.io/codata/latex/codata-refman.pdf
   HTML  https://milanskocic.github.io/codata/index.html
 
