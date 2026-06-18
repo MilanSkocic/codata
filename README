@@ -1,41 +1,51 @@
 DESCRIPTION
-  codata is a Fortran library providing the fundamental physical
-  constants published by the CODATA. 
-  A C API allows usage from C, or can be used as an interoperability 
-  layer for other languages.
-  A Python wrapper allows easy usage from Python.
+  codata is a Fortran library providing the fundamental physical constants
+  published by CODATA. 
+  It includes the 2022, 2018, 2014 and 2010 recommended values, 
+  allowing applications to reproduce calculations based on specific 
+  CODATA releases.
   
-  The constants are implemented as derived type which carries the name,
-  the value, the uncertainty and the unit.
-  All the codata constants are provided as double precision reals.
-  The names are quite long and can be aliased with shorter names.
+  The constants are implemented as a derived type that carries:
+  - the name
+  - the value 
+  - the uncertainty 
+  - the unit
+  
+  All the constants are provided as double precision reals.
+  Long constant names can be aliased with shorter names.
 
 FEATURES
   It provides:
-  - codata constants 2022
-  - codata constants 2018
-  - codata constants 2014
-  - codata constants 2010
+  - CODATA 2022 constants
+  - CODATA 2018 constants
+  - CODATA 2014 constants
+  - CODATA 2010 constants
+  - Native Fortran API
+  - C interoperability API
+  - Python bindings
 
 DOCUMENTATION 
-  POSIX-style man-pages are generated from the sources using 
-  the prep(1) preprocessor and are provided with the binaries. 
-  The API is written as man-pages and is basically a list of the constants.
-  MAN   https://milanskocic.github.io.codata/man
-  PDF   https://milanskocic.github.io/codata/man/codata-bookman.pdf
+  The API is written as POSIX-style man pages which are generated from the
+  sources using the prep(1) preprocessor and are distributed with the binaries. 
   
-  The man-pages are included in the reference manual.
+  The reference manual provides complete documentation:
   PDF   https://milanskocic.github.io/codata/latex/codata-refman.pdf
   HTML  https://milanskocic.github.io/codata/index.html
+  
+  API only is also available as a bookman:
+  MAN   https://milanskocic.github.io/codata/man
+  PDF   https://milanskocic.github.io/codata/man/codata-bookman.pdf
 
 NOTES FOR FORTRAN USERS
-  The codata constant from 2022 were integrated in the Fortran 
+  The codata constants from the 2022 adjustment were integrated into the Fortran 
   standard library (stdlib).
   This library is complementary to the constants defined in the stdlib
   by providing older values for the constants.
   See https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
-  If you need older values for the CODATA constants you can use this library 
-  otherwise use the standard library.
+  If your application only requires the latest CODATA values, the
+  Fortran standard library may be sufficient. Use codata when you need
+  access to historical CODATA releases or compatibility with older
+  scientific results.
   
   To use codata within your fpm(1) (https://github.com/fortran-lang/fpm)
   project, add the following lines to your file:
@@ -43,8 +53,9 @@ NOTES FOR FORTRAN USERS
      [dependencies]
      codata = { git="https://github.com/MilanSkocic/codata.git" }
 
-  If you only need sources for the codata constants that you can integrate
-  directly embed in your sources you may be interested by this repository
+  If you only need sources for the CODATA constants that can be 
+  integrated directly into your project, you may be interested in the 
+  following repository:
   https://github.com/vmagnin/fundamental_constants.
 
 LICENSE
