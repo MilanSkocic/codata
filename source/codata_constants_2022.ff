@@ -1,0 +1,4 @@
+! SPDX-License-Identifier: MIT
+
+$SET YEAR 2022
+$INCLUDE codata_constants_XXXX.inc

@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+
+years=()
+for i in src/*;do 
+    b=$(basename -s .txt $i)
+    b=${b##*_}
+    years+=($b)
+done; 
+latest_year=$(printf "%s\n" ${years[@]} | sort -n | tail -1)
+
+fname="$1"
+name=$(basename -s .txt $fname)
+year="${name##*_}"
+
+n=10 # number of lines until header with dashes
+if [[ "$year" == "2018" ]]; then n=11;fi
+if [[ "$year" == "2022" ]]; then n=11;fi
+
+awk -v year="$year" -v n=$n '
+BEGIN{
+    FIELDWIDTHS="60 25 25 25"
+    year = "\""year"\""
+}
+NR>n{
+    
+    gsub(/ +$/,"", $1)
+    name="\""$1"\""
+   
+    gsub(/101\.325/, "101_325",$1)
+    gsub(/273\.15/, "273_15",$1)
+    gsub(/ /,"_", $1)
+    gsub(/\./,"", $1)
+    gsub(/,/,"", $1)
+    gsub(/-/,"_",$1)
+    gsub(/\(/,"",$1)
+    gsub(/\)/,"",$1)
+    gsub(/\//,"_",$1)
+    gsub(/{220}_/,"", $1)
+    variable = "["toupper($1)"]"
+    
+    printf "%s\n", variable
+    
+    printf "%s%s%s\n", "name" , " = ", name
+    
+    printf "%s%s%s\n", "year", " = ", year
+     
+    gsub(/ +$/,"", $2)
+    gsub(/ /, "", $2)
+    gsub(/\.\.\./, "", $2)
+    value = "\""$2"\""
+    printf "%s%s%s\n", "value" , " = ", value
+    
+    gsub(/ +$/,"", $3)
+    gsub(/ /, "", $3)
+    gsub(/\(exact\)/, "0.0", $3)
+    uncertainty = "\""$3"\""
+    printf "%s%s%s\n", "uncertainty" , " = ", uncertainty
+    
+    gsub(/ +$/,"", $4)
+    unit = "\""$4"\""
+    printf "%s%s%s\n", "unit" , " = ", unit
+    
+    print ""
+}
+' $1

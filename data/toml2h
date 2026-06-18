@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+. ./common
+latest_year=$(gly)
+
+fname="$1"
+name=$(basename -s .toml $fname)
+year="${name##*_}"
+
+suffix="_$year"
+if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
+
+awk -v suffix="$suffix" '
+BEGIN{
+    print "ADD_IMPORT extern const int YEAR"suffix";"
+}
+/^\[.*\]/{
+    gsub(/\[/,"")
+    gsub(/\]/,"")
+    var=$0 suffix
+}
+NF==0{
+    print "ADD_IMPORT extern const struct codata_constant_type "var";"
+}
+' $1

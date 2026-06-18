@@ -12,7 +12,14 @@ else
 	btype=release
 endif
 
-install_dir=$(PREFIX)
+install_dir=$(DESTDIR)$(PREFIX)
+pyinstall_dir=py/src/$(FPM_PYNAME)/$(FPM_PLATFORM)
+
+MANDIR=srcprep/doc/man/build
+LATEXDIRPDF=srcprep/doc/latex/build/pdf
+LATEXDIRHTML=srcprep/doc/latex/build/html
+SPHINXDIRHTML=srcprep/doc/sphinx/build/html
+FORDDIRHTML=srcprep/doc/ford/build
 
 GEN_F=./scripts/gen_fortran.py
 GEN_C=./scripts/gen_capi.py
@@ -20,115 +27,94 @@ GEN_HEADERS=./scripts/gen_headers.py
 GEN_HEADER=./scripts/gen_header.py
 GEN_STDLIB=./scripts/gen_stdlib.py
 
-AST_SRC=$(wildcard ./data/*.toml)
-F_SRC=$(patsubst ./data/%.toml, ./src/%.f90, $(AST_SRC))
-#C_SRC=$(patsubst ./data/%.toml, ./src/%_capi.f90, $(AST_SRC))
-C_HEADERS=$(patsubst ./data/%.toml, ./include/%.txt, $(AST_SRC))
-C_HEADER=./include/$(FPM_NAME).h
-SRC_FYPP=$(wildcard ./src/*.fypp)
-SRC_FYPP_F90=$(patsubst ./src/%.fypp, ./src/%.f90, $(SRC_FYPP))
-STDLIB=./stdlib/stdlib_codata.f90
+SRC_FYPP=$(wildcard ./source/*.fypp)
+SRC_FYPP_F90=$(patsubst ./source/%.fypp, ./src/%.f90, $(SRC_FYPP))
+
+ARCHIVE=$(FPM_NAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
+PYARCHIVE=$(FPM_PYNAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
-# TARGETS
-.PHONY: prep build sources stdlib references doc docs clean logo
-
 all: $(FPM_LIBNAME)
 
-$(FPM_LIBNAME): build copy_a shared
+$(FPM_LIBNAME): build shared
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # SOURCES
-sources: $(SRC_FYPP_F90) $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB)
-
-./src/%.f90: ./data/%.toml
-	$(FPM_PYGEN) $(GEN_F) $< $@
-
-./src/%_capi.f90: ./data/%.toml
-	$(FPM_PYGEN) $(GEN_C) $< $@
-
-./include/%.txt: ./data/%.toml
-	$(FPM_PYGEN) $(GEN_HEADERS) $< $@
-
-$(C_HEADER):
-	$(FPM_PYGEN) $(GEN_HEADER) $(C_HEADERS) -o $@
-
-./src/%.f90: ./src/%.fypp
-	fypp -I ./include $< $@
-
-./stdlib/stdlib_codata.f90: ./src/codata_constants_2022.f90
-	$(FPM_PYGEN) $(GEN_STDLIB) $< $@
-
-prep:
-	make -C srcprep clean
-	make -C srcprep
-	fpm run --profile release --target $(FPM_APPNAME) -- --help > doc/$(FPM_APPNAME).1.prep
-
+.PHONY: sources 
+sources: 
+	make -C data
+	make -C source
+	make -C source/doc/man
+	cp -rfv source/doc/man/build/* docs/man/
+	mkdir -p docs/man
+	mkdir -p docs/latex
+	mkdir -p docs/ford
+	mkdir -p docs/sphinx
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # COMPILATION
+.PHONY: build
 build:
-	fpm build --profile=$(btype)
+	fpm build --profile $(btype)
+	fpm clean --skip
+	fpm build --profile $(btype)
+	mkdir -p $(FPM_BUILD_DIR)/install/bin
+	mkdir -p $(FPM_BUILD_DIR)/install/include
+	mkdir -p $(FPM_BUILD_DIR)/install/lib
+	mkdir -p $(FPM_BUILD_DIR)/install/share/man/man3
+	mkdir -p $(FPM_BUILD_DIR)/install/share/man/man1
+	fpm install --prefix $(FPM_BUILD_DIR)/install --profile $(btype) --no-rebuild
+	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(FPM_BUILD_DIR)/install/include
+	cp -f docs/man/$(FPM_NAME)*.3.gz $(FPM_BUILD_DIR)/install/share/man/man3
+	cp -f docs/man/$(FPM_APPNAME)*.1.gz $(FPM_BUILD_DIR)/install/share/man/man1
 
-test: build
-	fpm test --profile=$(btype)
+.PHONY: test
+test:
+	fpm test --profile $(btype)
 
-example: build
-	fpm run --profile=$(btype) --example example_in_f
-	fpm run --profile=$(btype) --example example_in_c
+.PHONY: example
+example:
+	fpm run --profile $(btype) --example example_in_f
+	fpm run --profile $(btype) --example example_in_c
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
-# LINKING - STATIC and DYNAMIC LIBS
-copy_a: 
-	cp -f $(shell find ./build/gfortran* -type f -name $(FPM_LIBNAME).a) $(FPM_BUILD_DIR)
-
+# SHARED LIBRARY
+.PHONY: shared
 shared: shared_$(FPM_PLATFORM)
 
+.PHONY: shared_linux
 shared_linux: 
-	$(FPM_FC) -shared -o $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so -Wl,--whole-archive $(FPM_BUILD_DIR)/$(FPM_LIBNAME).a -Wl,--no-whole-archive
+	$(FPM_FC) -shared -o $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).so -Wl,--whole-archive $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).a -Wl,--no-whole-archive
 
+.PHONY: shared_darwin
 shared_darwin: 
-	$(FPM_FC) -dynamiclib -install_name @rpath/$(FPM_LIBNAME).dylib $(FPM_LDFLAGS) -o $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dylib -Wl,-all_load $(FPM_BUILD_DIR)/$(FPM_LIBNAME).a
+	$(FPM_FC) -dynamiclib -install_name @rpath/$(FPM_LIBNAME).dylib $(FPM_LDFLAGS) -o $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).dylib -Wl,-all_load $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).a
 
+.PHONY: shared_window
 shared_windows: 
-	$(FPM_FC) -shared $(FPM_LDFLAGS) -o $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll -Wl,--out-implib=$(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(FPM_BUILD_DIR)/$(FPM_LIBNAME).a -Wl,--no-whole-archive
+	$(FPM_FC) -shared $(FPM_LDFLAGS) -o $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).dll -Wl,--out-implib=$(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).a -Wl,--no-whole-archive
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # INSTALLATION 
-install: install_dirs install_$(FPM_PLATFORM)
+.PHONY: install
+install: install_dirs
 
+.PHONY: install_dirs
 install_dirs: 
-	mkdir -p $(install_dir)/bin
-	mkdir -p $(install_dir)/include
-	mkdir -p $(install_dir)/lib
-	mkdir -p $(install_dir)/share/man/man3
-	mkdir -p $(install_dir)/share/man/man1
-	fpm install --prefix=$(install_dir) --profile=$(btype)
-	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(install_dir)/include
-	cp -f doc/manpages/$(FPM_NAME)*.3.gz $(install_dir)/share/man/man3
-	cp -f doc/manpages/$(FPM_APPNAME)*.1.gz $(install_dir)/share/man/man1
+	mkdir -p $(install_dir)
+	cp -rfv $(FPM_BUILD_DIR)/install/* $(install_dir)
 
-install_linux: 
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).so $(install_dir)/lib
-
-install_darwin: 
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dylib $(install_dir)/lib
-
-install_windows:
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll.a $(install_dir)/lib
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll $(install_dir)/lib
-	cp -f $(FPM_BUILD_DIR)/$(FPM_LIBNAME).dll $(install_dir)/bin
-
+.PHONY: uninstall
 uninstall:
 	rm -f $(install_dir)/include/$(FPM_NAME)*.h
 	rm -f $(install_dir)/include/$(FPM_NAME)*.mod
@@ -140,26 +126,49 @@ uninstall:
 	rm -f $(install_dir)/bin/$(FPM_LIBNAME).dll
 	rm -f $(install_dir)/bin/$(FPM_APPNAME)
 	rm -f $(install_dir)/bin/$(FPM_APPNAME).exe
-	rm -r $(install_dir)/share/man1/$(FPM_APPNAME)*.1
-	rm -r $(install_dir)/share/man3/$(FPM_NAME)*.3
+	rm -r $(install_dir)/share/man/man1/$(FPM_APPNAME)*.1.*
+	rm -r $(install_dir)/share/man/man3/$(FPM_NAME)*.3.*
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # OTHERS
-doc:
-	make -C doc
+.PHONY: python
+python:
+	mkdir -p py/$(FPM_PY_SRC)/$(FPM_PLATFORM)
+	cp -rfv $(FPM_BUILD_DIR)/install/* py/$(FPM_PY_SRC)/$(FPM_PLATFORM)
+	cp -rfv py/$(FPM_PY_SRC)/$(FPM_PLATFORM)/include/*.h py/$(FPM_PY_SRC)/
+	cp -rfv py/$(FPM_PY_SRC)/$(FPM_PLATFORM)/lib/* py/$(FPM_PY_SRC)/
+	make -C py
 
-docs:
-	rm -rf docs/*
-	cp -rf doc/sphinx/build/html/* ./docs/
+.PHONY: archives 
+archives:
+	cd ./build/install && tar -czvf ../$(ARCHIVE).tar.gz . && cd ../../
+	cd ./py && [ -d wheelhouse ] && cp -rfv ./wheelhouse/*.whl ./dist/ || true && cd ./dist && tar --exclude='$(PYARCHIVE).tar.gz' -czvf $(PYARCHIVE).tar.gz *.* && cd ../../ 
 
+.PHONY: docs
+docs: 
+	rm -rf docs/man/*
+	rm -rf docs/latex/*
+	rm -rf docs/ford/*
+	rm -rf docs/sphinx/*
+	make -C source/doc
+	cp -rfv source/doc/man/build/* docs/man/
+	cp -rfv source/doc/latex/build/pdf/* docs/latex/
+	cp -rfv source/doc/latex/build/html/* docs/
+	#cp -rfv source/doc/ford/build/* docs/ford/
+	#cp -rfv source/doc/sphinx/build/html/* docs/sphinx/
+
+.PHONY: logo
 logo:
 	make -C media
 
+.PHONY: clean
 clean:
-	rm -rf $(F_SRC) $(C_SRC) $(C_HEADERS) $(C_HEADER) ./src/codata_version.f90 $(SRC_FYPP_F90) $(STDLIB)
+	rm -rf $(SRC_FYPP_F90)
+	make -C data clean
 	fpm clean --all
-	make -C srcprep clean
-	make -C doc clean
+	make -C source clean
+	make -C py clean
+	make -C source/doc clean
 # ---------------------------------------------------------------------

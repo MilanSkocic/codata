@@ -61,8 +61,10 @@ jobs:
         echo "FPM_ARCH=$FPM_ARCH" >> $GITHUB_ENV
     - name: Compile
       run: |
-        chmod u+x build.sh
-        ./build.sh
+        . ./configure
+        make
+        make python
+        make -C py auditwheel
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:

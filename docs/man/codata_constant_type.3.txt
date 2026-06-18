@@ -1,0 +1,30 @@
+codata_constant_type(3)      Library Calls      codata_constant_type(3)
+
+NAME
+       codata_constant_type - data type defining a constant
+
+SYNOPSIS
+       Fortran: type(codata_constant_type) :: c
+
+       C: struct codata_constant_type c
+
+DESCRIPTION
+       Defines a constant with the name, the value, the uncertainty and
+       the unit.
+
+EXAMPLE
+       Fortran:
+
+             use codata
+             type(codata_constant_type), pointer :: c
+             c = SPEED_OF_LIGHT_IN_VACUUM
+
+       C:
+
+             struct codata_constant_type c;
+             c = SPEED_OF_LIGHT_IN_VACUUM;
+
+SEE ALSO
+       codata(3)
+
+2.5.3                         18 June 2026      codata_constant_type(3)

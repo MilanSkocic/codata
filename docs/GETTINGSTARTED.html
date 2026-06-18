@@ -1,0 +1,258 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>I GETTING STARTED</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='main.css' rel='stylesheet' type='text/css' /> 
+<meta content='main.tex' name='src' /> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js' type='text/javascript'></script>  
+</head><body>
+<!-- l. 110 --><div class='crosslinks'><p class='noindent'>[<a href='API.html'>next</a>] [<a href='#tailGETTINGSTARTED.html'>tail</a>] [<a href='main.html#GETTINGSTARTED.html'>up</a>] </p></div>
+<h1 class='partHead' id='getting-started'><span class='titlemark'>Part I<br /></span><a id='x2-1000I'></a>GETTING STARTED</h1>
+<!-- l. 110 --><p class='noindent'>
+                                                                                       
+                                                                                       
+</p><!-- l. 110 --><p class='noindent'>
+                                                                                       
+                                                                                       
+                                                                                       
+                                                                                       
+</p><!-- l. 1 --><p class='noindent'>
+                                                                                       
+                                                                                       
+</p>
+<div class='chapterTOCS'>
+<span class='chapterToc'>1 <a href='#introduction'>INTRODUCTION</a></span>
+<br /><span class='likesectionToc'><a href='#description' id='QQ2-2-3'>DESCRIPTION</a></span>
+<br /><span class='likesectionToc'><a href='#features' id='QQ2-2-4'>FEATURES</a></span>
+<br /><span class='likesectionToc'><a href='#documentation-' id='QQ2-2-5'>DOCUMENTATION </a></span>
+<br /><span class='likesectionToc'><a href='#notes-for-fortran-users' id='QQ2-2-6'>NOTES FOR FORTRAN USERS</a></span>
+<br /><span class='likesectionToc'><a href='#license' id='QQ2-2-7'>LICENSE</a></span>
+<br /><span class='chapterToc'>2 <a href='#installation'>INSTALLATION</a></span>
+<br /><span class='likesectionToc'><a href='#binaries' id='QQ2-2-9'>BINARIES</a></span>
+<br /><span class='likesectionToc'><a href='#sources' id='QQ2-2-10'>SOURCES</a></span>
+<br /><span class='chapterToc'>3 <a href='#examples'>EXAMPLES</a></span>
+<br /><span class='likesectionToc'><a href='#fortran' id='QQ2-2-12'>FORTRAN</a></span>
+<br /><span class='likesectionToc'><a href='#c' id='QQ2-2-13'>C</a></span>
+<br /><span class='likesectionToc'><a href='#python' id='QQ2-2-14'>PYTHON</a></span>
+</div>
+<h2 class='chapterHead' id='introduction'><span class='titlemark'>Chapter 1</span><br /><a id='x2-20001'></a>INTRODUCTION</h2>
+
+<h3 class='likesectionHead' id='description'><a id='x2-3000'></a>DESCRIPTION</h3>
+<!-- l. 3 --><p class='noindent'><span class='cmti-10x-x-109'>codata </span>is a Fortran library providing the fundamental physical constants published by CODATA. It
+includes the 2022, 2018, 2014 and 2010 recommended values, allowing applications to reproduce
+calculations based on specific CODATA releases.
+</p><!-- l. 9 --><p class='noindent'>The constants are implemented as a derived type that carries: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>the name
+     </li>
+     <li class='itemize'>the value
+     </li>
+     <li class='itemize'>the uncertainty
+     </li>
+     <li class='itemize'>the unit</li></ul>
+                                                                                       
+                                                                                       
+<!-- l. 17 --><p class='noindent'>All the constants are provided as double precision reals. Long constant names can be aliased with
+shorter names.
+
+</p>
+<h3 class='likesectionHead' id='features'><a id='x2-4000'></a>FEATURES</h3>
+<!-- l. 21 --><p class='noindent'>It provides: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>CODATA 2022 constants
+     </li>
+     <li class='itemize'>CODATA 2018 constants
+     </li>
+     <li class='itemize'>CODATA 2014 constants
+     </li>
+     <li class='itemize'>CODATA 2010 constants
+     </li>
+     <li class='itemize'>Native Fortran API
+     </li>
+     <li class='itemize'>C interoperability API
+     </li>
+     <li class='itemize'>Python bindings</li></ul>
+
+<h3 class='likesectionHead' id='documentation-'><a id='x2-5000'></a>DOCUMENTATION </h3>
+<!-- l. 33 --><p class='noindent'>The API is written as POSIX-style man pages which are generated from the sources using the prep(1)
+preprocessor and are distributed with the binaries.
+</p><!-- l. 36 --><p class='noindent'>The reference manual provides complete documentation:
+     </p><dl class='description'><dt class='description'>
+<span class='cmbx-10x-x-109'>PDF</span> </dt><dd class='description'>
+     <!-- l. 38 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/latex/codata-refman.pdf'>milanskocic.github.io/codata/latex/codata-refman.pdf</a>
+                                                                                       
+                                                                                       
+     </p></dd><dt class='description'>
+<span class='cmbx-10x-x-109'>HTML</span> </dt><dd class='description'>
+     <!-- l. 39 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/index.html'>milanskocic.github.io/codata/index.html</a></p></dd></dl>
+<!-- l. 42 --><p class='noindent'>API only is also available as a bookman:
+     </p><dl class='description'><dt class='description'>
+<span class='cmbx-10x-x-109'>MAN</span> </dt><dd class='description'>
+     <!-- l. 44 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/man'>milanskocic.github.io/codata/man</a>
+     </p></dd><dt class='description'>
+<span class='cmbx-10x-x-109'>PDF</span> </dt><dd class='description'>
+     <!-- l. 45 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/man/codata-bookman.pdf'>milanskocic.github.io/codata/man/codata-bookman.pdf</a></p></dd></dl>
+
+<h3 class='likesectionHead' id='notes-for-fortran-users'><a id='x2-6000'></a>NOTES FOR FORTRAN USERS</h3>
+<!-- l. 49 --><p class='noindent'>The <span class='cmti-10x-x-109'>codata </span>constants from the 2022 adjustment were integrated into the Fortran standard library
+(stdlib). This library is complementary to the constants defined in the stdlib by providing older values
+for the constants. See  <a href='https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0'>github.com/fortran-lang/stdlib/releases/tag/v0.7.0.</a> If your application only
+requires the latest CODATA values, the Fortran standard library may be sufficient. Use <span class='cmti-10x-x-109'>codata</span>
+when you need access to historical CODATA releases or compatibility with older scientific
+results.
+</p><!-- l. 59 --><p class='noindent'>To use <span class='cmti-10x-x-109'>codata </span>within your fpm(1) ( <a href='https://github.com/fortran-lang/fpm'>github.com/fortran-lang/fpm)</a> project, add the following lines to
+your file:
+                                                                                       
+                                                                                       
+</p>
+<pre class='verbatim' id='verbatim-1'>
+     [dependencies]
+     codata = { git="https://github.com/MilanSkocic/codata.git" }
+
+</pre>
+<!-- l. 66 --><p class='nopar'> If you only need sources for the CODATA constants that can be integrated directly into your project,
+you may be interested in the following repository:  <a href='https://github.com/vmagnin/fundamental_constants'>github.com/vmagnin/fundamental_constants.</a>
+
+</p>
+<h3 class='likesectionHead' id='license'><a id='x2-7000'></a>LICENSE</h3>
+<!-- l. 73 --><p class='noindent'>MIT
+                                                                                       
+                                                                                       
+</p>
+<h2 class='chapterHead' id='installation'><span class='titlemark'>Chapter 2</span><br /><a id='x2-80002'></a>INSTALLATION</h2>
+
+<h3 class='likesectionHead' id='binaries'><a id='x2-9000'></a>BINARIES</h3>
+<!-- l. 3 --><p class='noindent'>Download the binaries for your operating system from  <a href='https://github.com/MilanSkocic/codata/releases'>github.com/MilanSkocic/codata/releases.</a> The
+archives contains 3 folders bin, lib and share that you can simply copy/paste somewhere on your
+PATH: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>Unix-like: <span class='tcrm-1095'>$</span>HOME/.local
+     </li>
+     <li class='itemize'>Windows: add .local to your %USERPROFILE% and add it to your PATH</li></ul>
+
+<h3 class='likesectionHead' id='sources'><a id='x2-10000'></a>SOURCES</h3>
+<!-- l. 14 --><p class='noindent'>Building the static and shared libraries requires the following dependencies: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>prep(1) <!-- l. 16 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=9.2.0:
+     20220814
+     </li>
+     <li class='itemize'>gfortran(1) <!-- l. 17 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=10
+     </li>
+     <li class='itemize'>gcc(1) <!-- l. 18 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=10
+     </li>
+     <li class='itemize'>fpm(1) <!-- l. 19 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=0.12
+     </li>
+     <li class='itemize'>python(1) <!-- l. 20 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=3.10</li></ul>
+                                                                                       
+                                                                                       
+<pre class='verbatim' id='verbatim-2'>
+        $ . ./configure
+        $ make sources
+        $ make
+        $ make install [prefix=path]
+
+</pre>
+<!-- l. 29 --><p class='nopar'> Building the Python wrapper requires additional dependencies: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>python interpreter: 3.10, 3.11, 3.12, 3.13, 3.14</li></ul>
+                                                                                       
+                                                                                       
+<pre class='verbatim' id='verbatim-3'>
+        $ make python
+
+</pre>
+<!-- l. 38 --><p class='nopar'> Install the wheels in the py/sdist/ folder with pip.
+</p><!-- l. 41 --><p class='noindent'>Building the documentation requires even more additional dependencies: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>txt2man(1) <!-- l. 43 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=1.7
+     </li>
+     <li class='itemize'>bookman(1) <!-- l. 44 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=1.7
+     </li>
+     <li class='itemize'>txt2latex(1) <!-- l. 45 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=0.3
+     </li>
+     <li class='itemize'>pdflatex(1) <!-- l. 46 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=2025
+     </li>
+     <li class='itemize'>make4ht(1) <!-- l. 47 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=0.4c
+     </li>
+     <li class='itemize'>sphinx <!-- l. 48 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=8.0
+     </li>
+     <li class='itemize'>ford(1) <!-- l. 49 --><math display='inline' xmlns='http://www.w3.org/1998/Math/MathML'><mrow> <mo class='MathClass-rel' stretchy='false'>&gt;</mo></mrow></math>=7.0</li></ul>
+                                                                                       
+                                                                                       
+<!-- l. 1 --><p class='noindent'>
+                                                                                       
+                                                                                       
+</p>
+<h2 class='chapterHead' id='examples'><span class='titlemark'>Chapter 3</span><br /><a id='x2-110003'></a>EXAMPLES</h2>
+<!-- l. 3 --><p class='noindent'>Minimal working examples in Fortran, C and Python are presented below. The use of the constants is
+pretty straightforward: </p>
+     <ul class='itemize1'>
+     <li class='itemize'>import the module or include the header
+     </li>
+     <li class='itemize'>access the constant members: name, value, uncertainty, unit</li></ul>
+
+<h3 class='likesectionHead' id='fortran'><a id='x2-12000'></a>FORTRAN</h3>
+<!-- l. 1 --><p class='noindent'>
+</p>
+<pre class='fancyvrb' id='fancyvrb1'><a id='x2-12002r1'></a><span id='textcolor1'><span class='cmtt-10x-x-109'>program </span></span><span class='cmtt-10x-x-109'>example_in_f</span> 
+<a id='x2-12004r2'></a><span id='textcolor2'><span class='cmtt-10x-x-109'>use </span></span><span class='cmtt-10x-x-109'>codata</span> 
+<a id='x2-12006r3'></a><span id='textcolor3'><span class='cmtt-10x-x-109'>implicit </span></span><span id='textcolor4'><span class='cmtt-10x-x-109'>none</span></span> 
+<a id='x2-12008r4'></a><span id='textcolor5'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor6'> </span><span id='textcolor7'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor8'> </span><span id='textcolor9'><span class='cmtt-10x-x-109'>'########## EXAMPLE IN FORTRAN ##########'</span></span> 
+<a id='x2-12010r5'></a><span id='textcolor10'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor11'> </span><span id='textcolor12'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor13'> </span><span id='textcolor14'><span class='cmtt-10x-x-109'>'# VERSION'</span></span> 
+<a id='x2-12012r6'></a><span id='textcolor15'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor16'> </span><span id='textcolor17'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor18'> </span><span id='textcolor19'><span class='cmtt-10x-x-109'>"version = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor20'> </span><span class='cmtt-10x-x-109'>version()</span> 
+<a id='x2-12014r7'></a><span id='textcolor21'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor22'> </span><span id='textcolor23'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor24'> </span><span id='textcolor25'><span class='cmtt-10x-x-109'>'# CONSTANTS'</span></span> 
+<a id='x2-12016r8'></a><span id='textcolor26'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor27'> </span><span id='textcolor28'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor29'> </span><span id='textcolor30'><span class='cmtt-10x-x-109'>"c = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor31'>  </span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM%</span><span id='textcolor32'><span class='cmtt-10x-x-109'>value</span></span> 
+<a id='x2-12018r9'></a><span id='textcolor33'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor34'> </span><span id='textcolor35'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor36'> </span><span id='textcolor37'><span class='cmtt-10x-x-109'>'# UNCERTAINTY'</span></span> 
+<a id='x2-12020r10'></a><span id='textcolor38'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor39'> </span><span id='textcolor40'><span class='cmtt-10x-x-109'>*</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor41'> </span><span id='textcolor42'><span class='cmtt-10x-x-109'>"u(c) = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor43'> </span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM%uncertainty</span> 
+<a id='x2-12022r11'></a><span id='textcolor44'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor45'> </span><span id='textcolor46'><span class='cmtt-10x-x-109'>'(A)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor47'> </span><span id='textcolor48'><span class='cmtt-10x-x-109'>'# OLDER VALUES'</span></span> 
+<a id='x2-12024r12'></a><span id='textcolor49'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor50'> </span><span id='textcolor51'><span class='cmtt-10x-x-109'>'(A, F23.16)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor52'> </span><span id='textcolor53'><span class='cmtt-10x-x-109'>"Mu_2022(latest) = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor54'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT%</span><span id='textcolor55'><span class='cmtt-10x-x-109'>value</span></span> 
+<a id='x2-12026r13'></a><span id='textcolor56'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor57'> </span><span id='textcolor58'><span class='cmtt-10x-x-109'>'(A, F23.16)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor59'> </span><span id='textcolor60'><span class='cmtt-10x-x-109'>"Mu_2018 = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor61'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2018%</span><span id='textcolor62'><span class='cmtt-10x-x-109'>value</span></span> 
+<a id='x2-12028r14'></a><span id='textcolor63'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor64'> </span><span id='textcolor65'><span class='cmtt-10x-x-109'>'(A, F23.16)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor66'> </span><span id='textcolor67'><span class='cmtt-10x-x-109'>"Mu_2014 = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor68'>  </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2014%</span><span id='textcolor69'><span class='cmtt-10x-x-109'>value</span></span> 
+<a id='x2-12030r15'></a><span id='textcolor70'><span class='cmtt-10x-x-109'>print</span></span><span id='textcolor71'> </span><span id='textcolor72'><span class='cmtt-10x-x-109'>'(A, F23.16)'</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor73'> </span><span id='textcolor74'><span class='cmtt-10x-x-109'>"Mu_2010 = "</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor75'>  </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2010%</span><span id='textcolor76'><span class='cmtt-10x-x-109'>value</span></span> 
+<a id='x2-12032r16'></a><span id='textcolor77'><span class='cmtt-10x-x-109'>end </span></span><span id='textcolor78'><span class='cmtt-10x-x-109'>program</span></span></pre>
+
+<h3 class='likesectionHead' id='c'><a id='x2-13000'></a>C</h3>
+<!-- l. 1 --><p class='noindent'>
+</p>
+<pre class='fancyvrb' id='fancyvrb2'><a id='x2-13002r1'></a><span id='textcolor79'><span class='cmitt-10x-x-109'>#</span></span><span id='textcolor80'><span class='cmitt-10x-x-109'>include</span></span><span id='textcolor81'> </span><span id='textcolor82'><span class='cmitt-10x-x-109'>&lt;stdio.h&gt;</span></span> 
+<a id='x2-13004r2'></a><span id='textcolor83'><span class='cmitt-10x-x-109'>#</span></span><span id='textcolor84'><span class='cmitt-10x-x-109'>include</span></span><span id='textcolor85'> </span><span id='textcolor86'><span class='cmitt-10x-x-109'>"codata.h"</span></span> 
+<a id='x2-13006r3'></a><span id='textcolor87'><span class='cmtt-10x-x-109'>int</span></span><span id='textcolor88'> </span><span id='textcolor89'><span class='cmtt-10x-x-109'>main</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor90'><span class='cmtt-10x-x-109'>void</span></span><span class='cmtt-10x-x-109'>){</span> 
+<a id='x2-13008r4'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor91'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor92'><span class='cmtt-10x-x-109'>########## EXAMPLE IN C ##########</span></span><span id='textcolor93'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor94'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
+<a id='x2-13010r5'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor95'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor96'><span class='cmtt-10x-x-109'>%s</span></span><span id='textcolor97'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor98'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor99'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor100'><span class='cmtt-10x-x-109'># VERSION</span></span><span id='textcolor101'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
+<a id='x2-13012r6'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor102'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor103'><span class='cmtt-10x-x-109'>version = %s</span></span><span id='textcolor104'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor105'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor106'> </span><span class='cmtt-10x-x-109'>codata_version());</span> 
+<a id='x2-13014r7'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor107'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor108'><span class='cmtt-10x-x-109'>%s</span></span><span id='textcolor109'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor110'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor111'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor112'><span class='cmtt-10x-x-109'># CONSTANTS</span></span><span id='textcolor113'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
+<a id='x2-13016r8'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor114'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor115'><span class='cmtt-10x-x-109'>c = %f</span></span><span id='textcolor116'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor117'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor118'> </span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM.value);</span> 
+<a id='x2-13018r9'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor119'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor120'><span class='cmtt-10x-x-109'>%s</span></span><span id='textcolor121'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor122'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor123'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor124'><span class='cmtt-10x-x-109'># UNCERTAINTY</span></span><span id='textcolor125'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
+<a id='x2-13020r10'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor126'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor127'><span class='cmtt-10x-x-109'>u(c) = %f</span></span><span id='textcolor128'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor129'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor130'> </span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM.uncertainty);</span> 
+<a id='x2-13022r11'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor131'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor132'><span class='cmtt-10x-x-109'>%s</span></span><span id='textcolor133'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor134'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor135'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor136'><span class='cmtt-10x-x-109'># OLDER VALUES</span></span><span id='textcolor137'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>);</span> 
+<a id='x2-13024r12'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor138'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor139'><span class='cmtt-10x-x-109'>Mu_2022(latest) = %23.16f</span></span><span id='textcolor140'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor141'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor142'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT.value);</span> 
+<a id='x2-13026r13'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor143'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor144'><span class='cmtt-10x-x-109'>Mu_2018 = %23.16f</span></span><span id='textcolor145'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor146'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor147'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2018.value);</span> 
+<a id='x2-13028r14'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor148'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor149'><span class='cmtt-10x-x-109'>Mu_2014 = %23.16f</span></span><span id='textcolor150'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor151'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor152'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2014.value);</span> 
+<a id='x2-13030r15'></a><span class='cmtt-10x-x-109'>printf(</span><span id='textcolor153'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor154'><span class='cmtt-10x-x-109'>Mu_2010 = %23.16f</span></span><span id='textcolor155'><span class='cmtt-10x-x-109'>\n</span></span><span id='textcolor156'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>,</span><span id='textcolor157'> </span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2010.value);</span> 
+<a id='x2-13032r16'></a><span id='textcolor158'><span class='cmtt-10x-x-109'>return</span></span><span id='textcolor159'> </span><span id='textcolor160'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>;</span> 
+<a id='x2-13034r17'></a><span class='cmtt-10x-x-109'>}</span></pre>
+
+<h3 class='likesectionHead' id='python'><a id='x2-14000'></a>PYTHON</h3>
+<!-- l. 1 --><p class='noindent'>
+</p>
+<pre class='fancyvrb' id='fancyvrb3'><a id='x2-14002r1'></a><span id='textcolor161'><span class='cmtt-10x-x-109'>import</span></span><span id='textcolor162'> </span><span id='textcolor163'><span class='cmtt-10x-x-109'>sys</span></span> 
+<a id='x2-14004r2'></a><span class='cmtt-10x-x-109'>sys</span><span id='textcolor164'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>path</span><span id='textcolor165'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>insert(</span><span id='textcolor166'><span class='cmtt-10x-x-109'>0</span></span><span class='cmtt-10x-x-109'>, </span><span id='textcolor167'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor168'><span class='cmtt-10x-x-109'>../py/src/</span></span><span id='textcolor169'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x2-14006r3'></a><span id='textcolor170'><span class='cmtt-10x-x-109'>import</span></span><span id='textcolor171'> </span><span id='textcolor172'><span class='cmtt-10x-x-109'>pycodata</span></span> 
+<a id='x2-14008r4'></a><span id='textcolor173'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor174'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor175'><span class='cmtt-10x-x-109'>########## EXAMPLE IN PYTHON ##########</span></span><span id='textcolor176'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x2-14010r5'></a><span id='textcolor177'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor178'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor179'><span class='cmtt-10x-x-109'># VERSION</span></span><span id='textcolor180'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x2-14012r6'></a><span id='textcolor181'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor182'><span class='cmtt-10x-x-109'>f</span></span><span id='textcolor183'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor184'><span class='cmtt-10x-x-109'>version = </span></span><span id='textcolor185'><span class='cmtt-10x-x-109'>{</span></span><span class='cmtt-10x-x-109'>pycodata</span><span id='textcolor186'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>__version__</span><span id='textcolor187'><span class='cmtt-10x-x-109'>}</span></span><span id='textcolor188'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x2-14014r7'></a><span id='textcolor189'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor190'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor191'><span class='cmtt-10x-x-109'># Constants</span></span><span id='textcolor192'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x2-14016r8'></a><span id='textcolor193'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor194'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor195'><span class='cmtt-10x-x-109'>c =</span></span><span id='textcolor196'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor197'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM[</span><span id='textcolor198'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor199'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor200'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x2-14018r9'></a><span id='textcolor201'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor202'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor203'><span class='cmtt-10x-x-109'># UNCERTAINTY</span></span><span id='textcolor204'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x2-14020r10'></a><span id='textcolor205'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor206'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor207'><span class='cmtt-10x-x-109'>u(c) = </span></span><span id='textcolor208'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor209'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>SPEED_OF_LIGHT_IN_VACUUM[</span><span id='textcolor210'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor211'><span class='cmtt-10x-x-109'>uncertainty</span></span><span id='textcolor212'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x2-14022r11'></a><span id='textcolor213'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor214'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor215'><span class='cmtt-10x-x-109'># OLDER VALUES</span></span><span id='textcolor216'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>)</span> 
+<a id='x2-14024r12'></a><span id='textcolor217'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor218'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor219'><span class='cmtt-10x-x-109'>Mu_2022 = </span></span><span id='textcolor220'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor221'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT[</span><span id='textcolor222'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor223'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor224'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x2-14026r13'></a><span id='textcolor225'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor226'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor227'><span class='cmtt-10x-x-109'>Mu_2018 = </span></span><span id='textcolor228'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor229'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2018[</span><span id='textcolor230'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor231'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor232'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x2-14028r14'></a><span id='textcolor233'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor234'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor235'><span class='cmtt-10x-x-109'>Mu_2014 = </span></span><span id='textcolor236'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor237'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2014[</span><span id='textcolor238'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor239'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor240'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span> 
+<a id='x2-14030r15'></a><span id='textcolor241'><span class='cmtt-10x-x-109'>print</span></span><span class='cmtt-10x-x-109'>(</span><span id='textcolor242'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor243'><span class='cmtt-10x-x-109'>Mu_2010 = </span></span><span id='textcolor244'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>, pycodata</span><span id='textcolor245'><span class='cmtt-10x-x-109'>.</span></span><span class='cmtt-10x-x-109'>MOLAR_MASS_CONSTANT_2010[</span><span id='textcolor246'><span class='cmtt-10x-x-109'>"</span></span><span id='textcolor247'><span class='cmtt-10x-x-109'>value</span></span><span id='textcolor248'><span class='cmtt-10x-x-109'>"</span></span><span class='cmtt-10x-x-109'>])</span></pre>
+<!-- l. 116 --><div class='crosslinks'><p class='noindent'>[<a href='API.html'>next</a>] [<a href='GETTINGSTARTED.html'>front</a>] [<a href='main.html#GETTINGSTARTED.html'>up</a>] </p></div>
+<!-- l. 116 --><p class='noindent'><a id='tailGETTINGSTARTED.html'></a>  </p> 
+</body> 
+</html>

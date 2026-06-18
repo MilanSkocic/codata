@@ -1,35 +1,21 @@
 include make.in
 # ---------------------------------------------------------------------
 # CONFIGURATION
-GENPY=../scripts/gen_cpython.py
-
-AST_SRC=$(wildcard ../data/*.toml)
-PYTHON_SRC=$(patsubst ../data/%.toml, ./src/pycodata/_%.c, $(AST_SRC))
-
 SETUP=setup.py pyproject.toml
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # TARGETS
-.PHONY: sources package clean
+.PHONY: package clean
 
-all: package
-# ---------------------------------------------------------------------
-
-
-# ---------------------------------------------------------------------
-# SOURCES
-sources: $(PYTHON_SRC)
-
-src/pycodata/_%.c: ../data/%.toml
-	$(FPM_PYGEN) $(GENPY) $< $@
+all: build
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # COMPILATION
-package: python3.10 python3.11 python3.12 python3.13 python3.14 sdist auditwheel
+build: python3.10 python3.11 python3.12 python3.13 python3.14 sdist
 
 auditwheel: $(SETUP)
 	$(FPM_AW)
@@ -109,4 +95,7 @@ clean:
 	rm -f $(FPM_PY_SRC)/*.dll 
 	rm -f $(FPM_PY_SRC)/*.dll.a 
 	rm -f $(FPM_PY_SRC)/*.pyd
+	rm -rf $(FPM_PY_SRC)/linux
+	rm -rf $(FPM_PY_SRC)/darwin
+	rm -rf $(FPM_PY_SRC)/windows
 # ---------------------------------------------------------------------

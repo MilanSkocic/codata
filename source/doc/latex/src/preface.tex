@@ -1,0 +1,35 @@
+\chapter{Preface}
+This document provides a reference manual for the \emph{codata} library.
+The documentation is PDF-centric and authored in \LaTeX\ in order to provide 
+a stable, high-quality printout.
+The PDF edition preserves the intended layout, typography, equations, figures
+and cross-references, ensuring a consistent reading experience across 
+platforms and over time.
+A HTML version of the documentation is rendered with \emph{make4ht}.
+
+In addition, POSIX-style man-pages are generated from the sources using 
+the \emph{prep(1)} preprocessor and are provided with the binaries. 
+The API is written as man-pages and is basically a list of the constants.
+
+%Additional HTML versions are also available for users who prefer quick
+%navigation, keyword search, or rapid access to specific sections. 
+%However, those versions provide only the  documentation generated 
+%from the docstrings using \emph{Sphinx} and \emph{FORD}. 
+%They are provided as a convenient complement to the present PDF 
+%documentation, and should not be considered as a replacement for the 
+%present reference manual. 
+%The \emph{Sphinx} HTML version presents the documentation for Fortran, C, and Python 
+%--- whereas, the \emph{FORD} HTML version is Fortran-specific and is primarily
+%intended for Fortran users.
+
+\vspace{1cm}
+
+\ifdefined\HCode
+\noindent Related Documentation: \href{./latex/codata-refman.pdf}{Reference Manual [PDF]}
+\fi
+
+\noindent Related resources:
+\begin{itemize}
+\item \emph{prep(1)}:   \url{https://github.com/urbanjost/prep}
+\item \emph{make4ht}:   \url{https://github.com/michal-h21/make4ht}
+\end{itemize}

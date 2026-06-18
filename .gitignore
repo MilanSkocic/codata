@@ -14,7 +14,6 @@
 
 .cache
 .idea/
-bin/
 build/
 docs/build/
 dist/
@@ -39,11 +38,18 @@ __pycache__
 
 .DS_Store
 
+*.ilg
+
+srcprep/doc
+
 py/wheelhouse/
 py/src/pycodata/bin/
 py/src/pycodata/include/
 py/src/pycodata/lib/
 py/src/pycodata/codata
+py/src/pycodata/linux
+py/src/pycodata/darwin
+py/src/pycodata/windows
 
 C/build/
 C/bin/

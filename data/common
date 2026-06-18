@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+gly () {
+    years=()
+    for i in src/*;do 
+        b=$(basename -s .txt $i)
+        b=${b##*_}
+        years+=($b)
+    done; 
+    printf "%s\n" ${years[@]} | sort -n | tail -1
+}

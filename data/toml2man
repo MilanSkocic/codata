@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+. ./common
+latest_year=$(gly)
+
+fname="$1"
+name=$(basename -s .toml $fname)
+year="${name##*_}"
+
+suffix="_$year"
+if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
+
+awk -v suffix="$suffix" '
+BEGIN{
+    print "  List of available constants:"
+    print ""
+}
+/^\[.*\]/{
+    gsub(/\[/,"")
+    gsub(/\]/,"")
+    printf "%s%s%s\n", "  - ", $0, suffix
+}
+' $1
