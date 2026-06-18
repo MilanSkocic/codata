@@ -69,7 +69,10 @@
 ! 
 !     #include <stdio.h>
 !     #include "codata.h"
+! 
+! 
 !     int main(void){
+!     printf("%f", c);
 !     printf("########## EXAMPLE IN C ##########\n");
 !     printf("%s\n","# VERSION");
 !     printf("version = %s\n", codata_version());
@@ -105,7 +108,7 @@
 ! 
 ! 
 ! SEE ALSO
-!   codata(1), codata_version(3)
+!   codata(1), codata_version(3), codata_constant_type(3)
 ! 
 ! CODATA 2022
 !   List of available constants:
@@ -1520,7 +1523,7 @@ use codata__constants_type
 implicit none(type,external)
 public
 
-character(len=*), parameter, private :: v = '2.5.2'
+character(len=*), parameter, private :: v = '2.5.3'
 character(len=:), allocatable, target, private :: vf
 character(len=:), allocatable, target, private :: vc
 

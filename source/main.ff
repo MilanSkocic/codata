@@ -1,7 +1,7 @@
 ! SPDX-License-Identifier: MIT
 
 ! {{{
-$BLOCK comment --file man/src/codata.1.man
+$BLOCK comment --file man/src/codata_cli.1.man
 NAME                                                                  
   codata - fundamental physical constants                             
                                                                       

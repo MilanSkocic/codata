@@ -66,7 +66,10 @@ EXAMPLE
 
     #include <stdio.h>
     #include "codata.h"
+
+
     int main(void){
+    printf("%f", c);
     printf("########## EXAMPLE IN C ##########\n");
     printf("%s\n","# VERSION");
     printf("version = %s\n", codata_version());
@@ -102,7 +105,7 @@ EXAMPLE
 
 
 SEE ALSO
-  codata(1), codata_version(3)
+  codata(1), codata_version(3), codata_constant_type(3)
 
 CODATA 2022
   List of available constants:

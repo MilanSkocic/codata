@@ -49,7 +49,7 @@ EXAMPLE
 $INCLUDE example.txt
 
 SEE ALSO
-  codata(1), codata_version(3)
+  codata(1), codata_version(3), codata_constant_type(3)
 
 CODATA 2022
 $INCLUDE ../data/build/codata_constants_2022.man
