@@ -62,29 +62,32 @@ and can be aliased with shorter names.
      <li class='itemize'><span class='ccti-10x-x-109'>codata </span>constants 2010</li></ul>
 
 <h3 class='likesectionHead' id='documentation-'><a id='x2-5000'></a>DOCUMENTATION </h3>
-<!-- l. 24 --><p class='noindent'>The documentation is PDF-centric and authored in LaTeX in order to provide a stable, high-quality
-printout. The PDF edition preserves the intended layout, typography, equations, figures and
-cross-references, ensuring a consistent reading experience across platforms and over time. A HTML
-version of the documentation is rendered with make4ht(1).
-</p><!-- l. 31 --><p class='noindent'>In addition, POSIX-style man-pages are generated from the sources using the prep(1) preprocessor and
-are provided with the binaries. The API is written as man-pages and is basically a list of the
+<!-- l. 24 --><p class='noindent'>POSIX-style man-pages are generated from the sources using the prep(1) preprocessor and are
+provided with the binaries. The API is written as man-pages and is basically a list of the
 constants.
      </p><dl class='description'><dt class='description'>
+<span class='cmbx-10x-x-109'>MAN</span> </dt><dd class='description'>
+     <!-- l. 28 --><p class='noindent'>  <a href='https://milanskocic.github.io.codata/man'>milanskocic.github.io.codata/man</a>
+     </p></dd><dt class='description'>
 <span class='cmbx-10x-x-109'>PDF</span> </dt><dd class='description'>
-     <!-- l. 36 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/latex/codata-refman.pdf'>milanskocic.github.io/codata/latex/codata-refman.pdf</a>
+     <!-- l. 29 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/man/codata-bookman.pdf'>milanskocic.github.io/codata/man/codata-bookman.pdf</a></p></dd></dl>
+<!-- l. 32 --><p class='noindent'>The man-pages are included in the reference manual.
+     </p><dl class='description'><dt class='description'>
+<span class='cmbx-10x-x-109'>PDF</span> </dt><dd class='description'>
+     <!-- l. 34 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/latex/codata-refman.pdf'>milanskocic.github.io/codata/latex/codata-refman.pdf</a>
      </p></dd><dt class='description'>
 <span class='cmbx-10x-x-109'>HTML</span> </dt><dd class='description'>
-     <!-- l. 37 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/index.html'>milanskocic.github.io/codata/index.html</a></p></dd></dl>
+     <!-- l. 35 --><p class='noindent'>  <a href='https://milanskocic.github.io/codata/index.html'>milanskocic.github.io/codata/index.html</a></p></dd></dl>
 
 <h3 class='likesectionHead' id='notes-for-fortran-users'><a id='x2-6000'></a>NOTES FOR FORTRAN USERS</h3>
-<!-- l. 41 --><p class='noindent'>The <span class='ccti-10x-x-109'>codata </span>constant from 2022 were integrated in the Fortran standard library (stdlib). This
+<!-- l. 39 --><p class='noindent'>The <span class='ccti-10x-x-109'>codata </span>constant from 2022 were integrated in the Fortran standard library (stdlib). This
 library is complementary to the constants defined in the stdlib by providing older values for
 the constants. See  <a href='https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0'>github.com/fortran-lang/stdlib/releases/tag/v0.7.0.</a> If you need older
+                                                                                       
+                                                                                       
 values for the CODATA constants you can use this library otherwise use the standard
 library.
-                                                                                       
-                                                                                       
-</p><!-- l. 49 --><p class='noindent'>To use <span class='ccti-10x-x-109'>codata </span>within your fpm(1) ( <a href='https://github.com/fortran-lang/fpm'>github.com/fortran-lang/fpm)</a> project, add the following lines to
+</p><!-- l. 47 --><p class='noindent'>To use <span class='ccti-10x-x-109'>codata </span>within your fpm(1) ( <a href='https://github.com/fortran-lang/fpm'>github.com/fortran-lang/fpm)</a> project, add the following lines to
 your file:
                                                                                        
                                                                                        
@@ -94,12 +97,12 @@ your file:
      codata = { git="https://github.com/MilanSkocic/codata.git" }
 
 </pre>
-<!-- l. 56 --><p class='nopar'> If you only need sources for the <span class='ccti-10x-x-109'>codata </span>constants that you can integrate directly embed in your
+<!-- l. 54 --><p class='nopar'> If you only need sources for the <span class='ccti-10x-x-109'>codata </span>constants that you can integrate directly embed in your
 sources you may be interested by this repository  <a href='https://github.com/vmagnin/fundamental_constants'>github.com/vmagnin/fundamental_constants.</a>
 
 </p>
 <h3 class='likesectionHead' id='license'><a id='x2-7000'></a>LICENSE</h3>
-<!-- l. 62 --><p class='noindent'>MIT
+<!-- l. 60 --><p class='noindent'>MIT
                                                                                        
                                                                                        
 </p>

@@ -23,7 +23,7 @@
                                                                                        
 </p>
 <div class='chapterTOCS'>
-<span class='chapterToc'>4 <a href='#codata'>CODATA(1)</a></span>
+<span class='chapterToc'>4 <a href='#codatacli'>CODATA_CLI(1)</a></span>
 <br /><span class='likesectionToc'><a href='#name' id='QQ2-3-17'>NAME</a></span>
 <br /><span class='likesectionToc'><a href='#synopsis' id='QQ2-3-18'>SYNOPSIS</a></span>
 <br /><span class='likesectionToc'><a href='#description1' id='QQ2-3-19'>DESCRIPTION</a></span>
@@ -31,7 +31,7 @@
 <br /><span class='likesectionToc'><a href='#notes' id='QQ2-3-21'>NOTES</a></span>
 <br /><span class='likesectionToc'><a href='#example' id='QQ2-3-22'>EXAMPLE</a></span>
 <br /><span class='likesectionToc'><a href='#see-also' id='QQ2-3-23'>SEE ALSO</a></span>
-<br /><span class='chapterToc'>5 <a href='#codata1'>CODATA(3)</a></span>
+<br /><span class='chapterToc'>5 <a href='#codata'>CODATA(3)</a></span>
 <br /><span class='likesectionToc'><a href='#name1' id='QQ2-3-25'>NAME</a></span>
 <br /><span class='likesectionToc'><a href='#library' id='QQ2-3-26'>LIBRARY</a></span>
 <br /><span class='likesectionToc'><a href='#synopsis1' id='QQ2-3-27'>SYNOPSIS</a></span>
@@ -56,9 +56,10 @@
                                                                                        
                                                                                        
 <br /><span class='likesectionToc'><a href='#description4' id='QQ2-3-46'>DESCRIPTION</a></span>
-<br /><span class='likesectionToc'><a href='#see-also3' id='QQ2-3-47'>SEE ALSO</a></span>
+<br /><span class='likesectionToc'><a href='#example3' id='QQ2-3-47'>EXAMPLE</a></span>
+<br /><span class='likesectionToc'><a href='#see-also3' id='QQ2-3-48'>SEE ALSO</a></span>
 </div>
-<h2 class='chapterHead' id='codata'><span class='titlemark'>Chapter 4</span><br /><a id='x3-160004'></a>CODATA(1)</h2>
+<h2 class='chapterHead' id='codatacli'><span class='titlemark'>Chapter 4</span><br /><a id='x3-160004'></a>CODATA_CLI(1)</h2>
 
 <h3 class='likesectionHead' id='name'><a id='x3-17000'></a>NAME</h3>
 <!-- l. 3 --><p class='noindent'>codata - fundamental physical constants
@@ -80,9 +81,9 @@ filtered with REGEX PATTERNS.
      <!-- l. 21 --><p class='noindent'> Codata constants: 2022, 2018, 2014, 2010
      </p></dd><dt class='description'>
 <span class='cmbx-10x-x-109'>–pattern, -p PATTERN</span> </dt><dd class='description'>
+                                                                                       
+                                                                                       
      <!-- l. 22 --><p class='noindent'> Regex pattern for filtering the constants.
-                                                                                       
-                                                                                       
      </p></dd><dt class='description'>
 <span class='cmbx-10x-x-109'>–value, -a</span> </dt><dd class='description'>
      <!-- l. 23 --><p class='noindent'> Show only the value.
@@ -132,7 +133,7 @@ file is prefixed with ”options” and interpreted as a separate argument. The 
                                                                                        
                                                                                        
 </p>
-<h2 class='chapterHead' id='codata1'><span class='titlemark'>Chapter 5</span><br /><a id='x3-240005'></a>CODATA(3)</h2>
+<h2 class='chapterHead' id='codata'><span class='titlemark'>Chapter 5</span><br /><a id='x3-240005'></a>CODATA(3)</h2>
 
 <h3 class='likesectionHead' id='name1'><a id='x3-25000'></a>NAME</h3>
 <!-- l. 3 --><p class='noindent'>codata - libray for fundamental physical constants
@@ -228,7 +229,10 @@ Fortran, C, and Python.
 <pre class='verbatim' id='verbatim-6'>
     #include &lt;stdio.h&gt;
     #include "codata.h"
+
+
     int main(void){
+    printf("%f", c);
     printf("########## EXAMPLE IN C ##########\n");
     printf("%s\n","# VERSION");
     printf("version = %s\n", codata_version());
@@ -245,7 +249,7 @@ Fortran, C, and Python.
     }
 
 </pre>
-<!-- l. 103 --><p class='nopar'> Example in Python
+<!-- l. 106 --><p class='nopar'> Example in Python
                                                                                        
                                                                                        
 </p>
@@ -268,14 +272,14 @@ Fortran, C, and Python.
 
 
 </pre>
-<!-- l. 124 --><p class='nopar'>
+<!-- l. 127 --><p class='nopar'>
 </p>
 <h3 class='likesectionHead' id='see-also1'><a id='x3-31000'></a>SEE ALSO</h3>
-<!-- l. 126 --><p class='noindent'>codata(1), codata_version(3)
+<!-- l. 129 --><p class='noindent'>codata(1), codata_version(3), codata_constant_type(3)
 
 </p>
 <h3 class='likesectionHead' id='codata-'><a id='x3-32000'></a>CODATA 2022</h3>
-<!-- l. 129 --><p class='noindent'>List of available constants:
+<!-- l. 132 --><p class='noindent'>List of available constants:
 </p>
      <ul class='itemize1'>
      <li class='itemize'>ALPHA_PARTICLE_ELECTRON_MASS_RATIO
@@ -1043,7 +1047,7 @@ Fortran, C, and Python.
      <li class='itemize'>W_TO_Z_MASS_RATIO</li></ul>
 
 <h3 class='likesectionHead' id='codata-1'><a id='x3-33000'></a>CODATA 2018</h3>
-<!-- l. 490 --><p class='noindent'>List of available constants:
+<!-- l. 493 --><p class='noindent'>List of available constants:
 </p>
      <ul class='itemize1'>
      <li class='itemize'>ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018
@@ -1809,7 +1813,7 @@ Fortran, C, and Python.
      <li class='itemize'>W_TO_Z_MASS_RATIO_2018</li></ul>
 
 <h3 class='likesectionHead' id='codata-2'><a id='x3-34000'></a>CODATA 2014</h3>
-<!-- l. 850 --><p class='noindent'>List of available constants:
+<!-- l. 853 --><p class='noindent'>List of available constants:
 </p>
      <ul class='itemize1'>
      <li class='itemize'>LATTICE_SPACING_OF_SILICON_2014
@@ -2535,7 +2539,7 @@ Fortran, C, and Python.
      <li class='itemize'>WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014</li></ul>
 
 <h3 class='likesectionHead' id='codata-3'><a id='x3-35000'></a>CODATA 2010</h3>
-<!-- l. 1191 --><p class='noindent'>List of available constants:
+<!-- l. 1194 --><p class='noindent'>List of available constants:
 </p>
      <ul class='itemize1'>
      <li class='itemize'>LATTICE_SPACING_OF_SILICON_2010
@@ -3331,16 +3335,38 @@ Fortran, C, and Python.
 
 </p>
 <h3 class='likesectionHead' id='synopsis3'><a id='x3-45000'></a>SYNOPSIS</h3>
-<!-- l. 7 --><p class='noindent'><span class='cmtt-10x-x-109'>Fortran: type(codata_constant_type) :: a</span>
-</p><!-- l. 9 --><p class='noindent'><span class='cmtt-10x-x-109'>C: struct codata_constant_type a</span>
+<!-- l. 7 --><p class='noindent'><span class='cmtt-10x-x-109'>Fortran: type(codata_constant_type) :: c</span>
+</p><!-- l. 9 --><p class='noindent'><span class='cmtt-10x-x-109'>C: struct codata_constant_type c</span>
 
 </p>
 <h3 class='likesectionHead' id='description4'><a id='x3-46000'></a>DESCRIPTION</h3>
 <!-- l. 13 --><p class='noindent'>Defines a constant with the name, the value, the uncertainty and the unit.
 
 </p>
-<h3 class='likesectionHead' id='see-also3'><a id='x3-47000'></a>SEE ALSO</h3>
-<!-- l. 16 --><p class='noindent'>codata(3)
+<h3 class='likesectionHead' id='example3'><a id='x3-47000'></a>EXAMPLE</h3>
+<!-- l. 16 --><p class='noindent'>Fortran:
+                                                                                       
+                                                                                       
+</p>
+<pre class='verbatim' id='verbatim-11'>
+      use codata
+      type(codata_constant_type), pointer :: c
+      c = SPEED_OF_LIGHT_IN_VACUUM
+
+</pre>
+<!-- l. 23 --><p class='nopar'> C:
+                                                                                       
+                                                                                       
+</p>
+<pre class='verbatim' id='verbatim-12'>
+      struct codata_constant_type c;
+      c = SPEED_OF_LIGHT_IN_VACUUM;
+
+</pre>
+<!-- l. 30 --><p class='nopar'>
+</p>
+<h3 class='likesectionHead' id='see-also3'><a id='x3-48000'></a>SEE ALSO</h3>
+<!-- l. 32 --><p class='noindent'>codata(3)
                                                                                        
                                                                                        
 </p>
