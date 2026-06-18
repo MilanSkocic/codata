@@ -70,7 +70,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: ${{ env.FPM_NAME }}-${{ env.FPM_PLATFORM }}-${{ env.FPM_ARCH }}-${{ env.FPM_VERSION }}
-        path: ./build/*.zip
+        path: ./build/install/
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
