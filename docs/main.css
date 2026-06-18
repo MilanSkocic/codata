@@ -1,17 +1,22 @@
  
 /* start css.sty */
 .cmr-7{font-size:63%;}
+.cmmi-7{font-size:63%;font-style: italic;}
+.cmsy-7{font-size:63%;}
 .cmr-10x-x-109{}
-.ccr-10x-x-109{}
-.ccr-9{font-size:81%;}
-.ccr-7{font-size:63%;}
-.xccmi-10x-x-109{}
-.xccmi-9{font-size:81%;}
-.xccmi-7{font-size:63%;}
-.xccsy-10x-x-109{}
-.xccsy-9{font-size:81%;}
-.xccsy-7{font-size:63%;}
-.xccex-10{font-size:90%;}
+.cmbx-10x-x-109{ font-weight: bold;}
+.cmbsy-10x-x-109{font-weight: bold;}
+.cmbsy-10x-x-109{font-weight: bold;}
+.cmbsy-10x-x-109{font-weight: bold;}
+.cmbsy-9{font-size:81%;font-weight: bold;}
+.cmbsy-9{font-weight: bold;}
+.cmbsy-9{font-weight: bold;}
+.cmbsy-7{font-size:63%;font-weight: bold;}
+.cmbsy-7{font-weight: bold;}
+.cmbsy-7{font-weight: bold;}
+.cmex-10x-x-109{}
+.cmex-9{font-size:81%;}
+.cmex-7{font-size:63%;}
 .msam-10x-x-109{}
 .msam-10x-x-90{font-size:81%;}
 .msam-7{font-size:63%;}
@@ -19,14 +24,16 @@
 .msbm-10x-x-90{font-size:81%;}
 .msbm-7{font-size:63%;}
 .cmr-9{font-size:81%;}
-.ccr-10x-x-207{font-size:188%;}
-.cccsc-10x-x-207{font-size:188%;}
-.ccti-10x-x-109{font-style: italic;}
-.ccr-10x-x-120{font-size:109%;}
+.cmmi-10x-x-109{font-style: italic;}
+.cmmi-9{font-size:81%;font-style: italic;}
+.cmsy-10x-x-109{}
+.cmsy-9{font-size:81%;}
+.cmr-17x-x-120{font-size:185%;}
+.cmcsc-10x-x-207{font-size:188%;}
+.cmti-10x-x-109{ font-style: italic;}
+.cmr-12{font-size:109%;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
 .cmtt-10x-x-109{font-family: monospace,monospace;}
-.torm-10x-x-109{}
-.cmbx-10x-x-109{ font-weight: bold;}
 .cmitt-10x-x-109{font-family: monospace,monospace; font-style: italic;}
 .small-caps{font-variant: small-caps; }
 p{margin-top:0;margin-bottom:0}
