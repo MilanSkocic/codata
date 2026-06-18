@@ -1,3 +1,12 @@
+VERSION 2.5.3
+  - Maintenance release. NO API break.
+  - Complete rewrite of the documentation structure.
+  - The API is now written as man-pages:
+    - codata(1)
+    - codata(3)
+    - codata_version(3)
+    - codata_constant_type(3)
+
 VERSION 2.5.2
   - Maintenance release. No API break.
   - Use prep(1) for auto-generating the version parameter.
