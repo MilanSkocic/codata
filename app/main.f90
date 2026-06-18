@@ -2,7 +2,7 @@
 
 ! {{{
 ! NAME
-!   codata - fundamental physical constants
+!   codata - print fundamental physical constants
 ! 
 ! SYNOPSIS
 !   codata [OPTION...] [REGEX_PATTERN...]
@@ -17,7 +17,7 @@
 ! 
 ! 
 ! OPTIONS
-!   --year, -y YEAR        Codata constants: 2022, 2018, 2014, 2010
+!   --year, -y YEAR        CODATA constants: 2022, 2018, 2014, 2010
 !   --pattern, -p PATTERN  Regex pattern for filtering the constants.
 !   --value, -a            Show only the value.
 !   --error, -e            Show only the uncertainty.
