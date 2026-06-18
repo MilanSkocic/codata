@@ -55,6 +55,7 @@ jobs:
         make
         make python
         make -C py auditwheel
+        make archives
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
