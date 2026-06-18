@@ -70,11 +70,14 @@ integer :: i
 nullify(char_fp)
 nullify(cctptr)
 
-version_text=[character(len=80) :: &
+version_text=[character(len=72) :: &
 ''//name//' '//version()//'                                            ', &
+'                                                                      ', &
 'Copyright (c) 2022 Milan Skocic                                       ', &
 'License: MIT                                                          ', &
-'' ]
+'                                                                      ', &
+'Written by Milan Skocic.                                              ' &
+]
 
 help_text=[character(len=72) :: &
 'Usage: codata [OPTION...] [REGEX_PATTERN...]                          ',&
