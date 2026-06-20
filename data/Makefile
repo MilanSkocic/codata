@@ -13,6 +13,7 @@ FOR_SRC=$(patsubst ./src/%.txt, ./build/%.f90, $(RAW_SRC))
 MAN_SRC=$(patsubst ./src/%.txt, ./build/%.man, $(RAW_SRC))
 
 C_HEADERS=$(patsubst ./src/%.txt, ./build/%.h, $(RAW_SRC))
+C_HEADER=../include/$(FPM_NAME).h
 
 PY_SRC=$(patsubst ./src/%.txt, ./build/%.py, $(RAW_SRC))
 CPY_SRC_=$(patsubst ./src/%.txt, ./build/_%.c, $(RAW_SRC))
@@ -27,7 +28,7 @@ STDLIB=./build/stdlib_codata.f90
 # TARGETS
 .PHONY: clean
 
-all: dirs $(AST_SRC) $(FOR_SRC) $(MAN_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB) $(PY_SRC) $(C_SRC) $(CPY_SRC_) $(CPY_SRC)
+all: dirs $(AST_SRC) $(FOR_SRC) $(MAN_SRC) $(C_HEADERS) $(C_HEADERS) $(C_HEADER) $(STDLIB) $(PY_SRC) $(C_SRC) $(CPY_SRC_) $(CPY_SRC)
 # ---------------------------------------------------------------------
 
 # ----------------------------------------------------------------------
@@ -50,6 +51,9 @@ build/%.f90: build/%.toml
 build/%.h: ./build/%.toml
 	./toml2h $< > $@
 
+../include/$(FPM_NAME).h: $(C_HEADERS)
+	cat $(FPM_NAME).1.h $^ $(FPM_NAME).2.h > $@
+
 ./build/stdlib_codata.f90: ./build/codata_constants_2022.f90
 	./stdlib $< > $@
 
@@ -71,5 +75,7 @@ build/%.h: ./build/%.toml
 # OTHERS
 clean:
 	rm -rf build/*
+	rm $(CPY_SRC)
+	rm $(C_HEADER)
 # ---------------------------------------------------------------------
 

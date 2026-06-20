@@ -10,8 +10,18 @@ year="${name##*_}"
 suffix="_$year"
 if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 
-awk -v suffix="$suffix" '
+awk -v suffix="$suffix" -v latest_year="$latest_year" '
 BEGIN{
+    print ""
+    print "//------------------------------------------------------------------------"
+    if(suffix==""){
+        print "// CODATA_CONSTANTS_"latest_year
+    }
+    else{
+        print "// CODATA_CONSTANTS"suffix
+    }
+    print "//------------------------------------------------------------------------"
+    print "//{{{"
     print "ADD_IMPORT extern const int YEAR"suffix";"
 }
 /^\[.*\]/{
@@ -21,5 +31,8 @@ BEGIN{
 }
 NF==0{
     print "ADD_IMPORT extern const struct codata_constant_type "var";"
+}
+END{
+    print "//}}}"
 }
 ' $1
