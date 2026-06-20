@@ -15,7 +15,8 @@ MAN_SRC=$(patsubst ./src/%.txt, ./build/%.man, $(RAW_SRC))
 C_HEADERS=$(patsubst ./src/%.txt, ./build/%.h, $(RAW_SRC))
 
 PY_SRC=$(patsubst ./src/%.txt, ./build/%.py, $(RAW_SRC))
-CPY_SRC=$(patsubst ./src/%.txt, ./build/_%.c, $(RAW_SRC))
+CPY_SRC_=$(patsubst ./src/%.txt, ./build/_%.c, $(RAW_SRC))
+CPY_SRC=$(patsubst ./build/_%.c, ../py/src/$(FPM_PYNAME)/_%.c, $(CPY_SRC_))
 
 C_SRC=$(patsubst ./src/%.txt, ./build/%.c, $(RAW_SRC))
 
@@ -26,7 +27,7 @@ STDLIB=./build/stdlib_codata.f90
 # TARGETS
 .PHONY: clean
 
-all: dirs $(AST_SRC) $(FOR_SRC) $(MAN_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB) $(PY_SRC) $(C_SRC) $(CPY_SRC)
+all: dirs $(AST_SRC) $(FOR_SRC) $(MAN_SRC) $(C_HEADERS) $(C_HEADER) $(STDLIB) $(PY_SRC) $(C_SRC) $(CPY_SRC_) $(CPY_SRC)
 # ---------------------------------------------------------------------
 
 # ----------------------------------------------------------------------
@@ -57,6 +58,9 @@ build/%.h: ./build/%.toml
 
 ./build/_%.c: ./build/%.toml
 	$(FPM_PYGEN) $(GEN_CPY) $< $@
+
+../py/src/$(FPM_PYNAME)/_%.c: ./build/_%.c
+	cp -fv $^ $@
 
 ./build/%.c: ./build/%.toml
 	$(FPM_PYGEN) $(GEN_C) $< $@

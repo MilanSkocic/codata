@@ -19,11 +19,11 @@ def get_suffix(year):
 
 def write_module_start(f, year):
     suffix = "_" + year
-    #f.write("/* SPDX-License-Identifier: MIT */" + newline)
-    #f.write("#define PY_SSIZE_T_CLEAN" + newline)
-    #f.write("#include <Python.h>" + newline)
-    #f.write(f"#include \"codata.h\"" + newline)
-    #f.write(newline)
+    f.write("/* SPDX-License-Identifier: MIT */" + newline)
+    f.write("#define PY_SSIZE_T_CLEAN" + newline)
+    f.write("#include <Python.h>" + newline)
+    f.write(f"#include \"codata.h\"" + newline)
+    f.write(newline)
     f.write(f"PyDoc_STRVAR(module_docstring, \"C extension for constants {year:s}.\");" + newline)
     f.write(newline)
     f.write("static PyMethodDef myMethods[] = {{ NULL, NULL, 0, NULL }};" + newline)
