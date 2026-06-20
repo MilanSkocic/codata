@@ -47,13 +47,13 @@ $(FPM_LIBNAME): build shared
 .PHONY: sources 
 sources: 
 	make -C data
-	make -C source
-	make -C source/doc/man
-	cp -rfv source/doc/man/build/* docs/man/
-	mkdir -p docs/man
-	mkdir -p docs/latex
-	mkdir -p docs/ford
-	mkdir -p docs/sphinx
+	#make -C source
+	#make -C source/doc/man
+	#cp -rfv source/doc/man/build/* docs/man/
+	#mkdir -p docs/man
+	#mkdir -p docs/latex
+	#mkdir -p docs/ford
+	#mkdir -p docs/sphinx
 # ---------------------------------------------------------------------
 
 
@@ -168,7 +168,7 @@ clean:
 	rm -rf $(SRC_FYPP_F90)
 	make -C data clean
 	fpm clean --all
-	make -C source clean
+	#make -C source clean
 	make -C py clean
-	make -C source/doc clean
+	#make -C source/doc clean
 # ---------------------------------------------------------------------
