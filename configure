@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+#-----------------------------------------------------------------------
+# EXPORTS
+#-----------------------------------------------------------------------
+#{{{
 # Name
 export FPM_NAME=$(cat fpm.toml | grep -m 1 "name =" | awk -F '=' '{print $2}' | sed -E 's/[ "]//g')
 export FPM_VERSION=$(tr -d '\r' < VERSION | tr -d '\n')
@@ -80,4 +84,108 @@ cp -f COPYING ./py/LICENSE
 echo -n $FPM_VERSION > ./py/VERSION
 echo "done."
 
-awk -F'=' 'NR>1{gsub("_","",$1);gsub("_","\\_",$2);  print "\\newcommand{\\"$1 "}{" $2 "}"}' make.in > source/doc/latex/make.in.tex
+#awk -F'=' 'NR>1{gsub("_","",$1);gsub("_","\\_",$2);  print "\\newcommand{\\"$1 "}{" $2 "}"}' make.in > source/doc/latex/make.in.tex
+#}}}
+#-----------------------------------------------------------------------
+
+#-----------------------------------------------------------------------
+# FUNCTIONS
+#-----------------------------------------------------------------------
+#{{{
+usage () {
+cat << EOT 
+Usage: configure [--sources|-s].
+EOT
+}
+
+help () {
+#{{{
+cat << EOT
+Usage: configure [OPTION...] 
+configure - configure before compilation.
+
+  --sources, -s          Generate the sources.
+EOT
+#}}}
+}
+
+#}}}
+#-----------------------------------------------------------------------
+
+#-----------------------------------------------------------------------
+# LONG OPTIONS
+#-----------------------------------------------------------------------
+date=${date:-$(date +'%d %B %Y')}
+fsrc=0
+#{{{
+args=()
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --usage)
+        args+=("-u")
+        shift
+        ;;
+    --help)
+      args+=("-h")
+      shift
+      ;;
+    --sources)
+        args+=("-s")
+        shift
+        ;;
+    --) # end of options
+      shift
+      break
+      ;;
+    -*)
+      args+=("$1")
+      shift
+      ;;
+    *)
+      args+=("$1")
+      shift
+      ;;
+  esac
+done
+# Restore positional parameters
+set -- "${args[@]}"
+# }}}
+#-----------------------------------------------------------------------
+
+#-----------------------------------------------------------------------
+# GETOPTS
+#-----------------------------------------------------------------------
+#{{{
+while getopts :svuh opt
+do
+	case $opt in
+    (s) fsrc=1;;
+	(v) version; exit;;
+    (u) usage; exit;;
+	(h) help; exit;;
+    :) echo "Option -$OPTARG requires an argument"; exit 1;;
+    \?) echo "Invalid option: -$OPTARG"; exit 1;;
+    *) exit;;
+	esac
+done
+shift $(($OPTIND - 1))
+#}}}
+#-----------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------
+# GENERATE SOURCES
+#-----------------------------------------------------------------------
+#{{{
+
+if [[ $fsrc == 1 ]]; then
+    make -C data clean
+    make -C data
+    for i in ./src/*.fypp; do
+        fypp -I./include $i "${i%.fypp}.f90"
+        echo "fypp $i ${i%.fypp}.f90"
+    done
+fi
+#}}}
+#-----------------------------------------------------------------------
+
