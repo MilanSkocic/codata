@@ -1,0 +1,146 @@
+<!-- Creator     : groff version 1.23.0 -->
+<!-- CreationDate: Sun Jun 21 14:49:05 2026 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="generator" content="groff -Thtml, see www.gnu.org">
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="Content-Style" content="text/css">
+<style type="text/css">
+       p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       pre     { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
+       h1      { text-align: center }
+</style>
+<title>codata_cli</title>
+
+</head>
+<body>
+
+<h1 align="center">codata_cli</h1>
+
+<a href="#NAME">NAME</a><br>
+<a href="#SYNOPSIS">SYNOPSIS</a><br>
+<a href="#DESCRIPTION">DESCRIPTION</a><br>
+<a href="#OPTIONS">OPTIONS</a><br>
+<a href="#NOTES">NOTES</a><br>
+<a href="#EXAMPLE">EXAMPLE</a><br>
+<a href="#SEE ALSO">SEE ALSO</a><br>
+
+<hr>
+
+
+<h2>NAME
+<a name="NAME"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b> -
+print fundamental physical constants</p>
+
+<h2>SYNOPSIS
+<a name="SYNOPSIS"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>
+[OPTION...] [REGEX_PATTERN...]</p>
+
+<h2>DESCRIPTION
+<a name="DESCRIPTION"></a>
+</h2>
+
+
+
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(1)
+is a command line interface which prints all the
+<b>codata</b> constants.</p>
+
+<p style="margin-left:9%; margin-top: 1em">The current
+values are from 2022. Older values can be retrieved if
+needed and the output can be filtered with REGEX
+PATTERNS.</p>
+
+<h2>OPTIONS
+<a name="OPTIONS"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em"><b>--year, -y
+YEAR</b></p>
+
+<p style="margin-left:18%;">CODATA constants: 2022, 2018,
+2014, 2010</p>
+
+<p style="margin-left:9%;"><b>--pattern, -p PATTERN</b></p>
+
+<p style="margin-left:18%;">Regex pattern for filtering the
+constants.</p>
+
+<p style="margin-left:9%;"><b>--value, -a</b></p>
+
+<p style="margin-left:18%;">Show only the value.</p>
+
+<p style="margin-left:9%;"><b>--error, -e</b></p>
+
+<p style="margin-left:18%;">Show only the uncertainty.</p>
+
+<p style="margin-left:9%;"><b>--usage</b></p>
+
+<p style="margin-left:18%;">Show usage text and exit.</p>
+
+<p style="margin-left:9%;"><b>--version, -v</b></p>
+
+<p style="margin-left:18%;">Show version information and
+exit.</p>
+
+<p style="margin-left:9%;"><b>--help, -h</b></p>
+
+<p style="margin-left:18%;">Show help text and exit.</p>
+
+<h2>NOTES
+<a name="NOTES"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">You may replace
+the default options from a file if your first options begin
+with @file. Initial options will then be read from the
+&quot;response file&quot; &quot;file.rsp&quot; in the
+current directory.</p>
+
+<p style="margin-left:9%; margin-top: 1em">If
+&quot;file&quot; does not exist or cannot be read, then an
+error occurs and the program stops. Each line of the file is
+prefixed with &quot;options&quot; and interpreted as a
+separate argument. The file itself may not contain @file
+arguments. That is, it is not processed recursively.</p>
+
+<p style="margin-left:9%; margin-top: 1em">For more
+information on response files see
+https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html</p>
+
+<h2>EXAMPLE
+<a name="EXAMPLE"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Minimal
+example</p>
+
+<p style="margin-left:9%; margin-top: 1em">codata <br>
+codata -y 2018 molar electron <br>
+codata -y 2014 -p molar.*gas,electron.*eV <br>
+codata [B,b]oltzmann.*eV</p>
+
+<h2>SEE ALSO
+<a name="SEE ALSO"></a>
+</h2>
+
+
+
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3)</p>
+<hr>
+</body>
+</html>

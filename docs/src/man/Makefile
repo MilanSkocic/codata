@@ -1,4 +1,4 @@
-include ../make.in
+include ../../../make.in
 
 MAN=$(wildcard ./src/*)
 MANBUILD=$(patsubst ./src/%, build/%, $(MAN))
@@ -9,11 +9,15 @@ MANHTML=$(patsubst ./src/%, build/%.html, $(MAN))
 
 BOOKMAN=build/$(FPM_NAME)-bookman.pdf
 
-all: dir $(MANBUILD) $(MANPDF) $(MANTXT) $(MANGZ) $(MANHTML) $(BOOKMAN)
+all: dir $(MANBUILD) $(MANPDF) $(MANTXT) $(MANGZ) $(MANHTML) $(BOOKMAN) copy
 
 .PHONY: dir
 dir:
 	mkdir -p build
+
+.PHONY: copy
+copy:
+	cp -rf build/* ../../man/
 
 $(BOOKMAN): $(MANBUILD)
 	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User Commands & Libary Calls" -r $(FPM_VERSION) $(MAN) > $(BOOKMAN)
