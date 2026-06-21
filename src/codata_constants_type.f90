@@ -19,7 +19,6 @@ private
 !{{{2
 public :: to_real
 public :: codata_constant_type
-public :: capi_constant_type
 !}}}
 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -66,14 +65,6 @@ procedure :: to_real_sp
 procedure :: to_real_dp
 generic :: to_real => to_real_sp, to_real_dp
 end type codata_constant_type
-!***********************************************************************
-type, bind(C) :: capi_constant_type
-!! Derived type for representing a Codata constant in C.
-character(kind=c_char) :: name(65)
-real(c_double) :: value
-real(c_double) :: uncertainty
-character(kind=c_char) :: unit(33)
-end type capi_constant_type
 !}}}
 !***********************************************************************
 

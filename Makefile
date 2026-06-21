@@ -27,8 +27,8 @@ GEN_HEADERS=./scripts/gen_headers.py
 GEN_HEADER=./scripts/gen_header.py
 GEN_STDLIB=./scripts/gen_stdlib.py
 
-SRC_FYPP=$(wildcard ./source/*.fypp)
-SRC_FYPP_F90=$(patsubst ./source/%.fypp, ./src/%.f90, $(SRC_FYPP))
+SRC_FYPP=$(wildcard ./src/*.fypp)
+SRC_FYPP_F90=$(patsubst ./src/%.fypp, ./src/%.f90, $(SRC_FYPP))
 
 ARCHIVE=$(FPM_NAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
 PYARCHIVE=$(FPM_PYNAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
@@ -45,7 +45,7 @@ $(FPM_LIBNAME): build shared
 # ---------------------------------------------------------------------
 # SOURCES
 .PHONY: sources 
-sources: 
+sources: $(SRC_FYPP_F90)
 	make -C data
 	#make -C source
 	#make -C source/doc/man
@@ -54,6 +54,9 @@ sources:
 	#mkdir -p docs/latex
 	#mkdir -p docs/ford
 	#mkdir -p docs/sphinx
+
+./src/%.f90: ./src/%.fypp
+	fypp -I ./include $< $@
 # ---------------------------------------------------------------------
 
 
