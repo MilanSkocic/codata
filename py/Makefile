@@ -85,7 +85,6 @@ clean:
 	rm -rf __pycache__ 
 	rm -rf wheelhouse 
 	rm -rf $(FPM_PY_SRC)/__pycache__
-	rm -f $(FPM_PY_SRC)/$(FPM_NAME)*.h 
 	rm -f $(FPM_PY_SRC)/$(FPM_NAME)
 	rm -f $(FPM_PY_SRC)/$(FPM_NAME).exe
 	rm -f $(FPM_PY_SRC)/*.a 
