@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Mon Jun 22 13:12:59 2026 -->
+<!-- CreationDate: Mon Jun 22 23:36:54 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -13,12 +13,12 @@
        table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
        h1      { text-align: center }
 </style>
-<title>codata_library</title>
+<title>codata</title>
 
 </head>
 <body>
 
-<h1 align="center">codata_library</h1>
+<h1 align="center">codata</h1>
 
 <a href="#NAME">NAME</a><br>
 <a href="#LIBRARY">LIBRARY</a><br>
@@ -104,45 +104,135 @@ for fundamental physical constants</p>
 </h2>
 
 
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b> is
+a Fortran library providing the fundamental physical
+constants published by the CODATA. It includes the 2022,
+2018, 2014 and 2010 recommended values, allowing
+applications to reproduce calculations based on specific
+CODATA releases.</p>
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3)
-is a Fortran library providing the fundamental physical
-constants published by the CODATA. <b><br>
-Fortran API</b></p>
+<p style="margin-left:9%; margin-top: 1em">The constants
+are implemented as a derived type that carries: <i>the name,
+the value, the uncertainty, and the unit.</i> All the
+constants are provided as <b>double precision reals</b>.
+Long constant names can be aliased with shorter names.</p>
 
-<p style="margin-left:18%;">exposes the constants as
-derived type <b>codata_constant_type</b>(3) which carries
-<i>the name, the value, the uncertainty, and the
-unit.</i></p>
+<p style="margin-left:9%; margin-top: 1em">It provides:</p>
 
 <table width="100%" border="0" rules="none" frame="void"
        cellspacing="0" cellpadding="0">
 <tr valign="top" align="left">
 <td width="9%"></td>
-<td width="8%">
+<td width="1%">
 
 
-<p><b>C API</b></p></td>
-<td width="1%"></td>
-<td width="82%">
+<p style="margin-top: 1em">&bull;</p></td>
+<td width="5%"></td>
+<td width="29%">
 
 
-<p>exposes a structure codata_constant_type that defines
-the same members as in Fortran i.e. <i>the name, the value,
-the uncertainty, and the unit.</i></p></td></tr>
+<p style="margin-top: 1em">CODATA 2022 constants</p></td>
+<td width="56%">
+</td></tr>
 <tr valign="top" align="left">
 <td width="9%"></td>
-<td width="8%">
+<td width="1%">
 
 
-<p><b>Python</b></p></td>
-<td width="1%"></td>
-<td width="82%">
+<p>&bull;</p></td>
+<td width="5%"></td>
+<td width="29%">
 
 
-<p>exposes a dictionary with the keys being <i>the name,
-the value, the uncertainty, and the unit.</i></p></td></tr>
+<p>CODATA 2018 constants</p></td>
+<td width="56%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="5%"></td>
+<td width="29%">
+
+
+<p>CODATA 2014 constants</p></td>
+<td width="56%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="5%"></td>
+<td width="29%">
+
+
+<p>CODATA 2010 constants</p></td>
+<td width="56%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="5%"></td>
+<td width="29%">
+
+
+<p>Native Fortran API</p></td>
+<td width="56%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="5%"></td>
+<td width="29%">
+
+
+<p>C interoperability API</p></td>
+<td width="56%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="1%">
+
+
+<p>&bull;</p></td>
+<td width="5%"></td>
+<td width="29%">
+
+
+<p>Python bindings</p></td>
+<td width="56%">
+</td></tr>
 </table>
+
+<p style="margin-left:9%;"><b>Fortran API</b></p>
+
+<p style="margin-left:15%;">exposes the constants as
+derived type <b>codata_constant_type</b> which carries
+<i>the name, the value, the uncertainty, and the
+unit.</i></p>
+
+<p style="margin-left:9%;"><b>C API</b></p>
+
+<p style="margin-left:15%;">exposes a structure
+codata_constant_type that defines the same members as in
+Fortran i.e. <i>the name, the value, the uncertainty, and
+the unit.</i></p>
+
+<p style="margin-left:9%;"><b>Python</b></p>
+
+<p style="margin-left:15%;">exposes a dictionary with the
+keys being <i>the name, the value, the uncertainty, and the
+unit.</i></p>
 
 <h2>NOTES
 <a name="NOTES"></a>
@@ -154,6 +244,69 @@ values (2022) do not have the year as a suffix in their name
 whereas older values (2010, 2014, 2018) feature the year as
 a suffix. All constants are declared with the same variable
 name in Fortran, C, and Python.</p>
+
+<p style="margin-left:9%; margin-top: 1em">The API is
+written as POSIX-style man pages which are distributed with
+the binaries.</p>
+
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="5%">
+
+
+<p>HTML</p></td>
+<td width="4%"></td>
+<td width="76%">
+
+
+<p>https://milanskocic.github.io/codata/index.html</p></td>
+<td width="6%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="5%">
+
+
+<p>PDF</p></td>
+<td width="4%"></td>
+<td width="76%">
+
+
+
+<p>https://milanskocic.github.io/codata/man/codata-bookman.pdf</p> </td>
+<td width="6%">
+</td></tr>
+</table>
+
+<p style="margin-left:9%; margin-top: 1em">The codata
+constants from the 2022 adjustment were integrated into the
+<b>Fortran standard library (stdlib).</b> This library is
+complementary to the constants defined in the <b>stdlib</b>
+by providing older values for the constants. See
+https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
+If your application only requires the latest CODATA values,
+the Fortran standard library may be sufficient. Use codata
+when you need access to historical CODATA releases or
+compatibility with older scientific results.</p>
+
+<p style="margin-left:9%; margin-top: 1em">To use codata
+within your <b>fpm</b>(1)
+(https://github.com/fortran-lang/fpm) project, add the
+following lines to your file:</p>
+
+<p style="margin-left:9%; margin-top: 1em">[dependencies]
+<br>
+codata = {
+git=&quot;https://github.com/MilanSkocic/codata.git&quot;
+}</p>
+
+<p style="margin-left:9%; margin-top: 1em">If you only need
+sources for the CODATA constants that can be integrated
+directly into your project, you may be interested in the
+following repository:
+https://github.com/vmagnin/fundamental_constants.</p>
 
 <h2>EXAMPLE
 <a name="EXAMPLE"></a>
@@ -194,22 +347,24 @@ end program</p>
 <p style="margin-left:9%; margin-top: 1em">int main(void){
 <br>
 printf(&quot;%f&quot;, c); <br>
-printf(&quot;########## EXAMPLE IN C ##########0); <br>
-printf(&quot;%s0,&quot;# VERSION&quot;); <br>
-printf(&quot;version = %s0, codata_version()); <br>
-printf(&quot;%s0,&quot;# CONSTANTS&quot;); <br>
-printf(&quot;c = %f0, SPEED_OF_LIGHT_IN_VACUUM.value); <br>
-printf(&quot;%s0,&quot;# UNCERTAINTY&quot;); <br>
-printf(&quot;u(c) = %f0,
+printf(&quot;########## EXAMPLE IN C ##########\n&quot;);
+<br>
+printf(&quot;%s\n&quot;,&quot;# VERSION&quot;); <br>
+printf(&quot;version = %s\n&quot;, codata_version()); <br>
+printf(&quot;%s\n&quot;,&quot;# CONSTANTS&quot;); <br>
+printf(&quot;c = %f\n&quot;,
+SPEED_OF_LIGHT_IN_VACUUM.value); <br>
+printf(&quot;%s\n&quot;,&quot;# UNCERTAINTY&quot;); <br>
+printf(&quot;u(c) = %f\n&quot;,
 SPEED_OF_LIGHT_IN_VACUUM.uncertainty); <br>
-printf(&quot;%s0,&quot;# OLDER VALUES&quot;); <br>
-printf(&quot;Mu_2022(latest) = %23.16f0,
+printf(&quot;%s\n&quot;,&quot;# OLDER VALUES&quot;); <br>
+printf(&quot;Mu_2022(latest) = %23.16f\n&quot;,
 MOLAR_MASS_CONSTANT.value); <br>
-printf(&quot;Mu_2018 = %23.16f0,
+printf(&quot;Mu_2018 = %23.16f\n&quot;,
 MOLAR_MASS_CONSTANT_2018.value); <br>
-printf(&quot;Mu_2014 = %23.16f0,
+printf(&quot;Mu_2014 = %23.16f\n&quot;,
 MOLAR_MASS_CONSTANT_2014.value); <br>
-printf(&quot;Mu_2010 = %23.16f0,
+printf(&quot;Mu_2010 = %23.16f\n&quot;,
 MOLAR_MASS_CONSTANT_2010.value); <br>
 return 0; <br>
 }</p>
@@ -246,9 +401,9 @@ pycodata.MOLAR_MASS_CONSTANT_2010[&quot;value&quot;])</p>
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(7),
-<b>codata</b>(3), <b>codata_cli</b>(1),
-<b>codata_version</b>(3), <b>codata_constant_type</b>(3)</p>
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3),
+<b>codata_cli</b>(1), <b>codata_version</b>(3),
+<b>codata_constant_type</b>(3)</p>
 
 <h2>CODATA 2022
 <a name="CODATA 2022"></a>

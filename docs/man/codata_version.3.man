@@ -1,16 +1,18 @@
 .TH codata_version 3 "@DATE@" "@VERSION@" "Library Functions Manual"
 
 .SH NAME
-version \- get the version of the codata library
-
+\"{{{
+version \- function
+\"}}}
 
 .SH LIBRARY
+\"{{{
 Codata library 
 .RI ( libcodata ", " \-lcodata )
-
+\"}}}
 
 .SH SYNOPSIS
-.IP Fortran 10
+\"{{{ .IP Fortran 10
 .B character(len=:), pointer :: version()
 
 .IP C 10
@@ -18,15 +20,15 @@ Codata library
 
 .IP Python 10
 .B pycodata.__version__
-
-
+\"}}}
 
 .SH DESCRIPTION
+\"{{{
 Get the library version.
-
-
+\"}}}
 
 .SH EXAMPLE
+\"{{{
 .PP
 Fortran:
 .nf
@@ -54,12 +56,12 @@ Python:
       print(f"version = {pycodata.__version__}")
 .ft R
 .fi
-
-
+\"}}}
 
 .SH SEE ALSO
-.BR codata (7),
+\"{{{
 .BR codata (3),
 .BR codata_cli (1),
 .BR codata_version (3),
 .BR codata_constant_type (3)
+\"}}}

@@ -1,30 +1,72 @@
 .TH codata_constant_type 3 "22 June 2026" "2.5.3" "Library Functions Manual"
 
 .SH NAME
-codata_constant_type \- data type defining a constant
-
+\"{{{
+codata_constant_type \- derived type
+\"}}}
 
 .SH LIBRARY
+\"{{{
 Codata library 
 .RI ( libcodata ", " \-lcodata )
-
+\"}}}
 
 .SH SYNOPSIS
+\"{{{
 .IP Fortran 10
 .BI "type(codata_constant_type) :: " "c"
 
 .IP C 10 
 .BI "struct codata_constant_type" " c"
-
-
+\"}}}
 
 .SH DESCRIPTION
+\"{{{
+.PP
 Defines a constant with 
 .I the name, the value, the uncertainty and the unit.
 
+.B 
+type :: codata_constant_type
+.IP
+.BI "character(len=64) :: " name
+.IP
+.BI "real(dp) :: " value       
+.IP
+.BI "real(dp) :: " uncertainty
+.IP
+.BI "character(len=32) :: " unit
+.RE
+.B 
+contains
+.IP 
+.BI "procedure :: " print
+.IP 
+.BI "procedure :: " to_real_sp
+.IP 
+.BI "procedure :: " to_real_dp
+.IP 
+.BI "generic :: " "to_real => to_real_sp, to_real_dp"
+.RE
+.B end type codata_constant_type
 
+.B 
+struct codata_constant_type{
+.IP 
+.BI "char " name[65];
+.IP
+.BI "double " value;
+.IP 
+.BI "double " uncertainty;
+.IP 
+.BI "char " unit[33];
+.RE
+.B 
+};
+\"}}}
 
 .SH EXAMPLE
+\"{{{
 .PP
 Fortran:
 .nf
@@ -40,17 +82,18 @@ C:
 .PP
 .nf
 .ft CR
+      include "codata.h"
       struct codata_constant_type c;
       c = SPEED_OF_LIGHT_IN_VACUUM;
 
 .ft R
 .fi
-
-
+\"}}}
 
 .SH SEE ALSO
-.BR codata (7),
+\"{{{
 .BR codata (3),
 .BR codata_cli (1),
 .BR codata_version (3),
 .BR codata_constant_type (3)
+\"}}}

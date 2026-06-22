@@ -75,7 +75,7 @@ Minimal example
 .nf
 .ft CR
      codata
-     codata -y 2018 molar electron
+     codata -p Faraday
      codata -y 2014 -p molar.*gas,electron.*eV
      codata [B,b]oltzmann.*eV
 .ft R
@@ -84,7 +84,6 @@ Minimal example
 
 
 .SH SEE ALSO
-.BR codata (7),
 .BR codata (3),
 .BR codata_cli (1),
 .BR codata_version (3),

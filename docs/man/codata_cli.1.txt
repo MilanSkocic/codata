@@ -52,12 +52,12 @@ NOTES
 EXAMPLE
        Minimal example
             codata
-            codata -y 2018 molar electron
+            codata -p Faraday
             codata -y 2014 -p molar.*gas,electron.*eV
             codata [B,b]oltzmann.*eV
 
 SEE ALSO
-       codata(7),  codata(3),  codata_cli(1),  codata_version(3),   co‐
-       data_constant_type(3)
+       codata(3),   codata_cli(1),    codata_version(3),    codata_con‐
+       stant_type(3)
 
 2.5.3                         22 June 2026                codata_cli(1)

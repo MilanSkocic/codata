@@ -1,7 +1,7 @@
 codata_constant_type(3) Library Functions Manualcodata_constant_type(3)
 
 NAME
-       codata_constant_type - data type defining a constant
+       codata_constant_type - derived type
 
 LIBRARY
        Codata library (libcodata, -lcodata)
@@ -15,6 +15,37 @@ DESCRIPTION
        Defines a constant with the name, the value, the uncertainty and
        the unit.
 
+       type :: codata_constant_type
+
+              character(len=64) :: name
+
+              real(dp) :: value
+
+              real(dp) :: uncertainty
+
+              character(len=32) :: unit
+       contains
+
+              procedure :: print
+
+              procedure :: to_real_sp
+
+              procedure :: to_real_dp
+
+              generic :: to_real => to_real_sp, to_real_dp
+       end type codata_constant_type
+
+       struct codata_constant_type{
+
+              char name[65];
+
+              double value;
+
+              double uncertainty;
+
+              char unit[33];
+       };
+
 EXAMPLE
        Fortran:
              use codata
@@ -23,11 +54,12 @@ EXAMPLE
 
        C:
 
+             include "codata.h"
              struct codata_constant_type c;
              c = SPEED_OF_LIGHT_IN_VACUUM;
 
 SEE ALSO
-       codata(7),   codata(3),  codata_cli(1),  codata_version(3),  co‐
-       data_constant_type(3)
+       codata(3),    codata_cli(1),    codata_version(3),   codata_con‐
+       stant_type(3)
 
 2.5.3                         22 June 2026      codata_constant_type(3)

@@ -1,4 +1,4 @@
-codata_library(3)       Library Functions Manual      codata_library(3)
+codata(3)               Library Functions Manual              codata(3)
 
 NAME
        codata - libray for fundamental physical constants
@@ -14,26 +14,79 @@ SYNOPSIS
        Python    import pycodata
 
 DESCRIPTION
-       codata(3)  is a Fortran library providing the fundamental physi‐
-       cal constants published by the CODATA.
+       codata  is  a Fortran library providing the fundamental physical
+       constants published by the CODATA.  It includes the 2022,  2018,
+       2014  and  2010 recommended values, allowing applications to re‐
+       produce calculations based on specific CODATA releases.
+
+       The constants are implemented as a derived  type  that  carries:
+       the  name,  the  value,  the uncertainty, and the unit.  All the
+       constants are provided as double precision reals.  Long constant
+       names can be aliased with shorter names.
+
+       It provides:
+
+       •    CODATA 2022 constants
+
+       •    CODATA 2018 constants
+
+       •    CODATA 2014 constants
+
+       •    CODATA 2010 constants
+
+       •    Native Fortran API
+
+       •    C interoperability API
+
+       •    Python bindings
 
        Fortran API
-              exposes  the  constants  as  derived   type   codata_con‐
-              stant_type(3)  which carries the name, the value, the un‐
-              certainty, and the unit.
+            exposes the constants as derived type  codata_constant_type
+            which carries the name, the value, the uncertainty, and the
+            unit.
 
-       C API  exposes a structure codata_constant_type that defines the
-              same members as in Fortran i.e.  the name, the value, the
-              uncertainty, and the unit.
+       C API
+            exposes  a  structure codata_constant_type that defines the
+            same members as in Fortran i.e.  the name, the  value,  the
+            uncertainty, and the unit.
 
-       Python exposes a dictionary with the keys being  the  name,  the
-              value, the uncertainty, and the unit.
+       Python
+            exposes  a  dictionary  with  the  keys being the name, the
+            value, the uncertainty, and the unit.
 
 NOTES
-       The  latest  values  (2022)  do not have the year as a suffix in
-       their name whereas older values (2010, 2014, 2018)  feature  the
-       year  as  a  suffix.   All  constants are declared with the same
+       The latest values (2022) do not have the year  as  a  suffix  in
+       their  name  whereas older values (2010, 2014, 2018) feature the
+       year as a suffix.  All constants  are  declared  with  the  same
        variable name in Fortran, C, and Python.
+
+       The  API  is written as POSIX-style man pages which are distrib‐
+       uted with the binaries.
+
+       HTML   https://milanskocic.github.io/codata/index.html
+
+       PDF    https://milanskocic.github.io/codata/man/codata-book‐
+              man.pdf
+
+       The codata constants from the 2022  adjustment  were  integrated
+       into  the  Fortran  standard  library (stdlib).  This library is
+       complementary to the constants defined in the stdlib by  provid‐
+       ing older values for the constants.  See https://github.com/for‐
+       tran-lang/stdlib/releases/tag/v0.7.0.   If your application only
+       requires the latest CODATA values, the Fortran standard  library
+       may be sufficient. Use codata when you need access to historical
+       CODATA releases or compatibility with older scientific results.
+
+       To  use  codata  within your fpm(1) (https://github.com/fortran-
+       lang/fpm) project, add the following lines to your file:
+
+        [dependencies]
+        codata = { git="https://github.com/MilanSkocic/codata.git" }
+
+       If you only need sources for the CODATA constants  that  can  be
+       integrated  directly into your project, you may be interested in
+       the following  repository:  https://github.com/vmagnin/fundamen‐
+       tal_constants.
 
 EXAMPLE
        Example in Fortran
@@ -60,18 +113,18 @@ EXAMPLE
 
            int main(void){
            printf("%f", c);
-           printf("########## EXAMPLE IN C ##########0);
-           printf("%s0,"# VERSION");
-           printf("version = %s0, codata_version());
-           printf("%s0,"# CONSTANTS");
-           printf("c = %f0, SPEED_OF_LIGHT_IN_VACUUM.value);
-           printf("%s0,"# UNCERTAINTY");
-           printf("u(c) = %f0, SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
-           printf("%s0,"# OLDER VALUES");
-           printf("Mu_2022(latest) = %23.16f0, MOLAR_MASS_CONSTANT.value);
-           printf("Mu_2018 = %23.16f0, MOLAR_MASS_CONSTANT_2018.value);
-           printf("Mu_2014 = %23.16f0, MOLAR_MASS_CONSTANT_2014.value);
-           printf("Mu_2010 = %23.16f0, MOLAR_MASS_CONSTANT_2010.value);
+           printf("########## EXAMPLE IN C ##########\n");
+           printf("%s\n","# VERSION");
+           printf("version = %s\n", codata_version());
+           printf("%s\n","# CONSTANTS");
+           printf("c = %f\n", SPEED_OF_LIGHT_IN_VACUUM.value);
+           printf("%s\n","# UNCERTAINTY");
+           printf("u(c) = %f\n", SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
+           printf("%s\n","# OLDER VALUES");
+           printf("Mu_2022(latest) = %23.16f\n", MOLAR_MASS_CONSTANT.value);
+           printf("Mu_2018 = %23.16f\n", MOLAR_MASS_CONSTANT_2018.value);
+           printf("Mu_2014 = %23.16f\n", MOLAR_MASS_CONSTANT_2014.value);
+           printf("Mu_2010 = %23.16f\n", MOLAR_MASS_CONSTANT_2010.value);
            return 0;
            }
 
@@ -93,8 +146,8 @@ EXAMPLE
            print("Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
 
 SEE ALSO
-       codata(7),  codata(3),  codata_cli(1),  codata_version(3),   co‐
-       data_constant_type(3)
+       codata(3),    codata_cli(1),    codata_version(3),   codata_con‐
+       stant_type(3)
 
 CODATA 2022
        List of available constants:
@@ -2869,4 +2922,4 @@ CODATA 2010
 
        •      WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT _2010
 
-2.5.3                         22 June 2026            codata_library(3)
+2.5.3                         22 June 2026                    codata(3)

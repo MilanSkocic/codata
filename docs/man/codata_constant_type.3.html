@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Mon Jun 22 13:12:59 2026 -->
+<!-- CreationDate: Mon Jun 22 23:36:54 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -37,7 +37,7 @@
 
 
 <p style="margin-left:9%; margin-top: 1em">codata_constant_type
-- data type defining a constant</p>
+- derived type</p>
 
 <h2>LIBRARY
 <a name="LIBRARY"></a>
@@ -92,6 +92,57 @@
 constant with <i>the name, the value, the uncertainty and
 the unit.</i></p>
 
+<p style="margin-left:9%; margin-top: 1em"><b>type ::
+codata_constant_type</b></p>
+
+
+<p style="margin-left:18%; margin-top: 1em"><b>character(len=64)
+::</b> <i>name</i></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>real(dp)
+::</b> <i>value</i></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>real(dp)
+::</b> <i>uncertainty</i></p>
+
+
+<p style="margin-left:18%; margin-top: 1em"><b>character(len=32)
+::</b> <i>unit</i></p>
+
+<p style="margin-left:9%;"><b>contains</b></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>procedure
+::</b> <i>print</i></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>procedure
+::</b> <i>to_real_sp</i></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>procedure
+::</b> <i>to_real_dp</i></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>generic
+::</b> <i>to_real =&gt; to_real_sp, to_real_dp</i></p>
+
+<p style="margin-left:9%;"><b>end type
+codata_constant_type</b></p>
+
+<p style="margin-left:9%; margin-top: 1em"><b>struct
+codata_constant_type{</b></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>char</b>
+<i>name[65];</i></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>double</b>
+<i>value;</i></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>double</b>
+<i>uncertainty;</i></p>
+
+<p style="margin-left:18%; margin-top: 1em"><b>char</b>
+<i>unit[33];</i></p>
+
+<p style="margin-left:9%;"><b>};</b></p>
+
 <h2>EXAMPLE
 <a name="EXAMPLE"></a>
 </h2>
@@ -104,8 +155,9 @@ c = SPEED_OF_LIGHT_IN_VACUUM</p>
 
 <p style="margin-left:9%; margin-top: 1em">C:</p>
 
-<p style="margin-left:9%; margin-top: 1em">struct
-codata_constant_type c; <br>
+<p style="margin-left:9%; margin-top: 1em">include
+&quot;codata.h&quot; <br>
+struct codata_constant_type c; <br>
 c = SPEED_OF_LIGHT_IN_VACUUM;</p>
 
 <h2>SEE ALSO
@@ -114,9 +166,9 @@ c = SPEED_OF_LIGHT_IN_VACUUM;</p>
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(7),
-<b>codata</b>(3), <b>codata_cli</b>(1),
-<b>codata_version</b>(3), <b>codata_constant_type</b>(3)</p>
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3),
+<b>codata_cli</b>(1), <b>codata_version</b>(3),
+<b>codata_constant_type</b>(3)</p>
 <hr>
 </body>
 </html>
