@@ -10,14 +10,18 @@ year="${name##*_}"
 suffix="_$year"
 if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 
-awk -v suffix="$suffix" '
+awk -v suffix="$suffix" -v year="$year" '
 BEGIN{
-    print "  List of available constants:"
-    print ""
+    print ".SH CODATA " year
+    print ".PP"
+    print "List of available constants:"
+    print ".\\\"{{{"
 }
 /^\[.*\]/{
     gsub(/\[/,"")
     gsub(/\]/,"")
-    printf "%s%s%s\n", "  - ", $0, suffix
+    print ".IP \\(bu "
+    print $0, suffix
 }
+END{print ".\\\"}}}"}
 ' $1

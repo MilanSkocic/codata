@@ -177,7 +177,6 @@ shift $(($OPTIND - 1))
 # GENERATE SOURCES
 #-----------------------------------------------------------------------
 #{{{
-
 if [[ $fsrc == 1 ]]; then
     make -C data clean
     make -C data
