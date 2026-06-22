@@ -27,4 +27,4 @@ EXAMPLE
 SEE ALSO
        codata(3)
 
-2.5.3                         18 June 2026      codata_constant_type(3)
+2.5.3                         22 June 2026      codata_constant_type(3)

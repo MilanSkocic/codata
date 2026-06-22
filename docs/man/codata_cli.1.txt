@@ -60,4 +60,4 @@ EXAMPLE
 SEE ALSO
        codata(3)
 
-2.5.3                         18 June 2026                codata_cli(1)
+2.5.3                         22 June 2026                codata_cli(1)

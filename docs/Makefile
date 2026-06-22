@@ -2,8 +2,8 @@ all: man
 
 .PHONY: man
 man: 
-	make -C src/man
+	make -C man
 
 .PHONY: clean
 clean: 
-	make -C src/man clean
+	make -C man clean
