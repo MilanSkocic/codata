@@ -12,7 +12,8 @@ Codata library
 \"}}}
 
 .SH SYNOPSIS
-\"{{{ .IP Fortran 10
+\"{{{ 
+.IP Fortran 10
 .B character(len=:), pointer :: version()
 
 .IP C 10

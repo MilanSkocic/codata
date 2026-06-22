@@ -7,7 +7,7 @@ LIBRARY
        Codata library (libcodata, -lcodata)
 
 SYNOPSIS
-       character(len=:), pointer :: version()
+       Fortran   character(len=:), pointer :: version()
 
        C         char* codata_version()
 
