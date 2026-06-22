@@ -23,7 +23,7 @@ Codata library
 
 .SH DESCRIPTION
 .PP
-codata is a Fortran library providing the fundamental physical constants
+\fBcodata\fP is a Fortran library providing the fundamental physical constants
 published by CODATA. 
 It includes the 2022, 2018, 2014 and 2010 recommended values, 
 allowing applications to reproduce calculations based on specific 
@@ -95,7 +95,7 @@ https://github.com/vmagnin/fundamental_constants.
 MIT
 
 .SH SEE ALSO
-.PP
+.BR codata (7),
 .BR codata (3),
 .BR codata_cli (1),
 .BR codata_version (3),

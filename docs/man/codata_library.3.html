@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Mon Jun 22 11:08:54 2026 -->
+<!-- CreationDate: Mon Jun 22 13:12:59 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -13,12 +13,12 @@
        table   { margin-top: 0; margin-bottom: 0; vertical-align: top }
        h1      { text-align: center }
 </style>
-<title>codata</title>
+<title>codata_library</title>
 
 </head>
 <body>
 
-<h1 align="center">codata</h1>
+<h1 align="center">codata_library</h1>
 
 <a href="#NAME">NAME</a><br>
 <a href="#LIBRARY">LIBRARY</a><br>
@@ -40,30 +40,64 @@
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b> -
-libray for fundamental physical constants</p>
+<p style="margin-left:9%; margin-top: 1em">codata - libray
+for fundamental physical constants</p>
 
 <h2>LIBRARY
 <a name="LIBRARY"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">codata
-(<b>-libcodata</b>, <b>-lcodata</b>)</p>
+<p style="margin-left:9%; margin-top: 1em">Codata library
+(<i>libcodata</i>, <i>-lcodata</i>)</p>
 
 <h2>SYNOPSIS
 <a name="SYNOPSIS"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Fortran: <i>use
-codata</i></p>
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="9%">
 
-<p style="margin-left:9%; margin-top: 1em">C:
-<i>include</i> &quot;codata.h&quot;</p>
 
-<p style="margin-left:9%; margin-top: 1em">Python:
-<i>import pycodata</i></p>
+<p style="margin-top: 1em">Fortran</p></td>
+<td width="4%"></td>
+<td width="24%">
+
+
+<p style="margin-top: 1em"><b>use codata</b></p></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="9%">
+
+
+<p>C</p></td>
+<td width="4%"></td>
+<td width="24%">
+
+
+<p><b>#include &quot;codata.h&quot;</b></p></td>
+<td width="54%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="9%">
+
+
+<p>Python</p></td>
+<td width="4%"></td>
+<td width="24%">
+
+
+<p><b>import pycodata</b></p></td>
+<td width="54%">
+</td></tr>
+</table>
 
 <h2>DESCRIPTION
 <a name="DESCRIPTION"></a>
@@ -71,207 +105,43 @@ codata</i></p>
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><i><b>codata</b></i>(3)
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3)
 is a Fortran library providing the fundamental physical
 constants published by the CODATA. <b><br>
 Fortran API</b></p>
 
 <p style="margin-left:18%;">exposes the constants as
-derived type codata_constant_type which carries:</p>
+derived type <b>codata_constant_type</b>(3) which carries
+<i>the name, the value, the uncertainty, and the
+unit.</i></p>
 
 <table width="100%" border="0" rules="none" frame="void"
        cellspacing="0" cellpadding="0">
 <tr valign="top" align="left">
 <td width="9%"></td>
-<td width="10%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="14%">
-
-
-<p>name</p></td>
-<td width="64%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="9%"></td>
-<td width="10%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="14%">
-
-
-<p>value</p></td>
-<td width="64%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="9%"></td>
-<td width="10%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="14%">
-
-
-<p>uncertainty</p></td>
-<td width="64%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="9%"></td>
-<td width="10%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="14%">
-
-
-<p>unit</p></td>
-<td width="64%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="9%"></td>
-<td width="10%">
+<td width="8%">
 
 
 <p><b>C API</b></p></td>
-<td width="3%"></td>
-<td width="14%"></td>
-<td width="64%">
-</td></tr>
-</table>
+<td width="1%"></td>
+<td width="82%">
 
-<p style="margin-left:18%; margin-top: 1em">exposes a
-structure codata_constant_type that defines the same members
-as in Fortran:</p>
 
-<table width="100%" border="0" rules="none" frame="void"
-       cellspacing="0" cellpadding="0">
+<p>exposes a structure codata_constant_type that defines
+the same members as in Fortran i.e. <i>the name, the value,
+the uncertainty, and the unit.</i></p></td></tr>
 <tr valign="top" align="left">
 <td width="9%"></td>
-<td width="10%">
-
-
-<p style="margin-top: 1em">&bull;</p></td>
-<td width="3%"></td>
-<td width="14%">
-
-
-<p style="margin-top: 1em">name</p></td>
-<td width="64%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="9%"></td>
-<td width="10%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="14%">
-
-
-<p>value</p></td>
-<td width="64%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="9%"></td>
-<td width="10%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="14%">
-
-
-<p>uncertainty</p></td>
-<td width="64%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="9%"></td>
-<td width="10%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="14%">
-
-
-<p>unit</p></td>
-<td width="64%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="9%"></td>
-<td width="10%">
+<td width="8%">
 
 
 <p><b>Python</b></p></td>
-<td width="3%"></td>
-<td width="14%"></td>
-<td width="64%">
-</td></tr>
-</table>
-
-<p style="margin-left:18%; margin-top: 1em">exposes a
-dictionary with the keys being:</p>
-
-<table width="100%" border="0" rules="none" frame="void"
-       cellspacing="0" cellpadding="0">
-<tr valign="top" align="left">
-<td width="18%"></td>
-<td width="1%">
+<td width="1%"></td>
+<td width="82%">
 
 
-<p style="margin-top: 1em">&bull;</p></td>
-<td width="3%"></td>
-<td width="19%">
-
-
-<p style="margin-top: 1em">the name</p></td>
-<td width="59%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="18%"></td>
-<td width="1%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="19%">
-
-
-<p>the value</p></td>
-<td width="59%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="18%"></td>
-<td width="1%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="19%">
-
-
-<p>the uncertainty</p></td>
-<td width="59%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="18%"></td>
-<td width="1%">
-
-
-<p>&bull;</p></td>
-<td width="3%"></td>
-<td width="19%">
-
-
-<p>the unit</p></td>
-<td width="59%">
-</td></tr>
+<p>exposes a dictionary with the keys being <i>the name,
+the value, the uncertainty, and the unit.</i></p></td></tr>
 </table>
 
 <h2>NOTES
@@ -291,10 +161,8 @@ name in Fortran, C, and Python.</p>
 
 
 <p style="margin-left:9%; margin-top: 1em">Example in
-Fortran</p>
-
-<p style="margin-left:9%; margin-top: 1em">program
-example_in_f <br>
+Fortran <br>
+program example_in_f <br>
 use codata <br>
 implicit none <br>
 print &rsquo;(A)&rsquo;, &rsquo;########## EXAMPLE IN
@@ -318,10 +186,9 @@ print &rsquo;(A, F23.16)&rsquo;, &quot;Mu_2010 = &quot;,
 MOLAR_MASS_CONSTANT_2010%value <br>
 end program</p>
 
-<p style="margin-left:9%; margin-top: 1em">Example in C</p>
-
-<p style="margin-left:9%; margin-top: 1em">#include
-&lt;stdio.h&gt; <br>
+<p style="margin-left:9%; margin-top: 1em">Example in C
+<br>
+#include &lt;stdio.h&gt; <br>
 #include &quot;codata.h&quot;</p>
 
 <p style="margin-left:9%; margin-top: 1em">int main(void){
@@ -348,9 +215,8 @@ return 0; <br>
 }</p>
 
 <p style="margin-left:9%; margin-top: 1em">Example in
-Python</p>
-
-<p style="margin-left:9%; margin-top: 1em">import sys <br>
+Python <br>
+import sys <br>
 sys.path.insert(0, &quot;../py/src/&quot;) <br>
 import pycodata <br>
 print(&quot;########## EXAMPLE IN PYTHON ##########&quot;)
@@ -380,7 +246,8 @@ pycodata.MOLAR_MASS_CONSTANT_2010[&quot;value&quot;])</p>
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(1),
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(7),
+<b>codata</b>(3), <b>codata_cli</b>(1),
 <b>codata_version</b>(3), <b>codata_constant_type</b>(3)</p>
 
 <h2>CODATA 2022

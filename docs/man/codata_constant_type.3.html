@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Mon Jun 22 11:08:54 2026 -->
+<!-- CreationDate: Mon Jun 22 13:12:59 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -21,6 +21,7 @@
 <h1 align="center">codata_constant_type</h1>
 
 <a href="#NAME">NAME</a><br>
+<a href="#LIBRARY">LIBRARY</a><br>
 <a href="#SYNOPSIS">SYNOPSIS</a><br>
 <a href="#DESCRIPTION">DESCRIPTION</a><br>
 <a href="#EXAMPLE">EXAMPLE</a><br>
@@ -35,19 +36,52 @@
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata_constant_type</b>
+<p style="margin-left:9%; margin-top: 1em">codata_constant_type
 - data type defining a constant</p>
+
+<h2>LIBRARY
+<a name="LIBRARY"></a>
+</h2>
+
+
+<p style="margin-left:9%; margin-top: 1em">Codata library
+(<i>libcodata</i>, <i>-lcodata</i>)</p>
 
 <h2>SYNOPSIS
 <a name="SYNOPSIS"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Fortran:
-<b>type</b>(<i>codata_constant_type</i>) :: c</p>
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="9%">
 
-<p style="margin-left:9%; margin-top: 1em">C: struct
-<i>codata_constant_type</i> c</p>
+
+<p style="margin-top: 1em">Fortran</p></td>
+<td width="4%"></td>
+<td width="40%">
+
+
+<p style="margin-top: 1em"><b>type(codata_constant_type)
+::</b> <i>c</i></p></td>
+<td width="38%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="9%">
+
+
+<p>C</p></td>
+<td width="4%"></td>
+<td width="40%">
+
+
+<p><b>struct codata_constant_type</b> <i>c</i></p></td>
+<td width="38%">
+</td></tr>
+</table>
 
 <h2>DESCRIPTION
 <a name="DESCRIPTION"></a>
@@ -55,17 +89,16 @@
 
 
 <p style="margin-left:9%; margin-top: 1em">Defines a
-constant with the name, the value, the uncertainty and the
-unit.</p>
+constant with <i>the name, the value, the uncertainty and
+the unit.</i></p>
 
 <h2>EXAMPLE
 <a name="EXAMPLE"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Fortran:</p>
-
-<p style="margin-left:9%; margin-top: 1em">use codata <br>
+<p style="margin-left:9%; margin-top: 1em">Fortran: <br>
+use codata <br>
 type(codata_constant_type), pointer :: c <br>
 c = SPEED_OF_LIGHT_IN_VACUUM</p>
 
@@ -81,7 +114,9 @@ c = SPEED_OF_LIGHT_IN_VACUUM;</p>
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3)</p>
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(7),
+<b>codata</b>(3), <b>codata_cli</b>(1),
+<b>codata_version</b>(3), <b>codata_constant_type</b>(3)</p>
 <hr>
 </body>
 </html>
