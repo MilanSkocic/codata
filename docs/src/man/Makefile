@@ -12,7 +12,7 @@ MANHTML=$(patsubst ./src/%, build/%.html, $(MAN))
 
 BOOKMAN=build/$(FPM_NAME)-bookman.pdf
 
-all: dir $(MANBUILD) $(MANPDF) $(MANTXT) $(MANGZ) $(MANHTML) $(BOOKMAN) copy
+all: dir $(MANBUILD) $(BOOKMAN) $(MANGZ) $(MANPDF) $(MANTXT) $(MANHTML)
 
 .PHONY: dir
 dir:
@@ -23,24 +23,26 @@ copy:
 	cp -rf build/* ../../man/
 
 $(BOOKMAN): $(MANBUILD)
-	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User Commands & Libary Calls" -r $(FPM_VERSION) $(MAN) > $(BOOKMAN)
+	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User Commands & Libary Calls" -r $(FPM_VERSION) $(MANBUILD) > $(BOOKMAN)
 
 build/codata.3: src/codata.3 
-	cat $< \
+	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" $< > build/tmp
+	cat build/tmp \
 		   ../../../data/build/codata_constants_2022.man \
 		   ../../../data/build/codata_constants_2018.man \
 		   ../../../data/build/codata_constants_2014.man \
            ../../../data/build/codata_constants_2010.man \
 		   > $@
+	rm -fv build/tmp
 
 build/codata_cli.1: src/codata_cli.1
-	cp $< $@
+	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" $< > $@
 
 build/codata_version.3: src/codata_version.3
-	cp $< $@
+	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" $< > $@
 
 build/codata_constant_type.3: src/codata_constant_type.3
-	cp $< $@
+	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" $< > $@
 
 build/%.pdf: build/%
 	man -l -Tpdf $< > $@
