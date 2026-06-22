@@ -1,4 +1,4 @@
-codata_constant_type(3)      Library Calls      codata_constant_type(3)
+codata_constant_type(3) Library Functions Manualcodata_constant_type(3)
 
 NAME
        codata_constant_type - data type defining a constant
