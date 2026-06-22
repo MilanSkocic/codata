@@ -1,6 +1,9 @@
 include ../../../make.in
 
-MAN=$(wildcard ./src/*)
+MAN=./src/codata.3 \
+	./src/codata_cli.1 \
+	./src/codata_version.3 \
+	./src/codata_constant_type.3
 MANBUILD=$(patsubst ./src/%, build/%, $(MAN))
 MANPDF=$(patsubst ./src/%, build/%.pdf, $(MAN))
 MANTXT=$(patsubst ./src/%, build/%.txt, $(MAN))
@@ -22,8 +25,22 @@ copy:
 $(BOOKMAN): $(MANBUILD)
 	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User Commands & Libary Calls" -r $(FPM_VERSION) $(MAN) > $(BOOKMAN)
 
-build/%: src/%
-	cp -fv $^ $@
+build/codata.3: src/codata.3 
+	cat $< \
+		   ../../../data/build/codata_constants_2022.man \
+		   ../../../data/build/codata_constants_2018.man \
+		   ../../../data/build/codata_constants_2014.man \
+           ../../../data/build/codata_constants_2010.man \
+		   > $@
+
+build/codata_cli.1: src/codata_cli.1
+	cp $< $@
+
+build/codata_version.3: src/codata_version.3
+	cp $< $@
+
+build/codata_constant_type.3: src/codata_constant_type.3
+	cp $< $@
 
 build/%.pdf: build/%
 	man -l -Tpdf $< > $@
