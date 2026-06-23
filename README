@@ -1,20 +1,68 @@
-codata is a Fortran library providing the fundamental physical constants
-published by CODATA. 
-It includes the 2022, 2018, 2014 and 2010 recommended values, 
-allowing applications to reproduce calculations based on specific 
-CODATA releases.
+DESCRIPTION
+  codata is a Fortran library providing the fundamental physical constants
+  published by CODATA. 
+  It includes the 2022, 2018, 2014 and 2010 recommended values, 
+  allowing applications to reproduce calculations based on specific 
+  CODATA releases.
+  
+FEATURES
+  It provides:
+  - CODATA 2022 constants
+  - CODATA 2018 constants
+  - CODATA 2014 constants
+  - CODATA 2010 constants
+  - Native Fortran API
+  - C interoperability API
+  - Python bindings
 
-- Documentation: https://milanskocic.github.io/codata/
-- Man pages: https://github.com/MilanSkocic/codata/tree/main/docs/man
-- Examples: https://github.com/MilanSkocic/codata/tree/main/example
-- Source code: https://github.com/MilanSKocic/codata
-- Binaries: https://github.com/MilanSkocic/codata/releases
-- Python wrapper: https://pypi.org/project/pycodata
+DOCUMENTATION 
+  The API is written as POSIX-style man pages which distributed with 
+  the binaries. 
+  
+  PDF   https://milanskocic.github.io/codata/man/codata-bookman.pdf
+  HTML  https://milanskocic.github.io/codata/index.html
 
-It provides:
-- CODATA 2022 constants
-- CODATA 2018 constants
-- CODATA 2014 constants
-- CODATA 2010 constants
+INSTALLATION 
+  See the INSTALL file.
 
-For the installation instructions, see the INSTALL file.
+NOTES FOR FORTRAN USERS
+  The codata constants from the 2022 adjustment were integrated into the Fortran 
+  standard library (stdlib).
+  This library is complementary to the constants defined in the stdlib
+  by providing older values for the constants.
+  See https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
+  If your application only requires the latest CODATA values, the
+  Fortran standard library may be sufficient. Use codata when you need
+  access to historical CODATA releases or compatibility with older
+  scientific results.
+  
+  To use codata within your fpm(1) (https://github.com/fortran-lang/fpm)
+  project, add the following lines to your file:
+
+     [dependencies]
+     codata = { git="https://github.com/MilanSkocic/codata.git" }
+
+  If you only need sources for the CODATA constants that can be 
+  integrated directly into your project, you may be interested in the 
+  following repository:
+  https://github.com/vmagnin/fundamental_constants.
+
+REFERENCES
+  [1]P. J. Mohr, B. N. Taylor, and D. B. Newell, 
+     “CODATA Recommended Values of the Fundamental Physical Constants: 2010,” 
+     Review of Modern Physics, vol. 84, 2012.
+  [2]P. J. Mohr, B. N. Taylor, and D. B. Newell, 
+     “CODATA Recommended Values of the Fundamental Physical Constants: 2014,” 
+     Journal of Physical and Chemical Reference Data, vol. 45, 2016.
+  [3]P. J. Mohr, B. N. Taylor, and D. B. Newell, 
+     “CODATA Recommended Values of the Fundamental Physical Constants: 2018,” 
+     Review of Modern Physics, vol. 93, 2021.
+  [4]P. Mohr, D. Newell, B. Taylor, and E. Tiesinga, 
+     “CODATA Recommended Values of the Fundamental Physical Constants: 2022.” 
+     Accessed: May 05, 2025. [Online]. Available: https://arxiv.org/abs/2409.03787
+  [5]P. J. Mohr, D. B. Newell, B. N. Taylor, and E. Tiesinga, 
+     “CODATA Recommended Values of the Fundamental Physical Constants: 2022,” 
+     Reviews of Modern Physics, vol. 97, no. 2, p. 25002, Apr. 2025, doi: 10.1103/RevModPhys.97.025002.
+
+LICENSE
+  MIT
