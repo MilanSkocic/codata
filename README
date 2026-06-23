@@ -4,12 +4,12 @@ It includes the 2022, 2018, 2014 and 2010 recommended values,
 allowing applications to reproduce calculations based on specific 
 CODATA releases.
 
-- **Documentation:** https://milanskocic.github.io/codata/
-- **Man pages:** https://github.com/MilanSkocic/codata/tree/main/docs/man
-- **Examples:** https://github.com/MilanSkocic/codata/tree/main/example
-- **Source code:** https://github.com/MilanSKocic/codata
-- **Binaries:** https://github.com/MilanSkocic/codata/releases
-- **Python wrapper:** https://pypi.org/project/pycodata
+- Documentation: https://milanskocic.github.io/codata/
+- Man pages: https://github.com/MilanSkocic/codata/tree/main/docs/man
+- Examples: https://github.com/MilanSkocic/codata/tree/main/example
+- Source code: https://github.com/MilanSKocic/codata
+- Binaries: https://github.com/MilanSkocic/codata/releases
+- Python wrapper: https://pypi.org/project/pycodata
 
 It provides:
 - CODATA 2022 constants
