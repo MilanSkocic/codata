@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Thu Jun 18 23:39:31 2026 -->
+<!-- CreationDate: Tue Jun 23 06:31:52 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -35,30 +35,65 @@
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>version</b> -
-get the version of the Fortran library codata</p>
+<p style="margin-left:9%; margin-top: 1em">version -
+function</p>
 
 <h2>LIBRARY
 <a name="LIBRARY"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">codata
-(<b>-libcodata</b>, <b>-lcodata</b>)</p>
+<p style="margin-left:9%; margin-top: 1em">Codata library
+(<i>libcodata</i>, <i>-lcodata</i>)</p>
 
 <h2>SYNOPSIS
 <a name="SYNOPSIS"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Fortran:
-<b>character</b>(<i>len</i>=:), pointer <b>version</b>()</p>
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="9%">
 
-<p style="margin-left:9%; margin-top: 1em">C: char*
-<b>codata_version</b>()</p>
 
-<p style="margin-left:9%; margin-top: 1em">Python:
-pycodata.__version__</p>
+<p style="margin-top: 1em">Fortran</p></td>
+<td width="4%"></td>
+<td width="49%">
+
+
+<p style="margin-top: 1em"><b>character(len=:), pointer ::
+version()</b></p> </td>
+<td width="29%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="9%">
+
+
+<p>C</p></td>
+<td width="4%"></td>
+<td width="49%">
+
+
+<p><b>char* codata_version()</b></p></td>
+<td width="29%">
+</td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="9%">
+
+
+<p>Python</p></td>
+<td width="4%"></td>
+<td width="49%">
+
+
+<p><b>pycodata.__version__</b></p></td>
+<td width="29%">
+</td></tr>
+</table>
 
 <h2>DESCRIPTION
 <a name="DESCRIPTION"></a>
@@ -73,22 +108,17 @@ version.</p>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Fortran:</p>
-
-<p style="margin-left:9%; margin-top: 1em">use codata <br>
+<p style="margin-left:9%; margin-top: 1em">Fortran: <br>
+use codata <br>
 print *, &quot;version = &quot;, version()</p>
 
-<p style="margin-left:9%; margin-top: 1em">C:</p>
-
-<p style="margin-left:9%; margin-top: 1em">include
-&lt;stdio.h&gt; <br>
+<p style="margin-left:9%; margin-top: 1em">C: <br>
+include &lt;stdio.h&gt; <br>
 include &quot;codata.h&quot; <br>
 printf(&quot;version = %s0, codata_version());</p>
 
-<p style="margin-left:9%; margin-top: 1em">Python:</p>
-
-<p style="margin-left:9%; margin-top: 1em">import pycodata
-<br>
+<p style="margin-left:9%; margin-top: 1em">Python: <br>
+import pycodata <br>
 print(f&quot;version = {pycodata.__version__}&quot;)</p>
 
 <h2>SEE ALSO
@@ -97,7 +127,9 @@ print(f&quot;version = {pycodata.__version__}&quot;)</p>
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3)</p>
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3),
+<b>codata_cli</b>(1), <b>codata_version</b>(3),
+<b>codata_constant_type</b>(3)</p>
 <hr>
 </body>
 </html>

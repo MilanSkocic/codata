@@ -1,0 +1,187 @@
+.TH codata 3 "@DATE@" "@VERSION@" "Library Functions Manual"
+
+.SH NAME
+\"{{{
+codata \- libray for fundamental physical constants
+\"}}}
+
+.SH LIBRARY
+\"{{{
+Codata library 
+.RI ( libcodata ", " \-lcodata )
+\"}}}
+
+.SH SYNOPSIS
+\"{{{
+.IP Fortran 10 
+.B use codata\fP
+
+.IP C 10
+.B #include \(dqcodata.h\(dq
+
+.IP Python 10
+.B import pycodata
+\"}}}
+
+.SH DESCRIPTION
+\"{{{
+.PP
+\fBcodata\fP is a Fortran library providing the fundamental physical
+constants published by the CODATA.
+It includes the 2022, 2018, 2014 and 2010 recommended values, 
+allowing applications to reproduce calculations based on specific 
+CODATA releases.
+.PP
+The constants are implemented as a derived type that carries:
+.I the name, the value, the uncertainty, and the unit.
+All the constants are provided as \fBdouble precision reals\fP.
+Long constant names can be aliased with shorter names.
+.PP
+It provides:
+.IP \(bu 5 
+CODATA 2022 constants
+.IP \(bu 5 
+CODATA 2018 constants
+.IP \(bu 5 
+CODATA 2014 constants
+.IP \(bu 5 
+CODATA 2010 constants
+.IP \(bu 5 
+Native Fortran API
+.IP \(bu 5 
+C interoperability API
+.IP \(bu 5 
+Python bindings
+
+.TP
+.B
+Fortran API
+exposes the constants as derived type \fBcodata_constant_type\fP
+which carries 
+.I the name, the value, the uncertainty, and the unit.
+.TP
+.B
+C API
+exposes a structure \fBcodata_constant_type\fP that defines
+the same members as in Fortran i.e.
+.I the name, the value, the uncertainty, and the unit.
+
+.TP
+.B
+Python
+exposes a dictionary with the keys being 
+.I the name, the value, the uncertainty, and the unit.
+\"}}}
+
+.SH NOTES
+\"{{{
+.PP
+The latest values (2022) do not have the year as a suffix in their name
+whereas older values (2010, 2014, 2018) feature the year as a suffix.
+All constants are declared with the same variable name in Fortran, C,
+and Python.
+
+.IP [1] 5 
+P. J. Mohr, B. N. Taylor, and D. B. Newell, 
+ “CODATA Recommended Values of the Fundamental Physical Constants: 2010,” 
+ Review of Modern Physics, vol. 84, 2012.
+.IP [2] 5 
+P. J. Mohr, B. N. Taylor, and D. B. Newell, 
+ “CODATA Recommended Values of the Fundamental Physical Constants: 2014,” 
+ Journal of Physical and Chemical Reference Data, vol. 45, 2016.
+.IP [3] 5
+P. J. Mohr, B. N. Taylor, and D. B. Newell, 
+“CODATA Recommended Values of the Fundamental Physical Constants: 2018,” 
+Review of Modern Physics, vol. 93, 2021.
+.IP [4] 5
+P. Mohr, D. Newell, B. Taylor, and E. Tiesinga, 
+“CODATA Recommended Values of the Fundamental Physical Constants: 2022.” 
+Accessed: May 05, 2025. [Online]. Available: https://arxiv.org/abs/2409.03787
+.IP [5] 5 
+P. J. Mohr, D. B. Newell, B. N. Taylor, and E. Tiesinga, 
+“CODATA Recommended Values of the Fundamental Physical Constants: 2022,” 
+Reviews of Modern Physics, vol. 97, no. 2, p. 25002, Apr. 2025, doi: 10.1103/RevModPhys.97.025002.
+\"}}}
+
+.SH EXAMPLE
+\"{{{
+.PP
+Example in Fortran
+.nf
+.ft CR
+    program example_in_f
+    use codata
+    implicit none
+    print '(A)', '########## EXAMPLE IN FORTRAN ##########'
+    print '(A)', '# VERSION'
+    print *, "version = ", version()
+    print '(A)', '# CONSTANTS'
+    print *, "c = ",  SPEED_OF_LIGHT_IN_VACUUM%value
+    print '(A)', '# UNCERTAINTY'
+    print *, "u(c) = ", SPEED_OF_LIGHT_IN_VACUUM%uncertainty
+    print '(A)', '# OLDER VALUES'
+    print '(A, F23.16)', "Mu_2022(latest) = ", MOLAR_MASS_CONSTANT%value
+    print '(A, F23.16)', "Mu_2018 = ", MOLAR_MASS_CONSTANT_2018%value
+    print '(A, F23.16)', "Mu_2014 = ",  MOLAR_MASS_CONSTANT_2014%value
+    print '(A, F23.16)', "Mu_2010 = ",  MOLAR_MASS_CONSTANT_2010%value
+    end program
+.ft R
+.fi
+
+.PP
+Example in C
+.nf
+.ft CR
+    #include <stdio.h>
+    #include "codata.h"
+
+
+    int main(void){
+    printf("%f", c);
+    printf("########## EXAMPLE IN C ##########\\n");
+    printf("%s\\n","# VERSION");
+    printf("version = %s\\n", codata_version());
+    printf("%s\\n","# CONSTANTS");
+    printf("c = %f\\n", SPEED_OF_LIGHT_IN_VACUUM.value);
+    printf("%s\\n","# UNCERTAINTY");
+    printf("u(c) = %f\\n", SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
+    printf("%s\\n","# OLDER VALUES");
+    printf("Mu_2022(latest) = %23.16f\\n", MOLAR_MASS_CONSTANT.value);
+    printf("Mu_2018 = %23.16f\\n", MOLAR_MASS_CONSTANT_2018.value);
+    printf("Mu_2014 = %23.16f\\n", MOLAR_MASS_CONSTANT_2014.value);
+    printf("Mu_2010 = %23.16f\\n", MOLAR_MASS_CONSTANT_2010.value);
+    return 0;
+    }
+.ft R
+.fi
+
+.PP
+Example in Python
+.nf
+.ft CR
+    import sys
+    sys.path.insert(0, "../py/src/")
+    import pycodata
+    print("########## EXAMPLE IN PYTHON ##########")
+    print("# VERSION")
+    print(f"version = {pycodata.__version__}")
+    print("# Constants")
+    print("c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
+    print("# UNCERTAINTY")
+    print("u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
+    print("# OLDER VALUES")
+    print("Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
+    print("Mu_2018 = ", pycodata.MOLAR_MASS_CONSTANT_2018["value"])
+    print("Mu_2014 = ", pycodata.MOLAR_MASS_CONSTANT_2014["value"])
+    print("Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
+.ft R
+.fi
+\"}}}
+
+.SH SEE ALSO
+\"{{{
+.BR codata (3),
+.BR codata_cli (1),
+.BR codata_version (3),
+.BR codata_constant_type (3)
+\"}}}

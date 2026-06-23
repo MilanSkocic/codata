@@ -1,39 +1,37 @@
-codata_version(3)            Library Calls            codata_version(3)
+codata_version(3)       Library Functions Manual      codata_version(3)
 
 NAME
-       version - get the version of the Fortran library codata
+       version - function
 
 LIBRARY
-       codata (-libcodata, -lcodata)
+       Codata library (libcodata, -lcodata)
 
 SYNOPSIS
-       Fortran: character(len=:), pointer version()
+       Fortran   character(len=:), pointer :: version()
 
-       C: char* codata_version()
+       C         char* codata_version()
 
-       Python: pycodata.__version__
+       Python    pycodata.__version__
 
 DESCRIPTION
        Get the library version.
 
 EXAMPLE
        Fortran:
-
              use codata
              print *, "version = ", version()
 
        C:
-
              include <stdio.h>
              include "codata.h"
              printf("version = %s0, codata_version());
 
        Python:
-
              import pycodata
              print(f"version = {pycodata.__version__}")
 
 SEE ALSO
-       codata(3)
+       codata(3),    codata_cli(1),    codata_version(3),   codata_con‐
+       stant_type(3)
 
-2.5.3                         18 June 2026            codata_version(3)
+2.5.3                         23 June 2026            codata_version(3)

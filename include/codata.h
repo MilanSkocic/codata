@@ -18,9 +18,9 @@ struct codata_constant_type{
     char unit[33];
 };
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------
 // CODATA_CONSTANTS_2010
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------
 //{{{
 ADD_IMPORT extern const int YEAR_2010;
 ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_SILICON_2010;
@@ -360,9 +360,9 @@ ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010;
 //}}}
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------
 // CODATA_CONSTANTS_2014
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------
 //{{{
 ADD_IMPORT extern const int YEAR_2014;
 ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_SILICON_2014;
@@ -702,9 +702,9 @@ ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014;
 //}}}
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------
 // CODATA_CONSTANTS_2018
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------
 //{{{
 ADD_IMPORT extern const int YEAR_2018;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018;
@@ -1063,9 +1063,9 @@ ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT
 ADD_IMPORT extern const struct codata_constant_type W_TO_Z_MASS_RATIO_2018;
 //}}}
 
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------
 // CODATA_CONSTANTS_2022
-//----------------------------------------------------------------------
+//------------------------------------------------------------------------
 //{{{
 ADD_IMPORT extern const int YEAR;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_ELECTRON_MASS_RATIO;

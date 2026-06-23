@@ -16,14 +16,10 @@ VERSION 2.5.2
       next major release 3.0 when the new codata constants will be 
       released i.e. 2026/2027.
 
-
-
 VERSION 2.5.1
   - Code refactoring and cleaning: trailing spaces, empty lines, formatted comments.
   - Remove specific modules for C API: defined in the same module as Fortran equivalents.
   - No API break.
-
-
 
 VERSION 2.5.0
   - Add a response_file ( https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html) 
@@ -31,21 +27,15 @@ VERSION 2.5.0
   - Add rst output for the man pages.
   - Integration of the man pages in the online documentation generated with sphinx.
 
-
-
 VERSION 2.4.1
   - Maintenance release.
   - Fix option formatting in help text and man page.
   - Refactoring
 
-
-
 VERSION 2.4.0
   - Add tables for each codata year containing all constants.
   - Add CLI codata(1) for searching constants.
   - Refactoring code.
-
-
 
 VERSION 2.3.1
   - Refactoring the configure.sh script.
@@ -53,12 +43,8 @@ VERSION 2.3.1
   - If binaries for Python 3.14t are needed you need to compile them by
     yourself.
 
-
-
 VERSION 2.3.0
   - Remove support for Python 3.9 and add support for Python 3.14(t).
-
-
 
 VERSION 2.2.0
   - Switch to UCRT64 for Windows binaries.
@@ -66,25 +52,17 @@ VERSION 2.2.0
   - Update references with publication for codata 2022.
   - Update compilation flags for compatibility with stdlib.
 
-
-
 VERSION 2.1.1
   - No code change.
   - Code refractoring and cleaning
   - Update CI/CD workflows.
 
-
-
 VERSION 2.1.0
   - Roll back to C API in Fortran code: easier maintenance.
   - Roll back to compiled C extension for python: easier maintenance.
 
-
-
 VERSION 2.0.1
   - Fix bug in version for Fortran code.
-
-
 
 VERSION 2.0.0
   - Drop compiled extensions for Python.
@@ -96,27 +74,19 @@ VERSION 2.0.0
     - No more C API in the Fortran code.
     - Use the pure C code to build a C library.
 
-
-
 VERSION 1.2.2
   - Fix conflict that could occur with C API modules. Add prefix in
     module names.
   - Cleanup and refractoring.
   - Documentation update.
 
-
-
 VERSION 1.2.1
   - Refractoring
   - Merge back C API and python wrapper.
 
-
-
 VERSION 1.2.0
   - Refractoring
   - Documentation update.
-
-
 
 VERSION 1.1.0
   - C API and Python wrapper moved to their own repositories.
@@ -124,8 +94,6 @@ VERSION 1.1.0
     wrapper.
   - Code cleanup
   - Documentation update
-
-
 
 VERSION 1.0.0
   - Add codata values for 2010, 2014 and 2018.
@@ -135,8 +103,6 @@ VERSION 1.0.0
   - Generate source code for stdlib.
   - API break: constants are defined as DT like in stdlib.
 
-
-
 VERSION 0.10.0
   - Remove remove generation of the version module.
   - Add tests using the test-drive framework.
@@ -145,16 +111,12 @@ VERSION 0.10.0
   - Code cleanup.
   - Merge of all code for autogeneration in one file.
 
-
-
 VERSION 0.9.0
   - No API changes.
   - Automatic generation of the version module.
   - Generic Makefiles for automatic the building process of the library and the pywrapper.
   - Add targets: build, build_debug, test, test_debug.
   - Minor fixes in documentation.
-
-
 
 VERSION 0.8.2
   - No API changes.
@@ -163,13 +125,9 @@ VERSION 0.8.2
   - Switch to pyproject.toml for the Python wrapper.
   - Minor fixes in documentation.
 
-
-
 VERSION 0.8.1
   - Use shared library in python wrapper.
   - Minor fixes in documentation.
-
-
 
 VERSION 0.8.0
   - Back to the approach with a library.
@@ -183,55 +141,38 @@ VERSION 0.8.0
   - FORD for documenting the Fortran code.
   - Integration of the FORD documentation into the main documentation with sphinx.
 
-
-
 VERSION 0.7.1
   - Minor fixes in generator code
   - Add automatic copy of c sources for the python wrapper.
-
-
 
 VERSION 0.7.0
   - Migrate documentation from doxygen to sphinx+breathe.
   - Add YEAR constant indicating the year of the codata constants.
   - Refractoring
 
-
-
 VERSION 0.6.0
   - Created documentation.
   - Fixed missing uncertainties for Cpython.
-
-
 
 VERSION 0.5.0
   - Changed the complete approach by not generating a library but only source files for different languages.
   - Available languages: Fortran, C, python, CPython
 
-
-
 VERSION 0.4.0
   - Bring back pywrapper in the codata repository to sync versions.
   - Improvements of the documentation.
 
-
-
 VERSION 0.3.0
   - Only last codata constants.
-
 
 VERSION 0.2.1
   - Integration of Intel Fortran compiler and MSVC in cmake scripts.
   - Add specifications and instructions for compiling on Windows
 
-
-
 VERSION 0.2.0
   - Bug fixes for the codata 2010.
   - Bug fixes in the tests linked to the codata 2010.
   - Add python wrapper for the number of constants method.
-
-
 
 VERSION 0.1.0
   Implementation of:

@@ -1,4 +1,4 @@
-.TH codata_version 3 "23 June 2026" "2.5.3" "Library Functions Manual"
+.TH codata_version 3 "@DATE@" "@VERSION@" "Library Functions Manual"
 
 .SH NAME
 \"{{{

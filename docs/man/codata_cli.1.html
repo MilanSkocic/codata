@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Thu Jun 18 23:39:31 2026 -->
+<!-- CreationDate: Tue Jun 23 06:31:52 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -36,8 +36,8 @@
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b> -
-print fundamental physical constants</p>
+<p style="margin-left:9%; margin-top: 1em">codata - libray
+for fundamental physical constants</p>
 
 <h2>SYNOPSIS
 <a name="SYNOPSIS"></a>
@@ -45,35 +45,35 @@ print fundamental physical constants</p>
 
 
 <p style="margin-left:9%; margin-top: 1em"><b>codata</b>
-[OPTION...] [REGEX_PATTERN...]</p>
+[<i>OPTION</i>]...</p>
 
 <h2>DESCRIPTION
 <a name="DESCRIPTION"></a>
 </h2>
 
 
-
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(1)
-is a command line interface which prints all the
-<b>codata</b> constants.</p>
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b> is
+a command line interface which prints all the CODATA
+constants.</p>
 
 <p style="margin-left:9%; margin-top: 1em">The current
 values are from 2022. Older values can be retrieved if
-needed and the output can be filtered with REGEX
-PATTERNS.</p>
+needed and the output can be filtered with <i>REGEX
+PATTERNS</i>.</p>
 
 <h2>OPTIONS
 <a name="OPTIONS"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>--year, -y
-YEAR</b></p>
+<p style="margin-left:9%; margin-top: 1em"><b>--year,
+-y</b> <i>YEAR</i></p>
 
 <p style="margin-left:18%;">CODATA constants: 2022, 2018,
 2014, 2010</p>
 
-<p style="margin-left:9%;"><b>--pattern, -p PATTERN</b></p>
+<p style="margin-left:9%;"><b>--pattern</b>, <b>-p</b>
+<i>PATTERN</i></p>
 
 <p style="margin-left:18%;">Regex pattern for filtering the
 constants.</p>
@@ -126,11 +126,10 @@ https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html</p>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Minimal
-example</p>
-
-<p style="margin-left:9%; margin-top: 1em">codata <br>
-codata -y 2018 molar electron <br>
+<p style="margin-left:9%; margin-top: 1em">Minimal example
+<br>
+codata <br>
+codata -p Faraday <br>
 codata -y 2014 -p molar.*gas,electron.*eV <br>
 codata [B,b]oltzmann.*eV</p>
 
@@ -140,7 +139,9 @@ codata [B,b]oltzmann.*eV</p>
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3)</p>
+<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3),
+<b>codata_cli</b>(1), <b>codata_version</b>(3),
+<b>codata_constant_type</b>(3)</p>
 <hr>
 </body>
 </html>

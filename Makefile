@@ -1,6 +1,8 @@
 include make.in
 # ---------------------------------------------------------------------
 # CONFIGURATION
+# ---------------------------------------------------------------------
+#{{{
 install_dir=$(PREFIX)
 ifneq ($(prefix), )
 	PREFIX=$(prefix)
@@ -15,54 +17,22 @@ endif
 install_dir=$(DESTDIR)$(PREFIX)
 pyinstall_dir=py/src/$(FPM_PYNAME)/$(FPM_PLATFORM)
 
-MANDIR=srcprep/doc/man/build
-LATEXDIRPDF=srcprep/doc/latex/build/pdf
-LATEXDIRHTML=srcprep/doc/latex/build/html
-SPHINXDIRHTML=srcprep/doc/sphinx/build/html
-FORDDIRHTML=srcprep/doc/ford/build
-
-GEN_F=./scripts/gen_fortran.py
-GEN_C=./scripts/gen_capi.py
-GEN_HEADERS=./scripts/gen_headers.py
-GEN_HEADER=./scripts/gen_header.py
-GEN_STDLIB=./scripts/gen_stdlib.py
-
-SRC_FYPP=$(wildcard ./source/*.fypp)
-SRC_FYPP_F90=$(patsubst ./source/%.fypp, ./src/%.f90, $(SRC_FYPP))
-
 ARCHIVE=$(FPM_NAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
 PYARCHIVE=$(FPM_PYNAME)-$(FPM_PLATFORM)-$(FPM_ARCH)-$(FPM_VERSION)
+#}}}
 # ---------------------------------------------------------------------
 
-
-# ---------------------------------------------------------------------
 all: $(FPM_LIBNAME)
 
 $(FPM_LIBNAME): build shared
-# ---------------------------------------------------------------------
-
-
-# ---------------------------------------------------------------------
-# SOURCES
-.PHONY: sources 
-sources: 
-	make -C data
-	make -C source
-	make -C source/doc/man
-	cp -rfv source/doc/man/build/* docs/man/
-	mkdir -p docs/man
-	mkdir -p docs/latex
-	mkdir -p docs/ford
-	mkdir -p docs/sphinx
-# ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # COMPILATION
+# ---------------------------------------------------------------------
+#{{{
 .PHONY: build
 build:
-	fpm build --profile $(btype)
-	fpm clean --skip
 	fpm build --profile $(btype)
 	mkdir -p $(FPM_BUILD_DIR)/install/bin
 	mkdir -p $(FPM_BUILD_DIR)/install/include
@@ -82,11 +52,14 @@ test:
 example:
 	fpm run --profile $(btype) --example example_in_f
 	fpm run --profile $(btype) --example example_in_c
+#}}}
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
 # SHARED LIBRARY
+# ---------------------------------------------------------------------
+# {{{
 .PHONY: shared
 shared: shared_$(FPM_PLATFORM)
 
@@ -101,11 +74,29 @@ shared_darwin:
 .PHONY: shared_window
 shared_windows: 
 	$(FPM_FC) -shared $(FPM_LDFLAGS) -o $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).dll -Wl,--out-implib=$(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).dll.a,--export-all-symbols,--enable-auto-import,--whole-archive $(FPM_BUILD_DIR)/install/lib/$(FPM_LIBNAME).a -Wl,--no-whole-archive
+#}}}
 # ---------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------
+# PYTHON
+# ---------------------------------------------------------------------
+# {{{
+.PHONY: python
+python:
+	mkdir -p py/$(FPM_PY_SRC)/$(FPM_PLATFORM)
+	cp -rfv $(FPM_BUILD_DIR)/install/* py/$(FPM_PY_SRC)/$(FPM_PLATFORM)
+	cp -rfv py/$(FPM_PY_SRC)/$(FPM_PLATFORM)/include/*.h py/$(FPM_PY_SRC)/
+	cp -rfv py/$(FPM_PY_SRC)/$(FPM_PLATFORM)/lib/* py/$(FPM_PY_SRC)/
+	make -C py
+#}}}
+# ---------------------------------------------------------------------
+
+
+#-----------------------------------------------------------------------
 # INSTALLATION 
+#-----------------------------------------------------------------------
+#{{{
 .PHONY: install
 install: install_dirs
 
@@ -128,47 +119,40 @@ uninstall:
 	rm -f $(install_dir)/bin/$(FPM_APPNAME).exe
 	rm -r $(install_dir)/share/man/man1/$(FPM_APPNAME)*.1.*
 	rm -r $(install_dir)/share/man/man3/$(FPM_NAME)*.3.*
-# ---------------------------------------------------------------------
+#}}}
+#-----------------------------------------------------------------------
 
 
-# ---------------------------------------------------------------------
-# OTHERS
-.PHONY: python
-python:
-	mkdir -p py/$(FPM_PY_SRC)/$(FPM_PLATFORM)
-	cp -rfv $(FPM_BUILD_DIR)/install/* py/$(FPM_PY_SRC)/$(FPM_PLATFORM)
-	cp -rfv py/$(FPM_PY_SRC)/$(FPM_PLATFORM)/include/*.h py/$(FPM_PY_SRC)/
-	cp -rfv py/$(FPM_PY_SRC)/$(FPM_PLATFORM)/lib/* py/$(FPM_PY_SRC)/
-	make -C py
-
+#-----------------------------------------------------------------------
+# ARCHIVES
+#-----------------------------------------------------------------------
+#{{{
 .PHONY: archives 
 archives:
 	cd ./build/install && tar -czvf ../$(ARCHIVE).tar.gz . && cd ../../
 	cd ./py && [ -d wheelhouse ] && cp -rfv ./wheelhouse/*.whl ./dist/ || true && cd ./dist && tar --exclude='$(PYARCHIVE).tar.gz' -czvf $(PYARCHIVE).tar.gz *.* && cd ../../ 
+#}}}
+#-----------------------------------------------------------------------
 
+
+#-----------------------------------------------------------------------
+# DOCS
+#-----------------------------------------------------------------------
+#{{{
 .PHONY: docs
 docs: 
-	rm -rf docs/man/*
-	rm -rf docs/latex/*
-	rm -rf docs/ford/*
-	rm -rf docs/sphinx/*
-	make -C source/doc
-	cp -rfv source/doc/man/build/* docs/man/
-	cp -rfv source/doc/latex/build/pdf/* docs/latex/
-	cp -rfv source/doc/latex/build/html/* docs/
-	#cp -rfv source/doc/ford/build/* docs/ford/
-	#cp -rfv source/doc/sphinx/build/html/* docs/sphinx/
+	make -C docs
+#}}}
+#-----------------------------------------------------------------------
 
-.PHONY: logo
-logo:
-	make -C media
 
+#-----------------------------------------------------------------------
+# CLEAN
+#-----------------------------------------------------------------------
+#{{{
 .PHONY: clean
 clean:
-	rm -rf $(SRC_FYPP_F90)
-	make -C data clean
 	fpm clean --all
-	make -C source clean
 	make -C py clean
-	make -C source/doc clean
-# ---------------------------------------------------------------------
+#}}}
+#-----------------------------------------------------------------------

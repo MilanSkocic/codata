@@ -80,7 +80,7 @@ version_text=[character(len=72) :: &
 ]
 
 help_text=[character(len=72) :: &
-'Usage: codata [OPTION...] [REGEX_PATTERN...]                          ',&
+'Usage: codata [OPTION]...                                             ',&
 'codata - fundamental physical constants                               ',&
 '                                                                      ',&
 '  --year, -y YEAR         Codata constants: 2022, 2018, 2014, 2010    ',&

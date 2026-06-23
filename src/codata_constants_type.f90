@@ -19,7 +19,6 @@ private
 !{{{2
 public :: to_real
 public :: codata_constant_type
-public :: capi_constant_type
 !}}}
 !+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -29,31 +28,6 @@ public :: capi_constant_type
 ! TYPE: CODATA_CONSTANT_TYPE
 !***********************************************************************
 !{{{2
-! NAME
-!   codata_constant_type - data type defining a constant
-! 
-! SYNOPSIS
-!   Fortran: type(codata_constant_type) :: c
-! 
-!   C: struct codata_constant_type c
-! 
-! DESCRIPTION
-!   Defines a constant with the name, the value, the uncertainty and the unit.
-! 
-! EXAMPLE
-!   Fortran:
-! 
-!       use codata
-!       type(codata_constant_type), pointer :: c
-!       c = SPEED_OF_LIGHT_IN_VACUUM
-! 
-!   C:
-! 
-!       struct codata_constant_type c;
-!       c = SPEED_OF_LIGHT_IN_VACUUM;
-! 
-! SEE ALSO
-!   codata(3)
 type :: codata_constant_type
 !! Derived type for representing a Codata constant.
 character(len=64) :: name ! Name of the constant
@@ -66,14 +40,6 @@ procedure :: to_real_sp
 procedure :: to_real_dp
 generic :: to_real => to_real_sp, to_real_dp
 end type codata_constant_type
-!***********************************************************************
-type, bind(C) :: capi_constant_type
-!! Derived type for representing a Codata constant in C.
-character(kind=c_char) :: name(65)
-real(c_double) :: value
-real(c_double) :: uncertainty
-character(kind=c_char) :: unit(33)
-end type capi_constant_type
 !}}}
 !***********************************************************************
 

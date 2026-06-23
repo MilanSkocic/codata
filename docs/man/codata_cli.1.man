@@ -1,4 +1,4 @@
-.TH codata_cli 1 "23 June 2026" "2.5.3" "User Commands"
+.TH codata_cli 1 "@DATE@" "@VERSION@" "User Commands"
 
 .SH NAME
 codata \- libray for fundamental physical constants
