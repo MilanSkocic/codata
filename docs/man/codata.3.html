@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Jun 23 05:48:04 2026 -->
+<!-- CreationDate: Tue Jun 23 06:31:52 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -224,8 +224,8 @@ unit.</i></p>
 <p style="margin-left:9%;"><b>C API</b></p>
 
 <p style="margin-left:15%;">exposes a structure
-codata_constant_type that defines the same members as in
-Fortran i.e. <i>the name, the value, the uncertainty, and
+<b>codata_constant_type</b> that defines the same members as
+in Fortran i.e. <i>the name, the value, the uncertainty, and
 the unit.</i></p>
 
 <p style="margin-left:9%;"><b>Python</b></p>
@@ -245,68 +245,98 @@ whereas older values (2010, 2014, 2018) feature the year as
 a suffix. All constants are declared with the same variable
 name in Fortran, C, and Python.</p>
 
-<p style="margin-left:9%; margin-top: 1em">The API is
-written as POSIX-style man pages which are distributed with
-the binaries.</p>
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="4%">
+
+
+<p>[1]</p></td>
+<td width="2%"></td>
+<td width="56%">
+
+
+<p>P. J. Mohr, B. N. Taylor, and D. B. Newell,</p></td>
+<td width="29%">
+</td></tr>
+</table>
+
+<p style="margin-left:15%;">&ldquo;CODATA Recommended
+Values of the Fundamental Physical Constants: 2010,&rdquo;
+<br>
+Review of Modern Physics, vol. 84, 2012.</p>
 
 <table width="100%" border="0" rules="none" frame="void"
        cellspacing="0" cellpadding="0">
 <tr valign="top" align="left">
 <td width="9%"></td>
-<td width="5%">
+<td width="4%">
 
 
-<p>HTML</p></td>
-<td width="4%"></td>
-<td width="76%">
+<p style="margin-top: 1em">[2]</p></td>
+<td width="2%"></td>
+<td width="56%">
 
 
-<p>https://milanskocic.github.io/codata/index.html</p></td>
-<td width="6%">
-</td></tr>
-<tr valign="top" align="left">
-<td width="9%"></td>
-<td width="5%">
-
-
-<p>PDF</p></td>
-<td width="4%"></td>
-<td width="76%">
-
-
-
-<p>https://milanskocic.github.io/codata/man/codata-bookman.pdf</p> </td>
-<td width="6%">
+<p style="margin-top: 1em">P. J. Mohr, B. N. Taylor, and D.
+B. Newell,</p></td>
+<td width="29%">
 </td></tr>
 </table>
 
-<p style="margin-left:9%; margin-top: 1em">The codata
-constants from the 2022 adjustment were integrated into the
-<b>Fortran standard library (stdlib).</b> This library is
-complementary to the constants defined in the <b>stdlib</b>
-by providing older values for the constants. See
-https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
-If your application only requires the latest CODATA values,
-the Fortran standard library may be sufficient. Use codata
-when you need access to historical CODATA releases or
-compatibility with older scientific results.</p>
-
-<p style="margin-left:9%; margin-top: 1em">To use codata
-within your <b>fpm</b>(1)
-(https://github.com/fortran-lang/fpm) project, add the
-following lines to your file:</p>
-
-<p style="margin-left:9%; margin-top: 1em">[dependencies]
+<p style="margin-left:15%;">&ldquo;CODATA Recommended
+Values of the Fundamental Physical Constants: 2014,&rdquo;
 <br>
-codata = {
-git=&quot;https://github.com/MilanSkocic/codata.git&quot;
-}</p>
+Journal of Physical and Chemical Reference Data, vol. 45,
+2016.</p>
 
-<p style="margin-left:9%; margin-top: 1em">If you only need
-sources for the CODATA constants that can be integrated
-directly into your project, you may be interested in the
-following repository:
-https://github.com/vmagnin/fundamental_constants.</p>
+<table width="100%" border="0" rules="none" frame="void"
+       cellspacing="0" cellpadding="0">
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="4%">
+
+
+<p style="margin-top: 1em">[3]</p></td>
+<td width="2%"></td>
+<td width="85%">
+
+
+<p style="margin-top: 1em">P. J. Mohr, B. N. Taylor, and D.
+B. Newell, &ldquo;CODATA Recommended Values of the
+Fundamental Physical Constants: 2018,&rdquo; Review of
+Modern Physics, vol. 93, 2021.</p></td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="4%">
+
+
+<p>[4]</p></td>
+<td width="2%"></td>
+<td width="85%">
+
+
+<p>P. Mohr, D. Newell, B. Taylor, and E. Tiesinga,
+&ldquo;CODATA Recommended Values of the Fundamental Physical
+Constants: 2022.&rdquo; Accessed: May 05, 2025. [Online].
+Available: https://arxiv.org/abs/2409.03787</p></td></tr>
+<tr valign="top" align="left">
+<td width="9%"></td>
+<td width="4%">
+
+
+<p>[5]</p></td>
+<td width="2%"></td>
+<td width="85%">
+
+
+<p>P. J. Mohr, D. B. Newell, B. N. Taylor, and E. Tiesinga,
+&ldquo;CODATA Recommended Values of the Fundamental Physical
+Constants: 2022,&rdquo; Reviews of Modern Physics, vol. 97,
+no. 2, p. 25002, Apr. 2025, doi:
+10.1103/RevModPhys.97.025002.</p> </td></tr>
+</table>
 
 <h2>EXAMPLE
 <a name="EXAMPLE"></a>

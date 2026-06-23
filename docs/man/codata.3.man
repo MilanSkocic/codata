@@ -62,7 +62,7 @@ which carries
 .TP
 .B
 C API
-exposes a structure codata_constant_type that defines
+exposes a structure \fBcodata_constant_type\fP that defines
 the same members as in Fortran i.e.
 .I the name, the value, the uncertainty, and the unit.
 
@@ -81,42 +81,26 @@ whereas older values (2010, 2014, 2018) feature the year as a suffix.
 All constants are declared with the same variable name in Fortran, C,
 and Python.
 
-.PP
-The API is written as POSIX-style man pages which are distributed with the binaries. 
-.TP 
-HTML
-https://milanskocic.github.io/codata/index.html
-.TP 
-PDF 
-https://milanskocic.github.io/codata/man/codata-bookman.pdf
-
-.PP
-The codata constants from the 2022 adjustment were integrated into the 
-.B Fortran standard library (stdlib).
-This library is complementary to the constants defined in the 
-.B stdlib
-by providing older values for the constants.
-See https://github.com/fortran-lang/stdlib/releases/tag/v0.7.0.
-If your application only requires the latest CODATA values, the
-Fortran standard library may be sufficient. Use codata when you need
-access to historical CODATA releases or compatibility with older
-scientific results.
-
-.PP
-To use codata within your \fBfpm\fP(1) (https://github.com/fortran-lang/fpm)
-project, add the following lines to your file:
-
-.nf
-.ft CR
- [dependencies]
- codata = { git="https://github.com/MilanSkocic/codata.git" }
-.ft R
-.fi
-
-If you only need sources for the CODATA constants that can be 
-integrated directly into your project, you may be interested in the 
-following repository:
-https://github.com/vmagnin/fundamental_constants.
+.IP [1] 5 
+P. J. Mohr, B. N. Taylor, and D. B. Newell, 
+ “CODATA Recommended Values of the Fundamental Physical Constants: 2010,” 
+ Review of Modern Physics, vol. 84, 2012.
+.IP [2] 5 
+P. J. Mohr, B. N. Taylor, and D. B. Newell, 
+ “CODATA Recommended Values of the Fundamental Physical Constants: 2014,” 
+ Journal of Physical and Chemical Reference Data, vol. 45, 2016.
+.IP [3] 5
+P. J. Mohr, B. N. Taylor, and D. B. Newell, 
+“CODATA Recommended Values of the Fundamental Physical Constants: 2018,” 
+Review of Modern Physics, vol. 93, 2021.
+.IP [4] 5
+P. Mohr, D. Newell, B. Taylor, and E. Tiesinga, 
+“CODATA Recommended Values of the Fundamental Physical Constants: 2022.” 
+Accessed: May 05, 2025. [Online]. Available: https://arxiv.org/abs/2409.03787
+.IP [5] 5 
+P. J. Mohr, D. B. Newell, B. N. Taylor, and E. Tiesinga, 
+“CODATA Recommended Values of the Fundamental Physical Constants: 2022,” 
+Reviews of Modern Physics, vol. 97, no. 2, p. 25002, Apr. 2025, doi: 10.1103/RevModPhys.97.025002.
 \"}}}
 
 .SH EXAMPLE

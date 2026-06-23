@@ -60,33 +60,30 @@ NOTES
        year as a suffix.  All constants  are  declared  with  the  same
        variable name in Fortran, C, and Python.
 
-       The  API  is written as POSIX-style man pages which are distrib‐
-       uted with the binaries.
+       [1]  P. J. Mohr, B. N. Taylor, and D. B. Newell,
+             “CODATA  Recommended  Values  of  the Fundamental Physical
+            Constants: 2010,”
+             Review of Modern Physics, vol. 84, 2012.
 
-       HTML   https://milanskocic.github.io/codata/index.html
+       [2]  P. J. Mohr, B. N. Taylor, and D. B. Newell,
+             “CODATA Recommended Values  of  the  Fundamental  Physical
+            Constants: 2014,”
+             Journal  of Physical and Chemical Reference Data, vol. 45,
+            2016.
 
-       PDF    https://milanskocic.github.io/codata/man/codata-book‐
-              man.pdf
+       [3]  P. J. Mohr, B. N. Taylor, and D. B. Newell, “CODATA  Recom‐
+            mended Values of the Fundamental Physical Constants: 2018,”
+            Review of Modern Physics, vol. 93, 2021.
 
-       The codata constants from the 2022  adjustment  were  integrated
-       into  the  Fortran  standard  library (stdlib).  This library is
-       complementary to the constants defined in the stdlib by  provid‐
-       ing older values for the constants.  See https://github.com/for‐
-       tran-lang/stdlib/releases/tag/v0.7.0.   If your application only
-       requires the latest CODATA values, the Fortran standard  library
-       may be sufficient. Use codata when you need access to historical
-       CODATA releases or compatibility with older scientific results.
+       [4]  P.  Mohr,  D.  Newell,  B. Taylor, and E. Tiesinga, “CODATA
+            Recommended Values of the Fundamental  Physical  Constants:
+            2022.”    Accessed:  May  05,  2025.  [Online].  Available:
+            https://arxiv.org/abs/2409.03787
 
-       To  use  codata  within your fpm(1) (https://github.com/fortran-
-       lang/fpm) project, add the following lines to your file:
-
-        [dependencies]
-        codata = { git="https://github.com/MilanSkocic/codata.git" }
-
-       If you only need sources for the CODATA constants  that  can  be
-       integrated  directly into your project, you may be interested in
-       the following  repository:  https://github.com/vmagnin/fundamen‐
-       tal_constants.
+       [5]  P. J. Mohr, D. B. Newell, B. N. Taylor,  and  E.  Tiesinga,
+            “CODATA Recommended Values of the Fundamental Physical Con‐
+            stants:  2022,”  Reviews of Modern Physics, vol. 97, no. 2,
+            p. 25002, Apr. 2025, doi: 10.1103/RevModPhys.97.025002.
 
 EXAMPLE
        Example in Fortran
@@ -146,7 +143,7 @@ EXAMPLE
            print("Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
 
 SEE ALSO
-       codata(3),    codata_cli(1),    codata_version(3),   codata_con‐
+       codata(3),   codata_cli(1),    codata_version(3),    codata_con‐
        stant_type(3)
 
 CODATA 2022
