@@ -34,4 +34,4 @@ SEE ALSO
        codata(3),    codata_cli(1),    codata_version(3),   codata_con‐
        stant_type(3)
 
-2.5.3                         23 June 2026            codata_version(3)
+2.5.4                         24 June 2026            codata_version(3)
