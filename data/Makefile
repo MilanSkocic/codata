@@ -54,7 +54,7 @@ build/%.man: build/%.toml
 	./toml2man $< > $@
 
 build/%.f90: build/%.toml
-	$(FPM_PYGEN) $(GEN_F) $< $@
+	./toml2f90 $< > $@
 
 ../src/%.f90: build/%.f90
 	cp -fv $^ $@
