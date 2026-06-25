@@ -78,7 +78,7 @@ build/%.h: ./build/%.toml
 	cp -fv $^ $@
 
 ./build/%.c: ./build/%.toml
-	$(FPM_PYGEN) $(GEN_C) $< $@
+	./toml2c $< > $@
 
 ../src/%.c: ./build/%.c
 	cp -fv $^ $@
