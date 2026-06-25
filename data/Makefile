@@ -69,7 +69,7 @@ build/%.h: ./build/%.toml
 	./stdlib $< > $@
 
 ./build/%.py: ./build/%.toml
-	$(FPM_PYGEN) $(GEN_PY) $< $@
+	./toml2py $< > $@
 
 ./build/_%.c: ./build/%.toml
 	$(FPM_PYGEN) $(GEN_CPY) $< $@
