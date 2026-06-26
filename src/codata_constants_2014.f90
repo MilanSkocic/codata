@@ -16,7 +16,7 @@ integer(int32), parameter, public :: YEAR_2014 = 2014 !! Year of release.
 
 
 !-----------------------------------------------------------------------
-! FORTRAN
+! CONSTANTS
 !-----------------------------------------------------------------------
 !{{{2
 type(codata_constant_type), parameter, public :: LATTICE_SPACING_OF_SILICON_2014 = &

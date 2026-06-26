@@ -13,10 +13,24 @@ if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 awk -v suffix="$suffix" -v latest_year="$latest_year" -v year="$year" '
 BEGIN{
     print "/* SPDX-License-Identifier: MIT */"
-    print "#include \"codata.h\""
     print ""
+    print "//======================================================================"
+    if(suffix==""){
+        print "// MODULE: CODATA_CONSTANTS_"year
+    }
+    else{
+        print "// MODULE: CODATA_CONSTANTS"suffix
+    }
+    print "//======================================================================"
+    print "//{{{1"
+    print "#include \"codata.h\""
     print "const int YEAR"suffix" = "year"; /** Year of release */" 
     print ""
+    print "//----------------------------------------------------------------------"
+    print "// CONSTANTS"
+    print "//----------------------------------------------------------------------"
+    print "//{{{2"
+    i=0
 }
 /^\[.*\]/{
     gsub(/\[/,"")
@@ -29,6 +43,8 @@ BEGIN{
     print x[2]","
     name = x[2]
     gsub(/"/,"",name)
+    i++
+    vars[i]=var
 }
 /^value/{
     gsub(/"/, "")
@@ -47,5 +63,19 @@ BEGIN{
 }
 NF==0{
     print ""
+}
+END{
+    print "//}}}"
+    print ""
+    print ""
+    print "//----------------------------------------------------------------------"
+    print "// ARRAY OF CONSTANTS"
+    print "//----------------------------------------------------------------------"
+    print "//{{{2"
+    print "const struct codata_constant_type cc"suffix"["i"] = {" 
+    for (j in vars){
+        print vars[j]","
+    }
+    print "};"
 }
 ' $1
