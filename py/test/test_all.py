@@ -13,9 +13,6 @@ class TestVersion(unittest.TestCase):
         value = __version__
         self.assertEqual(value, expected)
 
-def test_year():
-    assert YEAR == 2022
-
 def test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO():
     assert ALPHA_PARTICLE_ELECTRON_MASS_RATIO["value"] ==7294.29954171
 

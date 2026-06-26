@@ -22,7 +22,6 @@ BEGIN{
     }
     print "//------------------------------------------------------------------------"
     print "//{{{"
-    print "ADD_IMPORT extern const int YEAR"suffix";"
 
     i=0
 }

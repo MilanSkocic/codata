@@ -11,14 +11,9 @@ static struct PyModuleDef constants_2014 = {PyModuleDef_HEAD_INIT, "constants_20
 PyMODINIT_FUNC PyInit_constants_2014(void){
     PyObject *m;
     PyObject *d;
-    PyObject *v;
     PyObject *constant;
     m = PyModule_Create(&constants_2014);
     d = PyModule_GetDict(m);
-
-    v = PyLong_FromLong(YEAR_2014);
-    PyDict_SetItemString(d, "YEAR_2014", v);
-    Py_DECREF(v);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", LATTICE_SPACING_OF_SILICON_2014.name,

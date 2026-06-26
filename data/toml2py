@@ -15,7 +15,6 @@ BEGIN{
     print "# SPDX-License-Identifier: MIT"
     print "\"\"\"Codata constants "year".\"\"\""
     print ""
-    print "YEAR"suffix " = " year
 }
 /^\[.*\]/{
     gsub(/\[/,"")

@@ -24,7 +24,6 @@ BEGIN{
     print "//======================================================================"
     print "//{{{1"
     print "#include \"codata.h\""
-    print "const int YEAR"suffix" = "year"; /** Year of release */" 
     print ""
     print "//----------------------------------------------------------------------"
     print "// CONSTANTS"

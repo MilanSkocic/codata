@@ -2,8 +2,7 @@ module test_constants
 !! Test constant values only for double precision.
 use testdrive, only : new_unittest, unittest_type, error_type, check
 use stdlib_kinds, only : dp, int32
-use codata, only: YEAR, &
-ALPHA_PARTICLE_ELECTRON_MASS_RATIO, &
+use codata, only: ALPHA_PARTICLE_ELECTRON_MASS_RATIO, &
 ALPHA_PARTICLE_MASS, &
 ATOMIC_MASS_CONSTANT, &
 AVOGADRO_CONSTANT, &
@@ -31,8 +30,7 @@ contains
 subroutine collect_constants(testsuite)
     !> Collection of tests
     type(unittest_type), allocatable, intent(out) :: testsuite(:)
-    testsuite = [new_unittest("YEAR", test_year), &
-                 new_unittest("ALPHA_PARTICLE_ELECTRON_MASS_RATIO", test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO),&
+    testsuite = [new_unittest("ALPHA_PARTICLE_ELECTRON_MASS_RATIO", test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO),&
                  new_unittest("ALPHA_PARTICLE_MASS", test_ALPHA_PARTICLE_MASS),&
                  new_unittest("ATOMIC_MASS_CONSTANT", test_ATOMIC_MASS_CONSTANT),&
                  new_unittest("AVOGADRO_CONSTANT", test_AVOGADRO_CONSTANT),&
@@ -59,12 +57,6 @@ subroutine collect_constants(testsuite)
                  new_unittest("U_SPEED_OF_LIGHT_IN_VACUUM", test_U_SPEED_OF_LIGHT),&
                  new_unittest("U_STANDARD_ACCELERATION_OF_GRAVITY", test_U_STANDARD_ACCELERATION_OF_GRAVITY)]
 end subroutine collect_constants
-
-subroutine test_year(error)
-    type(error_type), allocatable, intent(out) :: error
-    call check(error, YEAR, 2022)
-    if (allocated(error)) return
-end subroutine test_year
 
 subroutine test_ALPHA_PARTICLE_ELECTRON_MASS_RATIO(error)
     type(error_type), allocatable, intent(out) :: error

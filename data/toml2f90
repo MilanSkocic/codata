@@ -30,8 +30,6 @@ BEGIN{
     print "implicit none(type,external)"
     print "private"
     print ""
-    print "integer(int32), parameter, public :: YEAR"suffix" = "year" !! Year of release."
-    print ""
     print ""
     print ""
     print "!-----------------------------------------------------------------------"

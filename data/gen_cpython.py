@@ -33,7 +33,7 @@ def write_module_start(f, year):
     f.write(f"PyMODINIT_FUNC PyInit_constants{suffix:s}(void)" + "{" + newline)
     f.write("    PyObject *m;" + newline)
     f.write("    PyObject *d;" + newline)
-    f.write("    PyObject *v;" + newline)
+    #f.write("    PyObject *v;" + newline)
     f.write("    PyObject *constant;" + newline)
     f.write(f"    m = PyModule_Create(&constants{suffix:s});" + newline)
     f.write("    d = PyModule_GetDict(m);" + newline)
@@ -74,7 +74,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
     fast = open(fpath_ast, "r")
 
     write_module_start(fcode, year)
-    write_year(fcode, year)
+    #write_year(fcode, year)
 
     ast = tomlkit.load(fast)
     for var in ast.keys():

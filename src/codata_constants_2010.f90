@@ -11,8 +11,6 @@ use codata__constants_type
 implicit none(type,external)
 private
 
-integer(int32), parameter, public :: YEAR_2010 = 2010 !! Year of release.
-
 
 
 !-----------------------------------------------------------------------
