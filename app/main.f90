@@ -33,13 +33,13 @@ help_text=[character(len=72) :: &
 'Usage: codata [OPTION]...                                             ',&
 'codata - fundamental physical constants                               ',&
 '                                                                      ',&
-'  --year, -y YEAR         Codata constants: 2022, 2018, 2014, 2010    ',&
-'  --pattern, -p PATTERN   Regex pattern for filtering the constants.  ',&
-'  --value, -a             Show only the value.  ',&
-'  --error, -e             Show only the uncertainty.      ',&
-'  --usage                 Show usage text and exit.     ',&
-'  --version, -v           Show version information and exit.           ',&
-'  --help, -h              Show help text and exit.    ',&
+'  -y, --year YEAR         Codata constants: 2022, 2018, 2014, 2010    ',&
+'  -p, --pattern PATTERN   Regex pattern for filtering the constants.  ',&
+'  -a, --value             Show only the value.  ',&
+'  -e, --error             Show only the uncertainty.      ',&
+'  -u, --usage             Show usage text and exit.     ',&
+'  -v, --version           Show version information and exit.           ',&
+'  -h, --help              Show help text and exit.    ',&
 '']
 
 call set_mode('strict')
