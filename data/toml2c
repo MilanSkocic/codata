@@ -23,6 +23,7 @@ BEGIN{
     }
     print "//======================================================================"
     print "//{{{1"
+    print "#include <stdlib.h>"
     print "#include \"codata.h\""
     print ""
     print "//----------------------------------------------------------------------"
@@ -71,10 +72,11 @@ END{
     print "// ARRAY OF CONSTANTS"
     print "//----------------------------------------------------------------------"
     print "//{{{2"
-    print "const struct codata_constant_type cc"suffix"["i"] = {" 
+    print "const struct codata_constant_type *cc"suffix"["i+1"] = {" 
     for (j in vars){
-        print vars[j]","
+        print "&"vars[j]","
     }
+    print "NULL,"
     print "};"
 }
 ' $1
