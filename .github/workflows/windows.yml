@@ -19,6 +19,7 @@ jobs:
         msystem: UCRT64
         install: >-
           mingw-w64-ucrt-x86_64-gcc-fortran
+          mingw-w64-x86_64-libsystre
           git
           make
           zip
