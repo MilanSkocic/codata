@@ -63,7 +63,7 @@ jobs:
     - name: Compile
       run: |
         . ./configure
-        fpm build --profile debug
+        fpm build --profile debug --verbose
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
