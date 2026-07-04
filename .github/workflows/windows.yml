@@ -63,10 +63,7 @@ jobs:
     - name: Compile
       run: |
         . ./configure
-        make
-        make python
-        make -C py auditwheel
-        make archives
+        fpm build --profile debug
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
