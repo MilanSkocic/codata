@@ -63,7 +63,6 @@ jobs:
     - name: Compile
       run: |
         . ./configure
-        fpm build --profile debug --verbose
         make
         make python
         make -C py auditwheel
