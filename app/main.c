@@ -61,7 +61,7 @@ static void print_all(const struct codata_constant_type **cc, const char *patter
     int i=0; 
     regex_t regex;
     regmatch_t matches[1]; // full match + no groups
-    char *fmt;
+    const char *fmt;
 
     fmt = fmt_all;
     if(*a){fmt=fmt_a;}
