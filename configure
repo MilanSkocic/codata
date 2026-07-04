@@ -47,7 +47,7 @@ if [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
     export FPM_LIBS=( "${LIBSWINDOWS[@]}" )
     export FPM_PY="py -"
     export FPM_PYGEN="py"
-    export FPM_LDFLAGS="-static -lregex"
+    export FPM_LDFLAGS="-lregex -static"
     export FPM_AW=""
 fi
 
