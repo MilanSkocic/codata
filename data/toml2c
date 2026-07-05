@@ -72,7 +72,7 @@ END{
     print "// ARRAY OF CONSTANTS"
     print "//----------------------------------------------------------------------"
     print "//{{{2"
-    print "const struct codata_constant_type *cc"suffix"["i+1"] = {" 
+    print "const struct codata_constant_type *cc"suffix"[] = {" 
     for (j in vars){
         print "&"vars[j]","
     }

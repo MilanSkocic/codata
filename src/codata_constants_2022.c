@@ -2503,7 +2503,7 @@ const struct codata_constant_type W_TO_Z_MASS_RATIO = {
 // ARRAY OF CONSTANTS
 //----------------------------------------------------------------------
 //{{{2
-const struct codata_constant_type *cc[356] = {
+const struct codata_constant_type *cc[] = {
 &ALPHA_PARTICLE_ELECTRON_MASS_RATIO,
 &ALPHA_PARTICLE_MASS,
 &ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT,

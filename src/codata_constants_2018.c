@@ -2496,7 +2496,7 @@ const struct codata_constant_type W_TO_Z_MASS_RATIO_2018 = {
 // ARRAY OF CONSTANTS
 //----------------------------------------------------------------------
 //{{{2
-const struct codata_constant_type *cc_2018[355] = {
+const struct codata_constant_type *cc_2018[] = {
 &ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018,
 &ALPHA_PARTICLE_MASS_2018,
 &ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018,

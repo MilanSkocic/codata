@@ -2363,7 +2363,7 @@ const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014
 // ARRAY OF CONSTANTS
 //----------------------------------------------------------------------
 //{{{2
-const struct codata_constant_type *cc_2014[336] = {
+const struct codata_constant_type *cc_2014[] = {
 &LATTICE_SPACING_OF_SILICON_2014,
 &ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2014,
 &ALPHA_PARTICLE_MASS_2014,
