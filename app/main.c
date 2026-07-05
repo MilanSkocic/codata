@@ -30,14 +30,24 @@ static void usage_text(){
 
 static void help_text(struct option_t *options){
     int i=0;
+    char buf[64];
     printf("%s\n", "Usage: codata [OPTION]...");
     printf("%s\n", "codata - fundamental physical constants.");
     printf("%s\n", "");
-    while(options[i].l != NULL){
-        printf("  %-2s", options[i].s);
-        if(options[i].l != NULL){printf(", %s", options[i].l);}
-        if(options[i].arg != NULL){printf(" %-15s", options[i].arg);}else{printf(" %-15s", "");}
-        if(options[i].help != NULL){printf("  %s\n", options[i].help);}
+    while(options[i].s != NULL){
+        buf[0] = '\0';
+        strcat(buf, options[i].s);
+
+        if(options[i].l != NULL){
+            strcat(buf, ", ");
+            strcat(buf, options[i].l);
+        }
+        if(options[i].arg != NULL){
+            strcat(buf, " ");
+            strcat(buf, options[i].arg);
+        }
+        printf("  %-32s", buf);
+        printf("%-s\n", options[i].help);
         i++;
     }
     printf("%s\n", "");
@@ -49,7 +59,7 @@ static char *long2short(char *option, struct option_t *options){
     if(strlen(option)<3){return option;}
     if(!((option[0]=='-') && (option[1]=='-'))){return option;}
 
-    while(options[i].l!=NULL){
+    while(options[i].s!=NULL){
         if(strcmp(option, options[i].l)==0){return options[i].s;}
         else{i++;}
     }
