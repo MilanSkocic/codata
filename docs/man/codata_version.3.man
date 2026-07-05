@@ -45,7 +45,7 @@ C:
 .ft CR
       include <stdio.h>
       include "codata.h"
-      printf("version = %s\n", codata_version());
+      printf("version = %s\\n", codata_version());
 .ft R
 .fi
 
