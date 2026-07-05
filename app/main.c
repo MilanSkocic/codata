@@ -21,7 +21,7 @@ static void version_text(){
     strcat(v, "License MIT\n");
     strcat(v, "\n");
     strcat(v, "Wrtten by Milan Skocic\n");
-    printf("%s\n", v);
+    printf("%s", v);
 }
 
 static void usage_text(){
@@ -37,7 +37,6 @@ static void help_text(struct option_t *options){
     while(options[i].s != NULL){
         buf[0] = '\0';
         strcat(buf, options[i].s);
-
         if(options[i].l != NULL){
             strcat(buf, ", ");
             strcat(buf, options[i].l);
@@ -46,7 +45,7 @@ static void help_text(struct option_t *options){
             strcat(buf, " ");
             strcat(buf, options[i].arg);
         }
-        printf("  %-32s", buf);
+        printf("  %-24s", buf);
         printf("%-s\n", options[i].help);
         i++;
     }
