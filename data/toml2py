@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+. ./common
+latest_year=$(gly)
+
+fname="$1"
+name=$(basename -s .toml $fname)
+year="${name##*_}"
+
+suffix="_$year"
+if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
+
+awk -v suffix="$suffix" -v latest_year="$latest_year" -v year="$year" '
+BEGIN{
+    print "# SPDX-License-Identifier: MIT"
+    print "\"\"\"Codata constants "year".\"\"\""
+    print ""
+}
+/^\[.*\]/{
+    gsub(/\[/,"")
+    gsub(/\]/,"")
+    var=$0 suffix
+    print var" = {"
+}
+/^name/{
+    split($0, x, " = ")
+    print "\""x[1]"\""":"x[2]","
+    name = x[2]
+    gsub(/"/,"",name)
+}
+/^value/{
+    gsub(/"/, "")
+    split($0, x, " = ")
+    print "\""x[1]"\""":"x[2]","
+}
+/^uncertainty/{
+    gsub(/"/, "")
+    split($0, x, " = ")
+    print "\""x[1]"\""":"x[2]","
+}
+/^unit/{
+    split($0, x, " = ")
+    print "\""x[1]"\""":"x[2]","
+    print "}# "name
+}
+NF==0{
+    print ""
+}
+' $1

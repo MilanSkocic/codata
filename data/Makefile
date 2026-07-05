@@ -54,7 +54,7 @@ build/%.man: build/%.toml
 	./toml2man $< > $@
 
 build/%.f90: build/%.toml
-	$(FPM_PYGEN) $(GEN_F) $< $@
+	./toml2f90 $< > $@
 
 ../src/%.f90: build/%.f90
 	cp -fv $^ $@
@@ -69,7 +69,7 @@ build/%.h: ./build/%.toml
 	./stdlib $< > $@
 
 ./build/%.py: ./build/%.toml
-	$(FPM_PYGEN) $(GEN_PY) $< $@
+	./toml2py $< > $@
 
 ./build/_%.c: ./build/%.toml
 	$(FPM_PYGEN) $(GEN_CPY) $< $@
@@ -78,7 +78,7 @@ build/%.h: ./build/%.toml
 	cp -fv $^ $@
 
 ./build/%.c: ./build/%.toml
-	$(FPM_PYGEN) $(GEN_C) $< $@
+	./toml2c $< > $@
 
 ../src/%.c: ./build/%.c
 	cp -fv $^ $@

@@ -11,12 +11,10 @@ use codata__constants_type
 implicit none(type,external)
 private
 
-integer(int32), parameter, public :: YEAR_2018 = 2018 !! Year of release.
-
 
 
 !-----------------------------------------------------------------------
-! FORTRAN
+! CONSTANTS
 !-----------------------------------------------------------------------
 !{{{2
 type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018 = &

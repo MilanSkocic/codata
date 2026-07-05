@@ -22,17 +22,20 @@ BEGIN{
     }
     print "//------------------------------------------------------------------------"
     print "//{{{"
-    print "ADD_IMPORT extern const int YEAR"suffix";"
+
+    i=0
 }
 /^\[.*\]/{
     gsub(/\[/,"")
     gsub(/\]/,"")
     var=$0 suffix
+    i++
 }
 NF==0{
     print "ADD_IMPORT extern const struct codata_constant_type "var";"
 }
 END{
+    print "ADD_IMPORT extern const struct codata_constant_type *cc"suffix"["i+1"];"
     print "//}}}"
 }
 ' $1

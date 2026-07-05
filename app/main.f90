@@ -1,55 +1,5 @@
 ! SPDX-License-Identifier: MIT
 
-! {{{
-! NAME
-!   codata - print fundamental physical constants
-! 
-! SYNOPSIS
-!   codata [OPTION...] [REGEX_PATTERN...]
-! 
-! DESCRIPTION
-!   codata(1) is a command line interface which prints all the codata
-!   constants.
-! 
-!   The current values are from 2022.
-!   Older values can be retrieved if needed and
-!   the output can be filtered with REGEX PATTERNS.
-! 
-! 
-! OPTIONS
-!   --year, -y YEAR        CODATA constants: 2022, 2018, 2014, 2010
-!   --pattern, -p PATTERN  Regex pattern for filtering the constants.
-!   --value, -a            Show only the value.
-!   --error, -e            Show only the uncertainty.
-!   --usage                Show usage text and exit.
-!   --version, -v          Show version information and exit.
-!   --help, -h             Show help text and exit.
-! 
-! NOTES
-!   You may replace the default options from a file if your first
-!   options begin with @file.
-!   Initial options will then be read from the "response file"
-!   "file.rsp" in the current directory.
-! 
-!   If "file" does not exist or cannot be read, then an error occurs and
-!   the program stops. Each line of the file is prefixed with "options"
-!   and interpreted as a separate argument. The file itself may not
-!   contain @file arguments. That is, it is not processed recursively.
-! 
-!   For more information on response files see
-!   https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html
-! 
-! EXAMPLE
-!   Minimal example
-! 
-!      codata
-!      codata -y 2018 molar electron
-!      codata -y 2014 -p molar.*gas,electron.*eV
-!      codata [B,b]oltzmann.*eV
-! 
-! SEE ALSO
-!   codata(3)
-!}}}
 program codatacli
 use, intrinsic :: iso_fortran_env, only: output_unit
 use M_CLI2, only: set_args, set_mode, specified, iget, lget, sget, get_args
@@ -83,13 +33,13 @@ help_text=[character(len=72) :: &
 'Usage: codata [OPTION]...                                             ',&
 'codata - fundamental physical constants                               ',&
 '                                                                      ',&
-'  --year, -y YEAR         Codata constants: 2022, 2018, 2014, 2010    ',&
-'  --pattern, -p PATTERN   Regex pattern for filtering the constants.  ',&
-'  --value, -a             Show only the value.  ',&
-'  --error, -e             Show only the uncertainty.      ',&
-'  --usage                 Show usage text and exit.     ',&
-'  --version, -v           Show version information and exit.           ',&
-'  --help, -h              Show help text and exit.    ',&
+'  -y, --year YEAR         Codata constants: 2022, 2018, 2014, 2010    ',&
+'  -p, --pattern PATTERN   Regex pattern for filtering the constants.  ',&
+'  -a, --value             Show only the value.  ',&
+'  -e, --error             Show only the uncertainty.      ',&
+'  -u, --usage             Show usage text and exit.     ',&
+'  -v, --version           Show version information and exit.           ',&
+'  -h, --help              Show help text and exit.    ',&
 '']
 
 call set_mode('strict')

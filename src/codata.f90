@@ -18,7 +18,7 @@ use codata__constants_type
 implicit none(type,external)
 public
 
-character(len=*), parameter, private :: v = '2.5.3'
+character(len=*), parameter, private :: v = '2.5.4'
 character(len=:), allocatable, target, private :: vf
 character(len=:), allocatable, target, private :: vc
 

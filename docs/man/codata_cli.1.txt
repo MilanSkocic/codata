@@ -14,25 +14,25 @@ DESCRIPTION
        if needed and the output can be filtered with REGEX PATTERNS.
 
 OPTIONS
-       --year, -y YEAR
+       -y, --year YEAR
               CODATA constants: 2022, 2018, 2014, 2010
 
-       --pattern, -p PATTERN
+        -p, --pattern PATTERN
               Regex pattern for filtering the constants.
 
-       --value, -a
+       -a, --value
               Show only the value.
 
-       --error, -e
+       -e, --error
               Show only the uncertainty.
 
-       --usage
+       -u, --usage
               Show usage text and exit.
 
-       --version, -v
+       -v,--version
               Show version information and exit.
 
-       --help, -h
+       -h, --help
               Show help text and exit.
 
 NOTES
@@ -60,4 +60,4 @@ SEE ALSO
        codata(3),   codata_cli(1),    codata_version(3),    codata_con‐
        stant_type(3)
 
-2.5.3                         23 June 2026                codata_cli(1)
+2.5.4                         27 June 2026                codata_cli(1)

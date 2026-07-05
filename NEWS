@@ -1,3 +1,11 @@
+VERSION 2.5.4
+  - Maintenance release. NO API break.
+  - API is written as man pages in groff directly.
+    - codata.3
+    - codata_cli.1
+    - codate_version.3
+    - codata_constant_type.3
+
 VERSION 2.5.3
   - Maintenance release. NO API break.
   - Complete rewrite of the documentation structure.

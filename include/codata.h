@@ -22,7 +22,6 @@ struct codata_constant_type{
 // CODATA_CONSTANTS_2010
 //------------------------------------------------------------------------
 //{{{
-ADD_IMPORT extern const int YEAR_2010;
 ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_SILICON_2010;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS_2010;
@@ -358,13 +357,13 @@ ADD_IMPORT extern const struct codata_constant_type VON_KLITZING_CONSTANT_2010;
 ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE_2010;
 ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2010;
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010;
+ADD_IMPORT extern const struct codata_constant_type *cc_2010[336];
 //}}}
 
 //------------------------------------------------------------------------
 // CODATA_CONSTANTS_2014
 //------------------------------------------------------------------------
 //{{{
-ADD_IMPORT extern const int YEAR_2014;
 ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_SILICON_2014;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2014;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS_2014;
@@ -700,13 +699,13 @@ ADD_IMPORT extern const struct codata_constant_type VON_KLITZING_CONSTANT_2014;
 ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE_2014;
 ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2014;
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014;
+ADD_IMPORT extern const struct codata_constant_type *cc_2014[336];
 //}}}
 
 //------------------------------------------------------------------------
 // CODATA_CONSTANTS_2018
 //------------------------------------------------------------------------
 //{{{
-ADD_IMPORT extern const int YEAR_2018;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS_2018;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2018;
@@ -1061,13 +1060,13 @@ ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE_2018;
 ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018;
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018;
 ADD_IMPORT extern const struct codata_constant_type W_TO_Z_MASS_RATIO_2018;
+ADD_IMPORT extern const struct codata_constant_type *cc_2018[355];
 //}}}
 
 //------------------------------------------------------------------------
 // CODATA_CONSTANTS_2022
 //------------------------------------------------------------------------
 //{{{
-ADD_IMPORT extern const int YEAR;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_ELECTRON_MASS_RATIO;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS;
 ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT;
@@ -1423,6 +1422,7 @@ ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE;
 ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT;
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT;
 ADD_IMPORT extern const struct codata_constant_type W_TO_Z_MASS_RATIO;
+ADD_IMPORT extern const struct codata_constant_type *cc[356];
 //}}}
 
 #endif

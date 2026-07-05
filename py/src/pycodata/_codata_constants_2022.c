@@ -11,14 +11,9 @@ static struct PyModuleDef constants_2022 = {PyModuleDef_HEAD_INIT, "constants_20
 PyMODINIT_FUNC PyInit_constants_2022(void){
     PyObject *m;
     PyObject *d;
-    PyObject *v;
     PyObject *constant;
     m = PyModule_Create(&constants_2022);
     d = PyModule_GetDict(m);
-
-    v = PyLong_FromLong(YEAR);
-    PyDict_SetItemString(d, "YEAR", v);
-    Py_DECREF(v);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
     "name", ALPHA_PARTICLE_ELECTRON_MASS_RATIO.name,
