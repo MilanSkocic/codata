@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <regex.h>
 #include "codata.h"
+#include "re.h"
 
 #define VERSION_SIZE 256
 
@@ -30,7 +30,6 @@ static void usage_text(){
 
 static void help_text(struct option_t *options){
     int i=0;
-    char buf[64];
     printf("%s\n", "Usage: codata [OPTION]...");
     printf("%s\n", "codata - fundamental physical constants.");
     printf("%s\n", "");
@@ -59,8 +58,7 @@ static char *long2short(char *option, struct option_t *options){
 
 static void print_all(const struct codata_constant_type **cc, const char *pattern, int *a, int *e){
     int i=0; 
-    regex_t regex;
-    regmatch_t matches[1]; // full match + no groups
+    int len;
     const char *fmt;
 
     fmt = fmt_all;
@@ -77,10 +75,7 @@ static void print_all(const struct codata_constant_type **cc, const char *patter
                 printf(fmt, cc[i]->name, cc[i]->value, " +/- ", cc[i]->uncertainty, cc[i]->unit);
             }
         }else{
-            if (regcomp(&regex, pattern, REG_EXTENDED) != 0) {
-                fprintf(stderr, "Failed to compile regex\n");
-            }
-            if(regexec(&regex, cc[i]->name, 1, matches, 0) == 0) {
+            if(re_match(pattern, cc[i]->name, &len) != -1) {
                 if(*a){
                     printf(fmt, cc[i]->value);
                 }else if(*e){
@@ -89,7 +84,6 @@ static void print_all(const struct codata_constant_type **cc, const char *patter
                     printf(fmt, cc[i]->name, cc[i]->value, " +/- ", cc[i]->uncertainty, cc[i]->unit);
                 }
             }
-            regfree(&regex);
         }
         i++;
     }
