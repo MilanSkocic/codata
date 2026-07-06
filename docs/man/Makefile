@@ -12,15 +12,6 @@ MANHTML=$(patsubst %, %.html, $(MAN))
 
 BOOKMAN=$(FPM_NAME)-bookman.pdf
 
-FOLDER="../../data"
-CODATA_CONSTANTS_XXXX=" \
-					  $(FOLDER)/codata_constants_2022.man \
-					  $(FOLDER)/codata_constants_2018.man \
-					  $(FOLDER)/codata_constants_2014.man \
-					  $(FOLDER)/codata_constants_2010.man \
-                      "
-
-
 all: $(MAN) $(BOOKMAN) $(MANGZ) $(MANPDF) $(MANTXT) $(MANHTML)
 
 $(BOOKMAN): $(MANBUILD)
