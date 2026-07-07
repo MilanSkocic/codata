@@ -1,7 +1,7 @@
 codata_cli(1)                User Commands                codata_cli(1)
 
 NAME
-       codata - libray for fundamental physical constants
+       codata - CLI for fundamental physical constants
 
 SYNOPSIS
        codata [OPTION]...
