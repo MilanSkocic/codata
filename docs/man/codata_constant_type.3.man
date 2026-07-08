@@ -71,9 +71,9 @@ struct codata_constant_type{
 Fortran:
 .nf
 .ft CR
-      use codata
-      type(codata_constant_type), pointer :: c
-      c = SPEED_OF_LIGHT_IN_VACUUM
+    use codata
+    type(codata_constant_type), pointer :: c
+    c = SPEED_OF_LIGHT_IN_VACUUM
 .ft R
 .fi
 
@@ -82,9 +82,9 @@ C:
 .PP
 .nf
 .ft CR
-      include "codata.h"
-      struct codata_constant_type c;
-      c = SPEED_OF_LIGHT_IN_VACUUM;
+    include "codata.h"
+    struct codata_constant_type c;
+    c = SPEED_OF_LIGHT_IN_VACUUM;
 
 .ft R
 .fi
