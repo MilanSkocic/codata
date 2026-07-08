@@ -34,15 +34,12 @@ $(FPM_LIBNAME): build shared
 .PHONY: build
 build:
 	fpm build --profile $(btype)
-	mkdir -p $(FPM_BUILD_DIR)/install/bin
-	mkdir -p $(FPM_BUILD_DIR)/install/include
-	mkdir -p $(FPM_BUILD_DIR)/install/lib
-	mkdir -p $(FPM_BUILD_DIR)/install/share/man/man3
-	mkdir -p $(FPM_BUILD_DIR)/install/share/man/man1
 	fpm install --prefix $(FPM_BUILD_DIR)/install --profile $(btype) --no-rebuild
-	cp -f $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(FPM_BUILD_DIR)/install/include
-	cp -f docs/man/$(FPM_NAME)*.3.gz $(FPM_BUILD_DIR)/install/share/man/man3
-	cp -f docs/man/$(FPM_APPNAME)*.1.gz $(FPM_BUILD_DIR)/install/share/man/man1
+	install -d $(FPM_BUILD_DIR)/install/share/man/man1/ \
+		       $(FPM_BUILD_DIR)/install/share/man/man3/
+	install $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(FPM_BUILD_DIR)/install/include
+	install docs/man/$(FPM_NAME)*.3.gz $(FPM_BUILD_DIR)/install/share/man/man3
+	install docs/man/$(FPM_APPNAME)*.1.gz $(FPM_BUILD_DIR)/install/share/man/man1
 
 .PHONY: test
 test:

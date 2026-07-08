@@ -357,7 +357,7 @@ ADD_IMPORT extern const struct codata_constant_type VON_KLITZING_CONSTANT_2010;
 ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE_2010;
 ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2010;
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010;
-ADD_IMPORT extern const struct codata_constant_type cc_2010[335];
+ADD_IMPORT extern const struct codata_constant_type *cc_2010[336];
 //}}}
 
 //------------------------------------------------------------------------
@@ -699,7 +699,7 @@ ADD_IMPORT extern const struct codata_constant_type VON_KLITZING_CONSTANT_2014;
 ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE_2014;
 ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2014;
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014;
-ADD_IMPORT extern const struct codata_constant_type cc_2014[335];
+ADD_IMPORT extern const struct codata_constant_type *cc_2014[336];
 //}}}
 
 //------------------------------------------------------------------------
@@ -1060,7 +1060,7 @@ ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE_2018;
 ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2018;
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2018;
 ADD_IMPORT extern const struct codata_constant_type W_TO_Z_MASS_RATIO_2018;
-ADD_IMPORT extern const struct codata_constant_type cc_2018[354];
+ADD_IMPORT extern const struct codata_constant_type *cc_2018[355];
 //}}}
 
 //------------------------------------------------------------------------
@@ -1422,7 +1422,7 @@ ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE;
 ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT;
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT;
 ADD_IMPORT extern const struct codata_constant_type W_TO_Z_MASS_RATIO;
-ADD_IMPORT extern const struct codata_constant_type cc[355];
+ADD_IMPORT extern const struct codata_constant_type *cc[356];
 //}}}
 
 #endif

@@ -34,8 +34,8 @@ Get the library version.
 Fortran:
 .nf
 .ft CR
-      use codata
-      print *, "version = ", version()
+    use codata
+    print *, "version = ", version()
 .ft R
 .fi
 
@@ -43,9 +43,9 @@ Fortran:
 C:
 .nf
 .ft CR
-      include <stdio.h>
-      include "codata.h"
-      printf("version = %s\n", codata_version());
+    include <stdio.h>
+    include "codata.h"
+    printf("version = %s\\n", codata_version());
 .ft R
 .fi
 
@@ -53,8 +53,8 @@ C:
 Python:
 .nf
 .ft CR
-      import pycodata
-      print(f"version = {pycodata.__version__}")
+    import pycodata
+    print(f"version = {pycodata.__version__}")
 .ft R
 .fi
 \"}}}
