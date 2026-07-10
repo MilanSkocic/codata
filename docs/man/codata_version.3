@@ -1,4 +1,4 @@
-.TH codata_version 3 "08 July 2026" "2.5.4" "Library Functions Manual"
+.TH codata_version 3 "10 July 2026" "2.5.4" "Library Functions Manual"
 
 .SH NAME
 \"{{{
@@ -14,18 +14,28 @@ Codata library
 .SH SYNOPSIS
 \"{{{ 
 .IP Fortran 10
-.B character(len=:), pointer :: version()
+.BI "function version()result(" fptr ")"
+.RS
+.IP "" 3
+.BI "character(len=:), pointer :: " fptr 
+.RE
 
 .IP C 10
-.B char* codata_version()
+.B char* ciaaw_version()
 
 .IP Python 10
-.B pycodata.__version__
+.BI str: pyciaaw.__version__
 \"}}}
 
 .SH DESCRIPTION
 \"{{{
 Get the library version.
+\"}}}
+
+.SH RETURN VALUE
+\"{{{
+.IP pointer 10 
+Pointer to the version string.
 \"}}}
 
 .SH EXAMPLE
