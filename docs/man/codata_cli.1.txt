@@ -35,20 +35,6 @@ OPTIONS
        -h, --help
               Show help text and exit.
 
-NOTES
-       You may replace the default options from a file  if  your  first
-       options  begin  with  @file.   Initial options will then be read
-       from the "response file" "file.rsp" in the current directory.
-
-       If "file" does not exist or cannot be read, then an error occurs
-       and the program stops. Each line of the file  is  prefixed  with
-       "options"  and  interpreted as a separate argument. The file it‐
-       self may not  contain  @file  arguments.  That  is,  it  is  not
-       processed recursively.
-
-       For  more  information  on  response  files  see  https://urban‐
-       jost.github.io/M_CLI2/set_args.3m_cli2.html
-
 EXAMPLE
        Minimal example
             codata
@@ -60,4 +46,4 @@ SEE ALSO
        codata(3),   codata_cli(1),    codata_version(3),    codata_con‐
        stant_type(3)
 
-2.5.4                         10 July 2026                codata_cli(1)
+2.5.4                         18 July 2026                codata_cli(1)

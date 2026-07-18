@@ -1,4 +1,4 @@
-.TH codata_cli 1 "10 July 2026" "2.5.4" "User Commands"
+.TH codata_cli 1 "18 July 2026" "2.5.4" "User Commands"
 
 .SH NAME
 codata \- libray for fundamental physical constants
@@ -48,24 +48,6 @@ Show version information and exit.
 .B
 \fB\-h\fP, \fB\-\-help\fP
 Show help text and exit.
-
-
-
-.SH NOTES
-.PP
-You may replace the default options from a file if your first
-options begin with @file.
-Initial options will then be read from the "response file"
-"file.rsp" in the current directory.
-.PP
-If "file" does not exist or cannot be read, then an error occurs and
-the program stops. Each line of the file is prefixed with "options"
-and interpreted as a separate argument. The file itself may not
-contain @file arguments. That is, it is not processed recursively.
-.PP
-For more information on response files see
-https://urbanjost.github.io/M_CLI2/set_args.3m_cli2.html
-
 
 
 
