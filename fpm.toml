@@ -29,12 +29,8 @@ M_CLI2 = {git="https://github.com/urbanjost/M_CLI2.git"}
 fortran-regex = {git="https://github.com/perazz/fortran-regex.git", tag="1.1.2"}
 
 [[executable]]
-name = "ccli"
-main = "main.c"
-
-[[executable]]
 name = "codata"
-main = "main.f90"
+main = "main.c"
 
 [[example]]
 name = "example_in_f"
