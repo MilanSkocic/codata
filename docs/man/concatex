@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+fpath="./examples.man"
+
+echo  ".SH EXAMPLES" > $fpath
+echo  "\\\"{{{" >> $fpath
+
+echo ".PP" >> $fpath
+echo "Example in Fortran:" >> $fpath
+echo ".nf" >> $fpath
+echo ".ft CR" >> $fpath
+while IFS="" read -r line; do
+    line=$(echo $line | sed 's/^[ \t]*//;s/[ \t]*$//')
+    echo "    $line" >> $fpath
+done < "../../example/example.f90"
+echo ".ft R" >> $fpath
+echo ".fi" >> $fpath
+echo "" >> $fpath
+
+echo ".PP" >> $fpath
+echo "Example in C"       >> $fpath
+echo ".nf" >> $fpath
+echo ".ft CR" >> $fpath
+while IFS="" read -r line; do
+    echo "    $line" >> $fpath
+done < "../../example/example.c"
+echo ".ft R" >> $fpath
+echo ".fi" >> $fpath
+echo "" >> $fpath
+
+echo ".PP" >> $fpath
+echo "Example in Python"  >> $fpath
+echo ".nf" >> $fpath
+echo ".ft CR" >> $fpath
+while IFS="" read -r line; do
+    echo "    $line" >> $fpath
+done < "../../example/example.py"
+echo ".ft R" >> $fpath
+echo ".fi" >> $fpath
+
+echo "\\\"}}}" >> $fpath
+
+echo "" >> $fpath

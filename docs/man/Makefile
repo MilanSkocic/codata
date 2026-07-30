@@ -19,6 +19,7 @@ $(BOOKMAN): $(MANBUILD)
 
 codata.3: codata.3.man
 	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" $< > tmp
+	cat $< examples.man seealso.man > tmp
 	cat tmp \
 		   ../../data/build/codata_constants_2022.man \
 		   ../../data/build/codata_constants_2018.man \
@@ -28,13 +29,19 @@ codata.3: codata.3.man
 	rm -fv tmp
 
 codata_cli.1: codata_cli.1.man
-	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" $< > $@
+	cat $< seealso.man > tmp
+	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" tmp > $@
+	rm -rfv tmp
 
 codata_version.3: codata_version.3.man
-	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" $< > $@
+	cat $< seealso.man > tmp
+	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" tmp > $@
+	rm -rfv tmp
 
 codata_constant_type.3: codata_constant_type.3.man
-	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" $< > $@
+	cat $< seealso.man > tmp
+	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" tmp > $@
+	rm -rfv tmp
 
 %.pdf: %
 	man -l -Tpdf $< > $@
