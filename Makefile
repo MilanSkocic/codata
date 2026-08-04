@@ -33,8 +33,7 @@ $(FPM_LIBNAME): build shared
 #{{{
 .PHONY: build
 build:
-	fpm build --profile $(btype)
-	fpm install --prefix $(FPM_BUILD_DIR)/install --profile $(btype) --no-rebuild
+	fpm install --profile $(btype) --prefix $(FPM_BUILD_DIR)/install
 	install -d $(FPM_BUILD_DIR)/install/share/man/man1/ \
 		       $(FPM_BUILD_DIR)/install/share/man/man3/
 	install $(FPM_INCLUDE_DIR)/$(FPM_NAME)*.h $(FPM_BUILD_DIR)/install/include
