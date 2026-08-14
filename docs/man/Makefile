@@ -1,7 +1,7 @@
 include ../../make.in
 
-MANSRC=codata.3.man \
-	   codata_cli.1.man \
+MANSRC=codata.1.man \
+	   codata_lib.3.man \
 	   codata_version.3.man \
 	   codata_constant_type.3.man
 MAN=$(patsubst %.man, %, $(MANSRC))
@@ -10,14 +10,12 @@ MANTXT=$(patsubst %, %.txt, $(MAN))
 MANGZ=$(patsubst %, %.gz, $(MAN))
 MANHTML=$(patsubst %, %.html, $(MAN))
 
-BOOKMAN=$(FPM_NAME)-bookman.pdf
-
-all: $(MAN) $(BOOKMAN) $(MANGZ) $(MANPDF) $(MANTXT) $(MANHTML)
+all: $(MAN)  $(MANGZ) $(MANPDF) $(MANTXT) $(MANHTML)
 
 $(BOOKMAN): $(MANBUILD)
 	bookman -p -a "$(FPM_AUTHOR)" -t $(FPM_NAME) -v "User Commands & Libary Calls" -r $(FPM_VERSION) $(MAN) > $(BOOKMAN)
 
-codata.3: codata.3.man
+codata_lib.3: codata_lib.3.man
 	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" $< > tmp
 	cat $< examples.man seealso.man > tmp
 	cat tmp \
@@ -28,7 +26,7 @@ codata.3: codata.3.man
 		   > $@
 	rm -fv tmp
 
-codata_cli.1: codata_cli.1.man
+codata.1: codata.1.man
 	cat $< seealso.man > tmp
 	sed -E "s/@VERSION@/$(FPM_VERSION)/g;s/@DATE@/$(shell date +'%d %B %Y')/g" tmp > $@
 	rm -rfv tmp
@@ -57,5 +55,5 @@ codata_constant_type.3: codata_constant_type.3.man
 
 .PHONY: clean
 clean:
-	rm -fv $(MAN) $(BOOKMAN) $(MANGZ) $(MANPDF) $(MANTXT) $(MANHTML)
+	rm -fv $(MAN) $(MANGZ) $(MANPDF) $(MANTXT) $(MANHTML)
 

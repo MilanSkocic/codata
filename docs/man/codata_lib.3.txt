@@ -1,4 +1,4 @@
-codata(3)               Library Functions Manual              codata(3)
+codata_lib(3)           Library Functions Manual          codata_lib(3)
 
 NAME
        codata - libray for fundamental physical constants
@@ -2917,4 +2917,4 @@ CODATA 2010
 
        •      WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT _2010
 
-@VERSION@                        @DATE@                       codata(3)
+@VERSION@                        @DATE@                   codata_lib(3)
