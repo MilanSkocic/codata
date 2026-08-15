@@ -1,4 +1,4 @@
-codata_lib(3)           Library Functions Manual          codata_lib(3)
+codata_lib(3)                Library calls                codata_lib(3)
 
 NAME
        codata - libray for fundamental physical constants
