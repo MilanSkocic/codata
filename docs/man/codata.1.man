@@ -1,7 +1,7 @@
 .TH codata 1 "@DATE@" "@VERSION@" "User Commands"
 
 .SH NAME
-codata \- libray for fundamental physical constants
+codata \- get the fundamental physical constants
 
 
 .SH SYNOPSIS

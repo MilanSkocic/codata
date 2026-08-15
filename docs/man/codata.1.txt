@@ -1,7 +1,7 @@
 codata(1)                    User Commands                    codata(1)
 
 NAME
-       codata - libray for fundamental physical constants
+       codata - get the fundamental physical constants
 
 SYNOPSIS
        codata [OPTION]...
