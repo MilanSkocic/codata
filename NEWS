@@ -1,3 +1,12 @@
+VERSION 2.5.5
+  - Maintenance release. 
+  - No API break.
+  - Man pages have been renamed:
+    - codata(1): command line application
+    - codata_lib(3): library 
+    - codata_version(3)
+    - codata_constant_type(3)
+
 VERSION 2.5.4
   - Maintenance release. NO API break.
   - API is written as man pages in groff directly.

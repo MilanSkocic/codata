@@ -16,10 +16,10 @@ FEATURES
   - Python bindings
 
 DOCUMENTATION 
-  The API is written as POSIX-style man pages which distributed with 
+  The API is written as POSIX-style man pages which are distributed with 
   the binaries. 
   
-  PDF   https://milanskocic.github.io/codata/man/codata-bookman.pdf
+  PDF   https://milanskocic.github.io/codata/man/
   HTML  https://milanskocic.github.io/codata/index.html
 
 INSTALLATION 
