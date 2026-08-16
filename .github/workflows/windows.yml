@@ -20,15 +20,16 @@ jobs:
         install: >-
           mingw-w64-ucrt-x86_64-gcc-fortran
           mingw-w64-ucrt-x86_64-libsystre
+          mingw-w64-ucrt-x86_64-fpm
           git
           make
           zip
     - name: Set fpm
       run: |
-        wget https://github.com/fortran-lang/fpm/releases/download/v0.12.0/fpm-0.12.0-windows-x86_64-gcc-12.exe
-        mv fpm-0.12.0-windows-x86_64-gcc-12.exe fpm.exe
-        chmod +x fpm.exe
-        cp -fv fpm.exe /ucrt64/bin/
+        #wget https://github.com/fortran-lang/fpm/releases/download/v0.12.0/fpm-0.12.0-windows-x86_64-gcc-12.exe
+        #mv fpm-0.12.0-windows-x86_64-gcc-12.exe fpm.exe
+        #chmod +x fpm.exe
+        #cp -fv fpm.exe /ucrt64/bin/
         which gfortran
         which fpm
     - name: Versions

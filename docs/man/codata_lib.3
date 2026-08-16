@@ -1,4 +1,4 @@
-.TH codata 3 "18 July 2026" "2.5.4" "Library Functions Manual"
+.TH codata_lib 3 "@DATE@" "@VERSION@" "Library calls"
 
 .SH NAME
 \"{{{
@@ -103,10 +103,10 @@ P. J. Mohr, D. B. Newell, B. N. Taylor, and E. Tiesinga,
 Reviews of Modern Physics, vol. 97, no. 2, p. 25002, Apr. 2025, doi: 10.1103/RevModPhys.97.025002.
 \"}}}
 
-.SH EXAMPLE
+.SH EXAMPLES
 \"{{{
 .PP
-Example in Fortran
+Example in Fortran:
 .nf
 .ft CR
     program example_in_f
@@ -116,14 +116,14 @@ Example in Fortran
     print '(A)', '# VERSION'
     print *, "version = ", version()
     print '(A)', '# CONSTANTS'
-    print *, "c = ",  SPEED_OF_LIGHT_IN_VACUUM%value
+    print *, "c = ", SPEED_OF_LIGHT_IN_VACUUM%value
     print '(A)', '# UNCERTAINTY'
     print *, "u(c) = ", SPEED_OF_LIGHT_IN_VACUUM%uncertainty
     print '(A)', '# OLDER VALUES'
     print '(A, F23.16)', "Mu_2022(latest) = ", MOLAR_MASS_CONSTANT%value
     print '(A, F23.16)', "Mu_2018 = ", MOLAR_MASS_CONSTANT_2018%value
-    print '(A, F23.16)', "Mu_2014 = ",  MOLAR_MASS_CONSTANT_2014%value
-    print '(A, F23.16)', "Mu_2010 = ",  MOLAR_MASS_CONSTANT_2010%value
+    print '(A, F23.16)', "Mu_2014 = ", MOLAR_MASS_CONSTANT_2014%value
+    print '(A, F23.16)', "Mu_2010 = ", MOLAR_MASS_CONSTANT_2010%value
     end program
 .ft R
 .fi
@@ -134,22 +134,19 @@ Example in C
 .ft CR
     #include <stdio.h>
     #include "codata.h"
-
-
     int main(void){
-    printf("%f", c);
-    printf("########## EXAMPLE IN C ##########\\n");
-    printf("%s\\n","# VERSION");
-    printf("version = %s\\n", codata_version());
-    printf("%s\\n","# CONSTANTS");
-    printf("c = %f\\n", SPEED_OF_LIGHT_IN_VACUUM.value);
-    printf("%s\\n","# UNCERTAINTY");
-    printf("u(c) = %f\\n", SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
-    printf("%s\\n","# OLDER VALUES");
-    printf("Mu_2022(latest) = %23.16f\\n", MOLAR_MASS_CONSTANT.value);
-    printf("Mu_2018 = %23.16f\\n", MOLAR_MASS_CONSTANT_2018.value);
-    printf("Mu_2014 = %23.16f\\n", MOLAR_MASS_CONSTANT_2014.value);
-    printf("Mu_2010 = %23.16f\\n", MOLAR_MASS_CONSTANT_2010.value);
+    printf("########## EXAMPLE IN C ##########\n");
+    printf("%s\n","# VERSION");
+    printf("version = %s\n", codata_version());
+    printf("%s\n","# CONSTANTS");
+    printf("c = %f\n", SPEED_OF_LIGHT_IN_VACUUM.value);
+    printf("%s\n","# UNCERTAINTY");
+    printf("u(c) = %f\n", SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
+    printf("%s\n","# OLDER VALUES");
+    printf("Mu_2022(latest) = %23.16f\n", MOLAR_MASS_CONSTANT.value);
+    printf("Mu_2018 = %23.16f\n", MOLAR_MASS_CONSTANT_2018.value);
+    printf("Mu_2014 = %23.16f\n", MOLAR_MASS_CONSTANT_2014.value);
+    printf("Mu_2010 = %23.16f\n", MOLAR_MASS_CONSTANT_2010.value);
     return 0;
     }
 .ft R
