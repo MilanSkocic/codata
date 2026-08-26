@@ -21,10 +21,10 @@ Codata library
 .RE
 
 .IP C 10
-.B char* ciaaw_version()
+.B char* codata_version()
 
 .IP Python 10
-.BI str: pyciaaw.__version__
+.BI str: codata.__version__
 \"}}}
 
 .SH DESCRIPTION
