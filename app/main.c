@@ -6,6 +6,7 @@
 #include "re.h"
 
 #define VERSION_SIZE 256
+#define PATTERN_SIZE 512
 
 struct option_t {char *s; char *l; char *arg; char *help;};
 static const char fmt_all[] = "%-60s%-+24.16e%5s%-+24.16e%-15s\n";
@@ -14,6 +15,7 @@ static const char fmt_e[] = "%-+24.16e\n";
 
 static void version_text(){
     char v[VERSION_SIZE];
+    v[VERSION_SIZE] = '\0';
     strcpy(v, "codata ");
     strcat(v, codata_version());
     strcat(v, "\n\n");
@@ -104,7 +106,10 @@ int main(int argc, char **argv){
     const struct codata_constant_type **ccptr;
 
     int year=2022;
-    char *pattern=NULL;
+    char patterns[PATTERN_SIZE];
+    patterns[0]='\0';
+    char *pattern;
+    char *tokenptr;
     int a = 0;
     int e = 0;
     
@@ -129,7 +134,8 @@ int main(int argc, char **argv){
                 year = atof(optarg);
                 break;
             case 'p':
-                pattern = optarg;
+                if(strlen(patterns) > 0){strcat(patterns, ";");}
+                strcat(patterns, optarg);
                 break;
             case 'a':
                 a=1;
@@ -175,7 +181,15 @@ int main(int argc, char **argv){
                 fprintf(stderr, "Invalid year. See --help.");
                 break;
     }
-    print_all(ccptr, pattern, &a, &e);
+    pattern = strtok_r(patterns, ";", &tokenptr);
+    if(pattern == NULL){
+        print_all(ccptr, pattern, &a, &e);
+        EXIT_SUCCESS;
+    }
+    while(pattern != NULL){
+        print_all(ccptr, pattern, &a, &e);
+        pattern = strtok_r(NULL, ";", &tokenptr);
+    }
 
     return EXIT_SUCCESS;
 }
