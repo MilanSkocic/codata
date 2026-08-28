@@ -20,7 +20,7 @@ static void version_text(){
     strcat(v, "Copyright (c) 2022 Milan Skocic\n");
     strcat(v, "License MIT\n");
     strcat(v, "\n");
-    strcat(v, "Wrtten by Milan Skocic\n");
+    strcat(v, "Written by Milan Skocic\n");
     printf("%s", v);
 }
 
