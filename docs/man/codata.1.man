@@ -27,7 +27,8 @@ the output can be filtered with \fIREGEX PATTERNS\fP.
 CODATA constants: 2022, 2018, 2014, 2010
 .TP
  \fB\-p\fP, \fB\-\-pattern\fP \fIPATTERN\fP
-Regex pattern for filtering the constants.
+Regex pattern for filtering the constants. Multiple patterns can be 
+passed by repeating this option.
 .TP
 .B
 \fB\-a\fP, \fB\-\-value\fP
