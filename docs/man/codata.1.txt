@@ -18,7 +18,8 @@ OPTIONS
               CODATA constants: 2022, 2018, 2014, 2010
 
         -p, --pattern PATTERN
-              Regex pattern for filtering the constants.
+              Regex pattern for filtering the constants. Multiple  pat‐
+              terns can be passed by repeating this option.
 
        -a, --value
               Show only the value.
@@ -43,7 +44,7 @@ EXAMPLE
             codata [B,b]oltzmann.*eV
 
 SEE ALSO
-       codata(3),   codata_cli(1),    codata_version(3),    codata_con‐
+       codata(3),    codata_cli(1),    codata_version(3),   codata_con‐
        stant_type(3)
 
-2.5.5                        16 August 2026                   codata(1)
+2.5.5                        28 August 2026                   codata(1)

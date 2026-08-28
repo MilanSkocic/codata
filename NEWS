@@ -1,3 +1,9 @@
+VERSION 2.6.0 [dev]
+  - Maintenance release.
+  - No API break.
+  - Add multiple patterns with repeated option -p PATTERN.
+  - Update man pages.
+
 VERSION 2.5.5
   - Maintenance release. 
   - No API break.
