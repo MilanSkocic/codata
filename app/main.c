@@ -13,6 +13,12 @@ static const char fmt_all[] = "%-60s%-+24.16e%5s%-+24.16e%-15s\n";
 static const char fmt_a[] = "%-+24.16e\n";
 static const char fmt_e[] = "%-+24.16e\n";
 
+
+
+//----------------------------------------------------------------------
+// FUNCTION: VERSION_TEXT()
+//----------------------------------------------------------------------
+//{{{
 static void version_text(){
     char v[VERSION_SIZE];
     v[VERSION_SIZE] = '\0';
@@ -25,6 +31,8 @@ static void version_text(){
     strcat(v, "Written by Milan Skocic\n");
     printf("%s", v);
 }
+//}}}
+//----------------------------------------------------------------------
 
 //----------------------------------------------------------------------
 // FUNCTION USAGE_TEXT()
