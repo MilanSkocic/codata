@@ -1,3 +1,6 @@
+#=======================================================================
+# MODULE: __INIT__
+#=======================================================================
 """Codata constants.
  
 The latest values (2022) do not have the year as a suffix in their name.

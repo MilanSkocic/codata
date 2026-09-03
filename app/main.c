@@ -13,6 +13,12 @@ static const char fmt_all[] = "%-60s%-+24.16e%5s%-+24.16e%-15s\n";
 static const char fmt_a[] = "%-+24.16e\n";
 static const char fmt_e[] = "%-+24.16e\n";
 
+
+
+//----------------------------------------------------------------------
+// FUNCTION: VERSION_TEXT()
+//----------------------------------------------------------------------
+//{{{
 static void version_text(){
     char v[VERSION_SIZE];
     v[VERSION_SIZE] = '\0';
@@ -25,7 +31,13 @@ static void version_text(){
     strcat(v, "Written by Milan Skocic\n");
     printf("%s", v);
 }
+//}}}
+//----------------------------------------------------------------------
 
+//----------------------------------------------------------------------
+// FUNCTION USAGE_TEXT()
+//----------------------------------------------------------------------
+//{{{
 static void usage_text(){
     printf("%s\n", "codata [-y|--year] [-p|--pattern] [-a|--value] [-e|--error] [-u|--usage] [-v|--version] [-h|--help]");
 }
@@ -53,7 +65,14 @@ static void help_text(struct option_t *options){
     }
     printf("%s\n", "");
 }
+//}}}
+//----------------------------------------------------------------------
 
+
+//----------------------------------------------------------------------
+// FUNCTION LONG2SHORT()
+//----------------------------------------------------------------------
+//{{{
 static char *long2short(char *option, struct option_t *options){
     int i=0;
     if(option==NULL){return NULL;}
@@ -66,7 +85,14 @@ static char *long2short(char *option, struct option_t *options){
     }
     return option;
 }
+//}}}
+//----------------------------------------------------------------------
 
+
+//----------------------------------------------------------------------
+// FUNCTION PRINT_ALL()
+//----------------------------------------------------------------------
+//{{{
 static void print_all(const struct codata_constant_type **cc, const char *pattern, int *a, int *e){
     int i=0; 
     int len;
@@ -99,7 +125,14 @@ static void print_all(const struct codata_constant_type **cc, const char *patter
         i++;
     }
 }
+//}}}
+//----------------------------------------------------------------------
 
+
+//----------------------------------------------------------------------
+// FUNCTION: MAIN()
+//----------------------------------------------------------------------
+//{{{
 int main(int argc, char **argv){
     int i, opt;
     char *s=NULL;
@@ -193,3 +226,4 @@ int main(int argc, char **argv){
 
     return EXIT_SUCCESS;
 }
+//----------------------------------------------------------------------
