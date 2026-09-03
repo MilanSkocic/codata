@@ -1,4 +1,8 @@
 /* SPDX-License-Identifier: MIT */
+
+//======================================================================
+// MODULE: codata_2022
+//======================================================================
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
 #include "codata.h"
