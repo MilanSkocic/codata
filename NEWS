@@ -25,6 +25,16 @@ VERSION 2.6.0 [dev]
     quantities share one enumerator under both spellings. Enumerator
     values are fixed by data/quantities.txt, which is append-only, so
     adding an adjustment never changes an existing value.
+  - Add a runtime accessor, alongside the named constants and not
+    replacing them: codata_get, codata_defined, codata_value,
+    codata_uncertainty, codata_unit, codata_quantity_name,
+    codata_quantity_from_name, codata_datasets and codata_constants, in
+    Fortran, C and Python. The adjustment is always an explicit argument.
+    A quantity absent from an adjustment reports as undefined and yields
+    a quiet NaN rather than 0.0.
+  - codata(1) no longer hardcodes the list of adjustments, reports an
+    invalid --year instead of reading an uninitialised pointer, and
+    parses --year with atoi rather than atof.
   - Fix a stray space in the constant names listed in the man pages.
   - Add multiple patterns with repeated option -p PATTERN.
   - Update man pages.

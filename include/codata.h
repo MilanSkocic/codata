@@ -2340,4 +2340,56 @@ CODATA_Q_COUNT = 358
 };
 //}}}
 
+//------------------------------------------------------------------------
+// RUNTIME LOOKUP
+//------------------------------------------------------------------------
+//{{{
+/** A CODATA adjustment. The value is the year of the adjustment. */
+enum codata_dataset{
+CODATA_2010 = 2010,
+CODATA_2014 = 2014,
+CODATA_2018 = 2018,
+CODATA_2022 = 2022,
+/** The most recent adjustment. This deliberately moves. */
+CODATA_LATEST = CODATA_2022
+};
+
+/** Number of adjustments available. */
+#define CODATA_N_DATASETS 4
+
+/** The constant, or NULL if the quantity is absent from that adjustment. */
+ADD_IMPORT const struct codata_constant_type *codata_get(enum codata_dataset ds,
+                                                         enum codata_quantity q);
+
+/** Whether the quantity is present in that adjustment. */
+ADD_IMPORT int codata_defined(enum codata_dataset ds, enum codata_quantity q);
+
+/** The value, or a quiet NaN if the quantity is absent from that adjustment.
+ *  Never 0.0: a plausible-looking wrong number is the worst failure mode
+ *  here. Use codata_get or codata_defined to test explicitly. */
+ADD_IMPORT double codata_value(enum codata_dataset ds, enum codata_quantity q);
+
+/** The uncertainty, or a quiet NaN if the quantity is absent. */
+ADD_IMPORT double codata_uncertainty(enum codata_dataset ds, enum codata_quantity q);
+
+/** The unit, or NULL if the quantity is absent from that adjustment. */
+ADD_IMPORT const char *codata_unit(enum codata_dataset ds, enum codata_quantity q);
+
+/** The canonical key name of a quantity, e.g. \"BOHR_RADIUS\", or NULL.
+ *  This is adjustment-independent; the name NIST gives the quantity in a
+ *  particular adjustment is the name field of the constant itself. */
+ADD_IMPORT const char *codata_quantity_name(enum codata_quantity q);
+
+/** The quantity with this key name, accepting renamed spellings too,
+ *  or CODATA_Q_UNKNOWN. */
+ADD_IMPORT enum codata_quantity codata_quantity_from_name(const char *name);
+
+/** The available adjustments, most recent last. Writes the count to n. */
+ADD_IMPORT const enum codata_dataset *codata_datasets(int *n);
+
+/** The NULL-terminated array of constants of an adjustment, or NULL.
+ *  Ordered as NIST lists them for that adjustment. */
+ADD_IMPORT const struct codata_constant_type **codata_constants(enum codata_dataset ds);
+//}}}
+
 #endif
