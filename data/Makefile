@@ -30,14 +30,21 @@ STDLIB=./build/stdlib_codata.f90
 # Reviewed map of quantities NIST renamed between adjustments. Checked in, not
 # generated during a build: a change to it must be looked at by a human.
 RENAMES=./renames.tsv
+# Enumerator ordering for the quantity key. Append-only; see quantities.txt.
+QUANTITIES=./quantities.txt
+Q_HEADER=./build/codata_quantity.h
+Q_FOR=./build/codata_quantity.f90
+Q_PY=./build/quantity.py
 # ---------------------------------------------------------------------
 
 # ---------------------------------------------------------------------
 # TARGETS
 .PHONY: clean
 
-all: dirs $(AST_SRC) check_renames $(MAN_SRC) \
+all: dirs $(AST_SRC) check_renames check_quantities $(MAN_SRC) \
 	      $(FOR_SRC_) $(FOR_SRC) \
+	      $(Q_HEADER) $(Q_FOR) ../src/codata_quantity.f90 \
+	      $(Q_PY) ../py/src/$(FPM_PYNAME)/quantity.py \
 	      $(C_HEADERS) $(C_HEADER) \
 		  $(STDLIB) \
 		  $(C_SRC_) $(C_SRC) \
@@ -67,8 +74,23 @@ build/%.f90: build/%.toml toml2f90 common $(RENAMES)
 build/%.h: ./build/%.toml toml2h common $(RENAMES)
 	./toml2h $< > $@
 
-../include/$(FPM_NAME).h: $(C_HEADERS) $(FPM_NAME).1.h $(FPM_NAME).2.h
-	cat $(FPM_NAME).1.h $(C_HEADERS) $(FPM_NAME).2.h > $@
+../include/$(FPM_NAME).h: $(C_HEADERS) $(Q_HEADER) $(FPM_NAME).1.h $(FPM_NAME).2.h
+	cat $(FPM_NAME).1.h $(C_HEADERS) $(Q_HEADER) $(FPM_NAME).2.h > $@
+
+$(Q_HEADER): gen_quantities $(QUANTITIES) $(RENAMES)
+	./gen_quantities c > $@
+
+$(Q_FOR): gen_quantities $(QUANTITIES) $(RENAMES)
+	./gen_quantities f90 > $@
+
+../src/codata_quantity.f90: $(Q_FOR)
+	cp -fv $^ $@
+
+$(Q_PY): gen_quantities $(QUANTITIES) $(RENAMES)
+	./gen_quantities py > $@
+
+../py/src/$(FPM_PYNAME)/quantity.py: $(Q_PY)
+	cp -fv $^ $@
 
 ./build/stdlib_codata.f90: ./build/codata_constants_$(LATEST_YEAR).f90 stdlib
 	./stdlib $< > $@
@@ -105,6 +127,22 @@ check_renames: $(AST_SRC) renames $(RENAMES)
 
 update_renames: $(AST_SRC) renames
 	./renames $(AST_SRC) > $(RENAMES)
+
+# quantities.txt is append-only: the position of a name is its enumerator
+# value, so a name may never be removed or reordered.
+.PHONY: check_quantities update_quantities
+check_quantities: $(AST_SRC) quantities $(QUANTITIES) $(RENAMES)
+	@./quantities $(QUANTITIES) $(RENAMES) $(AST_SRC) > build/.q.new
+	@if [ -s build/.q.new ] ; then \
+		echo "ERROR: $(QUANTITIES) does not cover every quantity:" >&2 ; \
+		cat build/.q.new >&2 ; \
+		echo "Run: make -C data update_quantities" >&2 ; \
+		exit 1 ; \
+	fi
+
+update_quantities: $(AST_SRC) quantities $(QUANTITIES) $(RENAMES)
+	@./quantities $(QUANTITIES) $(RENAMES) $(AST_SRC) > build/.q.new
+	cat build/.q.new >> $(QUANTITIES)
 # ---------------------------------------------------------------------
 
 
@@ -112,6 +150,8 @@ update_renames: $(AST_SRC) renames
 # OTHERS
 clean:
 	rm -rf build/*
+	rm -f ../src/codata_quantity.f90
+	rm -f ../py/src/$(FPM_PYNAME)/quantity.py
 	rm $(CPY_SRC)
 	rm $(C_HEADER)
 	rm $(C_SRC)

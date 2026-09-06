@@ -19,6 +19,12 @@ VERSION 2.6.0 [dev]
     VACUUM_ELECTRIC_PERMITTIVITY_2014 for ELECTRIC_CONSTANT_2014. The map
     is checked in as data/renames.tsv and verified against the data at
     build time.
+  - Add a stable quantity key, valid across adjustments: CODATA_Q_* in C
+    and Python, Q_* in Fortran (Fortran limits a name to 63 characters,
+    which CODATA_Q_ plus the longest quantity name exceeds). Renamed
+    quantities share one enumerator under both spellings. Enumerator
+    values are fixed by data/quantities.txt, which is append-only, so
+    adding an adjustment never changes an existing value.
   - Fix a stray space in the constant names listed in the man pages.
   - Add multiple patterns with repeated option -p PATTERN.
   - Update man pages.
