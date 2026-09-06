@@ -2160,4 +2160,732 @@ W_TO_Z_MASS_RATIO &
 ]
 !-----------------------------------------------------------------------
 !}}}
+
+
+!-----------------------------------------------------------------------
+! CONSTANTS - YEAR-SUFFIXED NAMES FOR THE LATEST ADJUSTMENT
+!-----------------------------------------------------------------------
+!{{{2
+type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2022 = ALPHA_PARTICLE_ELECTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_2022 = ALPHA_PARTICLE_MASS
+type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2022 = ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 = ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MASS_IN_U_2022 = ALPHA_PARTICLE_MASS_IN_U
+type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_MOLAR_MASS_2022 = ALPHA_PARTICLE_MOLAR_MASS
+type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_PROTON_MASS_RATIO_2022 = ALPHA_PARTICLE_PROTON_MASS_RATIO
+type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2022 = ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS
+type(codata_constant_type), parameter, public :: ALPHA_PARTICLE_RMS_CHARGE_RADIUS_2022 = ALPHA_PARTICLE_RMS_CHARGE_RADIUS
+type(codata_constant_type), parameter, public :: ANGSTROM_STAR_2022 = ANGSTROM_STAR
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_CONSTANT_2022 = ATOMIC_MASS_CONSTANT
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2022 = ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2022 = ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2022 = ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2022 = ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2022 = ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2022 = ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2022 = ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2022 = ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2022 = ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2022 = ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2022 = ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ACTION_2022 = ATOMIC_UNIT_OF_ACTION
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_CHARGE_2022 = ATOMIC_UNIT_OF_CHARGE
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_CHARGE_DENSITY_2022 = ATOMIC_UNIT_OF_CHARGE_DENSITY
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_CURRENT_2022 = ATOMIC_UNIT_OF_CURRENT
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2022 = ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD_2022 = ATOMIC_UNIT_OF_ELECTRIC_FIELD
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2022 = ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2022 = ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2022 = ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2022 = ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_ENERGY_2022 = ATOMIC_UNIT_OF_ENERGY
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_FORCE_2022 = ATOMIC_UNIT_OF_FORCE
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_LENGTH_2022 = ATOMIC_UNIT_OF_LENGTH
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2022 = ATOMIC_UNIT_OF_MAG_DIPOLE_MOM
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2022 = ATOMIC_UNIT_OF_MAG_FLUX_DENSITY
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MAGNETIZABILITY_2022 = ATOMIC_UNIT_OF_MAGNETIZABILITY
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MASS_2022 = ATOMIC_UNIT_OF_MASS
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MOMENTUM_2022 = ATOMIC_UNIT_OF_MOMENTUM
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_PERMITTIVITY_2022 = ATOMIC_UNIT_OF_PERMITTIVITY
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_TIME_2022 = ATOMIC_UNIT_OF_TIME
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_VELOCITY_2022 = ATOMIC_UNIT_OF_VELOCITY
+type(codata_constant_type), parameter, public :: AVOGADRO_CONSTANT_2022 = AVOGADRO_CONSTANT
+type(codata_constant_type), parameter, public :: BOHR_MAGNETON_2022 = BOHR_MAGNETON
+type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_EV_T_2022 = BOHR_MAGNETON_IN_EV_T
+type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_HZ_T_2022 = BOHR_MAGNETON_IN_HZ_T
+type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2022 = BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA
+type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_K_T_2022 = BOHR_MAGNETON_IN_K_T
+type(codata_constant_type), parameter, public :: BOHR_RADIUS_2022 = BOHR_RADIUS
+type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_2022 = BOLTZMANN_CONSTANT
+type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_EV_K_2022 = BOLTZMANN_CONSTANT_IN_EV_K
+type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_HZ_K_2022 = BOLTZMANN_CONSTANT_IN_HZ_K
+type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2022 = BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN
+type(codata_constant_type), parameter, public :: CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2022 = CHARACTERISTIC_IMPEDANCE_OF_VACUUM
+type(codata_constant_type), parameter, public :: CLASSICAL_ELECTRON_RADIUS_2022 = CLASSICAL_ELECTRON_RADIUS
+type(codata_constant_type), parameter, public :: COMPTON_WAVELENGTH_2022 = COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: CONDUCTANCE_QUANTUM_2022 = CONDUCTANCE_QUANTUM
+type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_AMPERE_90_2022 = CONVENTIONAL_VALUE_OF_AMPERE_90
+type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_COULOMB_90_2022 = CONVENTIONAL_VALUE_OF_COULOMB_90
+type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_FARAD_90_2022 = CONVENTIONAL_VALUE_OF_FARAD_90
+type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_HENRY_90_2022 = CONVENTIONAL_VALUE_OF_HENRY_90
+type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2022 = CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT
+type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_OHM_90_2022 = CONVENTIONAL_VALUE_OF_OHM_90
+type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_VOLT_90_2022 = CONVENTIONAL_VALUE_OF_VOLT_90
+type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2022 = CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT
+type(codata_constant_type), parameter, public :: CONVENTIONAL_VALUE_OF_WATT_90_2022 = CONVENTIONAL_VALUE_OF_WATT_90
+type(codata_constant_type), parameter, public :: COPPER_X_UNIT_2022 = COPPER_X_UNIT
+type(codata_constant_type), parameter, public :: DEUTERON_ELECTRON_MAG_MOM_RATIO_2022 = DEUTERON_ELECTRON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: DEUTERON_ELECTRON_MASS_RATIO_2022 = DEUTERON_ELECTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: DEUTERON_G_FACTOR_2022 = DEUTERON_G_FACTOR
+type(codata_constant_type), parameter, public :: DEUTERON_MAG_MOM_2022 = DEUTERON_MAG_MOM
+type(codata_constant_type), parameter, public :: DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022 = DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022 = DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: DEUTERON_MASS_2022 = DEUTERON_MASS
+type(codata_constant_type), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT_2022 = DEUTERON_MASS_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 = DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: DEUTERON_MASS_IN_U_2022 = DEUTERON_MASS_IN_U
+type(codata_constant_type), parameter, public :: DEUTERON_MOLAR_MASS_2022 = DEUTERON_MOLAR_MASS
+type(codata_constant_type), parameter, public :: DEUTERON_NEUTRON_MAG_MOM_RATIO_2022 = DEUTERON_NEUTRON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: DEUTERON_PROTON_MAG_MOM_RATIO_2022 = DEUTERON_PROTON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: DEUTERON_PROTON_MASS_RATIO_2022 = DEUTERON_PROTON_MASS_RATIO
+type(codata_constant_type), parameter, public :: DEUTERON_RELATIVE_ATOMIC_MASS_2022 = DEUTERON_RELATIVE_ATOMIC_MASS
+type(codata_constant_type), parameter, public :: DEUTERON_RMS_CHARGE_RADIUS_2022 = DEUTERON_RMS_CHARGE_RADIUS
+type(codata_constant_type), parameter, public :: ELECTRON_CHARGE_TO_MASS_QUOTIENT_2022 = ELECTRON_CHARGE_TO_MASS_QUOTIENT
+type(codata_constant_type), parameter, public :: ELECTRON_DEUTERON_MAG_MOM_RATIO_2022 = ELECTRON_DEUTERON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_DEUTERON_MASS_RATIO_2022 = ELECTRON_DEUTERON_MASS_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_G_FACTOR_2022 = ELECTRON_G_FACTOR
+type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO_2022 = ELECTRON_GYROMAG_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2022 = ELECTRON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: ELECTRON_HELION_MASS_RATIO_2022 = ELECTRON_HELION_MASS_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_2022 = ELECTRON_MAG_MOM
+type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_ANOMALY_2022 = ELECTRON_MAG_MOM_ANOMALY
+type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022 = ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022 = ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_MASS_2022 = ELECTRON_MASS
+type(codata_constant_type), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT_2022 = ELECTRON_MASS_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 = ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: ELECTRON_MASS_IN_U_2022 = ELECTRON_MASS_IN_U
+type(codata_constant_type), parameter, public :: ELECTRON_MOLAR_MASS_2022 = ELECTRON_MOLAR_MASS
+type(codata_constant_type), parameter, public :: ELECTRON_MUON_MAG_MOM_RATIO_2022 = ELECTRON_MUON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_MUON_MASS_RATIO_2022 = ELECTRON_MUON_MASS_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_NEUTRON_MAG_MOM_RATIO_2022 = ELECTRON_NEUTRON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_NEUTRON_MASS_RATIO_2022 = ELECTRON_NEUTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_PROTON_MAG_MOM_RATIO_2022 = ELECTRON_PROTON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_PROTON_MASS_RATIO_2022 = ELECTRON_PROTON_MASS_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_RELATIVE_ATOMIC_MASS_2022 = ELECTRON_RELATIVE_ATOMIC_MASS
+type(codata_constant_type), parameter, public :: ELECTRON_TAU_MASS_RATIO_2022 = ELECTRON_TAU_MASS_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2022 = ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2022 = ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2022 = ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_TRITON_MASS_RATIO_2022 = ELECTRON_TRITON_MASS_RATIO
+type(codata_constant_type), parameter, public :: ELECTRON_VOLT_2022 = ELECTRON_VOLT
+type(codata_constant_type), parameter, public :: ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2022 = ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ELECTRON_VOLT_HARTREE_RELATIONSHIP_2022 = ELECTRON_VOLT_HARTREE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ELECTRON_VOLT_HERTZ_RELATIONSHIP_2022 = ELECTRON_VOLT_HERTZ_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2022 = ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ELECTRON_VOLT_JOULE_RELATIONSHIP_2022 = ELECTRON_VOLT_JOULE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ELECTRON_VOLT_KELVIN_RELATIONSHIP_2022 = ELECTRON_VOLT_KELVIN_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2022 = ELECTRON_VOLT_KILOGRAM_RELATIONSHIP
+type(codata_constant_type), parameter, public :: ELEMENTARY_CHARGE_2022 = ELEMENTARY_CHARGE
+type(codata_constant_type), parameter, public :: ELEMENTARY_CHARGE_OVER_H_BAR_2022 = ELEMENTARY_CHARGE_OVER_H_BAR
+type(codata_constant_type), parameter, public :: FARADAY_CONSTANT_2022 = FARADAY_CONSTANT
+type(codata_constant_type), parameter, public :: FERMI_COUPLING_CONSTANT_2022 = FERMI_COUPLING_CONSTANT
+type(codata_constant_type), parameter, public :: FINE_STRUCTURE_CONSTANT_2022 = FINE_STRUCTURE_CONSTANT
+type(codata_constant_type), parameter, public :: FIRST_RADIATION_CONSTANT_2022 = FIRST_RADIATION_CONSTANT
+type(codata_constant_type), parameter, public :: FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2022 = FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE
+type(codata_constant_type), parameter, public :: HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2022 = HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HARTREE_ELECTRON_VOLT_RELATIONSHIP_2022 = HARTREE_ELECTRON_VOLT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HARTREE_ENERGY_2022 = HARTREE_ENERGY
+type(codata_constant_type), parameter, public :: HARTREE_ENERGY_IN_EV_2022 = HARTREE_ENERGY_IN_EV
+type(codata_constant_type), parameter, public :: HARTREE_HERTZ_RELATIONSHIP_2022 = HARTREE_HERTZ_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HARTREE_INVERSE_METER_RELATIONSHIP_2022 = HARTREE_INVERSE_METER_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HARTREE_JOULE_RELATIONSHIP_2022 = HARTREE_JOULE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HARTREE_KELVIN_RELATIONSHIP_2022 = HARTREE_KELVIN_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HARTREE_KILOGRAM_RELATIONSHIP_2022 = HARTREE_KILOGRAM_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HELION_ELECTRON_MASS_RATIO_2022 = HELION_ELECTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: HELION_G_FACTOR_2022 = HELION_G_FACTOR
+type(codata_constant_type), parameter, public :: HELION_MAG_MOM_2022 = HELION_MAG_MOM
+type(codata_constant_type), parameter, public :: HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022 = HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022 = HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: HELION_MASS_2022 = HELION_MASS
+type(codata_constant_type), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT_2022 = HELION_MASS_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 = HELION_MASS_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: HELION_MASS_IN_U_2022 = HELION_MASS_IN_U
+type(codata_constant_type), parameter, public :: HELION_MOLAR_MASS_2022 = HELION_MOLAR_MASS
+type(codata_constant_type), parameter, public :: HELION_PROTON_MASS_RATIO_2022 = HELION_PROTON_MASS_RATIO
+type(codata_constant_type), parameter, public :: HELION_RELATIVE_ATOMIC_MASS_2022 = HELION_RELATIVE_ATOMIC_MASS
+type(codata_constant_type), parameter, public :: HELION_SHIELDING_SHIFT_2022 = HELION_SHIELDING_SHIFT
+type(codata_constant_type), parameter, public :: HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2022 = HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HERTZ_ELECTRON_VOLT_RELATIONSHIP_2022 = HERTZ_ELECTRON_VOLT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HERTZ_HARTREE_RELATIONSHIP_2022 = HERTZ_HARTREE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HERTZ_INVERSE_METER_RELATIONSHIP_2022 = HERTZ_INVERSE_METER_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HERTZ_JOULE_RELATIONSHIP_2022 = HERTZ_JOULE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HERTZ_KELVIN_RELATIONSHIP_2022 = HERTZ_KELVIN_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HERTZ_KILOGRAM_RELATIONSHIP_2022 = HERTZ_KILOGRAM_RELATIONSHIP
+type(codata_constant_type), parameter, public :: HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2022 = HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133
+type(codata_constant_type), parameter, public :: INVERSE_FINE_STRUCTURE_CONSTANT_2022 = INVERSE_FINE_STRUCTURE_CONSTANT
+type(codata_constant_type), parameter, public :: INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2022 = INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2022 = INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: INVERSE_METER_HARTREE_RELATIONSHIP_2022 = INVERSE_METER_HARTREE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: INVERSE_METER_HERTZ_RELATIONSHIP_2022 = INVERSE_METER_HERTZ_RELATIONSHIP
+type(codata_constant_type), parameter, public :: INVERSE_METER_JOULE_RELATIONSHIP_2022 = INVERSE_METER_JOULE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: INVERSE_METER_KELVIN_RELATIONSHIP_2022 = INVERSE_METER_KELVIN_RELATIONSHIP
+type(codata_constant_type), parameter, public :: INVERSE_METER_KILOGRAM_RELATIONSHIP_2022 = INVERSE_METER_KILOGRAM_RELATIONSHIP
+type(codata_constant_type), parameter, public :: INVERSE_OF_CONDUCTANCE_QUANTUM_2022 = INVERSE_OF_CONDUCTANCE_QUANTUM
+type(codata_constant_type), parameter, public :: JOSEPHSON_CONSTANT_2022 = JOSEPHSON_CONSTANT
+type(codata_constant_type), parameter, public :: JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2022 = JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: JOULE_ELECTRON_VOLT_RELATIONSHIP_2022 = JOULE_ELECTRON_VOLT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: JOULE_HARTREE_RELATIONSHIP_2022 = JOULE_HARTREE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: JOULE_HERTZ_RELATIONSHIP_2022 = JOULE_HERTZ_RELATIONSHIP
+type(codata_constant_type), parameter, public :: JOULE_INVERSE_METER_RELATIONSHIP_2022 = JOULE_INVERSE_METER_RELATIONSHIP
+type(codata_constant_type), parameter, public :: JOULE_KELVIN_RELATIONSHIP_2022 = JOULE_KELVIN_RELATIONSHIP
+type(codata_constant_type), parameter, public :: JOULE_KILOGRAM_RELATIONSHIP_2022 = JOULE_KILOGRAM_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2022 = KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KELVIN_ELECTRON_VOLT_RELATIONSHIP_2022 = KELVIN_ELECTRON_VOLT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KELVIN_HARTREE_RELATIONSHIP_2022 = KELVIN_HARTREE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KELVIN_HERTZ_RELATIONSHIP_2022 = KELVIN_HERTZ_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KELVIN_INVERSE_METER_RELATIONSHIP_2022 = KELVIN_INVERSE_METER_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KELVIN_JOULE_RELATIONSHIP_2022 = KELVIN_JOULE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KELVIN_KILOGRAM_RELATIONSHIP_2022 = KELVIN_KILOGRAM_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2022 = KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2022 = KILOGRAM_ELECTRON_VOLT_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KILOGRAM_HARTREE_RELATIONSHIP_2022 = KILOGRAM_HARTREE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KILOGRAM_HERTZ_RELATIONSHIP_2022 = KILOGRAM_HERTZ_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KILOGRAM_INVERSE_METER_RELATIONSHIP_2022 = KILOGRAM_INVERSE_METER_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KILOGRAM_JOULE_RELATIONSHIP_2022 = KILOGRAM_JOULE_RELATIONSHIP
+type(codata_constant_type), parameter, public :: KILOGRAM_KELVIN_RELATIONSHIP_2022 = KILOGRAM_KELVIN_RELATIONSHIP
+type(codata_constant_type), parameter, public :: LATTICE_PARAMETER_OF_SILICON_2022 = LATTICE_PARAMETER_OF_SILICON
+type(codata_constant_type), parameter, public :: LATTICE_SPACING_OF_IDEAL_SI_220_2022 = LATTICE_SPACING_OF_IDEAL_SI_220
+type(codata_constant_type), parameter, public :: LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2022 = LOSCHMIDT_CONSTANT_273_15_K_100_KPA
+type(codata_constant_type), parameter, public :: LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2022 = LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA
+type(codata_constant_type), parameter, public :: LUMINOUS_EFFICACY_2022 = LUMINOUS_EFFICACY
+type(codata_constant_type), parameter, public :: MAG_FLUX_QUANTUM_2022 = MAG_FLUX_QUANTUM
+type(codata_constant_type), parameter, public :: MOLAR_GAS_CONSTANT_2022 = MOLAR_GAS_CONSTANT
+type(codata_constant_type), parameter, public :: MOLAR_MASS_CONSTANT_2022 = MOLAR_MASS_CONSTANT
+type(codata_constant_type), parameter, public :: MOLAR_MASS_OF_CARBON_12_2022 = MOLAR_MASS_OF_CARBON_12
+type(codata_constant_type), parameter, public :: MOLAR_PLANCK_CONSTANT_2022 = MOLAR_PLANCK_CONSTANT
+type(codata_constant_type), parameter, public :: MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2022 = MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA
+type(codata_constant_type), parameter, public :: MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2022 = MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA
+type(codata_constant_type), parameter, public :: MOLAR_VOLUME_OF_SILICON_2022 = MOLAR_VOLUME_OF_SILICON
+type(codata_constant_type), parameter, public :: MOLYBDENUM_X_UNIT_2022 = MOLYBDENUM_X_UNIT
+type(codata_constant_type), parameter, public :: MUON_COMPTON_WAVELENGTH_2022 = MUON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: MUON_ELECTRON_MASS_RATIO_2022 = MUON_ELECTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: MUON_G_FACTOR_2022 = MUON_G_FACTOR
+type(codata_constant_type), parameter, public :: MUON_MAG_MOM_2022 = MUON_MAG_MOM
+type(codata_constant_type), parameter, public :: MUON_MAG_MOM_ANOMALY_2022 = MUON_MAG_MOM_ANOMALY
+type(codata_constant_type), parameter, public :: MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022 = MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022 = MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: MUON_MASS_2022 = MUON_MASS
+type(codata_constant_type), parameter, public :: MUON_MASS_ENERGY_EQUIVALENT_2022 = MUON_MASS_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 = MUON_MASS_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: MUON_MASS_IN_U_2022 = MUON_MASS_IN_U
+type(codata_constant_type), parameter, public :: MUON_MOLAR_MASS_2022 = MUON_MOLAR_MASS
+type(codata_constant_type), parameter, public :: MUON_NEUTRON_MASS_RATIO_2022 = MUON_NEUTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: MUON_PROTON_MAG_MOM_RATIO_2022 = MUON_PROTON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: MUON_PROTON_MASS_RATIO_2022 = MUON_PROTON_MASS_RATIO
+type(codata_constant_type), parameter, public :: MUON_TAU_MASS_RATIO_2022 = MUON_TAU_MASS_RATIO
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ACTION_2022 = NATURAL_UNIT_OF_ACTION
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ACTION_IN_EV_S_2022 = NATURAL_UNIT_OF_ACTION_IN_EV_S
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ENERGY_2022 = NATURAL_UNIT_OF_ENERGY
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_ENERGY_IN_MEV_2022 = NATURAL_UNIT_OF_ENERGY_IN_MEV
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_LENGTH_2022 = NATURAL_UNIT_OF_LENGTH
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MASS_2022 = NATURAL_UNIT_OF_MASS
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMENTUM_2022 = NATURAL_UNIT_OF_MOMENTUM
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2022 = NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_TIME_2022 = NATURAL_UNIT_OF_TIME
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_VELOCITY_2022 = NATURAL_UNIT_OF_VELOCITY
+type(codata_constant_type), parameter, public :: NEUTRON_COMPTON_WAVELENGTH_2022 = NEUTRON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: NEUTRON_ELECTRON_MAG_MOM_RATIO_2022 = NEUTRON_ELECTRON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: NEUTRON_ELECTRON_MASS_RATIO_2022 = NEUTRON_ELECTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: NEUTRON_G_FACTOR_2022 = NEUTRON_G_FACTOR
+type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO_2022 = NEUTRON_GYROMAG_RATIO
+type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2022 = NEUTRON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: NEUTRON_MAG_MOM_2022 = NEUTRON_MAG_MOM
+type(codata_constant_type), parameter, public :: NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022 = NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022 = NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: NEUTRON_MASS_2022 = NEUTRON_MASS
+type(codata_constant_type), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT_2022 = NEUTRON_MASS_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 = NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: NEUTRON_MASS_IN_U_2022 = NEUTRON_MASS_IN_U
+type(codata_constant_type), parameter, public :: NEUTRON_MOLAR_MASS_2022 = NEUTRON_MOLAR_MASS
+type(codata_constant_type), parameter, public :: NEUTRON_MUON_MASS_RATIO_2022 = NEUTRON_MUON_MASS_RATIO
+type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MAG_MOM_RATIO_2022 = NEUTRON_PROTON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_2022 = NEUTRON_PROTON_MASS_DIFFERENCE
+type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2022 = NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2022 = NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2022 = NEUTRON_PROTON_MASS_DIFFERENCE_IN_U
+type(codata_constant_type), parameter, public :: NEUTRON_PROTON_MASS_RATIO_2022 = NEUTRON_PROTON_MASS_RATIO
+type(codata_constant_type), parameter, public :: NEUTRON_RELATIVE_ATOMIC_MASS_2022 = NEUTRON_RELATIVE_ATOMIC_MASS
+type(codata_constant_type), parameter, public :: NEUTRON_TAU_MASS_RATIO_2022 = NEUTRON_TAU_MASS_RATIO
+type(codata_constant_type), parameter, public :: NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2022 = NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: NEWTONIAN_CONSTANT_OF_GRAVITATION_2022 = NEWTONIAN_CONSTANT_OF_GRAVITATION
+type(codata_constant_type), parameter, public :: NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2022 = NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C
+type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_2022 = NUCLEAR_MAGNETON
+type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_EV_T_2022 = NUCLEAR_MAGNETON_IN_EV_T
+type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2022 = NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA
+type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_K_T_2022 = NUCLEAR_MAGNETON_IN_K_T
+type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_MHZ_T_2022 = NUCLEAR_MAGNETON_IN_MHZ_T
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_2022 = PLANCK_CONSTANT
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_IN_EV_HZ_2022 = PLANCK_CONSTANT_IN_EV_HZ
+type(codata_constant_type), parameter, public :: PLANCK_LENGTH_2022 = PLANCK_LENGTH
+type(codata_constant_type), parameter, public :: PLANCK_MASS_2022 = PLANCK_MASS
+type(codata_constant_type), parameter, public :: PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2022 = PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV
+type(codata_constant_type), parameter, public :: PLANCK_TEMPERATURE_2022 = PLANCK_TEMPERATURE
+type(codata_constant_type), parameter, public :: PLANCK_TIME_2022 = PLANCK_TIME
+type(codata_constant_type), parameter, public :: PROTON_CHARGE_TO_MASS_QUOTIENT_2022 = PROTON_CHARGE_TO_MASS_QUOTIENT
+type(codata_constant_type), parameter, public :: PROTON_COMPTON_WAVELENGTH_2022 = PROTON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: PROTON_ELECTRON_MASS_RATIO_2022 = PROTON_ELECTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: PROTON_G_FACTOR_2022 = PROTON_G_FACTOR
+type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO_2022 = PROTON_GYROMAG_RATIO
+type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO_IN_MHZ_T_2022 = PROTON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: PROTON_MAG_MOM_2022 = PROTON_MAG_MOM
+type(codata_constant_type), parameter, public :: PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022 = PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022 = PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: PROTON_MAG_SHIELDING_CORRECTION_2022 = PROTON_MAG_SHIELDING_CORRECTION
+type(codata_constant_type), parameter, public :: PROTON_MASS_2022 = PROTON_MASS
+type(codata_constant_type), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT_2022 = PROTON_MASS_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 = PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: PROTON_MASS_IN_U_2022 = PROTON_MASS_IN_U
+type(codata_constant_type), parameter, public :: PROTON_MOLAR_MASS_2022 = PROTON_MOLAR_MASS
+type(codata_constant_type), parameter, public :: PROTON_MUON_MASS_RATIO_2022 = PROTON_MUON_MASS_RATIO
+type(codata_constant_type), parameter, public :: PROTON_NEUTRON_MAG_MOM_RATIO_2022 = PROTON_NEUTRON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: PROTON_NEUTRON_MASS_RATIO_2022 = PROTON_NEUTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: PROTON_RELATIVE_ATOMIC_MASS_2022 = PROTON_RELATIVE_ATOMIC_MASS
+type(codata_constant_type), parameter, public :: PROTON_RMS_CHARGE_RADIUS_2022 = PROTON_RMS_CHARGE_RADIUS
+type(codata_constant_type), parameter, public :: PROTON_TAU_MASS_RATIO_2022 = PROTON_TAU_MASS_RATIO
+type(codata_constant_type), parameter, public :: QUANTUM_OF_CIRCULATION_2022 = QUANTUM_OF_CIRCULATION
+type(codata_constant_type), parameter, public :: QUANTUM_OF_CIRCULATION_TIMES_2_2022 = QUANTUM_OF_CIRCULATION_TIMES_2
+type(codata_constant_type), parameter, public :: REDUCED_COMPTON_WAVELENGTH_2022 = REDUCED_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: REDUCED_MUON_COMPTON_WAVELENGTH_2022 = REDUCED_MUON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: REDUCED_NEUTRON_COMPTON_WAVELENGTH_2022 = REDUCED_NEUTRON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_2022 = REDUCED_PLANCK_CONSTANT
+type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_IN_EV_S_2022 = REDUCED_PLANCK_CONSTANT_IN_EV_S
+type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2022 = REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM
+type(codata_constant_type), parameter, public :: REDUCED_PROTON_COMPTON_WAVELENGTH_2022 = REDUCED_PROTON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: REDUCED_TAU_COMPTON_WAVELENGTH_2022 = REDUCED_TAU_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_2022 = RYDBERG_CONSTANT
+type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_TIMES_C_IN_HZ_2022 = RYDBERG_CONSTANT_TIMES_C_IN_HZ
+type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_EV_2022 = RYDBERG_CONSTANT_TIMES_HC_IN_EV
+type(codata_constant_type), parameter, public :: RYDBERG_CONSTANT_TIMES_HC_IN_J_2022 = RYDBERG_CONSTANT_TIMES_HC_IN_J
+type(codata_constant_type), parameter, public :: SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2022 = SACKUR_TETRODE_CONSTANT_1_K_100_KPA
+type(codata_constant_type), parameter, public :: SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2022 = SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA
+type(codata_constant_type), parameter, public :: SECOND_RADIATION_CONSTANT_2022 = SECOND_RADIATION_CONSTANT
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO_2022 = SHIELDED_HELION_GYROMAG_RATIO
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2022 = SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_MAG_MOM_2022 = SHIELDED_HELION_MAG_MOM
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022 = SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022 = SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2022 = SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2022 = SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO_2022 = SHIELDED_PROTON_GYROMAG_RATIO
+type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2022 = SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: SHIELDED_PROTON_MAG_MOM_2022 = SHIELDED_PROTON_MAG_MOM
+type(codata_constant_type), parameter, public :: SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022 = SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022 = SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2022 = SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD
+type(codata_constant_type), parameter, public :: SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2022 = SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT
+type(codata_constant_type), parameter, public :: SPEED_OF_LIGHT_IN_VACUUM_2022 = SPEED_OF_LIGHT_IN_VACUUM
+type(codata_constant_type), parameter, public :: STANDARD_ACCELERATION_OF_GRAVITY_2022 = STANDARD_ACCELERATION_OF_GRAVITY
+type(codata_constant_type), parameter, public :: STANDARD_ATMOSPHERE_2022 = STANDARD_ATMOSPHERE
+type(codata_constant_type), parameter, public :: STANDARD_STATE_PRESSURE_2022 = STANDARD_STATE_PRESSURE
+type(codata_constant_type), parameter, public :: STEFAN_BOLTZMANN_CONSTANT_2022 = STEFAN_BOLTZMANN_CONSTANT
+type(codata_constant_type), parameter, public :: TAU_COMPTON_WAVELENGTH_2022 = TAU_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: TAU_ELECTRON_MASS_RATIO_2022 = TAU_ELECTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: TAU_ENERGY_EQUIVALENT_2022 = TAU_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: TAU_MASS_2022 = TAU_MASS
+type(codata_constant_type), parameter, public :: TAU_MASS_ENERGY_EQUIVALENT_2022 = TAU_MASS_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: TAU_MASS_IN_U_2022 = TAU_MASS_IN_U
+type(codata_constant_type), parameter, public :: TAU_MOLAR_MASS_2022 = TAU_MOLAR_MASS
+type(codata_constant_type), parameter, public :: TAU_MUON_MASS_RATIO_2022 = TAU_MUON_MASS_RATIO
+type(codata_constant_type), parameter, public :: TAU_NEUTRON_MASS_RATIO_2022 = TAU_NEUTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: TAU_PROTON_MASS_RATIO_2022 = TAU_PROTON_MASS_RATIO
+type(codata_constant_type), parameter, public :: THOMSON_CROSS_SECTION_2022 = THOMSON_CROSS_SECTION
+type(codata_constant_type), parameter, public :: TRITON_ELECTRON_MASS_RATIO_2022 = TRITON_ELECTRON_MASS_RATIO
+type(codata_constant_type), parameter, public :: TRITON_G_FACTOR_2022 = TRITON_G_FACTOR
+type(codata_constant_type), parameter, public :: TRITON_MAG_MOM_2022 = TRITON_MAG_MOM
+type(codata_constant_type), parameter, public :: TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022 = TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022 = TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO
+type(codata_constant_type), parameter, public :: TRITON_MASS_2022 = TRITON_MASS
+type(codata_constant_type), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT_2022 = TRITON_MASS_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 = TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV
+type(codata_constant_type), parameter, public :: TRITON_MASS_IN_U_2022 = TRITON_MASS_IN_U
+type(codata_constant_type), parameter, public :: TRITON_MOLAR_MASS_2022 = TRITON_MOLAR_MASS
+type(codata_constant_type), parameter, public :: TRITON_PROTON_MASS_RATIO_2022 = TRITON_PROTON_MASS_RATIO
+type(codata_constant_type), parameter, public :: TRITON_RELATIVE_ATOMIC_MASS_2022 = TRITON_RELATIVE_ATOMIC_MASS
+type(codata_constant_type), parameter, public :: TRITON_TO_PROTON_MAG_MOM_RATIO_2022 = TRITON_TO_PROTON_MAG_MOM_RATIO
+type(codata_constant_type), parameter, public :: UNIFIED_ATOMIC_MASS_UNIT_2022 = UNIFIED_ATOMIC_MASS_UNIT
+type(codata_constant_type), parameter, public :: VACUUM_ELECTRIC_PERMITTIVITY_2022 = VACUUM_ELECTRIC_PERMITTIVITY
+type(codata_constant_type), parameter, public :: VACUUM_MAG_PERMEABILITY_2022 = VACUUM_MAG_PERMEABILITY
+type(codata_constant_type), parameter, public :: VON_KLITZING_CONSTANT_2022 = VON_KLITZING_CONSTANT
+type(codata_constant_type), parameter, public :: WEAK_MIXING_ANGLE_2022 = WEAK_MIXING_ANGLE
+type(codata_constant_type), parameter, public :: WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2022 = WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT
+type(codata_constant_type), parameter, public :: WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2022 = WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT
+type(codata_constant_type), parameter, public :: W_TO_Z_MASS_RATIO_2022 = W_TO_Z_MASS_RATIO
+!-----------------------------------------------------------------------
+!}}}
+
+
+!-----------------------------------------------------------------------
+! ARRAY OF CONSTANTS - YEAR-SUFFIXED
+!-----------------------------------------------------------------------
+!{{{2
+type(codata_constant_type), target, public :: cc_2022(355) = &
+[ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2022, &
+ALPHA_PARTICLE_MASS_2022, &
+ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2022, &
+ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2022, &
+ALPHA_PARTICLE_MASS_IN_U_2022, &
+ALPHA_PARTICLE_MOLAR_MASS_2022, &
+ALPHA_PARTICLE_PROTON_MASS_RATIO_2022, &
+ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2022, &
+ALPHA_PARTICLE_RMS_CHARGE_RADIUS_2022, &
+ANGSTROM_STAR_2022, &
+ATOMIC_MASS_CONSTANT_2022, &
+ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2022, &
+ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2022, &
+ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2022, &
+ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2022, &
+ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2022, &
+ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2022, &
+ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2022, &
+ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2022, &
+ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2022, &
+ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2022, &
+ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2022, &
+ATOMIC_UNIT_OF_ACTION_2022, &
+ATOMIC_UNIT_OF_CHARGE_2022, &
+ATOMIC_UNIT_OF_CHARGE_DENSITY_2022, &
+ATOMIC_UNIT_OF_CURRENT_2022, &
+ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2022, &
+ATOMIC_UNIT_OF_ELECTRIC_FIELD_2022, &
+ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2022, &
+ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2022, &
+ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2022, &
+ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2022, &
+ATOMIC_UNIT_OF_ENERGY_2022, &
+ATOMIC_UNIT_OF_FORCE_2022, &
+ATOMIC_UNIT_OF_LENGTH_2022, &
+ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2022, &
+ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2022, &
+ATOMIC_UNIT_OF_MAGNETIZABILITY_2022, &
+ATOMIC_UNIT_OF_MASS_2022, &
+ATOMIC_UNIT_OF_MOMENTUM_2022, &
+ATOMIC_UNIT_OF_PERMITTIVITY_2022, &
+ATOMIC_UNIT_OF_TIME_2022, &
+ATOMIC_UNIT_OF_VELOCITY_2022, &
+AVOGADRO_CONSTANT_2022, &
+BOHR_MAGNETON_2022, &
+BOHR_MAGNETON_IN_EV_T_2022, &
+BOHR_MAGNETON_IN_HZ_T_2022, &
+BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2022, &
+BOHR_MAGNETON_IN_K_T_2022, &
+BOHR_RADIUS_2022, &
+BOLTZMANN_CONSTANT_2022, &
+BOLTZMANN_CONSTANT_IN_EV_K_2022, &
+BOLTZMANN_CONSTANT_IN_HZ_K_2022, &
+BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2022, &
+CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2022, &
+CLASSICAL_ELECTRON_RADIUS_2022, &
+COMPTON_WAVELENGTH_2022, &
+CONDUCTANCE_QUANTUM_2022, &
+CONVENTIONAL_VALUE_OF_AMPERE_90_2022, &
+CONVENTIONAL_VALUE_OF_COULOMB_90_2022, &
+CONVENTIONAL_VALUE_OF_FARAD_90_2022, &
+CONVENTIONAL_VALUE_OF_HENRY_90_2022, &
+CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2022, &
+CONVENTIONAL_VALUE_OF_OHM_90_2022, &
+CONVENTIONAL_VALUE_OF_VOLT_90_2022, &
+CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2022, &
+CONVENTIONAL_VALUE_OF_WATT_90_2022, &
+COPPER_X_UNIT_2022, &
+DEUTERON_ELECTRON_MAG_MOM_RATIO_2022, &
+DEUTERON_ELECTRON_MASS_RATIO_2022, &
+DEUTERON_G_FACTOR_2022, &
+DEUTERON_MAG_MOM_2022, &
+DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022, &
+DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022, &
+DEUTERON_MASS_2022, &
+DEUTERON_MASS_ENERGY_EQUIVALENT_2022, &
+DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022, &
+DEUTERON_MASS_IN_U_2022, &
+DEUTERON_MOLAR_MASS_2022, &
+DEUTERON_NEUTRON_MAG_MOM_RATIO_2022, &
+DEUTERON_PROTON_MAG_MOM_RATIO_2022, &
+DEUTERON_PROTON_MASS_RATIO_2022, &
+DEUTERON_RELATIVE_ATOMIC_MASS_2022, &
+DEUTERON_RMS_CHARGE_RADIUS_2022, &
+ELECTRON_CHARGE_TO_MASS_QUOTIENT_2022, &
+ELECTRON_DEUTERON_MAG_MOM_RATIO_2022, &
+ELECTRON_DEUTERON_MASS_RATIO_2022, &
+ELECTRON_G_FACTOR_2022, &
+ELECTRON_GYROMAG_RATIO_2022, &
+ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2022, &
+ELECTRON_HELION_MASS_RATIO_2022, &
+ELECTRON_MAG_MOM_2022, &
+ELECTRON_MAG_MOM_ANOMALY_2022, &
+ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022, &
+ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022, &
+ELECTRON_MASS_2022, &
+ELECTRON_MASS_ENERGY_EQUIVALENT_2022, &
+ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022, &
+ELECTRON_MASS_IN_U_2022, &
+ELECTRON_MOLAR_MASS_2022, &
+ELECTRON_MUON_MAG_MOM_RATIO_2022, &
+ELECTRON_MUON_MASS_RATIO_2022, &
+ELECTRON_NEUTRON_MAG_MOM_RATIO_2022, &
+ELECTRON_NEUTRON_MASS_RATIO_2022, &
+ELECTRON_PROTON_MAG_MOM_RATIO_2022, &
+ELECTRON_PROTON_MASS_RATIO_2022, &
+ELECTRON_RELATIVE_ATOMIC_MASS_2022, &
+ELECTRON_TAU_MASS_RATIO_2022, &
+ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2022, &
+ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2022, &
+ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2022, &
+ELECTRON_TRITON_MASS_RATIO_2022, &
+ELECTRON_VOLT_2022, &
+ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2022, &
+ELECTRON_VOLT_HARTREE_RELATIONSHIP_2022, &
+ELECTRON_VOLT_HERTZ_RELATIONSHIP_2022, &
+ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2022, &
+ELECTRON_VOLT_JOULE_RELATIONSHIP_2022, &
+ELECTRON_VOLT_KELVIN_RELATIONSHIP_2022, &
+ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2022, &
+ELEMENTARY_CHARGE_2022, &
+ELEMENTARY_CHARGE_OVER_H_BAR_2022, &
+FARADAY_CONSTANT_2022, &
+FERMI_COUPLING_CONSTANT_2022, &
+FINE_STRUCTURE_CONSTANT_2022, &
+FIRST_RADIATION_CONSTANT_2022, &
+FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2022, &
+HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2022, &
+HARTREE_ELECTRON_VOLT_RELATIONSHIP_2022, &
+HARTREE_ENERGY_2022, &
+HARTREE_ENERGY_IN_EV_2022, &
+HARTREE_HERTZ_RELATIONSHIP_2022, &
+HARTREE_INVERSE_METER_RELATIONSHIP_2022, &
+HARTREE_JOULE_RELATIONSHIP_2022, &
+HARTREE_KELVIN_RELATIONSHIP_2022, &
+HARTREE_KILOGRAM_RELATIONSHIP_2022, &
+HELION_ELECTRON_MASS_RATIO_2022, &
+HELION_G_FACTOR_2022, &
+HELION_MAG_MOM_2022, &
+HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022, &
+HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022, &
+HELION_MASS_2022, &
+HELION_MASS_ENERGY_EQUIVALENT_2022, &
+HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2022, &
+HELION_MASS_IN_U_2022, &
+HELION_MOLAR_MASS_2022, &
+HELION_PROTON_MASS_RATIO_2022, &
+HELION_RELATIVE_ATOMIC_MASS_2022, &
+HELION_SHIELDING_SHIFT_2022, &
+HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2022, &
+HERTZ_ELECTRON_VOLT_RELATIONSHIP_2022, &
+HERTZ_HARTREE_RELATIONSHIP_2022, &
+HERTZ_INVERSE_METER_RELATIONSHIP_2022, &
+HERTZ_JOULE_RELATIONSHIP_2022, &
+HERTZ_KELVIN_RELATIONSHIP_2022, &
+HERTZ_KILOGRAM_RELATIONSHIP_2022, &
+HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2022, &
+INVERSE_FINE_STRUCTURE_CONSTANT_2022, &
+INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2022, &
+INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2022, &
+INVERSE_METER_HARTREE_RELATIONSHIP_2022, &
+INVERSE_METER_HERTZ_RELATIONSHIP_2022, &
+INVERSE_METER_JOULE_RELATIONSHIP_2022, &
+INVERSE_METER_KELVIN_RELATIONSHIP_2022, &
+INVERSE_METER_KILOGRAM_RELATIONSHIP_2022, &
+INVERSE_OF_CONDUCTANCE_QUANTUM_2022, &
+JOSEPHSON_CONSTANT_2022, &
+JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2022, &
+JOULE_ELECTRON_VOLT_RELATIONSHIP_2022, &
+JOULE_HARTREE_RELATIONSHIP_2022, &
+JOULE_HERTZ_RELATIONSHIP_2022, &
+JOULE_INVERSE_METER_RELATIONSHIP_2022, &
+JOULE_KELVIN_RELATIONSHIP_2022, &
+JOULE_KILOGRAM_RELATIONSHIP_2022, &
+KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2022, &
+KELVIN_ELECTRON_VOLT_RELATIONSHIP_2022, &
+KELVIN_HARTREE_RELATIONSHIP_2022, &
+KELVIN_HERTZ_RELATIONSHIP_2022, &
+KELVIN_INVERSE_METER_RELATIONSHIP_2022, &
+KELVIN_JOULE_RELATIONSHIP_2022, &
+KELVIN_KILOGRAM_RELATIONSHIP_2022, &
+KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2022, &
+KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2022, &
+KILOGRAM_HARTREE_RELATIONSHIP_2022, &
+KILOGRAM_HERTZ_RELATIONSHIP_2022, &
+KILOGRAM_INVERSE_METER_RELATIONSHIP_2022, &
+KILOGRAM_JOULE_RELATIONSHIP_2022, &
+KILOGRAM_KELVIN_RELATIONSHIP_2022, &
+LATTICE_PARAMETER_OF_SILICON_2022, &
+LATTICE_SPACING_OF_IDEAL_SI_220_2022, &
+LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2022, &
+LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2022, &
+LUMINOUS_EFFICACY_2022, &
+MAG_FLUX_QUANTUM_2022, &
+MOLAR_GAS_CONSTANT_2022, &
+MOLAR_MASS_CONSTANT_2022, &
+MOLAR_MASS_OF_CARBON_12_2022, &
+MOLAR_PLANCK_CONSTANT_2022, &
+MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2022, &
+MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2022, &
+MOLAR_VOLUME_OF_SILICON_2022, &
+MOLYBDENUM_X_UNIT_2022, &
+MUON_COMPTON_WAVELENGTH_2022, &
+MUON_ELECTRON_MASS_RATIO_2022, &
+MUON_G_FACTOR_2022, &
+MUON_MAG_MOM_2022, &
+MUON_MAG_MOM_ANOMALY_2022, &
+MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022, &
+MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022, &
+MUON_MASS_2022, &
+MUON_MASS_ENERGY_EQUIVALENT_2022, &
+MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022, &
+MUON_MASS_IN_U_2022, &
+MUON_MOLAR_MASS_2022, &
+MUON_NEUTRON_MASS_RATIO_2022, &
+MUON_PROTON_MAG_MOM_RATIO_2022, &
+MUON_PROTON_MASS_RATIO_2022, &
+MUON_TAU_MASS_RATIO_2022, &
+NATURAL_UNIT_OF_ACTION_2022, &
+NATURAL_UNIT_OF_ACTION_IN_EV_S_2022, &
+NATURAL_UNIT_OF_ENERGY_2022, &
+NATURAL_UNIT_OF_ENERGY_IN_MEV_2022, &
+NATURAL_UNIT_OF_LENGTH_2022, &
+NATURAL_UNIT_OF_MASS_2022, &
+NATURAL_UNIT_OF_MOMENTUM_2022, &
+NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2022, &
+NATURAL_UNIT_OF_TIME_2022, &
+NATURAL_UNIT_OF_VELOCITY_2022, &
+NEUTRON_COMPTON_WAVELENGTH_2022, &
+NEUTRON_ELECTRON_MAG_MOM_RATIO_2022, &
+NEUTRON_ELECTRON_MASS_RATIO_2022, &
+NEUTRON_G_FACTOR_2022, &
+NEUTRON_GYROMAG_RATIO_2022, &
+NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2022, &
+NEUTRON_MAG_MOM_2022, &
+NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022, &
+NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022, &
+NEUTRON_MASS_2022, &
+NEUTRON_MASS_ENERGY_EQUIVALENT_2022, &
+NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022, &
+NEUTRON_MASS_IN_U_2022, &
+NEUTRON_MOLAR_MASS_2022, &
+NEUTRON_MUON_MASS_RATIO_2022, &
+NEUTRON_PROTON_MAG_MOM_RATIO_2022, &
+NEUTRON_PROTON_MASS_DIFFERENCE_2022, &
+NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2022, &
+NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2022, &
+NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2022, &
+NEUTRON_PROTON_MASS_RATIO_2022, &
+NEUTRON_RELATIVE_ATOMIC_MASS_2022, &
+NEUTRON_TAU_MASS_RATIO_2022, &
+NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2022, &
+NEWTONIAN_CONSTANT_OF_GRAVITATION_2022, &
+NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2022, &
+NUCLEAR_MAGNETON_2022, &
+NUCLEAR_MAGNETON_IN_EV_T_2022, &
+NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2022, &
+NUCLEAR_MAGNETON_IN_K_T_2022, &
+NUCLEAR_MAGNETON_IN_MHZ_T_2022, &
+PLANCK_CONSTANT_2022, &
+PLANCK_CONSTANT_IN_EV_HZ_2022, &
+PLANCK_LENGTH_2022, &
+PLANCK_MASS_2022, &
+PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2022, &
+PLANCK_TEMPERATURE_2022, &
+PLANCK_TIME_2022, &
+PROTON_CHARGE_TO_MASS_QUOTIENT_2022, &
+PROTON_COMPTON_WAVELENGTH_2022, &
+PROTON_ELECTRON_MASS_RATIO_2022, &
+PROTON_G_FACTOR_2022, &
+PROTON_GYROMAG_RATIO_2022, &
+PROTON_GYROMAG_RATIO_IN_MHZ_T_2022, &
+PROTON_MAG_MOM_2022, &
+PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022, &
+PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022, &
+PROTON_MAG_SHIELDING_CORRECTION_2022, &
+PROTON_MASS_2022, &
+PROTON_MASS_ENERGY_EQUIVALENT_2022, &
+PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022, &
+PROTON_MASS_IN_U_2022, &
+PROTON_MOLAR_MASS_2022, &
+PROTON_MUON_MASS_RATIO_2022, &
+PROTON_NEUTRON_MAG_MOM_RATIO_2022, &
+PROTON_NEUTRON_MASS_RATIO_2022, &
+PROTON_RELATIVE_ATOMIC_MASS_2022, &
+PROTON_RMS_CHARGE_RADIUS_2022, &
+PROTON_TAU_MASS_RATIO_2022, &
+QUANTUM_OF_CIRCULATION_2022, &
+QUANTUM_OF_CIRCULATION_TIMES_2_2022, &
+REDUCED_COMPTON_WAVELENGTH_2022, &
+REDUCED_MUON_COMPTON_WAVELENGTH_2022, &
+REDUCED_NEUTRON_COMPTON_WAVELENGTH_2022, &
+REDUCED_PLANCK_CONSTANT_2022, &
+REDUCED_PLANCK_CONSTANT_IN_EV_S_2022, &
+REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2022, &
+REDUCED_PROTON_COMPTON_WAVELENGTH_2022, &
+REDUCED_TAU_COMPTON_WAVELENGTH_2022, &
+RYDBERG_CONSTANT_2022, &
+RYDBERG_CONSTANT_TIMES_C_IN_HZ_2022, &
+RYDBERG_CONSTANT_TIMES_HC_IN_EV_2022, &
+RYDBERG_CONSTANT_TIMES_HC_IN_J_2022, &
+SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2022, &
+SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2022, &
+SECOND_RADIATION_CONSTANT_2022, &
+SHIELDED_HELION_GYROMAG_RATIO_2022, &
+SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2022, &
+SHIELDED_HELION_MAG_MOM_2022, &
+SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022, &
+SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022, &
+SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2022, &
+SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2022, &
+SHIELDED_PROTON_GYROMAG_RATIO_2022, &
+SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2022, &
+SHIELDED_PROTON_MAG_MOM_2022, &
+SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022, &
+SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022, &
+SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2022, &
+SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2022, &
+SPEED_OF_LIGHT_IN_VACUUM_2022, &
+STANDARD_ACCELERATION_OF_GRAVITY_2022, &
+STANDARD_ATMOSPHERE_2022, &
+STANDARD_STATE_PRESSURE_2022, &
+STEFAN_BOLTZMANN_CONSTANT_2022, &
+TAU_COMPTON_WAVELENGTH_2022, &
+TAU_ELECTRON_MASS_RATIO_2022, &
+TAU_ENERGY_EQUIVALENT_2022, &
+TAU_MASS_2022, &
+TAU_MASS_ENERGY_EQUIVALENT_2022, &
+TAU_MASS_IN_U_2022, &
+TAU_MOLAR_MASS_2022, &
+TAU_MUON_MASS_RATIO_2022, &
+TAU_NEUTRON_MASS_RATIO_2022, &
+TAU_PROTON_MASS_RATIO_2022, &
+THOMSON_CROSS_SECTION_2022, &
+TRITON_ELECTRON_MASS_RATIO_2022, &
+TRITON_G_FACTOR_2022, &
+TRITON_MAG_MOM_2022, &
+TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022, &
+TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022, &
+TRITON_MASS_2022, &
+TRITON_MASS_ENERGY_EQUIVALENT_2022, &
+TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022, &
+TRITON_MASS_IN_U_2022, &
+TRITON_MOLAR_MASS_2022, &
+TRITON_PROTON_MASS_RATIO_2022, &
+TRITON_RELATIVE_ATOMIC_MASS_2022, &
+TRITON_TO_PROTON_MAG_MOM_RATIO_2022, &
+UNIFIED_ATOMIC_MASS_UNIT_2022, &
+VACUUM_ELECTRIC_PERMITTIVITY_2022, &
+VACUUM_MAG_PERMEABILITY_2022, &
+VON_KLITZING_CONSTANT_2022, &
+WEAK_MIXING_ANGLE_2022, &
+WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2022, &
+WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2022, &
+W_TO_Z_MASS_RATIO_2022 &
+]
+!-----------------------------------------------------------------------
+!}}}
 end module codata__constants_2022

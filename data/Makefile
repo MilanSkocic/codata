@@ -8,6 +8,8 @@ GEN_C=./gen_c.py
 GEN_CPY=./gen_cpython.py
 
 RAW_SRC=$(wildcard ./src/*.txt)
+# Latest available adjustment, derived the same way as common:gly().
+LATEST_YEAR=$(lastword $(sort $(patsubst ./src/codata_constants_%.txt, %, $(RAW_SRC))))
 AST_SRC=$(patsubst ./src/%.txt, ./build/%.toml, $(RAW_SRC))
 MAN_SRC=$(patsubst ./src/%.txt, ./build/%.man, $(RAW_SRC))
 
@@ -47,37 +49,37 @@ dirs:
 
 # ---------------------------------------------------------------------
 # COMPILATION
-build/%.toml: ./src/%.txt
+build/%.toml: ./src/%.txt txt2toml common
 	./txt2toml $< > $@
 
-build/%.man: build/%.toml
+build/%.man: build/%.toml toml2man common
 	./toml2man $< > $@
 
-build/%.f90: build/%.toml
+build/%.f90: build/%.toml toml2f90 common
 	./toml2f90 $< > $@
 
 ../src/%.f90: build/%.f90
 	cp -fv $^ $@
 
-build/%.h: ./build/%.toml
+build/%.h: ./build/%.toml toml2h common
 	./toml2h $< > $@
 
-../include/$(FPM_NAME).h: $(C_HEADERS)
-	cat $(FPM_NAME).1.h $^ $(FPM_NAME).2.h > $@
+../include/$(FPM_NAME).h: $(C_HEADERS) $(FPM_NAME).1.h $(FPM_NAME).2.h
+	cat $(FPM_NAME).1.h $(C_HEADERS) $(FPM_NAME).2.h > $@
 
-./build/stdlib_codata.f90: ./build/codata_constants_2022.f90
+./build/stdlib_codata.f90: ./build/codata_constants_$(LATEST_YEAR).f90 stdlib
 	./stdlib $< > $@
 
-./build/%.py: ./build/%.toml
+./build/%.py: ./build/%.toml toml2py common
 	./toml2py $< > $@
 
-./build/_%.c: ./build/%.toml
+./build/_%.c: ./build/%.toml $(GEN_CPY)
 	$(FPM_PYGEN) $(GEN_CPY) $< $@
 
 ../py/src/$(FPM_PYNAME)/_%.c: ./build/_%.c
 	cp -fv $^ $@
 
-./build/%.c: ./build/%.toml
+./build/%.c: ./build/%.toml toml2c common
 	./toml2c $< > $@
 
 ../src/%.c: ./build/%.c

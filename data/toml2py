@@ -20,6 +20,8 @@ BEGIN{
     gsub(/\[/,"")
     gsub(/\]/,"")
     var=$0 suffix
+    i++
+    bares[i]=$0
     print var" = {"
 }
 /^name/{
@@ -45,5 +47,16 @@ BEGIN{
 }
 NF==0{
     print ""
+}
+END{
+    # The latest adjustment is also exposed under its year-suffixed name, so a
+    # caller can pin to it before the next adjustment is released. The
+    # unsuffixed names above are kept as aliases meaning "current".
+    if(suffix==""){
+        print "# Year-suffixed names for the latest adjustment."
+        for (j=1; j<=i; j++){
+            print bares[j]"_"year" = "bares[j]
+        }
+    }
 }
 ' $1
