@@ -12,6 +12,13 @@ VERSION 2.6.0 [dev]
     txt2toml detects the end of the table header instead of carrying a
     per-year line count.
   - The generated sources are now rebuilt when a generator changes.
+  - Quantities that NIST renamed between adjustments are now available
+    under both names in every adjustment, so code written against either
+    spelling compiles against all of them: ELECTRIC_CONSTANT_2018 is an
+    alias for VACUUM_ELECTRIC_PERMITTIVITY_2018, and
+    VACUUM_ELECTRIC_PERMITTIVITY_2014 for ELECTRIC_CONSTANT_2014. The map
+    is checked in as data/renames.tsv and verified against the data at
+    build time.
   - Fix a stray space in the constant names listed in the man pages.
   - Add multiple patterns with repeated option -p PATTERN.
   - Update man pages.

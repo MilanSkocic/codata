@@ -11,6 +11,31 @@ suffix="_$year"
 if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 
 awk -v suffix="$suffix" -v latest_year="$latest_year" -v year="$year" '
+# First file is renames.tsv: the reviewed map of quantities NIST renamed
+# between adjustments. Each vintage carries exactly one name of a renamed
+# pair; the other is emitted as an alias so that code written against either
+# spelling compiles against every adjustment.
+NR==FNR{
+    if($0 ~ /^#/){next}
+    split($0, r, "\t")
+    newof[r[1]] = r[2]
+    oldof[r[2]] = r[1]
+    next
+}
+function alias_of(k){
+    if(k in newof){return newof[k]}
+    if(k in oldof){return oldof[k]}
+    return ""
+}
+function emit_c(sym, nist, val, unc, un, doc){
+    print "const struct codata_constant_type "sym" = {"
+    print nist","
+    print val","
+    print unc","
+    print un
+    print "};/** "doc" */"
+    print ""
+}
 BEGIN{
     print "/* SPDX-License-Identifier: MIT */"
     print ""
@@ -120,5 +145,29 @@ END{
         print "NULL,"
         print "};"
     }
+
+    # Aliases for quantities NIST renamed. These are deliberately left out of
+    # the cc arrays, which list each constant once.
+    nalias = 0
+    for (j=1; j<=i; j++){
+        if(alias_of(bares[j]) != ""){nalias++}
+    }
+    if(nalias > 0){
+        print "//}}}"
+        print ""
+        print ""
+        print "//----------------------------------------------------------------------"
+        print "// CONSTANTS - ALIASES FOR QUANTITIES RENAMED BY NIST"
+        print "//----------------------------------------------------------------------"
+        print "//{{{2"
+        for (j=1; j<=i; j++){
+            a = alias_of(bares[j])
+            if(a == ""){continue}
+            emit_c(a"_"year, names[j], values[j], uncertainties[j], units[j], docs[j])
+            if(suffix == ""){
+                emit_c(a, names[j], values[j], uncertainties[j], units[j], docs[j])
+            }
+        }
+    }
 }
-' $1
+' renames.tsv "$1"

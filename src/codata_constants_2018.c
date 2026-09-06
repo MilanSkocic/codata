@@ -2853,3 +2853,192 @@ const struct codata_constant_type *cc_2018[] = {
 &W_TO_Z_MASS_RATIO_2018,
 NULL,
 };
+//}}}
+
+
+//----------------------------------------------------------------------
+// CONSTANTS - ALIASES FOR QUANTITIES RENAMED BY NIST
+//----------------------------------------------------------------------
+//{{{2
+const struct codata_constant_type ATOMIC_UNIT_OF_MOMUM_2018 = {
+"atomic unit of momentum",
+1.99285191410e-24,
+0.00000000030e-24,
+"kg m s^-1"
+};/** atomic unit of momentum */
+
+const struct codata_constant_type BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018 = {
+"Bohr magneton in inverse meter per tesla",
+46.686447783,
+0.000000014,
+"m^-1 T^-1"
+};/** Bohr magneton in inverse meter per tesla */
+
+const struct codata_constant_type BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN_2018 = {
+"Boltzmann constant in inverse meter per kelvin",
+69.50348004,
+0.0,
+"m^-1 K^-1"
+};/** Boltzmann constant in inverse meter per kelvin */
+
+const struct codata_constant_type CU_X_UNIT_2018 = {
+"Copper x unit",
+1.00207697e-13,
+0.00000028e-13,
+"m"
+};/** Copper x unit */
+
+const struct codata_constant_type ELECTRON_GYROMAG_RATIO_OVER_2_PI_2018 = {
+"electron gyromag. ratio in MHz/T",
+28024.9514242,
+0.0000085,
+"MHz T^-1"
+};/** electron gyromag. ratio in MHz/T */
+
+const struct codata_constant_type LATTICE_SPACING_OF_SILICON_2018 = {
+"lattice spacing of ideal Si (220)",
+1.920155716e-10,
+0.000000032e-10,
+"m"
+};/** lattice spacing of ideal Si (220) */
+
+const struct codata_constant_type MO_X_UNIT_2018 = {
+"Molybdenum x unit",
+1.00209952e-13,
+0.00000053e-13,
+"m"
+};/** Molybdenum x unit */
+
+const struct codata_constant_type NATURAL_UNIT_OF_MOMUM_2018 = {
+"natural unit of momentum",
+2.73092453075e-22,
+0.00000000082e-22,
+"kg m s^-1"
+};/** natural unit of momentum */
+
+const struct codata_constant_type NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2018 = {
+"natural unit of momentum in MeV/c",
+0.51099895000,
+0.00000000015,
+"MeV/c"
+};/** natural unit of momentum in MeV/c */
+
+const struct codata_constant_type NEUTRON_GYROMAG_RATIO_OVER_2_PI_2018 = {
+"neutron gyromag. ratio in MHz/T",
+29.1646931,
+0.0000069,
+"MHz T^-1"
+};/** neutron gyromag. ratio in MHz/T */
+
+const struct codata_constant_type NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018 = {
+"nuclear magneton in inverse meter per tesla",
+2.54262341353e-2,
+0.00000000078e-2,
+"m^-1 T^-1"
+};/** nuclear magneton in inverse meter per tesla */
+
+const struct codata_constant_type PLANCK_CONSTANT_IN_EV_S_2018 = {
+"Planck constant in eV/Hz",
+4.135667696e-15,
+0.0,
+"eV Hz^-1"
+};/** Planck constant in eV/Hz */
+
+const struct codata_constant_type PROTON_GYROMAG_RATIO_OVER_2_PI_2018 = {
+"proton gyromag. ratio in MHz/T",
+42.577478518,
+0.000000018,
+"MHz T^-1"
+};/** proton gyromag. ratio in MHz/T */
+
+const struct codata_constant_type COMPTON_WAVELENGTH_OVER_2_PI_2018 = {
+"reduced Compton wavelength",
+3.8615926796e-13,
+0.0000000012e-13,
+"m"
+};/** reduced Compton wavelength */
+
+const struct codata_constant_type MUON_COMPTON_WAVELENGTH_OVER_2_PI_2018 = {
+"reduced muon Compton wavelength",
+1.867594306e-15,
+0.000000042e-15,
+"m"
+};/** reduced muon Compton wavelength */
+
+const struct codata_constant_type NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2018 = {
+"reduced neutron Compton wavelength",
+2.1001941552e-16,
+0.0000000012e-16,
+"m"
+};/** reduced neutron Compton wavelength */
+
+const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_2018 = {
+"reduced Planck constant",
+1.054571817e-34,
+0.0,
+"J s"
+};/** reduced Planck constant */
+
+const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2018 = {
+"reduced Planck constant in eV s",
+6.582119569e-16,
+0.0,
+"eV s"
+};/** reduced Planck constant in eV s */
+
+const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2018 = {
+"reduced Planck constant times c in MeV fm",
+197.3269804,
+0.0,
+"MeV fm"
+};/** reduced Planck constant times c in MeV fm */
+
+const struct codata_constant_type PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2018 = {
+"reduced proton Compton wavelength",
+2.10308910336e-16,
+0.00000000064e-16,
+"m"
+};/** reduced proton Compton wavelength */
+
+const struct codata_constant_type TAU_COMPTON_WAVELENGTH_OVER_2_PI_2018 = {
+"reduced tau Compton wavelength",
+1.110538e-16,
+0.000075e-16,
+"m"
+};/** reduced tau Compton wavelength */
+
+const struct codata_constant_type SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2018 = {
+"shielded helion gyromag. ratio in MHz/T",
+32.43409942,
+0.00000038,
+"MHz T^-1"
+};/** shielded helion gyromag. ratio in MHz/T */
+
+const struct codata_constant_type SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2018 = {
+"shielded proton gyromag. ratio in MHz/T",
+42.57638474,
+0.00000046,
+"MHz T^-1"
+};/** shielded proton gyromag. ratio in MHz/T */
+
+const struct codata_constant_type TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = {
+"tau energy equivalent",
+1776.86,
+0.12,
+"MeV"
+};/** tau energy equivalent */
+
+const struct codata_constant_type ELECTRIC_CONSTANT_2018 = {
+"vacuum electric permittivity",
+8.8541878128e-12,
+0.0000000013e-12,
+"F m^-1"
+};/** vacuum electric permittivity */
+
+const struct codata_constant_type MAG_CONSTANT_2018 = {
+"vacuum mag. permeability",
+1.25663706212e-6,
+0.00000000019e-6,
+"N A^-2"
+};/** vacuum mag. permeability */
+

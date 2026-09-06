@@ -2701,3 +2701,192 @@ const struct codata_constant_type *cc_2010[] = {
 &WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010,
 NULL,
 };
+//}}}
+
+
+//----------------------------------------------------------------------
+// CONSTANTS - ALIASES FOR QUANTITIES RENAMED BY NIST
+//----------------------------------------------------------------------
+//{{{2
+const struct codata_constant_type LATTICE_SPACING_OF_IDEAL_SI_220_2010 = {
+"{220} lattice spacing of silicon",
+192.0155714e-12,
+0.0000032e-12,
+"m"
+};/** {220} lattice spacing of silicon */
+
+const struct codata_constant_type ATOMIC_UNIT_OF_MOMENTUM_2010 = {
+"atomic unit of mom.um",
+1.992851740e-24,
+0.000000088e-24,
+"kg m s^-1"
+};/** atomic unit of mom.um */
+
+const struct codata_constant_type BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2010 = {
+"Bohr magneton in inverse meters per tesla",
+46.6864498,
+0.0000010,
+"m^-1 T^-1"
+};/** Bohr magneton in inverse meters per tesla */
+
+const struct codata_constant_type BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2010 = {
+"Boltzmann constant in inverse meters per kelvin",
+69.503476,
+0.000063,
+"m^-1 K^-1"
+};/** Boltzmann constant in inverse meters per kelvin */
+
+const struct codata_constant_type REDUCED_COMPTON_WAVELENGTH_2010 = {
+"Compton wavelength over 2 pi",
+386.15926800e-15,
+0.00000025e-15,
+"m"
+};/** Compton wavelength over 2 pi */
+
+const struct codata_constant_type COPPER_X_UNIT_2010 = {
+"Cu x unit",
+1.00207697e-13,
+0.00000028e-13,
+"m"
+};/** Cu x unit */
+
+const struct codata_constant_type VACUUM_ELECTRIC_PERMITTIVITY_2010 = {
+"electric constant",
+8.854187817e-12,
+0.0,
+"F m^-1"
+};/** electric constant */
+
+const struct codata_constant_type ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2010 = {
+"electron gyromag. ratio over 2 pi",
+28024.95266,
+0.00062,
+"MHz T^-1"
+};/** electron gyromag. ratio over 2 pi */
+
+const struct codata_constant_type VACUUM_MAG_PERMEABILITY_2010 = {
+"mag. constant",
+12.566370614e-7,
+0.0,
+"N A^-2"
+};/** mag. constant */
+
+const struct codata_constant_type MOLYBDENUM_X_UNIT_2010 = {
+"Mo x unit",
+1.00209952e-13,
+0.00000053e-13,
+"m"
+};/** Mo x unit */
+
+const struct codata_constant_type REDUCED_MUON_COMPTON_WAVELENGTH_2010 = {
+"muon Compton wavelength over 2 pi",
+1.867594294e-15,
+0.000000047e-15,
+"m"
+};/** muon Compton wavelength over 2 pi */
+
+const struct codata_constant_type NATURAL_UNIT_OF_MOMENTUM_2010 = {
+"natural unit of mom.um",
+2.73092429e-22,
+0.00000012e-22,
+"kg m s^-1"
+};/** natural unit of mom.um */
+
+const struct codata_constant_type NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2010 = {
+"natural unit of mom.um in MeV/c",
+0.510998928,
+0.000000011,
+"MeV/c"
+};/** natural unit of mom.um in MeV/c */
+
+const struct codata_constant_type REDUCED_NEUTRON_COMPTON_WAVELENGTH_2010 = {
+"neutron Compton wavelength over 2 pi",
+0.21001941568e-15,
+0.00000000017e-15,
+"m"
+};/** neutron Compton wavelength over 2 pi */
+
+const struct codata_constant_type NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2010 = {
+"neutron gyromag. ratio over 2 pi",
+29.1646943,
+0.0000069,
+"MHz T^-1"
+};/** neutron gyromag. ratio over 2 pi */
+
+const struct codata_constant_type NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2010 = {
+"nuclear magneton in inverse meters per tesla",
+2.542623527e-2,
+0.000000056e-2,
+"m^-1 T^-1"
+};/** nuclear magneton in inverse meters per tesla */
+
+const struct codata_constant_type PLANCK_CONSTANT_IN_EV_HZ_2010 = {
+"Planck constant in eV s",
+4.135667516e-15,
+0.000000091e-15,
+"eV s"
+};/** Planck constant in eV s */
+
+const struct codata_constant_type REDUCED_PLANCK_CONSTANT_2010 = {
+"Planck constant over 2 pi",
+1.054571726e-34,
+0.000000047e-34,
+"J s"
+};/** Planck constant over 2 pi */
+
+const struct codata_constant_type REDUCED_PLANCK_CONSTANT_IN_EV_S_2010 = {
+"Planck constant over 2 pi in eV s",
+6.58211928e-16,
+0.00000015e-16,
+"eV s"
+};/** Planck constant over 2 pi in eV s */
+
+const struct codata_constant_type REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2010 = {
+"Planck constant over 2 pi times c in MeV fm",
+197.3269718,
+0.0000044,
+"MeV fm"
+};/** Planck constant over 2 pi times c in MeV fm */
+
+const struct codata_constant_type REDUCED_PROTON_COMPTON_WAVELENGTH_2010 = {
+"proton Compton wavelength over 2 pi",
+0.21030891047e-15,
+0.00000000015e-15,
+"m"
+};/** proton Compton wavelength over 2 pi */
+
+const struct codata_constant_type PROTON_GYROMAG_RATIO_IN_MHZ_T_2010 = {
+"proton gyromag. ratio over 2 pi",
+42.5774806,
+0.0000010,
+"MHz T^-1"
+};/** proton gyromag. ratio over 2 pi */
+
+const struct codata_constant_type SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2010 = {
+"shielded helion gyromag. ratio over 2 pi",
+32.43410084,
+0.00000081,
+"MHz T^-1"
+};/** shielded helion gyromag. ratio over 2 pi */
+
+const struct codata_constant_type SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2010 = {
+"shielded proton gyromag. ratio over 2 pi",
+42.5763866,
+0.0000010,
+"MHz T^-1"
+};/** shielded proton gyromag. ratio over 2 pi */
+
+const struct codata_constant_type REDUCED_TAU_COMPTON_WAVELENGTH_2010 = {
+"tau Compton wavelength over 2 pi",
+0.111056e-15,
+0.000010e-15,
+"m"
+};/** tau Compton wavelength over 2 pi */
+
+const struct codata_constant_type TAU_ENERGY_EQUIVALENT_2010 = {
+"tau mass energy equivalent in MeV",
+1776.82,
+0.16,
+"MeV"
+};/** tau mass energy equivalent in MeV */
+

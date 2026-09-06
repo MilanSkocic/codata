@@ -11,6 +11,18 @@ suffix="_$year"
 if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 
 awk -v suffix="$suffix" -v latest_year="$latest_year" -v year="$year" '
+NR==FNR{
+    if($0 ~ /^#/){next}
+    split($0, r, "\t")
+    newof[r[1]] = r[2]
+    oldof[r[2]] = r[1]
+    next
+}
+function alias_of(k){
+    if(k in newof){return newof[k]}
+    if(k in oldof){return oldof[k]}
+    return ""
+}
 BEGIN{
     print ""
     print "//------------------------------------------------------------------------"
@@ -52,6 +64,27 @@ END{
         }
         print "ADD_IMPORT extern const struct codata_constant_type *cc_"year"["i+1"];"
     }
+
+    nalias = 0
+    for (j=1; j<=i; j++){
+        if(alias_of(bares[j]) != ""){nalias++}
+    }
+    if(nalias > 0){
+        print "//}}}"
+        print ""
+        print "//------------------------------------------------------------------------"
+        print "// CODATA_CONSTANTS_"year" - ALIASES FOR QUANTITIES RENAMED BY NIST"
+        print "//------------------------------------------------------------------------"
+        print "//{{{"
+        for (j=1; j<=i; j++){
+            a = alias_of(bares[j])
+            if(a == ""){continue}
+            print "ADD_IMPORT extern const struct codata_constant_type "a"_"year";"
+            if(suffix == ""){
+                print "ADD_IMPORT extern const struct codata_constant_type "a";"
+            }
+        }
+    }
     print "//}}}"
 }
-' $1
+' renames.tsv "$1"
