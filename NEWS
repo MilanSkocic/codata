@@ -35,6 +35,8 @@ VERSION 2.6.0 [dev]
   - codata(1) no longer hardcodes the list of adjustments, reports an
     invalid --year instead of reading an uninitialised pointer, and
     parses --year with atoi rather than atof.
+  - Document both ways of selecting an adjustment, and add tests that the
+    two agree.
   - Fix a stray space in the constant names listed in the man pages.
   - Add multiple patterns with repeated option -p PATTERN.
   - Update man pages.
