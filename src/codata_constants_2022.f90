@@ -2888,4 +2888,64 @@ W_TO_Z_MASS_RATIO_2022 &
 ]
 !-----------------------------------------------------------------------
 !}}}
+
+
+!-----------------------------------------------------------------------
+! CONSTANTS - ALIASES FOR QUANTITIES RENAMED BY NIST
+!-----------------------------------------------------------------------
+!{{{2
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MOMUM_2022 = ATOMIC_UNIT_OF_MOMENTUM
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MOMUM = ATOMIC_UNIT_OF_MOMENTUM
+type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2022 = BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA
+type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA = BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA
+type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN_2022 = BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN
+type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN = BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN
+type(codata_constant_type), parameter, public :: CU_X_UNIT_2022 = COPPER_X_UNIT
+type(codata_constant_type), parameter, public :: CU_X_UNIT = COPPER_X_UNIT
+type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO_OVER_2_PI_2022 = ELECTRON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO_OVER_2_PI = ELECTRON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: LATTICE_SPACING_OF_SILICON_2022 = LATTICE_SPACING_OF_IDEAL_SI_220
+type(codata_constant_type), parameter, public :: LATTICE_SPACING_OF_SILICON = LATTICE_SPACING_OF_IDEAL_SI_220
+type(codata_constant_type), parameter, public :: MO_X_UNIT_2022 = MOLYBDENUM_X_UNIT
+type(codata_constant_type), parameter, public :: MO_X_UNIT = MOLYBDENUM_X_UNIT
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMUM_2022 = NATURAL_UNIT_OF_MOMENTUM
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMUM = NATURAL_UNIT_OF_MOMENTUM
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2022 = NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMUM_IN_MEV_C = NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C
+type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO_OVER_2_PI_2022 = NEUTRON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO_OVER_2_PI = NEUTRON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2022 = NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA
+type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA = NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_IN_EV_S_2022 = PLANCK_CONSTANT_IN_EV_HZ
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_IN_EV_S = PLANCK_CONSTANT_IN_EV_HZ
+type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO_OVER_2_PI_2022 = PROTON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO_OVER_2_PI = PROTON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: COMPTON_WAVELENGTH_OVER_2_PI_2022 = REDUCED_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: COMPTON_WAVELENGTH_OVER_2_PI = REDUCED_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: MUON_COMPTON_WAVELENGTH_OVER_2_PI_2022 = REDUCED_MUON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: MUON_COMPTON_WAVELENGTH_OVER_2_PI = REDUCED_MUON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2022 = REDUCED_NEUTRON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI = REDUCED_NEUTRON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_OVER_2_PI_2022 = REDUCED_PLANCK_CONSTANT
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_OVER_2_PI = REDUCED_PLANCK_CONSTANT
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2022 = REDUCED_PLANCK_CONSTANT_IN_EV_S
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_OVER_2_PI_IN_EV_S = REDUCED_PLANCK_CONSTANT_IN_EV_S
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2022 = REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM = REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM
+type(codata_constant_type), parameter, public :: PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2022 = REDUCED_PROTON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: PROTON_COMPTON_WAVELENGTH_OVER_2_PI = REDUCED_PROTON_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: TAU_COMPTON_WAVELENGTH_OVER_2_PI_2022 = REDUCED_TAU_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: TAU_COMPTON_WAVELENGTH_OVER_2_PI = REDUCED_TAU_COMPTON_WAVELENGTH
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2022 = SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI = SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2022 = SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI = SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T
+type(codata_constant_type), parameter, public :: TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 = TAU_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: TAU_MASS_ENERGY_EQUIVALENT_IN_MEV = TAU_ENERGY_EQUIVALENT
+type(codata_constant_type), parameter, public :: ELECTRIC_CONSTANT_2022 = VACUUM_ELECTRIC_PERMITTIVITY
+type(codata_constant_type), parameter, public :: ELECTRIC_CONSTANT = VACUUM_ELECTRIC_PERMITTIVITY
+type(codata_constant_type), parameter, public :: MAG_CONSTANT_2022 = VACUUM_MAG_PERMEABILITY
+type(codata_constant_type), parameter, public :: MAG_CONSTANT = VACUUM_MAG_PERMEABILITY
+!-----------------------------------------------------------------------
+!}}}
 end module codata__constants_2022

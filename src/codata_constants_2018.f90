@@ -2154,4 +2154,38 @@ W_TO_Z_MASS_RATIO_2018 &
 ]
 !-----------------------------------------------------------------------
 !}}}
+
+
+!-----------------------------------------------------------------------
+! CONSTANTS - ALIASES FOR QUANTITIES RENAMED BY NIST
+!-----------------------------------------------------------------------
+!{{{2
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MOMUM_2018 = ATOMIC_UNIT_OF_MOMENTUM_2018
+type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018 = BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018
+type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN_2018 = BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2018
+type(codata_constant_type), parameter, public :: CU_X_UNIT_2018 = COPPER_X_UNIT_2018
+type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO_OVER_2_PI_2018 = ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2018
+type(codata_constant_type), parameter, public :: LATTICE_SPACING_OF_SILICON_2018 = LATTICE_SPACING_OF_IDEAL_SI_220_2018
+type(codata_constant_type), parameter, public :: MO_X_UNIT_2018 = MOLYBDENUM_X_UNIT_2018
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMUM_2018 = NATURAL_UNIT_OF_MOMENTUM_2018
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2018 = NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018
+type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO_OVER_2_PI_2018 = NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018
+type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018 = NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_IN_EV_S_2018 = PLANCK_CONSTANT_IN_EV_HZ_2018
+type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO_OVER_2_PI_2018 = PROTON_GYROMAG_RATIO_IN_MHZ_T_2018
+type(codata_constant_type), parameter, public :: COMPTON_WAVELENGTH_OVER_2_PI_2018 = REDUCED_COMPTON_WAVELENGTH_2018
+type(codata_constant_type), parameter, public :: MUON_COMPTON_WAVELENGTH_OVER_2_PI_2018 = REDUCED_MUON_COMPTON_WAVELENGTH_2018
+type(codata_constant_type), parameter, public :: NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2018 = REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_OVER_2_PI_2018 = REDUCED_PLANCK_CONSTANT_2018
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2018 = REDUCED_PLANCK_CONSTANT_IN_EV_S_2018
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2018 = REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018
+type(codata_constant_type), parameter, public :: PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2018 = REDUCED_PROTON_COMPTON_WAVELENGTH_2018
+type(codata_constant_type), parameter, public :: TAU_COMPTON_WAVELENGTH_OVER_2_PI_2018 = REDUCED_TAU_COMPTON_WAVELENGTH_2018
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2018 = SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018
+type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2018 = SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018
+type(codata_constant_type), parameter, public :: TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 = TAU_ENERGY_EQUIVALENT_2018
+type(codata_constant_type), parameter, public :: ELECTRIC_CONSTANT_2018 = VACUUM_ELECTRIC_PERMITTIVITY_2018
+type(codata_constant_type), parameter, public :: MAG_CONSTANT_2018 = VACUUM_MAG_PERMEABILITY_2018
+!-----------------------------------------------------------------------
+!}}}
 end module codata__constants_2018

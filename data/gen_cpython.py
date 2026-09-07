@@ -15,6 +15,24 @@ def get_latest_year(fpath: str)->str:
     years = [get_year(str(p)) for p in d.glob("codata_constants_*.toml")]
     return max(years, key=int)
 
+def get_renames(fpath: str)->dict:
+    r"""Reviewed map of quantities NIST renamed between adjustments.
+
+    Each vintage carries exactly one name of a renamed pair; the other is
+    emitted as an alias, so that code written against either spelling works
+    against every adjustment.
+    """
+    aliases = {}
+    p = pathlib.Path(fpath).parent.parent / "renames.tsv"
+    with open(p, "r") as f:
+        for line in f:
+            if line.startswith("#") or not line.strip():
+                continue
+            old, new = line.split("\t")[:2]
+            aliases[old] = new
+            aliases[new] = old
+    return aliases
+
 def get_suffix(year, latest_year):
     if year == latest_year:
         suffix = ""
@@ -57,7 +75,7 @@ def write_year(f, year, latest_year):
     f.write("    Py_DECREF(v);" + newline)
     f.write(newline)
 
-def write_constant(f, var, name, value, uncertainty, unit, year, latest_year):
+def write_constant(f, var, name, value, uncertainty, unit, year, latest_year, aliases):
     suffix = get_suffix(year, latest_year)
     
     f.write("    constant = Py_BuildValue(\"{s:s, s:d, s:d, s:s}\"," + newline)
@@ -72,6 +90,11 @@ def write_constant(f, var, name, value, uncertainty, unit, year, latest_year):
     # adjustment is released.
     if suffix == "":
         f.write("    PyDict_SetItemString(d, \"" + f"{var:s}_{year:s}" + "\", constant);" + newline)
+    alias = aliases.get(var)
+    if alias is not None:
+        f.write("    PyDict_SetItemString(d, \"" + f"{alias:s}_{year:s}" + "\", constant);" + newline)
+        if suffix == "":
+            f.write("    PyDict_SetItemString(d, \"" + f"{alias:s}" + "\", constant);" + newline)
     f.write("    Py_DECREF(constant);" + newline)
 
     f.write(newline)
@@ -85,6 +108,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
     
     year = get_year(fpath_ast)
     latest_year = get_latest_year(fpath_ast)
+    aliases = get_renames(fpath_ast)
     
     fcode = open(fpath_code, "w")
     fast = open(fpath_ast, "r")
@@ -98,7 +122,7 @@ def run(fpath_ast: str, fpath_code: str)->None:
         value = ast[var]["value"]
         uncertainty = ast[var]["uncertainty"]
         unit = ast[var]["unit"]
-        write_constant(fcode, var, name, value, uncertainty, unit, year, latest_year)
+        write_constant(fcode, var, name, value, uncertainty, unit, year, latest_year, aliases)
     
     write_module_end(fcode, year)
 

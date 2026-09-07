@@ -11,6 +11,18 @@ suffix="_$year"
 if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 
 awk -v suffix="$suffix" -v year="$year" '
+NR==FNR{
+    if($0 ~ /^#/){next}
+    split($0, r, "\t")
+    newof[r[1]] = r[2]
+    oldof[r[2]] = r[1]
+    next
+}
+function alias_of(k){
+    if(k in newof){return newof[k]}
+    if(k in oldof){return oldof[k]}
+    return ""
+}
 BEGIN{
     print ".SH CODATA " year
     print ".PP"
@@ -27,6 +39,11 @@ BEGIN{
     gsub(/\]/,"")
     print ".IP \\(bu "
     print $0 "_" year
+    a = alias_of($0)
+    if(a != ""){
+        print ".IP \\(bu "
+        print a "_" year " (alias, renamed by NIST)"
+    }
 }
 END{print ".\\\"}}}"}
-' $1
+' renames.tsv "$1"

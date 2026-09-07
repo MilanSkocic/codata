@@ -368,6 +368,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ATOMIC_UNIT_OF_MOMENTUM_2018.unit
     );
     PyDict_SetItemString(d, "ATOMIC_UNIT_OF_MOMENTUM_2018", constant);
+    PyDict_SetItemString(d, "ATOMIC_UNIT_OF_MOMUM_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -440,6 +441,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018.unit
     );
     PyDict_SetItemString(d, "BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018", constant);
+    PyDict_SetItemString(d, "BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -494,6 +496,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2018.unit
     );
     PyDict_SetItemString(d, "BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2018", constant);
+    PyDict_SetItemString(d, "BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -620,6 +623,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", COPPER_X_UNIT_2018.unit
     );
     PyDict_SetItemString(d, "COPPER_X_UNIT_2018", constant);
+    PyDict_SetItemString(d, "CU_X_UNIT_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -818,6 +822,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
+    PyDict_SetItemString(d, "ELECTRON_GYROMAG_RATIO_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -1718,6 +1723,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", LATTICE_SPACING_OF_IDEAL_SI_220_2018.unit
     );
     PyDict_SetItemString(d, "LATTICE_SPACING_OF_IDEAL_SI_220_2018", constant);
+    PyDict_SetItemString(d, "LATTICE_SPACING_OF_SILICON_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -1826,6 +1832,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", MOLYBDENUM_X_UNIT_2018.unit
     );
     PyDict_SetItemString(d, "MOLYBDENUM_X_UNIT_2018", constant);
+    PyDict_SetItemString(d, "MO_X_UNIT_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2033,6 +2040,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_MOMENTUM_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_MOMENTUM_2018", constant);
+    PyDict_SetItemString(d, "NATURAL_UNIT_OF_MOMUM_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2042,6 +2050,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018.unit
     );
     PyDict_SetItemString(d, "NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018", constant);
+    PyDict_SetItemString(d, "NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2114,6 +2123,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
+    PyDict_SetItemString(d, "NEUTRON_GYROMAG_RATIO_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2321,6 +2331,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018.unit
     );
     PyDict_SetItemString(d, "NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018", constant);
+    PyDict_SetItemString(d, "NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2357,6 +2368,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PLANCK_CONSTANT_IN_EV_HZ_2018.unit
     );
     PyDict_SetItemString(d, "PLANCK_CONSTANT_IN_EV_HZ_2018", constant);
+    PyDict_SetItemString(d, "PLANCK_CONSTANT_IN_EV_S_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2456,6 +2468,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", PROTON_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "PROTON_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
+    PyDict_SetItemString(d, "PROTON_GYROMAG_RATIO_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2618,6 +2631,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_COMPTON_WAVELENGTH_2018", constant);
+    PyDict_SetItemString(d, "COMPTON_WAVELENGTH_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2627,6 +2641,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_MUON_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_MUON_COMPTON_WAVELENGTH_2018", constant);
+    PyDict_SetItemString(d, "MUON_COMPTON_WAVELENGTH_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2636,6 +2651,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018", constant);
+    PyDict_SetItemString(d, "NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2645,6 +2661,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_PLANCK_CONSTANT_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_PLANCK_CONSTANT_2018", constant);
+    PyDict_SetItemString(d, "PLANCK_CONSTANT_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2654,6 +2671,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_PLANCK_CONSTANT_IN_EV_S_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_PLANCK_CONSTANT_IN_EV_S_2018", constant);
+    PyDict_SetItemString(d, "PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2663,6 +2681,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018", constant);
+    PyDict_SetItemString(d, "PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2672,6 +2691,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_PROTON_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_PROTON_COMPTON_WAVELENGTH_2018", constant);
+    PyDict_SetItemString(d, "PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2681,6 +2701,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", REDUCED_TAU_COMPTON_WAVELENGTH_2018.unit
     );
     PyDict_SetItemString(d, "REDUCED_TAU_COMPTON_WAVELENGTH_2018", constant);
+    PyDict_SetItemString(d, "TAU_COMPTON_WAVELENGTH_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2762,6 +2783,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
+    PyDict_SetItemString(d, "SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2825,6 +2847,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018.unit
     );
     PyDict_SetItemString(d, "SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018", constant);
+    PyDict_SetItemString(d, "SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -2942,6 +2965,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", TAU_ENERGY_EQUIVALENT_2018.unit
     );
     PyDict_SetItemString(d, "TAU_ENERGY_EQUIVALENT_2018", constant);
+    PyDict_SetItemString(d, "TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -3149,6 +3173,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", VACUUM_ELECTRIC_PERMITTIVITY_2018.unit
     );
     PyDict_SetItemString(d, "VACUUM_ELECTRIC_PERMITTIVITY_2018", constant);
+    PyDict_SetItemString(d, "ELECTRIC_CONSTANT_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
@@ -3158,6 +3183,7 @@ PyMODINIT_FUNC PyInit_constants_2018(void){
     "unit", VACUUM_MAG_PERMEABILITY_2018.unit
     );
     PyDict_SetItemString(d, "VACUUM_MAG_PERMEABILITY_2018", constant);
+    PyDict_SetItemString(d, "MAG_CONSTANT_2018", constant);
     Py_DECREF(constant);
 
     constant = Py_BuildValue("{s:s, s:d, s:d, s:s}",
