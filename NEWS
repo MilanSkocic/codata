@@ -1,6 +1,18 @@
 VERSION 2.6.0 [dev]
   - Maintenance release.
   - No API break.
+  - The latest adjustment is now also available under its year-suffixed
+    names (BOHR_RADIUS_2022 as well as BOHR_RADIUS), in Fortran, C and
+    Python. The unsuffixed names are kept as aliases meaning "current".
+    Previously the latest adjustment had no year-suffixed name at all, so
+    code could not pin to it, and the unsuffixed names would silently
+    change value when the next adjustment was added.
+  - The generators no longer hardcode the latest year: gen_cpython.py
+    derives it like common:gly(), the stdlib target follows it, and
+    txt2toml detects the end of the table header instead of carrying a
+    per-year line count.
+  - The generated sources are now rebuilt when a generator changes.
+  - Fix a stray space in the constant names listed in the man pages.
   - Add multiple patterns with repeated option -p PATTERN.
   - Update man pages.
 

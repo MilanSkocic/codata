@@ -35,6 +35,7 @@ BEGIN{
 /^\[.*\]/{
     gsub(/\[/,"")
     gsub(/\]/,"")
+    bare=$0
     var=$0 suffix
     print "const struct codata_constant_type "var" = {"
 }
@@ -45,21 +46,27 @@ BEGIN{
     gsub(/"/,"",name)
     i++
     vars[i]=var
+    bares[i]=bare
+    docs[i]=name
+    names[i]=x[2]
 }
 /^value/{
     gsub(/"/, "")
     split($0, x, " = ")
     print x[2]","
+    values[i]=x[2]
 }
 /^uncertainty/{
     gsub(/"/, "")
     split($0, x, " = ")
     print x[2]","
+    uncertainties[i]=x[2]
 }
 /^unit/{
     split($0, x, " = ")
     print x[2]
     print "};/** "name" */"
+    units[i]=x[2]
 }
 NF==0{
     print ""
@@ -78,5 +85,40 @@ END{
     }
     print "NULL,"
     print "};"
+
+    # The latest adjustment is also exposed under its year-suffixed name, so
+    # that a caller can pin to it before the next adjustment is released.
+    # The unsuffixed names above are kept as aliases meaning "current".
+    if(suffix==""){
+        print "//}}}"
+        print ""
+        print ""
+        print "//----------------------------------------------------------------------"
+        print "// CONSTANTS - YEAR-SUFFIXED NAMES FOR THE LATEST ADJUSTMENT"
+        print "//----------------------------------------------------------------------"
+        print "//{{{2"
+        for (j=1; j<=i; j++){
+            print "const struct codata_constant_type "bares[j]"_"year" = {"
+            print names[j]","
+            print values[j]","
+            print uncertainties[j]","
+            print units[j]
+            print "};/** "docs[j]" */"
+            print ""
+        }
+        print "//}}}"
+        print ""
+        print ""
+        print "//----------------------------------------------------------------------"
+        print "// ARRAY OF CONSTANTS - YEAR-SUFFIXED"
+        print "//----------------------------------------------------------------------"
+        print "//{{{2"
+        print "const struct codata_constant_type *cc_"year"[] = {"
+        for (j=1; j<=i; j++){
+            print "&"bares[j]"_"year","
+        }
+        print "NULL,"
+        print "};"
+    }
 }
 ' $1

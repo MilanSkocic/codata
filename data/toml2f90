@@ -46,6 +46,7 @@ BEGIN{
     var=$0 suffix
     i++
     vars[i]=var
+    bares[i]=$0
     print "type(codata_constant_type), parameter, public :: "var" = &"
 }
 /^name/{
@@ -98,6 +99,46 @@ END{
     print "]"
     print "!-----------------------------------------------------------------------"
     print "!}}}"
+
+    # The latest adjustment is also exposed under its year-suffixed name, so a
+    # caller can pin to it before the next adjustment is released. The
+    # unsuffixed names above are kept as aliases meaning "current". This block
+    # sits after !END FOR STDLIB so that it is not carried into stdlib.
+    if(suffix==""){
+        print ""
+        print ""
+        print "!-----------------------------------------------------------------------"
+        print "! CONSTANTS - YEAR-SUFFIXED NAMES FOR THE LATEST ADJUSTMENT"
+        print "!-----------------------------------------------------------------------"
+        print "!{{{2"
+        for (j=1; j<=i; j++){
+            print "type(codata_constant_type), parameter, public :: "bares[j]"_"year" = "bares[j]
+        }
+        print "!-----------------------------------------------------------------------"
+        print "!}}}"
+        print ""
+        print ""
+        print "!-----------------------------------------------------------------------"
+        print "! ARRAY OF CONSTANTS - YEAR-SUFFIXED"
+        print "!-----------------------------------------------------------------------"
+        print "!{{{2"
+        print "type(codata_constant_type), target, public :: cc_"year"("i") = &"
+        for (j=1; j<=i; j++){
+            if(j==1){
+                printf "%s", "["
+                print bares[j]"_"year", &"
+            }
+            else if(j==i){
+                print bares[j]"_"year" &"
+            }
+            else{
+                print bares[j]"_"year", &"
+            }
+        }
+        print "]"
+        print "!-----------------------------------------------------------------------"
+        print "!}}}"
+    }
     print "end module codata__constants_"year
 }
 ' $1
