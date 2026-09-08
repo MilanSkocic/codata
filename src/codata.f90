@@ -7,14 +7,21 @@
 module codata
 !! Codata library - Fundamental Physical Constants.
 !! Available constants for 2010, 2014, 2018 and 2022.
-!! The latest values (2022) do not have the year as a suffix in their name.
-!! Older values can be used and they feature the year as a suffix in their name.
+!! Every adjustment is available under year-suffixed names. The latest values
+!! are additionally available without the year as a suffix, as an alias
+!! meaning "current".
+!! Quantities that NIST renamed between adjustments are available under both
+!! spellings in every adjustment.
+!! Q_* are stable quantity keys, valid across adjustments, and
+!! codata_value(ds, q) selects a constant at run time.
 use, intrinsic :: iso_c_binding, only: c_ptr, c_null_char, c_loc
 use codata__constants_2022
 use codata__constants_2018
 use codata__constants_2014
 use codata__constants_2010
 use codata__constants_type
+use codata__quantity
+use codata__lookup
 implicit none(type,external)
 public
 

@@ -138,7 +138,7 @@ int main(int argc, char **argv){
     char *s=NULL;
     const struct codata_constant_type **ccptr;
 
-    int year=2022;
+    int year;
     char patterns[PATTERN_SIZE];
     patterns[0]='\0';
     char *pattern;
@@ -146,8 +146,12 @@ int main(int argc, char **argv){
     int a = 0;
     int e = 0;
     
+    char years_help[128];
+    int nyears=0, iy;
+    const enum codata_dataset *dss;
+
     static struct option_t loptions[]={
-    {"-y", "--year" ,   "YEAR",      "Codata constants: 2022, 2018, 2014, 2010."},
+    {"-y", "--year" ,   "YEAR",      NULL},
     {"-p", "--pattern", "PATTERN",   "Regex pattern for filtering the constants."},
     {"-a", "--value",   NULL,        "Show only the value."},
     {"-e", "--error",   NULL,        "Show only the uncertainty."},
@@ -155,6 +159,17 @@ int main(int argc, char **argv){
     {"-v", "--version", NULL,        "Show version information and exit."},
     {"-h", "--help ",   NULL,        "Show help text and exit."},
     {NULL, NULL,        NULL,        NULL} };
+
+    /* The adjustments the library was built with, most recent first. */
+    dss = codata_datasets(&nyears);
+    strcpy(years_help, "Codata constants:");
+    for(iy=nyears-1;iy>=0;iy--){
+        char buf[16];
+        sprintf(buf, " %d%s", (int)dss[iy], (iy>0) ? "," : ".");
+        strcat(years_help, buf);
+    }
+    loptions[0].help = years_help;
+    year = (int)CODATA_LATEST;
 
     for(i=1;i<argc;i++){
         s = long2short(argv[i], loptions);
@@ -164,7 +179,7 @@ int main(int argc, char **argv){
     while ((opt = getopt(argc, argv, ":y:p:aeuvh")) != -1) {
         switch (opt) {
             case 'y':
-                year = atof(optarg);
+                year = atoi(optarg);
                 break;
             case 'p':
                 if(strlen(patterns) > 0){strcat(patterns, ";");}
@@ -197,22 +212,10 @@ int main(int argc, char **argv){
         }
     }
 
-    switch (year){
-        case 2022:
-            ccptr = cc;
-            break;
-        case 2018:
-            ccptr = cc_2018;
-            break;
-        case 2014:
-            ccptr = cc_2014;
-            break;
-        case 2010:
-            ccptr = cc_2010;
-            break;
-            default:
-                fprintf(stderr, "Invalid year. See --help.");
-                break;
+    ccptr = codata_constants((enum codata_dataset)year);
+    if(ccptr == NULL){
+        fprintf(stderr, "Invalid year. See --help.\n");
+        return EXIT_FAILURE;
     }
     pattern = strtok_r(patterns, ";", &tokenptr);
     if(pattern == NULL){

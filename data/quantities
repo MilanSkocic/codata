@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+#
+# Print the canonical quantity names that quantities.txt does not yet cover,
+# one per line, ready to be appended to it.
+#
+# Names that NIST renamed form one equivalence class, and a class gets exactly
+# one enumerator. Which member names it matters: whichever member is already in
+# quantities.txt stays canonical, so that an enumerator never changes value when
+# a later adjustment renames the quantity again. Only a class with no member in
+# quantities.txt is new, and is named by its newest spelling.
+#
+# Usage: ./quantities quantities.txt renames.tsv build/*.toml
+
+awk '
+FILENAME ~ /renames\.tsv$/{
+    if($0 ~ /^#/){next}
+    split($0, r, "\t")
+    newof[r[1]] = r[2]
+    next
+}
+FILENAME ~ /quantities\.txt$/{
+    if($0 ~ /^#/ || NF == 0){next}
+    established[$0] = 1
+    next
+}
+/^\[.*\]/{
+    k = $0
+    gsub(/\[/, "", k)
+    gsub(/\]/, "", k)
+    seen[k] = 1
+}
+# newest spelling of a quantity: follow the rename chain to its end
+function root(k,   hops){
+    hops = 0
+    while((k in newof) && hops < 64){k = newof[k]; hops++}
+    return k
+}
+END{
+    # a class is covered if any of its members is already established
+    for(k in established){covered[root(k)] = 1}
+    for(k in seen){
+        rt = root(k)
+        if(rt in covered){continue}
+        if(rt in emitted){continue}
+        emitted[rt] = 1
+        print rt
+    }
+}
+' "$@" | sort
