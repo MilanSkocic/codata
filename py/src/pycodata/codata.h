@@ -364,6 +364,38 @@ ADD_IMPORT extern const struct codata_constant_type *cc_2010[336];
 //}}}
 
 //------------------------------------------------------------------------
+// CODATA_CONSTANTS_2010 - ALIASES FOR QUANTITIES RENAMED BY NIST
+//------------------------------------------------------------------------
+//{{{
+ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_IDEAL_SI_220_2010;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MOMENTUM_2010;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2010;
+ADD_IMPORT extern const struct codata_constant_type BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2010;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_COMPTON_WAVELENGTH_2010;
+ADD_IMPORT extern const struct codata_constant_type COPPER_X_UNIT_2010;
+ADD_IMPORT extern const struct codata_constant_type VACUUM_ELECTRIC_PERMITTIVITY_2010;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2010;
+ADD_IMPORT extern const struct codata_constant_type VACUUM_MAG_PERMEABILITY_2010;
+ADD_IMPORT extern const struct codata_constant_type MOLYBDENUM_X_UNIT_2010;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_MUON_COMPTON_WAVELENGTH_2010;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMENTUM_2010;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2010;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_NEUTRON_COMPTON_WAVELENGTH_2010;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2010;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2010;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_IN_EV_HZ_2010;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PLANCK_CONSTANT_2010;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PLANCK_CONSTANT_IN_EV_S_2010;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2010;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PROTON_COMPTON_WAVELENGTH_2010;
+ADD_IMPORT extern const struct codata_constant_type PROTON_GYROMAG_RATIO_IN_MHZ_T_2010;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2010;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2010;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_TAU_COMPTON_WAVELENGTH_2010;
+ADD_IMPORT extern const struct codata_constant_type TAU_ENERGY_EQUIVALENT_2010;
+//}}}
+
+//------------------------------------------------------------------------
 // CODATA_CONSTANTS_2014
 //------------------------------------------------------------------------
 //{{{
@@ -703,6 +735,38 @@ ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE_2014;
 ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2014;
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014;
 ADD_IMPORT extern const struct codata_constant_type *cc_2014[336];
+//}}}
+
+//------------------------------------------------------------------------
+// CODATA_CONSTANTS_2014 - ALIASES FOR QUANTITIES RENAMED BY NIST
+//------------------------------------------------------------------------
+//{{{
+ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_IDEAL_SI_220_2014;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MOMENTUM_2014;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2014;
+ADD_IMPORT extern const struct codata_constant_type BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2014;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_COMPTON_WAVELENGTH_2014;
+ADD_IMPORT extern const struct codata_constant_type COPPER_X_UNIT_2014;
+ADD_IMPORT extern const struct codata_constant_type VACUUM_ELECTRIC_PERMITTIVITY_2014;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2014;
+ADD_IMPORT extern const struct codata_constant_type VACUUM_MAG_PERMEABILITY_2014;
+ADD_IMPORT extern const struct codata_constant_type MOLYBDENUM_X_UNIT_2014;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_MUON_COMPTON_WAVELENGTH_2014;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMENTUM_2014;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2014;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_NEUTRON_COMPTON_WAVELENGTH_2014;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2014;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2014;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_IN_EV_HZ_2014;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PLANCK_CONSTANT_2014;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PLANCK_CONSTANT_IN_EV_S_2014;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2014;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PROTON_COMPTON_WAVELENGTH_2014;
+ADD_IMPORT extern const struct codata_constant_type PROTON_GYROMAG_RATIO_IN_MHZ_T_2014;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2014;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2014;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_TAU_COMPTON_WAVELENGTH_2014;
+ADD_IMPORT extern const struct codata_constant_type TAU_ENERGY_EQUIVALENT_2014;
 //}}}
 
 //------------------------------------------------------------------------
@@ -1067,6 +1131,38 @@ ADD_IMPORT extern const struct codata_constant_type *cc_2018[355];
 //}}}
 
 //------------------------------------------------------------------------
+// CODATA_CONSTANTS_2018 - ALIASES FOR QUANTITIES RENAMED BY NIST
+//------------------------------------------------------------------------
+//{{{
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MOMUM_2018;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018;
+ADD_IMPORT extern const struct codata_constant_type BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN_2018;
+ADD_IMPORT extern const struct codata_constant_type CU_X_UNIT_2018;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_GYROMAG_RATIO_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_SILICON_2018;
+ADD_IMPORT extern const struct codata_constant_type MO_X_UNIT_2018;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMUM_2018;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2018;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_GYROMAG_RATIO_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_IN_EV_S_2018;
+ADD_IMPORT extern const struct codata_constant_type PROTON_GYROMAG_RATIO_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type COMPTON_WAVELENGTH_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type MUON_COMPTON_WAVELENGTH_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2018;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2018;
+ADD_IMPORT extern const struct codata_constant_type PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type TAU_COMPTON_WAVELENGTH_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2018;
+ADD_IMPORT extern const struct codata_constant_type TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2018;
+ADD_IMPORT extern const struct codata_constant_type ELECTRIC_CONSTANT_2018;
+ADD_IMPORT extern const struct codata_constant_type MAG_CONSTANT_2018;
+//}}}
+
+//------------------------------------------------------------------------
 // CODATA_CONSTANTS_2022
 //------------------------------------------------------------------------
 //{{{
@@ -1426,6 +1522,874 @@ ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_
 ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT;
 ADD_IMPORT extern const struct codata_constant_type W_TO_Z_MASS_RATIO;
 ADD_IMPORT extern const struct codata_constant_type *cc[356];
+//}}}
+
+//------------------------------------------------------------------------
+// CODATA_CONSTANTS_2022 - YEAR-SUFFIXED NAMES
+//------------------------------------------------------------------------
+//{{{
+ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MASS_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_MOLAR_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_PROTON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type ALPHA_PARTICLE_RMS_CHARGE_RADIUS_2022;
+ADD_IMPORT extern const struct codata_constant_type ANGSTROM_STAR_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_ACTION_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_CHARGE_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_CHARGE_DENSITY_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_CURRENT_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_ELECTRIC_FIELD_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_ENERGY_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_FORCE_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_LENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MAG_DIPOLE_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MAG_FLUX_DENSITY_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MAGNETIZABILITY_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MOMENTUM_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_PERMITTIVITY_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_TIME_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_VELOCITY_2022;
+ADD_IMPORT extern const struct codata_constant_type AVOGADRO_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_2022;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_IN_EV_T_2022;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_IN_HZ_T_2022;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2022;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_IN_K_T_2022;
+ADD_IMPORT extern const struct codata_constant_type BOHR_RADIUS_2022;
+ADD_IMPORT extern const struct codata_constant_type BOLTZMANN_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type BOLTZMANN_CONSTANT_IN_EV_K_2022;
+ADD_IMPORT extern const struct codata_constant_type BOLTZMANN_CONSTANT_IN_HZ_K_2022;
+ADD_IMPORT extern const struct codata_constant_type BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2022;
+ADD_IMPORT extern const struct codata_constant_type CHARACTERISTIC_IMPEDANCE_OF_VACUUM_2022;
+ADD_IMPORT extern const struct codata_constant_type CLASSICAL_ELECTRON_RADIUS_2022;
+ADD_IMPORT extern const struct codata_constant_type COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type CONDUCTANCE_QUANTUM_2022;
+ADD_IMPORT extern const struct codata_constant_type CONVENTIONAL_VALUE_OF_AMPERE_90_2022;
+ADD_IMPORT extern const struct codata_constant_type CONVENTIONAL_VALUE_OF_COULOMB_90_2022;
+ADD_IMPORT extern const struct codata_constant_type CONVENTIONAL_VALUE_OF_FARAD_90_2022;
+ADD_IMPORT extern const struct codata_constant_type CONVENTIONAL_VALUE_OF_HENRY_90_2022;
+ADD_IMPORT extern const struct codata_constant_type CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type CONVENTIONAL_VALUE_OF_OHM_90_2022;
+ADD_IMPORT extern const struct codata_constant_type CONVENTIONAL_VALUE_OF_VOLT_90_2022;
+ADD_IMPORT extern const struct codata_constant_type CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type CONVENTIONAL_VALUE_OF_WATT_90_2022;
+ADD_IMPORT extern const struct codata_constant_type COPPER_X_UNIT_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_ELECTRON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_ELECTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_G_FACTOR_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_MAG_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_MASS_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_MASS_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_MOLAR_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_NEUTRON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_PROTON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_PROTON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_RELATIVE_ATOMIC_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type DEUTERON_RMS_CHARGE_RADIUS_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_CHARGE_TO_MASS_QUOTIENT_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_DEUTERON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_DEUTERON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_G_FACTOR_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_GYROMAG_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_HELION_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MAG_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MAG_MOM_ANOMALY_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MASS_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MASS_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MOLAR_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MUON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_MUON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_NEUTRON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_NEUTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_PROTON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_PROTON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_RELATIVE_ATOMIC_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_TAU_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_TRITON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_VOLT_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_VOLT_HARTREE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_VOLT_HERTZ_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_VOLT_JOULE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_VOLT_KELVIN_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_VOLT_KILOGRAM_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type ELEMENTARY_CHARGE_2022;
+ADD_IMPORT extern const struct codata_constant_type ELEMENTARY_CHARGE_OVER_H_BAR_2022;
+ADD_IMPORT extern const struct codata_constant_type FARADAY_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type FERMI_COUPLING_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type FINE_STRUCTURE_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type FIRST_RADIATION_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE_2022;
+ADD_IMPORT extern const struct codata_constant_type HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HARTREE_ELECTRON_VOLT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HARTREE_ENERGY_2022;
+ADD_IMPORT extern const struct codata_constant_type HARTREE_ENERGY_IN_EV_2022;
+ADD_IMPORT extern const struct codata_constant_type HARTREE_HERTZ_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HARTREE_INVERSE_METER_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HARTREE_JOULE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HARTREE_KELVIN_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HARTREE_KILOGRAM_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_ELECTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_G_FACTOR_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_MAG_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_MASS_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_MASS_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_MASS_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_MOLAR_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_PROTON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_RELATIVE_ATOMIC_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type HELION_SHIELDING_SHIFT_2022;
+ADD_IMPORT extern const struct codata_constant_type HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HERTZ_ELECTRON_VOLT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HERTZ_HARTREE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HERTZ_INVERSE_METER_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HERTZ_JOULE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HERTZ_KELVIN_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HERTZ_KILOGRAM_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133_2022;
+ADD_IMPORT extern const struct codata_constant_type INVERSE_FINE_STRUCTURE_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type INVERSE_METER_HARTREE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type INVERSE_METER_HERTZ_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type INVERSE_METER_JOULE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type INVERSE_METER_KELVIN_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type INVERSE_METER_KILOGRAM_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type INVERSE_OF_CONDUCTANCE_QUANTUM_2022;
+ADD_IMPORT extern const struct codata_constant_type JOSEPHSON_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type JOULE_ELECTRON_VOLT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type JOULE_HARTREE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type JOULE_HERTZ_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type JOULE_INVERSE_METER_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type JOULE_KELVIN_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type JOULE_KILOGRAM_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KELVIN_ELECTRON_VOLT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KELVIN_HARTREE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KELVIN_HERTZ_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KELVIN_INVERSE_METER_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KELVIN_JOULE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KELVIN_KILOGRAM_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KILOGRAM_ELECTRON_VOLT_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KILOGRAM_HARTREE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KILOGRAM_HERTZ_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KILOGRAM_INVERSE_METER_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KILOGRAM_JOULE_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type KILOGRAM_KELVIN_RELATIONSHIP_2022;
+ADD_IMPORT extern const struct codata_constant_type LATTICE_PARAMETER_OF_SILICON_2022;
+ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_IDEAL_SI_220_2022;
+ADD_IMPORT extern const struct codata_constant_type LOSCHMIDT_CONSTANT_273_15_K_100_KPA_2022;
+ADD_IMPORT extern const struct codata_constant_type LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA_2022;
+ADD_IMPORT extern const struct codata_constant_type LUMINOUS_EFFICACY_2022;
+ADD_IMPORT extern const struct codata_constant_type MAG_FLUX_QUANTUM_2022;
+ADD_IMPORT extern const struct codata_constant_type MOLAR_GAS_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type MOLAR_MASS_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type MOLAR_MASS_OF_CARBON_12_2022;
+ADD_IMPORT extern const struct codata_constant_type MOLAR_PLANCK_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA_2022;
+ADD_IMPORT extern const struct codata_constant_type MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA_2022;
+ADD_IMPORT extern const struct codata_constant_type MOLAR_VOLUME_OF_SILICON_2022;
+ADD_IMPORT extern const struct codata_constant_type MOLYBDENUM_X_UNIT_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_ELECTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_G_FACTOR_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_MAG_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_MAG_MOM_ANOMALY_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_MASS_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_MASS_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_MOLAR_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_NEUTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_PROTON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_PROTON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_TAU_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_ACTION_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_ACTION_IN_EV_S_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_ENERGY_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_ENERGY_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_LENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMENTUM_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_TIME_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_VELOCITY_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_ELECTRON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_ELECTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_G_FACTOR_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_GYROMAG_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_MAG_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_MASS_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_MASS_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_MOLAR_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_MUON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_PROTON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_PROTON_MASS_DIFFERENCE_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_PROTON_MASS_DIFFERENCE_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_PROTON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_RELATIVE_ATOMIC_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_TAU_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type NEWTONIAN_CONSTANT_OF_GRAVITATION_2022;
+ADD_IMPORT extern const struct codata_constant_type NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C_2022;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_2022;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_IN_EV_T_2022;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2022;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_IN_K_T_2022;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_IN_MHZ_T_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_IN_EV_HZ_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_LENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_TEMPERATURE_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_TIME_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_CHARGE_TO_MASS_QUOTIENT_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_ELECTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_G_FACTOR_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_GYROMAG_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_GYROMAG_RATIO_IN_MHZ_T_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MAG_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MAG_SHIELDING_CORRECTION_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MASS_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MASS_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MOLAR_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_MUON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_NEUTRON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_NEUTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_RELATIVE_ATOMIC_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_RMS_CHARGE_RADIUS_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_TAU_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type QUANTUM_OF_CIRCULATION_2022;
+ADD_IMPORT extern const struct codata_constant_type QUANTUM_OF_CIRCULATION_TIMES_2_2022;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_MUON_COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_NEUTRON_COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PLANCK_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PLANCK_CONSTANT_IN_EV_S_2022;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2022;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_PROTON_COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type REDUCED_TAU_COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type RYDBERG_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type RYDBERG_CONSTANT_TIMES_C_IN_HZ_2022;
+ADD_IMPORT extern const struct codata_constant_type RYDBERG_CONSTANT_TIMES_HC_IN_EV_2022;
+ADD_IMPORT extern const struct codata_constant_type RYDBERG_CONSTANT_TIMES_HC_IN_J_2022;
+ADD_IMPORT extern const struct codata_constant_type SACKUR_TETRODE_CONSTANT_1_K_100_KPA_2022;
+ADD_IMPORT extern const struct codata_constant_type SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA_2022;
+ADD_IMPORT extern const struct codata_constant_type SECOND_RADIATION_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_GYROMAG_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_MAG_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_GYROMAG_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_MAG_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT_2022;
+ADD_IMPORT extern const struct codata_constant_type SPEED_OF_LIGHT_IN_VACUUM_2022;
+ADD_IMPORT extern const struct codata_constant_type STANDARD_ACCELERATION_OF_GRAVITY_2022;
+ADD_IMPORT extern const struct codata_constant_type STANDARD_ATMOSPHERE_2022;
+ADD_IMPORT extern const struct codata_constant_type STANDARD_STATE_PRESSURE_2022;
+ADD_IMPORT extern const struct codata_constant_type STEFAN_BOLTZMANN_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_COMPTON_WAVELENGTH_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_ELECTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_MASS_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_MASS_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_MOLAR_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_MUON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_NEUTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_PROTON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type THOMSON_CROSS_SECTION_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_ELECTRON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_G_FACTOR_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_MAG_MOM_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_MASS_ENERGY_EQUIVALENT_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_MASS_IN_U_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_MOLAR_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_PROTON_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_RELATIVE_ATOMIC_MASS_2022;
+ADD_IMPORT extern const struct codata_constant_type TRITON_TO_PROTON_MAG_MOM_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type UNIFIED_ATOMIC_MASS_UNIT_2022;
+ADD_IMPORT extern const struct codata_constant_type VACUUM_ELECTRIC_PERMITTIVITY_2022;
+ADD_IMPORT extern const struct codata_constant_type VACUUM_MAG_PERMEABILITY_2022;
+ADD_IMPORT extern const struct codata_constant_type VON_KLITZING_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type WEAK_MIXING_ANGLE_2022;
+ADD_IMPORT extern const struct codata_constant_type WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type W_TO_Z_MASS_RATIO_2022;
+ADD_IMPORT extern const struct codata_constant_type *cc_2022[356];
+//}}}
+
+//------------------------------------------------------------------------
+// CODATA_CONSTANTS_2022 - ALIASES FOR QUANTITIES RENAMED BY NIST
+//------------------------------------------------------------------------
+//{{{
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MOMUM_2022;
+ADD_IMPORT extern const struct codata_constant_type ATOMIC_UNIT_OF_MOMUM;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2022;
+ADD_IMPORT extern const struct codata_constant_type BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA;
+ADD_IMPORT extern const struct codata_constant_type BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN_2022;
+ADD_IMPORT extern const struct codata_constant_type BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN;
+ADD_IMPORT extern const struct codata_constant_type CU_X_UNIT_2022;
+ADD_IMPORT extern const struct codata_constant_type CU_X_UNIT;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_GYROMAG_RATIO_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRON_GYROMAG_RATIO_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_SILICON_2022;
+ADD_IMPORT extern const struct codata_constant_type LATTICE_SPACING_OF_SILICON;
+ADD_IMPORT extern const struct codata_constant_type MO_X_UNIT_2022;
+ADD_IMPORT extern const struct codata_constant_type MO_X_UNIT;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMUM_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMUM;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2022;
+ADD_IMPORT extern const struct codata_constant_type NATURAL_UNIT_OF_MOMUM_IN_MEV_C;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_GYROMAG_RATIO_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_GYROMAG_RATIO_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2022;
+ADD_IMPORT extern const struct codata_constant_type NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_IN_EV_S_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_IN_EV_S;
+ADD_IMPORT extern const struct codata_constant_type PROTON_GYROMAG_RATIO_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_GYROMAG_RATIO_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type COMPTON_WAVELENGTH_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type COMPTON_WAVELENGTH_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type MUON_COMPTON_WAVELENGTH_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type MUON_COMPTON_WAVELENGTH_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_IN_EV_S;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2022;
+ADD_IMPORT extern const struct codata_constant_type PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM;
+ADD_IMPORT extern const struct codata_constant_type PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type PROTON_COMPTON_WAVELENGTH_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type TAU_COMPTON_WAVELENGTH_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_COMPTON_WAVELENGTH_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2022;
+ADD_IMPORT extern const struct codata_constant_type SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI;
+ADD_IMPORT extern const struct codata_constant_type TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2022;
+ADD_IMPORT extern const struct codata_constant_type TAU_MASS_ENERGY_EQUIVALENT_IN_MEV;
+ADD_IMPORT extern const struct codata_constant_type ELECTRIC_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type ELECTRIC_CONSTANT;
+ADD_IMPORT extern const struct codata_constant_type MAG_CONSTANT_2022;
+ADD_IMPORT extern const struct codata_constant_type MAG_CONSTANT;
+//}}}
+
+//------------------------------------------------------------------------
+// QUANTITY KEY
+//------------------------------------------------------------------------
+//{{{
+/** Stable key for a physical quantity, valid across adjustments. */
+enum codata_quantity{
+CODATA_Q_UNKNOWN = -1,
+CODATA_Q_ALPHA_PARTICLE_ELECTRON_MASS_RATIO = 0,
+CODATA_Q_ALPHA_PARTICLE_MASS = 1,
+CODATA_Q_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT = 2,
+CODATA_Q_ALPHA_PARTICLE_MASS_ENERGY_EQUIVALENT_IN_MEV = 3,
+CODATA_Q_ALPHA_PARTICLE_MASS_IN_U = 4,
+CODATA_Q_ALPHA_PARTICLE_MOLAR_MASS = 5,
+CODATA_Q_ALPHA_PARTICLE_PROTON_MASS_RATIO = 6,
+CODATA_Q_ALPHA_PARTICLE_RELATIVE_ATOMIC_MASS = 7,
+CODATA_Q_ALPHA_PARTICLE_RMS_CHARGE_RADIUS = 8,
+CODATA_Q_ANGSTROM_STAR = 9,
+CODATA_Q_ATOMIC_MASS_CONSTANT = 10,
+CODATA_Q_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT = 11,
+CODATA_Q_ATOMIC_MASS_CONSTANT_ENERGY_EQUIVALENT_IN_MEV = 12,
+CODATA_Q_ATOMIC_MASS_UNIT_ELECTRON_VOLT_RELATIONSHIP = 13,
+CODATA_Q_ATOMIC_MASS_UNIT_HARTREE_RELATIONSHIP = 14,
+CODATA_Q_ATOMIC_MASS_UNIT_HERTZ_RELATIONSHIP = 15,
+CODATA_Q_ATOMIC_MASS_UNIT_INVERSE_METER_RELATIONSHIP = 16,
+CODATA_Q_ATOMIC_MASS_UNIT_JOULE_RELATIONSHIP = 17,
+CODATA_Q_ATOMIC_MASS_UNIT_KELVIN_RELATIONSHIP = 18,
+CODATA_Q_ATOMIC_MASS_UNIT_KILOGRAM_RELATIONSHIP = 19,
+CODATA_Q_ATOMIC_UNIT_OF_1ST_HYPERPOLARIZABILITY = 20,
+CODATA_Q_ATOMIC_UNIT_OF_2ND_HYPERPOLARIZABILITY = 21,
+CODATA_Q_ATOMIC_UNIT_OF_ACTION = 22,
+CODATA_Q_ATOMIC_UNIT_OF_CHARGE = 23,
+CODATA_Q_ATOMIC_UNIT_OF_CHARGE_DENSITY = 24,
+CODATA_Q_ATOMIC_UNIT_OF_CURRENT = 25,
+CODATA_Q_ATOMIC_UNIT_OF_ELECTRIC_DIPOLE_MOM = 26,
+CODATA_Q_ATOMIC_UNIT_OF_ELECTRIC_FIELD = 27,
+CODATA_Q_ATOMIC_UNIT_OF_ELECTRIC_FIELD_GRADIENT = 28,
+CODATA_Q_ATOMIC_UNIT_OF_ELECTRIC_POLARIZABILITY = 29,
+CODATA_Q_ATOMIC_UNIT_OF_ELECTRIC_POTENTIAL = 30,
+CODATA_Q_ATOMIC_UNIT_OF_ELECTRIC_QUADRUPOLE_MOM = 31,
+CODATA_Q_ATOMIC_UNIT_OF_ENERGY = 32,
+CODATA_Q_ATOMIC_UNIT_OF_FORCE = 33,
+CODATA_Q_ATOMIC_UNIT_OF_LENGTH = 34,
+CODATA_Q_ATOMIC_UNIT_OF_MAG_DIPOLE_MOM = 35,
+CODATA_Q_ATOMIC_UNIT_OF_MAG_FLUX_DENSITY = 36,
+CODATA_Q_ATOMIC_UNIT_OF_MAGNETIZABILITY = 37,
+CODATA_Q_ATOMIC_UNIT_OF_MASS = 38,
+CODATA_Q_ATOMIC_UNIT_OF_MOMENTUM = 39,
+CODATA_Q_ATOMIC_UNIT_OF_PERMITTIVITY = 40,
+CODATA_Q_ATOMIC_UNIT_OF_TIME = 41,
+CODATA_Q_ATOMIC_UNIT_OF_VELOCITY = 42,
+CODATA_Q_AVOGADRO_CONSTANT = 43,
+CODATA_Q_BOHR_MAGNETON = 44,
+CODATA_Q_BOHR_MAGNETON_IN_EV_T = 45,
+CODATA_Q_BOHR_MAGNETON_IN_HZ_T = 46,
+CODATA_Q_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA = 47,
+CODATA_Q_BOHR_MAGNETON_IN_K_T = 48,
+CODATA_Q_BOHR_RADIUS = 49,
+CODATA_Q_BOLTZMANN_CONSTANT = 50,
+CODATA_Q_BOLTZMANN_CONSTANT_IN_EV_K = 51,
+CODATA_Q_BOLTZMANN_CONSTANT_IN_HZ_K = 52,
+CODATA_Q_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN = 53,
+CODATA_Q_CHARACTERISTIC_IMPEDANCE_OF_VACUUM = 54,
+CODATA_Q_CLASSICAL_ELECTRON_RADIUS = 55,
+CODATA_Q_COMPTON_WAVELENGTH = 56,
+CODATA_Q_CONDUCTANCE_QUANTUM = 57,
+CODATA_Q_CONVENTIONAL_VALUE_OF_AMPERE_90 = 58,
+CODATA_Q_CONVENTIONAL_VALUE_OF_COULOMB_90 = 59,
+CODATA_Q_CONVENTIONAL_VALUE_OF_FARAD_90 = 60,
+CODATA_Q_CONVENTIONAL_VALUE_OF_HENRY_90 = 61,
+CODATA_Q_CONVENTIONAL_VALUE_OF_JOSEPHSON_CONSTANT = 62,
+CODATA_Q_CONVENTIONAL_VALUE_OF_OHM_90 = 63,
+CODATA_Q_CONVENTIONAL_VALUE_OF_VOLT_90 = 64,
+CODATA_Q_CONVENTIONAL_VALUE_OF_VON_KLITZING_CONSTANT = 65,
+CODATA_Q_CONVENTIONAL_VALUE_OF_WATT_90 = 66,
+CODATA_Q_COPPER_X_UNIT = 67,
+CODATA_Q_DEUTERON_ELECTRON_MAG_MOM_RATIO = 68,
+CODATA_Q_DEUTERON_ELECTRON_MASS_RATIO = 69,
+CODATA_Q_DEUTERON_G_FACTOR = 70,
+CODATA_Q_DEUTERON_MAG_MOM = 71,
+CODATA_Q_DEUTERON_MAG_MOM_TO_BOHR_MAGNETON_RATIO = 72,
+CODATA_Q_DEUTERON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO = 73,
+CODATA_Q_DEUTERON_MASS = 74,
+CODATA_Q_DEUTERON_MASS_ENERGY_EQUIVALENT = 75,
+CODATA_Q_DEUTERON_MASS_ENERGY_EQUIVALENT_IN_MEV = 76,
+CODATA_Q_DEUTERON_MASS_IN_U = 77,
+CODATA_Q_DEUTERON_MOLAR_MASS = 78,
+CODATA_Q_DEUTERON_NEUTRON_MAG_MOM_RATIO = 79,
+CODATA_Q_DEUTERON_PROTON_MAG_MOM_RATIO = 80,
+CODATA_Q_DEUTERON_PROTON_MASS_RATIO = 81,
+CODATA_Q_DEUTERON_RELATIVE_ATOMIC_MASS = 82,
+CODATA_Q_DEUTERON_RMS_CHARGE_RADIUS = 83,
+CODATA_Q_ELECTRON_CHARGE_TO_MASS_QUOTIENT = 84,
+CODATA_Q_ELECTRON_DEUTERON_MAG_MOM_RATIO = 85,
+CODATA_Q_ELECTRON_DEUTERON_MASS_RATIO = 86,
+CODATA_Q_ELECTRON_G_FACTOR = 87,
+CODATA_Q_ELECTRON_GYROMAG_RATIO = 88,
+CODATA_Q_ELECTRON_GYROMAG_RATIO_IN_MHZ_T = 89,
+CODATA_Q_ELECTRON_HELION_MASS_RATIO = 90,
+CODATA_Q_ELECTRON_MAG_MOM = 91,
+CODATA_Q_ELECTRON_MAG_MOM_ANOMALY = 92,
+CODATA_Q_ELECTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO = 93,
+CODATA_Q_ELECTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO = 94,
+CODATA_Q_ELECTRON_MASS = 95,
+CODATA_Q_ELECTRON_MASS_ENERGY_EQUIVALENT = 96,
+CODATA_Q_ELECTRON_MASS_ENERGY_EQUIVALENT_IN_MEV = 97,
+CODATA_Q_ELECTRON_MASS_IN_U = 98,
+CODATA_Q_ELECTRON_MOLAR_MASS = 99,
+CODATA_Q_ELECTRON_MUON_MAG_MOM_RATIO = 100,
+CODATA_Q_ELECTRON_MUON_MASS_RATIO = 101,
+CODATA_Q_ELECTRON_NEUTRON_MAG_MOM_RATIO = 102,
+CODATA_Q_ELECTRON_NEUTRON_MASS_RATIO = 103,
+CODATA_Q_ELECTRON_PROTON_MAG_MOM_RATIO = 104,
+CODATA_Q_ELECTRON_PROTON_MASS_RATIO = 105,
+CODATA_Q_ELECTRON_RELATIVE_ATOMIC_MASS = 106,
+CODATA_Q_ELECTRON_TAU_MASS_RATIO = 107,
+CODATA_Q_ELECTRON_TO_ALPHA_PARTICLE_MASS_RATIO = 108,
+CODATA_Q_ELECTRON_TO_SHIELDED_HELION_MAG_MOM_RATIO = 109,
+CODATA_Q_ELECTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO = 110,
+CODATA_Q_ELECTRON_TRITON_MASS_RATIO = 111,
+CODATA_Q_ELECTRON_VOLT = 112,
+CODATA_Q_ELECTRON_VOLT_ATOMIC_MASS_UNIT_RELATIONSHIP = 113,
+CODATA_Q_ELECTRON_VOLT_HARTREE_RELATIONSHIP = 114,
+CODATA_Q_ELECTRON_VOLT_HERTZ_RELATIONSHIP = 115,
+CODATA_Q_ELECTRON_VOLT_INVERSE_METER_RELATIONSHIP = 116,
+CODATA_Q_ELECTRON_VOLT_JOULE_RELATIONSHIP = 117,
+CODATA_Q_ELECTRON_VOLT_KELVIN_RELATIONSHIP = 118,
+CODATA_Q_ELECTRON_VOLT_KILOGRAM_RELATIONSHIP = 119,
+CODATA_Q_ELEMENTARY_CHARGE = 120,
+CODATA_Q_ELEMENTARY_CHARGE_OVER_H = 121,
+CODATA_Q_ELEMENTARY_CHARGE_OVER_H_BAR = 122,
+CODATA_Q_FARADAY_CONSTANT = 123,
+CODATA_Q_FARADAY_CONSTANT_FOR_CONVENTIONAL_ELECTRIC_CURRENT = 124,
+CODATA_Q_FERMI_COUPLING_CONSTANT = 125,
+CODATA_Q_FINE_STRUCTURE_CONSTANT = 126,
+CODATA_Q_FIRST_RADIATION_CONSTANT = 127,
+CODATA_Q_FIRST_RADIATION_CONSTANT_FOR_SPECTRAL_RADIANCE = 128,
+CODATA_Q_HARTREE_ATOMIC_MASS_UNIT_RELATIONSHIP = 129,
+CODATA_Q_HARTREE_ELECTRON_VOLT_RELATIONSHIP = 130,
+CODATA_Q_HARTREE_ENERGY = 131,
+CODATA_Q_HARTREE_ENERGY_IN_EV = 132,
+CODATA_Q_HARTREE_HERTZ_RELATIONSHIP = 133,
+CODATA_Q_HARTREE_INVERSE_METER_RELATIONSHIP = 134,
+CODATA_Q_HARTREE_JOULE_RELATIONSHIP = 135,
+CODATA_Q_HARTREE_KELVIN_RELATIONSHIP = 136,
+CODATA_Q_HARTREE_KILOGRAM_RELATIONSHIP = 137,
+CODATA_Q_HELION_ELECTRON_MASS_RATIO = 138,
+CODATA_Q_HELION_G_FACTOR = 139,
+CODATA_Q_HELION_MAG_MOM = 140,
+CODATA_Q_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO = 141,
+CODATA_Q_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO = 142,
+CODATA_Q_HELION_MASS = 143,
+CODATA_Q_HELION_MASS_ENERGY_EQUIVALENT = 144,
+CODATA_Q_HELION_MASS_ENERGY_EQUIVALENT_IN_MEV = 145,
+CODATA_Q_HELION_MASS_IN_U = 146,
+CODATA_Q_HELION_MOLAR_MASS = 147,
+CODATA_Q_HELION_PROTON_MASS_RATIO = 148,
+CODATA_Q_HELION_RELATIVE_ATOMIC_MASS = 149,
+CODATA_Q_HELION_SHIELDING_SHIFT = 150,
+CODATA_Q_HERTZ_ATOMIC_MASS_UNIT_RELATIONSHIP = 151,
+CODATA_Q_HERTZ_ELECTRON_VOLT_RELATIONSHIP = 152,
+CODATA_Q_HERTZ_HARTREE_RELATIONSHIP = 153,
+CODATA_Q_HERTZ_INVERSE_METER_RELATIONSHIP = 154,
+CODATA_Q_HERTZ_JOULE_RELATIONSHIP = 155,
+CODATA_Q_HERTZ_KELVIN_RELATIONSHIP = 156,
+CODATA_Q_HERTZ_KILOGRAM_RELATIONSHIP = 157,
+CODATA_Q_HYPERFINE_TRANSITION_FREQUENCY_OF_CS_133 = 158,
+CODATA_Q_INVERSE_FINE_STRUCTURE_CONSTANT = 159,
+CODATA_Q_INVERSE_METER_ATOMIC_MASS_UNIT_RELATIONSHIP = 160,
+CODATA_Q_INVERSE_METER_ELECTRON_VOLT_RELATIONSHIP = 161,
+CODATA_Q_INVERSE_METER_HARTREE_RELATIONSHIP = 162,
+CODATA_Q_INVERSE_METER_HERTZ_RELATIONSHIP = 163,
+CODATA_Q_INVERSE_METER_JOULE_RELATIONSHIP = 164,
+CODATA_Q_INVERSE_METER_KELVIN_RELATIONSHIP = 165,
+CODATA_Q_INVERSE_METER_KILOGRAM_RELATIONSHIP = 166,
+CODATA_Q_INVERSE_OF_CONDUCTANCE_QUANTUM = 167,
+CODATA_Q_JOSEPHSON_CONSTANT = 168,
+CODATA_Q_JOULE_ATOMIC_MASS_UNIT_RELATIONSHIP = 169,
+CODATA_Q_JOULE_ELECTRON_VOLT_RELATIONSHIP = 170,
+CODATA_Q_JOULE_HARTREE_RELATIONSHIP = 171,
+CODATA_Q_JOULE_HERTZ_RELATIONSHIP = 172,
+CODATA_Q_JOULE_INVERSE_METER_RELATIONSHIP = 173,
+CODATA_Q_JOULE_KELVIN_RELATIONSHIP = 174,
+CODATA_Q_JOULE_KILOGRAM_RELATIONSHIP = 175,
+CODATA_Q_KELVIN_ATOMIC_MASS_UNIT_RELATIONSHIP = 176,
+CODATA_Q_KELVIN_ELECTRON_VOLT_RELATIONSHIP = 177,
+CODATA_Q_KELVIN_HARTREE_RELATIONSHIP = 178,
+CODATA_Q_KELVIN_HERTZ_RELATIONSHIP = 179,
+CODATA_Q_KELVIN_INVERSE_METER_RELATIONSHIP = 180,
+CODATA_Q_KELVIN_JOULE_RELATIONSHIP = 181,
+CODATA_Q_KELVIN_KILOGRAM_RELATIONSHIP = 182,
+CODATA_Q_KILOGRAM_ATOMIC_MASS_UNIT_RELATIONSHIP = 183,
+CODATA_Q_KILOGRAM_ELECTRON_VOLT_RELATIONSHIP = 184,
+CODATA_Q_KILOGRAM_HARTREE_RELATIONSHIP = 185,
+CODATA_Q_KILOGRAM_HERTZ_RELATIONSHIP = 186,
+CODATA_Q_KILOGRAM_INVERSE_METER_RELATIONSHIP = 187,
+CODATA_Q_KILOGRAM_JOULE_RELATIONSHIP = 188,
+CODATA_Q_KILOGRAM_KELVIN_RELATIONSHIP = 189,
+CODATA_Q_LATTICE_PARAMETER_OF_SILICON = 190,
+CODATA_Q_LATTICE_SPACING_OF_IDEAL_SI_220 = 191,
+CODATA_Q_LOSCHMIDT_CONSTANT_273_15_K_100_KPA = 192,
+CODATA_Q_LOSCHMIDT_CONSTANT_273_15_K_101_325_KPA = 193,
+CODATA_Q_LUMINOUS_EFFICACY = 194,
+CODATA_Q_MAG_FLUX_QUANTUM = 195,
+CODATA_Q_MOLAR_GAS_CONSTANT = 196,
+CODATA_Q_MOLAR_MASS_CONSTANT = 197,
+CODATA_Q_MOLAR_MASS_OF_CARBON_12 = 198,
+CODATA_Q_MOLAR_PLANCK_CONSTANT = 199,
+CODATA_Q_MOLAR_PLANCK_CONSTANT_TIMES_C = 200,
+CODATA_Q_MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_100_KPA = 201,
+CODATA_Q_MOLAR_VOLUME_OF_IDEAL_GAS_273_15_K_101_325_KPA = 202,
+CODATA_Q_MOLAR_VOLUME_OF_SILICON = 203,
+CODATA_Q_MOLYBDENUM_X_UNIT = 204,
+CODATA_Q_MUON_COMPTON_WAVELENGTH = 205,
+CODATA_Q_MUON_ELECTRON_MASS_RATIO = 206,
+CODATA_Q_MUON_G_FACTOR = 207,
+CODATA_Q_MUON_MAG_MOM = 208,
+CODATA_Q_MUON_MAG_MOM_ANOMALY = 209,
+CODATA_Q_MUON_MAG_MOM_TO_BOHR_MAGNETON_RATIO = 210,
+CODATA_Q_MUON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO = 211,
+CODATA_Q_MUON_MASS = 212,
+CODATA_Q_MUON_MASS_ENERGY_EQUIVALENT = 213,
+CODATA_Q_MUON_MASS_ENERGY_EQUIVALENT_IN_MEV = 214,
+CODATA_Q_MUON_MASS_IN_U = 215,
+CODATA_Q_MUON_MOLAR_MASS = 216,
+CODATA_Q_MUON_NEUTRON_MASS_RATIO = 217,
+CODATA_Q_MUON_PROTON_MAG_MOM_RATIO = 218,
+CODATA_Q_MUON_PROTON_MASS_RATIO = 219,
+CODATA_Q_MUON_TAU_MASS_RATIO = 220,
+CODATA_Q_NATURAL_UNIT_OF_ACTION = 221,
+CODATA_Q_NATURAL_UNIT_OF_ACTION_IN_EV_S = 222,
+CODATA_Q_NATURAL_UNIT_OF_ENERGY = 223,
+CODATA_Q_NATURAL_UNIT_OF_ENERGY_IN_MEV = 224,
+CODATA_Q_NATURAL_UNIT_OF_LENGTH = 225,
+CODATA_Q_NATURAL_UNIT_OF_MASS = 226,
+CODATA_Q_NATURAL_UNIT_OF_MOMENTUM = 227,
+CODATA_Q_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C = 228,
+CODATA_Q_NATURAL_UNIT_OF_TIME = 229,
+CODATA_Q_NATURAL_UNIT_OF_VELOCITY = 230,
+CODATA_Q_NEUTRON_COMPTON_WAVELENGTH = 231,
+CODATA_Q_NEUTRON_ELECTRON_MAG_MOM_RATIO = 232,
+CODATA_Q_NEUTRON_ELECTRON_MASS_RATIO = 233,
+CODATA_Q_NEUTRON_G_FACTOR = 234,
+CODATA_Q_NEUTRON_GYROMAG_RATIO = 235,
+CODATA_Q_NEUTRON_GYROMAG_RATIO_IN_MHZ_T = 236,
+CODATA_Q_NEUTRON_MAG_MOM = 237,
+CODATA_Q_NEUTRON_MAG_MOM_TO_BOHR_MAGNETON_RATIO = 238,
+CODATA_Q_NEUTRON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO = 239,
+CODATA_Q_NEUTRON_MASS = 240,
+CODATA_Q_NEUTRON_MASS_ENERGY_EQUIVALENT = 241,
+CODATA_Q_NEUTRON_MASS_ENERGY_EQUIVALENT_IN_MEV = 242,
+CODATA_Q_NEUTRON_MASS_IN_U = 243,
+CODATA_Q_NEUTRON_MOLAR_MASS = 244,
+CODATA_Q_NEUTRON_MUON_MASS_RATIO = 245,
+CODATA_Q_NEUTRON_PROTON_MAG_MOM_RATIO = 246,
+CODATA_Q_NEUTRON_PROTON_MASS_DIFFERENCE = 247,
+CODATA_Q_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT = 248,
+CODATA_Q_NEUTRON_PROTON_MASS_DIFFERENCE_ENERGY_EQUIVALENT_IN_MEV = 249,
+CODATA_Q_NEUTRON_PROTON_MASS_DIFFERENCE_IN_U = 250,
+CODATA_Q_NEUTRON_PROTON_MASS_RATIO = 251,
+CODATA_Q_NEUTRON_RELATIVE_ATOMIC_MASS = 252,
+CODATA_Q_NEUTRON_TAU_MASS_RATIO = 253,
+CODATA_Q_NEUTRON_TO_SHIELDED_PROTON_MAG_MOM_RATIO = 254,
+CODATA_Q_NEWTONIAN_CONSTANT_OF_GRAVITATION = 255,
+CODATA_Q_NEWTONIAN_CONSTANT_OF_GRAVITATION_OVER_H_BAR_C = 256,
+CODATA_Q_NUCLEAR_MAGNETON = 257,
+CODATA_Q_NUCLEAR_MAGNETON_IN_EV_T = 258,
+CODATA_Q_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA = 259,
+CODATA_Q_NUCLEAR_MAGNETON_IN_K_T = 260,
+CODATA_Q_NUCLEAR_MAGNETON_IN_MHZ_T = 261,
+CODATA_Q_PLANCK_CONSTANT = 262,
+CODATA_Q_PLANCK_CONSTANT_IN_EV_HZ = 263,
+CODATA_Q_PLANCK_LENGTH = 264,
+CODATA_Q_PLANCK_MASS = 265,
+CODATA_Q_PLANCK_MASS_ENERGY_EQUIVALENT_IN_GEV = 266,
+CODATA_Q_PLANCK_TEMPERATURE = 267,
+CODATA_Q_PLANCK_TIME = 268,
+CODATA_Q_PROTON_CHARGE_TO_MASS_QUOTIENT = 269,
+CODATA_Q_PROTON_COMPTON_WAVELENGTH = 270,
+CODATA_Q_PROTON_ELECTRON_MASS_RATIO = 271,
+CODATA_Q_PROTON_G_FACTOR = 272,
+CODATA_Q_PROTON_GYROMAG_RATIO = 273,
+CODATA_Q_PROTON_GYROMAG_RATIO_IN_MHZ_T = 274,
+CODATA_Q_PROTON_MAG_MOM = 275,
+CODATA_Q_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO = 276,
+CODATA_Q_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO = 277,
+CODATA_Q_PROTON_MAG_SHIELDING_CORRECTION = 278,
+CODATA_Q_PROTON_MASS = 279,
+CODATA_Q_PROTON_MASS_ENERGY_EQUIVALENT = 280,
+CODATA_Q_PROTON_MASS_ENERGY_EQUIVALENT_IN_MEV = 281,
+CODATA_Q_PROTON_MASS_IN_U = 282,
+CODATA_Q_PROTON_MOLAR_MASS = 283,
+CODATA_Q_PROTON_MUON_MASS_RATIO = 284,
+CODATA_Q_PROTON_NEUTRON_MAG_MOM_RATIO = 285,
+CODATA_Q_PROTON_NEUTRON_MASS_RATIO = 286,
+CODATA_Q_PROTON_RELATIVE_ATOMIC_MASS = 287,
+CODATA_Q_PROTON_RMS_CHARGE_RADIUS = 288,
+CODATA_Q_PROTON_TAU_MASS_RATIO = 289,
+CODATA_Q_QUANTUM_OF_CIRCULATION = 290,
+CODATA_Q_QUANTUM_OF_CIRCULATION_TIMES_2 = 291,
+CODATA_Q_REDUCED_COMPTON_WAVELENGTH = 292,
+CODATA_Q_REDUCED_MUON_COMPTON_WAVELENGTH = 293,
+CODATA_Q_REDUCED_NEUTRON_COMPTON_WAVELENGTH = 294,
+CODATA_Q_REDUCED_PLANCK_CONSTANT = 295,
+CODATA_Q_REDUCED_PLANCK_CONSTANT_IN_EV_S = 296,
+CODATA_Q_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM = 297,
+CODATA_Q_REDUCED_PROTON_COMPTON_WAVELENGTH = 298,
+CODATA_Q_REDUCED_TAU_COMPTON_WAVELENGTH = 299,
+CODATA_Q_RYDBERG_CONSTANT = 300,
+CODATA_Q_RYDBERG_CONSTANT_TIMES_C_IN_HZ = 301,
+CODATA_Q_RYDBERG_CONSTANT_TIMES_HC_IN_EV = 302,
+CODATA_Q_RYDBERG_CONSTANT_TIMES_HC_IN_J = 303,
+CODATA_Q_SACKUR_TETRODE_CONSTANT_1_K_100_KPA = 304,
+CODATA_Q_SACKUR_TETRODE_CONSTANT_1_K_101_325_KPA = 305,
+CODATA_Q_SECOND_RADIATION_CONSTANT = 306,
+CODATA_Q_SHIELDED_HELION_GYROMAG_RATIO = 307,
+CODATA_Q_SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T = 308,
+CODATA_Q_SHIELDED_HELION_MAG_MOM = 309,
+CODATA_Q_SHIELDED_HELION_MAG_MOM_TO_BOHR_MAGNETON_RATIO = 310,
+CODATA_Q_SHIELDED_HELION_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO = 311,
+CODATA_Q_SHIELDED_HELION_TO_PROTON_MAG_MOM_RATIO = 312,
+CODATA_Q_SHIELDED_HELION_TO_SHIELDED_PROTON_MAG_MOM_RATIO = 313,
+CODATA_Q_SHIELDED_PROTON_GYROMAG_RATIO = 314,
+CODATA_Q_SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T = 315,
+CODATA_Q_SHIELDED_PROTON_MAG_MOM = 316,
+CODATA_Q_SHIELDED_PROTON_MAG_MOM_TO_BOHR_MAGNETON_RATIO = 317,
+CODATA_Q_SHIELDED_PROTON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO = 318,
+CODATA_Q_SHIELDING_DIFFERENCE_OF_D_AND_P_IN_HD = 319,
+CODATA_Q_SHIELDING_DIFFERENCE_OF_T_AND_P_IN_HT = 320,
+CODATA_Q_SPEED_OF_LIGHT_IN_VACUUM = 321,
+CODATA_Q_STANDARD_ACCELERATION_OF_GRAVITY = 322,
+CODATA_Q_STANDARD_ATMOSPHERE = 323,
+CODATA_Q_STANDARD_STATE_PRESSURE = 324,
+CODATA_Q_STEFAN_BOLTZMANN_CONSTANT = 325,
+CODATA_Q_TAU_COMPTON_WAVELENGTH = 326,
+CODATA_Q_TAU_ELECTRON_MASS_RATIO = 327,
+CODATA_Q_TAU_ENERGY_EQUIVALENT = 328,
+CODATA_Q_TAU_MASS = 329,
+CODATA_Q_TAU_MASS_ENERGY_EQUIVALENT = 330,
+CODATA_Q_TAU_MASS_IN_U = 331,
+CODATA_Q_TAU_MOLAR_MASS = 332,
+CODATA_Q_TAU_MUON_MASS_RATIO = 333,
+CODATA_Q_TAU_NEUTRON_MASS_RATIO = 334,
+CODATA_Q_TAU_PROTON_MASS_RATIO = 335,
+CODATA_Q_THOMSON_CROSS_SECTION = 336,
+CODATA_Q_TRITON_ELECTRON_MASS_RATIO = 337,
+CODATA_Q_TRITON_G_FACTOR = 338,
+CODATA_Q_TRITON_MAG_MOM = 339,
+CODATA_Q_TRITON_MAG_MOM_TO_BOHR_MAGNETON_RATIO = 340,
+CODATA_Q_TRITON_MAG_MOM_TO_NUCLEAR_MAGNETON_RATIO = 341,
+CODATA_Q_TRITON_MASS = 342,
+CODATA_Q_TRITON_MASS_ENERGY_EQUIVALENT = 343,
+CODATA_Q_TRITON_MASS_ENERGY_EQUIVALENT_IN_MEV = 344,
+CODATA_Q_TRITON_MASS_IN_U = 345,
+CODATA_Q_TRITON_MOLAR_MASS = 346,
+CODATA_Q_TRITON_PROTON_MASS_RATIO = 347,
+CODATA_Q_TRITON_RELATIVE_ATOMIC_MASS = 348,
+CODATA_Q_TRITON_TO_PROTON_MAG_MOM_RATIO = 349,
+CODATA_Q_UNIFIED_ATOMIC_MASS_UNIT = 350,
+CODATA_Q_VACUUM_ELECTRIC_PERMITTIVITY = 351,
+CODATA_Q_VACUUM_MAG_PERMEABILITY = 352,
+CODATA_Q_VON_KLITZING_CONSTANT = 353,
+CODATA_Q_WEAK_MIXING_ANGLE = 354,
+CODATA_Q_WIEN_FREQUENCY_DISPLACEMENT_LAW_CONSTANT = 355,
+CODATA_Q_WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT = 356,
+CODATA_Q_W_TO_Z_MASS_RATIO = 357,
+/* Aliases: quantities renamed by NIST, sharing the canonical value. */
+CODATA_Q_ATOMIC_UNIT_OF_MOMUM = CODATA_Q_ATOMIC_UNIT_OF_MOMENTUM,
+CODATA_Q_BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA = CODATA_Q_BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA,
+CODATA_Q_BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN = CODATA_Q_BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN,
+CODATA_Q_CU_X_UNIT = CODATA_Q_COPPER_X_UNIT,
+CODATA_Q_ELECTRON_GYROMAG_RATIO_OVER_2_PI = CODATA_Q_ELECTRON_GYROMAG_RATIO_IN_MHZ_T,
+CODATA_Q_LATTICE_SPACING_OF_SILICON = CODATA_Q_LATTICE_SPACING_OF_IDEAL_SI_220,
+CODATA_Q_MO_X_UNIT = CODATA_Q_MOLYBDENUM_X_UNIT,
+CODATA_Q_NATURAL_UNIT_OF_MOMUM = CODATA_Q_NATURAL_UNIT_OF_MOMENTUM,
+CODATA_Q_NATURAL_UNIT_OF_MOMUM_IN_MEV_C = CODATA_Q_NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C,
+CODATA_Q_NEUTRON_GYROMAG_RATIO_OVER_2_PI = CODATA_Q_NEUTRON_GYROMAG_RATIO_IN_MHZ_T,
+CODATA_Q_NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA = CODATA_Q_NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA,
+CODATA_Q_PLANCK_CONSTANT_IN_EV_S = CODATA_Q_PLANCK_CONSTANT_IN_EV_HZ,
+CODATA_Q_PROTON_GYROMAG_RATIO_OVER_2_PI = CODATA_Q_PROTON_GYROMAG_RATIO_IN_MHZ_T,
+CODATA_Q_COMPTON_WAVELENGTH_OVER_2_PI = CODATA_Q_REDUCED_COMPTON_WAVELENGTH,
+CODATA_Q_MUON_COMPTON_WAVELENGTH_OVER_2_PI = CODATA_Q_REDUCED_MUON_COMPTON_WAVELENGTH,
+CODATA_Q_NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI = CODATA_Q_REDUCED_NEUTRON_COMPTON_WAVELENGTH,
+CODATA_Q_PLANCK_CONSTANT_OVER_2_PI = CODATA_Q_REDUCED_PLANCK_CONSTANT,
+CODATA_Q_PLANCK_CONSTANT_OVER_2_PI_IN_EV_S = CODATA_Q_REDUCED_PLANCK_CONSTANT_IN_EV_S,
+CODATA_Q_PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM = CODATA_Q_REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM,
+CODATA_Q_PROTON_COMPTON_WAVELENGTH_OVER_2_PI = CODATA_Q_REDUCED_PROTON_COMPTON_WAVELENGTH,
+CODATA_Q_TAU_COMPTON_WAVELENGTH_OVER_2_PI = CODATA_Q_REDUCED_TAU_COMPTON_WAVELENGTH,
+CODATA_Q_SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI = CODATA_Q_SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T,
+CODATA_Q_SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI = CODATA_Q_SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T,
+CODATA_Q_TAU_MASS_ENERGY_EQUIVALENT_IN_MEV = CODATA_Q_TAU_ENERGY_EQUIVALENT,
+CODATA_Q_ELECTRIC_CONSTANT = CODATA_Q_VACUUM_ELECTRIC_PERMITTIVITY,
+CODATA_Q_MAG_CONSTANT = CODATA_Q_VACUUM_MAG_PERMEABILITY,
+CODATA_Q_COUNT = 358
+};
+//}}}
+
+//------------------------------------------------------------------------
+// RUNTIME LOOKUP
+//------------------------------------------------------------------------
+//{{{
+/** A CODATA adjustment. The value is the year of the adjustment. */
+enum codata_dataset{
+CODATA_2010 = 2010,
+CODATA_2014 = 2014,
+CODATA_2018 = 2018,
+CODATA_2022 = 2022,
+/** The most recent adjustment. This deliberately moves. */
+CODATA_LATEST = CODATA_2022
+};
+
+/** Number of adjustments available. */
+#define CODATA_N_DATASETS 4
+
+/** The constant, or NULL if the quantity is absent from that adjustment. */
+ADD_IMPORT const struct codata_constant_type *codata_get(enum codata_dataset ds,
+                                                         enum codata_quantity q);
+
+/** Whether the quantity is present in that adjustment. */
+ADD_IMPORT int codata_defined(enum codata_dataset ds, enum codata_quantity q);
+
+/** The value, or a quiet NaN if the quantity is absent from that adjustment.
+ *  Never 0.0: a plausible-looking wrong number is the worst failure mode
+ *  here. Use codata_get or codata_defined to test explicitly. */
+ADD_IMPORT double codata_value(enum codata_dataset ds, enum codata_quantity q);
+
+/** The uncertainty, or a quiet NaN if the quantity is absent. */
+ADD_IMPORT double codata_uncertainty(enum codata_dataset ds, enum codata_quantity q);
+
+/** The unit, or NULL if the quantity is absent from that adjustment. */
+ADD_IMPORT const char *codata_unit(enum codata_dataset ds, enum codata_quantity q);
+
+/** The canonical key name of a quantity, e.g. \"BOHR_RADIUS\", or NULL.
+ *  This is adjustment-independent; the name NIST gives the quantity in a
+ *  particular adjustment is the name field of the constant itself. */
+ADD_IMPORT const char *codata_quantity_name(enum codata_quantity q);
+
+/** The quantity with this key name, accepting renamed spellings too,
+ *  or CODATA_Q_UNKNOWN. */
+ADD_IMPORT enum codata_quantity codata_quantity_from_name(const char *name);
+
+/** The available adjustments, most recent last. Writes the count to n. */
+ADD_IMPORT const enum codata_dataset *codata_datasets(int *n);
+
+/** The NULL-terminated array of constants of an adjustment, or NULL.
+ *  Ordered as NIST lists them for that adjustment. */
+ADD_IMPORT const struct codata_constant_type **codata_constants(enum codata_dataset ds);
 //}}}
 
 #endif
