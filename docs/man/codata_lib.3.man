@@ -52,6 +52,8 @@ Native Fortran API
 C interoperability API
 .IP \(bu 5 
 Python bindings
+.IP \(bu 5 
+Selection of an adjustment at compile time or at run time
 
 .TP
 .B
@@ -73,11 +75,119 @@ exposes a dictionary with the keys being
 .I the name, the value, the uncertainty, and the unit.
 \"}}}
 
+.SH SELECTING AN ADJUSTMENT
+\"{{{
+.PP
+There are two ways to reach a constant, and they are generated from the
+same source data, so they cannot disagree.
+.TP
+.B
+Named symbols, selected at compile time
+Every adjustment is available under year-suffixed names:
+.BR BOHR_RADIUS_2010 ,
+.BR BOHR_RADIUS_2014 ,
+.BR BOHR_RADIUS_2018 ,
+.BR BOHR_RADIUS_2022 .
+These are
+.B parameters
+in Fortran and
+.B const
+objects in C, so they may be used in initialisation expressions and array
+bounds, and are folded into the code by the compiler. Use these when the
+adjustment is fixed when the program is built.
+.TP
+.B
+The runtime accessor
+.B codata_value(ds, q)
+and its companions take the adjustment
+.I ds
+and the quantity key
+.I q
+as arguments and resolve the constant at run time. Use these when the
+adjustment is chosen by input, or when a program must hold more than one
+adjustment at once, such as reading a checkpoint written under an older
+adjustment while computing under a current one.
+.PP
+The adjustment is always an explicit argument. There is no global
+\(dqcurrent adjustment\(dq to set, so the accessors are reentrant and two
+adjustments can be in use at the same time.
+.PP
+The available adjustments are
+.BR CODATA_2010 ,
+.BR CODATA_2014 ,
+.BR CODATA_2018 ,
+.BR CODATA_2022 ,
+and
+.BR CODATA_LATEST ,
+which follows the most recent one and therefore changes when a new
+adjustment is added.
+\"}}}
+
+.SH QUANTITY KEYS
+\"{{{
+.PP
+A quantity key names a physical quantity independently of the adjustment
+it is taken from. The keys are
+.B CODATA_Q_*
+in C and Python and
+.B Q_*
+in Fortran; the Fortran prefix is shorter because Fortran limits a name to
+63 characters, which
+.B CODATA_Q_
+plus the longest quantity name exceeds.
+.PP
+Key values never change when a new adjustment is added, so a key stored in
+a file remains valid.
+.PP
+The adjustments do not all contain the same quantities. Use
+.B codata_defined(ds, q)
+to test, or
+.B codata_get(ds, q)
+which returns
+.B NULL
+(a null pointer in Fortran, None in Python) for a quantity that adjustment
+does not contain.
+.B codata_value
+returns a quiet
+.B NaN
+in that case, never 0.0: a plausible-looking wrong number is the worst
+available failure mode for a constants library.
+\"}}}
+
+.SH RENAMED QUANTITIES
+\"{{{
+.PP
+NIST renames quantities between adjustments. What CODATA 2014 calls
+.B ELECTRIC_CONSTANT
+is called
+.B VACUUM_ELECTRIC_PERMITTIVITY
+from 2018 on, and
+.B PLANCK_CONSTANT_OVER_2_PI
+became
+.BR REDUCED_PLANCK_CONSTANT .
+.PP
+Every such quantity is available under both spellings in every
+adjustment, and both spellings share one quantity key, so code written
+against either name works against all adjustments.
+.PP
+A pair is only treated as a rename when the units are compatible and the
+values agree to within five standard uncertainties. Names alone are not
+enough:
+.B ELEMENTARY_CHARGE_OVER_H
+and
+.B ELEMENTARY_CHARGE_OVER_H_BAR
+look like a rename but differ by a factor of 2\(*p. Quantities that were
+genuinely retired or genuinely added are not aliased, and are reported as
+undefined for the adjustments that lack them.
+\"}}}
+
 .SH NOTES
 \"{{{
 .PP
-The latest values (2022) do not have the year as a suffix in their name
-whereas older values (2010, 2014, 2018) feature the year as a suffix.
+The latest adjustment is additionally available without the year as a
+suffix, as an alias meaning \(dqcurrent\(dq. Because that alias follows
+the most recent adjustment, it changes value when a new adjustment is
+added; use the year-suffixed names to pin to a particular adjustment.
 All constants are declared with the same variable name in Fortran, C,
 and Python.
 

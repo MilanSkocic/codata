@@ -14,6 +14,42 @@ FEATURES
   - Native Fortran API
   - C interoperability API
   - Python bindings
+  - Selection of an adjustment at compile time or at run time
+
+SELECTING AN ADJUSTMENT
+  There are two ways to reach a constant. Both are generated from the
+  same source data, so they cannot disagree.
+
+  Named symbols, selected at compile time. Every adjustment is available
+  under year-suffixed names: BOHR_RADIUS_2010, BOHR_RADIUS_2014,
+  BOHR_RADIUS_2018, BOHR_RADIUS_2022. These are parameters in Fortran and
+  const objects in C, so they can be used in initialisation expressions
+  and array bounds and are folded into the code by the compiler. The
+  latest adjustment is additionally available without the suffix, as an
+  alias meaning "current"; that alias changes value when a new adjustment
+  is released, so pin to the year-suffixed name to reproduce a result.
+
+  The runtime accessor, for when the adjustment is chosen by input, or
+  when a program needs two adjustments at once -- reading a checkpoint
+  written under an older adjustment while computing under a current one:
+
+     codata_value(CODATA_2014, Q_BOHR_RADIUS)
+
+  The adjustment is always an explicit argument; there is no global
+  "current adjustment" to set. Quantity keys (CODATA_Q_* in C and Python,
+  Q_* in Fortran) name a quantity independently of the adjustment, and
+  their values never change when a new adjustment is added.
+
+  The adjustments do not contain the same quantities: of 358 quantities,
+  23 are absent from 2010 and 2014, 4 from 2018 and 3 from 2022. Use
+  codata_defined(ds, q) to test. codata_value returns a quiet NaN for a
+  quantity an adjustment does not contain, never 0.0.
+
+  NIST also renames quantities: CODATA 2014's ELECTRIC_CONSTANT is
+  VACUUM_ELECTRIC_PERMITTIVITY from 2018 on. Every renamed quantity is
+  available under both spellings in every adjustment and shares one
+  quantity key, so code written against either name works against all of
+  them.
 
 DOCUMENTATION 
   The API is written as POSIX-style man pages which are distributed with 

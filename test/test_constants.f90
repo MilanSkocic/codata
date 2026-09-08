@@ -220,6 +220,7 @@ program tester
 use, intrinsic :: iso_fortran_env, only: error_unit
 use testdrive, only : run_testsuite, new_testsuite, testsuite_type
 use test_constants, only : collect_constants
+use test_lookup, only : collect_lookup
 implicit none(type,external)
 type(testsuite_type), allocatable :: testsuites(:)
 character(len=*), parameter :: fmt = '("#", *(1x, a))'
@@ -227,7 +228,8 @@ integer :: stat, is
 
 stat = 0
 
-testsuites = [new_testsuite("constants", collect_constants)]
+testsuites = [new_testsuite("constants", collect_constants), &
+              new_testsuite("lookup", collect_lookup)]
 
 do is = 1, size(testsuites)
     write(error_unit, fmt) "Testing:", testsuites(is)%name
