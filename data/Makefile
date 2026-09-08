@@ -35,6 +35,10 @@ QUANTITIES=./quantities.txt
 Q_HEADER=./build/codata_quantity.h
 Q_FOR=./build/codata_quantity.f90
 Q_PY=./build/quantity.py
+L_HEADER=./build/codata_lookup.h
+L_SRC=./build/codata_lookup.c
+L_FOR=./build/codata_lookup.f90
+L_PY=./build/lookup.py
 # ---------------------------------------------------------------------
 
 # ---------------------------------------------------------------------
@@ -45,6 +49,9 @@ all: dirs $(AST_SRC) check_renames check_quantities $(MAN_SRC) \
 	      $(FOR_SRC_) $(FOR_SRC) \
 	      $(Q_HEADER) $(Q_FOR) ../src/codata_quantity.f90 \
 	      $(Q_PY) ../py/src/$(FPM_PYNAME)/quantity.py \
+	      $(L_HEADER) $(L_SRC) ../src/codata_lookup.c \
+	      $(L_FOR) ../src/codata_lookup.f90 \
+	      $(L_PY) ../py/src/$(FPM_PYNAME)/lookup.py \
 	      $(C_HEADERS) $(C_HEADER) \
 		  $(STDLIB) \
 		  $(C_SRC_) $(C_SRC) \
@@ -74,8 +81,31 @@ build/%.f90: build/%.toml toml2f90 common $(RENAMES)
 build/%.h: ./build/%.toml toml2h common $(RENAMES)
 	./toml2h $< > $@
 
-../include/$(FPM_NAME).h: $(C_HEADERS) $(Q_HEADER) $(FPM_NAME).1.h $(FPM_NAME).2.h
-	cat $(FPM_NAME).1.h $(C_HEADERS) $(Q_HEADER) $(FPM_NAME).2.h > $@
+../include/$(FPM_NAME).h: $(C_HEADERS) $(Q_HEADER) $(L_HEADER) $(FPM_NAME).1.h $(FPM_NAME).2.h
+	cat $(FPM_NAME).1.h $(C_HEADERS) $(Q_HEADER) $(L_HEADER) $(FPM_NAME).2.h > $@
+
+LOOKUP_DEPS=gen_lookup $(QUANTITIES) $(RENAMES) $(AST_SRC)
+
+$(L_HEADER): $(LOOKUP_DEPS)
+	./gen_lookup h $(QUANTITIES) $(RENAMES) $(AST_SRC) > $@
+
+$(L_SRC): $(LOOKUP_DEPS)
+	./gen_lookup c $(QUANTITIES) $(RENAMES) $(AST_SRC) > $@
+
+../src/codata_lookup.c: $(L_SRC)
+	cp -fv $^ $@
+
+$(L_FOR): $(LOOKUP_DEPS)
+	./gen_lookup f90 $(QUANTITIES) $(RENAMES) $(AST_SRC) > $@
+
+../src/codata_lookup.f90: $(L_FOR)
+	cp -fv $^ $@
+
+$(L_PY): $(LOOKUP_DEPS)
+	./gen_lookup py $(QUANTITIES) $(RENAMES) $(AST_SRC) > $@
+
+../py/src/$(FPM_PYNAME)/lookup.py: $(L_PY)
+	cp -fv $^ $@
 
 $(Q_HEADER): gen_quantities $(QUANTITIES) $(RENAMES)
 	./gen_quantities c > $@
@@ -151,7 +181,10 @@ update_quantities: $(AST_SRC) quantities $(QUANTITIES) $(RENAMES)
 clean:
 	rm -rf build/*
 	rm -f ../src/codata_quantity.f90
+	rm -f ../src/codata_lookup.c
+	rm -f ../src/codata_lookup.f90
 	rm -f ../py/src/$(FPM_PYNAME)/quantity.py
+	rm -f ../py/src/$(FPM_PYNAME)/lookup.py
 	rm $(CPY_SRC)
 	rm $(C_HEADER)
 	rm $(C_SRC)

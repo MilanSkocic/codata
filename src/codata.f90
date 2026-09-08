@@ -12,7 +12,8 @@ module codata
 !! meaning "current".
 !! Quantities that NIST renamed between adjustments are available under both
 !! spellings in every adjustment.
-!! CODATA_Q_* are stable quantity keys, valid across adjustments.
+!! Q_* are stable quantity keys, valid across adjustments, and
+!! codata_value(ds, q) selects a constant at run time.
 use, intrinsic :: iso_c_binding, only: c_ptr, c_null_char, c_loc
 use codata__constants_2022
 use codata__constants_2018
@@ -20,6 +21,7 @@ use codata__constants_2014
 use codata__constants_2010
 use codata__constants_type
 use codata__quantity
+use codata__lookup
 implicit none(type,external)
 public
 

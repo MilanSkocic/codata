@@ -1,0 +1,595 @@
+#!/usr/bin/env bash
+#
+# Emit the runtime lookup: given an adjustment and a quantity key, return the
+# constant. The tables are generated from the same data as the named symbols,
+# so the two access paths cannot drift.
+#
+# Usage: ./gen_lookup {h|c|f90|py} quantities.txt renames.tsv build/*.toml
+
+lang="$1"
+shift
+
+awk -v lang="$lang" '
+BEGIN{
+    n = 0
+    nyears = 0
+}
+FILENAME ~ /renames\.tsv$/{
+    if($0 ~ /^#/){next}
+    split($0, pair, "\t")
+    newof[pair[1]] = pair[2]
+    known[pair[1]] = 1
+    known[pair[2]] = 1
+    next
+}
+FILENAME ~ /quantities\.txt$/{
+    if($0 ~ /^#/ || NF == 0){next}
+    q[n] = $0
+    known[$0] = 1
+    qindex[$0] = n
+    n++
+    next
+}
+FNR==1{
+    year = FILENAME
+    sub(/.*codata_constants_/, "", year)
+    sub(/\.toml$/, "", year)
+    if(!(year in seen_year)){seen_year[year] = 1; years[nyears++] = year}
+}
+/^\[.*\]/{
+    k = $0
+    gsub(/\[/, "", k)
+    gsub(/\]/, "", k)
+    npos[year]++
+    present[year, k] = npos[year]
+}
+function root(k,   hops){
+    hops = 0
+    while((k in newof) && hops < 64){k = newof[k]; hops++}
+    return k
+}
+# position of quantity i within the cc array of year y, or 0 if absent
+function slot(y, i,   k, ri){
+    ri = root(q[i])
+    for(k in known){
+        if(root(k) != ri){continue}
+        if((y, k) in present){return present[y, k]}
+    }
+    return 0
+}
+END{
+    # sort years ascending
+    for(a = 0; a < nyears; a++){
+        for(b = a + 1; b < nyears; b++){
+            if(years[b] + 0 < years[a] + 0){t = years[a]; years[a] = years[b]; years[b] = t}
+        }
+    }
+    latest = years[nyears - 1]
+
+    # Key names including renamed spellings, paired with their enumerator and
+    # sorted by name, shared by every language.
+    nn = 0
+    for(k in known){
+        ri = root(k)
+        can = ""
+        for(kk in known){
+            if(root(kk) == ri && (kk in qindex)){can = kk; break}
+        }
+        if(can == ""){continue}
+        allnames[nn++] = k SUBSEP qindex[can]
+    }
+    for(a = 1; a < nn; a++){
+        v = allnames[a]
+        split(v, vv, SUBSEP)
+        b = a - 1
+        while(b >= 0){
+            split(allnames[b], bb, SUBSEP)
+            if(bb[1] <= vv[1]){break}
+            allnames[b + 1] = allnames[b]
+            b--
+        }
+        allnames[b + 1] = v
+    }
+
+    if(lang == "h"){
+        print ""
+        print "//------------------------------------------------------------------------"
+        print "// RUNTIME LOOKUP"
+        print "//------------------------------------------------------------------------"
+        print "//{{{"
+        print "/** A CODATA adjustment. The value is the year of the adjustment. */"
+        print "enum codata_dataset{"
+        for(a = 0; a < nyears; a++){
+            print "CODATA_"years[a]" = "years[a]","
+        }
+        print "/** The most recent adjustment. This deliberately moves. */"
+        print "CODATA_LATEST = CODATA_"latest
+        print "};"
+        print ""
+        print "/** Number of adjustments available. */"
+        print "#define CODATA_N_DATASETS "nyears
+        print ""
+        print "/** The constant, or NULL if the quantity is absent from that adjustment. */"
+        print "ADD_IMPORT const struct codata_constant_type *codata_get(enum codata_dataset ds,"
+        print "                                                         enum codata_quantity q);"
+        print ""
+        print "/** Whether the quantity is present in that adjustment. */"
+        print "ADD_IMPORT int codata_defined(enum codata_dataset ds, enum codata_quantity q);"
+        print ""
+        print "/** The value, or a quiet NaN if the quantity is absent from that adjustment."
+        print " *  Never 0.0: a plausible-looking wrong number is the worst failure mode"
+        print " *  here. Use codata_get or codata_defined to test explicitly. */"
+        print "ADD_IMPORT double codata_value(enum codata_dataset ds, enum codata_quantity q);"
+        print ""
+        print "/** The uncertainty, or a quiet NaN if the quantity is absent. */"
+        print "ADD_IMPORT double codata_uncertainty(enum codata_dataset ds, enum codata_quantity q);"
+        print ""
+        print "/** The unit, or NULL if the quantity is absent from that adjustment. */"
+        print "ADD_IMPORT const char *codata_unit(enum codata_dataset ds, enum codata_quantity q);"
+        print ""
+        print "/** The canonical key name of a quantity, e.g. \\\"BOHR_RADIUS\\\", or NULL."
+        print " *  This is adjustment-independent; the name NIST gives the quantity in a"
+        print " *  particular adjustment is the name field of the constant itself. */"
+        print "ADD_IMPORT const char *codata_quantity_name(enum codata_quantity q);"
+        print ""
+        print "/** The quantity with this key name, accepting renamed spellings too,"
+        print " *  or CODATA_Q_UNKNOWN. */"
+        print "ADD_IMPORT enum codata_quantity codata_quantity_from_name(const char *name);"
+        print ""
+        print "/** The available adjustments, most recent last. Writes the count to n. */"
+        print "ADD_IMPORT const enum codata_dataset *codata_datasets(int *n);"
+        print ""
+        print "/** The NULL-terminated array of constants of an adjustment, or NULL."
+        print " *  Ordered as NIST lists them for that adjustment. */"
+        print "ADD_IMPORT const struct codata_constant_type **codata_constants(enum codata_dataset ds);"
+        print "//}}}"
+    }
+    else if(lang == "c"){
+        print "/* SPDX-License-Identifier: MIT */"
+        print ""
+        print "//======================================================================"
+        print "// MODULE: CODATA_LOOKUP"
+        print "//======================================================================"
+        print "//{{{1"
+        print "#include <stddef.h>"
+        print "#include <stdlib.h>"
+        print "#include <string.h>"
+        print "#include <math.h>"
+        print "#include \"codata.h\""
+        print ""
+        print "//----------------------------------------------------------------------"
+        print "// TABLES"
+        print "//----------------------------------------------------------------------"
+        print "//{{{2"
+        for(a = 0; a < nyears; a++){
+            y = years[a]
+            print "static const struct codata_constant_type *const table_"y"[CODATA_Q_COUNT] = {"
+            for(i = 0; i < n; i++){
+                if(slot(y, i) > 0){print "&"q[i]"_"y","}
+                else{print "NULL,"}
+            }
+            print "};"
+            print ""
+        }
+        print "static const struct codata_constant_type *const *const tables[CODATA_N_DATASETS] = {"
+        for(a = 0; a < nyears; a++){print "table_"years[a]","}
+        print "};"
+        print ""
+        print "static const struct codata_constant_type **const cc_tables[CODATA_N_DATASETS] = {"
+        for(a = 0; a < nyears; a++){print "cc_"years[a]","}
+        print "};"
+        print ""
+        print "static const enum codata_dataset datasets[CODATA_N_DATASETS] = {"
+        for(a = 0; a < nyears; a++){print "CODATA_"years[a]","}
+        print "};"
+        print ""
+        print "static const char *const quantity_names[CODATA_Q_COUNT] = {"
+        for(i = 0; i < n; i++){print "\""q[i]"\","}
+        print "};"
+        print ""
+        print "// Key names including renamed spellings, sorted for bsearch."
+        print "struct codata_name_entry{const char *name; int q;};"
+        print "static const struct codata_name_entry name_table["nn"] = {"
+        for(a = 0; a < nn; a++){
+            split(allnames[a], vv, SUBSEP)
+            print "{\""vv[1]"\", "vv[2]"},"
+        }
+        print "};"
+        print "//}}}"
+        print ""
+        print ""
+        print "//----------------------------------------------------------------------"
+        print "// LOOKUP"
+        print "//----------------------------------------------------------------------"
+        print "//{{{2"
+        print "static double undefined_value(void){"
+        print "#ifdef NAN"
+        print "    return NAN;"
+        print "#else"
+        print "    volatile double z = 0.0;"
+        print "    return z / z;"
+        print "#endif"
+        print "}"
+        print ""
+        print "static int dataset_index(enum codata_dataset ds){"
+        print "    int i;"
+        print "    for(i = 0; i < CODATA_N_DATASETS; i++){"
+        print "        if(datasets[i] == ds){return i;}"
+        print "    }"
+        print "    return -1;"
+        print "}"
+        print ""
+        print "const struct codata_constant_type *codata_get(enum codata_dataset ds, enum codata_quantity q){"
+        print "    int i = dataset_index(ds);"
+        print "    if(i < 0){return NULL;}"
+        print "    if((int)q < 0 || (int)q >= CODATA_Q_COUNT){return NULL;}"
+        print "    return tables[i][(int)q];"
+        print "}"
+        print ""
+        print "int codata_defined(enum codata_dataset ds, enum codata_quantity q){"
+        print "    return codata_get(ds, q) != NULL;"
+        print "}"
+        print ""
+        print "double codata_value(enum codata_dataset ds, enum codata_quantity q){"
+        print "    const struct codata_constant_type *c = codata_get(ds, q);"
+        print "    return (c == NULL) ? undefined_value() : c->value;"
+        print "}"
+        print ""
+        print "double codata_uncertainty(enum codata_dataset ds, enum codata_quantity q){"
+        print "    const struct codata_constant_type *c = codata_get(ds, q);"
+        print "    return (c == NULL) ? undefined_value() : c->uncertainty;"
+        print "}"
+        print ""
+        print "const char *codata_unit(enum codata_dataset ds, enum codata_quantity q){"
+        print "    const struct codata_constant_type *c = codata_get(ds, q);"
+        print "    return (c == NULL) ? NULL : c->unit;"
+        print "}"
+        print ""
+        print "const char *codata_quantity_name(enum codata_quantity q){"
+        print "    if((int)q < 0 || (int)q >= CODATA_Q_COUNT){return NULL;}"
+        print "    return quantity_names[(int)q];"
+        print "}"
+        print ""
+        print "static int name_cmp(const void *a, const void *b){"
+        print "    return strcmp((const char *)a, ((const struct codata_name_entry *)b)->name);"
+        print "}"
+        print ""
+        print "enum codata_quantity codata_quantity_from_name(const char *name){"
+        print "    const struct codata_name_entry *e;"
+        print "    if(name == NULL){return CODATA_Q_UNKNOWN;}"
+        print "    e = (const struct codata_name_entry *)bsearch(name, name_table,"
+        print "            sizeof(name_table) / sizeof(name_table[0]),"
+        print "            sizeof(name_table[0]), name_cmp);"
+        print "    return (e == NULL) ? CODATA_Q_UNKNOWN : (enum codata_quantity)e->q;"
+        print "}"
+        print ""
+        print "const enum codata_dataset *codata_datasets(int *n){"
+        print "    if(n != NULL){*n = CODATA_N_DATASETS;}"
+        print "    return datasets;"
+        print "}"
+        print ""
+        print "const struct codata_constant_type **codata_constants(enum codata_dataset ds){"
+        print "    int i = dataset_index(ds);"
+        print "    return (i < 0) ? NULL : cc_tables[i];"
+        print "}"
+        print "//}}}"
+    }
+    else if(lang == "f90"){
+        print "! SPDX-License-Identifier: MIT"
+        print ""
+        print "!======================================================================="
+        print "! MODULE: CODATA_LOOKUP"
+        print "!======================================================================="
+        print "!{{{1"
+        print "module codata__lookup"
+        print "!! Runtime lookup - Autogenerated."
+        print "!! Select a constant by adjustment and quantity key at run time."
+        print "!! The tables are generated from the same data as the named constants."
+        print "use stdlib_kinds, only: dp, int32"
+        print "use, intrinsic :: ieee_arithmetic, only: ieee_value, ieee_quiet_nan"
+        print "use codata__constants_type, only: codata_constant_type"
+        print "use codata__quantity"
+        for(a = 0; a < nyears; a++){
+            print "use codata__constants_"years[a]", only: cc_"years[a]
+        }
+        print "implicit none(type,external)"
+        print "private"
+        print ""
+        print ""
+        print "!-----------------------------------------------------------------------"
+        print "! DATASETS"
+        print "!-----------------------------------------------------------------------"
+        print "!{{{2"
+        for(a = 0; a < nyears; a++){
+            print "integer(int32), parameter, public :: CODATA_"years[a]" = "years[a]"_int32"
+        }
+        print "integer(int32), parameter, public :: CODATA_LATEST = CODATA_"latest
+        print "integer(int32), parameter, public :: CODATA_N_DATASETS = "nyears"_int32"
+        line = "integer(int32), parameter, public :: CODATA_DATASETS(CODATA_N_DATASETS) = ["
+        for(a = 0; a < nyears; a++){
+            line = line "CODATA_" years[a]
+            if(a < nyears - 1){line = line ", "}
+        }
+        print line "]"
+        print "!-----------------------------------------------------------------------"
+        print "!}}}"
+        print ""
+        print ""
+        print "!-----------------------------------------------------------------------"
+        print "! PUBLIC API"
+        print "!-----------------------------------------------------------------------"
+        print "!{{{2"
+        print "public :: codata_get"
+        print "public :: codata_defined"
+        print "public :: codata_value"
+        print "public :: codata_uncertainty"
+        print "public :: codata_unit"
+        print "public :: codata_quantity_name"
+        print "public :: codata_quantity_from_name"
+        print "!-----------------------------------------------------------------------"
+        print "!}}}"
+        print ""
+        print ""
+        print "!-----------------------------------------------------------------------"
+        print "! TABLES"
+        print "!-----------------------------------------------------------------------"
+        print "!{{{2"
+        # index into cc_<year>, or 0 when the quantity is absent from that adjustment
+        for(a = 0; a < nyears; a++){
+            y = years[a]
+            print "integer(int32), parameter :: idx_"y"(Q_COUNT) = [ &"
+            line = ""
+            cnt = 0
+            for(i = 0; i < n; i++){
+                line = line slot(y, i)
+                if(i < n - 1){line = line ", "}
+                cnt++
+                if(cnt == 12 || i == n - 1){
+                    if(i == n - 1){print line "]"}
+                    else{print line "&"}
+                    line = ""
+                    cnt = 0
+                }
+            }
+        }
+        print ""
+        # two names per line: 55 characters is the longest, so this stays inside
+        # the 132 column limit and under 255 continuation lines
+        print "character(len=64), parameter :: quantity_names(Q_COUNT) = [character(len=64) :: &"
+        line = ""
+        cnt = 0
+        for(i = 0; i < n; i++){
+            line = line "\"" q[i] "\""
+            if(i < n - 1){line = line ", "}
+            cnt++
+            if(cnt == 2 || i == n - 1){
+                if(i == n - 1){print line "]"}
+                else{print line "&"}
+                line = ""
+                cnt = 0
+            }
+        }
+        print ""
+        print "integer(int32), parameter :: NAME_TABLE_SIZE = " nn "_int32"
+        print "character(len=64), parameter :: name_keys(NAME_TABLE_SIZE) = [character(len=64) :: &"
+        line = ""
+        cnt = 0
+        for(a = 0; a < nn; a++){
+            split(allnames[a], vv, SUBSEP)
+            line = line "\"" vv[1] "\""
+            if(a < nn - 1){line = line ", "}
+            cnt++
+            if(cnt == 2 || a == nn - 1){
+                if(a == nn - 1){print line "]"}
+                else{print line "&"}
+                line = ""
+                cnt = 0
+            }
+        }
+        print ""
+        print "integer(int32), parameter :: name_vals(NAME_TABLE_SIZE) = [ &"
+        line = ""
+        cnt = 0
+        for(a = 0; a < nn; a++){
+            split(allnames[a], vv, SUBSEP)
+            line = line vv[2]
+            if(a < nn - 1){line = line ", "}
+            cnt++
+            if(cnt == 12 || a == nn - 1){
+                if(a == nn - 1){print line "]"}
+                else{print line "&"}
+                line = ""
+                cnt = 0
+            }
+        }
+        print "!-----------------------------------------------------------------------"
+        print "!}}}"
+        print ""
+        print ""
+        print "contains"
+        print "!-----------------------------------------------------------------------"
+        print "! LOOKUP"
+        print "!-----------------------------------------------------------------------"
+        print "!{{{2"
+        print "function codata_get(ds, q)result(p)"
+        print "!! Constant for a quantity in an adjustment, or null if it is absent."
+        print "integer(int32), intent(in) :: ds !! Adjustment, e.g. CODATA_2018."
+        print "integer(int32), intent(in) :: q  !! Quantity key, e.g. Q_BOHR_RADIUS."
+        print "type(codata_constant_type), pointer :: p !! Constant, or null."
+        print "integer(int32) :: i"
+        print "p => null()"
+        print "if(q < 0_int32 .or. q >= Q_COUNT)then"
+        print "    return"
+        print "end if"
+        print "select case(ds)"
+        for(a = 0; a < nyears; a++){
+            y = years[a]
+            print "case(CODATA_"y")"
+            print "    i = idx_"y"(q + 1_int32)"
+            print "    if(i > 0_int32) p => cc_"y"(i)"
+        }
+        print "end select"
+        print "end function codata_get"
+        print "!-----------------------------------------------------------------------"
+        print "function codata_defined(ds, q)result(r)"
+        print "!! Whether the quantity is present in that adjustment."
+        print "integer(int32), intent(in) :: ds !! Adjustment."
+        print "integer(int32), intent(in) :: q  !! Quantity key."
+        print "logical :: r !! True if present."
+        print "type(codata_constant_type), pointer :: p"
+        print "p => codata_get(ds, q)"
+        print "r = associated(p)"
+        print "end function codata_defined"
+        print "!-----------------------------------------------------------------------"
+        print "function codata_value(ds, q)result(v)"
+        print "!! Value, or a quiet NaN if the quantity is absent from that adjustment."
+        print "!! Never 0.0: a plausible-looking wrong number is the worst failure mode."
+        print "integer(int32), intent(in) :: ds !! Adjustment."
+        print "integer(int32), intent(in) :: q  !! Quantity key."
+        print "real(dp) :: v !! Value, or NaN."
+        print "type(codata_constant_type), pointer :: p"
+        print "p => codata_get(ds, q)"
+        print "if(associated(p))then"
+        print "    v = p%value"
+        print "else"
+        print "    v = ieee_value(1.0_dp, ieee_quiet_nan)"
+        print "end if"
+        print "end function codata_value"
+        print "!-----------------------------------------------------------------------"
+        print "function codata_uncertainty(ds, q)result(v)"
+        print "!! Uncertainty, or a quiet NaN if the quantity is absent."
+        print "integer(int32), intent(in) :: ds !! Adjustment."
+        print "integer(int32), intent(in) :: q  !! Quantity key."
+        print "real(dp) :: v !! Uncertainty, or NaN."
+        print "type(codata_constant_type), pointer :: p"
+        print "p => codata_get(ds, q)"
+        print "if(associated(p))then"
+        print "    v = p%uncertainty"
+        print "else"
+        print "    v = ieee_value(1.0_dp, ieee_quiet_nan)"
+        print "end if"
+        print "end function codata_uncertainty"
+        print "!-----------------------------------------------------------------------"
+        print "function codata_unit(ds, q)result(u)"
+        print "!! Unit, or blank if the quantity is absent from that adjustment."
+        print "integer(int32), intent(in) :: ds !! Adjustment."
+        print "integer(int32), intent(in) :: q  !! Quantity key."
+        print "character(len=32) :: u !! Unit, or blank."
+        print "type(codata_constant_type), pointer :: p"
+        print "p => codata_get(ds, q)"
+        print "if(associated(p))then"
+        print "    u = p%unit"
+        print "else"
+        print "    u = \"\""
+        print "end if"
+        print "end function codata_unit"
+        print "!-----------------------------------------------------------------------"
+        print "function codata_quantity_name(q)result(nm)"
+        print "!! Canonical key name of a quantity, blank if out of range."
+        print "!! Adjustment-independent; the name NIST gives the quantity in a"
+        print "!! particular adjustment is the name component of the constant."
+        print "integer(int32), intent(in) :: q !! Quantity key."
+        print "character(len=64) :: nm !! Key name, or blank."
+        print "if(q < 0_int32 .or. q >= Q_COUNT)then"
+        print "    nm = \"\""
+        print "else"
+        print "    nm = quantity_names(q + 1_int32)"
+        print "end if"
+        print "end function codata_quantity_name"
+        print "!-----------------------------------------------------------------------"
+        print "function codata_quantity_from_name(nm)result(q)"
+        print "!! Quantity with this key name, accepting renamed spellings too."
+        print "character(len=*), intent(in) :: nm !! Key name."
+        print "integer(int32) :: q !! Quantity key, or Q_UNKNOWN."
+        print "integer(int32) :: i"
+        print "q = Q_UNKNOWN"
+        print "do i = 1_int32, NAME_TABLE_SIZE"
+        print "    if(trim(name_keys(i)) == trim(nm))then"
+        print "        q = name_vals(i)"
+        print "        return"
+        print "    end if"
+        print "end do"
+        print "end function codata_quantity_from_name"
+        print "!-----------------------------------------------------------------------"
+        print "!}}}"
+        print "end module codata__lookup"
+    }
+    else if(lang == "py"){
+        print "# SPDX-License-Identifier: MIT"
+        print "\"\"\"Runtime lookup: select a constant by adjustment and quantity key.\"\"\""
+        print "import math"
+        print ""
+        print "from .quantity import Quantity, CODATA_Q_COUNT"
+        for(a = 0; a < nyears; a++){
+            print "from . import constants_"years[a]
+        }
+        print ""
+        print "__all__ = [\"CODATA_DATASETS\", \"CODATA_LATEST\", \"get\", \"defined\","
+        print "           \"value\", \"uncertainty\", \"unit\", \"quantity_name\","
+        print "           \"quantity_from_name\"]"
+        print ""
+        for(a = 0; a < nyears; a++){
+            print "CODATA_"years[a]" = "years[a]
+        }
+        print "CODATA_LATEST = CODATA_"latest
+        line = "CODATA_DATASETS = ("
+        for(a = 0; a < nyears; a++){line = line "CODATA_" years[a] ", "}
+        print line ")"
+        print ""
+        line = "_MODULES = {"
+        for(a = 0; a < nyears; a++){line = line "CODATA_" years[a] ": constants_" years[a] ", "}
+        print line "}"
+        print ""
+        print ""
+        print "def get(ds, q):"
+        print "    r\"\"\"Constant for a quantity in an adjustment, or None if absent.\"\"\""
+        print "    module = _MODULES.get(int(ds))"
+        print "    if module is None:"
+        print "        return None"
+        print "    try:"
+        print "        name = Quantity(q).name"
+        print "    except ValueError:"
+        print "        return None"
+        print "    return getattr(module, \"{:s}_{:d}\".format(name, int(ds)), None)"
+        print ""
+        print ""
+        print "def defined(ds, q):"
+        print "    r\"\"\"Whether the quantity is present in that adjustment.\"\"\""
+        print "    return get(ds, q) is not None"
+        print ""
+        print ""
+        print "def value(ds, q):"
+        print "    r\"\"\"Value, or NaN if the quantity is absent from that adjustment."
+        print ""
+        print "    Never 0.0: a plausible-looking wrong number is the worst failure mode."
+        print "    \"\"\""
+        print "    c = get(ds, q)"
+        print "    return math.nan if c is None else c[\"value\"]"
+        print ""
+        print ""
+        print "def uncertainty(ds, q):"
+        print "    r\"\"\"Uncertainty, or NaN if the quantity is absent.\"\"\""
+        print "    c = get(ds, q)"
+        print "    return math.nan if c is None else c[\"uncertainty\"]"
+        print ""
+        print ""
+        print "def unit(ds, q):"
+        print "    r\"\"\"Unit, or None if the quantity is absent from that adjustment.\"\"\""
+        print "    c = get(ds, q)"
+        print "    return None if c is None else c[\"unit\"]"
+        print ""
+        print ""
+        print "def quantity_name(q):"
+        print "    r\"\"\"Canonical key name of a quantity, or None.\"\"\""
+        print "    try:"
+        print "        return Quantity(q).name"
+        print "    except ValueError:"
+        print "        return None"
+        print ""
+        print ""
+        print "def quantity_from_name(name):"
+        print "    r\"\"\"Quantity with this key name, accepting renamed spellings too.\"\"\""
+        print "    return getattr(Quantity, name, None)"
+    }
+}
+' "$@"

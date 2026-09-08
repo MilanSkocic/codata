@@ -10,7 +10,8 @@ both spellings in every adjustment.
 The names of constants are the same as the one defined in Fortran and C.
 
 All constants are available at the top level of the module.
-Quantity is a stable key for a quantity, valid across adjustments.
+Quantity is a stable key for a quantity, valid across adjustments, and
+value(ds, q) selects a constant at run time.
 """
 import platform
 import subprocess
@@ -19,6 +20,8 @@ from pathlib import Path
 
 from .version import __version__
 from .quantity import Quantity, CODATA_Q_COUNT
+from .lookup import (CODATA_DATASETS, CODATA_LATEST, get, defined, value,
+                     uncertainty, unit, quantity_name, quantity_from_name)
 from .constants_2022 import *
 from .constants_2018 import *
 from .constants_2014 import *
