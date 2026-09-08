@@ -160,6 +160,7 @@ EXAMPLES
            program example_in_f
            use codata
            implicit none
+           integer :: i
            print '(A)', '########## EXAMPLE IN FORTRAN ##########'
            print '(A)', '# VERSION'
            print *, "version = ", version()
@@ -172,12 +173,25 @@ EXAMPLES
            print '(A, F23.16)', "Mu_2018 = ", MOLAR_MASS_CONSTANT_2018%value
            print '(A, F23.16)', "Mu_2014 = ", MOLAR_MASS_CONSTANT_2014%value
            print '(A, F23.16)', "Mu_2010 = ", MOLAR_MASS_CONSTANT_2010%value
+           print '(A)', '# SELECTING THE ADJUSTMENT AT RUN TIME'
+           do i = 1, CODATA_N_DATASETS
+           print '(A, I0, A, F23.16)', "Mu_", CODATA_DATASETS(i), " = ", &
+           codata_value(CODATA_DATASETS(i), Q_MOLAR_MASS_CONSTANT)
+           end do
+           print '(A)', '# A QUANTITY AN OLDER ADJUSTMENT DOES NOT CONTAIN'
+           print *, "defined in 2018 = ", codata_defined(CODATA_2018, Q_HELION_SHIELDING_SHIFT)
+           print *, "defined in 2010 = ", codata_defined(CODATA_2010, Q_HELION_SHIELDING_SHIFT)
+           print '(A)', '# A QUANTITY NIST RENAMED IN 2018'
+           print *, "eps0_2014 via either name = ", ELECTRIC_CONSTANT_2014%value, &
+           VACUUM_ELECTRIC_PERMITTIVITY_2014%value
            end program
 
        Example in C
            #include <stdio.h>
            #include "codata.h"
            int main(void){
+           int i, n;
+           const enum codata_dataset *ds;
            printf("########## EXAMPLE IN C ##########0);
            printf("%s0,"# VERSION");
            printf("version = %s0, codata_version());
@@ -190,6 +204,17 @@ EXAMPLES
            printf("Mu_2018 = %23.16f0, MOLAR_MASS_CONSTANT_2018.value);
            printf("Mu_2014 = %23.16f0, MOLAR_MASS_CONSTANT_2014.value);
            printf("Mu_2010 = %23.16f0, MOLAR_MASS_CONSTANT_2010.value);
+           printf("%s0,"# SELECTING THE ADJUSTMENT AT RUN TIME");
+           ds = codata_datasets(&n);
+           for(i=0;i<n;i++){
+               printf("Mu_%d = %23.16f0, (int)ds[i], codata_value(ds[i], CODATA_Q_MOLAR_MASS_CONSTANT));
+           }
+           printf("%s0,"# A QUANTITY AN OLDER ADJUSTMENT DOES NOT CONTAIN");
+           printf("defined in 2018 = %d0, codata_defined(CODATA_2018, CODATA_Q_HELION_SHIELDING_SHIFT));
+           printf("defined in 2010 = %d0, codata_defined(CODATA_2010, CODATA_Q_HELION_SHIELDING_SHIFT));
+           printf("%s0,"# A QUANTITY NIST RENAMED IN 2018");
+           printf("eps0_2014 via either name = %.11e %.11e0,
+                  ELECTRIC_CONSTANT_2014.value, VACUUM_ELECTRIC_PERMITTIVITY_2014.value);
            return 0;
            }
 
@@ -197,6 +222,7 @@ EXAMPLES
            import sys
            sys.path.insert(0, "../py/src/")
            import pycodata
+           from pycodata import Quantity
            print("########## EXAMPLE IN PYTHON ##########")
            print("# VERSION")
            print(f"version = {pycodata.__version__}")
@@ -209,6 +235,16 @@ EXAMPLES
            print("Mu_2018 = ", pycodata.MOLAR_MASS_CONSTANT_2018["value"])
            print("Mu_2014 = ", pycodata.MOLAR_MASS_CONSTANT_2014["value"])
            print("Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
+           print("# SELECTING THE ADJUSTMENT AT RUN TIME")
+           for ds in pycodata.CODATA_DATASETS:
+               print(f"Mu_{ds} = ", pycodata.value(ds, Quantity.MOLAR_MASS_CONSTANT))
+           print("# A QUANTITY AN OLDER ADJUSTMENT DOES NOT CONTAIN")
+           print("defined in 2018 = ", pycodata.defined(2018, Quantity.HELION_SHIELDING_SHIFT))
+           print("defined in 2010 = ", pycodata.defined(2010, Quantity.HELION_SHIELDING_SHIFT))
+           print("# A QUANTITY NIST RENAMED IN 2018")
+           print("eps0_2014 via either name = ",
+                 pycodata.ELECTRIC_CONSTANT_2014["value"],
+                 pycodata.VACUUM_ELECTRIC_PERMITTIVITY_2014["value"])
 
 SEE ALSO
        codata(3),   codata_cli(1),    codata_version(3),    codata_con‐
