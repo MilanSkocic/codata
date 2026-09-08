@@ -2,12 +2,15 @@
 # MODULE: __INIT__
 #=======================================================================
 """Codata constants.
- 
-The latest values (2022) do not have the year as a suffix in their name.
-Older values can be used and they feature the year as a suffix in their name.
+
+Every adjustment is available under year-suffixed names. The latest values are
+additionally available without the year as a suffix, as an alias meaning
+"current". Quantities that NIST renamed between adjustments are available under
+both spellings in every adjustment.
 The names of constants are the same as the one defined in Fortran and C.
 
-All constants are available at the top level of the module. 
+All constants are available at the top level of the module.
+Quantity is a stable key for a quantity, valid across adjustments.
 """
 import platform
 import subprocess
@@ -15,6 +18,7 @@ import sys
 from pathlib import Path
 
 from .version import __version__
+from .quantity import Quantity, CODATA_Q_COUNT
 from .constants_2022 import *
 from .constants_2018 import *
 from .constants_2014 import *
