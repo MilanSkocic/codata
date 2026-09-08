@@ -7,16 +7,19 @@ fname="$1"
 name=$(basename -s .txt $fname)
 year="${name##*_}"
 
-n=10 # number of lines until header with dashes
-if [[ "$year" == "2018" ]]; then n=11;fi
-if [[ "$year" == "2022" ]]; then n=11;fi
-
-awk -v year="$year" -v n=$n '
+awk -v year="$year" '
 BEGIN{
     FIELDWIDTHS="60 25 25 25"
     year = "\""year"\""
 }
-NR>n{
+# The listing starts after the row of dashes closing the table header. Detect
+# it rather than hardcoding a line count per adjustment, which would have to be
+# extended by hand for every new release.
+/^-+$/{
+    body = 1
+    next
+}
+body{
     
     gsub(/ +$/,"", $1)
     name="\""$1"\""

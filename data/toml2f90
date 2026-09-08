@@ -11,6 +11,18 @@ suffix="_$year"
 if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 
 awk -v suffix="$suffix" -v latest_year="$latest_year" -v year="$year" '
+NR==FNR{
+    if($0 ~ /^#/){next}
+    split($0, r, "\t")
+    newof[r[1]] = r[2]
+    oldof[r[2]] = r[1]
+    next
+}
+function alias_of(k){
+    if(k in newof){return newof[k]}
+    if(k in oldof){return oldof[k]}
+    return ""
+}
 BEGIN{
     print "! SPDX-License-Identifier: MIT"
     print ""
@@ -46,6 +58,7 @@ BEGIN{
     var=$0 suffix
     i++
     vars[i]=var
+    bares[i]=$0
     print "type(codata_constant_type), parameter, public :: "var" = &"
 }
 /^name/{
@@ -98,6 +111,71 @@ END{
     print "]"
     print "!-----------------------------------------------------------------------"
     print "!}}}"
+
+    # The latest adjustment is also exposed under its year-suffixed name, so a
+    # caller can pin to it before the next adjustment is released. The
+    # unsuffixed names above are kept as aliases meaning "current". This block
+    # sits after !END FOR STDLIB so that it is not carried into stdlib.
+    if(suffix==""){
+        print ""
+        print ""
+        print "!-----------------------------------------------------------------------"
+        print "! CONSTANTS - YEAR-SUFFIXED NAMES FOR THE LATEST ADJUSTMENT"
+        print "!-----------------------------------------------------------------------"
+        print "!{{{2"
+        for (j=1; j<=i; j++){
+            print "type(codata_constant_type), parameter, public :: "bares[j]"_"year" = "bares[j]
+        }
+        print "!-----------------------------------------------------------------------"
+        print "!}}}"
+        print ""
+        print ""
+        print "!-----------------------------------------------------------------------"
+        print "! ARRAY OF CONSTANTS - YEAR-SUFFIXED"
+        print "!-----------------------------------------------------------------------"
+        print "!{{{2"
+        print "type(codata_constant_type), target, public :: cc_"year"("i") = &"
+        for (j=1; j<=i; j++){
+            if(j==1){
+                printf "%s", "["
+                print bares[j]"_"year", &"
+            }
+            else if(j==i){
+                print bares[j]"_"year" &"
+            }
+            else{
+                print bares[j]"_"year", &"
+            }
+        }
+        print "]"
+        print "!-----------------------------------------------------------------------"
+        print "!}}}"
+    }
+    # Aliases for quantities NIST renamed between adjustments, so that code
+    # written against either spelling compiles against every adjustment.
+    nalias = 0
+    for (j=1; j<=i; j++){
+        if(alias_of(bares[j]) != ""){nalias++}
+    }
+    if(nalias > 0){
+        print ""
+        print ""
+        print "!-----------------------------------------------------------------------"
+        print "! CONSTANTS - ALIASES FOR QUANTITIES RENAMED BY NIST"
+        print "!-----------------------------------------------------------------------"
+        print "!{{{2"
+        for (j=1; j<=i; j++){
+            a = alias_of(bares[j])
+            if(a == ""){continue}
+            canon = bares[j] suffix
+            print "type(codata_constant_type), parameter, public :: "a"_"year" = "canon
+            if(suffix == ""){
+                print "type(codata_constant_type), parameter, public :: "a" = "canon
+            }
+        }
+        print "!-----------------------------------------------------------------------"
+        print "!}}}"
+    }
     print "end module codata__constants_"year
 }
-' $1
+' renames.tsv "$1"

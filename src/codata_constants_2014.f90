@@ -2040,4 +2040,38 @@ WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2014 &
 ]
 !-----------------------------------------------------------------------
 !}}}
+
+
+!-----------------------------------------------------------------------
+! CONSTANTS - ALIASES FOR QUANTITIES RENAMED BY NIST
+!-----------------------------------------------------------------------
+!{{{2
+type(codata_constant_type), parameter, public :: LATTICE_SPACING_OF_IDEAL_SI_220_2014 = LATTICE_SPACING_OF_SILICON_2014
+type(codata_constant_type), parameter, public :: ATOMIC_UNIT_OF_MOMENTUM_2014 = ATOMIC_UNIT_OF_MOMUM_2014
+type(codata_constant_type), parameter, public :: BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2014 = BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2014
+type(codata_constant_type), parameter, public :: BOLTZMANN_CONSTANT_IN_INVERSE_METER_PER_KELVIN_2014 = BOLTZMANN_CONSTANT_IN_INVERSE_METERS_PER_KELVIN_2014
+type(codata_constant_type), parameter, public :: REDUCED_COMPTON_WAVELENGTH_2014 = COMPTON_WAVELENGTH_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: COPPER_X_UNIT_2014 = CU_X_UNIT_2014
+type(codata_constant_type), parameter, public :: VACUUM_ELECTRIC_PERMITTIVITY_2014 = ELECTRIC_CONSTANT_2014
+type(codata_constant_type), parameter, public :: ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2014 = ELECTRON_GYROMAG_RATIO_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: VACUUM_MAG_PERMEABILITY_2014 = MAG_CONSTANT_2014
+type(codata_constant_type), parameter, public :: MOLYBDENUM_X_UNIT_2014 = MO_X_UNIT_2014
+type(codata_constant_type), parameter, public :: REDUCED_MUON_COMPTON_WAVELENGTH_2014 = MUON_COMPTON_WAVELENGTH_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMENTUM_2014 = NATURAL_UNIT_OF_MOMUM_2014
+type(codata_constant_type), parameter, public :: NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2014 = NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2014
+type(codata_constant_type), parameter, public :: REDUCED_NEUTRON_COMPTON_WAVELENGTH_2014 = NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2014 = NEUTRON_GYROMAG_RATIO_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: NUCLEAR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2014 = NUCLEAR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2014
+type(codata_constant_type), parameter, public :: PLANCK_CONSTANT_IN_EV_HZ_2014 = PLANCK_CONSTANT_IN_EV_S_2014
+type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_2014 = PLANCK_CONSTANT_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_IN_EV_S_2014 = PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2014
+type(codata_constant_type), parameter, public :: REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2014 = PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2014
+type(codata_constant_type), parameter, public :: REDUCED_PROTON_COMPTON_WAVELENGTH_2014 = PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: PROTON_GYROMAG_RATIO_IN_MHZ_T_2014 = PROTON_GYROMAG_RATIO_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2014 = SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2014 = SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: REDUCED_TAU_COMPTON_WAVELENGTH_2014 = TAU_COMPTON_WAVELENGTH_OVER_2_PI_2014
+type(codata_constant_type), parameter, public :: TAU_ENERGY_EQUIVALENT_2014 = TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2014
+!-----------------------------------------------------------------------
+!}}}
 end module codata__constants_2014

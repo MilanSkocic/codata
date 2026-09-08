@@ -11,6 +11,18 @@ suffix="_$year"
 if [[ "$year" == "$latest_year" ]]; then suffix=""; fi
 
 awk -v suffix="$suffix" -v latest_year="$latest_year" -v year="$year" '
+NR==FNR{
+    if($0 ~ /^#/){next}
+    split($0, r, "\t")
+    newof[r[1]] = r[2]
+    oldof[r[2]] = r[1]
+    next
+}
+function alias_of(k){
+    if(k in newof){return newof[k]}
+    if(k in oldof){return oldof[k]}
+    return ""
+}
 BEGIN{
     print "# SPDX-License-Identifier: MIT"
     print "\"\"\"Codata constants "year".\"\"\""
@@ -20,6 +32,8 @@ BEGIN{
     gsub(/\[/,"")
     gsub(/\]/,"")
     var=$0 suffix
+    i++
+    bares[i]=$0
     print var" = {"
 }
 /^name/{
@@ -46,4 +60,32 @@ BEGIN{
 NF==0{
     print ""
 }
-' $1
+END{
+    # The latest adjustment is also exposed under its year-suffixed name, so a
+    # caller can pin to it before the next adjustment is released. The
+    # unsuffixed names above are kept as aliases meaning "current".
+    if(suffix==""){
+        print "# Year-suffixed names for the latest adjustment."
+        for (j=1; j<=i; j++){
+            print bares[j]"_"year" = "bares[j]
+        }
+    }
+    # Aliases for quantities NIST renamed between adjustments.
+    nalias = 0
+    for (j=1; j<=i; j++){
+        if(alias_of(bares[j]) != ""){nalias++}
+    }
+    if(nalias > 0){
+        print "# Aliases for quantities renamed by NIST."
+        for (j=1; j<=i; j++){
+            a = alias_of(bares[j])
+            if(a == ""){continue}
+            canon = bares[j] suffix
+            print a"_"year" = "canon
+            if(suffix == ""){
+                print a" = "canon
+            }
+        }
+    }
+}
+' renames.tsv "$1"
