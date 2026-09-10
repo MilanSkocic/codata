@@ -521,7 +521,7 @@ END{
         print ""
         print "from .quantity import Quantity, CODATA_Q_COUNT"
         for(a = 0; a < nyears; a++){
-            print "from . import constants_"years[a]
+            print "from . import codata_constants_"years[a]
         }
         print ""
         print "__all__ = [\"CODATA_DATASETS\", \"CODATA_LATEST\", \"get\", \"defined\","
@@ -537,7 +537,7 @@ END{
         print line ")"
         print ""
         line = "_MODULES = {"
-        for(a = 0; a < nyears; a++){line = line "CODATA_" years[a] ": constants_" years[a] ", "}
+        for(a = 0; a < nyears; a++){line = line "CODATA_" years[a] ": codata_constants_" years[a] ", "}
         print line "}"
         print ""
         print ""

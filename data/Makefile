@@ -19,7 +19,8 @@ FOR_SRC=$(patsubst ./build/%.f90, ../src/%.f90, $(FOR_SRC_))
 C_HEADERS=$(patsubst ./src/%.txt, ./build/%.h, $(RAW_SRC))
 C_HEADER=../include/$(FPM_NAME).h
 
-PY_SRC=$(patsubst ./src/%.txt, ./build/%.py, $(RAW_SRC))
+PY_SRC_=$(patsubst ./src/%.txt, ./build/%.py, $(RAW_SRC))
+PY_SRC=$(patsubst ./build/%.py, ../py/src/$(FPM_PYNAME)/%.py, $(PY_SRC_))
 CPY_SRC_=$(patsubst ./src/%.txt, ./build/_%.c, $(RAW_SRC))
 CPY_SRC=$(patsubst ./build/_%.c, ../py/src/$(FPM_PYNAME)/_%.c, $(CPY_SRC_))
 
@@ -55,7 +56,7 @@ all: dirs $(AST_SRC) check_renames check_quantities $(MAN_SRC) \
 	      $(C_HEADERS) $(C_HEADER) \
 		  $(STDLIB) \
 		  $(C_SRC_) $(C_SRC) \
-		  $(PY_SRC) $(CPY_SRC_) $(CPY_SRC)
+		  $(PY_SRC_) $(PY_SRC) #$(CPY_SRC_) $(CPY_SRC)
 # ---------------------------------------------------------------------
 
 # ----------------------------------------------------------------------
@@ -132,6 +133,9 @@ $(Q_PY): gen_quantities $(QUANTITIES) $(RENAMES)
 	$(FPM_PYGEN) $(GEN_CPY) $< $@
 
 ../py/src/$(FPM_PYNAME)/_%.c: ./build/_%.c
+	cp -fv $^ $@
+
+../py/src/$(FPM_PYNAME)/%.py: ./build/%.py
 	cp -fv $^ $@
 
 ./build/%.c: ./build/%.toml toml2c common $(RENAMES)
