@@ -80,10 +80,6 @@ shared_windows:
 # {{{
 .PHONY: python
 python:
-	mkdir -p py/$(FPM_PY_SRC)/$(FPM_PLATFORM)
-	cp -rfv $(FPM_BUILD_DIR)/install/* py/$(FPM_PY_SRC)/$(FPM_PLATFORM)
-	cp -rfv py/$(FPM_PY_SRC)/$(FPM_PLATFORM)/include/*.h py/$(FPM_PY_SRC)/
-	cp -rfv py/$(FPM_PY_SRC)/$(FPM_PLATFORM)/lib/* py/$(FPM_PY_SRC)/
 	make -C py
 #}}}
 # ---------------------------------------------------------------------
