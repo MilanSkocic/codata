@@ -3,10 +3,10 @@
 import math
 
 from .quantity import Quantity, CODATA_Q_COUNT
-from . import constants_2010
-from . import constants_2014
-from . import constants_2018
-from . import constants_2022
+from . import codata_constants_2010
+from . import codata_constants_2014
+from . import codata_constants_2018
+from . import codata_constants_2022
 
 __all__ = ["CODATA_DATASETS", "CODATA_LATEST", "get", "defined",
            "value", "uncertainty", "unit", "quantity_name",
@@ -19,7 +19,7 @@ CODATA_2022 = 2022
 CODATA_LATEST = CODATA_2022
 CODATA_DATASETS = (CODATA_2010, CODATA_2014, CODATA_2018, CODATA_2022, )
 
-_MODULES = {CODATA_2010: constants_2010, CODATA_2014: constants_2014, CODATA_2018: constants_2018, CODATA_2022: constants_2022, }
+_MODULES = {CODATA_2010: codata_constants_2010, CODATA_2014: codata_constants_2014, CODATA_2018: codata_constants_2018, CODATA_2022: codata_constants_2022, }
 
 
 def get(ds, q):

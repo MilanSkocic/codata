@@ -28,6 +28,9 @@ version = None
 with open("./VERSION", "r") as f:
     version = f.read().strip()
 
+with open("./src/pycodata/version.py", "w") as f:
+    f.write(f"__version__ = \"{version:s}\"")
+
 if __name__ == "__main__":
 
     mod_constants_2022 = Extension(name="pycodata.constants_2022",
@@ -61,6 +64,6 @@ if __name__ == "__main__":
                         runtime_library_dirs=runtime_library_dirs,
                         extra_objects=extra_objects)
     setup(version=version,
-         ext_modules=[mod_constants_2022, mod_constants_2018, mod_constants_2014, mod_constants_2010, mod_version]
+         #ext_modules=[mod_constants_2022, mod_constants_2018, mod_constants_2014, mod_constants_2010, mod_version]
          )
 

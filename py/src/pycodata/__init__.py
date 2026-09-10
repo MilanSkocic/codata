@@ -22,10 +22,10 @@ from .version import __version__
 from .quantity import Quantity, CODATA_Q_COUNT
 from .lookup import (CODATA_DATASETS, CODATA_LATEST, get, defined, value,
                      uncertainty, unit, quantity_name, quantity_from_name)
-from .constants_2022 import *
-from .constants_2018 import *
-from .constants_2014 import *
-from .constants_2010 import *
+from .codata_constants_2022 import *
+from .codata_constants_2018 import *
+from .codata_constants_2014 import *
+from .codata_constants_2010 import *
 
 
 def main():

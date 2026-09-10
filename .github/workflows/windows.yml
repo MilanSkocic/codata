@@ -39,17 +39,9 @@ jobs:
     - uses: actions/setup-python@v6
       with:
         python-version: |
-          3.10
-          3.11
-          3.12
-          3.13
           3.14
     - name: Update python packages 
       run: |
-        py -3.10 -m pip install -U --user pip setuptools wheel build 
-        py -3.11 -m pip install -U --user pip setuptools wheel build
-        py -3.12 -m pip install -U --user pip setuptools wheel build
-        py -3.13 -m pip install -U --user pip setuptools wheel build
         py -3.14 -m pip install -U --user pip setuptools wheel build
     - name: Checkout
       uses: actions/checkout@v4
@@ -66,7 +58,6 @@ jobs:
         . ./configure
         make
         make python
-        make -C py auditwheel
         make archives
     - name: Upload artifacts
       uses: actions/upload-artifact@v4

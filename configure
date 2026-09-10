@@ -45,7 +45,7 @@ if [[ "$OSTYPE" == "msys" ]] || [[ "$OSTYPE" == "cygwin" ]]; then
     export FPM_ROOT=$(dirname $(where gfortran))"\\"
     export FPM_EXT=".dll"
     export FPM_LIBS=( "${LIBSWINDOWS[@]}" )
-    export FPM_PY="py -"
+    export FPM_PY="py"
     export FPM_PYGEN="py"
     export FPM_LDFLAGS="-static"
     export FPM_AW=""
