@@ -1,11 +1,11 @@
-<!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Sep  8 06:27:27 2026 -->
+<!-- Creator     : groff version 1.24.1 -->
+<!-- CreationDate: Sat Sep 12 06:40:21 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta name="generator" content="groff -Thtml, see www.gnu.org">
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="Content-Style" content="text/css">
 <style type="text/css">
        p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
@@ -36,7 +36,7 @@
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">version -
+<p style="margin-left:6%; margin-top: 1em">version -
 function</p>
 
 <h2>LIBRARY
@@ -44,7 +44,7 @@ function</p>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Codata library
+<p style="margin-left:6%; margin-top: 1em">Codata library
 (<i>libcodata</i>, <i>-lcodata</i>)</p>
 
 <h2>SYNOPSIS
@@ -55,55 +55,58 @@ function</p>
 <table width="100%" border="0" rules="none" frame="void"
        cellspacing="0" cellpadding="0">
 <tr valign="top" align="left">
-<td width="9%"></td>
+<td width="6%"></td>
 <td width="9%">
 
 
 <p style="margin-top: 1em">Fortran</p></td>
 <td width="4%"></td>
-<td width="46%">
+<td width="45%">
 
 
 <p style="margin-top: 1em"><b>function
 version()result(</b><i>fptr</i><b>)</b></p> </td>
-<td width="32%">
+<td width="36%">
 </td></tr>
 <tr valign="top" align="left">
-<td width="9%"></td>
+<td width="6%"></td>
 <td width="9%">
 </td>
 <td width="4%"></td>
-<td width="46%">
+<td width="45%">
 
 
-<p><b>character(len=:), pointer ::</b> <i>fptr</i></p></td>
-<td width="32%">
+<p style="margin-top: 1em"><b>character(len=:), pointer
+::</b> <i>fptr</i></p></td>
+<td width="36%">
 </td></tr>
 <tr valign="top" align="left">
-<td width="9%"></td>
+<td width="6%"></td>
 <td width="9%">
 
 
-<p>C</p></td>
+<p style="margin-top: 1em">C</p></td>
 <td width="4%"></td>
-<td width="46%">
+<td width="45%">
 
 
-<p><b>char* codata_version()</b></p></td>
-<td width="32%">
+<p style="margin-top: 1em"><b>char*
+codata_version()</b></p> </td>
+<td width="36%">
 </td></tr>
 <tr valign="top" align="left">
-<td width="9%"></td>
+<td width="6%"></td>
 <td width="9%">
 
 
-<p>Python</p></td>
+<p style="margin-top: 1em">Python</p></td>
 <td width="4%"></td>
-<td width="46%">
+<td width="45%">
 
 
-<p><b>str:</b><i>codata.__version__</i></p></td>
-<td width="32%">
+
+<p style="margin-top: 1em"><b>str:</b><i>codata.__version__</i></p> </td>
+<td width="36%">
 </td></tr>
 </table>
 
@@ -112,7 +115,7 @@ version()result(</b><i>fptr</i><b>)</b></p> </td>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Get the library
+<p style="margin-left:6%; margin-top: 1em">Get the library
 version.</p>
 
 <h2>RETURN VALUE
@@ -123,18 +126,18 @@ version.</p>
 <table width="100%" border="0" rules="none" frame="void"
        cellspacing="0" cellpadding="0">
 <tr valign="top" align="left">
-<td width="9%"></td>
+<td width="6%"></td>
 <td width="9%">
 
 
 <p style="margin-top: 1em">pointer</p></td>
 <td width="4%"></td>
-<td width="38%">
+<td width="37%">
 
 
 <p style="margin-top: 1em">Pointer to the version
 string.</p> </td>
-<td width="40%">
+<td width="44%">
 </td></tr>
 </table>
 
@@ -143,16 +146,16 @@ string.</p> </td>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Fortran: <br>
+<p style="margin-left:6%; margin-top: 1em">Fortran: <br>
 use codata <br>
 print *, &quot;version = &quot;, version()</p>
 
-<p style="margin-left:9%; margin-top: 1em">C: <br>
+<p style="margin-left:6%; margin-top: 1em">C: <br>
 include &lt;stdio.h&gt; <br>
 include &quot;codata.h&quot; <br>
 printf(&quot;version = %s\n&quot;, codata_version());</p>
 
-<p style="margin-left:9%; margin-top: 1em">Python: <br>
+<p style="margin-left:6%; margin-top: 1em">Python: <br>
 import pycodata <br>
 print(f&quot;version = {pycodata.__version__}&quot;)</p>
 
@@ -162,7 +165,7 @@ print(f&quot;version = {pycodata.__version__}&quot;)</p>
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3),
+<p style="margin-left:6%; margin-top: 1em"><b>codata</b>(3),
 <b>codata_cli</b>(1), <b>codata_version</b>(3),
 <b>codata_constant_type</b>(3)</p>
 <hr>

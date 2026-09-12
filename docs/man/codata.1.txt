@@ -1,50 +1,50 @@
 codata(1)                    User Commands                    codata(1)
 
 NAME
-       codata - get the fundamental physical constants
+     codata - get the fundamental physical constants
 
 SYNOPSIS
-       codata [OPTION]...
+     codata [OPTION]...
 
 DESCRIPTION
-       codata  is  a command line interface which prints all the CODATA
-       constants.
+     codata  is  a  command  line interface which prints all the CODATA
+     constants.
 
-       The current values are from 2022.  Older values can be retrieved
-       if needed and the output can be filtered with REGEX PATTERNS.
+     The current values are from 2022.  Older values can  be  retrieved
+     if needed and the output can be filtered with REGEX PATTERNS.
 
 OPTIONS
-       -y, --year YEAR
-              CODATA constants: 2022, 2018, 2014, 2010
+     -y, --year YEAR
+            CODATA constants: 2022, 2018, 2014, 2010
 
-        -p, --pattern PATTERN
-              Regex pattern for filtering the constants. Multiple  pat‐
-              terns can be passed by repeating this option.
+      -p, --pattern PATTERN
+            Regex  pattern  for  filtering the constants. Multiple pat‐
+            terns can be passed by repeating this option.
 
-       -a, --value
-              Show only the value.
+     -a, --value
+            Show only the value.
 
-       -e, --error
-              Show only the uncertainty.
+     -e, --error
+            Show only the uncertainty.
 
-       -u, --usage
-              Show usage text and exit.
+     -u, --usage
+            Show usage text and exit.
 
-       -v,--version
-              Show version information and exit.
+     -v,--version
+            Show version information and exit.
 
-       -h, --help
-              Show help text and exit.
+     -h, --help
+            Show help text and exit.
 
 EXAMPLE
-       Minimal example
-            codata
-            codata -p Faraday
-            codata -y 2014 -p molar.*gas,electron.*eV
-            codata [B,b]oltzmann.*eV
+     Minimal example
+          codata
+          codata -p Faraday
+          codata -y 2014 -p molar.*gas,electron.*eV
+          codata [B,b]oltzmann.*eV
 
 SEE ALSO
-       codata(3),    codata_cli(1),    codata_version(3),   codata_con‐
-       stant_type(3)
+     codata(3),    codata_cli(1),    codata_version(3),     codata_con‐
+     stant_type(3)
 
-2.6.0                      08 September 2026                  codata(1)
+2.6.0                      12 September 2026                  codata(1)
