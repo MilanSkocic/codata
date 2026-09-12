@@ -1,4 +1,4 @@
-VERSION 2.6.0 [dev]
+VERSION 2.6.0
   - Maintenance release.
   - No API break.
   - The latest adjustment is now also available under its year-suffixed
@@ -39,6 +39,7 @@ VERSION 2.6.0 [dev]
     two agree.
   - Fix a stray space in the constant names listed in the man pages.
   - Add multiple patterns with repeated option -p PATTERN.
+  - Pure python sources. No more compiled C extensions.
   - Update man pages.
 
 VERSION 2.5.5
