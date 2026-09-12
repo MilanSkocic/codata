@@ -1,11 +1,11 @@
-<!-- Creator     : groff version 1.23.0 -->
-<!-- CreationDate: Tue Sep  8 06:27:28 2026 -->
+<!-- Creator     : groff version 1.24.1 -->
+<!-- CreationDate: Sat Sep 12 06:40:21 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta name="generator" content="groff -Thtml, see www.gnu.org">
-<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="Content-Style" content="text/css">
 <style type="text/css">
        p       { margin-top: 0; margin-bottom: 0; vertical-align: top }
@@ -36,7 +36,7 @@
 
 
 
-<p style="margin-left:9%; margin-top: 1em">codata_constant_type
+<p style="margin-left:6%; margin-top: 1em">codata_constant_type
 - derived type</p>
 
 <h2>LIBRARY
@@ -44,7 +44,7 @@
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Codata library
+<p style="margin-left:6%; margin-top: 1em">Codata library
 (<i>libcodata</i>, <i>-lcodata</i>)</p>
 
 <h2>SYNOPSIS
@@ -55,31 +55,32 @@
 <table width="100%" border="0" rules="none" frame="void"
        cellspacing="0" cellpadding="0">
 <tr valign="top" align="left">
-<td width="9%"></td>
+<td width="6%"></td>
 <td width="9%">
 
 
 <p style="margin-top: 1em">Fortran</p></td>
 <td width="4%"></td>
-<td width="40%">
+<td width="39%">
 
 
 <p style="margin-top: 1em"><b>type(codata_constant_type)
 ::</b> <i>c</i></p></td>
-<td width="38%">
+<td width="42%">
 </td></tr>
 <tr valign="top" align="left">
-<td width="9%"></td>
+<td width="6%"></td>
 <td width="9%">
 
 
-<p>C</p></td>
+<p style="margin-top: 1em">C</p></td>
 <td width="4%"></td>
-<td width="40%">
+<td width="39%">
 
 
-<p><b>struct codata_constant_type</b> <i>c</i></p></td>
-<td width="38%">
+<p style="margin-top: 1em"><b>struct
+codata_constant_type</b> <i>c</i></p></td>
+<td width="42%">
 </td></tr>
 </table>
 
@@ -88,74 +89,74 @@
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Defines a
+<p style="margin-left:6%; margin-top: 1em">Defines a
 constant with <i>the name, the value, the uncertainty and
 the unit.</i></p>
 
-<p style="margin-left:9%; margin-top: 1em"><b>type ::
+<p style="margin-left:6%; margin-top: 1em"><b>type ::
 codata_constant_type</b></p>
 
 
-<p style="margin-left:18%; margin-top: 1em"><b>character(len=64)
+<p style="margin-left:15%; margin-top: 1em"><b>character(len=64)
 ::</b> <i>name</i></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>real(dp)
+<p style="margin-left:15%; margin-top: 1em"><b>real(dp)
 ::</b> <i>value</i></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>real(dp)
+<p style="margin-left:15%; margin-top: 1em"><b>real(dp)
 ::</b> <i>uncertainty</i></p>
 
 
-<p style="margin-left:18%; margin-top: 1em"><b>character(len=32)
+<p style="margin-left:15%; margin-top: 1em"><b>character(len=32)
 ::</b> <i>unit</i></p>
 
-<p style="margin-left:9%;"><b>contains</b></p>
+<p style="margin-left:6%;"><b>contains</b></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>procedure
+<p style="margin-left:15%; margin-top: 1em"><b>procedure
 ::</b> <i>print</i></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>procedure
+<p style="margin-left:15%; margin-top: 1em"><b>procedure
 ::</b> <i>to_real_sp</i></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>procedure
+<p style="margin-left:15%; margin-top: 1em"><b>procedure
 ::</b> <i>to_real_dp</i></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>generic
+<p style="margin-left:15%; margin-top: 1em"><b>generic
 ::</b> <i>to_real =&gt; to_real_sp, to_real_dp</i></p>
 
-<p style="margin-left:9%;"><b>end type
+<p style="margin-left:6%;"><b>end type
 codata_constant_type</b></p>
 
-<p style="margin-left:9%; margin-top: 1em"><b>struct
+<p style="margin-left:6%; margin-top: 1em"><b>struct
 codata_constant_type{</b></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>char</b>
+<p style="margin-left:15%; margin-top: 1em"><b>char</b>
 <i>name[65];</i></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>double</b>
+<p style="margin-left:15%; margin-top: 1em"><b>double</b>
 <i>value;</i></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>double</b>
+<p style="margin-left:15%; margin-top: 1em"><b>double</b>
 <i>uncertainty;</i></p>
 
-<p style="margin-left:18%; margin-top: 1em"><b>char</b>
+<p style="margin-left:15%; margin-top: 1em"><b>char</b>
 <i>unit[33];</i></p>
 
-<p style="margin-left:9%;"><b>};</b></p>
+<p style="margin-left:6%;"><b>};</b></p>
 
 <h2>EXAMPLE
 <a name="EXAMPLE"></a>
 </h2>
 
 
-<p style="margin-left:9%; margin-top: 1em">Fortran: <br>
+<p style="margin-left:6%; margin-top: 1em">Fortran: <br>
 use codata <br>
 type(codata_constant_type), pointer :: c <br>
 c = SPEED_OF_LIGHT_IN_VACUUM</p>
 
-<p style="margin-left:9%; margin-top: 1em">C:</p>
+<p style="margin-left:6%; margin-top: 1em">C:</p>
 
-<p style="margin-left:9%; margin-top: 1em">include
+<p style="margin-left:6%; margin-top: 1em">include
 &quot;codata.h&quot; <br>
 struct codata_constant_type c; <br>
 c = SPEED_OF_LIGHT_IN_VACUUM;</p>
@@ -166,7 +167,7 @@ c = SPEED_OF_LIGHT_IN_VACUUM;</p>
 
 
 
-<p style="margin-left:9%; margin-top: 1em"><b>codata</b>(3),
+<p style="margin-left:6%; margin-top: 1em"><b>codata</b>(3),
 <b>codata_cli</b>(1), <b>codata_version</b>(3),
 <b>codata_constant_type</b>(3)</p>
 <hr>
