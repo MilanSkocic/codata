@@ -26,5 +26,5 @@ where = ["src"]
 [tool.setuptools.package-data]
 pycodata = ["libcodata.*", "codata*", "linux/**", "darwin/**", "windows/**", "libgfortran*", "libquadmath*", "libgcc_s*", "libwinpthread*"]
 
-[project.scripts]
-pycodata = "pycodata:main"
+#[project.scripts]
+#pycodata = "pycodata:main"
