@@ -25,6 +25,10 @@ function alias_of(k){
 }
 BEGIN{
     print "# SPDX-License-Identifier: MIT"
+    print ""
+    print "#-----------------------------------------------------------------------"
+    print "# CODATA_CONSTANTS_"year
+    print "#-----------------------------------------------------------------------"
     print "\"\"\"Codata constants "year".\"\"\""
     print ""
 }
