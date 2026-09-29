@@ -189,7 +189,6 @@ clean:
 	rm -f ../src/codata_lookup.f90
 	rm -f ../py/src/$(FPM_PYNAME)/quantity.py
 	rm -f ../py/src/$(FPM_PYNAME)/lookup.py
-	rm $(CPY_SRC)
 	rm $(C_HEADER)
 	rm $(C_SRC)
 	rm $(FOR_SRC)
