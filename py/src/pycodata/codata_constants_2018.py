@@ -1,4 +1,8 @@
 # SPDX-License-Identifier: MIT
+
+#-----------------------------------------------------------------------
+# CODATA_CONSTANTS_2018
+#-----------------------------------------------------------------------
 """Codata constants 2018."""
 
 ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2018 = {
