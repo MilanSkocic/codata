@@ -1,4 +1,4 @@
-VERSION 2.6.1 [DEV]
+VERSION 2.6.1
   - Maintenance release. 
   - No API break.
   - Refactoring and code cleaning.
