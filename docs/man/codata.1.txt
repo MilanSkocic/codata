@@ -17,7 +17,7 @@ OPTIONS
      -y, --year YEAR
             CODATA constants: 2022, 2018, 2014, 2010
 
-      -p, --pattern PATTERN
+     -p, --pattern PATTERN
             Regex  pattern  for  filtering the constants. Multiple pat‐
             terns can be passed by repeating this option.
 
@@ -30,7 +30,7 @@ OPTIONS
      -u, --usage
             Show usage text and exit.
 
-     -v,--version
+     -v, --version
             Show version information and exit.
 
      -h, --help
@@ -47,4 +47,4 @@ SEE ALSO
      codata(3),    codata_cli(1),    codata_version(3),     codata_con‐
      stant_type(3)
 
-2.6.1                       15 October 2026                   codata(1)
+2.6.1                       23 November 2026                  codata(1)
