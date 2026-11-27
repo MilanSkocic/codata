@@ -11,8 +11,8 @@ all: build
 
 .PHONY: build
 build: $(SETUP)
-	$(FPM_PY) -3.14 -m build --no-isolation --sdist
-	$(FPM_PY) -3.14 -m build --no-isolation --wheel
+	$(FPM_PY) -m build --no-isolation --sdist
+	$(FPM_PY) -m build --no-isolation --wheel
 
 test: build
 	$(FPM_PY) -m pytest -v
