@@ -157,7 +157,7 @@ int main(int argc, char **argv){
     {"-e", "--error",   NULL,        "Show only the uncertainty."},
     {"-u", "--usage",   NULL,        "Show usage text and exit."},
     {"-v", "--version", NULL,        "Show version information and exit."},
-    {"-h", "--help ",   NULL,        "Show help text and exit."},
+    {"-h", "--help",   NULL,        "Show help text and exit."},
     {NULL, NULL,        NULL,        NULL} };
 
     /* The adjustments the library was built with, most recent first. */
