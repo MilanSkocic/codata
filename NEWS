@@ -1,3 +1,9 @@
+VERSION 2.7.0
+  - Remove support for Python 3.10.
+  - Add support for Python 3.15.
+  - Code refactoring and cleaning.
+
+
 VERSION 2.6.1
   - Maintenance release. 
   - No API break.
