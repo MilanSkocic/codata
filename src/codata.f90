@@ -25,7 +25,7 @@ use codata__lookup
 implicit none(type,external)
 public
 
-character(len=*), parameter, private :: v = '2.6.1'
+character(len=*), parameter, private :: v = '2.7.0'
 character(len=:), allocatable, target, private :: vf
 character(len=:), allocatable, target, private :: vc
 
