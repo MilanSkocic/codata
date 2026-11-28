@@ -153,105 +153,10 @@ NOTES
           stants: 2022,” Reviews of Modern Physics, vol. 97, no. 2,  p.
           25002, Apr. 2025, doi: 10.1103/RevModPhys.97.025002.
 
-EXAMPLES
-     Example in Fortran:
-         program example_in_f
-         use codata
-         implicit none
-         integer :: i
-         print '(A)', '########## EXAMPLE IN FORTRAN ##########'
-         print '(A)', '# VERSION'
-         print *, "version = ", version()
-         print '(A)', '# CONSTANTS'
-         print *, "c = ", SPEED_OF_LIGHT_IN_VACUUM%value
-         print '(A)', '# UNCERTAINTY'
-         print *, "u(c) = ", SPEED_OF_LIGHT_IN_VACUUM%uncertainty
-         print '(A)', '# OLDER VALUES'
-         print '(A, F23.16)', "Mu_2022(latest) = ", MOLAR_MASS_CONSTANT%value
-         print '(A, F23.16)', "Mu_2018 = ", MOLAR_MASS_CONSTANT_2018%value
-         print '(A, F23.16)', "Mu_2014 = ", MOLAR_MASS_CONSTANT_2014%value
-         print '(A, F23.16)', "Mu_2010 = ", MOLAR_MASS_CONSTANT_2010%value
-         print '(A)', '# SELECTING THE ADJUSTMENT AT RUN TIME'
-         do i = 1, CODATA_N_DATASETS
-         print '(A, I0, A, F23.16)', "Mu_", CODATA_DATASETS(i), " = ", &
-         codata_value(CODATA_DATASETS(i), Q_MOLAR_MASS_CONSTANT)
-         end do
-         print '(A)', '# A QUANTITY AN OLDER ADJUSTMENT DOES NOT CONTAIN'
-         print *, "defined in 2018 = ", codata_defined(CODATA_2018, Q_HELION_SHIELDING_SHIFT)
-         print *, "defined in 2010 = ", codata_defined(CODATA_2010, Q_HELION_SHIELDING_SHIFT)
-         print '(A)', '# A QUANTITY NIST RENAMED IN 2018'
-         print *, "eps0_2014 via either name = ", ELECTRIC_CONSTANT_2014%value, &
-         VACUUM_ELECTRIC_PERMITTIVITY_2014%value
-         end program
-
-     Example in C
-         #include <stdio.h>
-         #include "codata.h"
-         int main(void){
-         int i, n;
-         const enum codata_dataset *ds;
-         printf("########## EXAMPLE IN C ##########0);
-         printf("%s0,"# VERSION");
-         printf("version = %s0, codata_version());
-         printf("%s0,"# CONSTANTS");
-         printf("c = %f0, SPEED_OF_LIGHT_IN_VACUUM.value);
-         printf("%s0,"# UNCERTAINTY");
-         printf("u(c) = %f0, SPEED_OF_LIGHT_IN_VACUUM.uncertainty);
-         printf("%s0,"# OLDER VALUES");
-         printf("Mu_2022(latest) = %23.16f0, MOLAR_MASS_CONSTANT.value);
-         printf("Mu_2018 = %23.16f0, MOLAR_MASS_CONSTANT_2018.value);
-         printf("Mu_2014 = %23.16f0, MOLAR_MASS_CONSTANT_2014.value);
-         printf("Mu_2010 = %23.16f0, MOLAR_MASS_CONSTANT_2010.value);
-         printf("%s0,"# SELECTING THE ADJUSTMENT AT RUN TIME");
-         ds = codata_datasets(&n);
-         for(i=0;i<n;i++){
-             printf("Mu_%d = %23.16f0, (int)ds[i], codata_value(ds[i], CODATA_Q_MOLAR_MASS_CONSTANT));
-         }
-         printf("%s0,"# A QUANTITY AN OLDER ADJUSTMENT DOES NOT CONTAIN");
-         printf("defined in 2018 = %d0, codata_defined(CODATA_2018, CODATA_Q_HELION_SHIELDING_SHIFT));
-         printf("defined in 2010 = %d0, codata_defined(CODATA_2010, CODATA_Q_HELION_SHIELDING_SHIFT));
-         printf("%s0,"# A QUANTITY NIST RENAMED IN 2018");
-         printf("eps0_2014 via either name = %.11e %.11e0,
-                ELECTRIC_CONSTANT_2014.value, VACUUM_ELECTRIC_PERMITTIVITY_2014.value);
-         return 0;
-         }
-
-     Example in Python
-         import sys
-         sys.path.insert(0, "../py/src/")
-         import pycodata
-         from pycodata import Quantity
-         print("########## EXAMPLE IN PYTHON ##########")
-         print("# VERSION")
-         print(f"version = {pycodata.__version__}")
-         print("# Constants")
-         print("c =", pycodata.SPEED_OF_LIGHT_IN_VACUUM["value"])
-         print("# UNCERTAINTY")
-         print("u(c) = ", pycodata.SPEED_OF_LIGHT_IN_VACUUM["uncertainty"])
-         print("# OLDER VALUES")
-         print("Mu_2022 = ", pycodata.MOLAR_MASS_CONSTANT["value"])
-         print("Mu_2018 = ", pycodata.MOLAR_MASS_CONSTANT_2018["value"])
-         print("Mu_2014 = ", pycodata.MOLAR_MASS_CONSTANT_2014["value"])
-         print("Mu_2010 = ", pycodata.MOLAR_MASS_CONSTANT_2010["value"])
-         print("# SELECTING THE ADJUSTMENT AT RUN TIME")
-         for ds in pycodata.CODATA_DATASETS:
-             print(f"Mu_{ds} = ", pycodata.value(ds, Quantity.MOLAR_MASS_CONSTANT))
-         print("# A QUANTITY AN OLDER ADJUSTMENT DOES NOT CONTAIN")
-         print("defined in 2018 = ", pycodata.defined(2018, Quantity.HELION_SHIELDING_SHIFT))
-         print("defined in 2010 = ", pycodata.defined(2010, Quantity.HELION_SHIELDING_SHIFT))
-         print("# A QUANTITY NIST RENAMED IN 2018")
-         print("eps0_2014 via either name = ",
-               pycodata.ELECTRIC_CONSTANT_2014["value"],
-               pycodata.VACUUM_ELECTRIC_PERMITTIVITY_2014["value"])
-
-SEE ALSO
-     codata(3),     codata_cli(1),    codata_version(3),    codata_con‐
-     stant_type(3)
-
 CODATA 2022
-     This is the latest adjustment. Its constants  are  available  both
-     under  the year-suffixed names listed below and, as an alias mean‐
-     ing "current", under the same  names  without  the  _2022  suffix.
+     This  is  the  latest adjustment. Its constants are available both
+     under the year-suffixed names listed below and, as an alias  mean‐
+     ing  "current",  under  the  same  names without the _2022 suffix.
      List of available constants:
 
      •      ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2022
@@ -352,7 +257,7 @@ CODATA 2022
 
      •      BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2022
 
-     •      BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2022  (alias, re‐
+     •      BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2022 (alias,  re‐
             named by NIST)
 
      •      BOHR_MAGNETON_IN_K_T_2022
@@ -725,7 +630,7 @@ CODATA 2022
 
      •      NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2022
 
-     •      NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2022   (alias,   renamed  by
+     •      NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2022  (alias,   renamed   by
             NIST)
 
      •      NATURAL_UNIT_OF_TIME_2022
@@ -744,7 +649,7 @@ CODATA 2022
 
      •      NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2022
 
-     •      NEUTRON_GYROMAG_RATIO_OVER_2_PI_2022  (alias,  renamed   by
+     •      NEUTRON_GYROMAG_RATIO_OVER_2_PI_2022   (alias,  renamed  by
             NIST)
 
      •      NEUTRON_MAG_MOM_2022
@@ -829,7 +734,7 @@ CODATA 2022
 
      •      PROTON_GYROMAG_RATIO_IN_MHZ_T_2022
 
-     •      PROTON_GYROMAG_RATIO_OVER_2_PI_2022  (alias,   renamed   by
+     •      PROTON_GYROMAG_RATIO_OVER_2_PI_2022   (alias,   renamed  by
             NIST)
 
      •      PROTON_MAG_MOM_2022
@@ -872,7 +777,7 @@ CODATA 2022
 
      •      REDUCED_MUON_COMPTON_WAVELENGTH_2022
 
-     •      MUON_COMPTON_WAVELENGTH_OVER_2_PI_2022  (alias,  renamed by
+     •      MUON_COMPTON_WAVELENGTH_OVER_2_PI_2022 (alias,  renamed  by
             NIST)
 
      •      REDUCED_NEUTRON_COMPTON_WAVELENGTH_2022
@@ -886,7 +791,7 @@ CODATA 2022
 
      •      REDUCED_PLANCK_CONSTANT_IN_EV_S_2022
 
-     •      PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2022  (alias,  renamed by
+     •      PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2022 (alias,  renamed  by
             NIST)
 
      •      REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2022
@@ -922,7 +827,7 @@ CODATA 2022
 
      •      SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2022
 
-     •      SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2022  (alias,   re‐
+     •      SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2022   (alias,  re‐
             named by NIST)
 
      •      SHIELDED_HELION_MAG_MOM_2022
@@ -939,7 +844,7 @@ CODATA 2022
 
      •      SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2022
 
-     •      SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2022   (alias,  re‐
+     •      SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2022  (alias,   re‐
             named by NIST)
 
      •      SHIELDED_PROTON_MAG_MOM_2022
@@ -968,7 +873,7 @@ CODATA 2022
 
      •      TAU_ENERGY_EQUIVALENT_2022
 
-     •      TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2022 (alias,  renamed  by
+     •      TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2022  (alias,  renamed by
             NIST)
 
      •      TAU_MASS_2022
@@ -1132,7 +1037,7 @@ CODATA 2018
 
      •      BOHR_MAGNETON_IN_INVERSE_METER_PER_TESLA_2018
 
-     •      BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018  (alias, re‐
+     •      BOHR_MAGNETON_IN_INVERSE_METERS_PER_TESLA_2018 (alias,  re‐
             named by NIST)
 
      •      BOHR_MAGNETON_IN_K_T_2018
@@ -1505,7 +1410,7 @@ CODATA 2018
 
      •      NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2018
 
-     •      NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2018   (alias,   renamed  by
+     •      NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2018  (alias,   renamed   by
             NIST)
 
      •      NATURAL_UNIT_OF_TIME_2018
@@ -1524,7 +1429,7 @@ CODATA 2018
 
      •      NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2018
 
-     •      NEUTRON_GYROMAG_RATIO_OVER_2_PI_2018  (alias,  renamed   by
+     •      NEUTRON_GYROMAG_RATIO_OVER_2_PI_2018   (alias,  renamed  by
             NIST)
 
      •      NEUTRON_MAG_MOM_2018
@@ -1609,7 +1514,7 @@ CODATA 2018
 
      •      PROTON_GYROMAG_RATIO_IN_MHZ_T_2018
 
-     •      PROTON_GYROMAG_RATIO_OVER_2_PI_2018  (alias,   renamed   by
+     •      PROTON_GYROMAG_RATIO_OVER_2_PI_2018   (alias,   renamed  by
             NIST)
 
      •      PROTON_MAG_MOM_2018
@@ -1652,7 +1557,7 @@ CODATA 2018
 
      •      REDUCED_MUON_COMPTON_WAVELENGTH_2018
 
-     •      MUON_COMPTON_WAVELENGTH_OVER_2_PI_2018  (alias,  renamed by
+     •      MUON_COMPTON_WAVELENGTH_OVER_2_PI_2018 (alias,  renamed  by
             NIST)
 
      •      REDUCED_NEUTRON_COMPTON_WAVELENGTH_2018
@@ -1666,7 +1571,7 @@ CODATA 2018
 
      •      REDUCED_PLANCK_CONSTANT_IN_EV_S_2018
 
-     •      PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2018  (alias,  renamed by
+     •      PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2018 (alias,  renamed  by
             NIST)
 
      •      REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2018
@@ -1702,7 +1607,7 @@ CODATA 2018
 
      •      SHIELDED_HELION_GYROMAG_RATIO_IN_MHZ_T_2018
 
-     •      SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2018  (alias,   re‐
+     •      SHIELDED_HELION_GYROMAG_RATIO_OVER_2_PI_2018   (alias,  re‐
             named by NIST)
 
      •      SHIELDED_HELION_MAG_MOM_2018
@@ -1719,7 +1624,7 @@ CODATA 2018
 
      •      SHIELDED_PROTON_GYROMAG_RATIO_IN_MHZ_T_2018
 
-     •      SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2018   (alias,  re‐
+     •      SHIELDED_PROTON_GYROMAG_RATIO_OVER_2_PI_2018  (alias,   re‐
             named by NIST)
 
      •      SHIELDED_PROTON_MAG_MOM_2018
@@ -1748,7 +1653,7 @@ CODATA 2018
 
      •      TAU_ENERGY_EQUIVALENT_2018
 
-     •      TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2018 (alias,  renamed  by
+     •      TAU_MASS_ENERGY_EQUIVALENT_IN_MEV_2018  (alias,  renamed by
             NIST)
 
      •      TAU_MASS_2018
@@ -1818,7 +1723,7 @@ CODATA 2014
 
      •      LATTICE_SPACING_OF_SILICON_2014
 
-     •      LATTICE_SPACING_OF_IDEAL_SI_220_2014   (alias,  renamed  by
+     •      LATTICE_SPACING_OF_IDEAL_SI_220_2014  (alias,  renamed   by
             NIST)
 
      •      ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2014
@@ -1999,7 +1904,7 @@ CODATA 2014
 
      •      ELECTRON_GYROMAG_RATIO_OVER_2_PI_2014
 
-     •      ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2014   (alias,  renamed  by
+     •      ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2014  (alias,  renamed   by
             NIST)
 
      •      ELECTRON_HELION_MASS_RATIO_2014
@@ -2228,7 +2133,7 @@ CODATA 2014
 
      •      MUON_COMPTON_WAVELENGTH_OVER_2_PI_2014
 
-     •      REDUCED_MUON_COMPTON_WAVELENGTH_2014  (alias,  renamed   by
+     •      REDUCED_MUON_COMPTON_WAVELENGTH_2014   (alias,  renamed  by
             NIST)
 
      •      MUON_ELECTRON_MASS_RATIO_2014
@@ -2279,7 +2184,7 @@ CODATA 2014
 
      •      NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2014
 
-     •      NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2014  (alias,  renamed by
+     •      NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2014 (alias,  renamed  by
             NIST)
 
      •      NATURAL_UNIT_OF_TIME_2014
@@ -2290,7 +2195,7 @@ CODATA 2014
 
      •      NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2014
 
-     •      REDUCED_NEUTRON_COMPTON_WAVELENGTH_2014 (alias, renamed  by
+     •      REDUCED_NEUTRON_COMPTON_WAVELENGTH_2014  (alias, renamed by
             NIST)
 
      •      NEUTRON_ELECTRON_MAG_MOM_RATIO_2014
@@ -2303,7 +2208,7 @@ CODATA 2014
 
      •      NEUTRON_GYROMAG_RATIO_OVER_2_PI_2014
 
-     •      NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2014   (alias,   renamed  by
+     •      NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2014  (alias,   renamed   by
             NIST)
 
      •      NEUTRON_MAG_MOM_2014
@@ -2370,12 +2275,12 @@ CODATA 2014
 
      •      PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2014
 
-     •      REDUCED_PLANCK_CONSTANT_IN_EV_S_2014   (alias,  renamed  by
+     •      REDUCED_PLANCK_CONSTANT_IN_EV_S_2014  (alias,  renamed   by
             NIST)
 
      •      PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2014
 
-     •      REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2014 (alias,  re‐
+     •      REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2014  (alias, re‐
             named by NIST)
 
      •      PLANCK_LENGTH_2014
@@ -2394,7 +2299,7 @@ CODATA 2014
 
      •      PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2014
 
-     •      REDUCED_PROTON_COMPTON_WAVELENGTH_2014  (alias,  renamed by
+     •      REDUCED_PROTON_COMPTON_WAVELENGTH_2014 (alias,  renamed  by
             NIST)
 
      •      PROTON_ELECTRON_MASS_RATIO_2014
@@ -2497,7 +2402,7 @@ CODATA 2014
 
      •      TAU_COMPTON_WAVELENGTH_OVER_2_PI_2014
 
-     •      REDUCED_TAU_COMPTON_WAVELENGTH_2014  (alias,   renamed   by
+     •      REDUCED_TAU_COMPTON_WAVELENGTH_2014   (alias,   renamed  by
             NIST)
 
      •      TAU_ELECTRON_MASS_RATIO_2014
@@ -2559,7 +2464,7 @@ CODATA 2010
 
      •      LATTICE_SPACING_OF_SILICON_2010
 
-     •      LATTICE_SPACING_OF_IDEAL_SI_220_2010   (alias,  renamed  by
+     •      LATTICE_SPACING_OF_IDEAL_SI_220_2010  (alias,  renamed   by
             NIST)
 
      •      ALPHA_PARTICLE_ELECTRON_MASS_RATIO_2010
@@ -2740,7 +2645,7 @@ CODATA 2010
 
      •      ELECTRON_GYROMAG_RATIO_OVER_2_PI_2010
 
-     •      ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2010   (alias,  renamed  by
+     •      ELECTRON_GYROMAG_RATIO_IN_MHZ_T_2010  (alias,  renamed   by
             NIST)
 
      •      ELECTRON_HELION_MASS_RATIO_2010
@@ -2969,7 +2874,7 @@ CODATA 2010
 
      •      MUON_COMPTON_WAVELENGTH_OVER_2_PI_2010
 
-     •      REDUCED_MUON_COMPTON_WAVELENGTH_2010  (alias,  renamed   by
+     •      REDUCED_MUON_COMPTON_WAVELENGTH_2010   (alias,  renamed  by
             NIST)
 
      •      MUON_ELECTRON_MASS_RATIO_2010
@@ -3020,7 +2925,7 @@ CODATA 2010
 
      •      NATURAL_UNIT_OF_MOMUM_IN_MEV_C_2010
 
-     •      NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2010  (alias,  renamed by
+     •      NATURAL_UNIT_OF_MOMENTUM_IN_MEV_C_2010 (alias,  renamed  by
             NIST)
 
      •      NATURAL_UNIT_OF_TIME_2010
@@ -3031,7 +2936,7 @@ CODATA 2010
 
      •      NEUTRON_COMPTON_WAVELENGTH_OVER_2_PI_2010
 
-     •      REDUCED_NEUTRON_COMPTON_WAVELENGTH_2010 (alias, renamed  by
+     •      REDUCED_NEUTRON_COMPTON_WAVELENGTH_2010  (alias, renamed by
             NIST)
 
      •      NEUTRON_ELECTRON_MAG_MOM_RATIO_2010
@@ -3044,7 +2949,7 @@ CODATA 2010
 
      •      NEUTRON_GYROMAG_RATIO_OVER_2_PI_2010
 
-     •      NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2010   (alias,   renamed  by
+     •      NEUTRON_GYROMAG_RATIO_IN_MHZ_T_2010  (alias,   renamed   by
             NIST)
 
      •      NEUTRON_MAG_MOM_2010
@@ -3111,12 +3016,12 @@ CODATA 2010
 
      •      PLANCK_CONSTANT_OVER_2_PI_IN_EV_S_2010
 
-     •      REDUCED_PLANCK_CONSTANT_IN_EV_S_2010   (alias,  renamed  by
+     •      REDUCED_PLANCK_CONSTANT_IN_EV_S_2010  (alias,  renamed   by
             NIST)
 
      •      PLANCK_CONSTANT_OVER_2_PI_TIMES_C_IN_MEV_FM_2010
 
-     •      REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2010 (alias,  re‐
+     •      REDUCED_PLANCK_CONSTANT_TIMES_C_IN_MEV_FM_2010  (alias, re‐
             named by NIST)
 
      •      PLANCK_LENGTH_2010
@@ -3135,7 +3040,7 @@ CODATA 2010
 
      •      PROTON_COMPTON_WAVELENGTH_OVER_2_PI_2010
 
-     •      REDUCED_PROTON_COMPTON_WAVELENGTH_2010  (alias,  renamed by
+     •      REDUCED_PROTON_COMPTON_WAVELENGTH_2010 (alias,  renamed  by
             NIST)
 
      •      PROTON_ELECTRON_MASS_RATIO_2010
@@ -3238,7 +3143,7 @@ CODATA 2010
 
      •      TAU_COMPTON_WAVELENGTH_OVER_2_PI_2010
 
-     •      REDUCED_TAU_COMPTON_WAVELENGTH_2010  (alias,   renamed   by
+     •      REDUCED_TAU_COMPTON_WAVELENGTH_2010   (alias,   renamed  by
             NIST)
 
      •      TAU_ELECTRON_MASS_RATIO_2010
@@ -3295,4 +3200,4 @@ CODATA 2010
 
      •      WIEN_WAVELENGTH_DISPLACEMENT_LAW_CONSTANT_2010
 
-@VERSION@                        @DATE@                   codata_lib(3)
+2.7.0                       28 November 2026              codata_lib(3)
