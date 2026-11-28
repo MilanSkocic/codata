@@ -27,10 +27,10 @@ jobs:
     - uses: actions/setup-python@v6
       with:
         python-version: |
-          3.14
+          3.15
     - name: Update python packages
       run: |
-       python3.14 -m pip install -U --user pip setuptools wheel build
+       python3.15 -m pip install -U --user pip setuptools wheel build
     - name: Checkout
       uses: actions/checkout@v4
     - name: Configure
