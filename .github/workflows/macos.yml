@@ -14,9 +14,9 @@ jobs:
       run: |
         brew reinstall gcc@12 gfortran
     - name: Set fpm
-      uses: fortran-lang/setup-fpm@v10
+      uses: fortran-lang/setup-fpm@v12
       with: 
-        fpm-version: "v0.13.0"
+        fpm-version: "v0.14.0"
     - name: Versions
       run : |
         gfortran --version
