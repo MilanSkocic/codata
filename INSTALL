@@ -18,7 +18,7 @@ SOURCES
         $ make
         $ make install [prefix=path]
 
-  Building the Python wheel requires a python interpreter >=3.10
+  Building the Python wheel requires a python interpreter >=3.11
 
         $ make python
   
