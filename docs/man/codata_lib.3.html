@@ -1,5 +1,5 @@
 <!-- Creator     : groff version 1.25.0 -->
-<!-- CreationDate: Sat Nov 28 15:51:11 2026 -->
+<!-- CreationDate: Sat Nov 28 16:53:43 2026 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -32,8 +32,6 @@
 <a href="#QUANTITY KEYS">QUANTITY KEYS</a><br>
 <a href="#RENAMED QUANTITIES">RENAMED QUANTITIES</a><br>
 <a href="#NOTES">NOTES</a><br>
-<a href="#EXAMPLES">EXAMPLES</a><br>
-<a href="#SEE ALSO">SEE ALSO</a><br>
 <a href="#CODATA 2022">CODATA 2022</a><br>
 <a href="#CODATA 2018">CODATA 2018</a><br>
 <a href="#CODATA 2014">CODATA 2014</a><br>
@@ -458,156 +456,6 @@ the Fundamental Physical Constants: 2022,&rdquo; Reviews of
 Modern Physics, vol. 97, no. 2, p. 25002, Apr. 2025, doi:
 10.1103/RevModPhys.97.025002.</p> </td></tr>
 </table>
-
-<h2>EXAMPLES
-<a name="EXAMPLES"></a>
-</h2>
-
-
-<p style="margin-left:6%; margin-top: 1em">Example in
-Fortran: <br>
-program example_in_f <br>
-use codata <br>
-implicit none <br>
-integer :: i <br>
-print &rsquo;(A)&rsquo;, &rsquo;########## EXAMPLE IN
-FORTRAN ##########&rsquo; <br>
-print &rsquo;(A)&rsquo;, &rsquo;# VERSION&rsquo; <br>
-print *, &quot;version = &quot;, version() <br>
-print &rsquo;(A)&rsquo;, &rsquo;# CONSTANTS&rsquo; <br>
-print *, &quot;c = &quot;, SPEED_OF_LIGHT_IN_VACUUM%value
-<br>
-print &rsquo;(A)&rsquo;, &rsquo;# UNCERTAINTY&rsquo; <br>
-print *, &quot;u(c) = &quot;,
-SPEED_OF_LIGHT_IN_VACUUM%uncertainty <br>
-print &rsquo;(A)&rsquo;, &rsquo;# OLDER VALUES&rsquo; <br>
-print &rsquo;(A, F23.16)&rsquo;, &quot;Mu_2022(latest) =
-&quot;, MOLAR_MASS_CONSTANT%value <br>
-print &rsquo;(A, F23.16)&rsquo;, &quot;Mu_2018 = &quot;,
-MOLAR_MASS_CONSTANT_2018%value <br>
-print &rsquo;(A, F23.16)&rsquo;, &quot;Mu_2014 = &quot;,
-MOLAR_MASS_CONSTANT_2014%value <br>
-print &rsquo;(A, F23.16)&rsquo;, &quot;Mu_2010 = &quot;,
-MOLAR_MASS_CONSTANT_2010%value <br>
-print &rsquo;(A)&rsquo;, &rsquo;# SELECTING THE ADJUSTMENT
-AT RUN TIME&rsquo; <br>
-do i = 1, CODATA_N_DATASETS <br>
-print &rsquo;(A, I0, A, F23.16)&rsquo;, &quot;Mu_&quot;,
-CODATA_DATASETS(i), &quot; = &quot;, &amp; <br>
-codata_value(CODATA_DATASETS(i), Q_MOLAR_MASS_CONSTANT) <br>
-end do <br>
-print &rsquo;(A)&rsquo;, &rsquo;# A QUANTITY AN OLDER
-ADJUSTMENT DOES NOT CONTAIN&rsquo; <br>
-print *, &quot;defined in 2018 = &quot;,
-codata_defined(CODATA_2018, Q_HELION_SHIELDING_SHIFT) <br>
-print *, &quot;defined in 2010 = &quot;,
-codata_defined(CODATA_2010, Q_HELION_SHIELDING_SHIFT) <br>
-print &rsquo;(A)&rsquo;, &rsquo;# A QUANTITY NIST RENAMED IN
-2018&rsquo; <br>
-print *, &quot;eps0_2014 via either name = &quot;,
-ELECTRIC_CONSTANT_2014%value, &amp; <br>
-VACUUM_ELECTRIC_PERMITTIVITY_2014%value <br>
-end program</p>
-
-<p style="margin-left:6%; margin-top: 1em">Example in C
-<br>
-#include &lt;stdio.h&gt; <br>
-#include &quot;codata.h&quot; <br>
-int main(void){ <br>
-int i, n; <br>
-const enum codata_dataset *ds; <br>
-printf(&quot;########## EXAMPLE IN C ##########0); <br>
-printf(&quot;%s0,&quot;# VERSION&quot;); <br>
-printf(&quot;version = %s0, codata_version()); <br>
-printf(&quot;%s0,&quot;# CONSTANTS&quot;); <br>
-printf(&quot;c = %f0, SPEED_OF_LIGHT_IN_VACUUM.value); <br>
-printf(&quot;%s0,&quot;# UNCERTAINTY&quot;); <br>
-printf(&quot;u(c) = %f0,
-SPEED_OF_LIGHT_IN_VACUUM.uncertainty); <br>
-printf(&quot;%s0,&quot;# OLDER VALUES&quot;); <br>
-printf(&quot;Mu_2022(latest) = %23.16f0,
-MOLAR_MASS_CONSTANT.value); <br>
-printf(&quot;Mu_2018 = %23.16f0,
-MOLAR_MASS_CONSTANT_2018.value); <br>
-printf(&quot;Mu_2014 = %23.16f0,
-MOLAR_MASS_CONSTANT_2014.value); <br>
-printf(&quot;Mu_2010 = %23.16f0,
-MOLAR_MASS_CONSTANT_2010.value); <br>
-printf(&quot;%s0,&quot;# SELECTING THE ADJUSTMENT AT RUN
-TIME&quot;); <br>
-ds = codata_datasets(&amp;n); <br>
-for(i=0;i&lt;n;i++){ <br>
-printf(&quot;Mu_%d = %23.16f0, (int)ds[i],
-codata_value(ds[i], CODATA_Q_MOLAR_MASS_CONSTANT)); <br>
-} <br>
-printf(&quot;%s0,&quot;# A QUANTITY AN OLDER ADJUSTMENT DOES
-NOT CONTAIN&quot;); <br>
-printf(&quot;defined in 2018 = %d0,
-codata_defined(CODATA_2018,
-CODATA_Q_HELION_SHIELDING_SHIFT)); <br>
-printf(&quot;defined in 2010 = %d0,
-codata_defined(CODATA_2010,
-CODATA_Q_HELION_SHIELDING_SHIFT)); <br>
-printf(&quot;%s0,&quot;# A QUANTITY NIST RENAMED IN
-2018&quot;); <br>
-printf(&quot;eps0_2014 via either name = %.11e %.11e0, <br>
-ELECTRIC_CONSTANT_2014.value,
-VACUUM_ELECTRIC_PERMITTIVITY_2014.value); <br>
-return 0; <br>
-}</p>
-
-<p style="margin-left:6%; margin-top: 1em">Example in
-Python <br>
-import sys <br>
-sys.path.insert(0, &quot;../py/src/&quot;) <br>
-import pycodata <br>
-from pycodata import Quantity <br>
-print(&quot;########## EXAMPLE IN PYTHON ##########&quot;)
-<br>
-print(&quot;# VERSION&quot;) <br>
-print(f&quot;version = {pycodata.__version__}&quot;) <br>
-print(&quot;# Constants&quot;) <br>
-print(&quot;c =&quot;,
-pycodata.SPEED_OF_LIGHT_IN_VACUUM[&quot;value&quot;]) <br>
-print(&quot;# UNCERTAINTY&quot;) <br>
-print(&quot;u(c) = &quot;,
-pycodata.SPEED_OF_LIGHT_IN_VACUUM[&quot;uncertainty&quot;])
-<br>
-print(&quot;# OLDER VALUES&quot;) <br>
-print(&quot;Mu_2022 = &quot;,
-pycodata.MOLAR_MASS_CONSTANT[&quot;value&quot;]) <br>
-print(&quot;Mu_2018 = &quot;,
-pycodata.MOLAR_MASS_CONSTANT_2018[&quot;value&quot;]) <br>
-print(&quot;Mu_2014 = &quot;,
-pycodata.MOLAR_MASS_CONSTANT_2014[&quot;value&quot;]) <br>
-print(&quot;Mu_2010 = &quot;,
-pycodata.MOLAR_MASS_CONSTANT_2010[&quot;value&quot;]) <br>
-print(&quot;# SELECTING THE ADJUSTMENT AT RUN TIME&quot;)
-<br>
-for ds in pycodata.CODATA_DATASETS: <br>
-print(f&quot;Mu_{ds} = &quot;, pycodata.value(ds,
-Quantity.MOLAR_MASS_CONSTANT)) <br>
-print(&quot;# A QUANTITY AN OLDER ADJUSTMENT DOES NOT
-CONTAIN&quot;) <br>
-print(&quot;defined in 2018 = &quot;, pycodata.defined(2018,
-Quantity.HELION_SHIELDING_SHIFT)) <br>
-print(&quot;defined in 2010 = &quot;, pycodata.defined(2010,
-Quantity.HELION_SHIELDING_SHIFT)) <br>
-print(&quot;# A QUANTITY NIST RENAMED IN 2018&quot;) <br>
-print(&quot;eps0_2014 via either name = &quot;, <br>
-pycodata.ELECTRIC_CONSTANT_2014[&quot;value&quot;], <br>
-
-pycodata.VACUUM_ELECTRIC_PERMITTIVITY_2014[&quot;value&quot;])</p>
-
-<h2>SEE ALSO
-<a name="SEE ALSO"></a>
-</h2>
-
-
-
-<p style="margin-left:6%; margin-top: 1em"><b>codata</b>(3),
-<b>codata_cli</b>(1), <b>codata_version</b>(3),
-<b>codata_constant_type</b>(3)</p>
 
 <h2>CODATA 2022
 <a name="CODATA 2022"></a>
